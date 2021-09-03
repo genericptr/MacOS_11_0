@@ -2,6 +2,7 @@
 { Macros }
 {$define __swift__ := 0}
 {$define __NULL_MACRO__}
+{$define __OBJC__}
 {$define __OBJC2__}
 
 { Private types }
@@ -227,17 +228,21 @@ type
   vector_uint4 = record
     f: array[0..4 - 1] of cuint;
   end;
-  matrix_float4x4 = record
-    f: array[0..4 - 1, 0..4 - 1] of cfloat;
-  end;
-  matrix_double4x4 = record
-    f: array[0..4 - 1, 0..4 - 1] of cdouble;
+
+  matrix_float2x2 = record
+    f: array[0..2 - 1, 0..2 - 1] of cfloat;
   end;
   matrix_float3x3 = record
     f: array[0..3 - 1, 0..3 - 1] of cfloat;
   end;
   matrix_float4x3 = record
     f: array[0..4 - 1, 0..3 - 1] of cfloat;
+  end;
+  matrix_float4x4 = record
+    f: array[0..4 - 1, 0..4 - 1] of cfloat;
+  end;
+  matrix_double4x4 = record
+    f: array[0..4 - 1, 0..4 - 1] of cdouble;
   end;
 
   vector_int2Ptr = ^vector_int2;
@@ -252,11 +257,23 @@ type
   vector_float2Ptr = ^vector_float2;
   vector_float3Ptr = ^vector_float3;
   vector_float4Ptr = ^vector_float4;
+
+  matrix_float2x2Ptr = ^matrix_float2x2;
+  matrix_float3x3Ptr = ^matrix_float3x3;
+  matrix_float4x3Ptr = ^matrix_float4x3;
   matrix_float4x4Ptr = ^matrix_float4x4;
   matrix_double4x4Ptr = ^matrix_double4x4;
 
-  simd_quatf = OpaqueRecord; { where is this defined? }
+  simd_quatf = record
+    vector: vector_float4;
+  end;
   simd_quatfPtr = ^simd_quatf;
 
-  simd_quatd = OpaqueRecord; { where is this defined? }
+  simd_quatd = record
+    vector: vector_double4;
+  end;
   simd_quatdPtr = ^simd_quatd;
+
+  simd_float3 = vector_float3;
+  simd_float4 = vector_float4;
+  simd_float4x4 = matrix_float4x4;

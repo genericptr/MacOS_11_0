@@ -1,8 +1,13 @@
 FPC=/usr/local/lib/fpc/3.3.1/ppcx64
-OPTS=-vbr -dMACOSALL -FUoutput
+OUTPUT=__output
+OPTS=-vbr -dMACOSALL -FU${OUTPUT}
 
 all:
-	mkdir -p output
+	mkdir -p ${OUTPUT}
+	${FPC} SceneKit.pas ${OPTS}
+	${FPC} SpriteKit.pas ${OPTS}
+	${FPC} GameKit.pas ${OPTS}
+	${FPC} GameplayKit.pas ${OPTS}
 	${FPC} WebKit.pas ${OPTS}
 	${FPC} AVFAudio.pas ${OPTS}
 	${FPC} Photos.pas ${OPTS}
