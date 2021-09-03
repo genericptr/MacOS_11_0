@@ -23,3 +23,4 @@ type
 	
 type
 	NSVisualEffectViewInternalPtr = pointer;
+	UIImagePtr = ^UIImage;
