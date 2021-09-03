@@ -4,7 +4,8 @@ OPTS=-vbr -dMACOSALL -FU${OUTPUT}
 
 all:
 	mkdir -p ${OUTPUT}
-	
+
+	${FPC} PrintCore.pas ${OPTS}
 	${FPC} PushKit.pas ${OPTS}
 	${FPC} MetricKit.pas ${OPTS}
 	${FPC} ReplayKit.pas ${OPTS}
