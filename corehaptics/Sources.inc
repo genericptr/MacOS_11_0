@@ -1,0 +1,9 @@
+{$define FRAMEWORK_LOADED_COREHAPTICS}
+{$include CoreHaptics.inc}
+{$include CHHapticParameter.inc}
+{$include CHHapticEvent.inc}
+{$include CHHapticDeviceCapability.inc}
+{$include CHHapticErrors.inc}
+{$include CHHapticPatternPlayer.inc}
+{$include CHHapticEngine.inc}
+{$include CHHapticPattern.inc}

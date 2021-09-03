@@ -1,0 +1,11 @@
+{$define FRAMEWORK_LOADED_COREWLAN}
+{$include CoreWLAN.inc}
+{$include CoreWLANTypes.inc}
+{$include CoreWLANConstants.inc}
+{$include CoreWLANUtil.inc}
+{$include CWInterface.inc}
+{$include CWWiFiClient.inc}
+{$include CWNetwork.inc}
+{$include CWConfiguration.inc}
+{$include CWNetworkProfile.inc}
+{$include CWChannel.inc}

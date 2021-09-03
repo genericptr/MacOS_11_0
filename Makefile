@@ -5,6 +5,10 @@ OPTS=-vbr -dMACOSALL -FU${OUTPUT}
 all:
 	mkdir -p ${OUTPUT}
 
+	${FPC} CoreML.pas ${OPTS}
+	${FPC} CoreBluetooth.pas ${OPTS}
+	${FPC} CoreHaptics.pas ${OPTS}
+	${FPC} CoreWLAN.pas ${OPTS}
 	${FPC} PrintCore.pas ${OPTS}
 	${FPC} PushKit.pas ${OPTS}
 	${FPC} MetricKit.pas ${OPTS}
