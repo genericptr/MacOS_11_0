@@ -1,8 +1,16 @@
 
-{ AudioToolbox.framework }
+{ ImageIO }
+
 type
-	MusicSequence = ^OpaqueRecord;
-	
-{ MediaToolbox.framework }
-type
-	MTAudioProcessingTapRef = CFTypeRef; {CFType, retain/release please}
+  CGImagePropertyOrientation = cuint32;
+  CGImagePropertyOrientationPtr = ^CGImagePropertyOrientation;
+
+const
+  kCGImagePropertyOrientationUp = 1;
+  kCGImagePropertyOrientationUpMirrored = 2;
+  kCGImagePropertyOrientationDown = 3;
+  kCGImagePropertyOrientationDownMirrored = 4;
+  kCGImagePropertyOrientationLeftMirrored = 5;
+  kCGImagePropertyOrientationRight = 6;
+  kCGImagePropertyOrientationRightMirrored = 7;
+  kCGImagePropertyOrientationLeft = 8;

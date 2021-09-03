@@ -20,21 +20,29 @@ type
 	_CGLPBufferObjectPtr = Pointer;
 	__NSOVRowEntryPtr = Pointer;
 	objcboolPtr = ^objcbool;
+	size_tPtr = ^size_t;
+	OSStatusPtr = ^OSStatus;
+	UTTypePtr = OpaquePointer;
 
 { MacOSPosix.pas }
 type
 	dispatch_queue_t = pointer;
   dispatch_semaphore_t = pointer;
 	dispatch_block_t = pointer;
-	pthread_mutex_t = pointer;	
-	pthread_block_t = pointer;	
-	
+	dispatch_group_t = pointer;
+	dispatch_data_t = pointer;
+	pthread_mutex_t = pointer;
+	pthread_block_t = pointer;
+
 { Security framework - SecureTransport.h }
 type
 	SSLProtocol = integer;
+	tls_protocol_version_t = integer;
 
+
+{ <mach/machine.h> }
 type
-	size_tPtr = ^size_t;
+	cpu_type_t = integer;
 
 // CGWindowLevel.h constants we can't translate to FPC
 const
@@ -101,10 +109,6 @@ type
 	IOByteCount = UInt32;
 	IOReturn = UInt32;
 
-// OpenGL
-type
-	GLfloatPtr = pointer;
-	
 // CarbonCore/Components.h
 type
   ComponentRecord = record
@@ -134,8 +138,16 @@ type
 type
 	CGLContextObjPtr = ^CGLContextObj;
 	CGLPixelFormatObjPtr = ^CGLPixelFormatObj;
+	GLfloatPtr = pointer;
+
+// XPC
+type
+	xpc_object_t = OpaquePointer;
+	xpc_type_t = OpaquePointer;
 
 // Objective-C runtime
+type
+	NSObjectPtr = ^NSObject;
 
 {$if defined(__LP64__) or (defined(TARGET_OS_EMBEDDED) and not defined(TARGET_OS_IPHONE)) or defined(TARGET_OS_WIN32) or defined(NS_BUILD_32_LIKE_64)}
 type
@@ -171,3 +183,80 @@ const
   NSQualityOfServiceBackground = $09;
   NSQualityOfServiceDefault = -1;
 
+{ Metal }
+{$ifndef FRAMEWORK_LOADED_METAL}
+type
+	MTLPixelFormat = cuint;
+{$endif}
+
+{ SIMD Types }
+type
+	vector_float2 = record
+	  f: array[0..2 - 1] of cfloat;
+	end;
+	vector_double2 = record
+	  f: array[0..2 - 1] of cdouble;
+	end;
+  vector_float3 = record
+    f: array[0..3 - 1] of cfloat;
+  end;
+  vector_double3 = record
+    f: array[0..3 - 1] of cdouble;
+  end;
+  vector_float4 = record
+    f: array[0..4 - 1] of cfloat;
+  end;
+  vector_double4 = record
+    f: array[0..4 - 1] of cdouble;
+  end;
+  vector_int2 = record
+    f: array[0..2 - 1] of cint;
+  end;
+  vector_int3 = record
+    f: array[0..3 - 1] of cint;
+  end;
+  vector_int4 = record
+    f: array[0..4 - 1] of cint;
+  end;
+  vector_uint2 = record
+    f: array[0..2 - 1] of cuint;
+  end;
+  vector_uint3 = record
+    f: array[0..3 - 1] of cuint;
+  end;
+  vector_uint4 = record
+    f: array[0..4 - 1] of cuint;
+  end;
+  matrix_float4x4 = record
+    f: array[0..4 - 1, 0..4 - 1] of cfloat;
+  end;
+  matrix_double4x4 = record
+    f: array[0..4 - 1, 0..4 - 1] of cdouble;
+  end;
+  matrix_float3x3 = record
+    f: array[0..3 - 1, 0..3 - 1] of cfloat;
+  end;
+  matrix_float4x3 = record
+    f: array[0..4 - 1, 0..3 - 1] of cfloat;
+  end;
+
+  vector_int2Ptr = ^vector_int2;
+  vector_int3Ptr = ^vector_int3;
+  vector_int4Ptr = ^vector_int4;
+  vector_uint2Ptr = ^vector_uint2;
+  vector_uint3Ptr = ^vector_uint3;
+  vector_uint4Ptr = ^vector_uint4;
+  vector_double2Ptr = ^vector_double2;
+  vector_double3Ptr = ^vector_double3;
+  vector_double4Ptr = ^vector_double4;
+  vector_float2Ptr = ^vector_float2;
+  vector_float3Ptr = ^vector_float3;
+  vector_float4Ptr = ^vector_float4;
+  matrix_float4x4Ptr = ^matrix_float4x4;
+  matrix_double4x4Ptr = ^matrix_double4x4;
+
+  simd_quatf = OpaqueRecord; { where is this defined? }
+  simd_quatfPtr = ^simd_quatf;
+
+  simd_quatd = OpaqueRecord; { where is this defined? }
+  simd_quatdPtr = ^simd_quatd;

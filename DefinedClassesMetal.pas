@@ -1,0 +1,141 @@
+{$mode delphi}
+{$modeswitch objectivec1}
+{$modeswitch cvar}
+{$packrecords c}
+
+unit DefinedClassesMetal;
+interface
+
+type
+  MTLAccelerationStructureBoundingBoxGeometryDescriptor = objcclass external;
+  MTLAccelerationStructureDescriptor = objcclass external;
+  MTLAccelerationStructureGeometryDescriptor = objcclass external;
+  MTLAccelerationStructureTriangleGeometryDescriptor = objcclass external;
+  MTLArgument = objcclass external;
+  MTLArgumentDescriptor = objcclass external;
+  MTLArrayType = objcclass external;
+  MTLAttribute = objcclass external;
+  MTLAttributeDescriptor = objcclass external;
+  MTLAttributeDescriptorArray = objcclass external;
+  MTLBinaryArchiveDescriptor = objcclass external;
+  MTLBlitPassDescriptor = objcclass external;
+  MTLBlitPassSampleBufferAttachmentDescriptor = objcclass external;
+  MTLBlitPassSampleBufferAttachmentDescriptorArray = objcclass external;
+  MTLBufferLayoutDescriptor = objcclass external;
+  MTLBufferLayoutDescriptorArray = objcclass external;
+  MTLCaptureDescriptor = objcclass external;
+  MTLCaptureManager = objcclass external;
+  MTLCommandBufferDescriptor = objcclass external;
+  MTLCompileOptions = objcclass external;
+  MTLComputePassDescriptor = objcclass external;
+  MTLComputePassSampleBufferAttachmentDescriptor = objcclass external;
+  MTLComputePassSampleBufferAttachmentDescriptorArray = objcclass external;
+  MTLComputePipelineDescriptor = objcclass external;
+  MTLComputePipelineReflection = objcclass external;
+  MTLCounterSampleBufferDescriptor = objcclass external;
+  MTLDepthStencilDescriptor = objcclass external;
+  MTLFunctionConstant = objcclass external;
+  MTLFunctionConstantValues = objcclass external;
+  MTLFunctionDescriptor = objcclass external;
+  MTLHeapDescriptor = objcclass external;
+  MTLIndirectCommandBufferDescriptor = objcclass external;
+  MTLInstanceAccelerationStructureDescriptor = objcclass external;
+  MTLIntersectionFunctionDescriptor = objcclass external;
+  MTLIntersectionFunctionTableDescriptor = objcclass external;
+  MTLLinkedFunctions = objcclass external;
+  MTLPipelineBufferDescriptor = objcclass external;
+  MTLPipelineBufferDescriptorArray = objcclass external;
+  MTLPointerType = objcclass external;
+  MTLPrimitiveAccelerationStructureDescriptor = objcclass external;
+  MTLRasterizationRateLayerArray = objcclass external;
+  MTLRasterizationRateLayerDescriptor = objcclass external;
+  MTLRasterizationRateMapDescriptor = objcclass external;
+  MTLRasterizationRateSampleArray = objcclass external;
+  MTLRenderPassAttachmentDescriptor = objcclass external;
+  MTLRenderPassColorAttachmentDescriptor = objcclass external;
+  MTLRenderPassColorAttachmentDescriptorArray = objcclass external;
+  MTLRenderPassDepthAttachmentDescriptor = objcclass external;
+  MTLRenderPassDescriptor = objcclass external;
+  MTLRenderPassSampleBufferAttachmentDescriptor = objcclass external;
+  MTLRenderPassSampleBufferAttachmentDescriptorArray = objcclass external;
+  MTLRenderPassStencilAttachmentDescriptor = objcclass external;
+  MTLRenderPipelineColorAttachmentDescriptor = objcclass external;
+  MTLRenderPipelineColorAttachmentDescriptorArray = objcclass external;
+  MTLRenderPipelineDescriptor = objcclass external;
+  MTLRenderPipelineReflection = objcclass external;
+  MTLResourceStatePassDescriptor = objcclass external;
+  MTLResourceStatePassSampleBufferAttachmentDescriptor = objcclass external;
+  MTLResourceStatePassSampleBufferAttachmentDescriptorArray = objcclass external;
+  MTLSamplerDescriptor = objcclass external;
+  MTLSharedEventHandle = objcclass external;
+  MTLSharedEventListener = objcclass external;
+  MTLSharedTextureHandle = objcclass external;
+  MTLStageInputOutputDescriptor = objcclass external;
+  MTLStencilDescriptor = objcclass external;
+  MTLStructMember = objcclass external;
+  MTLStructType = objcclass external;
+  MTLTextureDescriptor = objcclass external;
+  MTLTextureReferenceType = objcclass external;
+  MTLTileRenderPipelineColorAttachmentDescriptor = objcclass external;
+  MTLTileRenderPipelineColorAttachmentDescriptorArray = objcclass external;
+  MTLTileRenderPipelineDescriptor = objcclass external;
+  MTLType = objcclass external;
+  MTLVertexAttribute = objcclass external;
+  MTLVertexAttributeDescriptor = objcclass external;
+  MTLVertexAttributeDescriptorArray = objcclass external;
+  MTLVertexBufferLayoutDescriptor = objcclass external;
+  MTLVertexBufferLayoutDescriptorArray = objcclass external;
+  MTLVertexDescriptor = objcclass external;
+  MTLVisibleFunctionTableDescriptor = objcclass external;
+  MTLAccelerationStructureCommandEncoderProtocol = objcprotocol external name 'MTLAccelerationStructureCommandEncoder';
+  MTLAccelerationStructureProtocol = objcprotocol external name 'MTLAccelerationStructure';
+  MTLArgumentEncoderProtocol = objcprotocol external name 'MTLArgumentEncoder';
+  MTLBinaryArchiveProtocol = objcprotocol external name 'MTLBinaryArchive';
+  MTLBlitCommandEncoderProtocol = objcprotocol external name 'MTLBlitCommandEncoder';
+  MTLBufferProtocol = objcprotocol external name 'MTLBuffer';
+  MTLCaptureScopeProtocol = objcprotocol external name 'MTLCaptureScope';
+  MTLCommandBufferEncoderInfoProtocol = objcprotocol external name 'MTLCommandBufferEncoderInfo';
+  MTLCommandBufferProtocol = objcprotocol external name 'MTLCommandBuffer';
+  MTLCommandEncoderProtocol = objcprotocol external name 'MTLCommandEncoder';
+  MTLCommandQueueProtocol = objcprotocol external name 'MTLCommandQueue';
+  MTLComputeCommandEncoderProtocol = objcprotocol external name 'MTLComputeCommandEncoder';
+  MTLComputePipelineStateProtocol = objcprotocol external name 'MTLComputePipelineState';
+  MTLCounterProtocol = objcprotocol external name 'MTLCounter';
+  MTLCounterSampleBufferProtocol = objcprotocol external name 'MTLCounterSampleBuffer';
+  MTLCounterSetProtocol = objcprotocol external name 'MTLCounterSet';
+  MTLDepthStencilStateProtocol = objcprotocol external name 'MTLDepthStencilState';
+  MTLDeviceProtocol = objcprotocol external name 'MTLDevice';
+  MTLDrawableProtocol = objcprotocol external name 'MTLDrawable';
+  MTLDynamicLibraryProtocol = objcprotocol external name 'MTLDynamicLibrary';
+  MTLEventProtocol = objcprotocol external name 'MTLEvent';
+  MTLFenceProtocol = objcprotocol external name 'MTLFence';
+  MTLFunctionHandleProtocol = objcprotocol external name 'MTLFunctionHandle';
+  MTLFunctionLogDebugLocationProtocol = objcprotocol external name 'MTLFunctionLogDebugLocation';
+  MTLFunctionLogProtocol = objcprotocol external name 'MTLFunctionLog';
+  MTLFunctionProtocol = objcprotocol external name 'MTLFunction';
+  MTLHeapProtocol = objcprotocol external name 'MTLHeap';
+  MTLIndirectCommandBufferProtocol = objcprotocol external name 'MTLIndirectCommandBuffer';
+  MTLIndirectComputeCommandProtocol = objcprotocol external name 'MTLIndirectComputeCommand';
+  MTLIndirectRenderCommandProtocol = objcprotocol external name 'MTLIndirectRenderCommand';
+  MTLIntersectionFunctionTableProtocol = objcprotocol external name 'MTLIntersectionFunctionTable';
+  MTLLibraryProtocol = objcprotocol external name 'MTLLibrary';
+  MTLLogContainerProtocol = objcprotocol external name 'MTLLogContainer';
+  MTLParallelRenderCommandEncoderProtocol = objcprotocol external name 'MTLParallelRenderCommandEncoder';
+  MTLRasterizationRateMapProtocol = objcprotocol external name 'MTLRasterizationRateMap';
+  MTLRenderCommandEncoderProtocol = objcprotocol external name 'MTLRenderCommandEncoder';
+  MTLRenderPipelineStateProtocol = objcprotocol external name 'MTLRenderPipelineState';
+  MTLResourceProtocol = objcprotocol external name 'MTLResource';
+  MTLResourceStateCommandEncoderProtocol = objcprotocol external name 'MTLResourceStateCommandEncoder';
+  MTLSamplerStateProtocol = objcprotocol external name 'MTLSamplerState';
+  MTLSharedEventProtocol = objcprotocol external name 'MTLSharedEvent';
+  MTLTextureProtocol = objcprotocol external name 'MTLTexture';
+  MTLVisibleFunctionTableProtocol = objcprotocol external name 'MTLVisibleFunctionTable';
+
+type
+  MTLCommandQueueDescriptor = objcclass external;
+  MTLTilePipelineColorAttachmentDescriptor = objcclass external;
+  MTLIndirectComputeCommandEncoderProtocol = objcprotocol external name 'MTLIndirectComputeCommandEncoder';
+  MTLIndirectRenderCommandEncoderProtocol = objcprotocol external name 'MTLIndirectRenderCommandEncoder';
+
+implementation
+end.

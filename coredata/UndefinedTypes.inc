@@ -1,0 +1,5 @@
+
+{ CloudKit }
+
+type
+  CKDatabaseScope = cint;
