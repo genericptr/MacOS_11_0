@@ -5,6 +5,8 @@ OPTS=-vbr -dMACOSALL -FU${OUTPUT}
 all:
 	mkdir -p ${OUTPUT}
 
+	${FPC} QuickLook.pas ${OPTS}
+	${FPC} QuickLookUI.pas ${OPTS}
 	${FPC} CoreML.pas ${OPTS}
 	${FPC} CoreBluetooth.pas ${OPTS}
 	${FPC} CoreHaptics.pas ${OPTS}
