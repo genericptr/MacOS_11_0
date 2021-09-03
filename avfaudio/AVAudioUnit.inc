@@ -27,6 +27,8 @@ const
 
 {$ifdef CLASSES}
 
+{$define AVAUDIOUNIT_HAVE_AUDIOUNIT}
+
 type
   AVAudioUnit = objcclass external (AVAudioNode)
   public
