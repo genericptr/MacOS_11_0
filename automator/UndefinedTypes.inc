@@ -1,0 +1,3 @@
+
+type
+  OSAScriptPtr = OpaquePointer;
