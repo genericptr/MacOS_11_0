@@ -3,6 +3,8 @@ OPTS=-vbr -dMACOSALL -FUoutput
 
 all:
 	mkdir -p output
+	${FPC} Photos.pas ${OPTS}
+	${FPC} PhotosUI.pas ${OPTS}
 	${FPC} ModelIO.pas ${OPTS}
 	${FPC} Metal.pas ${OPTS}
 	${FPC} MetalKit.pas ${OPTS}

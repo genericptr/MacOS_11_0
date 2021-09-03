@@ -1,0 +1,11 @@
+{$define FRAMEWORK_LOADED_PHOTOSUI}
+{$include PhotosUI.inc}
+{$include PHLivePhotoView.inc}
+{$include PHContentEditingController.inc}
+{$include PHEditingExtensionContext.inc}
+{$include PhotosUITypes.inc}
+{$include PHProjectExtensionContext.inc}
+{$include PHProjectTypeDescription.inc}
+{$include PHProjectTypeDescriptionDataSource.inc}
+{$include PHProjectExtensionController.inc}
+{$include PHProjectInfo.inc}
