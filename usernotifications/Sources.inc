@@ -1,0 +1,16 @@
+{$define FRAMEWORK_LOADED_USERNOTIFICATIONS}
+{$include UserNotifications.inc}
+{$include NSString+UserNotifications.inc}
+{$include UNError.inc}
+{$include UNNotification.inc}
+{$include UNNotificationAction.inc}
+{$include UNNotificationAttachment.inc}
+{$include UNNotificationCategory.inc}
+{$include UNNotificationContent.inc}
+{$include UNNotificationRequest.inc}
+{$include UNNotificationResponse.inc}
+{$include UNNotificationSettings.inc}
+{$include UNNotificationSound.inc}
+{$include UNNotificationTrigger.inc}
+{$include UNUserNotificationCenter.inc}
+{$include UNNotificationServiceExtension.inc}
