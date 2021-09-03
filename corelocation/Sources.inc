@@ -1,0 +1,17 @@
+{$define FRAMEWORK_LOADED_CORELOCATION}
+{$include CoreLocation.inc}
+{$include CLAvailability.inc}
+{$include CLErrorDomain.inc}
+{$include CLError.inc}
+{$include CLLocation.inc}
+{$include CLRegion.inc}
+{$include CLCircularRegion.inc}
+{$include CLBeaconIdentityConstraint.inc}
+{$include CLBeaconRegion.inc}
+{$include CLHeading.inc}
+{$include CLLocationManager.inc}
+{$include CLVisit.inc}
+{$include CLLocationManagerDelegate.inc}
+{$include CLLocationManager+CLVisitExtensions.inc}
+{$include CLPlacemark.inc}
+{$include CLGeocoder.inc}
