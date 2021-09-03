@@ -8,6 +8,7 @@ all:
 	${FPC} UserNotifications.pas ${OPTS}
 	${FPC} UserNotificationsUI.pas ${OPTS}
 	${FPC} Contacts.pas ${OPTS}
+	${FPC} ContactsUI.pas ${OPTS}
 	${FPC} CoreAudioKit.pas ${OPTS}
 	${FPC} SensorKit.pas ${OPTS}
 	${FPC} QuickLook.pas ${OPTS}

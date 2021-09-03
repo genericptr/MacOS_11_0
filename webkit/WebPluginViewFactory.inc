@@ -18,7 +18,7 @@ var
 
 type
   WebPlugInViewFactoryProtocol = objcprotocol external name 'WebPlugInViewFactory' (NSObjectProtocol)
-    class function plugInViewWithArguments (arguments: NSDictionary): NSViewPtr; message 'plugInViewWithArguments:';
+    class function plugInViewWithArguments (arguments: NSDictionary): NSView; message 'plugInViewWithArguments:';
   end;
 {$endif}
 

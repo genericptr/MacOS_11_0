@@ -17,7 +17,7 @@ type
     function runModal: NSInteger; message 'runModal';
     procedure beginPictureTakerWithDelegate_didEndSelector_contextInfo (delegate: id; didEndSelector: SEL; contextInfo: pointer); message 'beginPictureTakerWithDelegate:didEndSelector:contextInfo:';
     procedure beginPictureTakerSheetForWindow_withDelegate_didEndSelector_contextInfo (aWindow: NSWindowPtr; delegate: id; didEndSelector: SEL; contextInfo: pointer); message 'beginPictureTakerSheetForWindow:withDelegate:didEndSelector:contextInfo:';
-    procedure popUpRecentsMenuForView_withDelegate_didEndSelector_contextInfo (aView: NSViewPtr; delegate: id; didEndSelector: SEL; contextInfo: pointer); message 'popUpRecentsMenuForView:withDelegate:didEndSelector:contextInfo:';
+    procedure popUpRecentsMenuForView_withDelegate_didEndSelector_contextInfo (aView: NSView; delegate: id; didEndSelector: SEL; contextInfo: pointer); message 'popUpRecentsMenuForView:withDelegate:didEndSelector:contextInfo:';
     procedure setInputImage (image: NSImage); message 'setInputImage:';
     function inputImage: NSImage; message 'inputImage';
     function outputImage: NSImage; message 'outputImage';

@@ -43,7 +43,7 @@ type
     procedure startPlaybackWithStyle (playbackStyle: PHLivePhotoViewPlaybackStyle); message 'startPlaybackWithStyle:';
     procedure stopPlayback; message 'stopPlayback';
     procedure stopPlaybackAnimated (animated: objcbool); message 'stopPlaybackAnimated:';
-    function livePhotoBadgeView: NSViewPtr; message 'livePhotoBadgeView';
+    function livePhotoBadgeView: NSView; message 'livePhotoBadgeView';
   end;
 {$endif}
 

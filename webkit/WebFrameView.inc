@@ -13,7 +13,7 @@ type
     _private: WebFrameViewPrivate;
   public
     function webFrame: WebFrame; message 'webFrame';
-    function documentView: NSViewPtr; message 'documentView';
+    function documentView: NSView; message 'documentView';
     procedure setAllowsScrolling(newValue: objcbool); message 'setAllowsScrolling:';
     function allowsScrolling: objcbool; message 'allowsScrolling';
     function canPrintHeadersAndFooters: objcbool; message 'canPrintHeadersAndFooters';
