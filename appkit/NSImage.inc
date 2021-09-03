@@ -138,13 +138,8 @@ type
     function cacheMode: NSImageCacheMode; message 'cacheMode';
     procedure setAlignmentRect(newValue: NSRect); message 'setAlignmentRect:'; { available in macos  }
     function alignmentRect: NSRect; message 'alignmentRect'; { available in macos  }
-    {$if (defined(__cplusplus))}
     function isTemplate: objcbool; message 'isTemplate'; { available in macos  }
     procedure setTemplate (isTemplate_: objcbool); message 'setTemplate:'; { available in macos  }
-    {$else}
-    procedure setTemplate_(newValue: objcbool); message 'setTemplate:'; { available in macos  }
-    function isTemplate_: objcbool; message 'isTemplate'; { available in macos  }
-    {$endif}
     procedure setAccessibilityDescription(newValue: NSString); message 'setAccessibilityDescription:'; { available in macos  }
     function accessibilityDescription: NSString; message 'accessibilityDescription'; { available in macos  }
     function initWithCGImage_size (cgImage: CGImageRef; size_: NSSize): id; message 'initWithCGImage:size:'; { available in macos  }

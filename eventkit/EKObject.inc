@@ -17,11 +17,7 @@ type
   EKObject = objcclass external (NSObject)
   public
     function hasChanges: objcbool; message 'hasChanges';
-    {$if (defined(__cplusplus))}
     function isNew: objcbool; message 'isNew';
-    {$else}
-    function isNew_: objcbool; message 'isNew';
-    {$endif}
     procedure reset; message 'reset';
     procedure rollback; message 'rollback';
     function refresh: objcbool; message 'refresh';
