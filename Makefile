@@ -5,6 +5,7 @@ OPTS=-vbr -dMACOSALL -FU${OUTPUT}
 all:
 	mkdir -p ${OUTPUT}
 	
+	${FPC} Contacts.pas ${OPTS}
 	${FPC} CoreAudioKit.pas ${OPTS}
 	${FPC} SensorKit.pas ${OPTS}
 	${FPC} QuickLook.pas ${OPTS}
