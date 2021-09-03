@@ -5,6 +5,7 @@ OPTS=-vbr -dMACOSALL -FU${OUTPUT}
 all:
 	mkdir -p ${OUTPUT}
 
+	${FPC} SensorKit.pas ${OPTS}
 	${FPC} QuickLook.pas ${OPTS}
 	${FPC} QuickLookUI.pas ${OPTS}
 	${FPC} CoreML.pas ${OPTS}
