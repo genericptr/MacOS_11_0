@@ -4,6 +4,11 @@ OPTS=-vbr -dMACOSALL -FU${OUTPUT}
 
 all:
 	mkdir -p ${OUTPUT}
+	${FPC} CoreLocation.pas ${OPTS}
+	${FPC} ImageCaptureCore.pas ${OPTS}
+	${FPC} ImageKit.pas ${OPTS}
+	${FPC} PDFKit.pas ${OPTS}
+	${FPC} MapKit.pas ${OPTS}
 	${FPC} SceneKit.pas ${OPTS}
 	${FPC} SpriteKit.pas ${OPTS}
 	${FPC} GameKit.pas ${OPTS}
