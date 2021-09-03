@@ -41,10 +41,9 @@ type
 	tls_protocol_version_t = integer;
 
 
-{ Machine/OS }
+{ <mach/machine.h> }
 type
-	cpu_type_t = cint;
-  os_log_t = pointer;
+	cpu_type_t = integer;
 
 // CGWindowLevel.h constants we can't translate to FPC
 const

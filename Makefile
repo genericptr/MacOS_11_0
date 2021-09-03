@@ -5,10 +5,6 @@ OPTS=-vbr -dMACOSALL -FU${OUTPUT}
 all:
 	mkdir -p ${OUTPUT}
 	
-	${FPC} PushKit.pas ${OPTS}
-	${FPC} MetricKit.pas ${OPTS}
-	${FPC} ReplayKit.pas ${OPTS}
-	${FPC} EventKit.pas ${OPTS}
 	${FPC} AppleScriptObjC.pas ${OPTS}
 	${FPC} Automator.pas ${OPTS}
 	${FPC} CloudKit.pas ${OPTS}
