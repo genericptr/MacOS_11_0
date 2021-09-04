@@ -2,9 +2,9 @@
 
 {$ifdef CALLBACKS}
 type
-  NSTimerTimerWithTimeIntervalCallback = reference to function (timer: NSTimer): pointer; cblock; cdecl;
-  NSTimerScheduledTimerWithTimeIntervalCallback = reference to function (timer: NSTimer): pointer; cblock; cdecl;
-  NSTimerInitWithFireDateCallback = reference to function (timer: NSTimer): pointer; cblock; cdecl;
+  NSTimerTimerWithTimeIntervalCallback = reference to procedure (timer: NSTimer); cblock; cdecl;
+  NSTimerScheduledTimerWithTimeIntervalCallback = reference to procedure (timer: NSTimer); cblock; cdecl;
+  NSTimerInitWithFireDateCallback = reference to procedure (timer: NSTimer); cblock; cdecl;
 {$endif}
 
 

@@ -2,10 +2,10 @@
 
 {$ifdef CALLBACKS}
 type
-  GKAchievementLoadAchievementsWithCompletionHandlerCallback = reference to function (achievements: NSArray; error: NSError): pointer; cblock; cdecl;
-  GKAchievementResetAchievementsWithCompletionHandlerCallback = reference to function (error: NSError): pointer; cblock; cdecl;
-  GKAchievementReportAchievementsCallback = reference to function (error: NSError): pointer; cblock; cdecl;
-  GKAchievementReportAchievementWithCompletionHandlerCallback = reference to function (error: NSError): pointer; cblock; cdecl;
+  GKAchievementLoadAchievementsWithCompletionHandlerCallback = reference to procedure (achievements: NSArray; error: NSError); cblock; cdecl;
+  GKAchievementResetAchievementsWithCompletionHandlerCallback = reference to procedure (error: NSError); cblock; cdecl;
+  GKAchievementReportAchievementsCallback = reference to procedure (error: NSError); cblock; cdecl;
+  GKAchievementReportAchievementWithCompletionHandlerCallback = reference to procedure (error: NSError); cblock; cdecl;
 {$endif}
 
 

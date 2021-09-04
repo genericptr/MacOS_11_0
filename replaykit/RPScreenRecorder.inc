@@ -8,13 +8,13 @@
 
 {$ifdef CALLBACKS}
 type
-  RPScreenRecorderStartRecordingWithMicrophoneEnabledCallback = reference to function (error: NSError): pointer; cblock; cdecl;
-  RPScreenRecorderStartRecordingWithHandlerCallback = reference to function (error: NSError): pointer; cblock; cdecl;
-  RPScreenRecorderStopRecordingWithHandlerCallback = reference to function (previewViewController: RPPreviewViewController; error: NSError): pointer; cblock; cdecl;
-  RPScreenRecorderStopRecordingWithOutputURLCallback = reference to function (error: NSError): pointer; cblock; cdecl;
-  RPScreenRecorderDiscardRecordingWithHandlerCallback = reference to function : pointer; cblock; cdecl;
-  RPScreenRecorderStartCaptureWithHandlerCallback = reference to function (sampleBuffer: CMSampleBufferRef; bufferType: RPSampleBufferType; error: NSError): pointer; cblock; cdecl;
-  RPScreenRecorderStopCaptureWithHandlerCallback = reference to function (error: NSError): pointer; cblock; cdecl;
+  RPScreenRecorderStartRecordingWithMicrophoneEnabledCallback = reference to procedure (error: NSError); cblock; cdecl;
+  RPScreenRecorderStartRecordingWithHandlerCallback = reference to procedure (error: NSError); cblock; cdecl;
+  RPScreenRecorderStopRecordingWithHandlerCallback = reference to procedure (previewViewController: RPPreviewViewController; error: NSError); cblock; cdecl;
+  RPScreenRecorderStopRecordingWithOutputURLCallback = reference to procedure (error: NSError); cblock; cdecl;
+  RPScreenRecorderDiscardRecordingWithHandlerCallback = reference to procedure; cblock; cdecl;
+  RPScreenRecorderStartCaptureWithHandlerCallback = reference to procedure (sampleBuffer: CMSampleBufferRef; bufferType: RPSampleBufferType; error: NSError); cblock; cdecl;
+  RPScreenRecorderStopCaptureWithHandlerCallback = reference to procedure (error: NSError); cblock; cdecl;
 {$endif}
 
 

@@ -2,9 +2,9 @@
 
 {$ifdef CALLBACKS}
 type
-  GKMatchChooseBestHostingPlayerWithCompletionHandlerCallback = reference to function (player: GKPlayer): pointer; cblock; cdecl;
-  GKMatchRematchWithCompletionHandlerCallback = reference to function (match: GKMatch; error: NSError): pointer; cblock; cdecl;
-  GKMatchChooseBestHostPlayerWithCompletionHandlerCallback = reference to function (playerID: NSString): pointer; cblock; cdecl;
+  GKMatchChooseBestHostingPlayerWithCompletionHandlerCallback = reference to procedure (player: GKPlayer); cblock; cdecl;
+  GKMatchRematchWithCompletionHandlerCallback = reference to procedure (match: GKMatch; error: NSError); cblock; cdecl;
+  GKMatchChooseBestHostPlayerWithCompletionHandlerCallback = reference to procedure (playerID: NSString); cblock; cdecl;
 {$endif}
 
 

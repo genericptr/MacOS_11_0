@@ -2,7 +2,7 @@
 
 {$ifdef CALLBACKS}
 type
-  CKFetchRecordZonesOperationFetchRecordZonesCompletionBlockCallback = reference to function (recordZonesByZoneID: NSDictionary; operationError: NSError): pointer; cblock; cdecl;
+  CKFetchRecordZonesOperationFetchRecordZonesCompletionBlockCallback = reference to procedure (recordZonesByZoneID: NSDictionary; operationError: NSError); cblock; cdecl;
 {$endif}
 
 

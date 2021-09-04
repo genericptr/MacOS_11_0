@@ -2,7 +2,7 @@
 
 {$ifdef CALLBACKS}
 type
-  AVVideoCompositionVideoCompositionWithAssetCallback = reference to function (request: AVAsynchronousCIImageFilteringRequest): pointer; cblock; cdecl;
+  AVVideoCompositionVideoCompositionWithAssetCallback = reference to procedure (request: AVAsynchronousCIImageFilteringRequest); cblock; cdecl;
 {$endif}
 
 

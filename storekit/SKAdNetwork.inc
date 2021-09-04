@@ -2,8 +2,8 @@
 
 {$ifdef CALLBACKS}
 type
-  SKAdNetworkStartImpressionCallback = reference to function (error: NSError): pointer; cblock; cdecl;
-  SKAdNetworkEndImpressionCallback = reference to function (error: NSError): pointer; cblock; cdecl;
+  SKAdNetworkStartImpressionCallback = reference to procedure (error: NSError); cblock; cdecl;
+  SKAdNetworkEndImpressionCallback = reference to procedure (error: NSError); cblock; cdecl;
 {$endif}
 
 

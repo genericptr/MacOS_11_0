@@ -7,7 +7,7 @@ type
 
 {$ifdef TYPES}
 type
-  AVMIDIPlayerCompletionHandler = reference to function : pointer; cblock; cdecl;
+  AVMIDIPlayerCompletionHandler = reference to procedure; cblock; cdecl;
 {$endif}
 
 {$ifdef CLASSES}

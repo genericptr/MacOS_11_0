@@ -2,8 +2,8 @@
 
 {$ifdef CALLBACKS}
 type
-  SCNAudioSourceWillStartPlaybackCallback = reference to function : pointer; cblock; cdecl;
-  SCNAudioSourceDidFinishPlaybackCallback = reference to function : pointer; cblock; cdecl;
+  SCNAudioSourceWillStartPlaybackCallback = reference to procedure; cblock; cdecl;
+  SCNAudioSourceDidFinishPlaybackCallback = reference to procedure; cblock; cdecl;
 {$endif}
 
 

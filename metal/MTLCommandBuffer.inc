@@ -97,7 +97,7 @@ type
 
 {$ifdef TYPES}
 type
-  MTLCommandBufferHandler = reference to function (param1: id): pointer; cblock; cdecl;
+  MTLCommandBufferHandler = reference to procedure (param1: id); cblock; cdecl;
   MTLDispatchType = NSUInteger;
   MTLDispatchTypePtr = ^MTLDispatchType;
 

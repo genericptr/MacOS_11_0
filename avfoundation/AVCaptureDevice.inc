@@ -17,11 +17,11 @@ const
 
 {$ifdef CALLBACKS}
 type
-  AVCaptureDeviceSetFocusModeLockedWithLensPositionCallback = reference to function (syncTime: CMTime): pointer; cblock; cdecl;
-  AVCaptureDeviceSetExposureModeCustomWithDurationCallback = reference to function (syncTime: CMTime): pointer; cblock; cdecl;
-  AVCaptureDeviceSetExposureTargetBiasCallback = reference to function (syncTime: CMTime): pointer; cblock; cdecl;
-  AVCaptureDeviceSetWhiteBalanceModeLockedWithDeviceWhiteBalanceGainsCallback = reference to function (syncTime: CMTime): pointer; cblock; cdecl;
-  AVCaptureDeviceRequestAccessForMediaTypeCallback = reference to function (granted: objcbool): pointer; cblock; cdecl;
+  AVCaptureDeviceSetFocusModeLockedWithLensPositionCallback = reference to procedure (syncTime: CMTime); cblock; cdecl;
+  AVCaptureDeviceSetExposureModeCustomWithDurationCallback = reference to procedure (syncTime: CMTime); cblock; cdecl;
+  AVCaptureDeviceSetExposureTargetBiasCallback = reference to procedure (syncTime: CMTime); cblock; cdecl;
+  AVCaptureDeviceSetWhiteBalanceModeLockedWithDeviceWhiteBalanceGainsCallback = reference to procedure (syncTime: CMTime); cblock; cdecl;
+  AVCaptureDeviceRequestAccessForMediaTypeCallback = reference to procedure (granted: objcbool); cblock; cdecl;
 {$endif}
 
 

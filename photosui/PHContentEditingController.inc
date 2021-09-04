@@ -2,7 +2,7 @@
 
 {$ifdef CALLBACKS}
 type
-  PHContentEditingControllerFinishContentEditingWithCompletionHandlerCallback = reference to function (param1: PHContentEditingOutput): pointer; cblock; cdecl;
+  PHContentEditingControllerFinishContentEditingWithCompletionHandlerCallback = reference to procedure (param1: PHContentEditingOutput); cblock; cdecl;
 {$endif}
 
 

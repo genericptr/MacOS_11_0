@@ -14,8 +14,8 @@ const
 
 {$ifdef CALLBACKS}
 type
-  NSBundleBeginAccessingResourcesWithCompletionHandlerCallback = reference to function (error: NSError): pointer; cblock; cdecl;
-  NSBundleConditionallyBeginAccessingResourcesWithCompletionHandlerCallback = reference to function (resourcesAvailable: objcbool): pointer; cblock; cdecl;
+  NSBundleBeginAccessingResourcesWithCompletionHandlerCallback = reference to procedure (error: NSError); cblock; cdecl;
+  NSBundleConditionallyBeginAccessingResourcesWithCompletionHandlerCallback = reference to procedure (resourcesAvailable: objcbool); cblock; cdecl;
 {$endif}
 
 

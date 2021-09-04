@@ -14,21 +14,21 @@
 
 {$ifdef CALLBACKS}
 type
-  GKLocalPlayerAuthenticateHandlerCallback = reference to function (error: NSError): pointer; cblock; cdecl;
-  GKLocalPlayerLoadRecentPlayersWithCompletionHandlerCallback = reference to function (recentPlayers: NSArray; error: NSError): pointer; cblock; cdecl;
-  GKLocalPlayerLoadChallengableFriendsWithCompletionHandlerCallback = reference to function (challengableFriends: NSArray; error: NSError): pointer; cblock; cdecl;
-  GKLocalPlayerSetDefaultLeaderboardIdentifierCallback = reference to function (error: NSError): pointer; cblock; cdecl;
-  GKLocalPlayerLoadDefaultLeaderboardIdentifierWithCompletionHandlerCallback = reference to function (leaderboardIdentifier: NSString; error: NSError): pointer; cblock; cdecl;
-  GKLocalPlayerFetchItemsForIdentityVerificationSignatureCallback = reference to function (publicKeyURL: NSURL; signature: NSData; salt: NSData; timestamp: cuint64; error: NSError): pointer; cblock; cdecl;
-  GKLocalPlayerSetDefaultLeaderboardCategoryIDCallback = reference to function (error: NSError): pointer; cblock; cdecl;
-  GKLocalPlayerLoadDefaultLeaderboardCategoryIDWithCompletionHandlerCallback = reference to function (categoryID: NSString; error: NSError): pointer; cblock; cdecl;
-  GKLocalPlayerAuthenticateWithCompletionHandlerCallback = reference to function (error: NSError): pointer; cblock; cdecl;
-  GKLocalPlayerLoadFriendPlayersWithCompletionHandlerCallback = reference to function (friendPlayers: NSArray; error: NSError): pointer; cblock; cdecl;
-  GKLocalPlayerGenerateIdentityVerificationSignatureWithCompletionHandlerCallback = reference to function (publicKeyUrl: NSURL; signature: NSData; salt: NSData; timestamp: cuint64; error: NSError): pointer; cblock; cdecl;
-  GKLocalPlayerLoadFriendsWithCompletionHandlerCallback = reference to function (friendIDs: NSArray; error: NSError): pointer; cblock; cdecl;
-  GKLocalPlayerLoadFriendsAuthorizationStatusCallback = reference to function (authorizationStatus: GKFriendsAuthorizationStatus; error: NSError): pointer; cblock; cdecl;
-  GKLocalPlayerLoadFriendsCallback = reference to function (friends: NSArray; error: NSError): pointer; cblock; cdecl;
-  GKLocalPlayerLoadFriendsWithIdentifiersCallback = reference to function (friends: NSArray; error: NSError): pointer; cblock; cdecl;
+  GKLocalPlayerAuthenticateHandlerCallback = reference to procedure (error: NSError); cblock; cdecl;
+  GKLocalPlayerLoadRecentPlayersWithCompletionHandlerCallback = reference to procedure (recentPlayers: NSArray; error: NSError); cblock; cdecl;
+  GKLocalPlayerLoadChallengableFriendsWithCompletionHandlerCallback = reference to procedure (challengableFriends: NSArray; error: NSError); cblock; cdecl;
+  GKLocalPlayerSetDefaultLeaderboardIdentifierCallback = reference to procedure (error: NSError); cblock; cdecl;
+  GKLocalPlayerLoadDefaultLeaderboardIdentifierWithCompletionHandlerCallback = reference to procedure (leaderboardIdentifier: NSString; error: NSError); cblock; cdecl;
+  GKLocalPlayerFetchItemsForIdentityVerificationSignatureCallback = reference to procedure (publicKeyURL: NSURL; signature: NSData; salt: NSData; timestamp: cuint64; error: NSError); cblock; cdecl;
+  GKLocalPlayerSetDefaultLeaderboardCategoryIDCallback = reference to procedure (error: NSError); cblock; cdecl;
+  GKLocalPlayerLoadDefaultLeaderboardCategoryIDWithCompletionHandlerCallback = reference to procedure (categoryID: NSString; error: NSError); cblock; cdecl;
+  GKLocalPlayerAuthenticateWithCompletionHandlerCallback = reference to procedure (error: NSError); cblock; cdecl;
+  GKLocalPlayerLoadFriendPlayersWithCompletionHandlerCallback = reference to procedure (friendPlayers: NSArray; error: NSError); cblock; cdecl;
+  GKLocalPlayerGenerateIdentityVerificationSignatureWithCompletionHandlerCallback = reference to procedure (publicKeyUrl: NSURL; signature: NSData; salt: NSData; timestamp: cuint64; error: NSError); cblock; cdecl;
+  GKLocalPlayerLoadFriendsWithCompletionHandlerCallback = reference to procedure (friendIDs: NSArray; error: NSError); cblock; cdecl;
+  GKLocalPlayerLoadFriendsAuthorizationStatusCallback = reference to procedure (authorizationStatus: GKFriendsAuthorizationStatus; error: NSError); cblock; cdecl;
+  GKLocalPlayerLoadFriendsCallback = reference to procedure (friends: NSArray; error: NSError); cblock; cdecl;
+  GKLocalPlayerLoadFriendsWithIdentifiersCallback = reference to procedure (friends: NSArray; error: NSError); cblock; cdecl;
 {$endif}
 
 

@@ -2,7 +2,7 @@
 
 {$ifdef CALLBACKS}
 type
-  NSPDFPanelBeginSheetWithPDFInfoCallback = reference to function (param1: NSInteger): pointer; cblock; cdecl;
+  NSPDFPanelBeginSheetWithPDFInfoCallback = reference to procedure (param1: NSInteger); cblock; cdecl;
 {$endif}
 
 

@@ -2,9 +2,9 @@
 
 {$ifdef CALLBACKS}
 type
-  AVCaptureStillImageOutputCaptureStillImageAsynchronouslyFromConnectionCallback = reference to function (imageDataSampleBuffer: CMSampleBufferRef; error: NSError): pointer; cblock; cdecl;
-  AVCaptureStillImageOutputPrepareToCaptureStillImageBracketFromConnectionCallback = reference to function (prepared: objcbool; error: NSError): pointer; cblock; cdecl;
-  AVCaptureStillImageOutputCaptureStillImageBracketAsynchronouslyFromConnectionCallback = reference to function (sampleBuffer: CMSampleBufferRef; stillImageSettings: AVCaptureBracketedStillImageSettings; error: NSError): pointer; cblock; cdecl;
+  AVCaptureStillImageOutputCaptureStillImageAsynchronouslyFromConnectionCallback = reference to procedure (imageDataSampleBuffer: CMSampleBufferRef; error: NSError); cblock; cdecl;
+  AVCaptureStillImageOutputPrepareToCaptureStillImageBracketFromConnectionCallback = reference to procedure (prepared: objcbool; error: NSError); cblock; cdecl;
+  AVCaptureStillImageOutputCaptureStillImageBracketAsynchronouslyFromConnectionCallback = reference to procedure (sampleBuffer: CMSampleBufferRef; stillImageSettings: AVCaptureBracketedStillImageSettings; error: NSError); cblock; cdecl;
 {$endif}
 
 

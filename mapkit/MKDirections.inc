@@ -7,8 +7,8 @@ type
 
 {$ifdef TYPES}
 type
-  MKDirectionsHandler = reference to function (response: MKDirectionsResponse; error: NSError): pointer; cblock; cdecl;
-  MKETAHandler = reference to function (response: MKETAResponse; error: NSError): pointer; cblock; cdecl { unavailable in watchos };
+  MKDirectionsHandler = reference to procedure (response: MKDirectionsResponse; error: NSError); cblock; cdecl;
+  MKETAHandler = reference to procedure (response: MKETAResponse; error: NSError); cblock; cdecl { unavailable in watchos };
 {$endif}
 
 {$ifdef CLASSES}

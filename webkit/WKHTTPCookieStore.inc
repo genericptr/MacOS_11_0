@@ -2,9 +2,9 @@
 
 {$ifdef CALLBACKS}
 type
-  WKHTTPCookieStoreGetAllCookiesCallback = reference to function (param1: NSArray): pointer; cblock; cdecl;
-  WKHTTPCookieStoreSetCookieCallback = reference to function : pointer; cblock; cdecl;
-  WKHTTPCookieStoreDeleteCookieCallback = reference to function : pointer; cblock; cdecl;
+  WKHTTPCookieStoreGetAllCookiesCallback = reference to procedure (param1: NSArray); cblock; cdecl;
+  WKHTTPCookieStoreSetCookieCallback = reference to procedure; cblock; cdecl;
+  WKHTTPCookieStoreDeleteCookieCallback = reference to procedure; cblock; cdecl;
 {$endif}
 
 

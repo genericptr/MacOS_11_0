@@ -8,16 +8,16 @@
 
 {$ifdef CALLBACKS}
 type
-  GKLeaderboardLoadLeaderboardsWithIDsCallback = reference to function (leaderboards: NSArray; error: NSError): pointer; cblock; cdecl;
-  GKLeaderboardLoadPreviousOccurrenceWithCompletionHandlerCallback = reference to function (leaderboard: GKLeaderboard; error: NSError): pointer; cblock; cdecl;
-  GKLeaderboardSubmitScoreCallback = reference to function (error: NSError): pointer; cblock; cdecl;
-  GKLeaderboardLoadEntriesForPlayerScopeCallback = reference to function (localPlayerEntry: GKLeaderboardEntry; entries: NSArray; totalPlayerCount: NSInteger; error: NSError): pointer; cblock; cdecl;
-  GKLeaderboardLoadEntriesForPlayersCallback = reference to function (localPlayerEntry: GKLeaderboardEntry; entries: NSArray; error: NSError): pointer; cblock; cdecl;
-  GKLeaderboardLoadCategoriesWithCompletionHandlerCallback = reference to function (categories: NSArray; titles: NSArray; error: NSError): pointer; cblock; cdecl;
-  GKLeaderboardSetDefaultLeaderboardCallback = reference to function (error: NSError): pointer; cblock; cdecl;
-  GKLeaderboardLoadScoresWithCompletionHandlerCallback = reference to function (scores: NSArray; error: NSError): pointer; cblock; cdecl;
-  GKLeaderboardLoadLeaderboardsWithCompletionHandlerCallback = reference to function (leaderboards: NSArray; error: NSError): pointer; cblock; cdecl;
-  GKLeaderboardLoadImageWithCompletionHandlerCallback = reference to function (image: UIImage; error: NSError): pointer; cblock; cdecl;
+  GKLeaderboardLoadLeaderboardsWithIDsCallback = reference to procedure (leaderboards: NSArray; error: NSError); cblock; cdecl;
+  GKLeaderboardLoadPreviousOccurrenceWithCompletionHandlerCallback = reference to procedure (leaderboard: GKLeaderboard; error: NSError); cblock; cdecl;
+  GKLeaderboardSubmitScoreCallback = reference to procedure (error: NSError); cblock; cdecl;
+  GKLeaderboardLoadEntriesForPlayerScopeCallback = reference to procedure (localPlayerEntry: GKLeaderboardEntry; entries: NSArray; totalPlayerCount: NSInteger; error: NSError); cblock; cdecl;
+  GKLeaderboardLoadEntriesForPlayersCallback = reference to procedure (localPlayerEntry: GKLeaderboardEntry; entries: NSArray; error: NSError); cblock; cdecl;
+  GKLeaderboardLoadCategoriesWithCompletionHandlerCallback = reference to procedure (categories: NSArray; titles: NSArray; error: NSError); cblock; cdecl;
+  GKLeaderboardSetDefaultLeaderboardCallback = reference to procedure (error: NSError); cblock; cdecl;
+  GKLeaderboardLoadScoresWithCompletionHandlerCallback = reference to procedure (scores: NSArray; error: NSError); cblock; cdecl;
+  GKLeaderboardLoadLeaderboardsWithCompletionHandlerCallback = reference to procedure (leaderboards: NSArray; error: NSError); cblock; cdecl;
+  GKLeaderboardLoadImageWithCompletionHandlerCallback = reference to procedure (image: UIImage; error: NSError); cblock; cdecl;
 {$endif}
 
 

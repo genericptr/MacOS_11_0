@@ -36,8 +36,8 @@ const
 
 {$ifdef CALLBACKS}
 type
-  NSApplicationEnumerateWindowsWithOptionsCallback = reference to function (window: NSWindow; stop: objcboolPtr): pointer; cblock; cdecl;
-  NSApplicationApplicationCallback = reference to function (restorableObjects: NSArray): pointer; cblock; cdecl;
+  NSApplicationEnumerateWindowsWithOptionsCallback = reference to procedure (window: NSWindow; stop: objcboolPtr); cblock; cdecl;
+  NSApplicationApplicationCallback = reference to procedure (restorableObjects: NSArray); cblock; cdecl;
 {$endif}
 
 

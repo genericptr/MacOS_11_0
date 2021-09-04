@@ -2,8 +2,8 @@
 
 {$ifdef CALLBACKS}
 type
-  NSDictionaryEnumerateKeysAndObjectsUsingBlockCallback = reference to function (key: id; obj: id; stop: objcboolPtr): pointer; cblock; cdecl;
-  NSDictionaryEnumerateKeysAndObjectsWithOptionsCallback = reference to function (key: id; obj: id; stop: objcboolPtr): pointer; cblock; cdecl;
+  NSDictionaryEnumerateKeysAndObjectsUsingBlockCallback = reference to procedure (key: id; obj: id; stop: objcboolPtr); cblock; cdecl;
+  NSDictionaryEnumerateKeysAndObjectsWithOptionsCallback = reference to procedure (key: id; obj: id; stop: objcboolPtr); cblock; cdecl;
   NSDictionaryKeysOfEntriesPassingTestCallback = reference to function (key: id; obj: id; stop: objcboolPtr): objcbool; cblock; cdecl;
   NSDictionaryKeysOfEntriesWithOptionsCallback = reference to function (key: id; obj: id; stop: objcboolPtr): objcbool; cblock; cdecl;
 {$endif}

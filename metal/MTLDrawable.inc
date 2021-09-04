@@ -7,7 +7,7 @@ type
 
 {$ifdef TYPES}
 type
-  MTLDrawablePresentedHandler = reference to function (param1: id): pointer; cblock; cdecl;
+  MTLDrawablePresentedHandler = reference to procedure (param1: id); cblock; cdecl;
 {$endif}
 
 {$ifdef PROTOCOLS}

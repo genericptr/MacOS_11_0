@@ -2,10 +2,10 @@
 
 {$ifdef CALLBACKS}
 type
-  WKContentRuleListStoreCompileContentRuleListForIdentifierCallback = reference to function (param1: WKContentRuleList; param2: NSError): pointer; cblock; cdecl;
-  WKContentRuleListStoreLookUpContentRuleListForIdentifierCallback = reference to function (param1: WKContentRuleList; param2: NSError): pointer; cblock; cdecl;
-  WKContentRuleListStoreRemoveContentRuleListForIdentifierCallback = reference to function (param1: NSError): pointer; cblock; cdecl;
-  WKContentRuleListStoreGetAvailableContentRuleListIdentifiersCallback = reference to function (param1: NSArray): pointer; cblock; cdecl;
+  WKContentRuleListStoreCompileContentRuleListForIdentifierCallback = reference to procedure (param1: WKContentRuleList; param2: NSError); cblock; cdecl;
+  WKContentRuleListStoreLookUpContentRuleListForIdentifierCallback = reference to procedure (param1: WKContentRuleList; param2: NSError); cblock; cdecl;
+  WKContentRuleListStoreRemoveContentRuleListForIdentifierCallback = reference to procedure (param1: NSError); cblock; cdecl;
+  WKContentRuleListStoreGetAvailableContentRuleListIdentifiersCallback = reference to procedure (param1: NSArray); cblock; cdecl;
 {$endif}
 
 

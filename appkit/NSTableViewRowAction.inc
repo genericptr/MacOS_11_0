@@ -2,7 +2,7 @@
 
 {$ifdef CALLBACKS}
 type
-  NSTableViewRowActionRowActionWithStyleCallback = reference to function (action: NSTableViewRowAction; row: NSInteger): pointer; cblock; cdecl;
+  NSTableViewRowActionRowActionWithStyleCallback = reference to procedure (action: NSTableViewRowAction; row: NSInteger); cblock; cdecl;
 {$endif}
 
 

@@ -4,7 +4,7 @@
 {$ifdef TYPES}
 
 type
-  NSProgressUnpublishingHandler = reference to function : pointer; cblock; cdecl;
+  NSProgressUnpublishingHandler = reference to procedure; cblock; cdecl;
 
 type
   NSProgressPublishingHandler = reference to function (progress: NSProgress): NSProgressUnpublishingHandler; cblock; cdecl;
@@ -13,10 +13,10 @@ type
 
 {$ifdef CALLBACKS}
 type
-  NSProgressPerformAsCurrentWithPendingUnitCountCallback = reference to function : pointer; cblock; cdecl;
-  NSProgressCancellationHandlerCallback = reference to function : pointer; cblock; cdecl;
-  NSProgressPausingHandlerCallback = reference to function : pointer; cblock; cdecl;
-  NSProgressResumingHandlerCallback = reference to function : pointer; cblock; cdecl;
+  NSProgressPerformAsCurrentWithPendingUnitCountCallback = reference to procedure; cblock; cdecl;
+  NSProgressCancellationHandlerCallback = reference to procedure; cblock; cdecl;
+  NSProgressPausingHandlerCallback = reference to procedure; cblock; cdecl;
+  NSProgressResumingHandlerCallback = reference to procedure; cblock; cdecl;
 {$endif}
 
 

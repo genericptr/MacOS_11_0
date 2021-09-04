@@ -2,8 +2,8 @@
 
 {$ifdef CALLBACKS}
 type
-  CKFetchShareMetadataOperationPerShareMetadataBlockCallback = reference to function (shareURL: NSURL; shareMetadata: CKShareMetadata; error: NSError): pointer; cblock; cdecl;
-  CKFetchShareMetadataOperationFetchShareMetadataCompletionBlockCallback = reference to function (operationError: NSError): pointer; cblock; cdecl;
+  CKFetchShareMetadataOperationPerShareMetadataBlockCallback = reference to procedure (shareURL: NSURL; shareMetadata: CKShareMetadata; error: NSError); cblock; cdecl;
+  CKFetchShareMetadataOperationFetchShareMetadataCompletionBlockCallback = reference to procedure (operationError: NSError); cblock; cdecl;
 {$endif}
 
 

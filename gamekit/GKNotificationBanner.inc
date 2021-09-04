@@ -2,7 +2,7 @@
 
 {$ifdef CALLBACKS}
 type
-  GKNotificationBannerShowBannerWithTitleCallback = reference to function : pointer; cblock; cdecl;
+  GKNotificationBannerShowBannerWithTitleCallback = reference to procedure; cblock; cdecl;
 {$endif}
 
 

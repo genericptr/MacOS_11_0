@@ -2,10 +2,10 @@
 
 {$ifdef CALLBACKS}
 type
-  ICCameraFileRequestThumbnailDataWithOptionsCallback = reference to function (param1: NSData; param2: NSError): pointer; cblock; cdecl;
-  ICCameraFileRequestMetadataDictionaryWithOptionsCallback = reference to function (param1: NSDictionary; param2: NSError): pointer; cblock; cdecl;
-  ICCameraFileRequestDownloadWithOptionsCallback = reference to function (filename: NSString; error: NSError): pointer; cblock; cdecl;
-  ICCameraFileRequestReadDataAtOffsetCallback = reference to function (param1: NSData; param2: NSError): pointer; cblock; cdecl;
+  ICCameraFileRequestThumbnailDataWithOptionsCallback = reference to procedure (param1: NSData; param2: NSError); cblock; cdecl;
+  ICCameraFileRequestMetadataDictionaryWithOptionsCallback = reference to procedure (param1: NSDictionary; param2: NSError); cblock; cdecl;
+  ICCameraFileRequestDownloadWithOptionsCallback = reference to procedure (filename: NSString; error: NSError); cblock; cdecl;
+  ICCameraFileRequestReadDataAtOffsetCallback = reference to procedure (param1: NSData; param2: NSError); cblock; cdecl;
 {$endif}
 
 

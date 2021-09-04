@@ -2,8 +2,8 @@
 
 {$ifdef CALLBACKS}
 type
-  NSTaskTerminationHandlerCallback = reference to function (param1: NSTask): pointer; cblock; cdecl;
-  NSTaskLaunchedTaskWithExecutableURLCallback = reference to function (param1: NSTask): pointer; cblock; cdecl;
+  NSTaskTerminationHandlerCallback = reference to procedure (param1: NSTask); cblock; cdecl;
+  NSTaskLaunchedTaskWithExecutableURLCallback = reference to procedure (param1: NSTask); cblock; cdecl;
 {$endif}
 
 

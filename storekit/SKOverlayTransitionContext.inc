@@ -2,7 +2,7 @@
 
 {$ifdef CALLBACKS}
 type
-  SKOverlayTransitionContextAddAnimationBlockCallback = reference to function : pointer; cblock; cdecl;
+  SKOverlayTransitionContextAddAnimationBlockCallback = reference to procedure; cblock; cdecl;
 {$endif}
 
 

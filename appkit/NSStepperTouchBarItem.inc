@@ -2,7 +2,7 @@
 
 {$ifdef CALLBACKS}
 type
-  NSStepperTouchBarItemStepperTouchBarItemWithIdentifierCallback = reference to function (rect: NSRect; value: double): pointer; cblock; cdecl;
+  NSStepperTouchBarItemStepperTouchBarItemWithIdentifierCallback = reference to procedure (rect: NSRect; value: double); cblock; cdecl;
 {$endif}
 
 

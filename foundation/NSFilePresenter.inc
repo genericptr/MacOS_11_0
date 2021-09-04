@@ -2,11 +2,11 @@
 
 {$ifdef CALLBACKS}
 type
-  NSFilePresenterRelinquishPresentedItemToReaderCallback = reference to function (param1: OpaqueCBlock): pointer; cblock; cdecl;
-  NSFilePresenterRelinquishPresentedItemToWriterCallback = reference to function (param1: OpaqueCBlock): pointer; cblock; cdecl;
-  NSFilePresenterSavePresentedItemChangesWithCompletionHandlerCallback = reference to function (errorOrNil: NSError): pointer; cblock; cdecl;
-  NSFilePresenterAccommodatePresentedItemDeletionWithCompletionHandlerCallback = reference to function (errorOrNil: NSError): pointer; cblock; cdecl;
-  NSFilePresenterAccommodatePresentedSubitemDeletionAtURLCallback = reference to function (errorOrNil: NSError): pointer; cblock; cdecl;
+  NSFilePresenterRelinquishPresentedItemToReaderCallback = reference to procedure (param1: OpaqueCBlock); cblock; cdecl;
+  NSFilePresenterRelinquishPresentedItemToWriterCallback = reference to procedure (param1: OpaqueCBlock); cblock; cdecl;
+  NSFilePresenterSavePresentedItemChangesWithCompletionHandlerCallback = reference to procedure (errorOrNil: NSError); cblock; cdecl;
+  NSFilePresenterAccommodatePresentedItemDeletionWithCompletionHandlerCallback = reference to procedure (errorOrNil: NSError); cblock; cdecl;
+  NSFilePresenterAccommodatePresentedSubitemDeletionAtURLCallback = reference to procedure (errorOrNil: NSError); cblock; cdecl;
 {$endif}
 
 

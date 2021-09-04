@@ -2,7 +2,7 @@
 
 {$ifdef CALLBACKS}
 type
-  NSViewControllerTransitionFromViewControllerCallback = reference to function : pointer; cblock; cdecl;
+  NSViewControllerTransitionFromViewControllerCallback = reference to procedure; cblock; cdecl;
 {$endif}
 
 

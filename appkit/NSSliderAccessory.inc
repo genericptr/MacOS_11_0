@@ -8,7 +8,7 @@
 
 {$ifdef CALLBACKS}
 type
-  NSSliderAccessoryBehaviorWithHandlerCallback = reference to function (param1: NSSliderAccessory): pointer; cblock; cdecl;
+  NSSliderAccessoryBehaviorWithHandlerCallback = reference to procedure (param1: NSSliderAccessory); cblock; cdecl;
 {$endif}
 
 

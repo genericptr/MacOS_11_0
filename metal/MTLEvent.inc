@@ -31,7 +31,7 @@ type
 
 {$ifdef TYPES}
 type
-  MTLSharedEventNotificationBlock = reference to function (param1: id; value: cuint64): pointer; cblock; cdecl;
+  MTLSharedEventNotificationBlock = reference to procedure (param1: id; value: cuint64); cblock; cdecl;
 {$endif}
 
 {$ifdef PROTOCOLS}

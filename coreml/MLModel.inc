@@ -2,7 +2,7 @@
 
 {$ifdef CALLBACKS}
 type
-  MLModelLoadContentsOfURLCallback = reference to function (model: MLModel; error: NSError): pointer; cblock; cdecl;
+  MLModelLoadContentsOfURLCallback = reference to procedure (model: MLModel; error: NSError); cblock; cdecl;
 {$endif}
 
 

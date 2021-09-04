@@ -4,7 +4,7 @@
 {$ifdef TYPES}
 
 type
-  NSUserScriptTaskCompletionHandler = reference to function (error: NSError): pointer; cblock; cdecl;
+  NSUserScriptTaskCompletionHandler = reference to procedure (error: NSError); cblock; cdecl;
 {$endif}
 
 
@@ -12,7 +12,7 @@ type
 {$ifdef TYPES}
 
 type
-  NSUserUnixTaskCompletionHandler = reference to function (error: NSError): pointer; cblock; cdecl;
+  NSUserUnixTaskCompletionHandler = reference to procedure (error: NSError); cblock; cdecl;
 {$endif}
 
 
@@ -20,7 +20,7 @@ type
 {$ifdef TYPES}
 
 type
-  NSUserAppleScriptTaskCompletionHandler = reference to function (result_: NSAppleEventDescriptor; error: NSError): pointer; cblock; cdecl;
+  NSUserAppleScriptTaskCompletionHandler = reference to procedure (result_: NSAppleEventDescriptor; error: NSError); cblock; cdecl;
 {$endif}
 
 
@@ -28,7 +28,7 @@ type
 {$ifdef TYPES}
 
 type
-  NSUserAutomatorTaskCompletionHandler = reference to function (result_: id; error: NSError): pointer; cblock; cdecl;
+  NSUserAutomatorTaskCompletionHandler = reference to procedure (result_: id; error: NSError); cblock; cdecl;
 {$endif}
 
 

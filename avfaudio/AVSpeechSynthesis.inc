@@ -47,7 +47,7 @@ var
 
 {$ifdef TYPES}
 type
-  AVSpeechSynthesizerBufferCallback = reference to function (buffer: AVAudioBuffer): pointer; cblock; cdecl;
+  AVSpeechSynthesizerBufferCallback = reference to procedure (buffer: AVAudioBuffer); cblock; cdecl;
 {$endif}
 
 {$ifdef CLASSES}

@@ -2,7 +2,7 @@
 
 {$ifdef CALLBACKS}
 type
-  CKModifyRecordZonesOperationModifyRecordZonesCompletionBlockCallback = reference to function (savedRecordZones: NSArray; deletedRecordZoneIDs: NSArray; operationError: NSError): pointer; cblock; cdecl;
+  CKModifyRecordZonesOperationModifyRecordZonesCompletionBlockCallback = reference to procedure (savedRecordZones: NSArray; deletedRecordZoneIDs: NSArray; operationError: NSError); cblock; cdecl;
 {$endif}
 
 

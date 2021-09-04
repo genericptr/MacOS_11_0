@@ -16,7 +16,7 @@ type
 
 {$ifdef CALLBACKS}
 type
-  NSTableViewDiffableDataSourceApplySnapshotCallback = reference to function : pointer; cblock; cdecl;
+  NSTableViewDiffableDataSourceApplySnapshotCallback = reference to procedure; cblock; cdecl;
 {$endif}
 
 

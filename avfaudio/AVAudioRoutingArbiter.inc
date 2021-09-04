@@ -2,7 +2,7 @@
 
 {$ifdef CALLBACKS}
 type
-  AVAudioRoutingArbiterBeginArbitrationWithCategoryCallback = reference to function (defaultDeviceChanged: objcbool; error: NSError): pointer; cblock; cdecl;
+  AVAudioRoutingArbiterBeginArbitrationWithCategoryCallback = reference to procedure (defaultDeviceChanged: objcbool; error: NSError); cblock; cdecl;
 {$endif}
 
 

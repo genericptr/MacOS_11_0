@@ -2,17 +2,17 @@
 
 {$ifdef CALLBACKS}
 type
-  GKGameSessionCreateSessionInContainerCallback = reference to function (session: GKGameSession; error: NSError): pointer; cblock; cdecl;
-  GKGameSessionLoadSessionsInContainerCallback = reference to function (sessions: NSArray; error: NSError): pointer; cblock; cdecl;
-  GKGameSessionLoadSessionWithIdentifierCallback = reference to function (session: GKGameSession; error: NSError): pointer; cblock; cdecl;
-  GKGameSessionRemoveSessionWithIdentifierCallback = reference to function (error: NSError): pointer; cblock; cdecl;
-  GKGameSessionGetShareURLWithCompletionHandlerCallback = reference to function (url: NSURL; error: NSError): pointer; cblock; cdecl;
-  GKGameSessionLoadDataWithCompletionHandlerCallback = reference to function (data: NSData; error: NSError): pointer; cblock; cdecl;
-  GKGameSessionSaveDataCallback = reference to function (conflictingData: NSData; error: NSError): pointer; cblock; cdecl;
-  GKGameSessionSetConnectionStateCallback = reference to function (error: NSError): pointer; cblock; cdecl;
-  GKGameSessionSendDataCallback = reference to function (error: NSError): pointer; cblock; cdecl;
-  GKGameSessionSendMessageWithLocalizedFormatKeyCallback = reference to function (error: NSError): pointer; cblock; cdecl;
-  GKGameSessionClearBadgeForPlayersCallback = reference to function (error: NSError): pointer; cblock; cdecl;
+  GKGameSessionCreateSessionInContainerCallback = reference to procedure (session: GKGameSession; error: NSError); cblock; cdecl;
+  GKGameSessionLoadSessionsInContainerCallback = reference to procedure (sessions: NSArray; error: NSError); cblock; cdecl;
+  GKGameSessionLoadSessionWithIdentifierCallback = reference to procedure (session: GKGameSession; error: NSError); cblock; cdecl;
+  GKGameSessionRemoveSessionWithIdentifierCallback = reference to procedure (error: NSError); cblock; cdecl;
+  GKGameSessionGetShareURLWithCompletionHandlerCallback = reference to procedure (url: NSURL; error: NSError); cblock; cdecl;
+  GKGameSessionLoadDataWithCompletionHandlerCallback = reference to procedure (data: NSData; error: NSError); cblock; cdecl;
+  GKGameSessionSaveDataCallback = reference to procedure (conflictingData: NSData; error: NSError); cblock; cdecl;
+  GKGameSessionSetConnectionStateCallback = reference to procedure (error: NSError); cblock; cdecl;
+  GKGameSessionSendDataCallback = reference to procedure (error: NSError); cblock; cdecl;
+  GKGameSessionSendMessageWithLocalizedFormatKeyCallback = reference to procedure (error: NSError); cblock; cdecl;
+  GKGameSessionClearBadgeForPlayersCallback = reference to procedure (error: NSError); cblock; cdecl;
 {$endif}
 
 

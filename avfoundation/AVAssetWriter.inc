@@ -2,7 +2,7 @@
 
 {$ifdef CALLBACKS}
 type
-  AVAssetWriterFinishWritingWithCompletionHandlerCallback = reference to function : pointer; cblock; cdecl;
+  AVAssetWriterFinishWritingWithCompletionHandlerCallback = reference to procedure; cblock; cdecl;
 {$endif}
 
 

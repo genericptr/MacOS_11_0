@@ -27,7 +27,7 @@ type
   AVAssetImageGeneratorResultPtr = ^AVAssetImageGeneratorResult;
   
 type
-  AVAssetImageGeneratorCompletionHandler = reference to function (requestedTime: CMTime; image: CGImageRef; actualTime: CMTime; result_: AVAssetImageGeneratorResult; error: NSError): pointer; cblock; cdecl;
+  AVAssetImageGeneratorCompletionHandler = reference to procedure (requestedTime: CMTime; image: CGImageRef; actualTime: CMTime; result_: AVAssetImageGeneratorResult; error: NSError); cblock; cdecl;
 
 const
   AVAssetImageGeneratorSucceeded = 0;

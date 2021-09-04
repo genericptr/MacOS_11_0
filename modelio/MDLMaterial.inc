@@ -2,8 +2,8 @@
 
 {$ifdef CALLBACKS}
 type
-  MDLMaterialInitWithInputsCallback = reference to function (param1: MDLMaterialPropertyNode): pointer; cblock; cdecl;
-  MDLMaterialEvaluationFunctionCallback = reference to function (param1: MDLMaterialPropertyNode): pointer; cblock; cdecl;
+  MDLMaterialInitWithInputsCallback = reference to procedure (param1: MDLMaterialPropertyNode); cblock; cdecl;
+  MDLMaterialEvaluationFunctionCallback = reference to procedure (param1: MDLMaterialPropertyNode); cblock; cdecl;
 {$endif}
 
 

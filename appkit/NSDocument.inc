@@ -2,21 +2,21 @@
 
 {$ifdef CALLBACKS}
 type
-  NSDocumentPerformActivityWithSynchronousWaitingCallback = reference to function (param1: OpaqueCBlock): pointer; cblock; cdecl;
-  NSDocumentContinueActivityUsingBlockCallback = reference to function : pointer; cblock; cdecl;
-  NSDocumentContinueAsynchronousWorkOnMainThreadUsingBlockCallback = reference to function : pointer; cblock; cdecl;
-  NSDocumentPerformSynchronousFileAccessUsingBlockCallback = reference to function : pointer; cblock; cdecl;
-  NSDocumentPerformAsynchronousFileAccessUsingBlockCallback = reference to function (param1: OpaqueCBlock): pointer; cblock; cdecl;
-  NSDocumentSaveToURLCallback = reference to function (errorOrNil: NSError): pointer; cblock; cdecl;
-  NSDocumentAutosaveWithImplicitCancellabilityCallback = reference to function (errorOrNil: NSError): pointer; cblock; cdecl;
-  NSDocumentStopBrowsingVersionsWithCompletionHandlerCallback = reference to function : pointer; cblock; cdecl;
-  NSDocumentMoveDocumentWithCompletionHandlerCallback = reference to function (didMove: objcbool): pointer; cblock; cdecl;
-  NSDocumentMoveToURLCallback = reference to function (param1: NSError): pointer; cblock; cdecl;
-  NSDocumentLockDocumentWithCompletionHandlerCallback = reference to function (didLock: objcbool): pointer; cblock; cdecl;
-  NSDocumentLockWithCompletionHandlerCallback = reference to function (param1: NSError): pointer; cblock; cdecl;
-  NSDocumentUnlockDocumentWithCompletionHandlerCallback = reference to function (didUnlock: objcbool): pointer; cblock; cdecl;
-  NSDocumentUnlockWithCompletionHandlerCallback = reference to function (param1: NSError): pointer; cblock; cdecl;
-  NSDocumentShareDocumentWithSharingServiceCallback = reference to function (success: objcbool): pointer; cblock; cdecl;
+  NSDocumentPerformActivityWithSynchronousWaitingCallback = reference to procedure (param1: OpaqueCBlock); cblock; cdecl;
+  NSDocumentContinueActivityUsingBlockCallback = reference to procedure; cblock; cdecl;
+  NSDocumentContinueAsynchronousWorkOnMainThreadUsingBlockCallback = reference to procedure; cblock; cdecl;
+  NSDocumentPerformSynchronousFileAccessUsingBlockCallback = reference to procedure; cblock; cdecl;
+  NSDocumentPerformAsynchronousFileAccessUsingBlockCallback = reference to procedure (param1: OpaqueCBlock); cblock; cdecl;
+  NSDocumentSaveToURLCallback = reference to procedure (errorOrNil: NSError); cblock; cdecl;
+  NSDocumentAutosaveWithImplicitCancellabilityCallback = reference to procedure (errorOrNil: NSError); cblock; cdecl;
+  NSDocumentStopBrowsingVersionsWithCompletionHandlerCallback = reference to procedure; cblock; cdecl;
+  NSDocumentMoveDocumentWithCompletionHandlerCallback = reference to procedure (didMove: objcbool); cblock; cdecl;
+  NSDocumentMoveToURLCallback = reference to procedure (param1: NSError); cblock; cdecl;
+  NSDocumentLockDocumentWithCompletionHandlerCallback = reference to procedure (didLock: objcbool); cblock; cdecl;
+  NSDocumentLockWithCompletionHandlerCallback = reference to procedure (param1: NSError); cblock; cdecl;
+  NSDocumentUnlockDocumentWithCompletionHandlerCallback = reference to procedure (didUnlock: objcbool); cblock; cdecl;
+  NSDocumentUnlockWithCompletionHandlerCallback = reference to procedure (param1: NSError); cblock; cdecl;
+  NSDocumentShareDocumentWithSharingServiceCallback = reference to procedure (success: objcbool); cblock; cdecl;
 {$endif}
 
 

@@ -123,7 +123,7 @@ const
   NSCollectionLayoutSectionOrthogonalScrollingBehaviorGroupPagingCentered = 5;
 
 type
-  NSCollectionLayoutSectionVisibleItemsInvalidationHandler = reference to function (visibleItems: NSArray; contentOffset: NSPoint; layoutEnvironment: id): pointer; cblock; cdecl;
+  NSCollectionLayoutSectionVisibleItemsInvalidationHandler = reference to procedure (visibleItems: NSArray; contentOffset: NSPoint; layoutEnvironment: id); cblock; cdecl;
 {$endif}
 
 {$ifdef CLASSES}

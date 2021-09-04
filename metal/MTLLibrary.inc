@@ -2,9 +2,9 @@
 
 {$ifdef CALLBACKS}
 type
-  MTLLibraryNewFunctionWithNameCallback = reference to function (function_: id; error: NSError): pointer; cblock; cdecl;
-  MTLLibraryNewFunctionWithDescriptorCallback = reference to function (function_: id; error: NSError): pointer; cblock; cdecl;
-  MTLLibraryNewIntersectionFunctionWithDescriptorCallback = reference to function (function_: id; error: NSError): pointer; cblock; cdecl;
+  MTLLibraryNewFunctionWithNameCallback = reference to procedure (function_: id; error: NSError); cblock; cdecl;
+  MTLLibraryNewFunctionWithDescriptorCallback = reference to procedure (function_: id; error: NSError); cblock; cdecl;
+  MTLLibraryNewIntersectionFunctionWithDescriptorCallback = reference to procedure (function_: id; error: NSError); cblock; cdecl;
 {$endif}
 
 

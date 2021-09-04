@@ -2,9 +2,9 @@
 
 {$ifdef CALLBACKS}
 type
-  PHFetchResultEnumerateObjectsUsingBlockCallback = reference to function (obj: id; idx: NSUInteger; stop: objcboolPtr): pointer; cblock; cdecl;
-  PHFetchResultEnumerateObjectsWithOptionsCallback = reference to function (obj: id; idx: NSUInteger; stop: objcboolPtr): pointer; cblock; cdecl;
-  PHFetchResultEnumerateObjectsAtIndexesCallback = reference to function (obj: id; idx: NSUInteger; stop: objcboolPtr): pointer; cblock; cdecl;
+  PHFetchResultEnumerateObjectsUsingBlockCallback = reference to procedure (obj: id; idx: NSUInteger; stop: objcboolPtr); cblock; cdecl;
+  PHFetchResultEnumerateObjectsWithOptionsCallback = reference to procedure (obj: id; idx: NSUInteger; stop: objcboolPtr); cblock; cdecl;
+  PHFetchResultEnumerateObjectsAtIndexesCallback = reference to procedure (obj: id; idx: NSUInteger; stop: objcboolPtr); cblock; cdecl;
 {$endif}
 
 

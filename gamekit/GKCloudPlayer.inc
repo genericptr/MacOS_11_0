@@ -2,7 +2,7 @@
 
 {$ifdef CALLBACKS}
 type
-  GKCloudPlayerGetCurrentSignedInPlayerForContainerCallback = reference to function (player: GKCloudPlayer; error: NSError): pointer; cblock; cdecl;
+  GKCloudPlayerGetCurrentSignedInPlayerForContainerCallback = reference to procedure (player: GKCloudPlayer; error: NSError); cblock; cdecl;
 {$endif}
 
 

@@ -2,11 +2,11 @@
 
 {$ifdef CALLBACKS}
 type
-  GKSavedGameLoadDataWithCompletionHandlerCallback = reference to function (data: NSData; error: NSError): pointer; cblock; cdecl;
-  GKSavedGameFetchSavedGamesWithCompletionHandlerCallback = reference to function (savedGames: NSArray; error: NSError): pointer; cblock; cdecl;
-  GKSavedGameSaveGameDataCallback = reference to function (savedGame: GKSavedGame; error: NSError): pointer; cblock; cdecl;
-  GKSavedGameDeleteSavedGamesWithNameCallback = reference to function (error: NSError): pointer; cblock; cdecl;
-  GKSavedGameResolveConflictingSavedGamesCallback = reference to function (savedGames: NSArray; error: NSError): pointer; cblock; cdecl;
+  GKSavedGameLoadDataWithCompletionHandlerCallback = reference to procedure (data: NSData; error: NSError); cblock; cdecl;
+  GKSavedGameFetchSavedGamesWithCompletionHandlerCallback = reference to procedure (savedGames: NSArray; error: NSError); cblock; cdecl;
+  GKSavedGameSaveGameDataCallback = reference to procedure (savedGame: GKSavedGame; error: NSError); cblock; cdecl;
+  GKSavedGameDeleteSavedGamesWithNameCallback = reference to procedure (error: NSError); cblock; cdecl;
+  GKSavedGameResolveConflictingSavedGamesCallback = reference to procedure (savedGames: NSArray; error: NSError); cblock; cdecl;
 {$endif}
 
 

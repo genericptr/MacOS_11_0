@@ -2,8 +2,8 @@
 
 {$ifdef CALLBACKS}
 type
-  NSEventTrackSwipeEventWithOptionsCallback = reference to function (gestureAmount: CGFloat; phase: NSEventPhase; isComplete: objcbool; stop: objcboolPtr): pointer; cblock; cdecl;
-  NSEventAddGlobalMonitorForEventsMatchingMaskCallback = reference to function (event: NSEvent): pointer; cblock; cdecl;
+  NSEventTrackSwipeEventWithOptionsCallback = reference to procedure (gestureAmount: CGFloat; phase: NSEventPhase; isComplete: objcbool; stop: objcboolPtr); cblock; cdecl;
+  NSEventAddGlobalMonitorForEventsMatchingMaskCallback = reference to procedure (event: NSEvent); cblock; cdecl;
   NSEventAddLocalMonitorForEventsMatchingMaskCallback = reference to function (event: NSEvent): NSEvent; cblock; cdecl;
 {$endif}
 

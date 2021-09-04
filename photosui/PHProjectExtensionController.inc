@@ -2,9 +2,9 @@
 
 {$ifdef CALLBACKS}
 type
-  PHProjectExtensionControllerBeginProjectWithExtensionContextCallback = reference to function (param1: NSError): pointer; cblock; cdecl;
-  PHProjectExtensionControllerResumeProjectWithExtensionContextCallback = reference to function (param1: NSError): pointer; cblock; cdecl;
-  PHProjectExtensionControllerFinishProjectWithCompletionHandlerCallback = reference to function : pointer; cblock; cdecl;
+  PHProjectExtensionControllerBeginProjectWithExtensionContextCallback = reference to procedure (param1: NSError); cblock; cdecl;
+  PHProjectExtensionControllerResumeProjectWithExtensionContextCallback = reference to procedure (param1: NSError); cblock; cdecl;
+  PHProjectExtensionControllerFinishProjectWithCompletionHandlerCallback = reference to procedure; cblock; cdecl;
 {$endif}
 
 

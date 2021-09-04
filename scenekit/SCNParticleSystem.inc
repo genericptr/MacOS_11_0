@@ -34,8 +34,8 @@ var
 
 {$ifdef TYPES}
 type
-  SCNParticleEventBlock = reference to function (data: pointer; dataStride: size_tPtr; indices: pcuint32; count: NSInteger): pointer; cblock; cdecl;
-  SCNParticleModifierBlock = reference to function (data: pointer; dataStride: size_tPtr; start: NSInteger; end_: NSInteger; deltaTime: single): pointer; cblock; cdecl;
+  SCNParticleEventBlock = reference to procedure (data: pointer; dataStride: size_tPtr; indices: pcuint32; count: NSInteger); cblock; cdecl;
+  SCNParticleModifierBlock = reference to procedure (data: pointer; dataStride: size_tPtr; start: NSInteger; end_: NSInteger; deltaTime: single); cblock; cdecl;
   SCNParticleSortingMode = NSInteger;
   SCNParticleSortingModePtr = ^SCNParticleSortingMode;
 

@@ -9,8 +9,8 @@
 
 {$ifdef CALLBACKS}
 type
-  SKTexturePreloadTexturesCallback = reference to function : pointer; cblock; cdecl;
-  SKTexturePreloadWithCompletionHandlerCallback = reference to function : pointer; cblock; cdecl;
+  SKTexturePreloadTexturesCallback = reference to procedure; cblock; cdecl;
+  SKTexturePreloadWithCompletionHandlerCallback = reference to procedure; cblock; cdecl;
 {$endif}
 
 

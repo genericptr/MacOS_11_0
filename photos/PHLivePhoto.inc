@@ -8,7 +8,7 @@
 
 {$ifdef CALLBACKS}
 type
-  PHLivePhotoRequestLivePhotoWithResourceFileURLsCallback = reference to function (livePhoto: PHLivePhoto; info: NSDictionary): pointer; cblock; cdecl;
+  PHLivePhotoRequestLivePhotoWithResourceFileURLsCallback = reference to procedure (livePhoto: PHLivePhoto; info: NSDictionary); cblock; cdecl;
 {$endif}
 
 

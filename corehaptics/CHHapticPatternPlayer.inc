@@ -22,7 +22,7 @@ type
 
 {$ifdef TYPES}
 type
-  CHHapticAdvancedPatternPlayerCompletionHandler = reference to function (error: NSError): pointer; cblock; cdecl;
+  CHHapticAdvancedPatternPlayerCompletionHandler = reference to procedure (error: NSError); cblock; cdecl;
 {$endif}
 
 {$ifdef PROTOCOLS}

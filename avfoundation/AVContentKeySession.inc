@@ -12,10 +12,10 @@ type
 
 {$ifdef CALLBACKS}
 type
-  AVContentKeySessionMakeSecureTokenForExpirationDateOfPersistableContentKeyCallback = reference to function (secureTokenData: NSData; error: NSError): pointer; cblock; cdecl;
-  AVContentKeySessionInvalidatePersistableContentKeyCallback = reference to function (secureTokenData: NSData; error: NSError): pointer; cblock; cdecl;
-  AVContentKeySessionInvalidateAllPersistableContentKeysForAppCallback = reference to function (secureTokenData: NSData; error: NSError): pointer; cblock; cdecl;
-  AVContentKeySessionMakeStreamingContentKeyRequestDataForAppCallback = reference to function (contentKeyRequestData: NSData; error: NSError): pointer; cblock; cdecl;
+  AVContentKeySessionMakeSecureTokenForExpirationDateOfPersistableContentKeyCallback = reference to procedure (secureTokenData: NSData; error: NSError); cblock; cdecl;
+  AVContentKeySessionInvalidatePersistableContentKeyCallback = reference to procedure (secureTokenData: NSData; error: NSError); cblock; cdecl;
+  AVContentKeySessionInvalidateAllPersistableContentKeysForAppCallback = reference to procedure (secureTokenData: NSData; error: NSError); cblock; cdecl;
+  AVContentKeySessionMakeStreamingContentKeyRequestDataForAppCallback = reference to procedure (contentKeyRequestData: NSData; error: NSError); cblock; cdecl;
 {$endif}
 
 

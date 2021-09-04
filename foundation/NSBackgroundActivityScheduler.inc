@@ -2,7 +2,7 @@
 
 {$ifdef CALLBACKS}
 type
-  NSBackgroundActivitySchedulerScheduleWithBlockCallback = reference to function (completionHandler: NSBackgroundActivityCompletionHandler): pointer; cblock; cdecl;
+  NSBackgroundActivitySchedulerScheduleWithBlockCallback = reference to procedure (completionHandler: NSBackgroundActivityCompletionHandler); cblock; cdecl;
 {$endif}
 
 
@@ -21,7 +21,7 @@ const
   NSBackgroundActivityResultDeferred = 2;
 
 type
-  NSBackgroundActivityCompletionHandler = reference to function (result_: NSBackgroundActivityResult): pointer; cblock; cdecl;
+  NSBackgroundActivityCompletionHandler = reference to procedure (result_: NSBackgroundActivityResult); cblock; cdecl;
 {$endif}
 
 {$ifdef CLASSES}

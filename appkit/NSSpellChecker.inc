@@ -30,9 +30,9 @@ const
 
 {$ifdef CALLBACKS}
 type
-  NSSpellCheckerRequestCheckingOfStringCallback = reference to function (sequenceNumber: NSInteger; results: NSArray; orthography: NSOrthography; wordCount: NSInteger): pointer; cblock; cdecl;
-  NSSpellCheckerRequestCandidatesForSelectedRangeCallback = reference to function (sequenceNumber: NSInteger; candidates: NSArray): pointer; cblock; cdecl;
-  NSSpellCheckerShowCorrectionIndicatorOfTypeCallback = reference to function (acceptedString: NSString): pointer; cblock; cdecl;
+  NSSpellCheckerRequestCheckingOfStringCallback = reference to procedure (sequenceNumber: NSInteger; results: NSArray; orthography: NSOrthography; wordCount: NSInteger); cblock; cdecl;
+  NSSpellCheckerRequestCandidatesForSelectedRangeCallback = reference to procedure (sequenceNumber: NSInteger; candidates: NSArray); cblock; cdecl;
+  NSSpellCheckerShowCorrectionIndicatorOfTypeCallback = reference to procedure (acceptedString: NSString); cblock; cdecl;
 {$endif}
 
 

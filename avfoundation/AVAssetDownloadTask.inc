@@ -2,12 +2,12 @@
 
 {$ifdef CALLBACKS}
 type
-  AVAssetDownloadTaskDataTaskWithRequestCallback = reference to function (data: NSData; response: NSURLResponse; error: NSError): pointer; cblock; cdecl;
-  AVAssetDownloadTaskDataTaskWithURLCallback = reference to function (data: NSData; response: NSURLResponse; error: NSError): pointer; cblock; cdecl;
-  AVAssetDownloadTaskUploadTaskWithRequestCallback = reference to function (data: NSData; response: NSURLResponse; error: NSError): pointer; cblock; cdecl;
-  AVAssetDownloadTaskDownloadTaskWithRequestCallback = reference to function (location: NSURL; response: NSURLResponse; error: NSError): pointer; cblock; cdecl;
-  AVAssetDownloadTaskDownloadTaskWithURLCallback = reference to function (location: NSURL; response: NSURLResponse; error: NSError): pointer; cblock; cdecl;
-  AVAssetDownloadTaskDownloadTaskWithResumeDataCallback = reference to function (location: NSURL; response: NSURLResponse; error: NSError): pointer; cblock; cdecl;
+  AVAssetDownloadTaskDataTaskWithRequestCallback = reference to procedure (data: NSData; response: NSURLResponse; error: NSError); cblock; cdecl;
+  AVAssetDownloadTaskDataTaskWithURLCallback = reference to procedure (data: NSData; response: NSURLResponse; error: NSError); cblock; cdecl;
+  AVAssetDownloadTaskUploadTaskWithRequestCallback = reference to procedure (data: NSData; response: NSURLResponse; error: NSError); cblock; cdecl;
+  AVAssetDownloadTaskDownloadTaskWithRequestCallback = reference to procedure (location: NSURL; response: NSURLResponse; error: NSError); cblock; cdecl;
+  AVAssetDownloadTaskDownloadTaskWithURLCallback = reference to procedure (location: NSURL; response: NSURLResponse; error: NSError); cblock; cdecl;
+  AVAssetDownloadTaskDownloadTaskWithResumeDataCallback = reference to procedure (location: NSURL; response: NSURLResponse; error: NSError); cblock; cdecl;
 {$endif}
 
 

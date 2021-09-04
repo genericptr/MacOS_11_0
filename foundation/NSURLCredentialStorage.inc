@@ -2,8 +2,8 @@
 
 {$ifdef CALLBACKS}
 type
-  NSURLCredentialStorageGetCredentialsForProtectionSpaceCallback = reference to function (credentials: NSDictionary): pointer; cblock; cdecl;
-  NSURLCredentialStorageGetDefaultCredentialForProtectionSpaceCallback = reference to function (credential: NSURLCredential): pointer; cblock; cdecl;
+  NSURLCredentialStorageGetCredentialsForProtectionSpaceCallback = reference to procedure (credentials: NSDictionary); cblock; cdecl;
+  NSURLCredentialStorageGetDefaultCredentialForProtectionSpaceCallback = reference to procedure (credential: NSURLCredential); cblock; cdecl;
 {$endif}
 
 

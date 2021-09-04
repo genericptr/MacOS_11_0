@@ -2,9 +2,9 @@
 
 {$ifdef CALLBACKS}
 type
-  AVSampleBufferRenderSynchronizerRemoveRendererCallback = reference to function (didRemoveRenderer: objcbool): pointer; cblock; cdecl;
-  AVSampleBufferRenderSynchronizerAddPeriodicTimeObserverForIntervalCallback = reference to function (time: CMTime): pointer; cblock; cdecl;
-  AVSampleBufferRenderSynchronizerAddBoundaryTimeObserverForTimesCallback = reference to function : pointer; cblock; cdecl;
+  AVSampleBufferRenderSynchronizerRemoveRendererCallback = reference to procedure (didRemoveRenderer: objcbool); cblock; cdecl;
+  AVSampleBufferRenderSynchronizerAddPeriodicTimeObserverForIntervalCallback = reference to procedure (time: CMTime); cblock; cdecl;
+  AVSampleBufferRenderSynchronizerAddBoundaryTimeObserverForTimesCallback = reference to procedure; cblock; cdecl;
 {$endif}
 
 

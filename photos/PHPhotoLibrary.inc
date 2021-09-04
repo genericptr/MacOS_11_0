@@ -2,9 +2,9 @@
 
 {$ifdef CALLBACKS}
 type
-  PHPhotoLibraryRequestAuthorizationForAccessLevelCallback = reference to function (status: PHAuthorizationStatus): pointer; cblock; cdecl;
-  PHPhotoLibraryRequestAuthorizationCallback = reference to function (status: PHAuthorizationStatus): pointer; cblock; cdecl;
-  PHPhotoLibraryPerformChangesCallback = reference to function (success: objcbool; error: NSError): pointer; cblock; cdecl;
+  PHPhotoLibraryRequestAuthorizationForAccessLevelCallback = reference to procedure (status: PHAuthorizationStatus); cblock; cdecl;
+  PHPhotoLibraryRequestAuthorizationCallback = reference to procedure (status: PHAuthorizationStatus); cblock; cdecl;
+  PHPhotoLibraryPerformChangesCallback = reference to procedure (success: objcbool; error: NSError); cblock; cdecl;
 {$endif}
 
 

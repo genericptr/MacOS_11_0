@@ -2,7 +2,7 @@
 
 {$ifdef CALLBACKS}
 type
-  CKModifyBadgeOperationModifyBadgeCompletionBlockCallback = reference to function (operationError: NSError): pointer; cblock; cdecl;
+  CKModifyBadgeOperationModifyBadgeCompletionBlockCallback = reference to procedure (operationError: NSError); cblock; cdecl;
 {$endif}
 
 

@@ -2,7 +2,7 @@
 
 {$ifdef CALLBACKS}
 type
-  NSFilePromiseReceiverReceivePromisedFilesAtDestinationCallback = reference to function (fileURL: NSURL; errorOrNil: NSError): pointer; cblock; cdecl;
+  NSFilePromiseReceiverReceivePromisedFilesAtDestinationCallback = reference to procedure (fileURL: NSURL; errorOrNil: NSError); cblock; cdecl;
 {$endif}
 
 

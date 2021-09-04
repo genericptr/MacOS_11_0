@@ -2,12 +2,12 @@
 
 {$ifdef CALLBACKS}
 type
-  NSWorkspaceOpenURLCallback = reference to function (app: NSRunningApplication; error: NSError): pointer; cblock; cdecl;
-  NSWorkspaceOpenURLsCallback = reference to function (app: NSRunningApplication; error: NSError): pointer; cblock; cdecl;
-  NSWorkspaceOpenApplicationAtURLCallback = reference to function (app: NSRunningApplication; error: NSError): pointer; cblock; cdecl;
-  NSWorkspaceRecycleURLsCallback = reference to function (newURLs: NSDictionary; error: NSError): pointer; cblock; cdecl;
-  NSWorkspaceDuplicateURLsCallback = reference to function (newURLs: NSDictionary; error: NSError): pointer; cblock; cdecl;
-  NSWorkspaceRequestAuthorizationOfTypeCallback = reference to function (authorization: NSWorkspaceAuthorization; error: NSError): pointer; cblock; cdecl;
+  NSWorkspaceOpenURLCallback = reference to procedure (app: NSRunningApplication; error: NSError); cblock; cdecl;
+  NSWorkspaceOpenURLsCallback = reference to procedure (app: NSRunningApplication; error: NSError); cblock; cdecl;
+  NSWorkspaceOpenApplicationAtURLCallback = reference to procedure (app: NSRunningApplication; error: NSError); cblock; cdecl;
+  NSWorkspaceRecycleURLsCallback = reference to procedure (newURLs: NSDictionary; error: NSError); cblock; cdecl;
+  NSWorkspaceDuplicateURLsCallback = reference to procedure (newURLs: NSDictionary; error: NSError); cblock; cdecl;
+  NSWorkspaceRequestAuthorizationOfTypeCallback = reference to procedure (authorization: NSWorkspaceAuthorization; error: NSError); cblock; cdecl;
 {$endif}
 
 

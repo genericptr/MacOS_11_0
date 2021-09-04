@@ -2,25 +2,25 @@
 
 {$ifdef CALLBACKS}
 type
-  GKTurnBasedMatchFindMatchForRequestCallback = reference to function (match: GKTurnBasedMatch; error: NSError): pointer; cblock; cdecl;
-  GKTurnBasedMatchLoadMatchesWithCompletionHandlerCallback = reference to function (matches: NSArray; error: NSError): pointer; cblock; cdecl;
-  GKTurnBasedMatchLoadMatchWithIDCallback = reference to function (match: GKTurnBasedMatch; error: NSError): pointer; cblock; cdecl;
-  GKTurnBasedMatchRematchWithCompletionHandlerCallback = reference to function (match: GKTurnBasedMatch; error: NSError): pointer; cblock; cdecl;
-  GKTurnBasedMatchAcceptInviteWithCompletionHandlerCallback = reference to function (match: GKTurnBasedMatch; error: NSError): pointer; cblock; cdecl;
-  GKTurnBasedMatchDeclineInviteWithCompletionHandlerCallback = reference to function (error: NSError): pointer; cblock; cdecl;
-  GKTurnBasedMatchRemoveWithCompletionHandlerCallback = reference to function (error: NSError): pointer; cblock; cdecl;
-  GKTurnBasedMatchLoadMatchDataWithCompletionHandlerCallback = reference to function (matchData: NSData; error: NSError): pointer; cblock; cdecl;
-  GKTurnBasedMatchEndTurnWithNextParticipantsCallback = reference to function (error: NSError): pointer; cblock; cdecl;
-  GKTurnBasedMatchParticipantQuitInTurnWithOutcomeCallback = reference to function (error: NSError): pointer; cblock; cdecl;
-  GKTurnBasedMatchParticipantQuitOutOfTurnWithOutcomeCallback = reference to function (error: NSError): pointer; cblock; cdecl;
-  GKTurnBasedMatchEndMatchInTurnWithMatchDataCallback = reference to function (error: NSError): pointer; cblock; cdecl;
-  GKTurnBasedMatchSaveCurrentTurnWithMatchDataCallback = reference to function (error: NSError): pointer; cblock; cdecl;
-  GKTurnBasedMatchSaveMergedMatchDataCallback = reference to function (error: NSError): pointer; cblock; cdecl;
-  GKTurnBasedMatchSendExchangeToParticipantsCallback = reference to function (exchange: GKTurnBasedExchange; error: NSError): pointer; cblock; cdecl;
-  GKTurnBasedMatchSendReminderToParticipantsCallback = reference to function (error: NSError): pointer; cblock; cdecl;
-  GKTurnBasedMatchEndTurnWithNextParticipantCallback = reference to function (error: NSError): pointer; cblock; cdecl;
-  GKTurnBasedMatchCancelWithLocalizableMessageKeyCallback = reference to function (error: NSError): pointer; cblock; cdecl;
-  GKTurnBasedMatchReplyWithLocalizableMessageKeyCallback = reference to function (error: NSError): pointer; cblock; cdecl;
+  GKTurnBasedMatchFindMatchForRequestCallback = reference to procedure (match: GKTurnBasedMatch; error: NSError); cblock; cdecl;
+  GKTurnBasedMatchLoadMatchesWithCompletionHandlerCallback = reference to procedure (matches: NSArray; error: NSError); cblock; cdecl;
+  GKTurnBasedMatchLoadMatchWithIDCallback = reference to procedure (match: GKTurnBasedMatch; error: NSError); cblock; cdecl;
+  GKTurnBasedMatchRematchWithCompletionHandlerCallback = reference to procedure (match: GKTurnBasedMatch; error: NSError); cblock; cdecl;
+  GKTurnBasedMatchAcceptInviteWithCompletionHandlerCallback = reference to procedure (match: GKTurnBasedMatch; error: NSError); cblock; cdecl;
+  GKTurnBasedMatchDeclineInviteWithCompletionHandlerCallback = reference to procedure (error: NSError); cblock; cdecl;
+  GKTurnBasedMatchRemoveWithCompletionHandlerCallback = reference to procedure (error: NSError); cblock; cdecl;
+  GKTurnBasedMatchLoadMatchDataWithCompletionHandlerCallback = reference to procedure (matchData: NSData; error: NSError); cblock; cdecl;
+  GKTurnBasedMatchEndTurnWithNextParticipantsCallback = reference to procedure (error: NSError); cblock; cdecl;
+  GKTurnBasedMatchParticipantQuitInTurnWithOutcomeCallback = reference to procedure (error: NSError); cblock; cdecl;
+  GKTurnBasedMatchParticipantQuitOutOfTurnWithOutcomeCallback = reference to procedure (error: NSError); cblock; cdecl;
+  GKTurnBasedMatchEndMatchInTurnWithMatchDataCallback = reference to procedure (error: NSError); cblock; cdecl;
+  GKTurnBasedMatchSaveCurrentTurnWithMatchDataCallback = reference to procedure (error: NSError); cblock; cdecl;
+  GKTurnBasedMatchSaveMergedMatchDataCallback = reference to procedure (error: NSError); cblock; cdecl;
+  GKTurnBasedMatchSendExchangeToParticipantsCallback = reference to procedure (exchange: GKTurnBasedExchange; error: NSError); cblock; cdecl;
+  GKTurnBasedMatchSendReminderToParticipantsCallback = reference to procedure (error: NSError); cblock; cdecl;
+  GKTurnBasedMatchEndTurnWithNextParticipantCallback = reference to procedure (error: NSError); cblock; cdecl;
+  GKTurnBasedMatchCancelWithLocalizableMessageKeyCallback = reference to procedure (error: NSError); cblock; cdecl;
+  GKTurnBasedMatchReplyWithLocalizableMessageKeyCallback = reference to procedure (error: NSError); cblock; cdecl;
 {$endif}
 
 

@@ -2,18 +2,18 @@
 
 {$ifdef CALLBACKS}
 type
-  NSIndexSetEnumerateIndexesUsingBlockCallback = reference to function (idx: NSUInteger; stop: objcboolPtr): pointer; cblock; cdecl;
-  NSIndexSetEnumerateIndexesWithOptionsCallback = reference to function (idx: NSUInteger; stop: objcboolPtr): pointer; cblock; cdecl;
-  NSIndexSetEnumerateIndexesInRangeCallback = reference to function (idx: NSUInteger; stop: objcboolPtr): pointer; cblock; cdecl;
+  NSIndexSetEnumerateIndexesUsingBlockCallback = reference to procedure (idx: NSUInteger; stop: objcboolPtr); cblock; cdecl;
+  NSIndexSetEnumerateIndexesWithOptionsCallback = reference to procedure (idx: NSUInteger; stop: objcboolPtr); cblock; cdecl;
+  NSIndexSetEnumerateIndexesInRangeCallback = reference to procedure (idx: NSUInteger; stop: objcboolPtr); cblock; cdecl;
   NSIndexSetIndexPassingTestCallback = reference to function (idx: NSUInteger; stop: objcboolPtr): objcbool; cblock; cdecl;
   NSIndexSetIndexWithOptionsCallback = reference to function (idx: NSUInteger; stop: objcboolPtr): objcbool; cblock; cdecl;
   NSIndexSetIndexInRangeCallback = reference to function (idx: NSUInteger; stop: objcboolPtr): objcbool; cblock; cdecl;
   NSIndexSetIndexesPassingTestCallback = reference to function (idx: NSUInteger; stop: objcboolPtr): objcbool; cblock; cdecl;
   NSIndexSetIndexesWithOptionsCallback = reference to function (idx: NSUInteger; stop: objcboolPtr): objcbool; cblock; cdecl;
   NSIndexSetIndexesInRangeCallback = reference to function (idx: NSUInteger; stop: objcboolPtr): objcbool; cblock; cdecl;
-  NSIndexSetEnumerateRangesUsingBlockCallback = reference to function (range: NSRange; stop: objcboolPtr): pointer; cblock; cdecl;
-  NSIndexSetEnumerateRangesWithOptionsCallback = reference to function (range: NSRange; stop: objcboolPtr): pointer; cblock; cdecl;
-  NSIndexSetEnumerateRangesInRangeCallback = reference to function (range: NSRange; stop: objcboolPtr): pointer; cblock; cdecl;
+  NSIndexSetEnumerateRangesUsingBlockCallback = reference to procedure (range: NSRange; stop: objcboolPtr); cblock; cdecl;
+  NSIndexSetEnumerateRangesWithOptionsCallback = reference to procedure (range: NSRange; stop: objcboolPtr); cblock; cdecl;
+  NSIndexSetEnumerateRangesInRangeCallback = reference to procedure (range: NSRange; stop: objcboolPtr); cblock; cdecl;
 {$endif}
 
 

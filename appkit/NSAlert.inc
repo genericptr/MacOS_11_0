@@ -2,7 +2,7 @@
 
 {$ifdef CALLBACKS}
 type
-  NSAlertBeginSheetModalForWindowCallback = reference to function (returnCode: NSModalResponse): pointer; cblock; cdecl;
+  NSAlertBeginSheetModalForWindowCallback = reference to procedure (returnCode: NSModalResponse); cblock; cdecl;
 {$endif}
 
 

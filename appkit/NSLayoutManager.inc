@@ -2,8 +2,8 @@
 
 {$ifdef CALLBACKS}
 type
-  NSLayoutManagerEnumerateLineFragmentsForGlyphRangeCallback = reference to function (rect: NSRect; usedRect: NSRect; textContainer: NSTextContainer; glyphRange: NSRange; stop: objcboolPtr): pointer; cblock; cdecl;
-  NSLayoutManagerEnumerateEnclosingRectsForGlyphRangeCallback = reference to function (rect: NSRect; stop: objcboolPtr): pointer; cblock; cdecl;
+  NSLayoutManagerEnumerateLineFragmentsForGlyphRangeCallback = reference to procedure (rect: NSRect; usedRect: NSRect; textContainer: NSTextContainer; glyphRange: NSRange; stop: objcboolPtr); cblock; cdecl;
+  NSLayoutManagerEnumerateEnclosingRectsForGlyphRangeCallback = reference to procedure (rect: NSRect; stop: objcboolPtr); cblock; cdecl;
 {$endif}
 
 

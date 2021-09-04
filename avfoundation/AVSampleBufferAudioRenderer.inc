@@ -2,7 +2,7 @@
 
 {$ifdef CALLBACKS}
 type
-  AVSampleBufferAudioRendererFlushFromSourceTimeCallback = reference to function (flushSucceeded: objcbool): pointer; cblock; cdecl;
+  AVSampleBufferAudioRendererFlushFromSourceTimeCallback = reference to procedure (flushSucceeded: objcbool); cblock; cdecl;
 {$endif}
 
 

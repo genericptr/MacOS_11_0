@@ -2,23 +2,23 @@
 
 {$ifdef CALLBACKS}
 type
-  NSURLSessionResetWithCompletionHandlerCallback = reference to function : pointer; cblock; cdecl;
-  NSURLSessionFlushWithCompletionHandlerCallback = reference to function : pointer; cblock; cdecl;
-  NSURLSessionGetTasksWithCompletionHandlerCallback = reference to function (dataTasks: NSArray; uploadTasks: NSArray; downloadTasks: NSArray): pointer; cblock; cdecl;
-  NSURLSessionGetAllTasksWithCompletionHandlerCallback = reference to function (tasks: NSArray): pointer; cblock; cdecl;
-  NSURLSessionDataTaskWithRequestCallback = reference to function (data: NSData; response: NSURLResponse; error: NSError): pointer; cblock; cdecl;
-  NSURLSessionDataTaskWithURLCallback = reference to function (data: NSData; response: NSURLResponse; error: NSError): pointer; cblock; cdecl;
-  NSURLSessionUploadTaskWithRequestCallback = reference to function (data: NSData; response: NSURLResponse; error: NSError): pointer; cblock; cdecl;
-  NSURLSessionDownloadTaskWithRequestCallback = reference to function (location: NSURL; response: NSURLResponse; error: NSError): pointer; cblock; cdecl;
-  NSURLSessionDownloadTaskWithURLCallback = reference to function (location: NSURL; response: NSURLResponse; error: NSError): pointer; cblock; cdecl;
-  NSURLSessionDownloadTaskWithResumeDataCallback = reference to function (location: NSURL; response: NSURLResponse; error: NSError): pointer; cblock; cdecl;
-  NSURLSessionCancelByProducingResumeDataCallback = reference to function (resumeData: NSData): pointer; cblock; cdecl;
-  NSURLSessionReadDataOfMinLengthCallback = reference to function (data: NSData; atEOF: objcbool; error: NSError): pointer; cblock; cdecl;
-  NSURLSessionWriteDataCallback = reference to function (error: NSError): pointer; cblock; cdecl;
-  NSURLSessionSendMessageCallback = reference to function (error: NSError): pointer; cblock; cdecl;
-  NSURLSessionReceiveMessageWithCompletionHandlerCallback = reference to function (message_: NSURLSessionWebSocketMessage; error: NSError): pointer; cblock; cdecl;
-  NSURLSessionSendPingWithPongReceiveHandlerCallback = reference to function (error: NSError): pointer; cblock; cdecl;
-  NSURLSessionURLSessionCallback = reference to function (disposition: NSURLSessionAuthChallengeDisposition; credential: NSURLCredential): pointer; cblock; cdecl;
+  NSURLSessionResetWithCompletionHandlerCallback = reference to procedure; cblock; cdecl;
+  NSURLSessionFlushWithCompletionHandlerCallback = reference to procedure; cblock; cdecl;
+  NSURLSessionGetTasksWithCompletionHandlerCallback = reference to procedure (dataTasks: NSArray; uploadTasks: NSArray; downloadTasks: NSArray); cblock; cdecl;
+  NSURLSessionGetAllTasksWithCompletionHandlerCallback = reference to procedure (tasks: NSArray); cblock; cdecl;
+  NSURLSessionDataTaskWithRequestCallback = reference to procedure (data: NSData; response: NSURLResponse; error: NSError); cblock; cdecl;
+  NSURLSessionDataTaskWithURLCallback = reference to procedure (data: NSData; response: NSURLResponse; error: NSError); cblock; cdecl;
+  NSURLSessionUploadTaskWithRequestCallback = reference to procedure (data: NSData; response: NSURLResponse; error: NSError); cblock; cdecl;
+  NSURLSessionDownloadTaskWithRequestCallback = reference to procedure (location: NSURL; response: NSURLResponse; error: NSError); cblock; cdecl;
+  NSURLSessionDownloadTaskWithURLCallback = reference to procedure (location: NSURL; response: NSURLResponse; error: NSError); cblock; cdecl;
+  NSURLSessionDownloadTaskWithResumeDataCallback = reference to procedure (location: NSURL; response: NSURLResponse; error: NSError); cblock; cdecl;
+  NSURLSessionCancelByProducingResumeDataCallback = reference to procedure (resumeData: NSData); cblock; cdecl;
+  NSURLSessionReadDataOfMinLengthCallback = reference to procedure (data: NSData; atEOF: objcbool; error: NSError); cblock; cdecl;
+  NSURLSessionWriteDataCallback = reference to procedure (error: NSError); cblock; cdecl;
+  NSURLSessionSendMessageCallback = reference to procedure (error: NSError); cblock; cdecl;
+  NSURLSessionReceiveMessageWithCompletionHandlerCallback = reference to procedure (message_: NSURLSessionWebSocketMessage; error: NSError); cblock; cdecl;
+  NSURLSessionSendPingWithPongReceiveHandlerCallback = reference to procedure (error: NSError); cblock; cdecl;
+  NSURLSessionURLSessionCallback = reference to procedure (disposition: NSURLSessionAuthChallengeDisposition; credential: NSURLCredential); cblock; cdecl;
 {$endif}
 
 

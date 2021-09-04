@@ -2,9 +2,9 @@
 
 {$ifdef CALLBACKS}
 type
-  ICCameraDeviceRequestDeleteFilesCallback = reference to function (param1: NSDictionary): pointer; cblock; cdecl;
-  ICCameraDevicePtpEventHandlerCallback = reference to function (eventData: NSData): pointer; cblock; cdecl;
-  ICCameraDeviceRequestSendPTPCommandCallback = reference to function (responseData: NSData; ptpResponseData: NSData; error: NSError): pointer; cblock; cdecl;
+  ICCameraDeviceRequestDeleteFilesCallback = reference to procedure (param1: NSDictionary); cblock; cdecl;
+  ICCameraDevicePtpEventHandlerCallback = reference to procedure (eventData: NSData); cblock; cdecl;
+  ICCameraDeviceRequestSendPTPCommandCallback = reference to procedure (responseData: NSData; ptpResponseData: NSData; error: NSError); cblock; cdecl;
 {$endif}
 
 

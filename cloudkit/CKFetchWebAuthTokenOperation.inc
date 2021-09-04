@@ -2,7 +2,7 @@
 
 {$ifdef CALLBACKS}
 type
-  CKFetchWebAuthTokenOperationFetchWebAuthTokenCompletionBlockCallback = reference to function (webAuthToken: NSString; operationError: NSError): pointer; cblock; cdecl;
+  CKFetchWebAuthTokenOperationFetchWebAuthTokenCompletionBlockCallback = reference to procedure (webAuthToken: NSString; operationError: NSError); cblock; cdecl;
 {$endif}
 
 

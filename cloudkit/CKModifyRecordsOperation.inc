@@ -2,9 +2,9 @@
 
 {$ifdef CALLBACKS}
 type
-  CKModifyRecordsOperationPerRecordProgressBlockCallback = reference to function (record_: CKRecord; progress: double): pointer; cblock; cdecl;
-  CKModifyRecordsOperationPerRecordCompletionBlockCallback = reference to function (record_: CKRecord; error: NSError): pointer; cblock; cdecl;
-  CKModifyRecordsOperationModifyRecordsCompletionBlockCallback = reference to function (savedRecords: NSArray; deletedRecordIDs: NSArray; operationError: NSError): pointer; cblock; cdecl;
+  CKModifyRecordsOperationPerRecordProgressBlockCallback = reference to procedure (record_: CKRecord; progress: double); cblock; cdecl;
+  CKModifyRecordsOperationPerRecordCompletionBlockCallback = reference to procedure (record_: CKRecord; error: NSError); cblock; cdecl;
+  CKModifyRecordsOperationModifyRecordsCompletionBlockCallback = reference to procedure (savedRecords: NSArray; deletedRecordIDs: NSArray; operationError: NSError); cblock; cdecl;
 {$endif}
 
 

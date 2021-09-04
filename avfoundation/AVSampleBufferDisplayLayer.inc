@@ -2,7 +2,7 @@
 
 {$ifdef CALLBACKS}
 type
-  AVSampleBufferDisplayLayerRequestMediaDataWhenReadyOnQueueCallback = reference to function : pointer; cblock; cdecl;
+  AVSampleBufferDisplayLayerRequestMediaDataWhenReadyOnQueueCallback = reference to procedure; cblock; cdecl;
 {$endif}
 
 

@@ -9,7 +9,7 @@
 
 {$ifdef CALLBACKS}
 type
-  RPBroadcastExtensionLoadBroadcastingApplicationInfoWithCompletionCallback = reference to function (bundleID: NSString; displayName: NSString; appIcon: NSImage): pointer; cblock; cdecl;
+  RPBroadcastExtensionLoadBroadcastingApplicationInfoWithCompletionCallback = reference to procedure (bundleID: NSString; displayName: NSString; appIcon: NSImage); cblock; cdecl;
 {$endif}
 
 

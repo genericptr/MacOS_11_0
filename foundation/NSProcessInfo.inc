@@ -2,8 +2,8 @@
 
 {$ifdef CALLBACKS}
 type
-  NSProcessInfoPerformActivityWithOptionsCallback = reference to function : pointer; cblock; cdecl;
-  NSProcessInfoPerformExpiringActivityWithReasonCallback = reference to function (expired: objcbool): pointer; cblock; cdecl;
+  NSProcessInfoPerformActivityWithOptionsCallback = reference to procedure; cblock; cdecl;
+  NSProcessInfoPerformExpiringActivityWithReasonCallback = reference to procedure (expired: objcbool); cblock; cdecl;
 {$endif}
 
 

@@ -2,7 +2,7 @@
 
 {$ifdef CALLBACKS}
 type
-  PHProjectExtensionContextUpdatedProjectInfoFromProjectInfoCallback = reference to function (updatedProjectInfo: PHProjectInfo): pointer; cblock; cdecl;
+  PHProjectExtensionContextUpdatedProjectInfoFromProjectInfoCallback = reference to procedure (updatedProjectInfo: PHProjectInfo); cblock; cdecl;
 {$endif}
 
 

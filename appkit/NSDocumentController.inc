@@ -2,10 +2,10 @@
 
 {$ifdef CALLBACKS}
 type
-  NSDocumentControllerBeginOpenPanelWithCompletionHandlerCallback = reference to function (param1: NSArray): pointer; cblock; cdecl;
-  NSDocumentControllerBeginOpenPanelCallback = reference to function (result_: NSInteger): pointer; cblock; cdecl;
-  NSDocumentControllerOpenDocumentWithContentsOfURLCallback = reference to function (document: NSDocument; documentWasAlreadyOpen: objcbool; error: NSError): pointer; cblock; cdecl;
-  NSDocumentControllerReopenDocumentForURLCallback = reference to function (document: NSDocument; documentWasAlreadyOpen: objcbool; error: NSError): pointer; cblock; cdecl;
+  NSDocumentControllerBeginOpenPanelWithCompletionHandlerCallback = reference to procedure (param1: NSArray); cblock; cdecl;
+  NSDocumentControllerBeginOpenPanelCallback = reference to procedure (result_: NSInteger); cblock; cdecl;
+  NSDocumentControllerOpenDocumentWithContentsOfURLCallback = reference to procedure (document: NSDocument; documentWasAlreadyOpen: objcbool; error: NSError); cblock; cdecl;
+  NSDocumentControllerReopenDocumentForURLCallback = reference to procedure (document: NSDocument; documentWasAlreadyOpen: objcbool; error: NSError); cblock; cdecl;
 {$endif}
 
 

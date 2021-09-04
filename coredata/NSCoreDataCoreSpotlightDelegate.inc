@@ -2,7 +2,7 @@
 
 {$ifdef CALLBACKS}
 type
-  NSCoreDataCoreSpotlightDelegateSearchableIndexCallback = reference to function : pointer; cblock; cdecl;
+  NSCoreDataCoreSpotlightDelegateSearchableIndexCallback = reference to procedure; cblock; cdecl;
 {$endif}
 
 

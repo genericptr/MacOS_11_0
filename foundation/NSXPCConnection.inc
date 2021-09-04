@@ -14,11 +14,11 @@
 
 {$ifdef CALLBACKS}
 type
-  NSXPCConnectionRemoteObjectProxyWithErrorHandlerCallback = reference to function (error: NSError): pointer; cblock; cdecl;
-  NSXPCConnectionSynchronousRemoteObjectProxyWithErrorHandlerCallback = reference to function (error: NSError): pointer; cblock; cdecl;
-  NSXPCConnectionInterruptionHandlerCallback = reference to function : pointer; cblock; cdecl;
-  NSXPCConnectionInvalidationHandlerCallback = reference to function : pointer; cblock; cdecl;
-  NSXPCConnectionScheduleSendBarrierBlockCallback = reference to function : pointer; cblock; cdecl;
+  NSXPCConnectionRemoteObjectProxyWithErrorHandlerCallback = reference to procedure (error: NSError); cblock; cdecl;
+  NSXPCConnectionSynchronousRemoteObjectProxyWithErrorHandlerCallback = reference to procedure (error: NSError); cblock; cdecl;
+  NSXPCConnectionInterruptionHandlerCallback = reference to procedure; cblock; cdecl;
+  NSXPCConnectionInvalidationHandlerCallback = reference to procedure; cblock; cdecl;
+  NSXPCConnectionScheduleSendBarrierBlockCallback = reference to procedure; cblock; cdecl;
 {$endif}
 
 

@@ -2,7 +2,7 @@
 
 {$ifdef CALLBACKS}
 type
-  CKMarkNotificationsReadOperationMarkNotificationsReadCompletionBlockCallback = reference to function (notificationIDsMarkedRead: NSArray; operationError: NSError): pointer; cblock; cdecl;
+  CKMarkNotificationsReadOperationMarkNotificationsReadCompletionBlockCallback = reference to procedure (notificationIDsMarkedRead: NSArray; operationError: NSError); cblock; cdecl;
 {$endif}
 
 

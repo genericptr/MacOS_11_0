@@ -2,7 +2,7 @@
 
 {$ifdef CALLBACKS}
 type
-  MLUpdateTaskUpdateTaskForModelAtURLCallback = reference to function (context: MLUpdateContext): pointer; cblock; cdecl;
+  MLUpdateTaskUpdateTaskForModelAtURLCallback = reference to procedure (context: MLUpdateContext); cblock; cdecl;
 {$endif}
 
 

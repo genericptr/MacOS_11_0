@@ -2,8 +2,8 @@
 
 {$ifdef CALLBACKS}
 type
-  PHLivePhotoEditingContextPrepareLivePhotoForPlaybackWithTargetSizeCallback = reference to function (livePhoto: PHLivePhoto; error: NSError): pointer; cblock; cdecl;
-  PHLivePhotoEditingContextSaveLivePhotoToOutputCallback = reference to function (success: objcbool; error: NSError): pointer; cblock; cdecl;
+  PHLivePhotoEditingContextPrepareLivePhotoForPlaybackWithTargetSizeCallback = reference to procedure (livePhoto: PHLivePhoto; error: NSError); cblock; cdecl;
+  PHLivePhotoEditingContextSaveLivePhotoToOutputCallback = reference to procedure (success: objcbool; error: NSError); cblock; cdecl;
 {$endif}
 
 

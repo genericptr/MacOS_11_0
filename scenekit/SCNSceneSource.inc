@@ -84,7 +84,7 @@ const
   SCNSceneSourceStatusComplete = 16;
 
 type
-  SCNSceneSourceStatusHandler = reference to function (totalProgress: single; status: SCNSceneSourceStatus; error: NSError; stop: objcboolPtr): pointer; cblock; cdecl;
+  SCNSceneSourceStatusHandler = reference to procedure (totalProgress: single; status: SCNSceneSourceStatus; error: NSError; stop: objcboolPtr); cblock; cdecl;
 {$endif}
 
 {$ifdef CLASSES}

@@ -2,9 +2,9 @@
 
 {$ifdef CALLBACKS}
 type
-  CKFetchRecordChangesOperationRecordChangedBlockCallback = reference to function (record_: CKRecord): pointer; cblock; cdecl;
-  CKFetchRecordChangesOperationRecordWithIDWasDeletedBlockCallback = reference to function (recordID: CKRecordID): pointer; cblock; cdecl;
-  CKFetchRecordChangesOperationFetchRecordChangesCompletionBlockCallback = reference to function (serverChangeToken: CKServerChangeToken; clientChangeTokenData: NSData; operationError: NSError): pointer; cblock; cdecl;
+  CKFetchRecordChangesOperationRecordChangedBlockCallback = reference to procedure (record_: CKRecord); cblock; cdecl;
+  CKFetchRecordChangesOperationRecordWithIDWasDeletedBlockCallback = reference to procedure (recordID: CKRecordID); cblock; cdecl;
+  CKFetchRecordChangesOperationFetchRecordChangesCompletionBlockCallback = reference to procedure (serverChangeToken: CKServerChangeToken; clientChangeTokenData: NSData; operationError: NSError); cblock; cdecl;
 {$endif}
 
 

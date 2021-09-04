@@ -2,8 +2,8 @@
 
 {$ifdef CALLBACKS}
 type
-  ICDeviceBrowserRequestContentsAuthorizationWithCompletionCallback = reference to function (status: ICAuthorizationStatus): pointer; cblock; cdecl;
-  ICDeviceBrowserRequestControlAuthorizationWithCompletionCallback = reference to function (status: ICAuthorizationStatus): pointer; cblock; cdecl;
+  ICDeviceBrowserRequestContentsAuthorizationWithCompletionCallback = reference to procedure (status: ICAuthorizationStatus); cblock; cdecl;
+  ICDeviceBrowserRequestControlAuthorizationWithCompletionCallback = reference to procedure (status: ICAuthorizationStatus); cblock; cdecl;
 {$endif}
 
 

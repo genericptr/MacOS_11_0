@@ -8,7 +8,7 @@
 
 {$ifdef CALLBACKS}
 type
-  AVAudioUnitInstantiateWithComponentDescriptionCallback = reference to function (audioUnit: AVAudioUnit; error: NSError): pointer; cblock; cdecl;
+  AVAudioUnitInstantiateWithComponentDescriptionCallback = reference to procedure (audioUnit: AVAudioUnit; error: NSError); cblock; cdecl;
 {$endif}
 
 

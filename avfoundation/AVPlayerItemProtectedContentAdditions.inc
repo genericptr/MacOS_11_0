@@ -8,7 +8,7 @@
 
 {$ifdef CALLBACKS}
 type
-  AVPlayerItemProtectedContentAdditionsRequestContentAuthorizationAsynchronouslyWithTimeoutIntervalCallback = reference to function : pointer; cblock; cdecl;
+  AVPlayerItemProtectedContentAdditionsRequestContentAuthorizationAsynchronouslyWithTimeoutIntervalCallback = reference to procedure; cblock; cdecl;
 {$endif}
 
 {$if defined(__NULL_MACRO__)}

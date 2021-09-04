@@ -2,8 +2,8 @@
 
 {$ifdef CALLBACKS}
 type
-  NSDataEnumerateByteRangesUsingBlockCallback = reference to function (bytes: pointer; byteRange: NSRange; stop: objcboolPtr): pointer; cblock; cdecl;
-  NSDataInitWithBytesNoCopyCallback = reference to function (bytes: pointer; length: NSUInteger): pointer; cblock; cdecl;
+  NSDataEnumerateByteRangesUsingBlockCallback = reference to procedure (bytes: pointer; byteRange: NSRange; stop: objcboolPtr); cblock; cdecl;
+  NSDataInitWithBytesNoCopyCallback = reference to procedure (bytes: pointer; length: NSUInteger); cblock; cdecl;
 {$endif}
 
 

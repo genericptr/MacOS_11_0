@@ -2,7 +2,7 @@
 
 {$ifdef CALLBACKS}
 type
-  MLMultiArrayInitWithDataPointerCallback = reference to function (bytes: pointer): pointer; cblock; cdecl;
+  MLMultiArrayInitWithDataPointerCallback = reference to procedure (bytes: pointer); cblock; cdecl;
 {$endif}
 
 

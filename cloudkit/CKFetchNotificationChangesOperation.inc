@@ -2,8 +2,8 @@
 
 {$ifdef CALLBACKS}
 type
-  CKFetchNotificationChangesOperationNotificationChangedBlockCallback = reference to function (notification: CKNotification): pointer; cblock; cdecl;
-  CKFetchNotificationChangesOperationFetchNotificationChangesCompletionBlockCallback = reference to function (serverChangeToken: CKServerChangeToken; operationError: NSError): pointer; cblock; cdecl;
+  CKFetchNotificationChangesOperationNotificationChangedBlockCallback = reference to procedure (notification: CKNotification); cblock; cdecl;
+  CKFetchNotificationChangesOperationFetchNotificationChangesCompletionBlockCallback = reference to procedure (serverChangeToken: CKServerChangeToken; operationError: NSError); cblock; cdecl;
 {$endif}
 
 

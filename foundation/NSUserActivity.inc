@@ -2,9 +2,9 @@
 
 {$ifdef CALLBACKS}
 type
-  NSUserActivityGetContinuationStreamsWithCompletionHandlerCallback = reference to function (inputStream: NSInputStream; outputStream: NSOutputStream; error: NSError): pointer; cblock; cdecl;
-  NSUserActivityDeleteSavedUserActivitiesWithPersistentIdentifiersCallback = reference to function : pointer; cblock; cdecl;
-  NSUserActivityDeleteAllSavedUserActivitiesWithCompletionHandlerCallback = reference to function : pointer; cblock; cdecl;
+  NSUserActivityGetContinuationStreamsWithCompletionHandlerCallback = reference to procedure (inputStream: NSInputStream; outputStream: NSOutputStream; error: NSError); cblock; cdecl;
+  NSUserActivityDeleteSavedUserActivitiesWithPersistentIdentifiersCallback = reference to procedure; cblock; cdecl;
+  NSUserActivityDeleteAllSavedUserActivitiesWithCompletionHandlerCallback = reference to procedure; cblock; cdecl;
 {$endif}
 
 

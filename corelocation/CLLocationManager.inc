@@ -2,7 +2,7 @@
 
 {$ifdef CALLBACKS}
 type
-  CLLocationManagerRequestTemporaryFullAccuracyAuthorizationWithPurposeKeyCallback = reference to function (param1: NSError): pointer; cblock; cdecl;
+  CLLocationManagerRequestTemporaryFullAccuracyAuthorizationWithPurposeKeyCallback = reference to procedure (param1: NSError); cblock; cdecl;
 {$endif}
 
 

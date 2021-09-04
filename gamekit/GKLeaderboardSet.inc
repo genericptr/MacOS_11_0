@@ -8,10 +8,10 @@
 
 {$ifdef CALLBACKS}
 type
-  GKLeaderboardSetLoadLeaderboardSetsWithCompletionHandlerCallback = reference to function (leaderboardSets: NSArray; error: NSError): pointer; cblock; cdecl;
-  GKLeaderboardSetLoadLeaderboardsWithHandlerCallback = reference to function (leaderboards: NSArray; error: NSError): pointer; cblock; cdecl;
-  GKLeaderboardSetLoadLeaderboardsWithCompletionHandlerCallback = reference to function (leaderboards: NSArray; error: NSError): pointer; cblock; cdecl;
-  GKLeaderboardSetLoadImageWithCompletionHandlerCallback = reference to function (image: UIImage; error: NSError): pointer; cblock; cdecl;
+  GKLeaderboardSetLoadLeaderboardSetsWithCompletionHandlerCallback = reference to procedure (leaderboardSets: NSArray; error: NSError); cblock; cdecl;
+  GKLeaderboardSetLoadLeaderboardsWithHandlerCallback = reference to procedure (leaderboards: NSArray; error: NSError); cblock; cdecl;
+  GKLeaderboardSetLoadLeaderboardsWithCompletionHandlerCallback = reference to procedure (leaderboards: NSArray; error: NSError); cblock; cdecl;
+  GKLeaderboardSetLoadImageWithCompletionHandlerCallback = reference to procedure (image: UIImage; error: NSError); cblock; cdecl;
 {$endif}
 
 

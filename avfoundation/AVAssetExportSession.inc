@@ -2,11 +2,11 @@
 
 {$ifdef CALLBACKS}
 type
-  AVAssetExportSessionExportAsynchronouslyWithCompletionHandlerCallback = reference to function : pointer; cblock; cdecl;
-  AVAssetExportSessionDetermineCompatibilityOfExportPresetCallback = reference to function (compatible: objcbool): pointer; cblock; cdecl;
-  AVAssetExportSessionDetermineCompatibleFileTypesWithCompletionHandlerCallback = reference to function (compatibleFileTypes: NSArray): pointer; cblock; cdecl;
-  AVAssetExportSessionEstimateMaximumDurationWithCompletionHandlerCallback = reference to function (estimatedMaximumDuration: CMTime; error: NSError): pointer; cblock; cdecl;
-  AVAssetExportSessionEstimateOutputFileLengthWithCompletionHandlerCallback = reference to function (estimatedOutputFileLength: cint64; error: NSError): pointer; cblock; cdecl;
+  AVAssetExportSessionExportAsynchronouslyWithCompletionHandlerCallback = reference to procedure; cblock; cdecl;
+  AVAssetExportSessionDetermineCompatibilityOfExportPresetCallback = reference to procedure (compatible: objcbool); cblock; cdecl;
+  AVAssetExportSessionDetermineCompatibleFileTypesWithCompletionHandlerCallback = reference to procedure (compatibleFileTypes: NSArray); cblock; cdecl;
+  AVAssetExportSessionEstimateMaximumDurationWithCompletionHandlerCallback = reference to procedure (estimatedMaximumDuration: CMTime; error: NSError); cblock; cdecl;
+  AVAssetExportSessionEstimateOutputFileLengthWithCompletionHandlerCallback = reference to procedure (estimatedOutputFileLength: cint64; error: NSError); cblock; cdecl;
 {$endif}
 
 

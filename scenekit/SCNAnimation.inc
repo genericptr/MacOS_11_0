@@ -54,8 +54,8 @@ type
 
 {$ifdef CLASSES}
 type
-  SCNAnimationDidStartBlock = reference to function (animation: SCNAnimation; receiver: id): pointer; cblock; cdecl;
-  SCNAnimationDidStopBlock = reference to function (animation: SCNAnimation; receiver: id; completed: objcbool): pointer; cblock; cdecl;
+  SCNAnimationDidStartBlock = reference to procedure (animation: SCNAnimation; receiver: id); cblock; cdecl;
+  SCNAnimationDidStopBlock = reference to procedure (animation: SCNAnimation; receiver: id; completed: objcbool); cblock; cdecl;
 
   SCNAnimation = objcclass external (NSObject, SCNAnimationProtocol, NSCopyingProtocol, NSSecureCodingProtocol)
   public
@@ -146,7 +146,7 @@ type
 
 {$ifdef TYPES}
 type
-  SCNAnimationEventBlock = reference to function (animation: id; animatedObject: id; playingBackward: objcbool): pointer; cblock; cdecl;
+  SCNAnimationEventBlock = reference to procedure (animation: id; animatedObject: id; playingBackward: objcbool); cblock; cdecl;
 {$endif}
 
 {$ifdef CLASSES}

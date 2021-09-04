@@ -3,8 +3,8 @@
 {$ifdef CALLBACKS}
 type
   SCNNodeChildNodesPassingTestCallback = reference to function (child: SCNNode; stop: objcboolPtr): objcbool; cblock; cdecl;
-  SCNNodeEnumerateChildNodesUsingBlockCallback = reference to function (child: SCNNode; stop: objcboolPtr): pointer; cblock; cdecl;
-  SCNNodeEnumerateHierarchyUsingBlockCallback = reference to function (node: SCNNode; stop: objcboolPtr): pointer; cblock; cdecl;
+  SCNNodeEnumerateChildNodesUsingBlockCallback = reference to procedure (child: SCNNode; stop: objcboolPtr); cblock; cdecl;
+  SCNNodeEnumerateHierarchyUsingBlockCallback = reference to procedure (node: SCNNode; stop: objcboolPtr); cblock; cdecl;
 {$endif}
 
 

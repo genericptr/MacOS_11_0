@@ -2,7 +2,7 @@
 
 {$ifdef CALLBACKS}
 type
-  NSStoryboardSegueSegueWithIdentifierCallback = reference to function : pointer; cblock; cdecl;
+  NSStoryboardSegueSegueWithIdentifierCallback = reference to procedure; cblock; cdecl;
 {$endif}
 
 

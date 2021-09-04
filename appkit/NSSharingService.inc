@@ -2,8 +2,8 @@
 
 {$ifdef CALLBACKS}
 type
-  NSSharingServiceInitWithTitleCallback = reference to function : pointer; cblock; cdecl;
-  NSSharingServiceRegisterCloudKitShareWithPreparationHandlerCallback = reference to function (param1: OpaqueCBlock): pointer; cblock; cdecl;
+  NSSharingServiceInitWithTitleCallback = reference to procedure; cblock; cdecl;
+  NSSharingServiceRegisterCloudKitShareWithPreparationHandlerCallback = reference to procedure (param1: OpaqueCBlock); cblock; cdecl;
 {$endif}
 
 

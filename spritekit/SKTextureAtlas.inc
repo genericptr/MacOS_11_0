@@ -2,9 +2,9 @@
 
 {$ifdef CALLBACKS}
 type
-  SKTextureAtlasPreloadTextureAtlasesCallback = reference to function : pointer; cblock; cdecl;
-  SKTextureAtlasPreloadTextureAtlasesNamedCallback = reference to function (error: NSError; foundAtlases: NSArray): pointer; cblock; cdecl;
-  SKTextureAtlasPreloadWithCompletionHandlerCallback = reference to function : pointer; cblock; cdecl;
+  SKTextureAtlasPreloadTextureAtlasesCallback = reference to procedure; cblock; cdecl;
+  SKTextureAtlasPreloadTextureAtlasesNamedCallback = reference to procedure (error: NSError; foundAtlases: NSArray); cblock; cdecl;
+  SKTextureAtlasPreloadWithCompletionHandlerCallback = reference to procedure; cblock; cdecl;
 {$endif}
 
 

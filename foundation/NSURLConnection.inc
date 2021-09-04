@@ -2,7 +2,7 @@
 
 {$ifdef CALLBACKS}
 type
-  NSURLConnectionSendAsynchronousRequestCallback = reference to function (response: NSURLResponse; data: NSData; connectionError: NSError): pointer; cblock; cdecl;
+  NSURLConnectionSendAsynchronousRequestCallback = reference to procedure (response: NSURLResponse; data: NSData; connectionError: NSError); cblock; cdecl;
 {$endif}
 
 

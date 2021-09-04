@@ -8,8 +8,8 @@
 
 {$ifdef CALLBACKS}
 type
-  NSFileHandleReadabilityHandlerCallback = reference to function (param1: NSFileHandle): pointer; cblock; cdecl;
-  NSFileHandleWriteabilityHandlerCallback = reference to function (param1: NSFileHandle): pointer; cblock; cdecl;
+  NSFileHandleReadabilityHandlerCallback = reference to procedure (param1: NSFileHandle); cblock; cdecl;
+  NSFileHandleWriteabilityHandlerCallback = reference to procedure (param1: NSFileHandle); cblock; cdecl;
 {$endif}
 
 

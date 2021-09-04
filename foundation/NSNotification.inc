@@ -2,7 +2,7 @@
 
 {$ifdef CALLBACKS}
 type
-  NSNotificationAddObserverForNameCallback = reference to function (note: NSNotification): pointer; cblock; cdecl;
+  NSNotificationAddObserverForNameCallback = reference to procedure (note: NSNotification); cblock; cdecl;
 {$endif}
 
 

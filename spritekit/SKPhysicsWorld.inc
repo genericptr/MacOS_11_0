@@ -2,9 +2,9 @@
 
 {$ifdef CALLBACKS}
 type
-  SKPhysicsWorldEnumerateBodiesAtPointCallback = reference to function (body: SKPhysicsBody; stop: objcboolPtr): pointer; cblock; cdecl;
-  SKPhysicsWorldEnumerateBodiesInRectCallback = reference to function (body: SKPhysicsBody; stop: objcboolPtr): pointer; cblock; cdecl;
-  SKPhysicsWorldEnumerateBodiesAlongRayStartCallback = reference to function (body: SKPhysicsBody; point: CGPoint; normal: CGVector; stop: objcboolPtr): pointer; cblock; cdecl;
+  SKPhysicsWorldEnumerateBodiesAtPointCallback = reference to procedure (body: SKPhysicsBody; stop: objcboolPtr); cblock; cdecl;
+  SKPhysicsWorldEnumerateBodiesInRectCallback = reference to procedure (body: SKPhysicsBody; stop: objcboolPtr); cblock; cdecl;
+  SKPhysicsWorldEnumerateBodiesAlongRayStartCallback = reference to procedure (body: SKPhysicsBody; point: CGPoint; normal: CGVector; stop: objcboolPtr); cblock; cdecl;
 {$endif}
 
 

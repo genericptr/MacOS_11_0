@@ -9,8 +9,8 @@
 
 {$ifdef CALLBACKS}
 type
-  SKNodeEnumerateChildNodesWithNameCallback = reference to function (node: SKNode; stop: objcboolPtr): pointer; cblock; cdecl;
-  SKNodeRunActionCallback = reference to function : pointer; cblock; cdecl;
+  SKNodeEnumerateChildNodesWithNameCallback = reference to procedure (node: SKNode; stop: objcboolPtr); cblock; cdecl;
+  SKNodeRunActionCallback = reference to procedure; cblock; cdecl;
 {$endif}
 
 

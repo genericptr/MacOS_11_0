@@ -8,7 +8,7 @@
 
 {$ifdef CALLBACKS}
 type
-  CATransactionSetCompletionBlockCallback = reference to function : pointer; cblock; cdecl;
+  CATransactionSetCompletionBlockCallback = reference to procedure; cblock; cdecl;
 {$endif}
 
 

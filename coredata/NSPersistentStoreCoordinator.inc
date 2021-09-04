@@ -2,9 +2,9 @@
 
 {$ifdef CALLBACKS}
 type
-  NSPersistentStoreCoordinatorAddPersistentStoreWithDescriptionCallback = reference to function (param1: NSPersistentStoreDescription; param2: NSError): pointer; cblock; cdecl;
-  NSPersistentStoreCoordinatorPerformBlockCallback = reference to function : pointer; cblock; cdecl;
-  NSPersistentStoreCoordinatorPerformBlockAndWaitCallback = reference to function : pointer; cblock; cdecl;
+  NSPersistentStoreCoordinatorAddPersistentStoreWithDescriptionCallback = reference to procedure (param1: NSPersistentStoreDescription; param2: NSError); cblock; cdecl;
+  NSPersistentStoreCoordinatorPerformBlockCallback = reference to procedure; cblock; cdecl;
+  NSPersistentStoreCoordinatorPerformBlockAndWaitCallback = reference to procedure; cblock; cdecl;
 {$endif}
 
 

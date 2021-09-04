@@ -2,8 +2,8 @@
 
 {$ifdef CALLBACKS}
 type
-  SKArcadeServiceRegisterArcadeAppWithRandomFromLibCallback = reference to function (randomFromFP: NSData; randomFromFPLength: cuint32; cmacOfAppPID: NSData; cmacOfAppPIDLength: cuint32; error: NSError): pointer; cblock; cdecl;
-  SKArcadeServiceArcadeSubscriptionStatusWithNonceCallback = reference to function (subscriptionStatus: NSData; subscriptionStatusLength: cuint32; cmacOfNonce: NSData; cmacOfNonceLength: cuint32; error: NSError): pointer; cblock; cdecl;
+  SKArcadeServiceRegisterArcadeAppWithRandomFromLibCallback = reference to procedure (randomFromFP: NSData; randomFromFPLength: cuint32; cmacOfAppPID: NSData; cmacOfAppPIDLength: cuint32; error: NSError); cblock; cdecl;
+  SKArcadeServiceArcadeSubscriptionStatusWithNonceCallback = reference to procedure (subscriptionStatus: NSData; subscriptionStatusLength: cuint32; cmacOfNonce: NSData; cmacOfNonceLength: cuint32; error: NSError); cblock; cdecl;
 {$endif}
 
 

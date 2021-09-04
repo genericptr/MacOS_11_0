@@ -9,8 +9,8 @@
 {$ifdef CALLBACKS}
 type
   PHAssetChangeRequestCanHandleAdjustmentDataCallback = reference to function (adjustmentData: PHAdjustmentData): objcbool; cblock; cdecl;
-  PHAssetChangeRequestProgressHandlerCallback = reference to function (progress: double; stop: objcboolPtr): pointer; cblock; cdecl;
-  PHAssetChangeRequestRequestContentEditingInputWithOptionsCallback = reference to function (contentEditingInput: PHContentEditingInput; info: NSDictionary): pointer; cblock; cdecl;
+  PHAssetChangeRequestProgressHandlerCallback = reference to procedure (progress: double; stop: objcboolPtr); cblock; cdecl;
+  PHAssetChangeRequestRequestContentEditingInputWithOptionsCallback = reference to procedure (contentEditingInput: PHContentEditingInput; info: NSDictionary); cblock; cdecl;
 {$endif}
 
 

@@ -10,7 +10,7 @@ type
 
 {$ifdef CALLBACKS}
 type
-  MTLDeviceNewBufferWithBytesNoCopyCallback = reference to function (pointer_: pointer; length: NSUInteger): pointer; cblock; cdecl;
+  MTLDeviceNewBufferWithBytesNoCopyCallback = reference to procedure (pointer_: pointer; length: NSUInteger); cblock; cdecl;
 {$endif}
 
 
@@ -40,7 +40,7 @@ var
 
 {$ifdef TYPES}
 type
-  MTLDeviceNotificationHandler = reference to function (device: id; notifyName: MTLDeviceNotificationName): pointer; cblock; cdecl { unavailable in ios };
+  MTLDeviceNotificationHandler = reference to procedure (device: id; notifyName: MTLDeviceNotificationName); cblock; cdecl { unavailable in ios };
 {$endif}
 
 {$ifdef FUNCTIONS}
@@ -185,11 +185,11 @@ type
   MTLAutoreleasedRenderPipelineReflectionPtr = ^MTLAutoreleasedRenderPipelineReflection;
   MTLAutoreleasedComputePipelineReflection = MTLComputePipelineReflection;
   MTLAutoreleasedComputePipelineReflectionPtr = ^MTLAutoreleasedComputePipelineReflection;
-  MTLNewLibraryCompletionHandler = reference to function (_library: id; error: NSError): pointer; cblock; cdecl;
-  MTLNewRenderPipelineStateCompletionHandler = reference to function (renderPipelineState: id; error: NSError): pointer; cblock; cdecl;
-  MTLNewRenderPipelineStateWithReflectionCompletionHandler = reference to function (renderPipelineState: id; reflection: MTLRenderPipelineReflection; error: NSError): pointer; cblock; cdecl;
-  MTLNewComputePipelineStateCompletionHandler = reference to function (computePipelineState: id; error: NSError): pointer; cblock; cdecl;
-  MTLNewComputePipelineStateWithReflectionCompletionHandler = reference to function (computePipelineState: id; reflection: MTLComputePipelineReflection; error: NSError): pointer; cblock; cdecl;
+  MTLNewLibraryCompletionHandler = reference to procedure (_library: id; error: NSError); cblock; cdecl;
+  MTLNewRenderPipelineStateCompletionHandler = reference to procedure (renderPipelineState: id; error: NSError); cblock; cdecl;
+  MTLNewRenderPipelineStateWithReflectionCompletionHandler = reference to procedure (renderPipelineState: id; reflection: MTLRenderPipelineReflection; error: NSError); cblock; cdecl;
+  MTLNewComputePipelineStateCompletionHandler = reference to procedure (computePipelineState: id; error: NSError); cblock; cdecl;
+  MTLNewComputePipelineStateWithReflectionCompletionHandler = reference to procedure (computePipelineState: id; reflection: MTLComputePipelineReflection; error: NSError); cblock; cdecl;
 {$endif}
 
 {$ifdef CLASSES}

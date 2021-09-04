@@ -8,9 +8,9 @@
 
 {$ifdef CALLBACKS}
 type
-  NSOrderedSetEnumerateObjectsUsingBlockCallback = reference to function (obj: id; idx: NSUInteger; stop: objcboolPtr): pointer; cblock; cdecl;
-  NSOrderedSetEnumerateObjectsWithOptionsCallback = reference to function (obj: id; idx: NSUInteger; stop: objcboolPtr): pointer; cblock; cdecl;
-  NSOrderedSetEnumerateObjectsAtIndexesCallback = reference to function (obj: id; idx: NSUInteger; stop: objcboolPtr): pointer; cblock; cdecl;
+  NSOrderedSetEnumerateObjectsUsingBlockCallback = reference to procedure (obj: id; idx: NSUInteger; stop: objcboolPtr); cblock; cdecl;
+  NSOrderedSetEnumerateObjectsWithOptionsCallback = reference to procedure (obj: id; idx: NSUInteger; stop: objcboolPtr); cblock; cdecl;
+  NSOrderedSetEnumerateObjectsAtIndexesCallback = reference to procedure (obj: id; idx: NSUInteger; stop: objcboolPtr); cblock; cdecl;
   NSOrderedSetIndexOfObjectPassingTestCallback = reference to function (obj: id; idx: NSUInteger; stop: objcboolPtr): objcbool; cblock; cdecl;
   NSOrderedSetIndexOfObjectWithOptionsCallback = reference to function (obj: id; idx: NSUInteger; stop: objcboolPtr): objcbool; cblock; cdecl;
   NSOrderedSetIndexOfObjectAtIndexesCallback = reference to function (obj: id; idx: NSUInteger; stop: objcboolPtr): objcbool; cblock; cdecl;

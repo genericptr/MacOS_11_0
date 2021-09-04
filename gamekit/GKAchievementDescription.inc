@@ -9,8 +9,8 @@
 
 {$ifdef CALLBACKS}
 type
-  GKAchievementDescriptionLoadAchievementDescriptionsWithCompletionHandlerCallback = reference to function (descriptions: NSArray; error: NSError): pointer; cblock; cdecl;
-  GKAchievementDescriptionLoadImageWithCompletionHandlerCallback = reference to function (image: UIImage; error: NSError): pointer; cblock; cdecl;
+  GKAchievementDescriptionLoadAchievementDescriptionsWithCompletionHandlerCallback = reference to procedure (descriptions: NSArray; error: NSError); cblock; cdecl;
+  GKAchievementDescriptionLoadImageWithCompletionHandlerCallback = reference to procedure (image: UIImage; error: NSError); cblock; cdecl;
 {$endif}
 
 

@@ -8,10 +8,10 @@
 
 {$ifdef CALLBACKS}
 type
-  NSFileManagerUnmountVolumeAtURLCallback = reference to function (errorOrNil: NSError): pointer; cblock; cdecl;
+  NSFileManagerUnmountVolumeAtURLCallback = reference to procedure (errorOrNil: NSError); cblock; cdecl;
   NSFileManagerEnumeratorAtURLCallback = reference to function (url: NSURL; error: NSError): objcbool; cblock; cdecl;
-  NSFileManagerGetFileProviderServicesForItemAtURLCallback = reference to function (services: NSDictionary; error: NSError): pointer; cblock; cdecl;
-  NSFileManagerGetFileProviderConnectionWithCompletionHandlerCallback = reference to function (connection: NSXPCConnection; error: NSError): pointer; cblock; cdecl;
+  NSFileManagerGetFileProviderServicesForItemAtURLCallback = reference to procedure (services: NSDictionary; error: NSError); cblock; cdecl;
+  NSFileManagerGetFileProviderConnectionWithCompletionHandlerCallback = reference to procedure (connection: NSXPCConnection; error: NSError); cblock; cdecl;
 {$endif}
 
 

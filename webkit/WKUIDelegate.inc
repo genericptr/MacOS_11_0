@@ -10,7 +10,7 @@
 
 {$ifdef CALLBACKS}
 type
-  WKUIDelegateWebViewCallback = reference to function : pointer; cblock; cdecl;
+  WKUIDelegateWebViewCallback = reference to procedure; cblock; cdecl;
 {$endif}
 
 

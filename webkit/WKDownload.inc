@@ -2,7 +2,7 @@
 
 {$ifdef CALLBACKS}
 type
-  WKDownloadCancelCallback = reference to function (resumeData: NSData): pointer; cblock; cdecl;
+  WKDownloadCancelCallback = reference to procedure (resumeData: NSData); cblock; cdecl;
 {$endif}
 
 

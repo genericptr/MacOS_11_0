@@ -37,11 +37,11 @@ const
 
 {$ifdef CALLBACKS}
 type
-  AVPlayerSeekToDateCallback = reference to function (finished: objcbool): pointer; cblock; cdecl;
-  AVPlayerSeekToTimeCallback = reference to function (finished: objcbool): pointer; cblock; cdecl;
-  AVPlayerPrerollAtRateCallback = reference to function (finished: objcbool): pointer; cblock; cdecl;
-  AVPlayerAddPeriodicTimeObserverForIntervalCallback = reference to function (time: CMTime): pointer; cblock; cdecl;
-  AVPlayerAddBoundaryTimeObserverForTimesCallback = reference to function : pointer; cblock; cdecl;
+  AVPlayerSeekToDateCallback = reference to procedure (finished: objcbool); cblock; cdecl;
+  AVPlayerSeekToTimeCallback = reference to procedure (finished: objcbool); cblock; cdecl;
+  AVPlayerPrerollAtRateCallback = reference to procedure (finished: objcbool); cblock; cdecl;
+  AVPlayerAddPeriodicTimeObserverForIntervalCallback = reference to procedure (time: CMTime); cblock; cdecl;
+  AVPlayerAddBoundaryTimeObserverForTimesCallback = reference to procedure; cblock; cdecl;
 {$endif}
 
 

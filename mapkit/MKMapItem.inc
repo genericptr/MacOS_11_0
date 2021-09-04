@@ -8,8 +8,8 @@
 
 {$ifdef CALLBACKS}
 type
-  MKMapItemOpenInMapsWithLaunchOptionsCallback = reference to function (success: objcbool): pointer; cblock; cdecl;
-  MKMapItemOpenMapsWithItemsCallback = reference to function (success: objcbool): pointer; cblock; cdecl;
+  MKMapItemOpenInMapsWithLaunchOptionsCallback = reference to procedure (success: objcbool); cblock; cdecl;
+  MKMapItemOpenMapsWithItemsCallback = reference to procedure (success: objcbool); cblock; cdecl;
 {$endif}
 
 

@@ -2,7 +2,7 @@
 
 {$ifdef CALLBACKS}
 type
-  NSUndoManagerRegisterUndoWithTargetCallback = reference to function (target: id): pointer; cblock; cdecl;
+  NSUndoManagerRegisterUndoWithTargetCallback = reference to procedure (target: id); cblock; cdecl;
 {$endif}
 
 

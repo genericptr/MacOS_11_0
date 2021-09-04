@@ -2,14 +2,14 @@
 
 {$ifdef CALLBACKS}
 type
-  NSItemProviderLoadDataWithTypeIdentifierCallback = reference to function (data: NSData; error: NSErrorPtr): pointer; cblock; cdecl;
+  NSItemProviderLoadDataWithTypeIdentifierCallback = reference to procedure (data: NSData; error: NSErrorPtr); cblock; cdecl;
   NSItemProviderRegisterDataRepresentationForTypeIdentifierCallback = reference to function (param1: OpaqueCBlock): NSProgress; cblock; cdecl;
   NSItemProviderRegisterFileRepresentationForTypeIdentifierCallback = reference to function (param1: OpaqueCBlock): NSProgress; cblock; cdecl;
-  NSItemProviderLoadDataRepresentationForTypeIdentifierCallback = reference to function (data: NSData; error: NSErrorPtr): pointer; cblock; cdecl;
-  NSItemProviderLoadFileRepresentationForTypeIdentifierCallback = reference to function (url: NSURL; error: NSErrorPtr): pointer; cblock; cdecl;
-  NSItemProviderLoadInPlaceFileRepresentationForTypeIdentifierCallback = reference to function (url: NSURL; isInPlace: objcbool; error: NSErrorPtr): pointer; cblock; cdecl;
+  NSItemProviderLoadDataRepresentationForTypeIdentifierCallback = reference to procedure (data: NSData; error: NSErrorPtr); cblock; cdecl;
+  NSItemProviderLoadFileRepresentationForTypeIdentifierCallback = reference to procedure (url: NSURL; error: NSErrorPtr); cblock; cdecl;
+  NSItemProviderLoadInPlaceFileRepresentationForTypeIdentifierCallback = reference to procedure (url: NSURL; isInPlace: objcbool; error: NSErrorPtr); cblock; cdecl;
   NSItemProviderRegisterObjectOfClassCallback = reference to function (param1: OpaqueCBlock): NSProgress; cblock; cdecl;
-  NSItemProviderLoadObjectOfClassCallback = reference to function (object_: id; error: NSErrorPtr): pointer; cblock; cdecl;
+  NSItemProviderLoadObjectOfClassCallback = reference to procedure (object_: id; error: NSErrorPtr); cblock; cdecl;
 {$endif}
 
 
@@ -62,8 +62,8 @@ type
 
 {$ifdef TYPES}
 type
-  NSItemProviderCompletionHandler = reference to function (item: id; error: NSErrorPtr): pointer; cblock; cdecl;
-  NSItemProviderLoadHandler = reference to function (completionHandler: NSItemProviderCompletionHandler; expectedValueClass: pobjc_class; options: NSDictionary): pointer; cblock; cdecl;
+  NSItemProviderCompletionHandler = reference to procedure (item: id; error: NSErrorPtr); cblock; cdecl;
+  NSItemProviderLoadHandler = reference to procedure (completionHandler: NSItemProviderCompletionHandler; expectedValueClass: pobjc_class; options: NSDictionary); cblock; cdecl;
 {$endif}
 
 {$ifdef CLASSES}

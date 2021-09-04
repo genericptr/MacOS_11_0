@@ -18,9 +18,9 @@ const
 {$ifdef CALLBACKS}
 type
   NSArraySortedArrayUsingFunctionComparatorCallback = function (param1: id; param2: id; param3: pointer): NSInteger; cdecl;
-  NSArrayEnumerateObjectsUsingBlockCallback = reference to function (obj: id; idx: NSUInteger; stop: objcboolPtr): pointer; cblock; cdecl;
-  NSArrayEnumerateObjectsWithOptionsCallback = reference to function (obj: id; idx: NSUInteger; stop: objcboolPtr): pointer; cblock; cdecl;
-  NSArrayEnumerateObjectsAtIndexesCallback = reference to function (obj: id; idx: NSUInteger; stop: objcboolPtr): pointer; cblock; cdecl;
+  NSArrayEnumerateObjectsUsingBlockCallback = reference to procedure (obj: id; idx: NSUInteger; stop: objcboolPtr); cblock; cdecl;
+  NSArrayEnumerateObjectsWithOptionsCallback = reference to procedure (obj: id; idx: NSUInteger; stop: objcboolPtr); cblock; cdecl;
+  NSArrayEnumerateObjectsAtIndexesCallback = reference to procedure (obj: id; idx: NSUInteger; stop: objcboolPtr); cblock; cdecl;
   NSArrayIndexOfObjectPassingTestCallback = reference to function (obj: id; idx: NSUInteger; stop: objcboolPtr): objcbool; cblock; cdecl;
   NSArrayIndexOfObjectWithOptionsCallback = reference to function (obj: id; idx: NSUInteger; stop: objcboolPtr): objcbool; cblock; cdecl;
   NSArrayIndexOfObjectAtIndexesCallback = reference to function (obj: id; idx: NSUInteger; stop: objcboolPtr): objcbool; cblock; cdecl;

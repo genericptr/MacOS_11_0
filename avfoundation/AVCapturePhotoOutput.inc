@@ -17,7 +17,7 @@ const
 
 {$ifdef CALLBACKS}
 type
-  AVCapturePhotoOutputSetPreparedPhotoSettingsArrayCallback = reference to function (prepared: objcbool; error: NSError): pointer; cblock; cdecl;
+  AVCapturePhotoOutputSetPreparedPhotoSettingsArrayCallback = reference to procedure (prepared: objcbool; error: NSError); cblock; cdecl;
 {$endif}
 
 

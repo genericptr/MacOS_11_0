@@ -2,8 +2,8 @@
 
 {$ifdef CALLBACKS}
 type
-  CKQueryOperationRecordFetchedBlockCallback = reference to function (record_: CKRecord): pointer; cblock; cdecl;
-  CKQueryOperationQueryCompletionBlockCallback = reference to function (cursor: CKQueryCursor; operationError: NSError): pointer; cblock; cdecl;
+  CKQueryOperationRecordFetchedBlockCallback = reference to procedure (record_: CKRecord); cblock; cdecl;
+  CKQueryOperationQueryCompletionBlockCallback = reference to procedure (cursor: CKQueryCursor; operationError: NSError); cblock; cdecl;
 {$endif}
 
 

@@ -2,8 +2,8 @@
 
 {$ifdef CALLBACKS}
 type
-  MLModelCollectionBeginAccessingModelCollectionWithIdentifierCallback = reference to function (modelCollection: MLModelCollection; error: NSError): pointer; cblock; cdecl;
-  MLModelCollectionEndAccessingModelCollectionWithIdentifierCallback = reference to function (success: objcbool; error: NSError): pointer; cblock; cdecl;
+  MLModelCollectionBeginAccessingModelCollectionWithIdentifierCallback = reference to procedure (modelCollection: MLModelCollection; error: NSError); cblock; cdecl;
+  MLModelCollectionEndAccessingModelCollectionWithIdentifierCallback = reference to procedure (success: objcbool; error: NSError); cblock; cdecl;
 {$endif}
 
 

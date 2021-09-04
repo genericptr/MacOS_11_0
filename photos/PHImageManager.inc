@@ -8,13 +8,13 @@
 
 {$ifdef CALLBACKS}
 type
-  PHImageManagerRequestImageForAssetCallback = reference to function (result_: UIImage; info: NSDictionary): pointer; cblock; cdecl;
-  PHImageManagerRequestImageDataForAssetCallback = reference to function (imageData: NSData; dataUTI: NSString; orientation: UIImageOrientation; info: NSDictionary): pointer; cblock; cdecl;
-  PHImageManagerRequestImageDataAndOrientationForAssetCallback = reference to function (imageData: NSData; dataUTI: NSString; orientation: CGImagePropertyOrientation; info: NSDictionary): pointer; cblock; cdecl;
-  PHImageManagerRequestLivePhotoForAssetCallback = reference to function (livePhoto: PHLivePhoto; info: NSDictionary): pointer; cblock; cdecl;
-  PHImageManagerRequestPlayerItemForVideoCallback = reference to function (playerItem: AVPlayerItem; info: NSDictionary): pointer; cblock; cdecl;
-  PHImageManagerRequestExportSessionForVideoCallback = reference to function (exportSession: AVAssetExportSession; info: NSDictionary): pointer; cblock; cdecl;
-  PHImageManagerRequestAVAssetForVideoCallback = reference to function (asset: AVAsset; audioMix: AVAudioMix; info: NSDictionary): pointer; cblock; cdecl;
+  PHImageManagerRequestImageForAssetCallback = reference to procedure (result_: UIImage; info: NSDictionary); cblock; cdecl;
+  PHImageManagerRequestImageDataForAssetCallback = reference to procedure (imageData: NSData; dataUTI: NSString; orientation: UIImageOrientation; info: NSDictionary); cblock; cdecl;
+  PHImageManagerRequestImageDataAndOrientationForAssetCallback = reference to procedure (imageData: NSData; dataUTI: NSString; orientation: CGImagePropertyOrientation; info: NSDictionary); cblock; cdecl;
+  PHImageManagerRequestLivePhotoForAssetCallback = reference to procedure (livePhoto: PHLivePhoto; info: NSDictionary); cblock; cdecl;
+  PHImageManagerRequestPlayerItemForVideoCallback = reference to procedure (playerItem: AVPlayerItem; info: NSDictionary); cblock; cdecl;
+  PHImageManagerRequestExportSessionForVideoCallback = reference to procedure (exportSession: AVAssetExportSession; info: NSDictionary); cblock; cdecl;
+  PHImageManagerRequestAVAssetForVideoCallback = reference to procedure (asset: AVAsset; audioMix: AVAudioMix; info: NSDictionary); cblock; cdecl;
 {$endif}
 
 
@@ -58,7 +58,7 @@ const
   PHImageRequestOptionsResizeModeExact = 2;
 
 type
-  PHAssetImageProgressHandler = reference to function (progress: double; error: NSError; stop: objcboolPtr; info: NSDictionary): pointer; cblock; cdecl;
+  PHAssetImageProgressHandler = reference to procedure (progress: double; error: NSError; stop: objcboolPtr; info: NSDictionary); cblock; cdecl;
 {$endif}
 
 {$ifdef CLASSES}
@@ -122,7 +122,7 @@ const
   PHVideoRequestOptionsDeliveryModeFastFormat = 3;
 
 type
-  PHAssetVideoProgressHandler = reference to function (progress: double; error: NSError; stop: objcboolPtr; info: NSDictionary): pointer; cblock; cdecl;
+  PHAssetVideoProgressHandler = reference to procedure (progress: double; error: NSError; stop: objcboolPtr; info: NSDictionary); cblock; cdecl;
 {$endif}
 
 {$ifdef CLASSES}

@@ -95,7 +95,7 @@ function CMSampleBufferSetInvalidateCallback(sbuf: CMSampleBufferRef; invalidate
 {$if defined(__BLOCKS__)}
 {$ifdef TYPES}
 type
-  CMSampleBufferInvalidateHandler = reference to function (sbuf: CMSampleBufferRef): pointer; cblock; cdecl { available in macos , ios , tvos , watchos  };
+  CMSampleBufferInvalidateHandler = reference to procedure (sbuf: CMSampleBufferRef); cblock; cdecl { available in macos , ios , tvos , watchos  };
 {$endif}
 
 {$ifdef FUNCTIONS}

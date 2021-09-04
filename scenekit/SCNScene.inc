@@ -8,7 +8,7 @@ type
 
 {$ifdef TYPES}
 type
-  SCNSceneExportProgressHandler = reference to function (totalProgress: single; error: NSError; stop: objcboolPtr): pointer; cblock; cdecl;
+  SCNSceneExportProgressHandler = reference to procedure (totalProgress: single; error: NSError; stop: objcboolPtr); cblock; cdecl;
 {$endif}
 
 {$ifdef EXTERNAL_SYMBOLS}

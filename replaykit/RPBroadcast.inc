@@ -2,11 +2,11 @@
 
 {$ifdef CALLBACKS}
 type
-  RPBroadcastShowBroadcastPickerAtPointCallback = reference to function (broadcastActivityController: RPBroadcastActivityController; error: NSError): pointer; cblock; cdecl;
-  RPBroadcastLoadBroadcastActivityViewControllerWithHandlerCallback = reference to function (broadcastActivityViewController: RPBroadcastActivityViewController; error: NSError): pointer; cblock; cdecl;
-  RPBroadcastLoadBroadcastActivityViewControllerWithPreferredExtensionCallback = reference to function (broadcastActivityViewController: RPBroadcastActivityViewController; error: NSError): pointer; cblock; cdecl;
-  RPBroadcastStartBroadcastWithHandlerCallback = reference to function (error: NSError): pointer; cblock; cdecl;
-  RPBroadcastFinishBroadcastWithHandlerCallback = reference to function (error: NSError): pointer; cblock; cdecl;
+  RPBroadcastShowBroadcastPickerAtPointCallback = reference to procedure (broadcastActivityController: RPBroadcastActivityController; error: NSError); cblock; cdecl;
+  RPBroadcastLoadBroadcastActivityViewControllerWithHandlerCallback = reference to procedure (broadcastActivityViewController: RPBroadcastActivityViewController; error: NSError); cblock; cdecl;
+  RPBroadcastLoadBroadcastActivityViewControllerWithPreferredExtensionCallback = reference to procedure (broadcastActivityViewController: RPBroadcastActivityViewController; error: NSError); cblock; cdecl;
+  RPBroadcastStartBroadcastWithHandlerCallback = reference to procedure (error: NSError); cblock; cdecl;
+  RPBroadcastFinishBroadcastWithHandlerCallback = reference to procedure (error: NSError); cblock; cdecl;
 {$endif}
 
 

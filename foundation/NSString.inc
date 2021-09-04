@@ -29,10 +29,10 @@ type
 
 {$ifdef CALLBACKS}
 type
-  NSStringEnumerateSubstringsInRangeCallback = reference to function (substring: NSString; substringRange: NSRange; enclosingRange: NSRange; stop: objcboolPtr): pointer; cblock; cdecl;
-  NSStringEnumerateLinesUsingBlockCallback = reference to function (line: NSString; stop: objcboolPtr): pointer; cblock; cdecl;
-  NSStringInitWithCharactersNoCopyCallback = reference to function (param1: unicharPtr; param2: NSUInteger): pointer; cblock; cdecl;
-  NSStringInitWithBytesNoCopyCallback = reference to function (param1: pointer; param2: NSUInteger): pointer; cblock; cdecl;
+  NSStringEnumerateSubstringsInRangeCallback = reference to procedure (substring: NSString; substringRange: NSRange; enclosingRange: NSRange; stop: objcboolPtr); cblock; cdecl;
+  NSStringEnumerateLinesUsingBlockCallback = reference to procedure (line: NSString; stop: objcboolPtr); cblock; cdecl;
+  NSStringInitWithCharactersNoCopyCallback = reference to procedure (param1: unicharPtr; param2: NSUInteger); cblock; cdecl;
+  NSStringInitWithBytesNoCopyCallback = reference to procedure (param1: pointer; param2: NSUInteger); cblock; cdecl;
 {$endif}
 
 

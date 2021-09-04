@@ -12,7 +12,7 @@ type
 
 {$ifdef CALLBACKS}
 type
-  NSTableViewEnumerateAvailableRowViewsUsingBlockCallback = reference to function (rowView: NSTableRowView; row: NSInteger): pointer; cblock; cdecl;
+  NSTableViewEnumerateAvailableRowViewsUsingBlockCallback = reference to procedure (rowView: NSTableRowView; row: NSInteger); cblock; cdecl;
 {$endif}
 
 

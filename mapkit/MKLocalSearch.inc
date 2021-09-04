@@ -7,7 +7,7 @@ type
 
 {$ifdef TYPES}
 type
-  MKLocalSearchCompletionHandler = reference to function (response: MKLocalSearchResponse; error: NSError): pointer; cblock; cdecl { unavailable in watchos };
+  MKLocalSearchCompletionHandler = reference to procedure (response: MKLocalSearchResponse; error: NSError); cblock; cdecl { unavailable in watchos };
 {$endif}
 
 {$ifdef CLASSES}

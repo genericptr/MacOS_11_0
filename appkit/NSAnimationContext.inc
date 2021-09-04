@@ -2,8 +2,8 @@
 
 {$ifdef CALLBACKS}
 type
-  NSAnimationContextRunAnimationGroupCallback = reference to function (context: NSAnimationContext): pointer; cblock; cdecl;
-  NSAnimationContextCompletionHandlerCallback = reference to function : pointer; cblock; cdecl;
+  NSAnimationContextRunAnimationGroupCallback = reference to procedure (context: NSAnimationContext); cblock; cdecl;
+  NSAnimationContextCompletionHandlerCallback = reference to procedure; cblock; cdecl;
 {$endif}
 
 

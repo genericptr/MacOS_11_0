@@ -2,7 +2,7 @@
 
 {$ifdef CALLBACKS}
 type
-  SRSensorReaderRequestAuthorizationForSensorsCallback = reference to function (error: NSError): pointer; cblock; cdecl;
+  SRSensorReaderRequestAuthorizationForSensorsCallback = reference to procedure (error: NSError); cblock; cdecl;
 {$endif}
 
 

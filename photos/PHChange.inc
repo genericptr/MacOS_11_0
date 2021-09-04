@@ -2,7 +2,7 @@
 
 {$ifdef CALLBACKS}
 type
-  PHChangeEnumerateMovesWithBlockCallback = reference to function (fromIndex: NSUInteger; toIndex: NSUInteger): pointer; cblock; cdecl;
+  PHChangeEnumerateMovesWithBlockCallback = reference to procedure (fromIndex: NSUInteger; toIndex: NSUInteger); cblock; cdecl;
 {$endif}
 
 

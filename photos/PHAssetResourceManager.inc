@@ -2,8 +2,8 @@
 
 {$ifdef CALLBACKS}
 type
-  PHAssetResourceManagerRequestDataForAssetResourceCallback = reference to function (data: NSData): pointer; cblock; cdecl;
-  PHAssetResourceManagerWriteDataForAssetResourceCallback = reference to function (error: NSError): pointer; cblock; cdecl;
+  PHAssetResourceManagerRequestDataForAssetResourceCallback = reference to procedure (data: NSData); cblock; cdecl;
+  PHAssetResourceManagerWriteDataForAssetResourceCallback = reference to procedure (error: NSError); cblock; cdecl;
 {$endif}
 
 
@@ -22,7 +22,7 @@ const
   PHInvalidAssetResourceDataRequestID = 0;
 
 type
-  PHAssetResourceProgressHandler = reference to function (progress: double): pointer; cblock; cdecl;
+  PHAssetResourceProgressHandler = reference to procedure (progress: double); cblock; cdecl;
 {$endif}
 
 {$ifdef CLASSES}

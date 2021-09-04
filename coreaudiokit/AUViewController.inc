@@ -2,7 +2,7 @@
 
 {$ifdef CALLBACKS}
 type
-  AUViewControllerRequestViewControllerWithCompletionHandlerCallback = reference to function (viewController: AUViewControllerBasePtr): pointer; cblock; cdecl;
+  AUViewControllerRequestViewControllerWithCompletionHandlerCallback = reference to procedure (viewController: AUViewControllerBasePtr); cblock; cdecl;
 {$endif}
 
 

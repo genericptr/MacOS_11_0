@@ -31,8 +31,8 @@ type
 
 {$ifdef TYPES}
 type
-  SCNBufferBindingBlock = reference to function (buffer: id; node: SCNNode; shadable: id; renderer: SCNRenderer): pointer; cblock; cdecl;
-  SCNBindingBlock = reference to function (programID: cuint; location: cuint; renderedNode: SCNNode; renderer: SCNRenderer): pointer; cblock; cdecl;
+  SCNBufferBindingBlock = reference to procedure (buffer: id; node: SCNNode; shadable: id; renderer: SCNRenderer); cblock; cdecl;
+  SCNBindingBlock = reference to procedure (programID: cuint; location: cuint; renderedNode: SCNNode; renderer: SCNRenderer); cblock; cdecl;
 {$endif}
 
 {$ifdef PROTOCOLS}

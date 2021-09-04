@@ -7,7 +7,7 @@ var
 
 {$ifdef TYPES}
 type
-  NSAttributedStringCompletionHandler = reference to function (param1: NSAttributedString; param2: NSDictionary; param3: NSError): pointer; cblock; cdecl;
+  NSAttributedStringCompletionHandler = reference to procedure (param1: NSAttributedString; param2: NSDictionary; param3: NSError); cblock; cdecl;
 {$endif}
 
 {$ifdef CLASSES}

@@ -2,7 +2,7 @@
 
 {$ifdef CALLBACKS}
 type
-  NSRegularExpressionEnumerateMatchesInStringCallback = reference to function (result_: NSTextCheckingResult; flags: NSMatchingFlags; stop: objcboolPtr): pointer; cblock; cdecl;
+  NSRegularExpressionEnumerateMatchesInStringCallback = reference to procedure (result_: NSTextCheckingResult; flags: NSMatchingFlags; stop: objcboolPtr); cblock; cdecl;
 {$endif}
 
 

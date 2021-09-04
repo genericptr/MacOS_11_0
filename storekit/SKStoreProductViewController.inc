@@ -8,7 +8,7 @@
 
 {$ifdef CALLBACKS}
 type
-  SKStoreProductViewControllerLoadProductWithParametersCallback = reference to function (result_: objcbool; error: NSError): pointer; cblock; cdecl;
+  SKStoreProductViewControllerLoadProductWithParametersCallback = reference to procedure (result_: objcbool; error: NSError); cblock; cdecl;
 {$endif}
 
 

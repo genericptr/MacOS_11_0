@@ -2,7 +2,7 @@
 
 {$ifdef CALLBACKS}
 type
-  MKTileOverlayLoadTileAtPathCallback = reference to function (tileData: NSData; error: NSError): pointer; cblock; cdecl;
+  MKTileOverlayLoadTileAtPathCallback = reference to procedure (tileData: NSData; error: NSError); cblock; cdecl;
 {$endif}
 
 

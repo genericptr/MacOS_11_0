@@ -2,9 +2,9 @@
 
 {$ifdef CALLBACKS}
 type
-  NSLinguisticTaggerEnumerateTagsInRangeCallback = reference to function (tag: NSLinguisticTag; tokenRange: NSRange; stop: objcboolPtr): pointer; cblock; cdecl;
-  NSLinguisticTaggerEnumerateTagsForStringCallback = reference to function (tag: NSLinguisticTag; tokenRange: NSRange; stop: objcboolPtr): pointer; cblock; cdecl;
-  NSLinguisticTaggerEnumerateLinguisticTagsInRangeCallback = reference to function (tag: NSLinguisticTag; tokenRange: NSRange; sentenceRange: NSRange; stop: objcboolPtr): pointer; cblock; cdecl;
+  NSLinguisticTaggerEnumerateTagsInRangeCallback = reference to procedure (tag: NSLinguisticTag; tokenRange: NSRange; stop: objcboolPtr); cblock; cdecl;
+  NSLinguisticTaggerEnumerateTagsForStringCallback = reference to procedure (tag: NSLinguisticTag; tokenRange: NSRange; stop: objcboolPtr); cblock; cdecl;
+  NSLinguisticTaggerEnumerateLinguisticTagsInRangeCallback = reference to procedure (tag: NSLinguisticTag; tokenRange: NSRange; sentenceRange: NSRange; stop: objcboolPtr); cblock; cdecl;
 {$endif}
 
 

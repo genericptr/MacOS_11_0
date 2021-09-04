@@ -2,8 +2,8 @@
 
 {$ifdef CALLBACKS}
 type
-  GKScoreReportScoresCallback = reference to function (error: NSError): pointer; cblock; cdecl;
-  GKScoreReportScoreWithCompletionHandlerCallback = reference to function (error: NSError): pointer; cblock; cdecl;
+  GKScoreReportScoresCallback = reference to procedure (error: NSError); cblock; cdecl;
+  GKScoreReportScoreWithCompletionHandlerCallback = reference to procedure (error: NSError); cblock; cdecl;
 {$endif}
 
 

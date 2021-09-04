@@ -2,8 +2,8 @@
 
 {$ifdef CALLBACKS}
 type
-  AVAudioSessionRequestRecordPermissionCallback = reference to function (granted: objcbool): pointer; cblock; cdecl;
-  AVAudioSessionActivateWithOptionsCallback = reference to function (activated: objcbool; error: NSError): pointer; cblock; cdecl;
+  AVAudioSessionRequestRecordPermissionCallback = reference to procedure (granted: objcbool); cblock; cdecl;
+  AVAudioSessionActivateWithOptionsCallback = reference to procedure (activated: objcbool; error: NSError); cblock; cdecl;
 {$endif}
 
 

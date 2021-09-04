@@ -2,7 +2,7 @@
 
 {$ifdef CALLBACKS}
 type
-  CKOperationLongLivedOperationWasPersistedBlockCallback = reference to function : pointer; cblock; cdecl;
+  CKOperationLongLivedOperationWasPersistedBlockCallback = reference to procedure; cblock; cdecl;
 {$endif}
 
 

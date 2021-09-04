@@ -2,12 +2,12 @@
 
 {$ifdef CALLBACKS}
 type
-  SKCloudServiceControllerRequestAuthorizationCallback = reference to function (authorizationStatus: SKCloudServiceAuthorizationStatus): pointer; cblock; cdecl;
-  SKCloudServiceControllerRequestCapabilitiesWithCompletionHandlerCallback = reference to function (capabilities: SKCloudServiceCapability; error: NSError): pointer; cblock; cdecl;
-  SKCloudServiceControllerRequestStorefrontCountryCodeWithCompletionHandlerCallback = reference to function (storefrontCountryCode: NSString; error: NSError): pointer; cblock; cdecl;
-  SKCloudServiceControllerRequestStorefrontIdentifierWithCompletionHandlerCallback = reference to function (storefrontIdentifier: NSString; error: NSError): pointer; cblock; cdecl;
-  SKCloudServiceControllerRequestUserTokenForDeveloperTokenCallback = reference to function (userToken: NSString; error: NSError): pointer; cblock; cdecl;
-  SKCloudServiceControllerRequestPersonalizationTokenForClientTokenCallback = reference to function (personalizationToken: NSString; error: NSError): pointer; cblock; cdecl;
+  SKCloudServiceControllerRequestAuthorizationCallback = reference to procedure (authorizationStatus: SKCloudServiceAuthorizationStatus); cblock; cdecl;
+  SKCloudServiceControllerRequestCapabilitiesWithCompletionHandlerCallback = reference to procedure (capabilities: SKCloudServiceCapability; error: NSError); cblock; cdecl;
+  SKCloudServiceControllerRequestStorefrontCountryCodeWithCompletionHandlerCallback = reference to procedure (storefrontCountryCode: NSString; error: NSError); cblock; cdecl;
+  SKCloudServiceControllerRequestStorefrontIdentifierWithCompletionHandlerCallback = reference to procedure (storefrontIdentifier: NSString; error: NSError); cblock; cdecl;
+  SKCloudServiceControllerRequestUserTokenForDeveloperTokenCallback = reference to procedure (userToken: NSString; error: NSError); cblock; cdecl;
+  SKCloudServiceControllerRequestPersonalizationTokenForClientTokenCallback = reference to procedure (personalizationToken: NSString; error: NSError); cblock; cdecl;
 {$endif}
 
 

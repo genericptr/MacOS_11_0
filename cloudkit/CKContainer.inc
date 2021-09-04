@@ -2,19 +2,19 @@
 
 {$ifdef CALLBACKS}
 type
-  CKContainerAccountStatusWithCompletionHandlerCallback = reference to function (accountStatus: CKAccountStatus; error: NSError): pointer; cblock; cdecl;
-  CKContainerFetchUserRecordIDWithCompletionHandlerCallback = reference to function (recordID: CKRecordID; error: NSError): pointer; cblock; cdecl;
-  CKContainerDiscoverAllIdentitiesWithCompletionHandlerCallback = reference to function (userIdentities: NSArray; error: NSError): pointer; cblock; cdecl;
-  CKContainerDiscoverUserIdentityWithEmailAddressCallback = reference to function (userInfo: CKUserIdentity; error: NSError): pointer; cblock; cdecl;
-  CKContainerDiscoverUserIdentityWithPhoneNumberCallback = reference to function (userInfo: CKUserIdentity; error: NSError): pointer; cblock; cdecl;
-  CKContainerDiscoverUserIdentityWithUserRecordIDCallback = reference to function (userInfo: CKUserIdentity; error: NSError): pointer; cblock; cdecl;
-  CKContainerFetchShareParticipantWithEmailAddressCallback = reference to function (shareParticipant: CKShareParticipant; error: NSError): pointer; cblock; cdecl;
-  CKContainerFetchShareParticipantWithPhoneNumberCallback = reference to function (shareParticipant: CKShareParticipant; error: NSError): pointer; cblock; cdecl;
-  CKContainerFetchShareParticipantWithUserRecordIDCallback = reference to function (shareParticipant: CKShareParticipant; error: NSError): pointer; cblock; cdecl;
-  CKContainerFetchShareMetadataWithURLCallback = reference to function (metadata: CKShareMetadata; error: NSError): pointer; cblock; cdecl;
-  CKContainerAcceptShareMetadataCallback = reference to function (acceptedShare: CKShare; error: NSError): pointer; cblock; cdecl;
-  CKContainerFetchAllLongLivedOperationIDsWithCompletionHandlerCallback = reference to function (outstandingOperationIDs: NSArray; error: NSError): pointer; cblock; cdecl;
-  CKContainerFetchLongLivedOperationWithIDCallback = reference to function (outstandingOperation: CKOperation; error: NSError): pointer; cblock; cdecl;
+  CKContainerAccountStatusWithCompletionHandlerCallback = reference to procedure (accountStatus: CKAccountStatus; error: NSError); cblock; cdecl;
+  CKContainerFetchUserRecordIDWithCompletionHandlerCallback = reference to procedure (recordID: CKRecordID; error: NSError); cblock; cdecl;
+  CKContainerDiscoverAllIdentitiesWithCompletionHandlerCallback = reference to procedure (userIdentities: NSArray; error: NSError); cblock; cdecl;
+  CKContainerDiscoverUserIdentityWithEmailAddressCallback = reference to procedure (userInfo: CKUserIdentity; error: NSError); cblock; cdecl;
+  CKContainerDiscoverUserIdentityWithPhoneNumberCallback = reference to procedure (userInfo: CKUserIdentity; error: NSError); cblock; cdecl;
+  CKContainerDiscoverUserIdentityWithUserRecordIDCallback = reference to procedure (userInfo: CKUserIdentity; error: NSError); cblock; cdecl;
+  CKContainerFetchShareParticipantWithEmailAddressCallback = reference to procedure (shareParticipant: CKShareParticipant; error: NSError); cblock; cdecl;
+  CKContainerFetchShareParticipantWithPhoneNumberCallback = reference to procedure (shareParticipant: CKShareParticipant; error: NSError); cblock; cdecl;
+  CKContainerFetchShareParticipantWithUserRecordIDCallback = reference to procedure (shareParticipant: CKShareParticipant; error: NSError); cblock; cdecl;
+  CKContainerFetchShareMetadataWithURLCallback = reference to procedure (metadata: CKShareMetadata; error: NSError); cblock; cdecl;
+  CKContainerAcceptShareMetadataCallback = reference to procedure (acceptedShare: CKShare; error: NSError); cblock; cdecl;
+  CKContainerFetchAllLongLivedOperationIDsWithCompletionHandlerCallback = reference to procedure (outstandingOperationIDs: NSArray; error: NSError); cblock; cdecl;
+  CKContainerFetchLongLivedOperationWithIDCallback = reference to procedure (outstandingOperation: CKOperation; error: NSError); cblock; cdecl;
 {$endif}
 
 
@@ -96,7 +96,7 @@ const
   CKApplicationPermissionStatusGranted = 3;
 
 type
-  CKApplicationPermissionBlock = reference to function (applicationPermissionStatus: CKApplicationPermissionStatus; error: NSError): pointer; cblock; cdecl;
+  CKApplicationPermissionBlock = reference to procedure (applicationPermissionStatus: CKApplicationPermissionStatus; error: NSError); cblock; cdecl;
 {$endif}
 
 {$ifdef CLASSES}

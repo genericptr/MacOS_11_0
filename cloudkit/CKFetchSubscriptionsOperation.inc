@@ -2,7 +2,7 @@
 
 {$ifdef CALLBACKS}
 type
-  CKFetchSubscriptionsOperationFetchSubscriptionCompletionBlockCallback = reference to function (subscriptionsBySubscriptionID: NSDictionary; operationError: NSError): pointer; cblock; cdecl;
+  CKFetchSubscriptionsOperationFetchSubscriptionCompletionBlockCallback = reference to procedure (subscriptionsBySubscriptionID: NSDictionary; operationError: NSError); cblock; cdecl;
 {$endif}
 
 

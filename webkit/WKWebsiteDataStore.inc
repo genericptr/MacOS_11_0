@@ -2,8 +2,8 @@
 
 {$ifdef CALLBACKS}
 type
-  WKWebsiteDataStoreFetchDataRecordsOfTypesCallback = reference to function (param1: NSArray): pointer; cblock; cdecl;
-  WKWebsiteDataStoreRemoveDataOfTypesCallback = reference to function : pointer; cblock; cdecl;
+  WKWebsiteDataStoreFetchDataRecordsOfTypesCallback = reference to procedure (param1: NSArray); cblock; cdecl;
+  WKWebsiteDataStoreRemoveDataOfTypesCallback = reference to procedure; cblock; cdecl;
 {$endif}
 
 

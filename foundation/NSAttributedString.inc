@@ -16,8 +16,8 @@ const
 
 {$ifdef CALLBACKS}
 type
-  NSAttributedStringEnumerateAttributesInRangeCallback = reference to function (attrs: NSDictionary; range: NSRange; stop: objcboolPtr): pointer; cblock; cdecl;
-  NSAttributedStringEnumerateAttributeCallback = reference to function (value: id; range: NSRange; stop: objcboolPtr): pointer; cblock; cdecl;
+  NSAttributedStringEnumerateAttributesInRangeCallback = reference to procedure (attrs: NSDictionary; range: NSRange; stop: objcboolPtr); cblock; cdecl;
+  NSAttributedStringEnumerateAttributeCallback = reference to procedure (value: id; range: NSRange; stop: objcboolPtr); cblock; cdecl;
 {$endif}
 
 

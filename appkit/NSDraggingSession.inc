@@ -2,7 +2,7 @@
 
 {$ifdef CALLBACKS}
 type
-  NSDraggingSessionEnumerateDraggingItemsWithOptionsCallback = reference to function (draggingItem: NSDraggingItem; idx: NSInteger; stop: objcboolPtr): pointer; cblock; cdecl;
+  NSDraggingSessionEnumerateDraggingItemsWithOptionsCallback = reference to procedure (draggingItem: NSDraggingItem; idx: NSInteger; stop: objcboolPtr); cblock; cdecl;
 {$endif}
 
 

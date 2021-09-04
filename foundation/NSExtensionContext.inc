@@ -2,8 +2,8 @@
 
 {$ifdef CALLBACKS}
 type
-  NSExtensionContextCompleteRequestReturningItemsCallback = reference to function (expired: objcbool): pointer; cblock; cdecl;
-  NSExtensionContextOpenURLCallback = reference to function (success: objcbool): pointer; cblock; cdecl;
+  NSExtensionContextCompleteRequestReturningItemsCallback = reference to procedure (expired: objcbool); cblock; cdecl;
+  NSExtensionContextOpenURLCallback = reference to procedure (success: objcbool); cblock; cdecl;
 {$endif}
 
 

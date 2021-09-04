@@ -2,8 +2,8 @@
 
 {$ifdef CALLBACKS}
 type
-  NSSavePanelBeginSheetModalForWindowCallback = reference to function (result_: NSModalResponse): pointer; cblock; cdecl;
-  NSSavePanelBeginWithCompletionHandlerCallback = reference to function (result_: NSModalResponse): pointer; cblock; cdecl;
+  NSSavePanelBeginSheetModalForWindowCallback = reference to procedure (result_: NSModalResponse); cblock; cdecl;
+  NSSavePanelBeginWithCompletionHandlerCallback = reference to procedure (result_: NSModalResponse); cblock; cdecl;
 {$endif}
 
 

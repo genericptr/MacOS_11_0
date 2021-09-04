@@ -2,7 +2,7 @@
 
 {$ifdef CALLBACKS}
 type
-  PKPushRegistryPushRegistryCallback = reference to function : pointer; cblock; cdecl;
+  PKPushRegistryPushRegistryCallback = reference to procedure; cblock; cdecl;
 {$endif}
 
 

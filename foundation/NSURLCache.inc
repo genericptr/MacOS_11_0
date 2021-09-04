@@ -2,7 +2,7 @@
 
 {$ifdef CALLBACKS}
 type
-  NSURLCacheGetCachedResponseForDataTaskCallback = reference to function (cachedResponse: NSCachedURLResponse): pointer; cblock; cdecl;
+  NSURLCacheGetCachedResponseForDataTaskCallback = reference to procedure (cachedResponse: NSCachedURLResponse); cblock; cdecl;
 {$endif}
 
 

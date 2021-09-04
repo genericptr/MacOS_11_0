@@ -2,13 +2,13 @@
 
 {$ifdef CALLBACKS}
 type
-  UNUserNotificationCenterRequestAuthorizationWithOptionsCallback = reference to function (granted: objcbool; error: NSError): pointer; cblock; cdecl;
-  UNUserNotificationCenterGetNotificationCategoriesWithCompletionHandlerCallback = reference to function (categories: NSSet): pointer; cblock; cdecl;
-  UNUserNotificationCenterGetNotificationSettingsWithCompletionHandlerCallback = reference to function (settings: UNNotificationSettings): pointer; cblock; cdecl;
-  UNUserNotificationCenterAddNotificationRequestCallback = reference to function (error: NSError): pointer; cblock; cdecl;
-  UNUserNotificationCenterGetPendingNotificationRequestsWithCompletionHandlerCallback = reference to function (requests: NSArray): pointer; cblock; cdecl;
-  UNUserNotificationCenterGetDeliveredNotificationsWithCompletionHandlerCallback = reference to function (notifications: NSArray): pointer; cblock; cdecl;
-  UNUserNotificationCenterUserNotificationCenterCallback = reference to function (options: UNNotificationPresentationOptions): pointer; cblock; cdecl;
+  UNUserNotificationCenterRequestAuthorizationWithOptionsCallback = reference to procedure (granted: objcbool; error: NSError); cblock; cdecl;
+  UNUserNotificationCenterGetNotificationCategoriesWithCompletionHandlerCallback = reference to procedure (categories: NSSet); cblock; cdecl;
+  UNUserNotificationCenterGetNotificationSettingsWithCompletionHandlerCallback = reference to procedure (settings: UNNotificationSettings); cblock; cdecl;
+  UNUserNotificationCenterAddNotificationRequestCallback = reference to procedure (error: NSError); cblock; cdecl;
+  UNUserNotificationCenterGetPendingNotificationRequestsWithCompletionHandlerCallback = reference to procedure (requests: NSArray); cblock; cdecl;
+  UNUserNotificationCenterGetDeliveredNotificationsWithCompletionHandlerCallback = reference to procedure (notifications: NSArray); cblock; cdecl;
+  UNUserNotificationCenterUserNotificationCenterCallback = reference to procedure (options: UNNotificationPresentationOptions); cblock; cdecl;
 {$endif}
 
 

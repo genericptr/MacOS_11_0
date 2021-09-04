@@ -2,8 +2,8 @@
 
 {$ifdef CALLBACKS}
 type
-  NSCollectionViewPerformBatchUpdatesCallback = reference to function : pointer; cblock; cdecl;
-  NSCollectionViewEnumerateIndexPathsWithOptionsCallback = reference to function (indexPath: NSIndexPath; stop: objcboolPtr): pointer; cblock; cdecl;
+  NSCollectionViewPerformBatchUpdatesCallback = reference to procedure; cblock; cdecl;
+  NSCollectionViewEnumerateIndexPathsWithOptionsCallback = reference to procedure (indexPath: NSIndexPath; stop: objcboolPtr); cblock; cdecl;
 {$endif}
 
 

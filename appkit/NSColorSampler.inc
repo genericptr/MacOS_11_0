@@ -2,7 +2,7 @@
 
 {$ifdef CALLBACKS}
 type
-  NSColorSamplerShowSamplerWithSelectionHandlerCallback = reference to function (selectedColor: NSColor): pointer; cblock; cdecl;
+  NSColorSamplerShowSamplerWithSelectionHandlerCallback = reference to procedure (selectedColor: NSColor); cblock; cdecl;
 {$endif}
 
 

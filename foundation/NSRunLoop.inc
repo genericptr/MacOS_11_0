@@ -8,8 +8,8 @@
 
 {$ifdef CALLBACKS}
 type
-  NSRunLoopPerformInModesCallback = reference to function : pointer; cblock; cdecl;
-  NSRunLoopPerformBlockCallback = reference to function : pointer; cblock; cdecl;
+  NSRunLoopPerformInModesCallback = reference to procedure; cblock; cdecl;
+  NSRunLoopPerformBlockCallback = reference to procedure; cblock; cdecl;
 {$endif}
 
 

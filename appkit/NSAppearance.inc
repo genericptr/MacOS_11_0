@@ -2,7 +2,7 @@
 
 {$ifdef CALLBACKS}
 type
-  NSAppearancePerformAsCurrentDrawingAppearanceCallback = reference to function : pointer; cblock; cdecl;
+  NSAppearancePerformAsCurrentDrawingAppearanceCallback = reference to procedure; cblock; cdecl;
 {$endif}
 
 

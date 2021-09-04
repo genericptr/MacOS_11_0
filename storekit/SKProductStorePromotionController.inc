@@ -2,10 +2,10 @@
 
 {$ifdef CALLBACKS}
 type
-  SKProductStorePromotionControllerFetchStorePromotionVisibilityForProductCallback = reference to function (storePromotionVisibility: SKProductStorePromotionVisibility; error: NSError): pointer; cblock; cdecl;
-  SKProductStorePromotionControllerUpdateStorePromotionVisibilityCallback = reference to function (error: NSError): pointer; cblock; cdecl;
-  SKProductStorePromotionControllerFetchStorePromotionOrderWithCompletionHandlerCallback = reference to function (storePromotionOrder: NSArray; error: NSError): pointer; cblock; cdecl;
-  SKProductStorePromotionControllerUpdateStorePromotionOrderCallback = reference to function (error: NSError): pointer; cblock; cdecl;
+  SKProductStorePromotionControllerFetchStorePromotionVisibilityForProductCallback = reference to procedure (storePromotionVisibility: SKProductStorePromotionVisibility; error: NSError); cblock; cdecl;
+  SKProductStorePromotionControllerUpdateStorePromotionVisibilityCallback = reference to procedure (error: NSError); cblock; cdecl;
+  SKProductStorePromotionControllerFetchStorePromotionOrderWithCompletionHandlerCallback = reference to procedure (storePromotionOrder: NSArray; error: NSError); cblock; cdecl;
+  SKProductStorePromotionControllerUpdateStorePromotionOrderCallback = reference to procedure (error: NSError); cblock; cdecl;
 {$endif}
 
 

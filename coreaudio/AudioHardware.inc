@@ -5,7 +5,7 @@
 {$ifdef TYPES}
 type
   AudioObjectPropertyListenerProc = function (inObjectID: AudioObjectID; inNumberAddresses: UInt32; inAddresses: AudioObjectPropertyAddressPtr; inClientData: pointer): OSStatus; cdecl;
-  AudioObjectPropertyListenerBlock = reference to function (inNumberAddresses: UInt32; inAddresses: AudioObjectPropertyAddressPtr): pointer; cblock; cdecl;
+  AudioObjectPropertyListenerBlock = reference to procedure (inNumberAddresses: UInt32; inAddresses: AudioObjectPropertyAddressPtr); cblock; cdecl;
 {$endif}
 
 {$ifdef FUNCTIONS}
@@ -40,7 +40,7 @@ function AudioHardwareDestroyAggregateDevice(inDeviceID: AudioObjectID): OSStatu
 {$ifdef TYPES}
 type
   AudioDeviceIOProc = function (inDevice: AudioObjectID; inNow: AudioTimeStampPtr; inInputData: AudioBufferListPtr; inInputTime: AudioTimeStampPtr; var outOutputData: AudioBufferList; inOutputTime: AudioTimeStampPtr; inClientData: pointer): OSStatus; cdecl;
-  AudioDeviceIOBlock = reference to function (inNow: AudioTimeStampPtr; inInputData: AudioBufferListPtr; inInputTime: AudioTimeStampPtr; outOutputData: AudioBufferListPtr; inOutputTime: AudioTimeStampPtr): pointer; cblock; cdecl;
+  AudioDeviceIOBlock = reference to procedure (inNow: AudioTimeStampPtr; inInputData: AudioBufferListPtr; inInputTime: AudioTimeStampPtr; outOutputData: AudioBufferListPtr; inOutputTime: AudioTimeStampPtr); cblock; cdecl;
   AudioDeviceIOProcID = AudioDeviceIOProc;
   AudioDeviceIOProcIDPtr = ^AudioDeviceIOProcID;
 

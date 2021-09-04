@@ -2,11 +2,11 @@
 
 {$ifdef CALLBACKS}
 type
-  CKFetchRecordZoneChangesOperationRecordChangedBlockCallback = reference to function (record_: CKRecord): pointer; cblock; cdecl;
-  CKFetchRecordZoneChangesOperationRecordWithIDWasDeletedBlockCallback = reference to function (recordID: CKRecordID; recordType: CKRecordType): pointer; cblock; cdecl;
-  CKFetchRecordZoneChangesOperationRecordZoneChangeTokensUpdatedBlockCallback = reference to function (recordZoneID: CKRecordZoneID; serverChangeToken: CKServerChangeToken; clientChangeTokenData: NSData): pointer; cblock; cdecl;
-  CKFetchRecordZoneChangesOperationRecordZoneFetchCompletionBlockCallback = reference to function (recordZoneID: CKRecordZoneID; serverChangeToken: CKServerChangeToken; clientChangeTokenData: NSData; moreComing: objcbool; recordZoneError: NSError): pointer; cblock; cdecl;
-  CKFetchRecordZoneChangesOperationFetchRecordZoneChangesCompletionBlockCallback = reference to function (operationError: NSError): pointer; cblock; cdecl;
+  CKFetchRecordZoneChangesOperationRecordChangedBlockCallback = reference to procedure (record_: CKRecord); cblock; cdecl;
+  CKFetchRecordZoneChangesOperationRecordWithIDWasDeletedBlockCallback = reference to procedure (recordID: CKRecordID; recordType: CKRecordType); cblock; cdecl;
+  CKFetchRecordZoneChangesOperationRecordZoneChangeTokensUpdatedBlockCallback = reference to procedure (recordZoneID: CKRecordZoneID; serverChangeToken: CKServerChangeToken; clientChangeTokenData: NSData); cblock; cdecl;
+  CKFetchRecordZoneChangesOperationRecordZoneFetchCompletionBlockCallback = reference to procedure (recordZoneID: CKRecordZoneID; serverChangeToken: CKServerChangeToken; clientChangeTokenData: NSData; moreComing: objcbool; recordZoneError: NSError); cblock; cdecl;
+  CKFetchRecordZoneChangesOperationFetchRecordZoneChangesCompletionBlockCallback = reference to procedure (operationError: NSError); cblock; cdecl;
 {$endif}
 
 

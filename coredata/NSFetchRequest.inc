@@ -2,7 +2,7 @@
 
 {$ifdef CALLBACKS}
 type
-  NSFetchRequestInitWithFetchRequestCallback = reference to function (param1: NSAsynchronousFetchResult): pointer; cblock; cdecl;
+  NSFetchRequestInitWithFetchRequestCallback = reference to procedure (param1: NSAsynchronousFetchResult); cblock; cdecl;
 {$endif}
 
 
@@ -105,7 +105,7 @@ type
 
 {$ifdef TYPES}
 type
-  NSPersistentStoreAsynchronousFetchResultCompletionBlock = reference to function (result_: NSAsynchronousFetchResult): pointer; cblock; cdecl;
+  NSPersistentStoreAsynchronousFetchResultCompletionBlock = reference to procedure (result_: NSAsynchronousFetchResult); cblock; cdecl;
 {$endif}
 
 {$ifdef CLASSES}

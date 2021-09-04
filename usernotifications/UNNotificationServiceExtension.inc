@@ -2,7 +2,7 @@
 
 {$ifdef CALLBACKS}
 type
-  UNNotificationServiceExtensionDidReceiveNotificationRequestCallback = reference to function (contentToDeliver: UNNotificationContent): pointer; cblock; cdecl;
+  UNNotificationServiceExtensionDidReceiveNotificationRequestCallback = reference to procedure (contentToDeliver: UNNotificationContent); cblock; cdecl;
 {$endif}
 
 

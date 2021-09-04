@@ -2,7 +2,7 @@
 
 {$ifdef CALLBACKS}
 type
-  WKScriptMessageHandlerWithReplyUserContentControllerCallback = reference to function (reply: id; errorMessage: NSString): pointer; cblock; cdecl;
+  WKScriptMessageHandlerWithReplyUserContentControllerCallback = reference to procedure (reply: id; errorMessage: NSString); cblock; cdecl;
 {$endif}
 
 

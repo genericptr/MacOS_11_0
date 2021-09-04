@@ -2,8 +2,8 @@
 
 {$ifdef CALLBACKS}
 type
-  GKVoiceChatPlayerVoiceChatStateDidChangeHandlerCallback = reference to function (player: GKPlayer; state: GKVoiceChatPlayerState): pointer; cblock; cdecl;
-  GKVoiceChatPlayerStateUpdateHandlerCallback = reference to function (playerID: NSString; state: GKVoiceChatPlayerState): pointer; cblock; cdecl;
+  GKVoiceChatPlayerVoiceChatStateDidChangeHandlerCallback = reference to procedure (player: GKPlayer; state: GKVoiceChatPlayerState); cblock; cdecl;
+  GKVoiceChatPlayerStateUpdateHandlerCallback = reference to procedure (playerID: NSString; state: GKVoiceChatPlayerState); cblock; cdecl;
 {$endif}
 
 

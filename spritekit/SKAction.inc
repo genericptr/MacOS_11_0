@@ -2,7 +2,7 @@
 
 {$ifdef CALLBACKS}
 type
-  SKActionCustomActionWithDurationCallback = reference to function (node: SKNode; elapsedTime: CGFloat): pointer; cblock; cdecl;
+  SKActionCustomActionWithDurationCallback = reference to procedure (node: SKNode; elapsedTime: CGFloat); cblock; cdecl;
 {$endif}
 
 

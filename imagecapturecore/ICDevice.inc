@@ -2,9 +2,9 @@
 
 {$ifdef CALLBACKS}
 type
-  ICDeviceRequestOpenSessionWithOptionsCallback = reference to function (error: NSError): pointer; cblock; cdecl;
-  ICDeviceRequestCloseSessionWithOptionsCallback = reference to function (error: NSError): pointer; cblock; cdecl;
-  ICDeviceRequestEjectWithCompletionCallback = reference to function (error: NSError): pointer; cblock; cdecl;
+  ICDeviceRequestOpenSessionWithOptionsCallback = reference to procedure (error: NSError); cblock; cdecl;
+  ICDeviceRequestCloseSessionWithOptionsCallback = reference to procedure (error: NSError); cblock; cdecl;
+  ICDeviceRequestEjectWithCompletionCallback = reference to procedure (error: NSError); cblock; cdecl;
 {$endif}
 
 

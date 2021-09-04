@@ -4,13 +4,13 @@
 {$ifdef TYPES}
 
 type
-  EKEventStoreRequestAccessCompletionHandler = reference to function (granted: objcbool; error: NSError): pointer; cblock; cdecl;
+  EKEventStoreRequestAccessCompletionHandler = reference to procedure (granted: objcbool; error: NSError); cblock; cdecl;
 {$endif}
 
 
 {$ifdef CALLBACKS}
 type
-  EKEventStoreFetchRemindersMatchingPredicateCallback = reference to function (reminders: NSArray): pointer; cblock; cdecl;
+  EKEventStoreFetchRemindersMatchingPredicateCallback = reference to procedure (reminders: NSArray); cblock; cdecl;
 {$endif}
 
 
@@ -29,7 +29,7 @@ const
   EKSpanFutureEvents = 1;
 
 type
-  EKEventSearchCallback = reference to function (event: EKEvent; stop: objcboolPtr): pointer; cblock; cdecl;
+  EKEventSearchCallback = reference to procedure (event: EKEvent; stop: objcboolPtr); cblock; cdecl;
 {$endif}
 
 {$ifdef CLASSES}

@@ -2,8 +2,8 @@
 
 {$ifdef CALLBACKS}
 type
-  CKFetchShareParticipantsOperationShareParticipantFetchedBlockCallback = reference to function (participant: CKShareParticipant): pointer; cblock; cdecl;
-  CKFetchShareParticipantsOperationFetchShareParticipantsCompletionBlockCallback = reference to function (operationError: NSError): pointer; cblock; cdecl;
+  CKFetchShareParticipantsOperationShareParticipantFetchedBlockCallback = reference to procedure (participant: CKShareParticipant); cblock; cdecl;
+  CKFetchShareParticipantsOperationFetchShareParticipantsCompletionBlockCallback = reference to procedure (operationError: NSError); cblock; cdecl;
 {$endif}
 
 

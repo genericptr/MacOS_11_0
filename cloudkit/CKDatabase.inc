@@ -2,18 +2,18 @@
 
 {$ifdef CALLBACKS}
 type
-  CKDatabaseFetchRecordWithIDCallback = reference to function (record_: CKRecord; error: NSError): pointer; cblock; cdecl;
-  CKDatabaseSaveRecordCallback = reference to function (record_: CKRecord; error: NSError): pointer; cblock; cdecl;
-  CKDatabaseDeleteRecordWithIDCallback = reference to function (recordID: CKRecordID; error: NSError): pointer; cblock; cdecl;
-  CKDatabasePerformQueryCallback = reference to function (results: NSArray; error: NSError): pointer; cblock; cdecl;
-  CKDatabaseFetchAllRecordZonesWithCompletionHandlerCallback = reference to function (zones: NSArray; error: NSError): pointer; cblock; cdecl;
-  CKDatabaseFetchRecordZoneWithIDCallback = reference to function (zone: CKRecordZone; error: NSError): pointer; cblock; cdecl;
-  CKDatabaseSaveRecordZoneCallback = reference to function (zone: CKRecordZone; error: NSError): pointer; cblock; cdecl;
-  CKDatabaseDeleteRecordZoneWithIDCallback = reference to function (zoneID: CKRecordZoneID; error: NSError): pointer; cblock; cdecl;
-  CKDatabaseFetchSubscriptionWithIDCallback = reference to function (subscription: CKSubscription; error: NSError): pointer; cblock; cdecl;
-  CKDatabaseFetchAllSubscriptionsWithCompletionHandlerCallback = reference to function (subscriptions: NSArray; error: NSError): pointer; cblock; cdecl;
-  CKDatabaseSaveSubscriptionCallback = reference to function (subscription: CKSubscription; error: NSError): pointer; cblock; cdecl;
-  CKDatabaseDeleteSubscriptionWithIDCallback = reference to function (subscriptionID: NSString; error: NSError): pointer; cblock; cdecl;
+  CKDatabaseFetchRecordWithIDCallback = reference to procedure (record_: CKRecord; error: NSError); cblock; cdecl;
+  CKDatabaseSaveRecordCallback = reference to procedure (record_: CKRecord; error: NSError); cblock; cdecl;
+  CKDatabaseDeleteRecordWithIDCallback = reference to procedure (recordID: CKRecordID; error: NSError); cblock; cdecl;
+  CKDatabasePerformQueryCallback = reference to procedure (results: NSArray; error: NSError); cblock; cdecl;
+  CKDatabaseFetchAllRecordZonesWithCompletionHandlerCallback = reference to procedure (zones: NSArray; error: NSError); cblock; cdecl;
+  CKDatabaseFetchRecordZoneWithIDCallback = reference to procedure (zone: CKRecordZone; error: NSError); cblock; cdecl;
+  CKDatabaseSaveRecordZoneCallback = reference to procedure (zone: CKRecordZone; error: NSError); cblock; cdecl;
+  CKDatabaseDeleteRecordZoneWithIDCallback = reference to procedure (zoneID: CKRecordZoneID; error: NSError); cblock; cdecl;
+  CKDatabaseFetchSubscriptionWithIDCallback = reference to procedure (subscription: CKSubscription; error: NSError); cblock; cdecl;
+  CKDatabaseFetchAllSubscriptionsWithCompletionHandlerCallback = reference to procedure (subscriptions: NSArray; error: NSError); cblock; cdecl;
+  CKDatabaseSaveSubscriptionCallback = reference to procedure (subscription: CKSubscription; error: NSError); cblock; cdecl;
+  CKDatabaseDeleteSubscriptionWithIDCallback = reference to procedure (subscriptionID: NSString; error: NSError); cblock; cdecl;
 {$endif}
 
 

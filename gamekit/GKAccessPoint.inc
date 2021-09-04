@@ -9,8 +9,8 @@
 
 {$ifdef CALLBACKS}
 type
-  GKAccessPointTriggerAccessPointWithHandlerCallback = reference to function : pointer; cblock; cdecl;
-  GKAccessPointTriggerAccessPointWithStateCallback = reference to function : pointer; cblock; cdecl;
+  GKAccessPointTriggerAccessPointWithHandlerCallback = reference to procedure; cblock; cdecl;
+  GKAccessPointTriggerAccessPointWithStateCallback = reference to procedure; cblock; cdecl;
 {$endif}
 
 

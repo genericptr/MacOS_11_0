@@ -2,7 +2,7 @@
 
 {$ifdef CALLBACKS}
 type
-  SKMutableTextureModifyPixelDataWithBlockCallback = reference to function (pixelData: pointer; lengthInBytes: size_t): pointer; cblock; cdecl;
+  SKMutableTextureModifyPixelDataWithBlockCallback = reference to procedure (pixelData: pointer; lengthInBytes: size_t); cblock; cdecl;
 {$endif}
 
 

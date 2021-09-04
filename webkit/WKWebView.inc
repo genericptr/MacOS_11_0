@@ -12,18 +12,18 @@
 
 {$ifdef CALLBACKS}
 type
-  WKWebViewEvaluateJavaScriptCallback = reference to function (param1: id; error: NSError): pointer; cblock; cdecl;
-  WKWebViewCallAsyncJavaScriptCallback = reference to function (param1: id; error: NSError): pointer; cblock; cdecl;
-  WKWebViewPauseAllMediaPlaybackCallback = reference to function : pointer; cblock; cdecl;
-  WKWebViewSuspendAllMediaPlaybackCallback = reference to function : pointer; cblock; cdecl;
-  WKWebViewResumeAllMediaPlaybackCallback = reference to function : pointer; cblock; cdecl;
-  WKWebViewRequestMediaPlaybackStateCallback = reference to function (param1: WKMediaPlaybackState): pointer; cblock; cdecl;
-  WKWebViewTakeSnapshotWithConfigurationCallback = reference to function (snapshotImage: UIImagePtr; error: NSError): pointer; cblock; cdecl;
-  WKWebViewCreatePDFWithConfigurationCallback = reference to function (pdfDocumentData: NSData; error: NSError): pointer; cblock; cdecl;
-  WKWebViewCreateWebArchiveDataWithCompletionHandlerCallback = reference to function (param1: NSData; param2: NSError): pointer; cblock; cdecl;
-  WKWebViewFindStringCallback = reference to function (result_: WKFindResult): pointer; cblock; cdecl;
-  WKWebViewStartDownloadUsingRequestCallback = reference to function (param1: WKDownload): pointer; cblock; cdecl;
-  WKWebViewResumeDownloadFromResumeDataCallback = reference to function (param1: WKDownload): pointer; cblock; cdecl;
+  WKWebViewEvaluateJavaScriptCallback = reference to procedure (param1: id; error: NSError); cblock; cdecl;
+  WKWebViewCallAsyncJavaScriptCallback = reference to procedure (param1: id; error: NSError); cblock; cdecl;
+  WKWebViewPauseAllMediaPlaybackCallback = reference to procedure; cblock; cdecl;
+  WKWebViewSuspendAllMediaPlaybackCallback = reference to procedure; cblock; cdecl;
+  WKWebViewResumeAllMediaPlaybackCallback = reference to procedure; cblock; cdecl;
+  WKWebViewRequestMediaPlaybackStateCallback = reference to procedure (param1: WKMediaPlaybackState); cblock; cdecl;
+  WKWebViewTakeSnapshotWithConfigurationCallback = reference to procedure (snapshotImage: UIImagePtr; error: NSError); cblock; cdecl;
+  WKWebViewCreatePDFWithConfigurationCallback = reference to procedure (pdfDocumentData: NSData; error: NSError); cblock; cdecl;
+  WKWebViewCreateWebArchiveDataWithCompletionHandlerCallback = reference to procedure (param1: NSData; param2: NSError); cblock; cdecl;
+  WKWebViewFindStringCallback = reference to procedure (result_: WKFindResult); cblock; cdecl;
+  WKWebViewStartDownloadUsingRequestCallback = reference to procedure (param1: WKDownload); cblock; cdecl;
+  WKWebViewResumeDownloadFromResumeDataCallback = reference to procedure (param1: WKDownload); cblock; cdecl;
 {$endif}
 
 

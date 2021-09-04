@@ -10,7 +10,7 @@ const
 
 {$ifdef TYPES}
 type
-  CHHapticCompletionHandler = reference to function (error: NSError): pointer; cblock; cdecl;
+  CHHapticCompletionHandler = reference to procedure (error: NSError); cblock; cdecl;
   CHHapticEngineFinishedAction = NSInteger;
   CHHapticEngineFinishedActionPtr = ^CHHapticEngineFinishedAction;
 
@@ -32,8 +32,8 @@ const
 
 type
   CHHapticEngineFinishedHandler = reference to function (error: NSErrorPtr): CHHapticEngineFinishedAction; cblock; cdecl;
-  CHHapticEngineResetHandler = reference to function : pointer; cblock; cdecl;
-  CHHapticEngineStoppedHandler = reference to function (stoppedReason: CHHapticEngineStoppedReason): pointer; cblock; cdecl;
+  CHHapticEngineResetHandler = reference to procedure; cblock; cdecl;
+  CHHapticEngineStoppedHandler = reference to procedure (stoppedReason: CHHapticEngineStoppedReason); cblock; cdecl;
 {$endif}
 
 {$ifdef CLASSES}

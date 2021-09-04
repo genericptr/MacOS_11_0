@@ -2,8 +2,8 @@
 
 {$ifdef CALLBACKS}
 type
-  CKDiscoverUserIdentitiesOperationUserIdentityDiscoveredBlockCallback = reference to function (identity: CKUserIdentity; lookupInfo: CKUserIdentityLookupInfo): pointer; cblock; cdecl;
-  CKDiscoverUserIdentitiesOperationDiscoverUserIdentitiesCompletionBlockCallback = reference to function (operationError: NSError): pointer; cblock; cdecl;
+  CKDiscoverUserIdentitiesOperationUserIdentityDiscoveredBlockCallback = reference to procedure (identity: CKUserIdentity; lookupInfo: CKUserIdentityLookupInfo); cblock; cdecl;
+  CKDiscoverUserIdentitiesOperationDiscoverUserIdentitiesCompletionBlockCallback = reference to procedure (operationError: NSError); cblock; cdecl;
 {$endif}
 
 

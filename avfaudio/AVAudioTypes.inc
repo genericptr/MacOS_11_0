@@ -11,7 +11,7 @@ type
   AVAudioPacketCountPtr = ^AVAudioPacketCount;
   AVAudioChannelCount = cuint32;
   AVAudioChannelCountPtr = ^AVAudioChannelCount;
-  AVAudioNodeCompletionHandler = reference to function : pointer; cblock; cdecl;
+  AVAudioNodeCompletionHandler = reference to procedure; cblock; cdecl;
   AVAudioNodeBus = NSUInteger;
   AVAudioNodeBusPtr = ^AVAudioNodeBus;
 

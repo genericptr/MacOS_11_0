@@ -2,8 +2,8 @@
 
 {$ifdef CALLBACKS}
 type
-  NSSetEnumerateObjectsUsingBlockCallback = reference to function (obj: id; stop: objcboolPtr): pointer; cblock; cdecl;
-  NSSetEnumerateObjectsWithOptionsCallback = reference to function (obj: id; stop: objcboolPtr): pointer; cblock; cdecl;
+  NSSetEnumerateObjectsUsingBlockCallback = reference to procedure (obj: id; stop: objcboolPtr); cblock; cdecl;
+  NSSetEnumerateObjectsWithOptionsCallback = reference to procedure (obj: id; stop: objcboolPtr); cblock; cdecl;
   NSSetObjectsPassingTestCallback = reference to function (obj: id; stop: objcboolPtr): objcbool; cblock; cdecl;
   NSSetObjectsWithOptionsCallback = reference to function (obj: id; stop: objcboolPtr): objcbool; cblock; cdecl;
 {$endif}

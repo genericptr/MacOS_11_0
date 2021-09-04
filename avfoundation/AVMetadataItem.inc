@@ -2,8 +2,8 @@
 
 {$ifdef CALLBACKS}
 type
-  AVMetadataItemLoadValuesAsynchronouslyForKeysCallback = reference to function : pointer; cblock; cdecl;
-  AVMetadataItemMetadataItemWithPropertiesOfMetadataItemCallback = reference to function (valueRequest: AVMetadataItemValueRequest): pointer; cblock; cdecl;
+  AVMetadataItemLoadValuesAsynchronouslyForKeysCallback = reference to procedure; cblock; cdecl;
+  AVMetadataItemMetadataItemWithPropertiesOfMetadataItemCallback = reference to procedure (valueRequest: AVMetadataItemValueRequest); cblock; cdecl;
 {$endif}
 
 

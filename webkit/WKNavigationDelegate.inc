@@ -2,7 +2,7 @@
 
 {$ifdef CALLBACKS}
 type
-  WKNavigationDelegateWebViewCallback = reference to function (param1: WKNavigationActionPolicy): pointer; cblock; cdecl;
+  WKNavigationDelegateWebViewCallback = reference to procedure (param1: WKNavigationActionPolicy); cblock; cdecl;
 {$endif}
 
 

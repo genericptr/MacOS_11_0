@@ -17,18 +17,18 @@ const
 
 {$ifdef CALLBACKS}
 type
-  GKMatchmakerRecipientResponseHandlerCallback = reference to function (player: GKPlayer; response: GKInviteRecipientResponse): pointer; cblock; cdecl;
-  GKMatchmakerInviteeResponseHandlerCallback = reference to function (playerID: NSString; response: GKInviteeResponse): pointer; cblock; cdecl;
-  GKMatchmakerMatchForInviteCallback = reference to function (match: GKMatch; error: NSError): pointer; cblock; cdecl;
-  GKMatchmakerFindMatchForRequestCallback = reference to function (match: GKMatch; error: NSError): pointer; cblock; cdecl;
-  GKMatchmakerFindPlayersForHostedRequestCallback = reference to function (players: NSArray; error: NSError): pointer; cblock; cdecl;
-  GKMatchmakerAddPlayersToMatchCallback = reference to function (error: NSError): pointer; cblock; cdecl;
-  GKMatchmakerQueryPlayerGroupActivityCallback = reference to function (activity: NSInteger; error: NSError): pointer; cblock; cdecl;
-  GKMatchmakerQueryActivityWithCompletionHandlerCallback = reference to function (activity: NSInteger; error: NSError): pointer; cblock; cdecl;
-  GKMatchmakerStartBrowsingForNearbyPlayersWithHandlerCallback = reference to function (player: GKPlayer; reachable: objcbool): pointer; cblock; cdecl;
-  GKMatchmakerInviteHandlerCallback = reference to function (acceptedInvite: GKInvite; playerIDsToInvite: NSArray): pointer; cblock; cdecl;
-  GKMatchmakerStartBrowsingForNearbyPlayersWithReachableHandlerCallback = reference to function (playerID: NSString; reachable: objcbool): pointer; cblock; cdecl;
-  GKMatchmakerFindPlayersForHostedMatchRequestCallback = reference to function (playerIDs: NSArray; error: NSError): pointer; cblock; cdecl;
+  GKMatchmakerRecipientResponseHandlerCallback = reference to procedure (player: GKPlayer; response: GKInviteRecipientResponse); cblock; cdecl;
+  GKMatchmakerInviteeResponseHandlerCallback = reference to procedure (playerID: NSString; response: GKInviteeResponse); cblock; cdecl;
+  GKMatchmakerMatchForInviteCallback = reference to procedure (match: GKMatch; error: NSError); cblock; cdecl;
+  GKMatchmakerFindMatchForRequestCallback = reference to procedure (match: GKMatch; error: NSError); cblock; cdecl;
+  GKMatchmakerFindPlayersForHostedRequestCallback = reference to procedure (players: NSArray; error: NSError); cblock; cdecl;
+  GKMatchmakerAddPlayersToMatchCallback = reference to procedure (error: NSError); cblock; cdecl;
+  GKMatchmakerQueryPlayerGroupActivityCallback = reference to procedure (activity: NSInteger; error: NSError); cblock; cdecl;
+  GKMatchmakerQueryActivityWithCompletionHandlerCallback = reference to procedure (activity: NSInteger; error: NSError); cblock; cdecl;
+  GKMatchmakerStartBrowsingForNearbyPlayersWithHandlerCallback = reference to procedure (player: GKPlayer; reachable: objcbool); cblock; cdecl;
+  GKMatchmakerInviteHandlerCallback = reference to procedure (acceptedInvite: GKInvite; playerIDsToInvite: NSArray); cblock; cdecl;
+  GKMatchmakerStartBrowsingForNearbyPlayersWithReachableHandlerCallback = reference to procedure (playerID: NSString; reachable: objcbool); cblock; cdecl;
+  GKMatchmakerFindPlayersForHostedMatchRequestCallback = reference to procedure (playerIDs: NSArray; error: NSError); cblock; cdecl;
 {$endif}
 
 

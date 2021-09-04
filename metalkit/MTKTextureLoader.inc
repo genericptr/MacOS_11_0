@@ -61,8 +61,8 @@ var
 
 {$ifdef TYPES}
 type
-  MTKTextureLoaderCallback = reference to function (texture: id; error: NSError): pointer; cblock; cdecl;
-  MTKTextureLoaderArrayCallback = reference to function (textures: NSArray; error: NSError): pointer; cblock; cdecl;
+  MTKTextureLoaderCallback = reference to procedure (texture: id; error: NSError); cblock; cdecl;
+  MTKTextureLoaderArrayCallback = reference to procedure (textures: NSArray; error: NSError); cblock; cdecl;
 {$endif}
 
 {$ifdef CLASSES}

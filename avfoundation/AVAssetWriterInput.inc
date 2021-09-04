@@ -12,7 +12,7 @@ type
 
 {$ifdef CALLBACKS}
 type
-  AVAssetWriterInputRequestMediaDataWhenReadyOnQueueCallback = reference to function : pointer; cblock; cdecl;
+  AVAssetWriterInputRequestMediaDataWhenReadyOnQueueCallback = reference to procedure; cblock; cdecl;
 {$endif}
 
 

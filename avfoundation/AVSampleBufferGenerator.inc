@@ -2,7 +2,7 @@
 
 {$ifdef CALLBACKS}
 type
-  AVSampleBufferGeneratorNotifyOfDataReadyForSampleBufferCallback = reference to function (dataReady: objcbool; error: NSError): pointer; cblock; cdecl;
+  AVSampleBufferGeneratorNotifyOfDataReadyForSampleBufferCallback = reference to procedure (dataReady: objcbool; error: NSError); cblock; cdecl;
 {$endif}
 
 

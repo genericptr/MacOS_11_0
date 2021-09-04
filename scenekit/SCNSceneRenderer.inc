@@ -9,9 +9,9 @@
 
 {$ifdef CALLBACKS}
 type
-  SCNSceneRendererPresentSceneCallback = reference to function : pointer; cblock; cdecl;
+  SCNSceneRendererPresentSceneCallback = reference to procedure; cblock; cdecl;
   SCNSceneRendererPrepareObjectCallback = reference to function : objcbool; cblock; cdecl;
-  SCNSceneRendererPrepareObjectsCallback = reference to function (success: objcbool): pointer; cblock; cdecl;
+  SCNSceneRendererPrepareObjectsCallback = reference to procedure (success: objcbool); cblock; cdecl;
 {$endif}
 
 

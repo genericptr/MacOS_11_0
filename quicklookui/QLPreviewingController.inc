@@ -2,8 +2,8 @@
 
 {$ifdef CALLBACKS}
 type
-  QLPreviewingControllerPreparePreviewOfSearchableItemWithIdentifierCallback = reference to function (param1: NSError): pointer; cblock; cdecl;
-  QLPreviewingControllerPreparePreviewOfFileAtURLCallback = reference to function (param1: NSError): pointer; cblock; cdecl;
+  QLPreviewingControllerPreparePreviewOfSearchableItemWithIdentifierCallback = reference to procedure (param1: NSError); cblock; cdecl;
+  QLPreviewingControllerPreparePreviewOfFileAtURLCallback = reference to procedure (param1: NSError); cblock; cdecl;
 {$endif}
 
 
@@ -14,7 +14,7 @@ type
 
 {$ifdef TYPES}
 type
-  QLPreviewItemLoadingBlock = reference to function (error: NSError): pointer; cblock; cdecl { unavailable in ios, watchos, tvos };
+  QLPreviewItemLoadingBlock = reference to procedure (error: NSError); cblock; cdecl { unavailable in ios, watchos, tvos };
 {$endif}
 
 {$ifdef PROTOCOLS}

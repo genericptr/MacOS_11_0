@@ -2,8 +2,8 @@
 
 {$ifdef CALLBACKS}
 type
-  NSThreadDetachNewThreadWithBlockCallback = reference to function : pointer; cblock; cdecl;
-  NSThreadInitWithBlockCallback = reference to function : pointer; cblock; cdecl;
+  NSThreadDetachNewThreadWithBlockCallback = reference to procedure; cblock; cdecl;
+  NSThreadInitWithBlockCallback = reference to procedure; cblock; cdecl;
 {$endif}
 
 

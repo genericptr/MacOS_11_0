@@ -2,7 +2,7 @@
 
 {$ifdef CALLBACKS}
 type
-  WKDownloadDelegateDownloadCallback = reference to function (destination: NSURL): pointer; cblock; cdecl;
+  WKDownloadDelegateDownloadCallback = reference to procedure (destination: NSURL); cblock; cdecl;
 {$endif}
 
 

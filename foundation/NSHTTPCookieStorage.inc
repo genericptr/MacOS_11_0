@@ -2,7 +2,7 @@
 
 {$ifdef CALLBACKS}
 type
-  NSHTTPCookieStorageGetCookiesForTaskCallback = reference to function (cookies: NSArray): pointer; cblock; cdecl;
+  NSHTTPCookieStorageGetCookiesForTaskCallback = reference to procedure (cookies: NSArray); cblock; cdecl;
 {$endif}
 
 

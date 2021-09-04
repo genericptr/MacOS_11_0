@@ -7,7 +7,7 @@ type
 
 {$ifdef TYPES}
 type
-  CLGeocodeCompletionHandler = reference to function (placemarks: NSArray; error: NSError): pointer; cblock; cdecl;
+  CLGeocodeCompletionHandler = reference to procedure (placemarks: NSArray; error: NSError); cblock; cdecl;
 {$endif}
 
 {$ifdef CLASSES}

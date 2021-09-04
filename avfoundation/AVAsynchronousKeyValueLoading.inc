@@ -2,7 +2,7 @@
 
 {$ifdef CALLBACKS}
 type
-  AVAsynchronousKeyValueLoadingLoadValuesAsynchronouslyForKeysCallback = reference to function : pointer; cblock; cdecl;
+  AVAsynchronousKeyValueLoadingLoadValuesAsynchronouslyForKeysCallback = reference to procedure; cblock; cdecl;
 {$endif}
 
 

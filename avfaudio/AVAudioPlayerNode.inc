@@ -25,7 +25,7 @@ const
   AVAudioPlayerNodeCompletionDataPlayedBack = 2;
 
 type
-  AVAudioPlayerNodeCompletionHandler = reference to function (callbackType: AVAudioPlayerNodeCompletionCallbackType): pointer; cblock; cdecl { available in macos , ios , watchos , tvos  };
+  AVAudioPlayerNodeCompletionHandler = reference to procedure (callbackType: AVAudioPlayerNodeCompletionCallbackType); cblock; cdecl { available in macos , ios , watchos , tvos  };
 {$endif}
 
 {$ifdef CLASSES}

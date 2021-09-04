@@ -17,9 +17,9 @@ const
 
 {$ifdef CALLBACKS}
 type
-  NSWindowBeginSheetCallback = reference to function (returnCode: NSModalResponse): pointer; cblock; cdecl;
-  NSWindowBeginCriticalSheetCallback = reference to function (returnCode: NSModalResponse): pointer; cblock; cdecl;
-  NSWindowTrackEventsMatchingMaskCallback = reference to function (event: NSEvent; stop: objcboolPtr): pointer; cblock; cdecl;
+  NSWindowBeginSheetCallback = reference to procedure (returnCode: NSModalResponse); cblock; cdecl;
+  NSWindowBeginCriticalSheetCallback = reference to procedure (returnCode: NSModalResponse); cblock; cdecl;
+  NSWindowTrackEventsMatchingMaskCallback = reference to procedure (event: NSEvent; stop: objcboolPtr); cblock; cdecl;
 {$endif}
 
 

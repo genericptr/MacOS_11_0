@@ -8,7 +8,7 @@
 
 {$ifdef CALLBACKS}
 type
-  UNNotificationContentExtensionDidReceiveNotificationResponseCallback = reference to function (option: UNNotificationContentExtensionResponseOption): pointer; cblock; cdecl;
+  UNNotificationContentExtensionDidReceiveNotificationResponseCallback = reference to procedure (option: UNNotificationContentExtensionResponseOption); cblock; cdecl;
 {$endif}
 
 

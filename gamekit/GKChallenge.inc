@@ -32,12 +32,12 @@
 
 {$ifdef CALLBACKS}
 type
-  GKChallengeLoadReceivedChallengesWithCompletionHandlerCallback = reference to function (challenges: NSArray; error: NSError): pointer; cblock; cdecl;
-  GKChallengeReportScoresCallback = reference to function (error: NSError): pointer; cblock; cdecl;
-  GKChallengeReportLeaderboardScoresCallback = reference to function (error: NSError): pointer; cblock; cdecl;
-  GKChallengeSelectChallengeablePlayersCallback = reference to function (challengeablePlayers: NSArray; error: NSError): pointer; cblock; cdecl;
-  GKChallengeReportAchievementsCallback = reference to function (error: NSError): pointer; cblock; cdecl;
-  GKChallengeSelectChallengeablePlayerIDsCallback = reference to function (challengeablePlayerIDs: NSArray; error: NSError): pointer; cblock; cdecl;
+  GKChallengeLoadReceivedChallengesWithCompletionHandlerCallback = reference to procedure (challenges: NSArray; error: NSError); cblock; cdecl;
+  GKChallengeReportScoresCallback = reference to procedure (error: NSError); cblock; cdecl;
+  GKChallengeReportLeaderboardScoresCallback = reference to procedure (error: NSError); cblock; cdecl;
+  GKChallengeSelectChallengeablePlayersCallback = reference to procedure (challengeablePlayers: NSArray; error: NSError); cblock; cdecl;
+  GKChallengeReportAchievementsCallback = reference to procedure (error: NSError); cblock; cdecl;
+  GKChallengeSelectChallengeablePlayerIDsCallback = reference to procedure (challengeablePlayerIDs: NSArray; error: NSError); cblock; cdecl;
 {$endif}
 
 
@@ -133,13 +133,13 @@ type
 {$if defined(TARGET_OS_IPHONE)}
 {$ifdef TYPES}
 type
-  GKChallengeComposeCompletionBlock = reference to function (composeController: UIViewController; didIssueChallenge: objcbool; sentPlayerIDs: NSArray): pointer; cblock; cdecl;
+  GKChallengeComposeCompletionBlock = reference to procedure (composeController: UIViewController; didIssueChallenge: objcbool; sentPlayerIDs: NSArray); cblock; cdecl;
 {$endif}
 
 {$else}
 {$ifdef TYPES}
 type
-  GKChallengeComposeCompletionBlock = reference to function (composeController: NSViewController; didIssueChallenge: objcbool; sentPlayerIDs: NSArray): pointer; cblock; cdecl;
+  GKChallengeComposeCompletionBlock = reference to procedure (composeController: NSViewController; didIssueChallenge: objcbool; sentPlayerIDs: NSArray); cblock; cdecl;
 {$endif}
 
 {$endif}

@@ -2,7 +2,7 @@
 
 {$ifdef CALLBACKS}
 type
-  NSUserInterfaceItemSearchingSearchForItemsWithSearchStringCallback = reference to function (items: NSArray): pointer; cblock; cdecl;
+  NSUserInterfaceItemSearchingSearchForItemsWithSearchStringCallback = reference to procedure (items: NSArray); cblock; cdecl;
 {$endif}
 
 

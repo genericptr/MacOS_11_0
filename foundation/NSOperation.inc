@@ -19,11 +19,11 @@ const
 
 {$ifdef CALLBACKS}
 type
-  NSOperationCompletionBlockCallback = reference to function : pointer; cblock; cdecl;
-  NSOperationBlockOperationWithBlockCallback = reference to function : pointer; cblock; cdecl;
-  NSOperationAddExecutionBlockCallback = reference to function : pointer; cblock; cdecl;
-  NSOperationAddOperationWithBlockCallback = reference to function : pointer; cblock; cdecl;
-  NSOperationAddBarrierBlockCallback = reference to function : pointer; cblock; cdecl;
+  NSOperationCompletionBlockCallback = reference to procedure; cblock; cdecl;
+  NSOperationBlockOperationWithBlockCallback = reference to procedure; cblock; cdecl;
+  NSOperationAddExecutionBlockCallback = reference to procedure; cblock; cdecl;
+  NSOperationAddOperationWithBlockCallback = reference to procedure; cblock; cdecl;
+  NSOperationAddBarrierBlockCallback = reference to procedure; cblock; cdecl;
 {$endif}
 
 

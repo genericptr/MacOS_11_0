@@ -2,8 +2,8 @@
 
 {$ifdef CALLBACKS}
 type
-  CNContactStoreRequestAccessForEntityTypeCallback = reference to function (granted: objcbool; error: NSError): pointer; cblock; cdecl;
-  CNContactStoreEnumerateContactsWithFetchRequestCallback = reference to function (contact: CNContact; stop: objcboolPtr): pointer; cblock; cdecl;
+  CNContactStoreRequestAccessForEntityTypeCallback = reference to procedure (granted: objcbool; error: NSError); cblock; cdecl;
+  CNContactStoreEnumerateContactsWithFetchRequestCallback = reference to procedure (contact: CNContact; stop: objcboolPtr); cblock; cdecl;
 {$endif}
 
 

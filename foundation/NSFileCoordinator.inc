@@ -2,10 +2,10 @@
 
 {$ifdef CALLBACKS}
 type
-  NSFileCoordinatorCoordinateAccessWithIntentsCallback = reference to function (error: NSError): pointer; cblock; cdecl;
-  NSFileCoordinatorCoordinateReadingItemAtURLCallback = reference to function (newURL: NSURL): pointer; cblock; cdecl;
-  NSFileCoordinatorCoordinateWritingItemAtURLCallback = reference to function (newURL: NSURL): pointer; cblock; cdecl;
-  NSFileCoordinatorPrepareForReadingItemsAtURLsCallback = reference to function (param1: OpaqueCBlock): pointer; cblock; cdecl;
+  NSFileCoordinatorCoordinateAccessWithIntentsCallback = reference to procedure (error: NSError); cblock; cdecl;
+  NSFileCoordinatorCoordinateReadingItemAtURLCallback = reference to procedure (newURL: NSURL); cblock; cdecl;
+  NSFileCoordinatorCoordinateWritingItemAtURLCallback = reference to procedure (newURL: NSURL); cblock; cdecl;
+  NSFileCoordinatorPrepareForReadingItemsAtURLsCallback = reference to procedure (param1: OpaqueCBlock); cblock; cdecl;
 {$endif}
 
 

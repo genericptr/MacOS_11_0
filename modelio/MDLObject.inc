@@ -2,7 +2,7 @@
 
 {$ifdef CALLBACKS}
 type
-  MDLObjectEnumerateChildObjectsOfClassCallback = reference to function (object_: MDLObject; stop: objcboolPtr): pointer; cblock; cdecl;
+  MDLObjectEnumerateChildObjectsOfClassCallback = reference to procedure (object_: MDLObject; stop: objcboolPtr); cblock; cdecl;
 {$endif}
 
 

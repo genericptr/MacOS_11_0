@@ -2,8 +2,8 @@
 
 {$ifdef CALLBACKS}
 type
-  NSManagedObjectContextPerformBlockCallback = reference to function : pointer; cblock; cdecl;
-  NSManagedObjectContextPerformBlockAndWaitCallback = reference to function : pointer; cblock; cdecl;
+  NSManagedObjectContextPerformBlockCallback = reference to procedure; cblock; cdecl;
+  NSManagedObjectContextPerformBlockAndWaitCallback = reference to procedure; cblock; cdecl;
 {$endif}
 
 

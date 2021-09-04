@@ -17,8 +17,8 @@ const
 
 {$ifdef CALLBACKS}
 type
-  GKPlayerLoadPhotoForSizeCallback = reference to function (photo: UIImage; error: NSError): pointer; cblock; cdecl;
-  GKPlayerLoadPlayersForIdentifiersCallback = reference to function (players: NSArray; error: NSError): pointer; cblock; cdecl;
+  GKPlayerLoadPhotoForSizeCallback = reference to procedure (photo: UIImage; error: NSError); cblock; cdecl;
+  GKPlayerLoadPlayersForIdentifiersCallback = reference to procedure (players: NSArray; error: NSError); cblock; cdecl;
 {$endif}
 
 

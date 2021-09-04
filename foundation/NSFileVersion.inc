@@ -2,7 +2,7 @@
 
 {$ifdef CALLBACKS}
 type
-  NSFileVersionGetNonlocalVersionsOfItemAtURLCallback = reference to function (nonlocalFileVersions: NSArray; error: NSError): pointer; cblock; cdecl;
+  NSFileVersionGetNonlocalVersionsOfItemAtURLCallback = reference to procedure (nonlocalFileVersions: NSArray; error: NSError); cblock; cdecl;
 {$endif}
 
 

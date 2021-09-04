@@ -16,8 +16,8 @@ const
 
 {$ifdef CALLBACKS}
 type
-  AVPlayerItemSeekToTimeCallback = reference to function (finished: objcbool): pointer; cblock; cdecl;
-  AVPlayerItemSeekToDateCallback = reference to function (finished: objcbool): pointer; cblock; cdecl;
+  AVPlayerItemSeekToTimeCallback = reference to procedure (finished: objcbool); cblock; cdecl;
+  AVPlayerItemSeekToDateCallback = reference to procedure (finished: objcbool); cblock; cdecl;
 {$endif}
 
 

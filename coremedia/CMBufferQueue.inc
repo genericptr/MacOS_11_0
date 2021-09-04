@@ -133,7 +133,7 @@ type
 {$if defined(__BLOCKS__)}
 {$ifdef TYPES}
 type
-  CMBufferQueueTriggerHandler = reference to function (triggerToken: CMBufferQueueTriggerToken): pointer; cblock; cdecl { available in macos , ios , tvos , watchos  };
+  CMBufferQueueTriggerHandler = reference to procedure (triggerToken: CMBufferQueueTriggerToken); cblock; cdecl { available in macos , ios , tvos , watchos  };
 {$endif}
 
 {$endif}

@@ -2,7 +2,7 @@
 
 {$ifdef CALLBACKS}
 type
-  MDLMeshBufferInitWithBytesCallback = reference to function : pointer; cblock; cdecl;
+  MDLMeshBufferInitWithBytesCallback = reference to procedure; cblock; cdecl;
 {$endif}
 
 

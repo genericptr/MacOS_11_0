@@ -2,7 +2,7 @@
 
 {$ifdef CALLBACKS}
 type
-  NSCalendarEnumerateDatesStartingAfterDateCallback = reference to function (date: NSDate; exactMatch: objcbool; stop: objcboolPtr): pointer; cblock; cdecl;
+  NSCalendarEnumerateDatesStartingAfterDateCallback = reference to procedure (date: NSDate; exactMatch: objcbool; stop: objcboolPtr); cblock; cdecl;
 {$endif}
 
 

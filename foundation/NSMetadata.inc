@@ -2,8 +2,8 @@
 
 {$ifdef CALLBACKS}
 type
-  NSMetadataEnumerateResultsUsingBlockCallback = reference to function (result_: id; idx: NSUInteger; stop: objcboolPtr): pointer; cblock; cdecl;
-  NSMetadataEnumerateResultsWithOptionsCallback = reference to function (result_: id; idx: NSUInteger; stop: objcboolPtr): pointer; cblock; cdecl;
+  NSMetadataEnumerateResultsUsingBlockCallback = reference to procedure (result_: id; idx: NSUInteger; stop: objcboolPtr); cblock; cdecl;
+  NSMetadataEnumerateResultsWithOptionsCallback = reference to procedure (result_: id; idx: NSUInteger; stop: objcboolPtr); cblock; cdecl;
 {$endif}
 
 

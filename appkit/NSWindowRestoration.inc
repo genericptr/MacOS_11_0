@@ -2,8 +2,8 @@
 
 {$ifdef CALLBACKS}
 type
-  NSWindowRestorationRestoreWindowWithIdentifierCallback = reference to function (param1: NSWindow; param2: NSError): pointer; cblock; cdecl;
-  NSWindowRestorationRestoreDocumentWindowWithIdentifierCallback = reference to function (param1: NSWindow; param2: NSError): pointer; cblock; cdecl;
+  NSWindowRestorationRestoreWindowWithIdentifierCallback = reference to procedure (param1: NSWindow; param2: NSError); cblock; cdecl;
+  NSWindowRestorationRestoreDocumentWindowWithIdentifierCallback = reference to procedure (param1: NSWindow; param2: NSError); cblock; cdecl;
 {$endif}
 
 

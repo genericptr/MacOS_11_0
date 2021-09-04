@@ -2,7 +2,7 @@
 
 {$ifdef CALLBACKS}
 type
-  NSScrubberPerformSequentialBatchUpdatesCallback = reference to function : pointer; cblock; cdecl;
+  NSScrubberPerformSequentialBatchUpdatesCallback = reference to procedure; cblock; cdecl;
 {$endif}
 
 

@@ -2,7 +2,7 @@
 
 {$ifdef CALLBACKS}
 type
-  MLUpdateProgressHandlersInitForEventsCallback = reference to function (context: MLUpdateContext): pointer; cblock; cdecl;
+  MLUpdateProgressHandlersInitForEventsCallback = reference to procedure (context: MLUpdateContext); cblock; cdecl;
 {$endif}
 
 

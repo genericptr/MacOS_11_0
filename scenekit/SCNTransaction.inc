@@ -2,7 +2,7 @@
 
 {$ifdef CALLBACKS}
 type
-  SCNTransactionCompletionBlockCallback = reference to function : pointer; cblock; cdecl;
+  SCNTransactionCompletionBlockCallback = reference to procedure; cblock; cdecl;
 {$endif}
 
 

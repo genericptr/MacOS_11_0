@@ -2,9 +2,9 @@
 
 {$ifdef CALLBACKS}
 type
-  SCNActionRunActionCallback = reference to function : pointer; cblock; cdecl;
-  SCNActionRunBlockCallback = reference to function (node: SCNNode): pointer; cblock; cdecl;
-  SCNActionCustomActionWithDurationCallback = reference to function (node: SCNNode; elapsedTime: CGFloat): pointer; cblock; cdecl;
+  SCNActionRunActionCallback = reference to procedure; cblock; cdecl;
+  SCNActionRunBlockCallback = reference to procedure (node: SCNNode); cblock; cdecl;
+  SCNActionCustomActionWithDurationCallback = reference to procedure (node: SCNNode; elapsedTime: CGFloat); cblock; cdecl;
 {$endif}
 
 

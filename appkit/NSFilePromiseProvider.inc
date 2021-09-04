@@ -2,7 +2,7 @@
 
 {$ifdef CALLBACKS}
 type
-  NSFilePromiseProviderFilePromiseProviderCallback = reference to function (errorOrNil: NSError): pointer; cblock; cdecl;
+  NSFilePromiseProviderFilePromiseProviderCallback = reference to procedure (errorOrNil: NSError); cblock; cdecl;
 {$endif}
 
 

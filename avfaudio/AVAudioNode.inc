@@ -21,7 +21,7 @@ const
 
 {$ifdef TYPES}
 type
-  AVAudioNodeTapBlock = reference to function (buffer: AVAudioPCMBuffer; when: AVAudioTime): pointer; cblock; cdecl;
+  AVAudioNodeTapBlock = reference to procedure (buffer: AVAudioPCMBuffer; when: AVAudioTime); cblock; cdecl;
 {$endif}
 
 {$ifdef CLASSES}

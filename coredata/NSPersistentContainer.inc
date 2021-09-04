@@ -2,8 +2,8 @@
 
 {$ifdef CALLBACKS}
 type
-  NSPersistentContainerLoadPersistentStoresWithCompletionHandlerCallback = reference to function (param1: NSPersistentStoreDescription; param2: NSError): pointer; cblock; cdecl;
-  NSPersistentContainerPerformBackgroundTaskCallback = reference to function (param1: NSManagedObjectContext): pointer; cblock; cdecl;
+  NSPersistentContainerLoadPersistentStoresWithCompletionHandlerCallback = reference to procedure (param1: NSPersistentStoreDescription; param2: NSError); cblock; cdecl;
+  NSPersistentContainerPerformBackgroundTaskCallback = reference to procedure (param1: NSManagedObjectContext); cblock; cdecl;
 {$endif}
 
 
