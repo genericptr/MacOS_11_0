@@ -1,4 +1,9 @@
 
+{$include SIMDTypes.inc}
+
+type
+  UTTypePtr = OpaquePointer;
+
 { ImageIO }
 
 type

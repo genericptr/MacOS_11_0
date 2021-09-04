@@ -18,7 +18,7 @@ type
   WKWebViewSuspendAllMediaPlaybackCallback = reference to procedure; cblock; cdecl;
   WKWebViewResumeAllMediaPlaybackCallback = reference to procedure; cblock; cdecl;
   WKWebViewRequestMediaPlaybackStateCallback = reference to procedure (param1: WKMediaPlaybackState); cblock; cdecl;
-  WKWebViewTakeSnapshotWithConfigurationCallback = reference to procedure (snapshotImage: UIImagePtr; error: NSError); cblock; cdecl;
+  WKWebViewTakeSnapshotWithConfigurationCallback = reference to procedure (snapshotImage: pointer {UIImage}; error: NSError); cblock; cdecl;
   WKWebViewCreatePDFWithConfigurationCallback = reference to procedure (pdfDocumentData: NSData; error: NSError); cblock; cdecl;
   WKWebViewCreateWebArchiveDataWithCompletionHandlerCallback = reference to procedure (param1: NSData; param2: NSError); cblock; cdecl;
   WKWebViewFindStringCallback = reference to procedure (result_: WKFindResult); cblock; cdecl;

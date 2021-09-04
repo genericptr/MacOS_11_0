@@ -159,7 +159,28 @@ type
 {$endif}
 
 {$endif}
+
 {$ifdef TYPES}
+const
+  NSIntegerMax = LONG_MAX;
+  NSIntegerMin = LONG_MIN;
+  NSUIntegerMax = ULONG_MAX;
+
+const
+  NSEnumerationConcurrent = 1 shl 0;
+  NSEnumerationReverse = 1 shl 1;
+
+const
+  NSSortConcurrent = 1 shl 0;
+  NSSortStable = 1 shl 4;
+
+const
+  NSQualityOfServiceUserInteractive = $21;
+  NSQualityOfServiceUserInitiated = $19;
+  NSQualityOfServiceUtility = $11;
+  NSQualityOfServiceBackground = $09;
+  NSQualityOfServiceDefault = -1;
+
 type
   NSEnumerationOptions = NSUInteger;
   NSEnumerationOptionsPtr = ^NSEnumerationOptions;

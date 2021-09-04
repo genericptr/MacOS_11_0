@@ -1,0 +1,3 @@
+
+type
+  GLfloatPtr = pointer;

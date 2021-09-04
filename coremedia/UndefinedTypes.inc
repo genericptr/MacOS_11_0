@@ -1,4 +1,5 @@
 
-// dispatch/source.h
 type
-  dispatch_source_t = pointer;
+  OSStatusPtr = ^OSStatus;
+  AudioFormatListItem = OpaqueRecord;
+  AudioFormatListItemPtr = ^AudioFormatListItem;
