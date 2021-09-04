@@ -61,7 +61,7 @@ type
 
 {$ifdef TYPES}
 type
-  NSUncaughtExceptionHandler = function (exception: NSException): pointer; cdecl;
+  NSUncaughtExceptionHandler = procedure (exception: NSException); cdecl;
 {$endif}
 
 {$ifdef FUNCTIONS}

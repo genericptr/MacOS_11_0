@@ -85,7 +85,7 @@ function CMSampleBufferInvalidate(sbuf: CMSampleBufferRef): OSStatus; cdecl; ext
 
 {$ifdef TYPES}
 type
-  CMSampleBufferInvalidateCallback = function (sbuf: CMSampleBufferRef; invalidateRefCon: cuint64): pointer; cdecl { available in macos , ios , tvos , watchos  };
+  CMSampleBufferInvalidateCallback = procedure (sbuf: CMSampleBufferRef; invalidateRefCon: cuint64); cdecl { available in macos , ios , tvos , watchos  };
 {$endif}
 
 {$ifdef FUNCTIONS}

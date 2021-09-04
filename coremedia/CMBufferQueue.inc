@@ -127,7 +127,7 @@ function CMBufferQueueGetTotalSize(queue: CMBufferQueueRef): size_t; cdecl; exte
 type
   CMBufferQueueTriggerToken = OpaqueType { available in macos , ios , tvos , watchos  };
   CMBufferQueueTriggerTokenPtr = ^CMBufferQueueTriggerToken { available in macos , ios , tvos , watchos  };
-  CMBufferQueueTriggerCallback = function (triggerRefcon: pointer; triggerToken: CMBufferQueueTriggerToken): pointer; cdecl { available in macos , ios , tvos , watchos  };
+  CMBufferQueueTriggerCallback = procedure (triggerRefcon: pointer; triggerToken: CMBufferQueueTriggerToken); cdecl { available in macos , ios , tvos , watchos  };
 {$endif}
 
 {$if defined(__BLOCKS__)}

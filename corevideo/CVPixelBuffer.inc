@@ -104,7 +104,7 @@ function CVPixelBufferCreate(allocator: CFAllocatorRef; width: size_t; height: s
 
 {$ifdef TYPES}
 type
-  CVPixelBufferReleaseBytesCallback = function (releaseRefCon: pointer; baseAddress: pointer): pointer; cdecl;
+  CVPixelBufferReleaseBytesCallback = procedure (releaseRefCon: pointer; baseAddress: pointer); cdecl;
 {$endif}
 
 {$ifdef FUNCTIONS}
@@ -113,7 +113,7 @@ function CVPixelBufferCreateWithBytes(allocator: CFAllocatorRef; width: size_t; 
 
 {$ifdef TYPES}
 type
-  CVPixelBufferReleasePlanarBytesCallback = function (releaseRefCon: pointer; dataPtr: pointer; dataSize: size_t; numberOfPlanes: size_t; planeAddresses: pointer { variable size array of pointer }): pointer; cdecl;
+  CVPixelBufferReleasePlanarBytesCallback = procedure (releaseRefCon: pointer; dataPtr: pointer; dataSize: size_t; numberOfPlanes: size_t; planeAddresses: pointer { variable size array of pointer }); cdecl;
 {$endif}
 
 {$ifdef FUNCTIONS}

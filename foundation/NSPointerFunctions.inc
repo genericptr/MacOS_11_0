@@ -7,8 +7,8 @@ type
   NSPointerFunctionsIsEqualFunctionCallback = function (item1: pointer; item2: pointer; size: NSPointerFunctionsSizeCallback): objcbool; cdecl;
   NSPointerFunctionsSizeFunctionCallback = function (item: pointer): NSUInteger; cdecl;
   NSPointerFunctionsDescriptionFunctionCallback = function (item: pointer): NSString; cdecl;
-  NSPointerFunctionsRelinquishFunctionCallback = function (item: pointer; size: NSPointerFunctionsSizeCallback): pointer; cdecl;
-  NSPointerFunctionsAcquireFunctionCallback = function (size: NSPointerFunctionsSizeCallback; shouldCopy: objcbool): pointer; cdecl;
+  NSPointerFunctionsRelinquishFunctionCallback = procedure (item: pointer; size: NSPointerFunctionsSizeCallback); cdecl;
+  NSPointerFunctionsAcquireFunctionCallback = procedure (size: NSPointerFunctionsSizeCallback; shouldCopy: objcbool); cdecl;
 {$endif}
 
 
