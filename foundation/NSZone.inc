@@ -1,8 +1,8 @@
 { Parsed from Foundation.framework /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSZone.h }
 {$ifdef TYPES}
-type
-  NSZone = OpaqueType;
-  NSZonePtr = ^NSZone;
+//type
+//  NSZone = OpaqueType;
+//  NSZonePtr = ^NSZone;
 {$endif}
 
 {$ifdef FUNCTIONS}
