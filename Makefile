@@ -5,6 +5,7 @@ OPTS=-vbr -dMACOSALL -FU${OUTPUT}
 all:
 	mkdir -p ${OUTPUT}
 
+	${FPC} AddressBook.pas ${OPTS}
 	${FPC} UserNotifications.pas ${OPTS}
 	${FPC} UserNotificationsUI.pas ${OPTS}
 	${FPC} Contacts.pas ${OPTS}
