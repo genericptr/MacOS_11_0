@@ -50,8 +50,8 @@ type
     class function port: NSPort; message 'port';
     procedure invalidate; message 'invalidate';
     function isValid: objcbool; message 'isValid';
-    procedure setDelegate (anObject: id); message 'setDelegate:';
-    function delegate: id; message 'delegate';
+    procedure setDelegate (anObject: NSPortDelegateProtocol); message 'setDelegate:';
+    function delegate: NSPortDelegateProtocol; message 'delegate';
     procedure scheduleInRunLoop_forMode (runLoop: NSRunLoop; mode: NSRunLoopMode); message 'scheduleInRunLoop:forMode:';
     procedure removeFromRunLoop_forMode (runLoop: NSRunLoop; mode: NSRunLoopMode); message 'removeFromRunLoop:forMode:';
     function reservedSpaceLength: NSUInteger; message 'reservedSpaceLength';
@@ -91,8 +91,8 @@ type
   public
     class function portWithMachPort (machPort: cuint32): NSPort; message 'portWithMachPort:';
     function initWithMachPort (machPort: cuint32): id; message 'initWithMachPort:'; { NS_DESIGNATED_INITIALIZER }
-    procedure setDelegate (anObject: id); message 'setDelegate:';
-    function delegate: id; message 'delegate';
+    procedure setDelegate (anObject: NSMachPortDelegateProtocol); message 'setDelegate:';
+    function delegate: NSMachPortDelegateProtocol; message 'delegate';
     class function portWithMachPort_options (machPort: cuint32; f: NSMachPortOptions): NSPort; message 'portWithMachPort:options:'; { available in macos , ios , watchos , tvos  }
     function initWithMachPort_options (machPort: cuint32; f: NSMachPortOptions): id; message 'initWithMachPort:options:'; { available in macos , ios , watchos , tvos  }
     function machPort: cuint32; message 'machPort';

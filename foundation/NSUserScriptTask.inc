@@ -85,7 +85,7 @@ type
   public
     procedure setVariables(newValue: NSDictionary); message 'setVariables:';
     function variables: NSDictionary; message 'variables';
-    procedure executeWithInput_completionHandler (input: id; handler: NSUserAutomatorTaskCompletionHandler); message 'executeWithInput:completionHandler:';
+    procedure executeWithInput_completionHandler (input: NSSecureCodingProtocol; handler: NSUserAutomatorTaskCompletionHandler); message 'executeWithInput:completionHandler:';
   end;
 {$endif}
 

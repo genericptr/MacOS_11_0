@@ -32,7 +32,7 @@ type
 type
   CIImageProcessorKernel = objcclass external (NSObject)
   public
-    class function processWithInputs_arguments_output_error (inputs: NSArray; arguments: NSDictionary; output: id; error: NSErrorPtr): objcbool; message 'processWithInputs:arguments:output:error:';
+    class function processWithInputs_arguments_output_error (inputs: NSArray; arguments: NSDictionary; output: CIImageProcessorOutputProtocol; error: NSErrorPtr): objcbool; message 'processWithInputs:arguments:output:error:';
     class function roiForInput_arguments_outputRect (input: cint; arguments: NSDictionary; outputRect: CGRect): CGRect; message 'roiForInput:arguments:outputRect:';
     class function formatForInputAtIndex (input: cint): CIFormat; message 'formatForInputAtIndex:';
     {$if defined(__has_feature)}
@@ -66,7 +66,7 @@ type
     function surface: IOSurfaceRef; message 'surface';
     {$endif}
     function pixelBuffer: CVPixelBufferRef; message 'pixelBuffer';
-    function metalTexture: id; message 'metalTexture';
+    function metalTexture: MTLTextureProtocol; message 'metalTexture';
   end;
 
 type
@@ -79,8 +79,8 @@ type
     function surface: IOSurfaceRef; message 'surface';
     {$endif}
     function pixelBuffer: CVPixelBufferRef; message 'pixelBuffer';
-    function metalTexture: id; message 'metalTexture';
-    function metalCommandBuffer: id; message 'metalCommandBuffer';
+    function metalTexture: MTLTextureProtocol; message 'metalTexture';
+    function metalCommandBuffer: MTLCommandBufferProtocol; message 'metalCommandBuffer';
   end;
 {$endif}
 

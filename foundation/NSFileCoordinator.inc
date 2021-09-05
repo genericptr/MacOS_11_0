@@ -63,10 +63,10 @@ type
     _isCancelled: objcbool;
     _movedItems: NSMutableDictionary;
   public
-    class procedure addFilePresenter (filePresenter: id); message 'addFilePresenter:';
-    class procedure removeFilePresenter (filePresenter: id); message 'removeFilePresenter:';
+    class procedure addFilePresenter (filePresenter: NSFilePresenterProtocol); message 'addFilePresenter:';
+    class procedure removeFilePresenter (filePresenter: NSFilePresenterProtocol); message 'removeFilePresenter:';
     class function filePresenters: NSArray; message 'filePresenters';
-    function initWithFilePresenter (filePresenterOrNil: id): id; message 'initWithFilePresenter:'; { NS_DESIGNATED_INITIALIZER }
+    function initWithFilePresenter (filePresenterOrNil: NSFilePresenterProtocol): id; message 'initWithFilePresenter:'; { NS_DESIGNATED_INITIALIZER }
     procedure setPurposeIdentifier(newValue: NSString); message 'setPurposeIdentifier:'; { available in macos , ios , watchos , tvos  }
     function purposeIdentifier: NSString; message 'purposeIdentifier'; { available in macos , ios , watchos , tvos  }
     procedure coordinateAccessWithIntents_queue_byAccessor (intents: NSArray; queue: NSOperationQueue; accessor: NSFileCoordinatorCoordinateAccessWithIntentsCallback); message 'coordinateAccessWithIntents:queue:byAccessor:'; { available in macos , ios , watchos , tvos  }

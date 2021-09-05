@@ -9,7 +9,7 @@ type
   NSItemProviderLoadFileRepresentationForTypeIdentifierCallback = reference to procedure (url: NSURL; error: NSErrorPtr); cblock; cdecl;
   NSItemProviderLoadInPlaceFileRepresentationForTypeIdentifierCallback = reference to procedure (url: NSURL; isInPlace: objcbool; error: NSErrorPtr); cblock; cdecl;
   NSItemProviderRegisterObjectOfClassCallback = reference to function (param1: OpaqueCBlock): NSProgress; cblock; cdecl;
-  NSItemProviderLoadObjectOfClassCallback = reference to procedure (object_: id; error: NSErrorPtr); cblock; cdecl;
+  NSItemProviderLoadObjectOfClassCallback = reference to procedure (object_: NSItemProviderReadingProtocol; error: NSErrorPtr); cblock; cdecl;
 {$endif}
 
 

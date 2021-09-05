@@ -40,8 +40,8 @@ type
     {$if defined(COREIMAGE_SUPPORTS_IOSURFACE)}
     function initWithIOSurface (surface: IOSurfacePtr): id; message 'initWithIOSurface:';
     {$endif}
-    function initWithMTLTexture_commandBuffer (texture: id; commandBuffer: id): id; message 'initWithMTLTexture:commandBuffer:';
-    function initWithWidth_height_pixelFormat_commandBuffer_mtlTextureProvider (width: NSUInteger; height: NSUInteger; pixelFormat: MTLPixelFormat; commandBuffer: id; block: CIRenderDestinationInitWithWidthCallback): id; message 'initWithWidth:height:pixelFormat:commandBuffer:mtlTextureProvider:';
+    function initWithMTLTexture_commandBuffer (texture: MTLTextureProtocol; commandBuffer: MTLCommandBufferProtocol): id; message 'initWithMTLTexture:commandBuffer:';
+    function initWithWidth_height_pixelFormat_commandBuffer_mtlTextureProvider (width: NSUInteger; height: NSUInteger; pixelFormat: MTLPixelFormat; commandBuffer: MTLCommandBufferProtocol; block: CIRenderDestinationInitWithWidthCallback): id; message 'initWithWidth:height:pixelFormat:commandBuffer:mtlTextureProvider:';
     function initWithGLTexture_target_width_height (texture: cuint; target: cuint; width: NSUInteger; height: NSUInteger): id; message 'initWithGLTexture:target:width:height:';
     function initWithBitmapData_width_height_bytesPerRow_format (data: pointer; width: NSUInteger; height: NSUInteger; bytesPerRow: NSUInteger; format: CIFormat): id; message 'initWithBitmapData:width:height:bytesPerRow:format:';
     function width: NSUInteger; message 'width';

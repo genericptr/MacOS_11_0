@@ -64,8 +64,8 @@ type
     function replyTimeout: NSTimeInterval; message 'replyTimeout';
     procedure setRootObject(newValue: id); message 'setRootObject:';
     function rootObject_: id; message 'rootObject';
-    procedure setDelegate(newValue: id); message 'setDelegate:';
-    function delegate_: id; message 'delegate';
+    procedure setDelegate(newValue: NSConnectionDelegateProtocol); message 'setDelegate:';
+    function delegate_: NSConnectionDelegateProtocol; message 'delegate';
     procedure setIndependentConversationQueueing(newValue: objcbool); message 'setIndependentConversationQueueing:';
     function independentConversationQueueing: objcbool; message 'independentConversationQueueing';
     function isValid_: objcbool; message 'isValid';

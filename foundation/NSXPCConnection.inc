@@ -93,8 +93,8 @@ type
     class function serviceListener: NSXPCListener; message 'serviceListener';
     class function anonymousListener: NSXPCListener; message 'anonymousListener';
     function initWithMachServiceName (name: NSString): id; message 'initWithMachServiceName:'; { unavailable in ios, watchos, tvos }
-    procedure setDelegate(newValue: id); message 'setDelegate:';
-    function delegate: id; message 'delegate';
+    procedure setDelegate(newValue: NSXPCListenerDelegateProtocol); message 'setDelegate:';
+    function delegate: NSXPCListenerDelegateProtocol; message 'delegate';
     function endpoint: NSXPCListenerEndpoint; message 'endpoint';
     procedure resume; message 'resume';
     procedure suspend; message 'suspend';
@@ -154,8 +154,8 @@ type
     procedure encodeXPCObject_forKey (xpcObject: xpc_object_t; key: NSString); message 'encodeXPCObject:forKey:';
     function decodeXPCObjectOfType_forKey (type_: xpc_type_t; key: NSString): xpc_object_t; message 'decodeXPCObjectOfType:forKey:'; { available in macos , ios , watchos , tvos  }
     {$endif}
-    procedure setUserInfo(newValue: id); message 'setUserInfo:';
-    function userInfo: id; message 'userInfo';
+    procedure setUserInfo(newValue: NSObjectProtocol); message 'setUserInfo:';
+    function userInfo: NSObjectProtocol; message 'userInfo';
     function connection: NSXPCConnection; message 'connection'; { available in macosx , ios , watchos , tvos  }
   end;
 {$endif}

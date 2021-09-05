@@ -47,10 +47,10 @@ type
     class function contextWithEAGLContext (eaglContext: EAGLContextPtr): CIContext; message 'contextWithEAGLContext:'; deprecated 'in 5_0,12_0';
     class function contextWithEAGLContext_options (eaglContext: EAGLContextPtr; options: NSDictionary): CIContext; message 'contextWithEAGLContext:options:'; deprecated 'in 5_0,12_0';
     {$endif}
-    class function contextWithMTLDevice (device: id): CIContext; message 'contextWithMTLDevice:'; { available in 10_11,9_0 }
-    class function contextWithMTLDevice_options (device: id; options: NSDictionary): CIContext; message 'contextWithMTLDevice:options:'; { available in 10_11,9_0 }
-    class function contextWithMTLCommandQueue (commandQueue: id): CIContext; message 'contextWithMTLCommandQueue:'; { available in 10_15,13_0 }
-    class function contextWithMTLCommandQueue_options (commandQueue: id; options: NSDictionary): CIContext; message 'contextWithMTLCommandQueue:options:'; { available in 10_15,13_0 }
+    class function contextWithMTLDevice (device: MTLDeviceProtocol): CIContext; message 'contextWithMTLDevice:'; { available in 10_11,9_0 }
+    class function contextWithMTLDevice_options (device: MTLDeviceProtocol; options: NSDictionary): CIContext; message 'contextWithMTLDevice:options:'; { available in 10_11,9_0 }
+    class function contextWithMTLCommandQueue (commandQueue: MTLCommandQueueProtocol): CIContext; message 'contextWithMTLCommandQueue:'; { available in 10_15,13_0 }
+    class function contextWithMTLCommandQueue_options (commandQueue: MTLCommandQueueProtocol; options: NSDictionary): CIContext; message 'contextWithMTLCommandQueue:options:'; { available in 10_15,13_0 }
     function workingColorSpace: CGColorSpaceRef; message 'workingColorSpace'; { available in 10_11,9_0 }
     function workingFormat: CIFormat; message 'workingFormat'; { available in 10_11,9_0 }
     procedure drawImage_atPoint_fromRect (image: CIImage; atPoint: CGPoint; fromRect: CGRect); message 'drawImage:atPoint:fromRect:'; deprecated 'in 10_4,10_8, 5_0,6_0';
@@ -62,7 +62,7 @@ type
     {$endif}
     procedure render_toCVPixelBuffer (image: CIImage; buffer: CVPixelBufferRef); message 'render:toCVPixelBuffer:'; { available in 10_11,5_0 }
     procedure render_toCVPixelBuffer_bounds_colorSpace (image: CIImage; buffer: CVPixelBufferRef; bounds: CGRect; colorSpace: CGColorSpaceRef); message 'render:toCVPixelBuffer:bounds:colorSpace:'; { available in 10_11,5_0 }
-    procedure render_toMTLTexture_commandBuffer_bounds_colorSpace (image: CIImage; texture: id; commandBuffer: id; bounds: CGRect; colorSpace: CGColorSpaceRef); message 'render:toMTLTexture:commandBuffer:bounds:colorSpace:'; { available in 10_11,9_0 }
+    procedure render_toMTLTexture_commandBuffer_bounds_colorSpace (image: CIImage; texture: MTLTextureProtocol; commandBuffer: MTLCommandBufferProtocol; bounds: CGRect; colorSpace: CGColorSpaceRef); message 'render:toMTLTexture:commandBuffer:bounds:colorSpace:'; { available in 10_11,9_0 }
     procedure reclaimResources; message 'reclaimResources'; { available in 10_4 }
     procedure clearCaches; message 'clearCaches'; { available in 10_4,10_0 }
     function inputImageMaximumSize: CGSize; message 'inputImageMaximumSize'; { available in 5_0 }

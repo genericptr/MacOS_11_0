@@ -48,8 +48,8 @@ type
     function keywords: NSSet; message 'keywords'; { available in macos , ios , watchos , tvos  }
     procedure setSupportsContinuationStreams(newValue: objcbool); message 'setSupportsContinuationStreams:';
     function supportsContinuationStreams: objcbool; message 'supportsContinuationStreams';
-    procedure setDelegate(newValue: id); message 'setDelegate:';
-    function delegate: id; message 'delegate';
+    procedure setDelegate(newValue: NSUserActivityDelegateProtocol); message 'setDelegate:';
+    function delegate: NSUserActivityDelegateProtocol; message 'delegate';
     procedure setTargetContentIdentifier(newValue: NSString); message 'setTargetContentIdentifier:'; { available in macos , ios , watchos , tvos  }
     function targetContentIdentifier: NSString; message 'targetContentIdentifier'; { available in macos , ios , watchos , tvos  }
     procedure becomeCurrent; message 'becomeCurrent';

@@ -103,8 +103,8 @@ type
     function getRelationship_ofDirectory_inDomain_toItemAtURL_error (outRelationship: NSURLRelationshipPtr; directory: NSSearchPathDirectory; domainMask: NSSearchPathDomainMask; url: NSURL; error: NSErrorPtr): objcbool; message 'getRelationship:ofDirectory:inDomain:toItemAtURL:error:'; { available in macos , ios , watchos , tvos  }
     function createDirectoryAtURL_withIntermediateDirectories_attributes_error (url: NSURL; createIntermediates: objcbool; attributes: NSDictionary; error: NSErrorPtr): objcbool; message 'createDirectoryAtURL:withIntermediateDirectories:attributes:error:'; { available in macos , ios , watchos , tvos  }
     function createSymbolicLinkAtURL_withDestinationURL_error (url: NSURL; destURL: NSURL; error: NSErrorPtr): objcbool; message 'createSymbolicLinkAtURL:withDestinationURL:error:'; { available in macos , ios , watchos , tvos  }
-    procedure setDelegate(newValue: id); message 'setDelegate:'; { available in macos , ios , watchos , tvos  }
-    function delegate: id; message 'delegate'; { available in macos , ios , watchos , tvos  }
+    procedure setDelegate(newValue: NSFileManagerDelegateProtocol); message 'setDelegate:'; { available in macos , ios , watchos , tvos  }
+    function delegate: NSFileManagerDelegateProtocol; message 'delegate'; { available in macos , ios , watchos , tvos  }
     function setAttributes_ofItemAtPath_error (attributes: NSDictionary; path: NSString; error: NSErrorPtr): objcbool; message 'setAttributes:ofItemAtPath:error:'; { available in macos , ios , watchos , tvos  }
     function createDirectoryAtPath_withIntermediateDirectories_attributes_error (path: NSString; createIntermediates: objcbool; attributes: NSDictionary; error: NSErrorPtr): objcbool; message 'createDirectoryAtPath:withIntermediateDirectories:attributes:error:'; { available in macos , ios , watchos , tvos  }
     function contentsOfDirectoryAtPath_error (path: NSString; error: NSErrorPtr): NSArray; message 'contentsOfDirectoryAtPath:error:'; { available in macos , ios , watchos , tvos  }

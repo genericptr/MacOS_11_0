@@ -58,7 +58,7 @@ type
     function localizedNameOfSavingComputer: NSString; message 'localizedNameOfSavingComputer';
     function originatorNameComponents: NSPersonNameComponents; message 'originatorNameComponents'; { unavailable in watchos, tvos }
     function modificationDate: NSDate; message 'modificationDate';
-    function persistentIdentifier: id; message 'persistentIdentifier';
+    function persistentIdentifier: NSCodingProtocol; message 'persistentIdentifier';
     function isConflict: objcbool; message 'isConflict';
     procedure setResolved(newValue: objcbool); message 'setResolved:';
     function isResolved: objcbool; message 'isResolved';

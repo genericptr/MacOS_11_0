@@ -97,8 +97,8 @@ type
     _internal: id;
   public
     class function defaultUserNotificationCenter: NSUserNotificationCenter; message 'defaultUserNotificationCenter';
-    procedure setDelegate(newValue: id); message 'setDelegate:';
-    function delegate: id; message 'delegate';
+    procedure setDelegate(newValue: NSUserNotificationCenterDelegateProtocol); message 'setDelegate:';
+    function delegate: NSUserNotificationCenterDelegateProtocol; message 'delegate';
     procedure setScheduledNotifications(newValue: NSArray); message 'setScheduledNotifications:';
     function scheduledNotifications: NSArray; message 'scheduledNotifications';
     procedure scheduleNotification (notification: NSUserNotification); message 'scheduleNotification:';

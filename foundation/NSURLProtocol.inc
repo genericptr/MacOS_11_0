@@ -28,8 +28,8 @@ type
   private
     _internal: NSURLProtocolInternal;
   public
-    function initWithRequest_cachedResponse_client (request: NSURLRequest; cachedResponse: NSCachedURLResponse; client: id): id; message 'initWithRequest:cachedResponse:client:'; { NS_DESIGNATED_INITIALIZER }
-    function client: id; message 'client';
+    function initWithRequest_cachedResponse_client (request: NSURLRequest; cachedResponse: NSCachedURLResponse; client: NSURLProtocolClientProtocol): id; message 'initWithRequest:cachedResponse:client:'; { NS_DESIGNATED_INITIALIZER }
+    function client: NSURLProtocolClientProtocol; message 'client';
     function request: NSURLRequest; message 'request';
     function cachedResponse: NSCachedURLResponse; message 'cachedResponse';
     class function canInitWithRequest (request_: NSURLRequest): objcbool; message 'canInitWithRequest:';
@@ -48,7 +48,7 @@ type
 type
   NSURLSessionTaskAdditions = objccategory external (NSURLProtocol)
     class function canInitWithTask (task: NSURLSessionTask): objcbool; message 'canInitWithTask:'; { available in macos , ios , watchos , tvos  }
-    function initWithTask_cachedResponse_client (task: NSURLSessionTask; cachedResponse_: NSCachedURLResponse; client_: id): id; message 'initWithTask:cachedResponse:client:'; { available in macos , ios , watchos , tvos  }
+    function initWithTask_cachedResponse_client (task: NSURLSessionTask; cachedResponse_: NSCachedURLResponse; client_: NSURLProtocolClientProtocol): id; message 'initWithTask:cachedResponse:client:'; { available in macos , ios , watchos , tvos  }
     function task: NSURLSessionTask; message 'task'; { available in macos , ios , watchos , tvos  }
   end;
 {$endif}

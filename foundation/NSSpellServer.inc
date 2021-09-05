@@ -29,8 +29,8 @@ type
     _checker: id;
     _reservedSpellServer: pointer;
   public
-    procedure setDelegate(newValue: id); message 'setDelegate:';
-    function delegate: id; message 'delegate';
+    procedure setDelegate(newValue: NSSpellServerDelegateProtocol); message 'setDelegate:';
+    function delegate: NSSpellServerDelegateProtocol; message 'delegate';
     function registerLanguage_byVendor (language: NSString; vendor: NSString): objcbool; message 'registerLanguage:byVendor:';
     function isWordInUserDictionaries_caseSensitive (word: NSString; flag: objcbool): objcbool; message 'isWordInUserDictionaries:caseSensitive:';
     procedure run; message 'run';

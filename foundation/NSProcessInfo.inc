@@ -90,7 +90,7 @@ const
 type
   NSProcessInfoActivity = objccategory external (NSProcessInfo)
     function beginActivityWithOptions_reason (options: NSActivityOptions; reason: NSString): id; message 'beginActivityWithOptions:reason:'; { available in macos , ios , watchos , tvos  }
-    procedure endActivity (activity: id); message 'endActivity:'; { available in macos , ios , watchos , tvos  }
+    procedure endActivity (activity: NSObjectProtocol); message 'endActivity:'; { available in macos , ios , watchos , tvos  }
     procedure performActivityWithOptions_reason_usingBlock (options: NSActivityOptions; reason: NSString; block: NSProcessInfoPerformActivityWithOptionsCallback); message 'performActivityWithOptions:reason:usingBlock:'; { available in macos , ios , watchos , tvos  }
     procedure performExpiringActivityWithReason_usingBlock (reason: NSString; block: NSProcessInfoPerformExpiringActivityWithReasonCallback); message 'performExpiringActivityWithReason:usingBlock:'; { unavailable in macos }
   end;

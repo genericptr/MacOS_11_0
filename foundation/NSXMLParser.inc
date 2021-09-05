@@ -32,8 +32,8 @@ type
     function initWithContentsOfURL (url: NSURL): id; message 'initWithContentsOfURL:';
     function initWithData (data: NSData): id; message 'initWithData:'; { NS_DESIGNATED_INITIALIZER }
     function initWithStream (stream: NSInputStream): id; message 'initWithStream:'; { available in macos , ios , watchos , tvos  }
-    procedure setDelegate(newValue: id); message 'setDelegate:';
-    function delegate: id; message 'delegate';
+    procedure setDelegate(newValue: NSXMLParserDelegateProtocol); message 'setDelegate:';
+    function delegate: NSXMLParserDelegateProtocol; message 'delegate';
     procedure setShouldProcessNamespaces(newValue: objcbool); message 'setShouldProcessNamespaces:';
     function shouldProcessNamespaces: objcbool; message 'shouldProcessNamespaces';
     procedure setShouldReportNamespacePrefixes(newValue: objcbool); message 'setShouldReportNamespacePrefixes:';

@@ -14,8 +14,8 @@ type
     _internal: NSURLDownloadInternal;
   public
     class function canResumeDownloadDecodedWithEncodingMIMEType (MIMEType: NSString): objcbool; message 'canResumeDownloadDecodedWithEncodingMIMEType:';
-    function initWithRequest_delegate (request: NSURLRequest; delegate: id): id; message 'initWithRequest:delegate:'; deprecated 'Use NSURLSession downloadTask (see NSURLSession.h)';
-    function initWithResumeData_delegate_path (resumeData: NSData; delegate: id; path: NSString): id; message 'initWithResumeData:delegate:path:'; deprecated 'Use NSURLSession downloadTask (see NSURLSession.h)';
+    function initWithRequest_delegate (request: NSURLRequest; delegate: NSURLDownloadDelegateProtocol): id; message 'initWithRequest:delegate:'; deprecated 'Use NSURLSession downloadTask (see NSURLSession.h)';
+    function initWithResumeData_delegate_path (resumeData: NSData; delegate: NSURLDownloadDelegateProtocol; path: NSString): id; message 'initWithResumeData:delegate:path:'; deprecated 'Use NSURLSession downloadTask (see NSURLSession.h)';
     procedure cancel; message 'cancel';
     procedure setDestination_allowOverwrite (path: NSString; allowOverwrite: objcbool); message 'setDestination:allowOverwrite:';
     function request: NSURLRequest; message 'request';

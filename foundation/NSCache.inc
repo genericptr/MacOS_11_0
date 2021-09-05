@@ -17,8 +17,8 @@ type
   public
     procedure setName(newValue: NSString); message 'setName:';
     function name: NSString; message 'name';
-    procedure setDelegate(newValue: id); message 'setDelegate:';
-    function delegate: id; message 'delegate';
+    procedure setDelegate(newValue: NSCacheDelegateProtocol); message 'setDelegate:';
+    function delegate: NSCacheDelegateProtocol; message 'delegate';
     function objectForKey (key: id): id; message 'objectForKey:';
     procedure setObject_forKey (obj: id; key: id); message 'setObject:forKey:';
     procedure setObject_forKey_cost (obj: id; key: id; g: NSUInteger); message 'setObject:forKey:cost:';

@@ -59,8 +59,8 @@ type
     class function URLHandleClassForURL (anURL: NSURL): pobjc_class; message 'URLHandleClassForURL:'; { unavailable in ios, watchos, tvos }
     function status: NSURLHandleStatus; message 'status'; { unavailable in ios, watchos, tvos }
     function failureReason: NSString; message 'failureReason'; { unavailable in ios, watchos, tvos }
-    procedure addClient (client: id); message 'addClient:'; { unavailable in ios, watchos, tvos }
-    procedure removeClient (client: id); message 'removeClient:'; { unavailable in ios, watchos, tvos }
+    procedure addClient (client: NSURLHandleClientProtocol); message 'addClient:'; { unavailable in ios, watchos, tvos }
+    procedure removeClient (client: NSURLHandleClientProtocol); message 'removeClient:'; { unavailable in ios, watchos, tvos }
     procedure loadInBackground; message 'loadInBackground'; { unavailable in ios, watchos, tvos }
     procedure cancelLoadInBackground; message 'cancelLoadInBackground'; { unavailable in ios, watchos, tvos }
     function resourceData: NSData; message 'resourceData'; { unavailable in ios, watchos, tvos }

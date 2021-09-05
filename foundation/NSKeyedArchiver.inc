@@ -26,8 +26,8 @@ type
     function initForWritingWithMutableData (data: NSMutableData): id; message 'initForWritingWithMutableData:'; deprecated 'Use -initRequiringSecureCoding: instead';
     class function archivedDataWithRootObject (rootObject: id): NSData; message 'archivedDataWithRootObject:'; deprecated 'Use +archivedDataWithRootObject:requiringSecureCoding:error: instead';
     class function archiveRootObject_toFile (rootObject: id; path: NSString): objcbool; message 'archiveRootObject:toFile:'; deprecated 'Use +archivedDataWithRootObject:requiringSecureCoding:error: and -writeToURL:options:error: instead';
-    procedure setDelegate(newValue: id); message 'setDelegate:';
-    function delegate: id; message 'delegate';
+    procedure setDelegate(newValue: NSKeyedArchiverDelegateProtocol); message 'setDelegate:';
+    function delegate: NSKeyedArchiverDelegateProtocol; message 'delegate';
     procedure setOutputFormat(newValue: NSPropertyListFormat); message 'setOutputFormat:';
     function outputFormat: NSPropertyListFormat; message 'outputFormat';
     function encodedData: NSData; message 'encodedData'; { available in macosx , ios , watchos , tvos  }
@@ -64,8 +64,8 @@ type
     class function unarchiveObjectWithData (data: NSData): id; message 'unarchiveObjectWithData:'; deprecated 'Use +unarchivedObjectOfClass:fromData:error: instead';
     class function unarchiveTopLevelObjectWithData_error (data: NSData; error: NSErrorPtr): id; message 'unarchiveTopLevelObjectWithData:error:';
     class function unarchiveObjectWithFile (path: NSString): id; message 'unarchiveObjectWithFile:'; deprecated 'Use +unarchivedObjectOfClass:fromData:error: instead';
-    procedure setDelegate(newValue: id); message 'setDelegate:';
-    function delegate: id; message 'delegate';
+    procedure setDelegate(newValue: NSKeyedUnarchiverDelegateProtocol); message 'setDelegate:';
+    function delegate: NSKeyedUnarchiverDelegateProtocol; message 'delegate';
     procedure finishDecoding; message 'finishDecoding';
     class procedure classSetClass_forClassName (cls: pobjc_class; codedName: NSString); message 'setClass:forClassName:';
     procedure setClass_forClassName (cls: pobjc_class; codedName: NSString); message 'setClass:forClassName:';

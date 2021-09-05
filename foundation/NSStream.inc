@@ -51,8 +51,8 @@ type
   public
     procedure open; message 'open';
     procedure close; message 'close';
-    procedure setDelegate(newValue: id); message 'setDelegate:';
-    function delegate: id; message 'delegate';
+    procedure setDelegate(newValue: NSStreamDelegateProtocol); message 'setDelegate:';
+    function delegate: NSStreamDelegateProtocol; message 'delegate';
     function propertyForKey (key: NSStreamPropertyKey): id; message 'propertyForKey:';
     function setProperty_forKey (property_: id; key: NSStreamPropertyKey): objcbool; message 'setProperty:forKey:';
     procedure scheduleInRunLoop_forMode (aRunLoop: NSRunLoop; mode: NSRunLoopMode); message 'scheduleInRunLoop:forMode:';

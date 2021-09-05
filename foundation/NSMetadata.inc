@@ -26,8 +26,8 @@ type
     _private:array[0..10] of id;
     _reserved: pointer;
   public
-    procedure setDelegate(newValue: id); message 'setDelegate:';
-    function delegate: id; message 'delegate';
+    procedure setDelegate(newValue: NSMetadataQueryDelegateProtocol); message 'setDelegate:';
+    function delegate: NSMetadataQueryDelegateProtocol; message 'delegate';
     procedure setPredicate(newValue: NSPredicate); message 'setPredicate:';
     function predicate: NSPredicate; message 'predicate';
     procedure setSortDescriptors(newValue: NSArray); message 'setSortDescriptors:';

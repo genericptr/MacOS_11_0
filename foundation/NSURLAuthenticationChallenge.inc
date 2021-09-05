@@ -26,14 +26,14 @@ type
   private
     _internal: NSURLAuthenticationChallengeInternal;
   public
-    function initWithProtectionSpace_proposedCredential_previousFailureCount_failureResponse_error_sender (space: NSURLProtectionSpace; credential: NSURLCredential; previousFailureCount: NSInteger; response: NSURLResponse; error: NSError; sender: id): id; message 'initWithProtectionSpace:proposedCredential:previousFailureCount:failureResponse:error:sender:';
-    function initWithAuthenticationChallenge_sender (challenge: NSURLAuthenticationChallenge; sender: id): id; message 'initWithAuthenticationChallenge:sender:';
+    function initWithProtectionSpace_proposedCredential_previousFailureCount_failureResponse_error_sender (space: NSURLProtectionSpace; credential: NSURLCredential; previousFailureCount: NSInteger; response: NSURLResponse; error: NSError; sender: NSURLAuthenticationChallengeSenderProtocol): id; message 'initWithProtectionSpace:proposedCredential:previousFailureCount:failureResponse:error:sender:';
+    function initWithAuthenticationChallenge_sender (challenge: NSURLAuthenticationChallenge; sender: NSURLAuthenticationChallengeSenderProtocol): id; message 'initWithAuthenticationChallenge:sender:';
     function protectionSpace: NSURLProtectionSpace; message 'protectionSpace';
     function proposedCredential: NSURLCredential; message 'proposedCredential';
     function previousFailureCount: NSInteger; message 'previousFailureCount';
     function failureResponse: NSURLResponse; message 'failureResponse';
     function error: NSError; message 'error';
-    function sender: id; message 'sender';
+    function sender: NSURLAuthenticationChallengeSenderProtocol; message 'sender';
 
     { Adopted protocols }
     procedure encodeWithCoder (coder: NSCoder); message 'encodeWithCoder:';

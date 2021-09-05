@@ -51,7 +51,7 @@ type
     class function imageWithBitmapData_bytesPerRow_size_format_colorSpace (data: NSData; bytesPerRow: size_t; size: CGSize; format: CIFormat; colorSpace: CGColorSpaceRef): CIImage; message 'imageWithBitmapData:bytesPerRow:size:format:colorSpace:';
     class function imageWithTexture_size_flipped_colorSpace (name: cuint; size: CGSize; flipped: objcbool; colorSpace: CGColorSpaceRef): CIImage; message 'imageWithTexture:size:flipped:colorSpace:'; deprecated 'in 10_4,10_14, 6_0,12_0';
     class function imageWithTexture_size_flipped_options (name: cuint; size: CGSize; flipped: objcbool; options: NSDictionary): CIImage; message 'imageWithTexture:size:flipped:options:'; deprecated 'in 10_9,10_14';
-    class function imageWithMTLTexture_options (texture: id; options: NSDictionary): CIImage; message 'imageWithMTLTexture:options:'; { available in 10_11, 9_0 }
+    class function imageWithMTLTexture_options (texture: MTLTextureProtocol; options: NSDictionary): CIImage; message 'imageWithMTLTexture:options:'; { available in 10_11, 9_0 }
     class function imageWithContentsOfURL (url: NSURL): CIImage; message 'imageWithContentsOfURL:';
     class function imageWithContentsOfURL_options (url: NSURL; options: NSDictionary): CIImage; message 'imageWithContentsOfURL:options:';
     class function imageWithData (data: NSData): CIImage; message 'imageWithData:';
@@ -86,7 +86,7 @@ type
     function initWithBitmapData_bytesPerRow_size_format_colorSpace (data: NSData; bytesPerRow: size_t; size: CGSize; format: CIFormat; colorSpace: CGColorSpaceRef): id; message 'initWithBitmapData:bytesPerRow:size:format:colorSpace:';
     function initWithTexture_size_flipped_colorSpace (name: cuint; size: CGSize; flipped: objcbool; colorSpace: CGColorSpaceRef): id; message 'initWithTexture:size:flipped:colorSpace:'; deprecated 'in 10_4,10_14, 6_0,12_0';
     function initWithTexture_size_flipped_options (name: cuint; size: CGSize; flipped: objcbool; options: NSDictionary): id; message 'initWithTexture:size:flipped:options:'; deprecated 'in 10_9,10_14';
-    function initWithMTLTexture_options (texture: id; options: NSDictionary): id; message 'initWithMTLTexture:options:'; { available in 10_11, 9_0 }
+    function initWithMTLTexture_options (texture: MTLTextureProtocol; options: NSDictionary): id; message 'initWithMTLTexture:options:'; { available in 10_11, 9_0 }
     function initWithContentsOfURL (url: NSURL): id; message 'initWithContentsOfURL:';
     function initWithContentsOfURL_options (url: NSURL; options: NSDictionary): id; message 'initWithContentsOfURL:options:';
     {$if defined(COREIMAGE_SUPPORTS_IOSURFACE)}

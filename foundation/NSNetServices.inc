@@ -52,8 +52,8 @@ type
     function initWithDomain_type_name (domain: NSString; type_: NSString; name: NSString): id; message 'initWithDomain:type:name:';
     procedure scheduleInRunLoop_forMode (aRunLoop: NSRunLoop; mode: NSRunLoopMode); message 'scheduleInRunLoop:forMode:';
     procedure removeFromRunLoop_forMode (aRunLoop: NSRunLoop; mode: NSRunLoopMode); message 'removeFromRunLoop:forMode:';
-    procedure setDelegate(newValue: id); message 'setDelegate:';
-    function delegate: id; message 'delegate';
+    procedure setDelegate(newValue: NSNetServiceDelegateProtocol); message 'setDelegate:';
+    function delegate: NSNetServiceDelegateProtocol; message 'delegate';
     procedure setIncludesPeerToPeer(newValue: objcbool); message 'setIncludesPeerToPeer:'; { available in macos , ios , watchos , tvos  }
     function includesPeerToPeer: objcbool; message 'includesPeerToPeer'; { available in macos , ios , watchos , tvos  }
     function name: NSString; message 'name';
@@ -84,8 +84,8 @@ type
     _reserved: pointer;
   public
     function init: id; message 'init';
-    procedure setDelegate(newValue: id); message 'setDelegate:';
-    function delegate: id; message 'delegate';
+    procedure setDelegate(newValue: NSNetServiceBrowserDelegateProtocol); message 'setDelegate:';
+    function delegate: NSNetServiceBrowserDelegateProtocol; message 'delegate';
     procedure setIncludesPeerToPeer(newValue: objcbool); message 'setIncludesPeerToPeer:'; { available in macos , ios , watchos , tvos  }
     function includesPeerToPeer: objcbool; message 'includesPeerToPeer'; { available in macos , ios , watchos , tvos  }
     procedure scheduleInRunLoop_forMode (aRunLoop: NSRunLoop; mode: NSRunLoopMode); message 'scheduleInRunLoop:forMode:';
