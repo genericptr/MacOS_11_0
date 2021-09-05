@@ -33,8 +33,8 @@ type
     function url: NSURL; message 'url';
     function settings: NSDictionary; message 'settings';
     function format: AVAudioFormat; message 'format'; { unavailable in tvos }
-    procedure setDelegate(newValue: id); message 'setDelegate:';
-    function delegate: id; message 'delegate';
+    procedure setDelegate(newValue: AVAudioRecorderDelegateProtocol); message 'setDelegate:';
+    function delegate: AVAudioRecorderDelegateProtocol; message 'delegate';
     function currentTime: NSTimeInterval; message 'currentTime';
     function deviceCurrentTime: NSTimeInterval; message 'deviceCurrentTime'; { unavailable in tvos }
     procedure setMeteringEnabled(newValue: objcbool); message 'setMeteringEnabled:';

@@ -42,7 +42,7 @@ type
   public
     function init: id; message 'init';
     class function new_: id; message 'new';
-    procedure capturePhotoWithSettings_delegate (settings: AVCapturePhotoSettings; delegate: id); message 'capturePhotoWithSettings:delegate:';
+    procedure capturePhotoWithSettings_delegate (settings: AVCapturePhotoSettings; delegate: AVCapturePhotoCaptureDelegateProtocol); message 'capturePhotoWithSettings:delegate:';
     function preparedPhotoSettingsArray: NSArray; message 'preparedPhotoSettingsArray'; { unavailable in macos }
     procedure setPreparedPhotoSettingsArray_completionHandler (preparedPhotoSettingsArray_: NSArray; completionHandler: AVCapturePhotoOutputSetPreparedPhotoSettingsArrayCallback); message 'setPreparedPhotoSettingsArray:completionHandler:'; { unavailable in macos }
     function availablePhotoPixelFormatTypes: NSArray; message 'availablePhotoPixelFormatTypes';
@@ -263,7 +263,7 @@ type
 type
   AVCapturePhotoConversions = objccategory external (AVCapturePhoto)
     function fileDataRepresentation: NSData; message 'fileDataRepresentation'; { unavailable in tvos }
-    function fileDataRepresentationWithCustomizer (customizer: id): NSData; message 'fileDataRepresentationWithCustomizer:'; { unavailable in macos, tvos }
+    function fileDataRepresentationWithCustomizer (customizer: AVCapturePhotoFileDataRepresentationCustomizerProtocol): NSData; message 'fileDataRepresentationWithCustomizer:'; { unavailable in macos, tvos }
     function fileDataRepresentationWithReplacementMetadata_replacementEmbeddedThumbnailPhotoFormat_replacementEmbeddedThumbnailPixelBuffer_replacementDepthData (replacementMetadata: NSDictionary; replacementEmbeddedThumbnailPhotoFormat: NSDictionary; replacementEmbeddedThumbnailPixelBuffer: CVPixelBufferRef; replacementDepthData: AVDepthData): NSData; message 'fileDataRepresentationWithReplacementMetadata:replacementEmbeddedThumbnailPhotoFormat:replacementEmbeddedThumbnailPixelBuffer:replacementDepthData:'; { unavailable in macos }
     function CGImageRepresentation: CGImageRef; message 'CGImageRepresentation'; { unavailable in tvos }
     function previewCGImageRepresentation: CGImageRef; message 'previewCGImageRepresentation'; { unavailable in macos, tvos }

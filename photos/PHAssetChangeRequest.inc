@@ -33,7 +33,7 @@ type
     class function creationRequestForAssetFromImageAtFileURL (fileURL: NSURL): id; message 'creationRequestForAssetFromImageAtFileURL:';
     class function creationRequestForAssetFromVideoAtFileURL (fileURL: NSURL): id; message 'creationRequestForAssetFromVideoAtFileURL:';
     function placeholderForCreatedAsset: PHObjectPlaceholder; message 'placeholderForCreatedAsset';
-    class procedure deleteAssets (assets: id); message 'deleteAssets:';
+    class procedure deleteAssets (assets: NSFastEnumerationProtocol); message 'deleteAssets:';
     class function changeRequestForAsset (asset: PHAsset): id; message 'changeRequestForAsset:';
     procedure setCreationDate(newValue: NSDate); message 'setCreationDate:';
     function creationDate: NSDate; message 'creationDate';

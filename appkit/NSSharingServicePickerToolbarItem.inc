@@ -18,8 +18,8 @@ type
   NSSharingServicePickerToolbarItem = objcclass external (NSToolbarItem)
   public
     {$if  not defined(TARGET_OS_IPHONE)}
-    procedure setDelegate(newValue: id); message 'setDelegate:';
-    function delegate: id; message 'delegate';
+    procedure setDelegate(newValue: NSSharingServicePickerToolbarItemDelegateProtocol); message 'setDelegate:';
+    function delegate: NSSharingServicePickerToolbarItemDelegateProtocol; message 'delegate';
     {$endif}
   end;
 {$endif}

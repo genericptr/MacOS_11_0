@@ -70,7 +70,7 @@ type
 type
   MTLAccelerationStructureTriangleGeometryDescriptor = objcclass external (MTLAccelerationStructureGeometryDescriptor)
   public
-    procedure setVertexBuffer(newValue: id); message 'setVertexBuffer:';
+    procedure setVertexBuffer(newValue: MTLBufferProtocol); message 'setVertexBuffer:';
     function vertexBuffer: id; message 'vertexBuffer';
     procedure setVertexBufferOffset(newValue: NSUInteger); message 'setVertexBufferOffset:';
     function vertexBufferOffset: NSUInteger; message 'vertexBufferOffset';

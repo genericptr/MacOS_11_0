@@ -25,8 +25,8 @@ type
     procedure setRemovable(newValue: objcbool); message 'setRemovable:';
     function isRemovable: objcbool; message 'isRemovable';
     function isDragging: objcbool; message 'isDragging';
-    procedure setRepresentedObject(newValue: id); message 'setRepresentedObject:';
-    function representedObject: id; message 'representedObject';
+    procedure setRepresentedObject(newValue: NSCopyingProtocol); message 'setRepresentedObject:';
+    function representedObject: NSCopyingProtocol; message 'representedObject';
     function imageRectInRuler: NSRect; message 'imageRectInRuler';
     function thicknessRequiredInRuler: CGFloat; message 'thicknessRequiredInRuler';
     procedure drawRect (rect: NSRect); message 'drawRect:';

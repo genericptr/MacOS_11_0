@@ -115,10 +115,10 @@ type
   public
     function initWithFrame (frameRect: NSRect): id; message 'initWithFrame:'; { NS_DESIGNATED_INITIALIZER }
     function initWithCoder (coder: NSCoder): id; message 'initWithCoder:'; { NS_DESIGNATED_INITIALIZER }
-    procedure setDataSource(newValue: id); message 'setDataSource:';
-    function dataSource: id; message 'dataSource';
-    procedure setDelegate(newValue: id); message 'setDelegate:';
-    function delegate: id; message 'delegate';
+    procedure setDataSource(newValue: NSTableViewDataSourceProtocol); message 'setDataSource:';
+    function dataSource: NSTableViewDataSourceProtocol; message 'dataSource';
+    procedure setDelegate(newValue: NSTableViewDelegateProtocol); message 'setDelegate:';
+    function delegate: NSTableViewDelegateProtocol; message 'delegate';
     procedure setHeaderView(newValue: NSTableHeaderView); message 'setHeaderView:';
     function headerView: NSTableHeaderView; message 'headerView';
     procedure setCornerView(newValue: NSView); message 'setCornerView:';
@@ -267,17 +267,17 @@ type
     function textShouldEndEditing (textObject: NSText): objcbool; message 'textShouldEndEditing:';
     function textView_candidates_forSelectedRange (textView: NSTextView; candidates: NSArray; selectedRange: NSRange): NSArray; message 'textView:candidates:forSelectedRange:'; { available in macos  }
     function textView_candidatesForSelectedRange (textView: NSTextView; selectedRange: NSRange): NSArray; message 'textView:candidatesForSelectedRange:'; { available in macos  }
-    procedure textView_clickedOnCell_inRect (textView: NSTextView; cell: id; cellFrame: NSRect); message 'textView:clickedOnCell:inRect:'; deprecated 'Use -textView:clickedOnCell:inRect:atIndex: instead';
-    procedure textView_clickedOnCell_inRect_atIndex (textView: NSTextView; cell: id; cellFrame: NSRect; charIndex: NSUInteger); message 'textView:clickedOnCell:inRect:atIndex:';
+    procedure textView_clickedOnCell_inRect (textView: NSTextView; cell: NSTextAttachmentCellProtocol; cellFrame: NSRect); message 'textView:clickedOnCell:inRect:'; deprecated 'Use -textView:clickedOnCell:inRect:atIndex: instead';
+    procedure textView_clickedOnCell_inRect_atIndex (textView: NSTextView; cell: NSTextAttachmentCellProtocol; cellFrame: NSRect; charIndex: NSUInteger); message 'textView:clickedOnCell:inRect:atIndex:';
     function textView_clickedOnLink (textView: NSTextView; link: id): objcbool; message 'textView:clickedOnLink:'; deprecated 'Use -textView:clickedOnLink:atIndex: instead';
     function textView_clickedOnLink_atIndex (textView: NSTextView; link: id; charIndex: NSUInteger): objcbool; message 'textView:clickedOnLink:atIndex:';
     function textView_completions_forPartialWordRange_indexOfSelectedItem (textView: NSTextView; words: NSArray; charRange: NSRange; index: NSIntegerPtr): NSArray; message 'textView:completions:forPartialWordRange:indexOfSelectedItem:';
     function textView_didCheckTextInRange_types_options_results_orthography_wordCount (view: NSTextView; range: NSRange; checkingTypes: NSTextCheckingTypes; options: NSDictionary; results: NSArray; orthography: NSOrthography; wordCount: NSInteger): NSArray; message 'textView:didCheckTextInRange:types:options:results:orthography:wordCount:'; { available in macos  }
     function textView_doCommandBySelector (textView: NSTextView; commandSelector: SEL): objcbool; message 'textView:doCommandBySelector:';
-    procedure textView_doubleClickedOnCell_inRect (textView: NSTextView; cell: id; cellFrame: NSRect); message 'textView:doubleClickedOnCell:inRect:'; deprecated 'Use -textView:doubleClickedOnCell:inRect:atIndex: instead';
-    procedure textView_doubleClickedOnCell_inRect_atIndex (textView: NSTextView; cell: id; cellFrame: NSRect; charIndex: NSUInteger); message 'textView:doubleClickedOnCell:inRect:atIndex:';
-    procedure textView_draggedCell_inRect_event (view: NSTextView; cell: id; rect: NSRect; event: NSEvent); message 'textView:draggedCell:inRect:event:'; deprecated 'Use -textView:draggedCell:inRect:event:atIndex: instead';
-    procedure textView_draggedCell_inRect_event_atIndex (view: NSTextView; cell: id; rect: NSRect; event: NSEvent; charIndex: NSUInteger); message 'textView:draggedCell:inRect:event:atIndex:';
+    procedure textView_doubleClickedOnCell_inRect (textView: NSTextView; cell: NSTextAttachmentCellProtocol; cellFrame: NSRect); message 'textView:doubleClickedOnCell:inRect:'; deprecated 'Use -textView:doubleClickedOnCell:inRect:atIndex: instead';
+    procedure textView_doubleClickedOnCell_inRect_atIndex (textView: NSTextView; cell: NSTextAttachmentCellProtocol; cellFrame: NSRect; charIndex: NSUInteger); message 'textView:doubleClickedOnCell:inRect:atIndex:';
+    procedure textView_draggedCell_inRect_event (view: NSTextView; cell: NSTextAttachmentCellProtocol; rect: NSRect; event: NSEvent); message 'textView:draggedCell:inRect:event:'; deprecated 'Use -textView:draggedCell:inRect:event:atIndex: instead';
+    procedure textView_draggedCell_inRect_event_atIndex (view: NSTextView; cell: NSTextAttachmentCellProtocol; rect: NSRect; event: NSEvent; charIndex: NSUInteger); message 'textView:draggedCell:inRect:event:atIndex:';
     function textView_menu_forEvent_atIndex (view: NSTextView; menu: NSMenu; event: NSEvent; charIndex: NSUInteger): NSMenu; message 'textView:menu:forEvent:atIndex:'; { available in macos  }
     function textView_shouldChangeTextInRange_replacementString (textView: NSTextView; affectedCharRange: NSRange; replacementString: NSString): objcbool; message 'textView:shouldChangeTextInRange:replacementString:';
     function textView_shouldChangeTextInRanges_replacementStrings (textView: NSTextView; affectedRanges: NSArray; replacementStrings: NSArray): objcbool; message 'textView:shouldChangeTextInRanges:replacementStrings:';
@@ -291,12 +291,12 @@ type
     function textView_willCheckTextInRange_options_types (view: NSTextView; range: NSRange; options: NSDictionary; checkingTypes: NSTextCheckingTypesPtr): NSDictionary; message 'textView:willCheckTextInRange:options:types:'; { available in macos  }
     function textView_willDisplayToolTip_forCharacterAtIndex (textView: NSTextView; tooltip: NSString; characterIndex: NSUInteger): NSString; message 'textView:willDisplayToolTip:forCharacterAtIndex:';
     function textView_willShowSharingServicePicker_forItems (textView: NSTextView; servicePicker: NSSharingServicePicker; items: NSArray): NSSharingServicePicker; message 'textView:willShowSharingServicePicker:forItems:'; { available in macos  }
-    function textView_writablePasteboardTypesForCell_atIndex (view: NSTextView; cell: id; charIndex: NSUInteger): NSArray; message 'textView:writablePasteboardTypesForCell:atIndex:';
-    function textView_writeCell_atIndex_toPasteboard_type (view: NSTextView; cell: id; charIndex: NSUInteger; pboard: NSPasteboard; type_: NSPasteboardType): objcbool; message 'textView:writeCell:atIndex:toPasteboard:type:';
+    function textView_writablePasteboardTypesForCell_atIndex (view: NSTextView; cell: NSTextAttachmentCellProtocol; charIndex: NSUInteger): NSArray; message 'textView:writablePasteboardTypesForCell:atIndex:';
+    function textView_writeCell_atIndex_toPasteboard_type (view: NSTextView; cell: NSTextAttachmentCellProtocol; charIndex: NSUInteger; pboard: NSPasteboard; type_: NSPasteboardType): objcbool; message 'textView:writeCell:atIndex:toPasteboard:type:';
     procedure textViewDidChangeSelection (notification: NSNotification); message 'textViewDidChangeSelection:';
     procedure textViewDidChangeTypingAttributes (notification: NSNotification); message 'textViewDidChangeTypingAttributes:';
     function undoManagerForTextView (view: NSTextView): NSUndoManager; message 'undoManagerForTextView:';
-    function validateUserInterfaceItem (item: id): objcbool; message 'validateUserInterfaceItem:';
+    function validateUserInterfaceItem (item: NSValidatedUserInterfaceItemProtocol): objcbool; message 'validateUserInterfaceItem:';
   end;
 {$endif}
 
@@ -358,10 +358,10 @@ type
     function tableView_pasteboardWriterForRow (tableView: NSTableView; row: NSInteger): id; message 'tableView:pasteboardWriterForRow:'; { available in macos  }
     procedure tableView_draggingSession_willBeginAtPoint_forRowIndexes (tableView: NSTableView; session: NSDraggingSession; screenPoint: NSPoint; rowIndexes: NSIndexSet); message 'tableView:draggingSession:willBeginAtPoint:forRowIndexes:'; { available in macos  }
     procedure tableView_draggingSession_endedAtPoint_operation (tableView: NSTableView; session: NSDraggingSession; screenPoint: NSPoint; operation: NSDragOperation); message 'tableView:draggingSession:endedAtPoint:operation:'; { available in macos  }
-    procedure tableView_updateDraggingItemsForDrag (tableView: NSTableView; draggingInfo: id); message 'tableView:updateDraggingItemsForDrag:'; { available in macos  }
+    procedure tableView_updateDraggingItemsForDrag (tableView: NSTableView; draggingInfo: NSDraggingInfoProtocol); message 'tableView:updateDraggingItemsForDrag:'; { available in macos  }
     function tableView_writeRowsWithIndexes_toPasteboard (tableView: NSTableView; rowIndexes: NSIndexSet; pboard: NSPasteboard): objcbool; message 'tableView:writeRowsWithIndexes:toPasteboard:'; deprecated 'Use -tableView:pasteboardWriterForRow: instead';
-    function tableView_validateDrop_proposedRow_proposedDropOperation (tableView: NSTableView; info: id; row: NSInteger; dropOperation: NSTableViewDropOperation): NSDragOperation; message 'tableView:validateDrop:proposedRow:proposedDropOperation:';
-    function tableView_acceptDrop_row_dropOperation (tableView: NSTableView; info: id; row: NSInteger; dropOperation: NSTableViewDropOperation): objcbool; message 'tableView:acceptDrop:row:dropOperation:';
+    function tableView_validateDrop_proposedRow_proposedDropOperation (tableView: NSTableView; info: NSDraggingInfoProtocol; row: NSInteger; dropOperation: NSTableViewDropOperation): NSDragOperation; message 'tableView:validateDrop:proposedRow:proposedDropOperation:';
+    function tableView_acceptDrop_row_dropOperation (tableView: NSTableView; info: NSDraggingInfoProtocol; row: NSInteger; dropOperation: NSTableViewDropOperation): objcbool; message 'tableView:acceptDrop:row:dropOperation:';
     function tableView_namesOfPromisedFilesDroppedAtDestination_forDraggedRowsWithIndexes (tableView: NSTableView; dropDestination: NSURL; indexSet: NSIndexSet): NSArray; message 'tableView:namesOfPromisedFilesDroppedAtDestination:forDraggedRowsWithIndexes:'; deprecated 'Use NSFilePromiseReceiver objects instead';
   end;
 {$endif}

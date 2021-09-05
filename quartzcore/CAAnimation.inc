@@ -37,8 +37,8 @@ type
     function shouldArchiveValueForKey (key: NSString): objcbool; message 'shouldArchiveValueForKey:';
     procedure setTimingFunction(newValue: CAMediaTimingFunction); message 'setTimingFunction:';
     function timingFunction: CAMediaTimingFunction; message 'timingFunction';
-    procedure setDelegate(newValue: id); message 'setDelegate:';
-    function delegate: id; message 'delegate';
+    procedure setDelegate(newValue: CAAnimationDelegateProtocol); message 'setDelegate:';
+    function delegate: CAAnimationDelegateProtocol; message 'delegate';
     procedure setRemovedOnCompletion(newValue: objcbool); message 'setRemovedOnCompletion:';
     function isRemovedOnCompletion: objcbool; message 'isRemovedOnCompletion';
 

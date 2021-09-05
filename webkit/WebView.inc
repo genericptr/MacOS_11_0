@@ -41,16 +41,16 @@ type
     procedure close; message 'close';
     procedure setShouldCloseWithWindow(newValue: objcbool); message 'setShouldCloseWithWindow:';
     function shouldCloseWithWindow: objcbool; message 'shouldCloseWithWindow';
-    procedure setUIDelegate(newValue: id); message 'setUIDelegate:';
-    function UIDelegate: id; message 'UIDelegate';
-    procedure setResourceLoadDelegate(newValue: id); message 'setResourceLoadDelegate:';
-    function resourceLoadDelegate: id; message 'resourceLoadDelegate';
-    procedure setDownloadDelegate(newValue: id); message 'setDownloadDelegate:';
-    function downloadDelegate: id; message 'downloadDelegate';
-    procedure setFrameLoadDelegate(newValue: id); message 'setFrameLoadDelegate:';
-    function frameLoadDelegate: id; message 'frameLoadDelegate';
-    procedure setPolicyDelegate(newValue: id); message 'setPolicyDelegate:';
-    function policyDelegate: id; message 'policyDelegate';
+    procedure setUIDelegate(newValue: WebUIDelegateProtocol); message 'setUIDelegate:';
+    function UIDelegate: WebUIDelegateProtocol; message 'UIDelegate';
+    procedure setResourceLoadDelegate(newValue: WebResourceLoadDelegateProtocol); message 'setResourceLoadDelegate:';
+    function resourceLoadDelegate: WebResourceLoadDelegateProtocol; message 'resourceLoadDelegate';
+    procedure setDownloadDelegate(newValue: WebDownloadDelegateProtocol); message 'setDownloadDelegate:';
+    function downloadDelegate: WebDownloadDelegateProtocol; message 'downloadDelegate';
+    procedure setFrameLoadDelegate(newValue: WebFrameLoadDelegateProtocol); message 'setFrameLoadDelegate:';
+    function frameLoadDelegate: WebFrameLoadDelegateProtocol; message 'frameLoadDelegate';
+    procedure setPolicyDelegate(newValue: WebPolicyDelegateProtocol); message 'setPolicyDelegate:';
+    function policyDelegate: WebPolicyDelegateProtocol; message 'policyDelegate';
     function mainFrame: WebFrame; message 'mainFrame';
     function selectedFrame: WebFrame; message 'selectedFrame';
     function backForwardList: WebBackForwardList; message 'backForwardList';
@@ -157,8 +157,8 @@ type
     function isContinuousSpellCheckingEnabled: objcbool; message 'isContinuousSpellCheckingEnabled';
     function spellCheckerDocumentTag: NSInteger; message 'spellCheckerDocumentTag';
     function undoManager: NSUndoManager; message 'undoManager';
-    procedure setEditingDelegate(newValue: id); message 'setEditingDelegate:';
-    function editingDelegate: id; message 'editingDelegate';
+    procedure setEditingDelegate(newValue: WebEditingDelegateProtocol); message 'setEditingDelegate:';
+    function editingDelegate: WebEditingDelegateProtocol; message 'editingDelegate';
     function styleDeclarationWithText (text: NSString): DOMCSSStyleDeclaration; message 'styleDeclarationWithText:';
   end;
 

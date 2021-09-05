@@ -20,7 +20,7 @@ type
 
 {$ifdef FUNCTIONS}
 function CVMetalTextureCacheGetTypeID: CFTypeID; cdecl; external; { available in macosx , ios , tvos  }
-function CVMetalTextureCacheCreate(allocator: CFAllocatorRef; cacheAttributes: CFDictionaryRef; metalDevice: id; textureAttributes: CFDictionaryRef; cacheOut: CVMetalTextureCacheRefPtr): CVReturn; cdecl; external; { available in macosx , ios , tvos  }
+function CVMetalTextureCacheCreate(allocator: CFAllocatorRef; cacheAttributes: CFDictionaryRef; metalDevice: MTLDeviceProtocol; textureAttributes: CFDictionaryRef; cacheOut: CVMetalTextureCacheRefPtr): CVReturn; cdecl; external; { available in macosx , ios , tvos  }
 function CVMetalTextureCacheCreateTextureFromImage(allocator: CFAllocatorRef; textureCache: CVMetalTextureCacheRef; sourceImage: CVImageBufferRef; textureAttributes: CFDictionaryRef; pixelFormat: MTLPixelFormat; width: size_t; height: size_t; planeIndex: size_t; textureOut: CVMetalTextureRefPtr): CVReturn; cdecl; external; { available in macosx , ios , tvos  }
 function CVMetalTextureCacheFlush(textureCache: CVMetalTextureCacheRef; options: CVOptionFlags): pointer; cdecl; external; { available in macosx , ios , tvos  }
 {$endif}

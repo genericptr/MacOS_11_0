@@ -15,8 +15,8 @@ type
     function pastDiagnosticPayloads: NSArray; message 'pastDiagnosticPayloads'; { unavailable in macos, tvos, watchos }
     class function sharedManager: MXMetricManager; message 'sharedManager';
     class function makeLogHandleWithCategory (category: NSString): os_log_t; message 'makeLogHandleWithCategory:';
-    procedure addSubscriber (subscriber: id); message 'addSubscriber:';
-    procedure removeSubscriber (subscriber: id); message 'removeSubscriber:';
+    procedure addSubscriber (subscriber: MXMetricManagerSubscriberProtocol); message 'addSubscriber:';
+    procedure removeSubscriber (subscriber: MXMetricManagerSubscriberProtocol); message 'removeSubscriber:';
   end;
 {$endif}
 

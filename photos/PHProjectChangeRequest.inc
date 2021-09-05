@@ -27,7 +27,7 @@ type
     {$else}
     procedure setProjectPreviewImage (previewImage: NSImage); message 'setProjectPreviewImage:'; { available in macos  }
     {$endif}
-    procedure removeAssets (assets: id); message 'removeAssets:'; { available in macos  }
+    procedure removeAssets (assets: NSFastEnumerationProtocol); message 'removeAssets:'; { available in macos  }
   end;
 {$endif}
 

@@ -2,9 +2,9 @@
 
 {$ifdef CALLBACKS}
 type
-  MTLLibraryNewFunctionWithNameCallback = reference to procedure (function_: id; error: NSError); cblock; cdecl;
-  MTLLibraryNewFunctionWithDescriptorCallback = reference to procedure (function_: id; error: NSError); cblock; cdecl;
-  MTLLibraryNewIntersectionFunctionWithDescriptorCallback = reference to procedure (function_: id; error: NSError); cblock; cdecl;
+  MTLLibraryNewFunctionWithNameCallback = reference to procedure (function_: MTLFunctionProtocol; error: NSError); cblock; cdecl;
+  MTLLibraryNewFunctionWithDescriptorCallback = reference to procedure (function_: MTLFunctionProtocol; error: NSError); cblock; cdecl;
+  MTLLibraryNewIntersectionFunctionWithDescriptorCallback = reference to procedure (function_: MTLFunctionProtocol; error: NSError); cblock; cdecl;
 {$endif}
 
 
@@ -87,7 +87,7 @@ type
   MTLFunctionProtocol = objcprotocol external name 'MTLFunction' (NSObjectProtocol)
     procedure setLabel(newValue: NSString); message 'setLabel:'; { available in macos , ios  }
     function label_: NSString; message 'label'; { available in macos , ios  }
-    function device: id; message 'device';
+    function device: MTLDeviceProtocol; message 'device';
     function functionType: MTLFunctionType; message 'functionType';
     function patchType: MTLPatchType; message 'patchType'; { available in macos , ios  }
     function patchControlPointCount: NSInteger; message 'patchControlPointCount'; { available in macos , ios  }

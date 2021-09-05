@@ -24,8 +24,8 @@ var
 type
   PKPushRegistry = objcclass external (NSObject)
   public
-    procedure setDelegate(newValue: id); message 'setDelegate:';
-    function delegate: id; message 'delegate';
+    procedure setDelegate(newValue: PKPushRegistryDelegateProtocol); message 'setDelegate:';
+    function delegate: PKPushRegistryDelegateProtocol; message 'delegate';
     procedure setDesiredPushTypes(newValue: NSSet); message 'setDesiredPushTypes:';
     function desiredPushTypes: NSSet; message 'desiredPushTypes';
     function pushTokenForType (type_: PKPushType): NSData; message 'pushTokenForType:';

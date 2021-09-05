@@ -47,11 +47,11 @@ type
     function lastModifiedUserRecordID: CKRecordID; message 'lastModifiedUserRecordID';
     function modificationDate: NSDate; message 'modificationDate';
     function objectForKey (key: CKRecordFieldKey): id; message 'objectForKey:';
-    procedure setObject_forKey (object_: id; key: CKRecordFieldKey); message 'setObject:forKey:';
+    procedure setObject_forKey (object_: CKRecordValueProtocol; key: CKRecordFieldKey); message 'setObject:forKey:';
     function allKeys: NSArray; message 'allKeys';
     function allTokens: NSArray; message 'allTokens';
     function objectForKeyedSubscript (key: CKRecordFieldKey): id; message 'objectForKeyedSubscript:';
-    procedure setObject_forKeyedSubscript (object_: id; key: CKRecordFieldKey); message 'setObject:forKeyedSubscript:';
+    procedure setObject_forKeyedSubscript (object_: CKRecordValueProtocol; key: CKRecordFieldKey); message 'setObject:forKeyedSubscript:';
     function changedKeys: NSArray; message 'changedKeys';
     procedure encodeSystemFieldsWithCoder (coder: NSCoder); message 'encodeSystemFieldsWithCoder:';
     function share: CKReference; message 'share'; { available in macos , ios , tvos , watchos  }

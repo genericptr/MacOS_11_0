@@ -15,8 +15,8 @@ type
     function newTextureWithDescriptor_offset_bytesPerRow (descriptor: MTLTextureDescriptor; offset: NSUInteger; bytesPerRow: NSUInteger): id; message 'newTextureWithDescriptor:offset:bytesPerRow:'; { available in macos , ios  }
     procedure addDebugMarker_range (marker: NSString; range: NSRange); message 'addDebugMarker:range:'; { available in macos , ios  }
     procedure removeAllDebugMarkers; message 'removeAllDebugMarkers'; { available in macos , ios  }
-    function remoteStorageBuffer: id; message 'remoteStorageBuffer'; { unavailable in ios }
-    function newRemoteBufferViewForDevice (device: id): id; message 'newRemoteBufferViewForDevice:'; { unavailable in ios }
+    function remoteStorageBuffer: MTLBufferProtocol; message 'remoteStorageBuffer'; { unavailable in ios }
+    function newRemoteBufferViewForDevice (device: MTLDeviceProtocol): id; message 'newRemoteBufferViewForDevice:'; { unavailable in ios }
   end;
 {$endif}
 

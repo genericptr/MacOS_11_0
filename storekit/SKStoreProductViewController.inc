@@ -23,8 +23,8 @@ type
 type
   SKStoreProductViewController = objcclass external (NSViewController)
   public
-    procedure setDelegate(newValue: id); message 'setDelegate:'; { available in ios , macCatalyst , macos  }
-    function delegate: id; message 'delegate'; { available in ios , macCatalyst , macos  }
+    procedure setDelegate(newValue: SKStoreProductViewControllerDelegateProtocol); message 'setDelegate:'; { available in ios , macCatalyst , macos  }
+    function delegate: SKStoreProductViewControllerDelegateProtocol; message 'delegate'; { available in ios , macCatalyst , macos  }
     procedure loadProductWithParameters_completionBlock (parameters: NSDictionary; block: SKStoreProductViewControllerLoadProductWithParametersCallback); message 'loadProductWithParameters:completionBlock:'; { available in ios , macCatalyst , macos  }
   end;
 {$endif}

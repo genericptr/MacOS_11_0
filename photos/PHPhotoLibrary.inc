@@ -60,12 +60,12 @@ type
     class function authorizationStatus: PHAuthorizationStatus; message 'authorizationStatus'; deprecated 'replace with +authorizationStatusForAccessLevel:';
     class procedure requestAuthorization (handler: PHPhotoLibraryRequestAuthorizationCallback); message 'requestAuthorization:'; deprecated 'replace with +requestAuthorizationForAccessLevel:handler:';
     function unavailabilityReason: NSError; message 'unavailabilityReason'; { available in macos , ios , tvos  }
-    procedure registerAvailabilityObserver (observer: id); message 'registerAvailabilityObserver:'; { available in macos , ios , tvos  }
-    procedure unregisterAvailabilityObserver (observer: id); message 'unregisterAvailabilityObserver:'; { available in macos , ios , tvos  }
+    procedure registerAvailabilityObserver (observer: PHPhotoLibraryAvailabilityObserverProtocol); message 'registerAvailabilityObserver:'; { available in macos , ios , tvos  }
+    procedure unregisterAvailabilityObserver (observer: PHPhotoLibraryAvailabilityObserverProtocol); message 'unregisterAvailabilityObserver:'; { available in macos , ios , tvos  }
     procedure performChanges_completionHandler (changeBlock: dispatch_block_t; completionHandler: PHPhotoLibraryPerformChangesCallback); message 'performChanges:completionHandler:';
     function performChangesAndWait_error (changeBlock: dispatch_block_t; error: NSErrorPtr): objcbool; message 'performChangesAndWait:error:';
-    procedure registerChangeObserver (observer: id); message 'registerChangeObserver:';
-    procedure unregisterChangeObserver (observer: id); message 'unregisterChangeObserver:';
+    procedure registerChangeObserver (observer: PHPhotoLibraryChangeObserverProtocol); message 'registerChangeObserver:';
+    procedure unregisterChangeObserver (observer: PHPhotoLibraryChangeObserverProtocol); message 'unregisterChangeObserver:';
   end;
 {$endif}
 

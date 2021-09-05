@@ -13,8 +13,8 @@ type
     _session: id;
   public
     function initWithSessionID_displayName_sessionMode (sessionID: NSString; name: NSString; mode: GKSessionMode): id; message 'initWithSessionID:displayName:sessionMode:'; deprecated 'in 10_8, 10_10, 3_0, 7_0';
-    procedure setDelegate(newValue: id); message 'setDelegate:'; deprecated 'in 10_8, 10_10, 3_0, 7_0';
-    function delegate: id; message 'delegate'; deprecated 'in 10_8, 10_10, 3_0, 7_0';
+    procedure setDelegate(newValue: GKSessionDelegateProtocol); message 'setDelegate:'; deprecated 'in 10_8, 10_10, 3_0, 7_0';
+    function delegate: GKSessionDelegateProtocol; message 'delegate'; deprecated 'in 10_8, 10_10, 3_0, 7_0';
     function sessionID: NSString; message 'sessionID';
     function displayName: NSString; message 'displayName';
     function sessionMode: GKSessionMode; message 'sessionMode'; deprecated 'in 10_8, 10_10, 3_0, 7_0';

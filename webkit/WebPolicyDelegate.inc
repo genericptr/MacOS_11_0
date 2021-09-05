@@ -41,9 +41,9 @@ type
 type
   WebPolicyDelegateProtocol = objcprotocol external name 'WebPolicyDelegate' (NSObjectProtocol)
   optional
-    procedure webView_decidePolicyForNavigationAction_request_frame_decisionListener (webView_: WebView; actionInformation: NSDictionary; request: NSURLRequest; frame: WebFrame; listener: id); message 'webView:decidePolicyForNavigationAction:request:frame:decisionListener:';
-    procedure webView_decidePolicyForNewWindowAction_request_newFrameName_decisionListener (webView_: WebView; actionInformation: NSDictionary; request: NSURLRequest; frameName: NSString; listener: id); message 'webView:decidePolicyForNewWindowAction:request:newFrameName:decisionListener:';
-    procedure webView_decidePolicyForMIMEType_request_frame_decisionListener (webView_: WebView; type_: NSString; request: NSURLRequest; frame: WebFrame; listener: id); message 'webView:decidePolicyForMIMEType:request:frame:decisionListener:';
+    procedure webView_decidePolicyForNavigationAction_request_frame_decisionListener (webView_: WebView; actionInformation: NSDictionary; request: NSURLRequest; frame: WebFrame; listener: WebPolicyDecisionListenerProtocol); message 'webView:decidePolicyForNavigationAction:request:frame:decisionListener:';
+    procedure webView_decidePolicyForNewWindowAction_request_newFrameName_decisionListener (webView_: WebView; actionInformation: NSDictionary; request: NSURLRequest; frameName: NSString; listener: WebPolicyDecisionListenerProtocol); message 'webView:decidePolicyForNewWindowAction:request:newFrameName:decisionListener:';
+    procedure webView_decidePolicyForMIMEType_request_frame_decisionListener (webView_: WebView; type_: NSString; request: NSURLRequest; frame: WebFrame; listener: WebPolicyDecisionListenerProtocol); message 'webView:decidePolicyForMIMEType:request:frame:decisionListener:';
     procedure webView_unableToImplementPolicyWithError_frame (webView_: WebView; error: NSError; frame: WebFrame); message 'webView:unableToImplementPolicyWithError:frame:';
   end;
 {$endif}

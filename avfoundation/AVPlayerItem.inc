@@ -133,7 +133,7 @@ type
   AVPlayerItemVisualPresentation = objccategory external (AVPlayerItem)
     procedure setVideoComposition(newValue: AVVideoComposition); message 'setVideoComposition:'; { unavailable in watchos }
     function videoComposition: AVVideoComposition; message 'videoComposition'; { unavailable in watchos }
-    function customVideoCompositor: id; message 'customVideoCompositor'; { unavailable in watchos }
+    function customVideoCompositor: AVVideoCompositingProtocol; message 'customVideoCompositor'; { unavailable in watchos }
     procedure setSeekingWaitsForVideoCompositionRendering(newValue: objcbool); message 'setSeekingWaitsForVideoCompositionRendering:'; { unavailable in watchos }
     function seekingWaitsForVideoCompositionRendering: objcbool; message 'seekingWaitsForVideoCompositionRendering'; { unavailable in watchos }
     procedure setTextStyleRules(newValue: NSArray); message 'setTextStyleRules:'; { unavailable in watchos }

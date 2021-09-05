@@ -14,8 +14,8 @@ type
   private
     _internal: id;
   public
-    procedure setDelegate(newValue: id); message 'setDelegate:'; { available in ios , macos , watchos  }
-    function delegate: id; message 'delegate'; { available in ios , macos , watchos  }
+    procedure setDelegate(newValue: SKPaymentQueueDelegateProtocol); message 'setDelegate:'; { available in ios , macos , watchos  }
+    function delegate: SKPaymentQueueDelegateProtocol; message 'delegate'; { available in ios , macos , watchos  }
     function storefront: SKStorefront; message 'storefront'; { available in ios , macos , watchos  }
     class function defaultQueue: id; message 'defaultQueue'; { available in ios , macos , watchos  }
     class function canMakePayments: objcbool; message 'canMakePayments'; { available in ios , macos , watchos  }
@@ -27,8 +27,8 @@ type
     procedure pauseDownloads (downloads: NSArray); message 'pauseDownloads:'; { available in ios , macos , watchos  }
     procedure resumeDownloads (downloads: NSArray); message 'resumeDownloads:'; { available in ios , macos , watchos  }
     procedure cancelDownloads (downloads: NSArray); message 'cancelDownloads:'; { available in ios , macos , watchos  }
-    procedure addTransactionObserver (observer: id); message 'addTransactionObserver:'; { available in ios , macos , watchos  }
-    procedure removeTransactionObserver (observer: id); message 'removeTransactionObserver:'; { available in ios , macos , watchos  }
+    procedure addTransactionObserver (observer: SKPaymentTransactionObserverProtocol); message 'addTransactionObserver:'; { available in ios , macos , watchos  }
+    procedure removeTransactionObserver (observer: SKPaymentTransactionObserverProtocol); message 'removeTransactionObserver:'; { available in ios , macos , watchos  }
     function transactionObservers: NSArray; message 'transactionObservers'; { available in ios , macos , tvos , watchos  }
     function transactions: NSArray; message 'transactions'; { available in ios , macos , watchos  }
     procedure showPriceConsentIfNeeded; message 'showPriceConsentIfNeeded'; { unavailable in tvos, macos, watchos }

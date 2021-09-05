@@ -183,14 +183,14 @@ type
     class function isNativeType (type_: NSString): objcbool; message 'isNativeType:';
     function writableTypesForSaveOperation (saveOperation: NSSaveOperationType): NSArray; message 'writableTypesForSaveOperation:';
     function fileNameExtensionForType_saveOperation (typeName: NSString; saveOperation: NSSaveOperationType): NSString; message 'fileNameExtensionForType:saveOperation:'; { available in macos  }
-    function validateUserInterfaceItem (item: id): objcbool; message 'validateUserInterfaceItem:';
+    function validateUserInterfaceItem (item: NSValidatedUserInterfaceItemProtocol): objcbool; message 'validateUserInterfaceItem:';
     class function usesUbiquitousStorage: objcbool; message 'usesUbiquitousStorage'; { available in macos  }
 
     { Adopted protocols }
     procedure accommodatePresentedItemDeletionWithCompletionHandler (completionHandler: NSFilePresenterAccommodatePresentedItemDeletionWithCompletionHandlerCallback); message 'accommodatePresentedItemDeletionWithCompletionHandler:';
     procedure accommodatePresentedSubitemDeletionAtURL_completionHandler (url: NSURL; completionHandler: NSFilePresenterAccommodatePresentedSubitemDeletionAtURLCallback); message 'accommodatePresentedSubitemDeletionAtURL:completionHandler:';
-    procedure objectDidBeginEditing (editor: id); message 'objectDidBeginEditing:';
-    procedure objectDidEndEditing (editor: id); message 'objectDidEndEditing:';
+    procedure objectDidBeginEditing (editor: NSEditorProtocol); message 'objectDidBeginEditing:';
+    procedure objectDidEndEditing (editor: NSEditorProtocol); message 'objectDidEndEditing:';
     function observedPresentedItemUbiquityAttributes: NSSet; message 'observedPresentedItemUbiquityAttributes'; { unavailable in watchos, tvos }
     procedure presentedItemDidChange; message 'presentedItemDidChange';
     procedure presentedItemDidChangeUbiquityAttributes (attributes: NSSet); message 'presentedItemDidChangeUbiquityAttributes:'; { unavailable in watchos, tvos }

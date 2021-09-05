@@ -75,7 +75,7 @@ type
 
     { Adopted protocols }
     function activeCompressionOptions_: NSUserInterfaceCompressionOptions; message 'activeCompressionOptions';
-    function validateUserInterfaceItem (item: id): objcbool; message 'validateUserInterfaceItem:';
+    function validateUserInterfaceItem (item: NSValidatedUserInterfaceItemProtocol): objcbool; message 'validateUserInterfaceItem:';
   end;
 
 

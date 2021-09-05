@@ -30,7 +30,7 @@ type
   MTLDynamicLibraryProtocol = objcprotocol external name 'MTLDynamicLibrary' (NSObjectProtocol)
     procedure setLabel(newValue: NSString); message 'setLabel:';
     function label_: NSString; message 'label';
-    function device: id; message 'device';
+    function device: MTLDeviceProtocol; message 'device';
     function installName: NSString; message 'installName';
     function serializeToURL_error (url: NSURL; error: NSErrorPtr): objcbool; message 'serializeToURL:error:';
   end;

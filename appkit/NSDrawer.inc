@@ -30,8 +30,8 @@ type
     function contentView: NSView; message 'contentView';
     procedure setPreferredEdge(newValue: NSRectEdge); message 'setPreferredEdge:';
     function preferredEdge: NSRectEdge; message 'preferredEdge';
-    procedure setDelegate(newValue: id); message 'setDelegate:';
-    function delegate: id; message 'delegate';
+    procedure setDelegate(newValue: NSDrawerDelegateProtocol); message 'setDelegate:';
+    function delegate: NSDrawerDelegateProtocol; message 'delegate';
     procedure open; message 'open';
     procedure openOnEdge (edge: NSRectEdge); message 'openOnEdge:';
     procedure close; message 'close';

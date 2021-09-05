@@ -16,8 +16,8 @@ type
   public
     function init: id; message 'init';
     class function new_: id; message 'new';
-    procedure setSampleBufferDelegate_queue (sampleBufferDelegate: id; sampleBufferCallbackQueue: dispatch_queue_t); message 'setSampleBufferDelegate:queue:';
-    function sampleBufferDelegate: id; message 'sampleBufferDelegate';
+    procedure setSampleBufferDelegate_queue (sampleBufferDelegate: AVCaptureAudioDataOutputSampleBufferDelegateProtocol; sampleBufferCallbackQueue: dispatch_queue_t); message 'setSampleBufferDelegate:queue:';
+    function sampleBufferDelegate: AVCaptureAudioDataOutputSampleBufferDelegateProtocol; message 'sampleBufferDelegate';
     function sampleBufferCallbackQueue: dispatch_queue_t; message 'sampleBufferCallbackQueue';
     procedure setAudioSettings(newValue: NSDictionary); message 'setAudioSettings:'; { unavailable in ios, macCatalyst, watchos, tvos }
     function audioSettings: NSDictionary; message 'audioSettings'; { unavailable in ios, macCatalyst, watchos, tvos }

@@ -19,13 +19,13 @@ type
   DOMEvent = objcclass external (DOMObject)
   public
     function type_: NSString; message 'type';
-    function target: id; message 'target';
-    function currentTarget: id; message 'currentTarget';
+    function target: DOMEventTargetProtocol; message 'target';
+    function currentTarget: DOMEventTargetProtocol; message 'currentTarget';
     function eventPhase: cushort; message 'eventPhase';
     function bubbles: objcbool; message 'bubbles';
     function cancelable: objcbool; message 'cancelable';
     function timeStamp: DOMTimeStamp; message 'timeStamp';
-    function srcElement: id; message 'srcElement'; { available in 10_6 }
+    function srcElement: DOMEventTargetProtocol; message 'srcElement'; { available in 10_6 }
     procedure setReturnValue(newValue: objcbool); message 'setReturnValue:'; { available in 10_6 }
     function returnValue: objcbool; message 'returnValue'; { available in 10_6 }
     procedure setCancelBubble(newValue: objcbool); message 'setCancelBubble:'; { available in 10_6 }

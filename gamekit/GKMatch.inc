@@ -39,8 +39,8 @@ type
   GKMatch = objcclass external (NSObject)
   public
     function players: NSArray; message 'players'; { available in 10_10, 8_0 }
-    procedure setDelegate(newValue: id); message 'setDelegate:';
-    function delegate: id; message 'delegate';
+    procedure setDelegate(newValue: GKMatchDelegateProtocol); message 'setDelegate:';
+    function delegate: GKMatchDelegateProtocol; message 'delegate';
     function expectedPlayerCount: NSUInteger; message 'expectedPlayerCount';
     function sendData_toPlayers_dataMode_error (data: NSData; players_: NSArray; mode: GKMatchSendDataMode; error: NSErrorPtr): objcbool; message 'sendData:toPlayers:dataMode:error:'; { available in 10_10, 8_0 }
     function sendDataToAllPlayers_withDataMode_error (data: NSData; mode: GKMatchSendDataMode; error: NSErrorPtr): objcbool; message 'sendDataToAllPlayers:withDataMode:error:';

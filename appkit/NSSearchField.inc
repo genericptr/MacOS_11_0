@@ -42,8 +42,8 @@ type
     function maximumRecents: NSInteger; message 'maximumRecents'; { available in macos  }
     procedure setSendsSearchStringImmediately(newValue: objcbool); message 'setSendsSearchStringImmediately:'; { available in macos  }
     function sendsSearchStringImmediately: objcbool; message 'sendsSearchStringImmediately'; { available in macos  }
-    procedure setDelegate(newValue: id); message 'setDelegate:'; { available in macos  }
-    function delegate: id; message 'delegate'; { available in macos  }
+    procedure setDelegate(newValue: NSSearchFieldDelegateProtocol); message 'setDelegate:'; { available in macos  }
+    function delegate: NSSearchFieldDelegateProtocol; message 'delegate'; { available in macos  }
   end;
 
 

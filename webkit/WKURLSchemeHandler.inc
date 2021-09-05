@@ -9,8 +9,8 @@ type
 
 type
   WKURLSchemeHandlerProtocol = objcprotocol external name 'WKURLSchemeHandler' (NSObjectProtocol)
-    procedure webView_startURLSchemeTask (webView: WKWebView; urlSchemeTask: id); message 'webView:startURLSchemeTask:';
-    procedure webView_stopURLSchemeTask (webView: WKWebView; urlSchemeTask: id); message 'webView:stopURLSchemeTask:';
+    procedure webView_startURLSchemeTask (webView: WKWebView; urlSchemeTask: WKURLSchemeTaskProtocol); message 'webView:startURLSchemeTask:';
+    procedure webView_stopURLSchemeTask (webView: WKWebView; urlSchemeTask: WKURLSchemeTaskProtocol); message 'webView:stopURLSchemeTask:';
   end;
 {$endif}
 

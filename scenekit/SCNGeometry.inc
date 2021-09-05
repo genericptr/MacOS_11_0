@@ -94,7 +94,7 @@ type
     function edgeCreasesSource: SCNGeometrySource; message 'edgeCreasesSource'; { available in macos  }
 
     { Adopted protocols }
-    procedure addAnimation_forKey (animation: id; key: NSString); message 'addAnimation:forKey:';
+    procedure addAnimation_forKey (animation: SCNAnimationProtocol; key: NSString); message 'addAnimation:forKey:';
     procedure addAnimationPlayer_forKey (player: SCNAnimationPlayer; key: NSString); message 'addAnimationPlayer:forKey:'; { available in macos , ios , tvos , watchos  }
     function animationForKey (key: NSString): CAAnimationPtr; message 'animationForKey:'; deprecated 'replace with -animationPlayerForKey:';
     function animationKeys: NSArray; message 'animationKeys';
@@ -130,7 +130,7 @@ type
     class function geometrySourceWithNormals_count (normals: SCNVector3Ptr; count: NSInteger): id; message 'geometrySourceWithNormals:count:';
     class function geometrySourceWithTextureCoordinates_count (texcoord: CGPointPtr; count: NSInteger): id; message 'geometrySourceWithTextureCoordinates:count:';
     {$if defined(SCN_ENABLE_METAL)}
-    class function geometrySourceWithBuffer_vertexFormat_semantic_vertexCount_dataOffset_dataStride (buffer: id; vertexFormat: MTLVertexFormat; semantic: SCNGeometrySourceSemantic; vertexCount: NSInteger; offset: NSInteger; stride: NSInteger): id; message 'geometrySourceWithBuffer:vertexFormat:semantic:vertexCount:dataOffset:dataStride:'; { available in macos , ios  }
+    class function geometrySourceWithBuffer_vertexFormat_semantic_vertexCount_dataOffset_dataStride (buffer: MTLBufferProtocol; vertexFormat: MTLVertexFormat; semantic: SCNGeometrySourceSemantic; vertexCount: NSInteger; offset: NSInteger; stride: NSInteger): id; message 'geometrySourceWithBuffer:vertexFormat:semantic:vertexCount:dataOffset:dataStride:'; { available in macos , ios  }
     {$endif}
     function data: NSData; message 'data';
     function semantic: SCNGeometrySourceSemantic; message 'semantic';
@@ -152,7 +152,7 @@ type
   public
     class function geometryElementWithData_primitiveType_primitiveCount_bytesPerIndex (data: NSData; primitiveType: SCNGeometryPrimitiveType; primitiveCount: NSInteger; bytesPerIndex: NSInteger): id; message 'geometryElementWithData:primitiveType:primitiveCount:bytesPerIndex:';
     {$if defined(SCN_ENABLE_METAL)}
-    class function geometryElementWithBuffer_primitiveType_primitiveCount_bytesPerIndex (buffer: id; primitiveType: SCNGeometryPrimitiveType; primitiveCount: NSInteger; bytesPerIndex: NSInteger): id; message 'geometryElementWithBuffer:primitiveType:primitiveCount:bytesPerIndex:'; { available in macos , ios , tvos , watchos  }
+    class function geometryElementWithBuffer_primitiveType_primitiveCount_bytesPerIndex (buffer: MTLBufferProtocol; primitiveType: SCNGeometryPrimitiveType; primitiveCount: NSInteger; bytesPerIndex: NSInteger): id; message 'geometryElementWithBuffer:primitiveType:primitiveCount:bytesPerIndex:'; { available in macos , ios , tvos , watchos  }
     {$endif}
     function data: NSData; message 'data';
     function primitiveType: SCNGeometryPrimitiveType; message 'primitiveType';

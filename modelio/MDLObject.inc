@@ -18,10 +18,10 @@ type
   MDLObject = objcclass external (NSObject, MDLNamedProtocol)
   public
     function components: NSArray; message 'components';
-    procedure setComponent_forProtocol (component: id; protocol_: Protocol); message 'setComponent:forProtocol:';
+    procedure setComponent_forProtocol (component: MDLComponentProtocol; protocol_: Protocol); message 'setComponent:forProtocol:';
     function componentConformingToProtocol (protocol_: Protocol): id; message 'componentConformingToProtocol:';
     function objectForKeyedSubscript (key: Protocol): id; message 'objectForKeyedSubscript:';
-    procedure setObject_forKeyedSubscript (obj: id; key: Protocol); message 'setObject:forKeyedSubscript:';
+    procedure setObject_forKeyedSubscript (obj: MDLComponentProtocol; key: Protocol); message 'setObject:forKeyedSubscript:';
     procedure setParent(newValue: MDLObject); message 'setParent:';
     function parent: MDLObject; message 'parent';
     procedure setInstance(newValue: MDLObject); message 'setInstance:';
@@ -29,10 +29,10 @@ type
     function path: NSString; message 'path';
     function objectAtPath (path_: NSString): MDLObject; message 'objectAtPath:';
     procedure enumerateChildObjectsOfClass_root_usingBlock_stopPointer (objectClass: pobjc_class; root: MDLObject; block: MDLObjectEnumerateChildObjectsOfClassCallback; stopPointer: objcboolPtr); message 'enumerateChildObjectsOfClass:root:usingBlock:stopPointer:'; { available in macos , ios , tvos  }
-    procedure setTransform(newValue: id); message 'setTransform:';
-    function transform: id; message 'transform';
-    procedure setChildren(newValue: id); message 'setChildren:';
-    function children: id; message 'children';
+    procedure setTransform(newValue: MDLTransformComponentProtocol); message 'setTransform:';
+    function transform: MDLTransformComponentProtocol; message 'transform';
+    procedure setChildren(newValue: MDLObjectContainerComponentProtocol); message 'setChildren:';
+    function children: MDLObjectContainerComponentProtocol; message 'children';
     procedure setHidden(newValue: objcbool); message 'setHidden:';
     function hidden: objcbool; message 'hidden';
     procedure addChild (child: MDLObject); message 'addChild:';

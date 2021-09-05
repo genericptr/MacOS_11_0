@@ -16,7 +16,7 @@ type
 
 type
   NSUserInterfaceValidationsProtocol = objcprotocol external name 'NSUserInterfaceValidations'
-    function validateUserInterfaceItem (item: id): objcbool; message 'validateUserInterfaceItem:';
+    function validateUserInterfaceItem (item: NSValidatedUserInterfaceItemProtocol): objcbool; message 'validateUserInterfaceItem:';
   end;
 {$endif}
 

@@ -49,8 +49,8 @@ type
     function performKeyEquivalent (event: NSEvent): objcbool; message 'performKeyEquivalent:';
     procedure itemChanged (item: NSMenuItem); message 'itemChanged:';
     procedure performActionForItemAtIndex (index: NSInteger); message 'performActionForItemAtIndex:';
-    procedure setDelegate(newValue: id); message 'setDelegate:';
-    function delegate: id; message 'delegate';
+    procedure setDelegate(newValue: NSMenuDelegateProtocol); message 'setDelegate:';
+    function delegate: NSMenuDelegateProtocol; message 'delegate';
     function menuBarHeight: CGFloat; message 'menuBarHeight';
     procedure cancelTracking; message 'cancelTracking'; { available in macos  }
     procedure cancelTrackingWithoutAnimation; message 'cancelTrackingWithoutAnimation'; { available in macos  }

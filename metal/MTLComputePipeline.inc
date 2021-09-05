@@ -20,8 +20,8 @@ type
   public
     procedure setLabel(newValue: NSString); message 'setLabel:';
     function label_: NSString; message 'label';
-    procedure setComputeFunction(newValue: id); message 'setComputeFunction:';
-    function computeFunction: id; message 'computeFunction';
+    procedure setComputeFunction(newValue: MTLFunctionProtocol); message 'setComputeFunction:';
+    function computeFunction: MTLFunctionProtocol; message 'computeFunction';
     procedure setThreadGroupSizeIsMultipleOfThreadExecutionWidth(newValue: objcbool); message 'setThreadGroupSizeIsMultipleOfThreadExecutionWidth:';
     function threadGroupSizeIsMultipleOfThreadExecutionWidth: objcbool; message 'threadGroupSizeIsMultipleOfThreadExecutionWidth';
     procedure setMaxTotalThreadsPerThreadgroup(newValue: NSUInteger); message 'setMaxTotalThreadsPerThreadgroup:'; { available in macos , ios  }

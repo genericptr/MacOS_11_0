@@ -71,8 +71,8 @@ type
     function minDate: NSDate; message 'minDate';
     procedure setMaxDate(newValue: NSDate); message 'setMaxDate:';
     function maxDate: NSDate; message 'maxDate';
-    procedure setDelegate(newValue: id); message 'setDelegate:';
-    function delegate: id; message 'delegate';
+    procedure setDelegate(newValue: NSDatePickerCellDelegateProtocol); message 'setDelegate:';
+    function delegate: NSDatePickerCellDelegateProtocol; message 'delegate';
   end;
 {$endif}
 

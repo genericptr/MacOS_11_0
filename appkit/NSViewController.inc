@@ -72,7 +72,7 @@ type
 
 type
   NSViewControllerPresentation = objccategory external (NSViewController)
-    procedure presentViewController_animator (viewController: NSViewController; animator: id); message 'presentViewController:animator:'; { available in macos  }
+    procedure presentViewController_animator (viewController: NSViewController; animator: NSViewControllerPresentationAnimatorProtocol); message 'presentViewController:animator:'; { available in macos  }
     procedure dismissViewController (viewController: NSViewController); message 'dismissViewController:'; { available in macos  }
     procedure dismissController (sender: id); message 'dismissController:'; { available in macos  }
     function presentedViewControllers: NSArray; message 'presentedViewControllers'; { available in macos  }

@@ -36,8 +36,8 @@ type
   MLGPUConfigurationOptions = objccategory external (MLModelConfiguration)
     procedure setAllowLowPrecisionAccumulationOnGPU(newValue: objcbool); message 'setAllowLowPrecisionAccumulationOnGPU:';
     function allowLowPrecisionAccumulationOnGPU: objcbool; message 'allowLowPrecisionAccumulationOnGPU';
-    procedure setPreferredMetalDevice(newValue: id); message 'setPreferredMetalDevice:';
-    function preferredMetalDevice: id; message 'preferredMetalDevice';
+    procedure setPreferredMetalDevice(newValue: MTLDeviceProtocol); message 'setPreferredMetalDevice:';
+    function preferredMetalDevice: MTLDeviceProtocol; message 'preferredMetalDevice';
   end;
 
 type

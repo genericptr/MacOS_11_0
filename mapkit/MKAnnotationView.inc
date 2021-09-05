@@ -68,13 +68,13 @@ const
 type
   MKAnnotationView = objcclass external (NSView)
   public
-    function initWithAnnotation_reuseIdentifier (annotation: id; reuseIdentifier: NSString): id; message 'initWithAnnotation:reuseIdentifier:'; { NS_DESIGNATED_INITIALIZER }
+    function initWithAnnotation_reuseIdentifier (annotation: MKAnnotationProtocol; reuseIdentifier: NSString): id; message 'initWithAnnotation:reuseIdentifier:'; { NS_DESIGNATED_INITIALIZER }
     function initWithCoder (aDecoder: NSCoder): id; message 'initWithCoder:'; { NS_DESIGNATED_INITIALIZER }
     function reuseIdentifier: NSString; message 'reuseIdentifier';
     procedure prepareForReuse; message 'prepareForReuse';
     procedure prepareForDisplay; message 'prepareForDisplay'; { available in 10_13, 11_0 }
-    procedure setAnnotation(newValue: id); message 'setAnnotation:';
-    function annotation: id; message 'annotation';
+    procedure setAnnotation(newValue: MKAnnotationProtocol); message 'setAnnotation:';
+    function annotation: MKAnnotationProtocol; message 'annotation';
     {$if defined(TARGET_OS_IPHONE)}
     procedure setImage(newValue: UIImagePtr); message 'setImage:';
     function image: UIImagePtr; message 'image';

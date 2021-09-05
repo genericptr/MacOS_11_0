@@ -24,8 +24,8 @@ type
   public
     function initWithFrame_style (frame: NSRect; style: QLPreviewViewStyle): id; message 'initWithFrame:style:';
     function initWithFrame (frame: NSRect): id; message 'initWithFrame:';
-    procedure setPreviewItem(newValue: id); message 'setPreviewItem:';
-    function previewItem: id; message 'previewItem';
+    procedure setPreviewItem(newValue: QLPreviewItemProtocol); message 'setPreviewItem:';
+    function previewItem: QLPreviewItemProtocol; message 'previewItem';
     procedure refreshPreviewItem; message 'refreshPreviewItem';
     procedure setDisplayState(newValue: id); message 'setDisplayState:';
     function displayState: id; message 'displayState';

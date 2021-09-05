@@ -43,7 +43,7 @@ type
 type
   NSDraggingItem = objcclass external (NSObject)
   public
-    function initWithPasteboardWriter (pasteboardWriter: id): id; message 'initWithPasteboardWriter:'; { NS_DESIGNATED_INITIALIZER }
+    function initWithPasteboardWriter (pasteboardWriter: NSPasteboardWritingProtocol): id; message 'initWithPasteboardWriter:'; { NS_DESIGNATED_INITIALIZER }
     function init: id; message 'init';
     function item: id; message 'item';
     procedure setDraggingFrame(newValue: NSRect); message 'setDraggingFrame:';

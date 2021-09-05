@@ -19,16 +19,16 @@ type
     function audioListener: SCNNode; message 'audioListener'; { available in macos , ios  }
     function autoenablesDefaultLighting: objcbool; message 'autoenablesDefaultLighting';
     function colorPixelFormat: MTLPixelFormat; message 'colorPixelFormat'; { available in macos , ios  }
-    function commandQueue: id; message 'commandQueue'; { available in macos , ios  }
+    function commandQueue: MTLCommandQueueProtocol; message 'commandQueue'; { available in macos , ios  }
     function context: pointer; message 'context';
-    function currentRenderCommandEncoder: id; message 'currentRenderCommandEncoder'; { available in macos , ios  }
+    function currentRenderCommandEncoder: MTLRenderCommandEncoderProtocol; message 'currentRenderCommandEncoder'; { available in macos , ios  }
     function currentRenderPassDescriptor: MTLRenderPassDescriptor; message 'currentRenderPassDescriptor'; { unavailable in watchos }
     function currentTime: NSTimeInterval; message 'currentTime'; { unavailable in ios, tvos, watchos, macCatalyst }
     function currentViewport: CGRect; message 'currentViewport'; { available in macos , ios , tvos , watchos  }
     function debugOptions: SCNDebugOptions; message 'debugOptions'; { available in macos , ios  }
-    function delegate: id; message 'delegate';
+    function delegate: SCNSceneRendererDelegateProtocol; message 'delegate';
     function depthPixelFormat: MTLPixelFormat; message 'depthPixelFormat'; { available in macos , ios  }
-    function device: id; message 'device'; { available in macos , ios  }
+    function device: MTLDeviceProtocol; message 'device'; { available in macos , ios  }
     function hitTest_options (point: CGPoint; options: NSDictionary): NSArray; message 'hitTest:options:';
     function isJitteringEnabled: objcbool; message 'isJitteringEnabled';
     function isNodeInsideFrustum_withPointOfView (node: SCNNode; pointOfView: SCNNode): objcbool; message 'isNodeInsideFrustum:withPointOfView:'; { available in macos  }
@@ -49,7 +49,7 @@ type
     procedure setAutoenablesDefaultLighting (newValue: objcbool); message 'setAutoenablesDefaultLighting:';
     procedure setCurrentTime (newValue: NSTimeInterval); message 'setCurrentTime:'; { unavailable in ios, tvos, watchos, macCatalyst }
     procedure setDebugOptions (newValue: SCNDebugOptions); message 'setDebugOptions:'; { available in macos , ios  }
-    procedure setDelegate (newValue: id); message 'setDelegate:';
+    procedure setDelegate (newValue: SCNSceneRendererDelegateProtocol); message 'setDelegate:';
     procedure setJitteringEnabled (newValue: objcbool); message 'setJitteringEnabled:';
     procedure setLoops (newValue: objcbool); message 'setLoops:';
     procedure setOverlaySKScene (newValue: SKScene); message 'setOverlaySKScene:'; { available in macos  }

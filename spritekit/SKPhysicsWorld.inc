@@ -33,8 +33,8 @@ type
     function gravity: CGVector; message 'gravity';
     procedure setSpeed(newValue: CGFloat); message 'setSpeed:';
     function speed: CGFloat; message 'speed';
-    procedure setContactDelegate(newValue: id); message 'setContactDelegate:';
-    function contactDelegate: id; message 'contactDelegate';
+    procedure setContactDelegate(newValue: SKPhysicsContactDelegateProtocol); message 'setContactDelegate:';
+    function contactDelegate: SKPhysicsContactDelegateProtocol; message 'contactDelegate';
     procedure addJoint (joint: SKPhysicsJoint); message 'addJoint:';
     procedure removeJoint (joint: SKPhysicsJoint); message 'removeJoint:';
     procedure removeAllJoints; message 'removeAllJoints';

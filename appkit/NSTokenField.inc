@@ -29,8 +29,8 @@ type
 type
   NSTokenField = objcclass external (NSTextField)
   public
-    procedure setDelegate(newValue: id); message 'setDelegate:';
-    function delegate: id; message 'delegate';
+    procedure setDelegate(newValue: NSTokenFieldDelegateProtocol); message 'setDelegate:';
+    function delegate: NSTokenFieldDelegateProtocol; message 'delegate';
     procedure setTokenStyle(newValue: NSTokenStyle); message 'setTokenStyle:';
     function tokenStyle: NSTokenStyle; message 'tokenStyle';
     procedure setCompletionDelay(newValue: NSTimeInterval); message 'setCompletionDelay:';

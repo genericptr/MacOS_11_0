@@ -32,7 +32,7 @@ type
 type
   NSGlyphGenerator = objcclass external (NSObject)
   public
-    procedure generateGlyphsForGlyphStorage_desiredNumberOfCharacters_glyphIndex_characterIndex (glyphStorage: id; nChars: NSUInteger; glyphIndex: NSUIntegerPtr; charIndex: NSUIntegerPtr); message 'generateGlyphsForGlyphStorage:desiredNumberOfCharacters:glyphIndex:characterIndex:';
+    procedure generateGlyphsForGlyphStorage_desiredNumberOfCharacters_glyphIndex_characterIndex (glyphStorage: NSGlyphStorageProtocol; nChars: NSUInteger; glyphIndex: NSUIntegerPtr; charIndex: NSUIntegerPtr); message 'generateGlyphsForGlyphStorage:desiredNumberOfCharacters:glyphIndex:characterIndex:';
     class function sharedGlyphGenerator: NSGlyphGenerator; message 'sharedGlyphGenerator';
   end;
 {$endif}

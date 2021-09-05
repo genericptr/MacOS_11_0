@@ -34,8 +34,8 @@ type
     procedure setCompletes(newValue: objcbool); message 'setCompletes:';
     function completes: objcbool; message 'completes';
     function completedString (string_: NSString): NSString; message 'completedString:';
-    procedure setDataSource(newValue: id); message 'setDataSource:';
-    function dataSource: id; message 'dataSource';
+    procedure setDataSource(newValue: NSComboBoxCellDataSourceProtocol); message 'setDataSource:';
+    function dataSource: NSComboBoxCellDataSourceProtocol; message 'dataSource';
     procedure addItemWithObjectValue (object_: id); message 'addItemWithObjectValue:';
     procedure addItemsWithObjectValues (objects: NSArray); message 'addItemsWithObjectValues:';
     procedure insertItemWithObjectValue_atIndex (object_: id; index: NSInteger); message 'insertItemWithObjectValue:atIndex:';

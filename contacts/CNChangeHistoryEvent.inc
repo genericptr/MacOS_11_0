@@ -22,7 +22,7 @@ type
 type
   CNChangeHistoryEvent = objcclass external (NSObject, NSCopyingProtocol, NSSecureCodingProtocol)
   public
-    procedure acceptEventVisitor (visitor: id); message 'acceptEventVisitor:';
+    procedure acceptEventVisitor (visitor: CNChangeHistoryEventVisitorProtocol); message 'acceptEventVisitor:';
 
     { Adopted protocols }
     function copyWithZone (zone: NSZonePtr): id; message 'copyWithZone:';

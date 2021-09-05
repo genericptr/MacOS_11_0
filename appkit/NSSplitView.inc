@@ -36,8 +36,8 @@ type
     function dividerStyle: NSSplitViewDividerStyle; message 'dividerStyle'; { available in macos  }
     procedure setAutosaveName(newValue: NSSplitViewAutosaveName); message 'setAutosaveName:'; { available in macos  }
     function autosaveName: NSSplitViewAutosaveName; message 'autosaveName'; { available in macos  }
-    procedure setDelegate(newValue: id); message 'setDelegate:';
-    function delegate: id; message 'delegate';
+    procedure setDelegate(newValue: NSSplitViewDelegateProtocol); message 'setDelegate:';
+    function delegate: NSSplitViewDelegateProtocol; message 'delegate';
     procedure drawDividerInRect (rect: NSRect); message 'drawDividerInRect:';
     function dividerColor: NSColor; message 'dividerColor'; { available in macos  }
     function dividerThickness: CGFloat; message 'dividerThickness';

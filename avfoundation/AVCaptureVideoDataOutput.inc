@@ -16,8 +16,8 @@ type
   public
     function init: id; message 'init';
     class function new_: id; message 'new';
-    procedure setSampleBufferDelegate_queue (sampleBufferDelegate: id; sampleBufferCallbackQueue: dispatch_queue_t); message 'setSampleBufferDelegate:queue:';
-    function sampleBufferDelegate: id; message 'sampleBufferDelegate';
+    procedure setSampleBufferDelegate_queue (sampleBufferDelegate: AVCaptureVideoDataOutputSampleBufferDelegateProtocol; sampleBufferCallbackQueue: dispatch_queue_t); message 'setSampleBufferDelegate:queue:';
+    function sampleBufferDelegate: AVCaptureVideoDataOutputSampleBufferDelegateProtocol; message 'sampleBufferDelegate';
     function sampleBufferCallbackQueue: dispatch_queue_t; message 'sampleBufferCallbackQueue';
     procedure setVideoSettings(newValue: NSDictionary); message 'setVideoSettings:';
     function videoSettings: NSDictionary; message 'videoSettings';

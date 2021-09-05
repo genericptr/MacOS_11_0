@@ -250,8 +250,8 @@ type
     function isExcludedFromWindowsMenu: objcbool; message 'isExcludedFromWindowsMenu';
     procedure setContentView(newValue: NSView); message 'setContentView:';
     function contentView: NSView; message 'contentView';
-    procedure setDelegate(newValue: id); message 'setDelegate:';
-    function delegate: id; message 'delegate';
+    procedure setDelegate(newValue: NSWindowDelegateProtocol); message 'setDelegate:';
+    function delegate: NSWindowDelegateProtocol; message 'delegate';
     function windowNumber: NSInteger; message 'windowNumber';
     procedure setStyleMask(newValue: NSWindowStyleMask); message 'setStyleMask:';
     function styleMask: NSWindowStyleMask; message 'styleMask';
@@ -761,7 +761,7 @@ type
     procedure setAppearance (newValue: NSAppearance); message 'setAppearance:'; { available in macos  }
     procedure setIdentifier (newValue: NSUserInterfaceItemIdentifier); message 'setIdentifier:';
     function validateMenuItem (menuItem: NSMenuItem): objcbool; message 'validateMenuItem:';
-    function validateUserInterfaceItem (item: id): objcbool; message 'validateUserInterfaceItem:';
+    function validateUserInterfaceItem (item: NSValidatedUserInterfaceItemProtocol): objcbool; message 'validateUserInterfaceItem:';
   end;
 
 

@@ -22,14 +22,14 @@ type
     procedure handleBindingOfSymbol_usingBlock (symbol: NSString; block: SCNBindingBlock); message 'handleBindingOfSymbol:usingBlock:';
     function dictionaryRepresentation: NSDictionary; message 'dictionaryRepresentation';
     function objectForKeyedSubscript (key: id): id; message 'objectForKeyedSubscript:'; { available in macos , ios  }
-    procedure setObject_forKeyedSubscript (obj: id; key: id); message 'setObject:forKeyedSubscript:'; { available in macos , ios  }
+    procedure setObject_forKeyedSubscript (obj: id; key: NSCopyingProtocol); message 'setObject:forKeyedSubscript:'; { available in macos , ios  }
     {$if defined(SCN_ENABLE_METAL)}
-    procedure setLibrary(newValue: id); message 'setLibrary:'; { unavailable in watchos }
-    function library: id; message 'library'; { unavailable in watchos }
+    procedure setLibrary(newValue: MTLLibraryProtocol); message 'setLibrary:'; { unavailable in watchos }
+    function library: MTLLibraryProtocol; message 'library'; { unavailable in watchos }
     {$endif}
 
     { Adopted protocols }
-    procedure addAnimation_forKey (animation: id; key: NSString); message 'addAnimation:forKey:';
+    procedure addAnimation_forKey (animation: SCNAnimationProtocol; key: NSString); message 'addAnimation:forKey:';
     procedure addAnimationPlayer_forKey (player: SCNAnimationPlayer; key: NSString); message 'addAnimationPlayer:forKey:'; { available in macos , ios , tvos , watchos  }
     function animationForKey (key: NSString): CAAnimationPtr; message 'animationForKey:'; deprecated 'replace with -animationPlayerForKey:';
     function animationKeys: NSArray; message 'animationKeys';

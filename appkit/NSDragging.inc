@@ -97,15 +97,15 @@ type
 type
   NSDraggingDestinationProtocol = objcprotocol external name 'NSDraggingDestination' (NSObjectProtocol)
   optional
-    function draggingEntered (sender: id): NSDragOperation; message 'draggingEntered:';
-    function draggingUpdated (sender: id): NSDragOperation; message 'draggingUpdated:';
-    procedure draggingExited (sender: id); message 'draggingExited:';
-    function prepareForDragOperation (sender: id): objcbool; message 'prepareForDragOperation:';
-    function performDragOperation (sender: id): objcbool; message 'performDragOperation:';
-    procedure concludeDragOperation (sender: id); message 'concludeDragOperation:';
-    procedure draggingEnded (sender: id); message 'draggingEnded:';
+    function draggingEntered (sender: NSDraggingInfoProtocol): NSDragOperation; message 'draggingEntered:';
+    function draggingUpdated (sender: NSDraggingInfoProtocol): NSDragOperation; message 'draggingUpdated:';
+    procedure draggingExited (sender: NSDraggingInfoProtocol); message 'draggingExited:';
+    function prepareForDragOperation (sender: NSDraggingInfoProtocol): objcbool; message 'prepareForDragOperation:';
+    function performDragOperation (sender: NSDraggingInfoProtocol): objcbool; message 'performDragOperation:';
+    procedure concludeDragOperation (sender: NSDraggingInfoProtocol); message 'concludeDragOperation:';
+    procedure draggingEnded (sender: NSDraggingInfoProtocol); message 'draggingEnded:';
     function wantsPeriodicDraggingUpdates: objcbool; message 'wantsPeriodicDraggingUpdates';
-    procedure updateDraggingItemsForDrag (sender: id); message 'updateDraggingItemsForDrag:'; { available in macos  }
+    procedure updateDraggingItemsForDrag (sender: NSDraggingInfoProtocol); message 'updateDraggingItemsForDrag:'; { available in macos  }
   end;
 
 type
@@ -137,13 +137,13 @@ const
 type
   NSSpringLoadingDestinationProtocol = objcprotocol external name 'NSSpringLoadingDestination' (NSObjectProtocol)
   required
-    procedure springLoadingActivated_draggingInfo (activated: objcbool; draggingInfo: id); message 'springLoadingActivated:draggingInfo:'; { available in macos  }
-    procedure springLoadingHighlightChanged (draggingInfo: id); message 'springLoadingHighlightChanged:'; { available in macos  }
+    procedure springLoadingActivated_draggingInfo (activated: objcbool; draggingInfo: NSDraggingInfoProtocol); message 'springLoadingActivated:draggingInfo:'; { available in macos  }
+    procedure springLoadingHighlightChanged (draggingInfo: NSDraggingInfoProtocol); message 'springLoadingHighlightChanged:'; { available in macos  }
   optional
-    function springLoadingEntered (draggingInfo: id): NSSpringLoadingOptions; message 'springLoadingEntered:'; { available in macos  }
-    function springLoadingUpdated (draggingInfo: id): NSSpringLoadingOptions; message 'springLoadingUpdated:'; { available in macos  }
-    procedure springLoadingExited (draggingInfo: id); message 'springLoadingExited:'; { available in macos  }
-    procedure draggingEnded (draggingInfo: id); message 'draggingEnded:'; { available in macos  }
+    function springLoadingEntered (draggingInfo: NSDraggingInfoProtocol): NSSpringLoadingOptions; message 'springLoadingEntered:'; { available in macos  }
+    function springLoadingUpdated (draggingInfo: NSDraggingInfoProtocol): NSSpringLoadingOptions; message 'springLoadingUpdated:'; { available in macos  }
+    procedure springLoadingExited (draggingInfo: NSDraggingInfoProtocol); message 'springLoadingExited:'; { available in macos  }
+    procedure draggingEnded (draggingInfo: NSDraggingInfoProtocol); message 'draggingEnded:'; { available in macos  }
   end;
 {$endif}
 

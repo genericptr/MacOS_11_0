@@ -28,8 +28,8 @@ type
 
 type
   NSUserInterfaceItemSearching = objccategory external (NSApplication)
-    procedure registerUserInterfaceItemSearchHandler (handler: id); message 'registerUserInterfaceItemSearchHandler:'; { available in macos  }
-    procedure unregisterUserInterfaceItemSearchHandler (handler: id); message 'unregisterUserInterfaceItemSearchHandler:'; { available in macos  }
+    procedure registerUserInterfaceItemSearchHandler (handler: NSUserInterfaceItemSearchingProtocol); message 'registerUserInterfaceItemSearchHandler:'; { available in macos  }
+    procedure unregisterUserInterfaceItemSearchHandler (handler: NSUserInterfaceItemSearchingProtocol); message 'unregisterUserInterfaceItemSearchHandler:'; { available in macos  }
     function searchString_inUserInterfaceItemString_searchRange_foundRange (searchString: NSString; stringToSearch: NSString; searchRange: NSRange; foundRange: NSRangePtr): objcbool; message 'searchString:inUserInterfaceItemString:searchRange:foundRange:'; { available in macos  }
   end;
 {$endif}

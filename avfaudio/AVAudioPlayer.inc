@@ -33,8 +33,8 @@ type
     function duration: NSTimeInterval; message 'duration';
     procedure setCurrentDevice(newValue: NSString); message 'setCurrentDevice:'; { unavailable in ios, watchos, tvos }
     function currentDevice: NSString; message 'currentDevice'; { unavailable in ios, watchos, tvos }
-    procedure setDelegate(newValue: id); message 'setDelegate:';
-    function delegate: id; message 'delegate';
+    procedure setDelegate(newValue: AVAudioPlayerDelegateProtocol); message 'setDelegate:';
+    function delegate: AVAudioPlayerDelegateProtocol; message 'delegate';
     function url: NSURL; message 'url';
     function data: NSData; message 'data';
     procedure setPan(newValue: single); message 'setPan:'; { available in macos , ios , watchos , tvos  }

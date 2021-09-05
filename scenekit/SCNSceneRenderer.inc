@@ -72,8 +72,8 @@ type
     procedure presentScene_withTransition_incomingPointOfView_completionHandler (scene_: SCNScene; transition: SKTransition; pointOfView: SCNNode; completionHandler: SCNSceneRendererPresentSceneCallback); message 'presentScene:withTransition:incomingPointOfView:completionHandler:'; { available in macos , ios  }
     procedure setSceneTime(newValue: NSTimeInterval); message 'setSceneTime:'; { available in macos  }
     function sceneTime: NSTimeInterval; message 'sceneTime'; { available in macos  }
-    procedure setDelegate(newValue: id); message 'setDelegate:';
-    function delegate: id; message 'delegate';
+    procedure setDelegate(newValue: SCNSceneRendererDelegateProtocol); message 'setDelegate:';
+    function delegate: SCNSceneRendererDelegateProtocol; message 'delegate';
     function hitTest_options (point: CGPoint; options: NSDictionary): NSArray; message 'hitTest:options:';
     function isNodeInsideFrustum_withPointOfView (node: SCNNode; pointOfView: SCNNode): objcbool; message 'isNodeInsideFrustum:withPointOfView:'; { available in macos  }
     function nodesInsideFrustumWithPointOfView (pointOfView: SCNNode): NSArray; message 'nodesInsideFrustumWithPointOfView:'; { available in macos , ios  }
@@ -104,13 +104,13 @@ type
     function context: pointer; message 'context';
     {$endif}
     {$if defined(SCN_ENABLE_METAL)}
-    function currentRenderCommandEncoder: id; message 'currentRenderCommandEncoder'; { available in macos , ios  }
+    function currentRenderCommandEncoder: MTLRenderCommandEncoderProtocol; message 'currentRenderCommandEncoder'; { available in macos , ios  }
     function currentRenderPassDescriptor: MTLRenderPassDescriptor; message 'currentRenderPassDescriptor'; { unavailable in watchos }
-    function device: id; message 'device'; { available in macos , ios  }
+    function device: MTLDeviceProtocol; message 'device'; { available in macos , ios  }
     function colorPixelFormat: MTLPixelFormat; message 'colorPixelFormat'; { available in macos , ios  }
     function depthPixelFormat: MTLPixelFormat; message 'depthPixelFormat'; { available in macos , ios  }
     function stencilPixelFormat: MTLPixelFormat; message 'stencilPixelFormat'; { available in macos , ios  }
-    function commandQueue: id; message 'commandQueue'; { available in macos , ios  }
+    function commandQueue: MTLCommandQueueProtocol; message 'commandQueue'; { available in macos , ios  }
     {$endif}
     function audioEngine: AVAudioEngine; message 'audioEngine'; { available in macos , ios  }
     function audioEnvironmentNode: AVAudioEnvironmentNode; message 'audioEnvironmentNode'; { unavailable in watchos }
@@ -126,12 +126,12 @@ type
 type
   SCNSceneRendererDelegateProtocol = objcprotocol external name 'SCNSceneRendererDelegate' (NSObjectProtocol)
   optional
-    procedure renderer_updateAtTime (renderer: id; time: NSTimeInterval); message 'renderer:updateAtTime:'; { available in macos  }
-    procedure renderer_didApplyAnimationsAtTime (renderer: id; time: NSTimeInterval); message 'renderer:didApplyAnimationsAtTime:'; { available in macos  }
-    procedure renderer_didSimulatePhysicsAtTime (renderer: id; time: NSTimeInterval); message 'renderer:didSimulatePhysicsAtTime:'; { available in macos  }
-    procedure renderer_didApplyConstraintsAtTime (renderer: id; time: NSTimeInterval); message 'renderer:didApplyConstraintsAtTime:'; { available in macos , ios , tvos , watchos  }
-    procedure renderer_willRenderScene_atTime (renderer: id; scene: SCNScene; time: NSTimeInterval); message 'renderer:willRenderScene:atTime:';
-    procedure renderer_didRenderScene_atTime (renderer: id; scene: SCNScene; time: NSTimeInterval); message 'renderer:didRenderScene:atTime:';
+    procedure renderer_updateAtTime (renderer: SCNSceneRendererProtocol; time: NSTimeInterval); message 'renderer:updateAtTime:'; { available in macos  }
+    procedure renderer_didApplyAnimationsAtTime (renderer: SCNSceneRendererProtocol; time: NSTimeInterval); message 'renderer:didApplyAnimationsAtTime:'; { available in macos  }
+    procedure renderer_didSimulatePhysicsAtTime (renderer: SCNSceneRendererProtocol; time: NSTimeInterval); message 'renderer:didSimulatePhysicsAtTime:'; { available in macos  }
+    procedure renderer_didApplyConstraintsAtTime (renderer: SCNSceneRendererProtocol; time: NSTimeInterval); message 'renderer:didApplyConstraintsAtTime:'; { available in macos , ios , tvos , watchos  }
+    procedure renderer_willRenderScene_atTime (renderer: SCNSceneRendererProtocol; scene: SCNScene; time: NSTimeInterval); message 'renderer:willRenderScene:atTime:';
+    procedure renderer_didRenderScene_atTime (renderer: SCNSceneRendererProtocol; scene: SCNScene; time: NSTimeInterval); message 'renderer:didRenderScene:atTime:';
   end;
 {$endif}
 

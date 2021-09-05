@@ -32,8 +32,8 @@ type
     procedure getAllCookies (completionHandler: WKHTTPCookieStoreGetAllCookiesCallback); message 'getAllCookies:';
     procedure setCookie_completionHandler (cookie: NSHTTPCookie; completionHandler: WKHTTPCookieStoreSetCookieCallback); message 'setCookie:completionHandler:';
     procedure deleteCookie_completionHandler (cookie: NSHTTPCookie; completionHandler: WKHTTPCookieStoreDeleteCookieCallback); message 'deleteCookie:completionHandler:';
-    procedure addObserver (observer: id); message 'addObserver:';
-    procedure removeObserver (observer: id); message 'removeObserver:';
+    procedure addObserver (observer: WKHTTPCookieStoreObserverProtocol); message 'addObserver:';
+    procedure removeObserver (observer: WKHTTPCookieStoreObserverProtocol); message 'removeObserver:';
   end;
 {$endif}
 

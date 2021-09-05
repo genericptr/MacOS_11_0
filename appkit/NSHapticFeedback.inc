@@ -40,7 +40,7 @@ type
 type
   NSHapticFeedbackManager = objcclass external (NSObject)
   public
-    class function defaultPerformer: id; message 'defaultPerformer';
+    class function defaultPerformer: NSHapticFeedbackPerformerProtocol; message 'defaultPerformer';
   end;
 {$endif}
 

@@ -63,12 +63,12 @@ type
     function adoptNode (source: DOMNode): DOMNode; message 'adoptNode:'; { available in 10_5 }
     function createEvent (eventType: NSString): DOMEvent; message 'createEvent:';
     function createRange: DOMRange; message 'createRange';
-    function createNodeIterator_whatToShow_filter_expandEntityReferences (root: DOMNode; whatToShow: cuint; filter: id; expandEntityReferences: objcbool): DOMNodeIterator; message 'createNodeIterator:whatToShow:filter:expandEntityReferences:'; { available in 10_5 }
-    function createTreeWalker_whatToShow_filter_expandEntityReferences (root: DOMNode; whatToShow: cuint; filter: id; expandEntityReferences: objcbool): DOMTreeWalker; message 'createTreeWalker:whatToShow:filter:expandEntityReferences:'; { available in 10_5 }
+    function createNodeIterator_whatToShow_filter_expandEntityReferences (root: DOMNode; whatToShow: cuint; filter: DOMNodeFilterProtocol; expandEntityReferences: objcbool): DOMNodeIterator; message 'createNodeIterator:whatToShow:filter:expandEntityReferences:'; { available in 10_5 }
+    function createTreeWalker_whatToShow_filter_expandEntityReferences (root: DOMNode; whatToShow: cuint; filter: DOMNodeFilterProtocol; expandEntityReferences: objcbool): DOMTreeWalker; message 'createTreeWalker:whatToShow:filter:expandEntityReferences:'; { available in 10_5 }
     function getOverrideStyle_pseudoElement (element: DOMElement; pseudoElement: NSString): DOMCSSStyleDeclaration; message 'getOverrideStyle:pseudoElement:'; { available in 10_5 }
-    function createExpression_resolver (expression: NSString; resolver: id): DOMXPathExpression; message 'createExpression:resolver:'; { available in 10_5 }
+    function createExpression_resolver (expression: NSString; resolver: DOMXPathNSResolverProtocol): DOMXPathExpression; message 'createExpression:resolver:'; { available in 10_5 }
     function createNSResolver (nodeResolver: DOMNode): id; message 'createNSResolver:'; { available in 10_5 }
-    function evaluate_contextNode_resolver_type_inResult (expression: NSString; contextNode: DOMNode; resolver: id; type_: cushort; inResult: DOMXPathResult): DOMXPathResult; message 'evaluate:contextNode:resolver:type:inResult:'; { available in 10_5 }
+    function evaluate_contextNode_resolver_type_inResult (expression: NSString; contextNode: DOMNode; resolver: DOMXPathNSResolverProtocol; type_: cushort; inResult: DOMXPathResult): DOMXPathResult; message 'evaluate:contextNode:resolver:type:inResult:'; { available in 10_5 }
     function execCommand_userInterface_value (command: NSString; userInterface: objcbool; value: NSString): objcbool; message 'execCommand:userInterface:value:'; { available in 10_5 }
     function execCommand_userInterface (command: NSString; userInterface: objcbool): objcbool; message 'execCommand:userInterface:'; { available in 10_5 }
     function execCommand (command: NSString): objcbool; message 'execCommand:'; { available in 10_5 }
@@ -99,11 +99,11 @@ type
     function createElementNS (namespaceURI_: NSString): DOMElement; message 'createElementNS:'; deprecated 'in 10_4, 10_5';
     function createAttributeNS (namespaceURI_: NSString): DOMAttr; message 'createAttributeNS:'; deprecated 'in 10_4, 10_5';
     function getElementsByTagNameNS (namespaceURI_: NSString): DOMNodeList; message 'getElementsByTagNameNS:'; deprecated 'in 10_4, 10_5';
-    function createNodeIterator_whatToShow (root: DOMNode; filter: id): DOMNodeIterator; message 'createNodeIterator:whatToShow:'; deprecated 'in 10_4, 10_5';
-    function createTreeWalker_whatToShow (root: DOMNode; filter: id): DOMTreeWalker; message 'createTreeWalker:whatToShow:'; deprecated 'in 10_4, 10_5';
+    function createNodeIterator_whatToShow (root: DOMNode; filter: DOMNodeFilterProtocol): DOMNodeIterator; message 'createNodeIterator:whatToShow:'; deprecated 'in 10_4, 10_5';
+    function createTreeWalker_whatToShow (root: DOMNode; filter: DOMNodeFilterProtocol): DOMTreeWalker; message 'createTreeWalker:whatToShow:'; deprecated 'in 10_4, 10_5';
     function getOverrideStyle (element: DOMElement): DOMCSSStyleDeclaration; message 'getOverrideStyle:'; deprecated 'in 10_4, 10_5';
     function createExpression (expression: NSString): DOMXPathExpression; message 'createExpression:'; deprecated 'in 10_5, 10_5';
-    function evaluate_contextNode_type (expression: NSString; resolver: id; inResult: DOMXPathResult): DOMXPathResult; message 'evaluate:contextNode:type:'; deprecated 'in 10_5, 10_5';
+    function evaluate_contextNode_type (expression: NSString; resolver: DOMXPathNSResolverProtocol; inResult: DOMXPathResult): DOMXPathResult; message 'evaluate:contextNode:type:'; deprecated 'in 10_5, 10_5';
     function getComputedStyle (element: DOMElement): DOMCSSStyleDeclaration; message 'getComputedStyle:'; deprecated 'in 10_4, 10_5';
   end;
 {$endif}

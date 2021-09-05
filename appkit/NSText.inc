@@ -59,8 +59,8 @@ type
     function RTFDFromRange (range: NSRange): NSData; message 'RTFDFromRange:';
     function writeRTFDToFile_atomically (path: NSString; flag: objcbool): objcbool; message 'writeRTFDToFile:atomically:';
     function readRTFDFromFile (path: NSString): objcbool; message 'readRTFDFromFile:';
-    procedure setDelegate(newValue: id); message 'setDelegate:';
-    function delegate: id; message 'delegate';
+    procedure setDelegate(newValue: NSTextDelegateProtocol); message 'setDelegate:';
+    function delegate: NSTextDelegateProtocol; message 'delegate';
     procedure setEditable(newValue: objcbool); message 'setEditable:';
     function isEditable: objcbool; message 'isEditable';
     procedure setSelectable(newValue: objcbool); message 'setSelectable:';

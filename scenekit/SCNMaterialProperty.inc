@@ -56,7 +56,7 @@ type
     function maxAnisotropy: CGFloat; message 'maxAnisotropy'; { available in macos  }
 
     { Adopted protocols }
-    procedure addAnimation_forKey (animation: id; key: NSString); message 'addAnimation:forKey:';
+    procedure addAnimation_forKey (animation: SCNAnimationProtocol; key: NSString); message 'addAnimation:forKey:';
     procedure addAnimationPlayer_forKey (player: SCNAnimationPlayer; key: NSString); message 'addAnimationPlayer:forKey:'; { available in macos , ios , tvos , watchos  }
     function animationForKey (key: NSString): CAAnimationPtr; message 'animationForKey:'; deprecated 'replace with -animationPlayerForKey:';
     function animationKeys: NSArray; message 'animationKeys';

@@ -40,8 +40,8 @@ type
     function init: id; message 'init'; { available in macos  }
     procedure insertItemWithItemIdentifier_atIndex (itemIdentifier: NSToolbarItemIdentifier; index: NSInteger); message 'insertItemWithItemIdentifier:atIndex:';
     procedure removeItemAtIndex (index: NSInteger); message 'removeItemAtIndex:';
-    procedure setDelegate(newValue: id); message 'setDelegate:';
-    function delegate: id; message 'delegate';
+    procedure setDelegate(newValue: NSToolbarDelegateProtocol); message 'setDelegate:';
+    function delegate: NSToolbarDelegateProtocol; message 'delegate';
     procedure setVisible(newValue: objcbool); message 'setVisible:';
     function isVisible: objcbool; message 'isVisible';
     procedure runCustomizationPalette (sender: id); message 'runCustomizationPalette:';

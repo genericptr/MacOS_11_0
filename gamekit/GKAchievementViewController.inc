@@ -11,8 +11,8 @@ type
 type
   GKAchievementViewController = objcclass external (GKGameCenterViewController)
   public
-    procedure setAchievementDelegate(newValue: id); message 'setAchievementDelegate:';
-    function achievementDelegate: id; message 'achievementDelegate';
+    procedure setAchievementDelegate(newValue: GKAchievementViewControllerDelegateProtocol); message 'setAchievementDelegate:';
+    function achievementDelegate: GKAchievementViewControllerDelegateProtocol; message 'achievementDelegate';
   end;
 {$endif}
 

@@ -48,8 +48,8 @@ type
     function helpAnchor: NSHelpAnchorName; message 'helpAnchor';
     procedure setAlertStyle(newValue: NSAlertStyle); message 'setAlertStyle:';
     function alertStyle: NSAlertStyle; message 'alertStyle';
-    procedure setDelegate(newValue: id); message 'setDelegate:';
-    function delegate: id; message 'delegate';
+    procedure setDelegate(newValue: NSAlertDelegateProtocol); message 'setDelegate:';
+    function delegate: NSAlertDelegateProtocol; message 'delegate';
     procedure setShowsSuppressionButton(newValue: objcbool); message 'setShowsSuppressionButton:'; { available in macos  }
     function showsSuppressionButton: objcbool; message 'showsSuppressionButton'; { available in macos  }
     function suppressionButton: NSButton; message 'suppressionButton'; { available in macos  }

@@ -33,8 +33,8 @@ type
 type
   SKCloudServiceSetupViewController = objcclass external (NSViewController)
   public
-    procedure setDelegate(newValue: id); message 'setDelegate:'; { unavailable in macos }
-    function delegate: id; message 'delegate'; { unavailable in macos }
+    procedure setDelegate(newValue: SKCloudServiceSetupViewControllerDelegateProtocol); message 'setDelegate:'; { unavailable in macos }
+    function delegate: SKCloudServiceSetupViewControllerDelegateProtocol; message 'delegate'; { unavailable in macos }
     procedure loadWithOptions_completionHandler (options: NSDictionary; completionHandler: SKCloudServiceSetupViewControllerLoadWithOptionsCallback); message 'loadWithOptions:completionHandler:'; { unavailable in macos }
   end;
 {$endif}

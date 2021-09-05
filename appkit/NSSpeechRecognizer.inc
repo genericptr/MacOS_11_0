@@ -14,8 +14,8 @@ type
     function init: id; message 'init';
     procedure startListening; message 'startListening';
     procedure stopListening; message 'stopListening';
-    procedure setDelegate(newValue: id); message 'setDelegate:';
-    function delegate: id; message 'delegate';
+    procedure setDelegate(newValue: NSSpeechRecognizerDelegateProtocol); message 'setDelegate:';
+    function delegate: NSSpeechRecognizerDelegateProtocol; message 'delegate';
     procedure setCommands(newValue: NSArray); message 'setCommands:';
     function commands: NSArray; message 'commands';
     procedure setDisplayedCommandsTitle(newValue: NSString); message 'setDisplayedCommandsTitle:';

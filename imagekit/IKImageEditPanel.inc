@@ -30,8 +30,8 @@ type
   private
     _privateData: pointer;
   public
-    procedure setDataSource(newValue: id); message 'setDataSource:';
-    function dataSource: id; message 'dataSource';
+    procedure setDataSource(newValue: IKImageEditPanelDataSourceProtocol); message 'setDataSource:';
+    function dataSource: IKImageEditPanelDataSourceProtocol; message 'dataSource';
     function filterArray: NSArray; message 'filterArray';
     class function sharedImageEditPanel: IKImageEditPanel; message 'sharedImageEditPanel';
     procedure reloadData; message 'reloadData';

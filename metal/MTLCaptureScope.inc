@@ -13,8 +13,8 @@ type
     procedure endScope; message 'endScope';
     procedure setLabel(newValue: NSString); message 'setLabel:';
     function label_: NSString; message 'label';
-    function device: id; message 'device';
-    function commandQueue: id; message 'commandQueue';
+    function device: MTLDeviceProtocol; message 'device';
+    function commandQueue: MTLCommandQueueProtocol; message 'commandQueue';
   end;
 {$endif}
 

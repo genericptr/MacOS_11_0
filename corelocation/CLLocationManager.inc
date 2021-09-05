@@ -75,8 +75,8 @@ type
     class function classAuthorizationStatus: CLAuthorizationStatus; message 'authorizationStatus'; deprecated 'replace with -authorizationStatus';
     function accuracyAuthorization: CLAccuracyAuthorization; message 'accuracyAuthorization'; { available in ios , macos , watchos , tvos  }
     function isAuthorizedForWidgetUpdates: objcbool; message 'isAuthorizedForWidgetUpdates'; { unavailable in watchos, tvos }
-    procedure setDelegate(newValue: id); message 'setDelegate:';
-    function delegate: id; message 'delegate';
+    procedure setDelegate(newValue: CLLocationManagerDelegateProtocol); message 'setDelegate:';
+    function delegate: CLLocationManagerDelegateProtocol; message 'delegate';
     function locationServicesEnabled: objcbool; message 'locationServicesEnabled'; { unavailable in watchos, tvos }
     procedure setPurpose(newValue: NSString); message 'setPurpose:'; { unavailable in watchos, tvos }
     function purpose: NSString; message 'purpose'; { unavailable in watchos, tvos }

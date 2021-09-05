@@ -12,8 +12,8 @@ type
   public
     procedure setDisplayedKeys(newValue: NSArray); message 'setDisplayedKeys:';
     function displayedKeys: NSArray; message 'displayedKeys';
-    procedure setDelegate(newValue: id); message 'setDelegate:';
-    function delegate: id; message 'delegate';
+    procedure setDelegate(newValue: CNContactPickerDelegateProtocol); message 'setDelegate:';
+    function delegate: CNContactPickerDelegateProtocol; message 'delegate';
     procedure showRelativeToRect_ofView_preferredEdge (positioningRect: NSRect; positioningView: NSView; preferredEdge: NSRectEdge); message 'showRelativeToRect:ofView:preferredEdge:';
     procedure close; message 'close';
   end;

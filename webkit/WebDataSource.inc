@@ -14,7 +14,7 @@ type
   public
     function initWithRequest (request: NSURLRequest): id; message 'initWithRequest:';
     function data: NSData; message 'data';
-    function representation: id; message 'representation';
+    function representation: WebDocumentRepresentationProtocol; message 'representation';
     function webFrame: WebFrame; message 'webFrame';
     function initialRequest: NSURLRequest; message 'initialRequest';
     function request: NSMutableURLRequest; message 'request';

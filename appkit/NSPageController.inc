@@ -24,8 +24,8 @@ const
 type
   NSPageController = objcclass external (NSViewController, NSAnimatablePropertyContainerProtocol, NSCodingProtocol)
   public
-    procedure setDelegate(newValue: id); message 'setDelegate:';
-    function delegate: id; message 'delegate';
+    procedure setDelegate(newValue: NSPageControllerDelegateProtocol); message 'setDelegate:';
+    function delegate: NSPageControllerDelegateProtocol; message 'delegate';
     function selectedViewController: NSViewController; message 'selectedViewController';
     procedure setTransitionStyle(newValue: NSPageControllerTransitionStyle); message 'setTransitionStyle:';
     function transitionStyle: NSPageControllerTransitionStyle; message 'transitionStyle';

@@ -73,7 +73,7 @@ type
     function videoSettings: NSDictionary; message 'videoSettings';
     procedure setVideoComposition(newValue: AVVideoComposition); message 'setVideoComposition:';
     function videoComposition: AVVideoComposition; message 'videoComposition';
-    function customVideoCompositor: id; message 'customVideoCompositor'; { unavailable in watchos }
+    function customVideoCompositor: AVVideoCompositingProtocol; message 'customVideoCompositor'; { unavailable in watchos }
   end;
 
 type

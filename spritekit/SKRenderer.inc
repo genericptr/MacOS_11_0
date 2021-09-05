@@ -11,9 +11,9 @@ type
 type
   SKRenderer = objcclass external (NSObject)
   public
-    class function rendererWithDevice (device: id): SKRenderer; message 'rendererWithDevice:';
-    procedure renderWithViewport_commandBuffer_renderPassDescriptor (viewport: CGRect; commandBuffer: id; renderPassDescriptor: MTLRenderPassDescriptorPtr); message 'renderWithViewport:commandBuffer:renderPassDescriptor:';
-    procedure renderWithViewport_renderCommandEncoder_renderPassDescriptor_commandQueue (viewport: CGRect; renderCommandEncoder: id; renderPassDescriptor: MTLRenderPassDescriptorPtr; commandQueue: id); message 'renderWithViewport:renderCommandEncoder:renderPassDescriptor:commandQueue:';
+    class function rendererWithDevice (device: MTLDeviceProtocol): SKRenderer; message 'rendererWithDevice:';
+    procedure renderWithViewport_commandBuffer_renderPassDescriptor (viewport: CGRect; commandBuffer: MTLCommandBufferProtocol; renderPassDescriptor: MTLRenderPassDescriptorPtr); message 'renderWithViewport:commandBuffer:renderPassDescriptor:';
+    procedure renderWithViewport_renderCommandEncoder_renderPassDescriptor_commandQueue (viewport: CGRect; renderCommandEncoder: MTLRenderCommandEncoderProtocol; renderPassDescriptor: MTLRenderPassDescriptorPtr; commandQueue: MTLCommandQueueProtocol); message 'renderWithViewport:renderCommandEncoder:renderPassDescriptor:commandQueue:';
     procedure updateAtTime (currentTime: NSTimeInterval); message 'updateAtTime:';
     procedure setScene(newValue: SKScene); message 'setScene:';
     function scene: SKScene; message 'scene';

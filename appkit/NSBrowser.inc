@@ -44,8 +44,8 @@ type
     procedure setCellClass (factoryId: pobjc_class); message 'setCellClass:';
     procedure setCellPrototype(newValue: id); message 'setCellPrototype:';
     function cellPrototype: id; message 'cellPrototype';
-    procedure setDelegate(newValue: id); message 'setDelegate:';
-    function delegate: id; message 'delegate';
+    procedure setDelegate(newValue: NSBrowserDelegateProtocol); message 'setDelegate:';
+    function delegate: NSBrowserDelegateProtocol; message 'delegate';
     procedure setReusesColumns(newValue: objcbool); message 'setReusesColumns:';
     function reusesColumns: objcbool; message 'reusesColumns';
     procedure setHasHorizontalScroller(newValue: objcbool); message 'setHasHorizontalScroller:';
@@ -184,8 +184,8 @@ type
     function browser_namesOfPromisedFilesDroppedAtDestination_forDraggedRowsWithIndexes_inColumn (browser: NSBrowser; dropDestination: NSURL; rowIndexes: NSIndexSet; column: NSInteger): NSArray; message 'browser:namesOfPromisedFilesDroppedAtDestination:forDraggedRowsWithIndexes:inColumn:'; deprecated 'Use NSFilePromiseReceiver objects instead';
     function browser_canDragRowsWithIndexes_inColumn_withEvent (browser: NSBrowser; rowIndexes: NSIndexSet; column: NSInteger; event: NSEvent): objcbool; message 'browser:canDragRowsWithIndexes:inColumn:withEvent:'; { available in macos  }
     function browser_draggingImageForRowsWithIndexes_inColumn_withEvent_offset (browser: NSBrowser; rowIndexes: NSIndexSet; column: NSInteger; event: NSEvent; dragImageOffset: NSPointPointer): NSImage; message 'browser:draggingImageForRowsWithIndexes:inColumn:withEvent:offset:'; { available in macos  }
-    function browser_validateDrop_proposedRow_column_dropOperation (browser: NSBrowser; info: id; row: NSIntegerPtr; column: NSIntegerPtr; dropOperation: NSBrowserDropOperationPtr): NSDragOperation; message 'browser:validateDrop:proposedRow:column:dropOperation:'; { available in macos  }
-    function browser_acceptDrop_atRow_column_dropOperation (browser: NSBrowser; info: id; row: NSInteger; column: NSInteger; dropOperation: NSBrowserDropOperation): objcbool; message 'browser:acceptDrop:atRow:column:dropOperation:'; { available in macos  }
+    function browser_validateDrop_proposedRow_column_dropOperation (browser: NSBrowser; info: NSDraggingInfoProtocol; row: NSIntegerPtr; column: NSIntegerPtr; dropOperation: NSBrowserDropOperationPtr): NSDragOperation; message 'browser:validateDrop:proposedRow:column:dropOperation:'; { available in macos  }
+    function browser_acceptDrop_atRow_column_dropOperation (browser: NSBrowser; info: NSDraggingInfoProtocol; row: NSInteger; column: NSInteger; dropOperation: NSBrowserDropOperation): objcbool; message 'browser:acceptDrop:atRow:column:dropOperation:'; { available in macos  }
     function browser_typeSelectStringForRow_inColumn (browser: NSBrowser; row: NSInteger; column: NSInteger): NSString; message 'browser:typeSelectStringForRow:inColumn:'; { available in macos  }
     function browser_shouldTypeSelectForEvent_withCurrentSearchString (browser: NSBrowser; event: NSEvent; searchString: NSString): objcbool; message 'browser:shouldTypeSelectForEvent:withCurrentSearchString:'; { available in macos  }
     function browser_nextTypeSelectMatchFromRow_toRow_inColumn_forString (browser: NSBrowser; startRow: NSInteger; endRow: NSInteger; column: NSInteger; searchString: NSString): NSInteger; message 'browser:nextTypeSelectMatchFromRow:toRow:inColumn:forString:'; { available in macos  }

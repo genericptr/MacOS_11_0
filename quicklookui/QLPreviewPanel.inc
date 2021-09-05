@@ -18,13 +18,13 @@ type
     class function sharedPreviewPanelExists: objcbool; message 'sharedPreviewPanelExists';
     function currentController: id; message 'currentController';
     procedure updateController; message 'updateController';
-    procedure setDataSource(newValue: id); message 'setDataSource:';
-    function dataSource: id; message 'dataSource';
+    procedure setDataSource(newValue: QLPreviewPanelDataSourceProtocol); message 'setDataSource:';
+    function dataSource: QLPreviewPanelDataSourceProtocol; message 'dataSource';
     procedure reloadData; message 'reloadData';
     procedure refreshCurrentPreviewItem; message 'refreshCurrentPreviewItem';
     procedure setCurrentPreviewItemIndex(newValue: NSInteger); message 'setCurrentPreviewItemIndex:';
     function currentPreviewItemIndex: NSInteger; message 'currentPreviewItemIndex';
-    function currentPreviewItem: id; message 'currentPreviewItem';
+    function currentPreviewItem: QLPreviewItemProtocol; message 'currentPreviewItem';
     procedure setDisplayState(newValue: id); message 'setDisplayState:';
     function displayState: id; message 'displayState';
     procedure setDelegate(newValue: id); message 'setDelegate:';
@@ -56,8 +56,8 @@ type
   QLPreviewPanelDelegateProtocol = objcprotocol external name 'QLPreviewPanelDelegate' (NSWindowDelegateProtocol)
   optional
     function previewPanel_handleEvent (panel: QLPreviewPanel; event: NSEventPtr): objcbool; message 'previewPanel:handleEvent:';
-    function previewPanel_sourceFrameOnScreenForPreviewItem (panel: QLPreviewPanel; item: id): NSRect; message 'previewPanel:sourceFrameOnScreenForPreviewItem:';
-    function previewPanel_transitionImageForPreviewItem_contentRect (panel: QLPreviewPanel; item: id; contentRect: NSRectPtr): id; message 'previewPanel:transitionImageForPreviewItem:contentRect:';
+    function previewPanel_sourceFrameOnScreenForPreviewItem (panel: QLPreviewPanel; item: QLPreviewItemProtocol): NSRect; message 'previewPanel:sourceFrameOnScreenForPreviewItem:';
+    function previewPanel_transitionImageForPreviewItem_contentRect (panel: QLPreviewPanel; item: QLPreviewItemProtocol; contentRect: NSRectPtr): id; message 'previewPanel:transitionImageForPreviewItem:contentRect:';
   end;
 {$endif}
 

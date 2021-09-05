@@ -19,8 +19,8 @@ type
   public
     procedure setClient(newValue: NSView); message 'setClient:';
     function client: NSView; message 'client';
-    procedure setDelegate(newValue: id); message 'setDelegate:'; { unavailable in macCatalyst }
-    function delegate: id; message 'delegate'; { unavailable in macCatalyst }
+    procedure setDelegate(newValue: NSCandidateListTouchBarItemDelegateProtocol); message 'setDelegate:'; { unavailable in macCatalyst }
+    function delegate: NSCandidateListTouchBarItemDelegateProtocol; message 'delegate'; { unavailable in macCatalyst }
     procedure setCollapsed(newValue: objcbool); message 'setCollapsed:'; { unavailable in macCatalyst }
     function isCollapsed: objcbool; message 'isCollapsed'; { unavailable in macCatalyst }
     procedure setAllowsCollapsing(newValue: objcbool); message 'setAllowsCollapsing:'; { unavailable in macCatalyst }

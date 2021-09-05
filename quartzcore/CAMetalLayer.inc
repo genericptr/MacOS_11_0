@@ -10,7 +10,7 @@ type
 
 type
   CAMetalDrawableProtocol = objcprotocol external name 'CAMetalDrawable' (MTLDrawableProtocol)
-    function texture: id; message 'texture';
+    function texture: MTLTextureProtocol; message 'texture';
     function layer: CAMetalLayer; message 'layer';
   end;
 {$endif}
@@ -22,16 +22,16 @@ type
   private
     _priv: _CAMetalLayerPrivatePtr;
   public
-    procedure setDevice(newValue: id); message 'setDevice:';
-    function device: id; message 'device';
-    function preferredDevice: id; message 'preferredDevice'; { available in macos , ios , watchos , tvos  }
+    procedure setDevice(newValue: MTLDeviceProtocol); message 'setDevice:';
+    function device: MTLDeviceProtocol; message 'device';
+    function preferredDevice: MTLDeviceProtocol; message 'preferredDevice'; { available in macos , ios , watchos , tvos  }
     procedure setPixelFormat(newValue: MTLPixelFormat); message 'setPixelFormat:';
     function pixelFormat: MTLPixelFormat; message 'pixelFormat';
     procedure setFramebufferOnly(newValue: objcbool); message 'setFramebufferOnly:';
     function framebufferOnly: objcbool; message 'framebufferOnly';
     procedure setDrawableSize(newValue: CGSize); message 'setDrawableSize:';
     function drawableSize: CGSize; message 'drawableSize';
-    function nextDrawable: id; message 'nextDrawable';
+    function nextDrawable: CAMetalDrawableProtocol; message 'nextDrawable';
     procedure setMaximumDrawableCount(newValue: NSUInteger); message 'setMaximumDrawableCount:'; { available in macos , ios , watchos , tvos  }
     function maximumDrawableCount: NSUInteger; message 'maximumDrawableCount'; { available in macos , ios , watchos , tvos  }
     procedure setPresentsWithTransaction(newValue: objcbool); message 'setPresentsWithTransaction:';

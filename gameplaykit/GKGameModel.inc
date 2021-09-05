@@ -29,15 +29,15 @@ type
 type
   GKGameModelProtocol = objcprotocol external name 'GKGameModel' (NSObjectProtocol, NSCopyingProtocol)
     function players: NSArray; message 'players';
-    function activePlayer: id; message 'activePlayer';
-    procedure setGameModel (gameModel: id); message 'setGameModel:';
-    function gameModelUpdatesForPlayer (player: id): NSArray; message 'gameModelUpdatesForPlayer:';
-    procedure applyGameModelUpdate (gameModelUpdate: id); message 'applyGameModelUpdate:';
+    function activePlayer: GKGameModelPlayerProtocol; message 'activePlayer';
+    procedure setGameModel (gameModel: GKGameModelProtocol); message 'setGameModel:';
+    function gameModelUpdatesForPlayer (player: GKGameModelPlayerProtocol): NSArray; message 'gameModelUpdatesForPlayer:';
+    procedure applyGameModelUpdate (gameModelUpdate: GKGameModelUpdateProtocol); message 'applyGameModelUpdate:';
   optional
-    function scoreForPlayer (player: id): NSInteger; message 'scoreForPlayer:';
-    function isWinForPlayer (player: id): objcbool; message 'isWinForPlayer:';
-    function isLossForPlayer (player: id): objcbool; message 'isLossForPlayer:';
-    procedure unapplyGameModelUpdate (gameModelUpdate: id); message 'unapplyGameModelUpdate:';
+    function scoreForPlayer (player: GKGameModelPlayerProtocol): NSInteger; message 'scoreForPlayer:';
+    function isWinForPlayer (player: GKGameModelPlayerProtocol): objcbool; message 'isWinForPlayer:';
+    function isLossForPlayer (player: GKGameModelPlayerProtocol): objcbool; message 'isLossForPlayer:';
+    procedure unapplyGameModelUpdate (gameModelUpdate: GKGameModelUpdateProtocol); message 'unapplyGameModelUpdate:';
   end;
 {$endif}
 

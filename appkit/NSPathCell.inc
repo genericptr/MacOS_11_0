@@ -26,11 +26,11 @@ type
     function pathStyle: NSPathStyle; message 'pathStyle';
     procedure setURL(newValue: NSURL); message 'setURL:';
     function URL: NSURL; message 'URL';
-    procedure setObjectValue (obj: id); message 'setObjectValue:';
+    procedure setObjectValue (obj: NSCopyingProtocol); message 'setObjectValue:';
     procedure setAllowedTypes(newValue: NSArray); message 'setAllowedTypes:';
     function allowedTypes: NSArray; message 'allowedTypes';
-    procedure setDelegate(newValue: id); message 'setDelegate:';
-    function delegate: id; message 'delegate';
+    procedure setDelegate(newValue: NSPathCellDelegateProtocol); message 'setDelegate:';
+    function delegate: NSPathCellDelegateProtocol; message 'delegate';
     class function pathComponentCellClass: pobjc_class; message 'pathComponentCellClass';
     procedure setPathComponentCells(newValue: NSArray); message 'setPathComponentCells:';
     function pathComponentCells: NSArray; message 'pathComponentCells';

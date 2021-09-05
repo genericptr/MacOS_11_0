@@ -22,8 +22,8 @@ type
     _metadataCollectorInternal: AVPlayerItemMetadataCollectorInternal;
   public
     function initWithIdentifiers_classifyingLabels (identifiers: NSArray; classifyingLabels: NSArray): id; message 'initWithIdentifiers:classifyingLabels:';
-    procedure setDelegate_queue (delegate: id; delegateQueue: dispatch_queue_t); message 'setDelegate:queue:';
-    function delegate: id; message 'delegate';
+    procedure setDelegate_queue (delegate: AVPlayerItemMetadataCollectorPushDelegateProtocol; delegateQueue: dispatch_queue_t); message 'setDelegate:queue:';
+    function delegate: AVPlayerItemMetadataCollectorPushDelegateProtocol; message 'delegate';
     function delegateQueue: dispatch_queue_t; message 'delegateQueue';
   end;
 {$endif}

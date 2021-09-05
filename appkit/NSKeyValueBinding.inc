@@ -89,8 +89,8 @@ type
 type
   NSEditorRegistrationProtocol = objcprotocol external name 'NSEditorRegistration' (NSObjectProtocol)
   optional
-    procedure objectDidBeginEditing (editor: id); message 'objectDidBeginEditing:';
-    procedure objectDidEndEditing (editor: id); message 'objectDidEndEditing:';
+    procedure objectDidBeginEditing (editor: NSEditorProtocol); message 'objectDidBeginEditing:';
+    procedure objectDidEndEditing (editor: NSEditorProtocol); message 'objectDidEndEditing:';
   end;
 {$endif}
 
@@ -107,8 +107,8 @@ type
 
 type
   NSEditorRegistration = objccategory external (NSObject)
-    procedure objectDidBeginEditing (editor: id); message 'objectDidBeginEditing:'; deprecated 'This is now a method of the NSEditorRegistration protocol.';
-    procedure objectDidEndEditing (editor: id); message 'objectDidEndEditing:'; deprecated 'This is now a method of the NSEditorRegistration protocol.';
+    procedure objectDidBeginEditing (editor: NSEditorProtocol); message 'objectDidBeginEditing:'; deprecated 'This is now a method of the NSEditorRegistration protocol.';
+    procedure objectDidEndEditing (editor: NSEditorProtocol); message 'objectDidEndEditing:'; deprecated 'This is now a method of the NSEditorRegistration protocol.';
   end;
 {$endif}
 

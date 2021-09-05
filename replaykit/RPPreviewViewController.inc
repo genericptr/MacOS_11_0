@@ -30,8 +30,8 @@ const
 type
   RPPreviewViewController = objcclass external (NSViewController)
   public
-    procedure setPreviewControllerDelegate(newValue: id); message 'setPreviewControllerDelegate:';
-    function previewControllerDelegate: id; message 'previewControllerDelegate';
+    procedure setPreviewControllerDelegate(newValue: RPPreviewViewControllerDelegateProtocol); message 'setPreviewControllerDelegate:';
+    function previewControllerDelegate: RPPreviewViewControllerDelegateProtocol; message 'previewControllerDelegate';
     {$if defined(TARGET_OS_TV)}
     procedure setMode(newValue: RPPreviewViewControllerMode); message 'setMode:'; { available in 10_0 }
     function mode: RPPreviewViewControllerMode; message 'mode'; { available in 10_0 }

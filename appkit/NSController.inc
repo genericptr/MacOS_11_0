@@ -12,8 +12,8 @@ type
   public
     function init: id; message 'init'; { NS_DESIGNATED_INITIALIZER }
     function initWithCoder (coder: NSCoder): id; message 'initWithCoder:'; { NS_DESIGNATED_INITIALIZER }
-    procedure objectDidBeginEditing (editor: id); message 'objectDidBeginEditing:';
-    procedure objectDidEndEditing (editor: id); message 'objectDidEndEditing:';
+    procedure objectDidBeginEditing (editor: NSEditorProtocol); message 'objectDidBeginEditing:';
+    procedure objectDidEndEditing (editor: NSEditorProtocol); message 'objectDidEndEditing:';
     procedure discardEditing; message 'discardEditing';
     function commitEditing: objcbool; message 'commitEditing';
     procedure commitEditingWithDelegate_didCommitSelector_contextInfo (delegate: id; didCommitSelector: SEL; contextInfo: pointer); message 'commitEditingWithDelegate:didCommitSelector:contextInfo:';

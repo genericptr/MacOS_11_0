@@ -31,8 +31,8 @@ const
 type
   CBPeripheral = objcclass external (CBPeer)
   public
-    procedure setDelegate(newValue: id); message 'setDelegate:';
-    function delegate: id; message 'delegate';
+    procedure setDelegate(newValue: CBPeripheralDelegateProtocol); message 'setDelegate:';
+    function delegate: CBPeripheralDelegateProtocol; message 'delegate';
     function name: NSString; message 'name';
     function RSSI: NSNumber; message 'RSSI'; deprecated 'in 10_7, 10_13, 5_0, 8_0';
     function state: CBPeripheralState; message 'state';

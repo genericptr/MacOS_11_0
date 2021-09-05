@@ -19,7 +19,7 @@ type
   PHProjectExtensionControllerProtocol = objcprotocol external name 'PHProjectExtensionController' (NSObjectProtocol)
   optional
     function supportedProjectTypes: NSArray; message 'supportedProjectTypes'; deprecated 'replace with -typeDescriptionDataSourceForCategory:invalidator:';
-    function typeDescriptionDataSourceForCategory_invalidator (category: PHProjectCategory; invalidator: id): id; message 'typeDescriptionDataSourceForCategory:invalidator:'; { available in macos  }
+    function typeDescriptionDataSourceForCategory_invalidator (category: PHProjectCategory; invalidator: PHProjectTypeDescriptionInvalidatorProtocol): id; message 'typeDescriptionDataSourceForCategory:invalidator:'; { available in macos  }
   required
     procedure beginProjectWithExtensionContext_projectInfo_completion (extensionContext: PHProjectExtensionContext; projectInfo: PHProjectInfo; completion: PHProjectExtensionControllerBeginProjectWithExtensionContextCallback); message 'beginProjectWithExtensionContext:projectInfo:completion:';
     procedure resumeProjectWithExtensionContext_completion (extensionContext: PHProjectExtensionContext; completion: PHProjectExtensionControllerResumeProjectWithExtensionContextCallback); message 'resumeProjectWithExtensionContext:completion:';

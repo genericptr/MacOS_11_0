@@ -48,8 +48,8 @@ type
     procedure discardRecordingWithHandler (handler: RPScreenRecorderDiscardRecordingWithHandlerCallback); message 'discardRecordingWithHandler:';
     procedure startCaptureWithHandler_completionHandler (captureHandler: RPScreenRecorderStartCaptureWithHandlerCallback; completionHandler: RPScreenRecorderStartCaptureWithHandlerCallback); message 'startCaptureWithHandler:completionHandler:'; { available in ios , tvos , macos  }
     procedure stopCaptureWithHandler (handler: RPScreenRecorderStopCaptureWithHandlerCallback); message 'stopCaptureWithHandler:'; { available in ios , tvos , macos  }
-    procedure setDelegate(newValue: id); message 'setDelegate:';
-    function delegate: id; message 'delegate';
+    procedure setDelegate(newValue: RPScreenRecorderDelegateProtocol); message 'setDelegate:';
+    function delegate: RPScreenRecorderDelegateProtocol; message 'delegate';
     function isAvailable: objcbool; message 'isAvailable';
     function isRecording: objcbool; message 'isRecording';
     procedure setMicrophoneEnabled(newValue: objcbool); message 'setMicrophoneEnabled:'; { unavailable in tvos }

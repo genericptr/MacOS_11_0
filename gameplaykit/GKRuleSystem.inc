@@ -28,13 +28,13 @@ type
     function agenda: NSArray; message 'agenda';
     function executed: NSArray; message 'executed';
     function facts: NSArray; message 'facts';
-    function gradeForFact (fact: id): single; message 'gradeForFact:';
+    function gradeForFact (fact: NSObjectProtocol): single; message 'gradeForFact:';
     function minimumGradeForFacts (facts_: NSArray): single; message 'minimumGradeForFacts:';
     function maximumGradeForFacts (facts_: NSArray): single; message 'maximumGradeForFacts:';
-    procedure assertFact (fact: id); message 'assertFact:';
-    procedure assertFact_grade (fact: id; grade: single); message 'assertFact:grade:';
-    procedure retractFact (fact: id); message 'retractFact:';
-    procedure retractFact_grade (fact: id; grade: single); message 'retractFact:grade:';
+    procedure assertFact (fact: NSObjectProtocol); message 'assertFact:';
+    procedure assertFact_grade (fact: NSObjectProtocol; grade: single); message 'assertFact:grade:';
+    procedure retractFact (fact: NSObjectProtocol); message 'retractFact:';
+    procedure retractFact_grade (fact: NSObjectProtocol; grade: single); message 'retractFact:grade:';
     procedure reset; message 'reset';
   end;
 
@@ -45,8 +45,8 @@ type
     function salience: NSInteger; message 'salience';
     function evaluatePredicateWithSystem (system: GKRuleSystem): objcbool; message 'evaluatePredicateWithSystem:';
     procedure performActionWithSystem (system: GKRuleSystem); message 'performActionWithSystem:';
-    class function ruleWithPredicate_assertingFact_grade (predicate: NSPredicate; fact: id; grade: single): id; message 'ruleWithPredicate:assertingFact:grade:';
-    class function ruleWithPredicate_retractingFact_grade (predicate: NSPredicate; fact: id; grade: single): id; message 'ruleWithPredicate:retractingFact:grade:';
+    class function ruleWithPredicate_assertingFact_grade (predicate: NSPredicate; fact: NSObjectProtocol; grade: single): id; message 'ruleWithPredicate:assertingFact:grade:';
+    class function ruleWithPredicate_retractingFact_grade (predicate: NSPredicate; fact: NSObjectProtocol; grade: single): id; message 'ruleWithPredicate:retractingFact:grade:';
     class function ruleWithBlockPredicate_action (predicate: GKRuleSystemRuleWithBlockPredicateCallback; action: GKRuleSystemRuleWithBlockPredicateCallback): id; message 'ruleWithBlockPredicate:action:';
   end;
 

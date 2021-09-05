@@ -87,8 +87,8 @@ type
     procedure removeTextContainerAtIndex (index: NSUInteger); message 'removeTextContainerAtIndex:';
     procedure textContainerChangedGeometry (container: NSTextContainer); message 'textContainerChangedGeometry:';
     procedure textContainerChangedTextView (container: NSTextContainer); message 'textContainerChangedTextView:';
-    procedure setDelegate(newValue: id); message 'setDelegate:';
-    function delegate: id; message 'delegate';
+    procedure setDelegate(newValue: NSLayoutManagerDelegateProtocol); message 'setDelegate:';
+    function delegate: NSLayoutManagerDelegateProtocol; message 'delegate';
     procedure setShowsInvisibleCharacters(newValue: objcbool); message 'setShowsInvisibleCharacters:';
     function showsInvisibleCharacters: objcbool; message 'showsInvisibleCharacters';
     procedure setShowsControlCharacters(newValue: objcbool); message 'setShowsControlCharacters:';

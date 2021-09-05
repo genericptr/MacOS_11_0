@@ -14,7 +14,7 @@ type
     function outputShapesForInputShapes_error (inputShapes: NSArray; error: NSErrorPtr): NSArray; message 'outputShapesForInputShapes:error:';
     function evaluateOnCPUWithInputs_outputs_error (inputs: NSArray; outputs: NSArray; error: NSErrorPtr): objcbool; message 'evaluateOnCPUWithInputs:outputs:error:';
   optional
-    function encodeToCommandBuffer_inputs_outputs_error (commandBuffer: id; inputs: NSArray; outputs: NSArray; error: NSErrorPtr): objcbool; message 'encodeToCommandBuffer:inputs:outputs:error:';
+    function encodeToCommandBuffer_inputs_outputs_error (commandBuffer: MTLCommandBufferProtocol; inputs: NSArray; outputs: NSArray; error: NSErrorPtr): objcbool; message 'encodeToCommandBuffer:inputs:outputs:error:';
   end;
 {$endif}
 

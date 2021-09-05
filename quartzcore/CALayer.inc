@@ -190,8 +190,8 @@ type
     function shadowPath: CGPathRef; message 'shadowPath';
     procedure setAutoresizingMask(newValue: CAAutoresizingMask); message 'setAutoresizingMask:';
     function autoresizingMask: CAAutoresizingMask; message 'autoresizingMask';
-    procedure setLayoutManager(newValue: id); message 'setLayoutManager:';
-    function layoutManager: id; message 'layoutManager';
+    procedure setLayoutManager(newValue: CALayoutManagerProtocol); message 'setLayoutManager:';
+    function layoutManager: CALayoutManagerProtocol; message 'layoutManager';
     function preferredFrameSize: CGSize; message 'preferredFrameSize';
     procedure setNeedsLayout; message 'setNeedsLayout';
     function needsLayout: objcbool; message 'needsLayout';
@@ -210,8 +210,8 @@ type
     function animationForKey (key: NSString): CAAnimation; message 'animationForKey:';
     procedure setName(newValue: NSString); message 'setName:';
     function name: NSString; message 'name';
-    procedure setDelegate(newValue: id); message 'setDelegate:';
-    function delegate: id; message 'delegate';
+    procedure setDelegate(newValue: CALayerDelegateProtocol); message 'setDelegate:';
+    function delegate: CALayerDelegateProtocol; message 'delegate';
     procedure setStyle(newValue: NSDictionary); message 'setStyle:';
     function style: NSDictionary; message 'style';
 

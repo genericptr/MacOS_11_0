@@ -18,13 +18,13 @@ type
   NSAccessibilityCustomAction = objcclass external (NSObject)
   public
     function initWithName_handler (name: NSString; handler: NSAccessibilityCustomActionInitWithNameCallback): id; message 'initWithName:handler:';
-    function initWithName_target_selector (name: NSString; target: id; selector: SEL): id; message 'initWithName:target:selector:';
+    function initWithName_target_selector (name: NSString; target: NSObjectProtocol; selector: SEL): id; message 'initWithName:target:selector:';
     procedure setName(newValue: NSString); message 'setName:';
     function name: NSString; message 'name';
     procedure setHandler(newValue: NSAccessibilityCustomActionHandlerCallback); message 'setHandler:';
     function handler: NSAccessibilityCustomActionHandlerCallback; message 'handler';
-    procedure setTarget(newValue: id); message 'setTarget:';
-    function target: id; message 'target';
+    procedure setTarget(newValue: NSObjectProtocol); message 'setTarget:';
+    function target: NSObjectProtocol; message 'target';
     procedure setSelector(newValue: SEL); message 'setSelector:';
     function selector: SEL; message 'selector';
   end;

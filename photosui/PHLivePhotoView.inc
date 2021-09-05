@@ -30,8 +30,8 @@ const
 type
   PHLivePhotoView = objcclass external (NSView)
   public
-    procedure setDelegate(newValue: id); message 'setDelegate:';
-    function delegate: id; message 'delegate';
+    procedure setDelegate(newValue: PHLivePhotoViewDelegateProtocol); message 'setDelegate:';
+    function delegate: PHLivePhotoViewDelegateProtocol; message 'delegate';
     procedure setLivePhoto(newValue: PHLivePhoto); message 'setLivePhoto:';
     function livePhoto: PHLivePhoto; message 'livePhoto';
     procedure setContentMode(newValue: PHLivePhotoViewContentMode); message 'setContentMode:';

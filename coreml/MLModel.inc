@@ -21,10 +21,10 @@ type
     class function modelWithContentsOfURL_error (url: NSURL; error: NSErrorPtr): id; message 'modelWithContentsOfURL:error:';
     class function modelWithContentsOfURL_configuration_error (url: NSURL; configuration_: MLModelConfiguration; error: NSErrorPtr): id; message 'modelWithContentsOfURL:configuration:error:'; { available in macos , ios , watchos , tvos  }
     class procedure loadContentsOfURL_configuration_completionHandler (url: NSURL; configuration_: MLModelConfiguration; handler: MLModelLoadContentsOfURLCallback); message 'loadContentsOfURL:configuration:completionHandler:'; { available in macos , ios , watchos , tvos  }
-    function predictionFromFeatures_error (input: id; error: NSErrorPtr): id; message 'predictionFromFeatures:error:';
-    function predictionFromFeatures_options_error (input: id; options: MLPredictionOptions; error: NSErrorPtr): id; message 'predictionFromFeatures:options:error:';
-    function predictionsFromBatch_error (inputBatch: id; error: NSErrorPtr): id; message 'predictionsFromBatch:error:'; { available in macos , ios , watchos , tvos  }
-    function predictionsFromBatch_options_error (inputBatch: id; options: MLPredictionOptions; error: NSErrorPtr): id; message 'predictionsFromBatch:options:error:'; { available in macos , ios , watchos , tvos  }
+    function predictionFromFeatures_error (input: MLFeatureProviderProtocol; error: NSErrorPtr): id; message 'predictionFromFeatures:error:';
+    function predictionFromFeatures_options_error (input: MLFeatureProviderProtocol; options: MLPredictionOptions; error: NSErrorPtr): id; message 'predictionFromFeatures:options:error:';
+    function predictionsFromBatch_error (inputBatch: MLBatchProviderProtocol; error: NSErrorPtr): id; message 'predictionsFromBatch:error:'; { available in macos , ios , watchos , tvos  }
+    function predictionsFromBatch_options_error (inputBatch: MLBatchProviderProtocol; options: MLPredictionOptions; error: NSErrorPtr): id; message 'predictionsFromBatch:options:error:'; { available in macos , ios , watchos , tvos  }
     function parameterValueForKey_error (key: MLParameterKey; error: NSErrorPtr): id; message 'parameterValueForKey:error:'; { available in macos , ios , watchos , tvos  }
   end;
 {$endif}

@@ -19,11 +19,11 @@ type
   public
     procedure setFileType(newValue: NSString); message 'setFileType:';
     function fileType: NSString; message 'fileType';
-    procedure setDelegate(newValue: id); message 'setDelegate:';
-    function delegate: id; message 'delegate';
+    procedure setDelegate(newValue: NSFilePromiseProviderDelegateProtocol); message 'setDelegate:';
+    function delegate: NSFilePromiseProviderDelegateProtocol; message 'delegate';
     procedure setUserInfo(newValue: id); message 'setUserInfo:';
     function userInfo: id; message 'userInfo';
-    function initWithFileType_delegate (fileType_: NSString; delegate_: id): id; message 'initWithFileType:delegate:';
+    function initWithFileType_delegate (fileType_: NSString; delegate_: NSFilePromiseProviderDelegateProtocol): id; message 'initWithFileType:delegate:';
     function init: id; message 'init'; { NS_DESIGNATED_INITIALIZER }
 
     { Adopted protocols }

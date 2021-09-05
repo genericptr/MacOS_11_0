@@ -36,8 +36,8 @@ type
 type
   SCNCameraController = objcclass external (NSObject)
   public
-    procedure setDelegate(newValue: id); message 'setDelegate:';
-    function delegate: id; message 'delegate';
+    procedure setDelegate(newValue: SCNCameraControllerDelegateProtocol); message 'setDelegate:';
+    function delegate: SCNCameraControllerDelegateProtocol; message 'delegate';
     procedure setPointOfView(newValue: SCNNode); message 'setPointOfView:';
     function pointOfView: SCNNode; message 'pointOfView';
     procedure setInteractionMode(newValue: SCNInteractionMode); message 'setInteractionMode:';

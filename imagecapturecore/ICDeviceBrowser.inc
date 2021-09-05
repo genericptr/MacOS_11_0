@@ -53,8 +53,8 @@ type
   private
     _privateData: id;
   public
-    procedure setDelegate(newValue: id); message 'setDelegate:';
-    function delegate: id; message 'delegate';
+    procedure setDelegate(newValue: ICDeviceBrowserDelegateProtocol); message 'setDelegate:';
+    function delegate: ICDeviceBrowserDelegateProtocol; message 'delegate';
     function isBrowsing: objcbool; message 'isBrowsing';
     function isSuspended: objcbool; message 'isSuspended'; { unavailable in macos) IC_AVAILABLE(ios  }
     procedure setBrowsedDeviceTypeMask(newValue: ICDeviceTypeMask); message 'setBrowsedDeviceTypeMask:'; { unavailable in ios }

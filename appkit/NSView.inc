@@ -406,12 +406,12 @@ type
     function animations: NSDictionary; message 'animations'; { available in macos  }
     function animator: id; message 'animator'; { available in macos  }
     function appearance: NSAppearance; message 'appearance'; { available in macos  }
-    procedure concludeDragOperation (sender: id); message 'concludeDragOperation:';
+    procedure concludeDragOperation (sender: NSDraggingInfoProtocol); message 'concludeDragOperation:';
     class function defaultAnimationForKey (key: NSAnimatablePropertyKey): id; message 'defaultAnimationForKey:'; { available in macos  }
-    procedure draggingEnded (sender: id); message 'draggingEnded:';
-    function draggingEntered (sender: id): NSDragOperation; message 'draggingEntered:';
-    procedure draggingExited (sender: id); message 'draggingExited:';
-    function draggingUpdated (sender: id): NSDragOperation; message 'draggingUpdated:';
+    procedure draggingEnded (sender: NSDraggingInfoProtocol); message 'draggingEnded:';
+    function draggingEntered (sender: NSDraggingInfoProtocol): NSDragOperation; message 'draggingEntered:';
+    procedure draggingExited (sender: NSDraggingInfoProtocol); message 'draggingExited:';
+    function draggingUpdated (sender: NSDraggingInfoProtocol): NSDragOperation; message 'draggingUpdated:';
     function effectiveAppearance: NSAppearance; message 'effectiveAppearance'; { available in macos  }
     function identifier: NSUserInterfaceItemIdentifier; message 'identifier';
     function isAccessibilityAlternateUIVisible: objcbool; message 'isAccessibilityAlternateUIVisible'; { available in macos  }
@@ -431,8 +431,8 @@ type
     function isAccessibilityRequired: objcbool; message 'isAccessibilityRequired'; { available in macos  }
     function isAccessibilitySelected: objcbool; message 'isAccessibilitySelected'; { available in macos  }
     function isAccessibilitySelectorAllowed (selector: SEL): objcbool; message 'isAccessibilitySelectorAllowed:'; { available in macos  }
-    function performDragOperation (sender: id): objcbool; message 'performDragOperation:';
-    function prepareForDragOperation (sender: id): objcbool; message 'prepareForDragOperation:';
+    function performDragOperation (sender: NSDraggingInfoProtocol): objcbool; message 'performDragOperation:';
+    function prepareForDragOperation (sender: NSDraggingInfoProtocol): objcbool; message 'prepareForDragOperation:';
     procedure setAccessibilityActivationPoint (newValue: NSPoint); message 'setAccessibilityActivationPoint:'; { available in macos  }
     procedure setAccessibilityAllowedValues (newValue: NSArray); message 'setAccessibilityAllowedValues:'; { available in macos  }
     procedure setAccessibilityAlternateUIVisible (newValue: objcbool); message 'setAccessibilityAlternateUIVisible:'; { available in macos  }
@@ -558,7 +558,7 @@ type
     procedure setAnimations (newValue: NSDictionary); message 'setAnimations:'; { available in macos  }
     procedure setAppearance (newValue: NSAppearance); message 'setAppearance:'; { available in macos  }
     procedure setIdentifier (newValue: NSUserInterfaceItemIdentifier); message 'setIdentifier:';
-    procedure updateDraggingItemsForDrag (sender: id); message 'updateDraggingItemsForDrag:'; { available in macos  }
+    procedure updateDraggingItemsForDrag (sender: NSDraggingInfoProtocol); message 'updateDraggingItemsForDrag:'; { available in macos  }
     function wantsPeriodicDraggingUpdates: objcbool; message 'wantsPeriodicDraggingUpdates';
   end;
 {$endif}
@@ -646,7 +646,7 @@ type
 
 type
   NSView_NSDrag = objccategory external name 'NSDrag' (NSView)
-    function beginDraggingSessionWithItems_event_source (items: NSArray; event: NSEvent; source: id): NSDraggingSession; message 'beginDraggingSessionWithItems:event:source:'; { available in macos  }
+    function beginDraggingSessionWithItems_event_source (items: NSArray; event: NSEvent; source: NSDraggingSourceProtocol): NSDraggingSession; message 'beginDraggingSessionWithItems:event:source:'; { available in macos  }
     function registeredDraggedTypes: NSArray; message 'registeredDraggedTypes';
     procedure registerForDraggedTypes (newTypes: NSArray); message 'registerForDraggedTypes:';
     procedure unregisterDraggedTypes; message 'unregisterDraggedTypes';

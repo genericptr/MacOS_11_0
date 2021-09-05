@@ -54,8 +54,8 @@ type
   public
     class function contentKeySessionWithKeySystem (keySystem: AVContentKeySystem): id; message 'contentKeySessionWithKeySystem:'; { available in macos , ios , tvos , watchos  }
     class function contentKeySessionWithKeySystem_storageDirectoryAtURL (keySystem: AVContentKeySystem; storageURL: NSURL): id; message 'contentKeySessionWithKeySystem:storageDirectoryAtURL:';
-    procedure setDelegate_queue (delegate: id; delegateQueue: dispatch_queue_t); message 'setDelegate:queue:';
-    function delegate: id; message 'delegate';
+    procedure setDelegate_queue (delegate: AVContentKeySessionDelegateProtocol; delegateQueue: dispatch_queue_t); message 'setDelegate:queue:';
+    function delegate: AVContentKeySessionDelegateProtocol; message 'delegate';
     function delegateQueue: dispatch_queue_t; message 'delegateQueue';
     function storageURL: NSURL; message 'storageURL';
     function keySystem: AVContentKeySystem; message 'keySystem';
@@ -71,8 +71,8 @@ type
 
 type
   AVContentKeyRecipients = objccategory external (AVContentKeySession)
-    procedure addContentKeyRecipient (recipient: id); message 'addContentKeyRecipient:';
-    procedure removeContentKeyRecipient (recipient: id); message 'removeContentKeyRecipient:';
+    procedure addContentKeyRecipient (recipient: AVContentKeyRecipientProtocol); message 'addContentKeyRecipient:';
+    procedure removeContentKeyRecipient (recipient: AVContentKeyRecipientProtocol); message 'removeContentKeyRecipient:';
     function contentKeyRecipients: NSArray; message 'contentKeyRecipients';
   end;
 

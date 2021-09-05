@@ -61,7 +61,7 @@ var
 
 {$ifdef TYPES}
 type
-  MTKTextureLoaderCallback = reference to procedure (texture: id; error: NSError); cblock; cdecl;
+  MTKTextureLoaderCallback = reference to procedure (texture: MTLTextureProtocol; error: NSError); cblock; cdecl;
   MTKTextureLoaderArrayCallback = reference to procedure (textures: NSArray; error: NSError); cblock; cdecl;
 {$endif}
 
@@ -70,9 +70,9 @@ type
 type
   MTKTextureLoader = objcclass external (NSObject)
   public
-    function device: id; message 'device';
+    function device: MTLDeviceProtocol; message 'device';
     function init: id; message 'init';
-    function initWithDevice (device_: id): id; message 'initWithDevice:';
+    function initWithDevice (device_: MTLDeviceProtocol): id; message 'initWithDevice:';
     procedure newTextureWithContentsOfURL_options_completionHandler (URL: NSURL; options: NSDictionary; completionHandler: MTKTextureLoaderCallback); message 'newTextureWithContentsOfURL:options:completionHandler:';
     procedure newTextureWithName_scaleFactor_bundle_options_completionHandler (name: NSString; scaleFactor: CGFloat; bundle: NSBundle; options: NSDictionary; completionHandler: MTKTextureLoaderCallback); message 'newTextureWithName:scaleFactor:bundle:options:completionHandler:'; { available in 10_12, 10_0 }
     procedure newTextureWithName_scaleFactor_displayGamut_bundle_options_completionHandler (name: NSString; scaleFactor: CGFloat; displayGamut: NSDisplayGamut; bundle: NSBundle; options: NSDictionary; completionHandler: MTKTextureLoaderCallback); message 'newTextureWithName:scaleFactor:displayGamut:bundle:options:completionHandler:'; { available in 10_12 }

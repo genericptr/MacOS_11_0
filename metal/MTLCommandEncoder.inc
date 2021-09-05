@@ -29,7 +29,7 @@ const
 
 type
   MTLCommandEncoderProtocol = objcprotocol external name 'MTLCommandEncoder' (NSObjectProtocol)
-    function device: id; message 'device';
+    function device: MTLDeviceProtocol; message 'device';
     procedure setLabel(newValue: NSString); message 'setLabel:';
     function label_: NSString; message 'label';
     procedure endEncoding; message 'endEncoding';

@@ -107,8 +107,8 @@ type
     function performKeyEquivalent (event: NSEvent): objcbool; message 'performKeyEquivalent:';
     function sendAction: objcbool; message 'sendAction';
     procedure sendDoubleAction; message 'sendDoubleAction';
-    procedure setDelegate(newValue: id); message 'setDelegate:';
-    function delegate: id; message 'delegate';
+    procedure setDelegate(newValue: NSMatrixDelegateProtocol); message 'setDelegate:';
+    function delegate: NSMatrixDelegateProtocol; message 'delegate';
     function textShouldBeginEditing (textObject: NSText): objcbool; message 'textShouldBeginEditing:';
     function textShouldEndEditing (textObject: NSText): objcbool; message 'textShouldEndEditing:';
     procedure textDidBeginEditing (notification: NSNotification); message 'textDidBeginEditing:';
@@ -124,7 +124,7 @@ type
     function autorecalculatesCellSize: objcbool; message 'autorecalculatesCellSize'; { available in macos  }
 
     { Adopted protocols }
-    function validateUserInterfaceItem (item: id): objcbool; message 'validateUserInterfaceItem:';
+    function validateUserInterfaceItem (item: NSValidatedUserInterfaceItemProtocol): objcbool; message 'validateUserInterfaceItem:';
     function view_stringForToolTip_point_userData (view: NSView; tag: NSToolTipTag; point: NSPoint; data: pointer): NSString; message 'view:stringForToolTip:point:userData:';
   end;
 

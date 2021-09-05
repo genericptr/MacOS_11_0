@@ -85,7 +85,7 @@ type
     function renderContext: AVVideoCompositionRenderContext; message 'renderContext';
     function compositionTime: CMTime; message 'compositionTime';
     function sourceTrackIDs: NSArray; message 'sourceTrackIDs';
-    function videoCompositionInstruction: id; message 'videoCompositionInstruction';
+    function videoCompositionInstruction: AVVideoCompositionInstructionProtocol; message 'videoCompositionInstruction';
     function sourceFrameByTrackID (trackID: CMPersistentTrackID): CVPixelBufferRef; message 'sourceFrameByTrackID:'; { CF_RETURNS_NOT_RETAINED }
     procedure finishWithComposedVideoFrame (composedVideoFrame: CVPixelBufferRef); message 'finishWithComposedVideoFrame:';
     procedure finishWithError (error: NSError); message 'finishWithError:';

@@ -45,8 +45,8 @@ type
   private
     _privateData: id;
   public
-    procedure setDelegate(newValue: id); message 'setDelegate:';
-    function delegate: id; message 'delegate';
+    procedure setDelegate(newValue: IKScannerDeviceViewDelegateProtocol); message 'setDelegate:';
+    function delegate: IKScannerDeviceViewDelegateProtocol; message 'delegate';
     procedure setScannerDevice(newValue: ICScannerDevicePtr); message 'setScannerDevice:';
     function scannerDevice: ICScannerDevicePtr; message 'scannerDevice';
     procedure setMode(newValue: IKScannerDeviceViewDisplayMode); message 'setMode:';

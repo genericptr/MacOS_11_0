@@ -13,8 +13,8 @@ type
   GKGameSessionSharingViewController = objcclass external (UIViewController)
   public
     function session: GKGameSession; message 'session';
-    procedure setDelegate(newValue: id); message 'setDelegate:';
-    function delegate: id; message 'delegate';
+    procedure setDelegate(newValue: GKGameSessionSharingViewControllerDelegateProtocol); message 'setDelegate:';
+    function delegate: GKGameSessionSharingViewControllerDelegateProtocol; message 'delegate';
     function initWithSession (session_: GKGameSession): id; message 'initWithSession:';
   end;
 {$endif}

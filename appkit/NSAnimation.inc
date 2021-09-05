@@ -60,8 +60,8 @@ type
     procedure setAnimationCurve(newValue: NSAnimationCurve); message 'setAnimationCurve:';
     function animationCurve: NSAnimationCurve; message 'animationCurve';
     function currentValue: single; message 'currentValue';
-    procedure setDelegate(newValue: id); message 'setDelegate:';
-    function delegate: id; message 'delegate';
+    procedure setDelegate(newValue: NSAnimationDelegateProtocol); message 'setDelegate:';
+    function delegate: NSAnimationDelegateProtocol; message 'delegate';
     procedure setProgressMarks(newValue: NSArray); message 'setProgressMarks:';
     function progressMarks: NSArray; message 'progressMarks';
     procedure addProgressMark (progressMark: NSAnimationProgress); message 'addProgressMark:';

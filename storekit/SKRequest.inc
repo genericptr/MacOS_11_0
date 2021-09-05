@@ -13,8 +13,8 @@ type
   private
     _requestInternal: id;
   public
-    procedure setDelegate(newValue: id); message 'setDelegate:'; { available in ios , macos , watchos  }
-    function delegate: id; message 'delegate'; { available in ios , macos , watchos  }
+    procedure setDelegate(newValue: SKRequestDelegateProtocol); message 'setDelegate:'; { available in ios , macos , watchos  }
+    function delegate: SKRequestDelegateProtocol; message 'delegate'; { available in ios , macos , watchos  }
     procedure cancel; message 'cancel'; { available in ios , macos , watchos  }
     procedure start; message 'start'; { available in ios , macos , watchos  }
   end;

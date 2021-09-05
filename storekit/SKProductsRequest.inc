@@ -24,8 +24,8 @@ type
     _productsRequestInternal: id;
   public
     function initWithProductIdentifiers (productIdentifiers: NSSet): id; message 'initWithProductIdentifiers:'; { available in ios , macos , watchos  }
-    procedure setDelegate(newValue: id); message 'setDelegate:'; { available in ios , macos , watchos  }
-    function delegate: id; message 'delegate'; { available in ios , macos , watchos  }
+    procedure setDelegate(newValue: SKProductsRequestDelegateProtocol); message 'setDelegate:'; { available in ios , macos , watchos  }
+    function delegate: SKProductsRequestDelegateProtocol; message 'delegate'; { available in ios , macos , watchos  }
   end;
 
 type

@@ -12,8 +12,8 @@ type
 
 type
   AVAudioSessionDeprecated = objccategory external (AVAudioSession)
-    procedure setDelegate(newValue: id); message 'setDelegate:'; { unavailable in macos }
-    function delegate: id; message 'delegate'; { unavailable in macos }
+    procedure setDelegate(newValue: AVAudioSessionDelegateProtocol); message 'setDelegate:'; { unavailable in macos }
+    function delegate: AVAudioSessionDelegateProtocol; message 'delegate'; { unavailable in macos }
     function init: id; message 'init'; { unavailable in macos }
     function setActive_withFlags_error (active: objcbool; flags: NSInteger; outError: NSErrorPtr): objcbool; message 'setActive:withFlags:error:'; { unavailable in macos }
     function inputIsAvailable: objcbool; message 'inputIsAvailable'; { unavailable in macos }

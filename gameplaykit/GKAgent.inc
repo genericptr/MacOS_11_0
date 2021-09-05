@@ -23,8 +23,8 @@ type
 type
   GKAgent = objcclass external (GKComponent, NSSecureCodingProtocol)
   public
-    procedure setDelegate(newValue: id); message 'setDelegate:';
-    function delegate: id; message 'delegate';
+    procedure setDelegate(newValue: GKAgentDelegateProtocol); message 'setDelegate:';
+    function delegate: GKAgentDelegateProtocol; message 'delegate';
     procedure setBehavior(newValue: GKBehavior); message 'setBehavior:';
     function behavior: GKBehavior; message 'behavior';
     procedure setMass(newValue: single); message 'setMass:';

@@ -35,8 +35,8 @@ type
 type
   AVSampleBufferRenderSynchronizerRendererManagement = objccategory external (AVSampleBufferRenderSynchronizer)
     function renderers: NSArray; message 'renderers';
-    procedure addRenderer (renderer: id); message 'addRenderer:';
-    procedure removeRenderer_atTime_completionHandler (renderer: id; time: CMTime; completionHandler: AVSampleBufferRenderSynchronizerRemoveRendererCallback); message 'removeRenderer:atTime:completionHandler:';
+    procedure addRenderer (renderer: AVQueuedSampleBufferRenderingProtocol); message 'addRenderer:';
+    procedure removeRenderer_atTime_completionHandler (renderer: AVQueuedSampleBufferRenderingProtocol; time: CMTime; completionHandler: AVSampleBufferRenderSynchronizerRemoveRendererCallback); message 'removeRenderer:atTime:completionHandler:';
   end;
 
 type

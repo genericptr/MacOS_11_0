@@ -114,8 +114,8 @@ type
     function allowsFormFieldEntry: objcbool; message 'allowsFormFieldEntry'; { available in 10_13, 11_0 }
     function permissionsStatus: PDFDocumentPermissions; message 'permissionsStatus'; { available in 10_6, 11_0 }
     function string_: NSString; message 'string';
-    procedure setDelegate(newValue: id); message 'setDelegate:';
-    function delegate: id; message 'delegate';
+    procedure setDelegate(newValue: PDFDocumentDelegateProtocol); message 'setDelegate:';
+    function delegate: PDFDocumentDelegateProtocol; message 'delegate';
     function dataRepresentation: NSData; message 'dataRepresentation';
     function dataRepresentationWithOptions (options: NSDictionary): NSData; message 'dataRepresentationWithOptions:'; { available in 10_6, 11_0 }
     function writeToFile (path: NSString): objcbool; message 'writeToFile:';

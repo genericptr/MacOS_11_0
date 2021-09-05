@@ -11,9 +11,9 @@ type
 type
   GKDecisionNode = objcclass external (NSObject)
   public
-    function createBranchWithValue_attribute (value: NSNumber; attribute: id): id; message 'createBranchWithValue:attribute:';
-    function createBranchWithPredicate_attribute (predicate: NSPredicate; attribute: id): id; message 'createBranchWithPredicate:attribute:';
-    function createBranchWithWeight_attribute (weight: NSInteger; attribute: id): id; message 'createBranchWithWeight:attribute:';
+    function createBranchWithValue_attribute (value: NSNumber; attribute: NSObjectProtocol): id; message 'createBranchWithValue:attribute:';
+    function createBranchWithPredicate_attribute (predicate: NSPredicate; attribute: NSObjectProtocol): id; message 'createBranchWithPredicate:attribute:';
+    function createBranchWithWeight_attribute (weight: NSInteger; attribute: NSObjectProtocol): id; message 'createBranchWithWeight:attribute:';
   end;
 
 type
@@ -22,7 +22,7 @@ type
     function rootNode: GKDecisionNode; message 'rootNode';
     procedure setRandomSource(newValue: GKRandomSource); message 'setRandomSource:';
     function randomSource: GKRandomSource; message 'randomSource';
-    function initWithAttribute (attribute: id): id; message 'initWithAttribute:';
+    function initWithAttribute (attribute: NSObjectProtocol): id; message 'initWithAttribute:';
     function initWithExamples_actions_attributes (examples: NSArray; actions: NSArray; attributes: NSArray): id; message 'initWithExamples:actions:attributes:';
     function initWithURL_error (url: NSURL; error: NSError): id; message 'initWithURL:error:';
     function exportToURL_error (url: NSURL; error: NSError): objcbool; message 'exportToURL:error:';

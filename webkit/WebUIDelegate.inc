@@ -100,14 +100,14 @@ type
     function webView_runJavaScriptConfirmPanelWithMessage_initiatedByFrame (sender: WebView; message_: NSString; frame: WebFrame): objcbool; message 'webView:runJavaScriptConfirmPanelWithMessage:initiatedByFrame:';
     function webView_runJavaScriptTextInputPanelWithPrompt_defaultText_initiatedByFrame (sender: WebView; prompt: NSString; defaultText: NSString; frame: WebFrame): NSString; message 'webView:runJavaScriptTextInputPanelWithPrompt:defaultText:initiatedByFrame:';
     function webView_runBeforeUnloadConfirmPanelWithMessage_initiatedByFrame (sender: WebView; message_: NSString; frame: WebFrame): objcbool; message 'webView:runBeforeUnloadConfirmPanelWithMessage:initiatedByFrame:';
-    procedure webView_runOpenPanelForFileButtonWithResultListener (sender: WebView; resultListener: id); message 'webView:runOpenPanelForFileButtonWithResultListener:';
-    procedure webView_runOpenPanelForFileButtonWithResultListener_allowMultipleFiles (sender: WebView; resultListener: id; allowMultipleFiles: objcbool); message 'webView:runOpenPanelForFileButtonWithResultListener:allowMultipleFiles:'; { available in 10_6 }
+    procedure webView_runOpenPanelForFileButtonWithResultListener (sender: WebView; resultListener: WebOpenPanelResultListenerProtocol); message 'webView:runOpenPanelForFileButtonWithResultListener:';
+    procedure webView_runOpenPanelForFileButtonWithResultListener_allowMultipleFiles (sender: WebView; resultListener: WebOpenPanelResultListenerProtocol; allowMultipleFiles: objcbool); message 'webView:runOpenPanelForFileButtonWithResultListener:allowMultipleFiles:'; { available in 10_6 }
     procedure webView_mouseDidMoveOverElement_modifierFlags (sender: WebView; elementInformation: NSDictionary; modifierFlags: NSUInteger); message 'webView:mouseDidMoveOverElement:modifierFlags:';
     function webView_contextMenuItemsForElement_defaultMenuItems (sender: WebView; element: NSDictionary; defaultMenuItems: NSArray): NSArray; message 'webView:contextMenuItemsForElement:defaultMenuItems:';
-    function webView_validateUserInterfaceItem_defaultValidation (webView_: WebView; item: id; defaultValidation: objcbool): objcbool; message 'webView:validateUserInterfaceItem:defaultValidation:';
+    function webView_validateUserInterfaceItem_defaultValidation (webView_: WebView; item: NSValidatedUserInterfaceItemProtocol; defaultValidation: objcbool): objcbool; message 'webView:validateUserInterfaceItem:defaultValidation:';
     function webView_shouldPerformAction_fromSender (webView_: WebView; action: SEL; sender: id): objcbool; message 'webView:shouldPerformAction:fromSender:';
-    function webView_dragDestinationActionMaskForDraggingInfo (webView_: WebView; draggingInfo: id): NSUInteger; message 'webView:dragDestinationActionMaskForDraggingInfo:';
-    procedure webView_willPerformDragDestinationAction_forDraggingInfo (webView_: WebView; action: WebDragDestinationAction; draggingInfo: id); message 'webView:willPerformDragDestinationAction:forDraggingInfo:';
+    function webView_dragDestinationActionMaskForDraggingInfo (webView_: WebView; draggingInfo: NSDraggingInfoProtocol): NSUInteger; message 'webView:dragDestinationActionMaskForDraggingInfo:';
+    procedure webView_willPerformDragDestinationAction_forDraggingInfo (webView_: WebView; action: WebDragDestinationAction; draggingInfo: NSDraggingInfoProtocol); message 'webView:willPerformDragDestinationAction:forDraggingInfo:';
     function webView_dragSourceActionMaskForPoint (webView_: WebView; point: NSPoint): NSUInteger; message 'webView:dragSourceActionMaskForPoint:';
     procedure webView_willPerformDragSourceAction_fromPoint_withPasteboard (webView_: WebView; action: WebDragSourceAction; point: NSPoint; pasteboard: NSPasteboardPtr); message 'webView:willPerformDragSourceAction:fromPoint:withPasteboard:';
     procedure webView_printFrameView (sender: WebView; frameView: WebFrameView); message 'webView:printFrameView:';

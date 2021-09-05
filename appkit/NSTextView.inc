@@ -228,7 +228,7 @@ type
     procedure unmarkText; message 'unmarkText';
     procedure uppercaseWord (sender: id); message 'uppercaseWord:';
     function validateMenuItem (menuItem: NSMenuItem): objcbool; message 'validateMenuItem:';
-    function validateUserInterfaceItem (item: id): objcbool; message 'validateUserInterfaceItem:';
+    function validateUserInterfaceItem (item: NSValidatedUserInterfaceItemProtocol): objcbool; message 'validateUserInterfaceItem:';
     function validAttributesForMarkedText: NSArray; message 'validAttributesForMarkedText';
     function windowLevel: NSInteger; message 'windowLevel';
     procedure yank (sender: id); message 'yank:';
@@ -438,10 +438,10 @@ type
   NSTextViewDelegateProtocol = objcprotocol external name 'NSTextViewDelegate' (NSTextDelegateProtocol)
   optional
     function textView_clickedOnLink_atIndex (textView: NSTextView; link: id; charIndex: NSUInteger): objcbool; message 'textView:clickedOnLink:atIndex:';
-    procedure textView_clickedOnCell_inRect_atIndex (textView: NSTextView; cell: id; cellFrame: NSRect; charIndex: NSUInteger); message 'textView:clickedOnCell:inRect:atIndex:';
-    procedure textView_doubleClickedOnCell_inRect_atIndex (textView: NSTextView; cell: id; cellFrame: NSRect; charIndex: NSUInteger); message 'textView:doubleClickedOnCell:inRect:atIndex:';
-    procedure textView_draggedCell_inRect_event_atIndex (view: NSTextView; cell: id; rect: NSRect; event: NSEvent; charIndex: NSUInteger); message 'textView:draggedCell:inRect:event:atIndex:';
-    function textView_writablePasteboardTypesForCell_atIndex (view: NSTextView; cell: id; charIndex: NSUInteger): NSArray; message 'textView:writablePasteboardTypesForCell:atIndex:';
+    procedure textView_clickedOnCell_inRect_atIndex (textView: NSTextView; cell: NSTextAttachmentCellProtocol; cellFrame: NSRect; charIndex: NSUInteger); message 'textView:clickedOnCell:inRect:atIndex:';
+    procedure textView_doubleClickedOnCell_inRect_atIndex (textView: NSTextView; cell: NSTextAttachmentCellProtocol; cellFrame: NSRect; charIndex: NSUInteger); message 'textView:doubleClickedOnCell:inRect:atIndex:';
+    procedure textView_draggedCell_inRect_event_atIndex (view: NSTextView; cell: NSTextAttachmentCellProtocol; rect: NSRect; event: NSEvent; charIndex: NSUInteger); message 'textView:draggedCell:inRect:event:atIndex:';
+    function textView_writablePasteboardTypesForCell_atIndex (view: NSTextView; cell: NSTextAttachmentCellProtocol; charIndex: NSUInteger): NSArray; message 'textView:writablePasteboardTypesForCell:atIndex:';
     function textView_writeCell_atIndex_toPasteboard_type (view: NSTextView; cell: id; charIndex: NSUInteger; pboard: NSPasteboard; type_: NSPasteboardType): objcbool; message 'textView:writeCell:atIndex:toPasteboard:type:';
     function textView_willChangeSelectionFromCharacterRange_toCharacterRange (textView: NSTextView; oldSelectedCharRange: NSRange; newSelectedCharRange: NSRange): NSRange; message 'textView:willChangeSelectionFromCharacterRange:toCharacterRange:';
     function textView_willChangeSelectionFromCharacterRanges_toCharacterRanges (textView: NSTextView; oldSelectedCharRanges: NSArray; newSelectedCharRanges: NSArray): NSArray; message 'textView:willChangeSelectionFromCharacterRanges:toCharacterRanges:';
@@ -465,8 +465,8 @@ type
     function textView_candidates_forSelectedRange (textView: NSTextView; candidates: NSArray; selectedRange: NSRange): NSArray; message 'textView:candidates:forSelectedRange:'; { available in macos  }
     function textView_shouldSelectCandidateAtIndex (textView: NSTextView; index: NSUInteger): objcbool; message 'textView:shouldSelectCandidateAtIndex:'; { available in macos  }
     function textView_clickedOnLink (textView: NSTextView; link: id): objcbool; message 'textView:clickedOnLink:'; deprecated 'Use -textView:clickedOnLink:atIndex: instead';
-    procedure textView_clickedOnCell_inRect (textView: NSTextView; cell: id; cellFrame: NSRect); message 'textView:clickedOnCell:inRect:'; deprecated 'Use -textView:clickedOnCell:inRect:atIndex: instead';
-    procedure textView_doubleClickedOnCell_inRect (textView: NSTextView; cell: id; cellFrame: NSRect); message 'textView:doubleClickedOnCell:inRect:'; deprecated 'Use -textView:doubleClickedOnCell:inRect:atIndex: instead';
+    procedure textView_clickedOnCell_inRect (textView: NSTextView; cell: NSTextAttachmentCellProtocol; cellFrame: NSRect); message 'textView:clickedOnCell:inRect:'; deprecated 'Use -textView:clickedOnCell:inRect:atIndex: instead';
+    procedure textView_doubleClickedOnCell_inRect (textView: NSTextView; cell: NSTextAttachmentCellProtocol; cellFrame: NSRect); message 'textView:doubleClickedOnCell:inRect:'; deprecated 'Use -textView:doubleClickedOnCell:inRect:atIndex: instead';
     procedure textView_draggedCell_inRect_event (view: NSTextView; cell: id; rect: NSRect; event: NSEvent); message 'textView:draggedCell:inRect:event:'; deprecated 'Use -textView:draggedCell:inRect:event:atIndex: instead';
   end;
 {$endif}

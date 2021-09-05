@@ -37,7 +37,7 @@ type
     {$if defined(TARGET_OS_IOS)}
     procedure webView_contextMenuConfigurationForElement_completionHandler (webView: WKWebView; elementInfo: WKContextMenuElementInfo; completionHandler: WKUIDelegateWebViewCallback); message 'webView:contextMenuConfigurationForElement:completionHandler:'; { available in ios  }
     procedure webView_contextMenuWillPresentForElement (webView: WKWebView; elementInfo: WKContextMenuElementInfo); message 'webView:contextMenuWillPresentForElement:'; { available in ios  }
-    procedure webView_contextMenuForElement_willCommitWithAnimator (webView: WKWebView; elementInfo: WKContextMenuElementInfo; animator: id); message 'webView:contextMenuForElement:willCommitWithAnimator:'; { available in ios  }
+    procedure webView_contextMenuForElement_willCommitWithAnimator (webView: WKWebView; elementInfo: WKContextMenuElementInfo; animator: UIContextMenuInteractionCommitAnimatingProtocol); message 'webView:contextMenuForElement:willCommitWithAnimator:'; { available in ios  }
     procedure webView_contextMenuDidEndForElement (webView: WKWebView; elementInfo: WKContextMenuElementInfo); message 'webView:contextMenuDidEndForElement:'; { available in ios  }
     {$endif}
     {$if  not defined(TARGET_OS_IPHONE)}

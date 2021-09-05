@@ -17,10 +17,10 @@ type
   private
     _fileOutputInternal: AVCaptureFileOutputInternal;
   public
-    procedure setDelegate(newValue: id); message 'setDelegate:'; { unavailable in ios, macCatalyst, watchos, tvos }
-    function delegate: id; message 'delegate'; { unavailable in ios, macCatalyst, watchos, tvos }
+    procedure setDelegate(newValue: AVCaptureFileOutputDelegateProtocol); message 'setDelegate:'; { unavailable in ios, macCatalyst, watchos, tvos }
+    function delegate: AVCaptureFileOutputDelegateProtocol; message 'delegate'; { unavailable in ios, macCatalyst, watchos, tvos }
     function outputFileURL: NSURL; message 'outputFileURL';
-    procedure startRecordingToOutputFileURL_recordingDelegate (outputFileURL_: NSURL; delegate_: id); message 'startRecordingToOutputFileURL:recordingDelegate:';
+    procedure startRecordingToOutputFileURL_recordingDelegate (outputFileURL_: NSURL; delegate_: AVCaptureFileOutputRecordingDelegateProtocol); message 'startRecordingToOutputFileURL:recordingDelegate:';
     procedure stopRecording; message 'stopRecording';
     function isRecording: objcbool; message 'isRecording';
     function isRecordingPaused: objcbool; message 'isRecordingPaused';
@@ -88,7 +88,7 @@ type
     function init: id; message 'init';
     class function new_: id; message 'new';
     class function availableOutputFileTypes: NSArray; message 'availableOutputFileTypes';
-    procedure startRecordingToOutputFileURL_outputFileType_recordingDelegate (outputFileURL_: NSURL; fileType: AVFileType; delegate_: id); message 'startRecordingToOutputFileURL:outputFileType:recordingDelegate:';
+    procedure startRecordingToOutputFileURL_outputFileType_recordingDelegate (outputFileURL_: NSURL; fileType: AVFileType; delegate_: AVCaptureFileOutputRecordingDelegateProtocol); message 'startRecordingToOutputFileURL:outputFileType:recordingDelegate:';
     procedure setMetadata(newValue: NSArray); message 'setMetadata:';
     function metadata: NSArray; message 'metadata';
     procedure setAudioSettings(newValue: NSDictionary); message 'setAudioSettings:';

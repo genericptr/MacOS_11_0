@@ -14,8 +14,8 @@ type
   private
     _internal1, _internal2, _internal3, _internal4: id;
   public
-    procedure setChallengeDelegate(newValue: id); message 'setChallengeDelegate:';
-    function challengeDelegate: id; message 'challengeDelegate';
+    procedure setChallengeDelegate(newValue: GKChallengesViewControllerDelegateProtocol); message 'setChallengeDelegate:';
+    function challengeDelegate: GKChallengesViewControllerDelegateProtocol; message 'challengeDelegate';
   end;
 {$endif}
 

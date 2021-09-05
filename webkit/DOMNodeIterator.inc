@@ -12,7 +12,7 @@ type
   public
     function root: DOMNode; message 'root';
     function whatToShow: cuint; message 'whatToShow';
-    function filter: id; message 'filter';
+    function filter: DOMNodeFilterProtocol; message 'filter';
     function expandEntityReferences: objcbool; message 'expandEntityReferences';
     function referenceNode: DOMNode; message 'referenceNode'; { available in 10_5 }
     function pointerBeforeReferenceNode: objcbool; message 'pointerBeforeReferenceNode'; { available in 10_5 }

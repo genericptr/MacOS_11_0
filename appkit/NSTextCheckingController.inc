@@ -10,9 +10,9 @@ type
 type
   NSTextCheckingController = objcclass external (NSObject)
   public
-    function initWithClient (client: id): id; message 'initWithClient:'; { NS_DESIGNATED_INITIALIZER }
+    function initWithClient (client: NSTextCheckingClientProtocol): id; message 'initWithClient:'; { NS_DESIGNATED_INITIALIZER }
     function init: id; message 'init';
-    function client: id; message 'client';
+    function client: NSTextCheckingClientProtocol; message 'client';
     procedure invalidate; message 'invalidate';
     procedure didChangeTextInRange (range: NSRange); message 'didChangeTextInRange:';
     procedure insertedTextInRange (range: NSRange); message 'insertedTextInRange:';

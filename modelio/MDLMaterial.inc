@@ -271,8 +271,8 @@ type
     function propertyWithSemantic (semantic: MDLMaterialSemantic): MDLMaterialProperty; message 'propertyWithSemantic:';
     function propertiesWithSemantic (semantic: MDLMaterialSemantic): NSArray; message 'propertiesWithSemantic:'; { available in macos , ios , tvos  }
     procedure removeAllProperties; message 'removeAllProperties';
-    procedure resolveTexturesWithResolver (resolver: id); message 'resolveTexturesWithResolver:'; { available in macos , ios , tvos  }
-    procedure loadTexturesUsingResolver (resolver: id); message 'loadTexturesUsingResolver:'; { available in macos , ios , tvos  }
+    procedure resolveTexturesWithResolver (resolver: MDLAssetResolverProtocol); message 'resolveTexturesWithResolver:'; { available in macos , ios , tvos  }
+    procedure loadTexturesUsingResolver (resolver: MDLAssetResolverProtocol); message 'loadTexturesUsingResolver:'; { available in macos , ios , tvos  }
     function scatteringFunction: MDLScatteringFunction; message 'scatteringFunction';
     procedure setName(newValue: NSString); message 'setName:';
     function name: NSString; message 'name';

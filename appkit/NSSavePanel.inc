@@ -34,8 +34,8 @@ type
     function allowsOtherFileTypes: objcbool; message 'allowsOtherFileTypes';
     procedure setAccessoryView(newValue: NSView); message 'setAccessoryView:';
     function accessoryView: NSView; message 'accessoryView';
-    procedure setDelegate(newValue: id); message 'setDelegate:';
-    function delegate: id; message 'delegate';
+    procedure setDelegate(newValue: NSOpenSavePanelDelegateProtocol); message 'setDelegate:';
+    function delegate: NSOpenSavePanelDelegateProtocol; message 'delegate';
     function isExpanded: objcbool; message 'isExpanded';
     procedure setCanCreateDirectories(newValue: objcbool); message 'setCanCreateDirectories:';
     function canCreateDirectories: objcbool; message 'canCreateDirectories';

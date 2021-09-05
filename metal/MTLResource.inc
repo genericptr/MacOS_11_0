@@ -72,13 +72,13 @@ type
   MTLResourceProtocol = objcprotocol external name 'MTLResource' (NSObjectProtocol)
     procedure setLabel(newValue: NSString); message 'setLabel:';
     function label_: NSString; message 'label';
-    function device: id; message 'device';
+    function device: MTLDeviceProtocol; message 'device';
     function cpuCacheMode: MTLCPUCacheMode; message 'cpuCacheMode';
     function storageMode: MTLStorageMode; message 'storageMode'; { available in macos , ios  }
     function hazardTrackingMode: MTLHazardTrackingMode; message 'hazardTrackingMode'; { available in macos , ios  }
     function resourceOptions: MTLResourceOptions; message 'resourceOptions'; { available in macos , ios  }
     function setPurgeableState (state: MTLPurgeableState): MTLPurgeableState; message 'setPurgeableState:';
-    function heap: id; message 'heap'; { available in macos , ios  }
+    function heap: MTLHeapProtocol; message 'heap'; { available in macos , ios  }
     function heapOffset: NSUInteger; message 'heapOffset'; { available in macos , ios  }
     function allocatedSize: NSUInteger; message 'allocatedSize'; { available in macos , ios  }
     procedure makeAliasable; message 'makeAliasable'; { available in macos , ios  }

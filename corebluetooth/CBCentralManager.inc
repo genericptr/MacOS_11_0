@@ -40,13 +40,13 @@ const
 type
   CBCentralManager = objcclass external (CBManager)
   public
-    procedure setDelegate(newValue: id); message 'setDelegate:';
-    function delegate: id; message 'delegate';
+    procedure setDelegate(newValue: CBCentralManagerDelegateProtocol); message 'setDelegate:';
+    function delegate: CBCentralManagerDelegateProtocol; message 'delegate';
     function isScanning: objcbool; message 'isScanning'; { available in 10_13, 9_0 }
     class function supportsFeatures (features: CBCentralManagerFeature): objcbool; message 'supportsFeatures:'; { available in 13_0 }
     function init: id; message 'init';
-    function initWithDelegate_queue (delegate_: id; queue: dispatch_queue_t): id; message 'initWithDelegate:queue:';
-    function initWithDelegate_queue_options (delegate_: id; queue: dispatch_queue_t; options: NSDictionary): id; message 'initWithDelegate:queue:options:'; { available in 10_9, 7_0 }
+    function initWithDelegate_queue (delegate_: CBCentralManagerDelegateProtocol; queue: dispatch_queue_t): id; message 'initWithDelegate:queue:';
+    function initWithDelegate_queue_options (delegate_: CBCentralManagerDelegateProtocol; queue: dispatch_queue_t; options: NSDictionary): id; message 'initWithDelegate:queue:options:'; { available in 10_9, 7_0 }
     function retrievePeripheralsWithIdentifiers (identifiers: NSArray): NSArray; message 'retrievePeripheralsWithIdentifiers:'; { available in 10_9, 7_0 }
     function retrieveConnectedPeripheralsWithServices (serviceUUIDs: NSArray): NSArray; message 'retrieveConnectedPeripheralsWithServices:'; { available in 10_9, 7_0 }
     procedure scanForPeripheralsWithServices_options (serviceUUIDs: NSArray; options: NSDictionary); message 'scanForPeripheralsWithServices:options:';

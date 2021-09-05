@@ -121,8 +121,8 @@ type
     function presentationNode: SCNNode; message 'presentationNode';
     procedure setPaused(newValue: objcbool); message 'setPaused:'; { available in macos  }
     function isPaused: objcbool; message 'isPaused'; { available in macos  }
-    procedure setRendererDelegate(newValue: id); message 'setRendererDelegate:';
-    function rendererDelegate: id; message 'rendererDelegate';
+    procedure setRendererDelegate(newValue: SCNNodeRendererDelegateProtocol); message 'setRendererDelegate:';
+    function rendererDelegate: SCNNodeRendererDelegateProtocol; message 'rendererDelegate';
     function hitTestWithSegmentFromPoint_toPoint_options (pointA: SCNVector3; pointB: SCNVector3; options: NSDictionary): NSArray; message 'hitTestWithSegmentFromPoint:toPoint:options:'; { available in macos  }
     procedure setCategoryBitMask(newValue: NSUInteger); message 'setCategoryBitMask:'; { available in macos  }
     function categoryBitMask: NSUInteger; message 'categoryBitMask'; { available in macos  }
@@ -132,7 +132,7 @@ type
     { Adopted protocols }
     function actionForKey (key: NSString): SCNAction; message 'actionForKey:'; { available in macos  }
     function actionKeys: NSArray; message 'actionKeys'; { available in macos  }
-    procedure addAnimation_forKey (animation: id; key: NSString); message 'addAnimation:forKey:';
+    procedure addAnimation_forKey (animation: SCNAnimationProtocol; key: NSString); message 'addAnimation:forKey:';
     procedure addAnimationPlayer_forKey (player: SCNAnimationPlayer; key: NSString); message 'addAnimationPlayer:forKey:'; { available in macos , ios , tvos , watchos  }
     function animationForKey (key: NSString): CAAnimationPtr; message 'animationForKey:'; deprecated 'replace with -animationPlayerForKey:';
     function animationKeys: NSArray; message 'animationKeys';

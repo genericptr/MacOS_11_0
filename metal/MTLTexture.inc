@@ -54,7 +54,7 @@ type
   private
     _priv: MTLSharedTextureHandlePrivatePtr;
   public
-    function device: id; message 'device';
+    function device: MTLDeviceProtocol; message 'device';
     function label_: NSString; message 'label';
 
     { Adopted protocols }

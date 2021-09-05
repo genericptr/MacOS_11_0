@@ -12,15 +12,15 @@ type
   public
     procedure setMaxLookAheadDepth(newValue: NSInteger); message 'setMaxLookAheadDepth:';
     function maxLookAheadDepth: NSInteger; message 'maxLookAheadDepth';
-    function bestMoveForPlayer (player: id): id; message 'bestMoveForPlayer:';
-    function randomMoveForPlayer_fromNumberOfBestMoves (player: id; numMovesToConsider: NSInteger): id; message 'randomMoveForPlayer:fromNumberOfBestMoves:';
+    function bestMoveForPlayer (player: GKGameModelPlayerProtocol): id; message 'bestMoveForPlayer:';
+    function randomMoveForPlayer_fromNumberOfBestMoves (player: GKGameModelPlayerProtocol; numMovesToConsider: NSInteger): id; message 'randomMoveForPlayer:fromNumberOfBestMoves:';
 
     { Adopted protocols }
-    function bestMoveForActivePlayer: id; message 'bestMoveForActivePlayer';
-    function gameModel: id; message 'gameModel';
-    function randomSource: id; message 'randomSource';
-    procedure setGameModel (newValue: id); message 'setGameModel:';
-    procedure setRandomSource (newValue: id); message 'setRandomSource:';
+    function bestMoveForActivePlayer: GKGameModelUpdateProtocol; message 'bestMoveForActivePlayer';
+    function gameModel: GKGameModelProtocol; message 'gameModel';
+    function randomSource: GKRandomProtocol; message 'randomSource';
+    procedure setGameModel (newValue: GKGameModelProtocol); message 'setGameModel:';
+    procedure setRandomSource (newValue: GKRandomProtocol); message 'setRandomSource:';
   end;
 {$endif}
 

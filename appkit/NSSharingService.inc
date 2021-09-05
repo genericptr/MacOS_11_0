@@ -51,8 +51,8 @@ var
 type
   NSSharingService = objcclass external (NSObject)
   public
-    procedure setDelegate(newValue: id); message 'setDelegate:';
-    function delegate: id; message 'delegate';
+    procedure setDelegate(newValue: NSSharingServiceDelegateProtocol); message 'setDelegate:';
+    function delegate: NSSharingServiceDelegateProtocol; message 'delegate';
     function title: NSString; message 'title';
     function image: NSImage; message 'image';
     function alternateImage: NSImage; message 'alternateImage';
@@ -138,8 +138,8 @@ type
 type
   NSSharingServicePicker = objcclass external (NSObject)
   public
-    procedure setDelegate(newValue: id); message 'setDelegate:';
-    function delegate: id; message 'delegate';
+    procedure setDelegate(newValue: NSSharingServicePickerDelegateProtocol); message 'setDelegate:';
+    function delegate: NSSharingServicePickerDelegateProtocol; message 'delegate';
     function initWithItems (items: NSArray): id; message 'initWithItems:'; { NS_DESIGNATED_INITIALIZER }
     function init: id; message 'init';
     procedure showRelativeToRect_ofView_preferredEdge (rect: NSRect; view: NSView; preferredEdge: NSRectEdge); message 'showRelativeToRect:ofView:preferredEdge:';

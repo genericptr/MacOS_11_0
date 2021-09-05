@@ -22,8 +22,8 @@ type
     function timeScope: GKLeaderboardTimeScope; message 'timeScope';
     procedure setCategory(newValue: NSString); message 'setCategory:';
     function category: NSString; message 'category';
-    procedure setLeaderboardDelegate(newValue: id); message 'setLeaderboardDelegate:';
-    function leaderboardDelegate: id; message 'leaderboardDelegate';
+    procedure setLeaderboardDelegate(newValue: GKLeaderboardViewControllerDelegateProtocol); message 'setLeaderboardDelegate:';
+    function leaderboardDelegate: GKLeaderboardViewControllerDelegateProtocol; message 'leaderboardDelegate';
   end;
 {$endif}
 

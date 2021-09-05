@@ -15,7 +15,7 @@ type
     function lowestValue: NSInteger; message 'lowestValue';
     function highestValue: NSInteger; message 'highestValue';
     function numberOfPossibleOutcomes: NSUInteger; message 'numberOfPossibleOutcomes';
-    function initWithRandomSource_lowestValue_highestValue (source: id; lowestInclusive: NSInteger; highestInclusive: NSInteger): id; message 'initWithRandomSource:lowestValue:highestValue:'; { NS_DESIGNATED_INITIALIZER }
+    function initWithRandomSource_lowestValue_highestValue (source: GKRandomProtocol; lowestInclusive: NSInteger; highestInclusive: NSInteger): id; message 'initWithRandomSource:lowestValue:highestValue:'; { NS_DESIGNATED_INITIALIZER }
     function nextInt: NSInteger; message 'nextInt';
     function nextIntWithUpperBound (upperBound: NSUInteger): NSUInteger; message 'nextIntWithUpperBound:';
     function nextUniform: single; message 'nextUniform';
@@ -31,8 +31,8 @@ type
   public
     function mean: single; message 'mean';
     function deviation: single; message 'deviation';
-    function initWithRandomSource_lowestValue_highestValue (source: id; lowestInclusive: NSInteger; highestInclusive: NSInteger): id; message 'initWithRandomSource:lowestValue:highestValue:'; { NS_DESIGNATED_INITIALIZER }
-    function initWithRandomSource_mean_deviation (source: id; mean_: single; deviation_: single): id; message 'initWithRandomSource:mean:deviation:'; { NS_DESIGNATED_INITIALIZER }
+    function initWithRandomSource_lowestValue_highestValue (source: GKRandomProtocol; lowestInclusive: NSInteger; highestInclusive: NSInteger): id; message 'initWithRandomSource:lowestValue:highestValue:'; { NS_DESIGNATED_INITIALIZER }
+    function initWithRandomSource_mean_deviation (source: GKRandomProtocol; mean_: single; deviation_: single): id; message 'initWithRandomSource:mean:deviation:'; { NS_DESIGNATED_INITIALIZER }
   end;
 
 type

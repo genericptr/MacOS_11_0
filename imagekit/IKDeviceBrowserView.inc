@@ -36,8 +36,8 @@ type
   private
     _privateData: id;
   public
-    procedure setDelegate(newValue: id); message 'setDelegate:';
-    function delegate: id; message 'delegate';
+    procedure setDelegate(newValue: IKDeviceBrowserViewDelegateProtocol); message 'setDelegate:';
+    function delegate: IKDeviceBrowserViewDelegateProtocol; message 'delegate';
     procedure setDisplaysLocalCameras(newValue: objcbool); message 'setDisplaysLocalCameras:';
     function displaysLocalCameras: objcbool; message 'displaysLocalCameras';
     procedure setDisplaysNetworkCameras(newValue: objcbool); message 'setDisplaysNetworkCameras:';

@@ -28,8 +28,8 @@ type
   RPBroadcastActivityController = objcclass external (NSObject)
   public
     class procedure showBroadcastPickerAtPoint_fromWindow_preferredExtensionIdentifier_completionHandler (point: CGPoint; window: NSWindowPtr; preferredExtension: NSString; handler: RPBroadcastShowBroadcastPickerAtPointCallback); message 'showBroadcastPickerAtPoint:fromWindow:preferredExtensionIdentifier:completionHandler:'; { available in macos  }
-    procedure setDelegate(newValue: id); message 'setDelegate:';
-    function delegate: id; message 'delegate';
+    procedure setDelegate(newValue: RPBroadcastActivityControllerDelegateProtocol); message 'setDelegate:';
+    function delegate: RPBroadcastActivityControllerDelegateProtocol; message 'delegate';
   end;
 {$endif}
 
@@ -51,8 +51,8 @@ type
   public
     class procedure loadBroadcastActivityViewControllerWithHandler (handler: RPBroadcastLoadBroadcastActivityViewControllerWithHandlerCallback); message 'loadBroadcastActivityViewControllerWithHandler:';
     class procedure loadBroadcastActivityViewControllerWithPreferredExtension_handler (preferredExtension: NSString; handler: RPBroadcastLoadBroadcastActivityViewControllerWithPreferredExtensionCallback); message 'loadBroadcastActivityViewControllerWithPreferredExtension:handler:'; { unavailable in tvos }
-    procedure setDelegate(newValue: id); message 'setDelegate:';
-    function delegate: id; message 'delegate';
+    procedure setDelegate(newValue: RPBroadcastActivityViewControllerDelegateProtocol); message 'setDelegate:';
+    function delegate: RPBroadcastActivityViewControllerDelegateProtocol; message 'delegate';
   end;
 {$endif}
 
@@ -74,8 +74,8 @@ type
     function isPaused: objcbool; message 'isPaused';
     function broadcastURL: NSURL; message 'broadcastURL';
     function serviceInfo: NSDictionary; message 'serviceInfo';
-    procedure setDelegate(newValue: id); message 'setDelegate:';
-    function delegate: id; message 'delegate';
+    procedure setDelegate(newValue: RPBroadcastControllerDelegateProtocol); message 'setDelegate:';
+    function delegate: RPBroadcastControllerDelegateProtocol; message 'delegate';
     function broadcastExtensionBundleID: NSString; message 'broadcastExtensionBundleID'; { unavailable in macos }
     procedure startBroadcastWithHandler (handler: RPBroadcastStartBroadcastWithHandlerCallback); message 'startBroadcastWithHandler:';
     procedure pauseBroadcast; message 'pauseBroadcast';

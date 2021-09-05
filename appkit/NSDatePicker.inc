@@ -43,8 +43,8 @@ type
     function maxDate: NSDate; message 'maxDate';
     procedure setPresentsCalendarOverlay(newValue: objcbool); message 'setPresentsCalendarOverlay:'; { available in macos  }
     function presentsCalendarOverlay: objcbool; message 'presentsCalendarOverlay'; { available in macos  }
-    procedure setDelegate(newValue: id); message 'setDelegate:';
-    function delegate: id; message 'delegate';
+    procedure setDelegate(newValue: NSDatePickerCellDelegateProtocol); message 'setDelegate:';
+    function delegate: NSDatePickerCellDelegateProtocol; message 'delegate';
   end;
 {$endif}
 

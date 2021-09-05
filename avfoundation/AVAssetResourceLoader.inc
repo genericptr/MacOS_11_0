@@ -19,8 +19,8 @@ type
   private
     _resourceLoader: AVAssetResourceLoaderInternal;
   public
-    procedure setDelegate_queue (delegate: id; delegateQueue: dispatch_queue_t); message 'setDelegate:queue:';
-    function delegate: id; message 'delegate';
+    procedure setDelegate_queue (delegate: AVAssetResourceLoaderDelegateProtocol; delegateQueue: dispatch_queue_t); message 'setDelegate:queue:';
+    function delegate: AVAssetResourceLoaderDelegateProtocol; message 'delegate';
     function delegateQueue: dispatch_queue_t; message 'delegateQueue';
   end;
 {$endif}

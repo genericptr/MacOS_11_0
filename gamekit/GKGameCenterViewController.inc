@@ -35,8 +35,8 @@ type
 
 type
   GKGameCenterViewControllerCategory = objccategory external (GKGameCenterViewController)
-    procedure setGameCenterDelegate(newValue: id); message 'setGameCenterDelegate:';
-    function gameCenterDelegate: id; message 'gameCenterDelegate';
+    procedure setGameCenterDelegate(newValue: GKGameCenterControllerDelegateProtocol); message 'setGameCenterDelegate:';
+    function gameCenterDelegate: GKGameCenterControllerDelegateProtocol; message 'gameCenterDelegate';
     function initWithState (state: GKGameCenterViewControllerState): id; message 'initWithState:'; { unavailable in watchos }
     function initWithLeaderboardID_playerScope_timeScope (leaderboardID: NSString; playerScope: GKLeaderboardPlayerScope; timeScope: GKLeaderboardTimeScope): id; message 'initWithLeaderboardID:playerScope:timeScope:'; { unavailable in watchos }
     function initWithLeaderboard_playerScope (leaderboard: GKLeaderboard; playerScope: GKLeaderboardPlayerScope): id; message 'initWithLeaderboard:playerScope:'; { unavailable in watchos }

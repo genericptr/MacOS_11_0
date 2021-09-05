@@ -133,8 +133,8 @@ type
     procedure usePageViewController_withViewOptions (enable: objcbool; viewOptions: NSDictionary); message 'usePageViewController:withViewOptions:'; { available in NA, 11_0 }
     function isUsingPageViewController: objcbool; message 'isUsingPageViewController'; { available in NA, 11_0 }
     {$endif}
-    procedure setDelegate(newValue: id); message 'setDelegate:';
-    function delegate: id; message 'delegate';
+    procedure setDelegate(newValue: PDFViewDelegateProtocol); message 'setDelegate:';
+    function delegate: PDFViewDelegateProtocol; message 'delegate';
     procedure setScaleFactor(newValue: CGFloat); message 'setScaleFactor:';
     function scaleFactor: CGFloat; message 'scaleFactor';
     procedure setMinScaleFactor(newValue: CGFloat); message 'setMinScaleFactor:'; { available in 10_13, 11_0 }

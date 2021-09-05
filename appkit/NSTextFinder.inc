@@ -57,12 +57,12 @@ type
   public
     function init: id; message 'init'; { NS_DESIGNATED_INITIALIZER }
     function initWithCoder (coder: NSCoder): id; message 'initWithCoder:'; { NS_DESIGNATED_INITIALIZER }
-    procedure setClient(newValue: id); message 'setClient:';
-    function client: id; message 'client';
+    procedure setClient(newValue: NSTextFinderClientProtocol); message 'setClient:';
+    function client: NSTextFinderClientProtocol; message 'client';
     procedure performAction (op: NSTextFinderAction); message 'performAction:';
     function validateAction (op: NSTextFinderAction): objcbool; message 'validateAction:';
-    procedure setFindBarContainer(newValue: id); message 'setFindBarContainer:';
-    function findBarContainer: id; message 'findBarContainer';
+    procedure setFindBarContainer(newValue: NSTextFinderBarContainerProtocol); message 'setFindBarContainer:';
+    function findBarContainer: NSTextFinderBarContainerProtocol; message 'findBarContainer';
     procedure cancelFindIndicator; message 'cancelFindIndicator';
     procedure setFindIndicatorNeedsUpdate(newValue: objcbool); message 'setFindIndicatorNeedsUpdate:';
     function findIndicatorNeedsUpdate: objcbool; message 'findIndicatorNeedsUpdate';

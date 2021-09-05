@@ -106,8 +106,8 @@ type
     procedure stopSpeakingAtBoundary (boundary: NSSpeechBoundary); message 'stopSpeakingAtBoundary:'; { available in macos  }
     procedure pauseSpeakingAtBoundary (boundary: NSSpeechBoundary); message 'pauseSpeakingAtBoundary:'; { available in macos  }
     procedure continueSpeaking; message 'continueSpeaking'; { available in macos  }
-    procedure setDelegate(newValue: id); message 'setDelegate:';
-    function delegate: id; message 'delegate';
+    procedure setDelegate(newValue: NSSpeechSynthesizerDelegateProtocol); message 'setDelegate:';
+    function delegate: NSSpeechSynthesizerDelegateProtocol; message 'delegate';
     function voice: NSSpeechSynthesizerVoiceName; message 'voice';
     function setVoice (voice_: NSSpeechSynthesizerVoiceName): objcbool; message 'setVoice:';
     procedure setRate(newValue: single); message 'setRate:'; { available in macos  }

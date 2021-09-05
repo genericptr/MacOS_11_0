@@ -32,8 +32,8 @@ type
     procedure setTokenizingCharacterSet(newValue: NSCharacterSet); message 'setTokenizingCharacterSet:';
     function tokenizingCharacterSet: NSCharacterSet; message 'tokenizingCharacterSet';
     class function defaultTokenizingCharacterSet: NSCharacterSet; message 'defaultTokenizingCharacterSet';
-    procedure setDelegate(newValue: id); message 'setDelegate:';
-    function delegate: id; message 'delegate';
+    procedure setDelegate(newValue: NSTokenFieldCellDelegateProtocol); message 'setDelegate:';
+    function delegate: NSTokenFieldCellDelegateProtocol; message 'delegate';
   end;
 {$endif}
 

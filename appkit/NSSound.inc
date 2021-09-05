@@ -39,8 +39,8 @@ type
     function resume: objcbool; message 'resume';
     function stop: objcbool; message 'stop';
     function isPlaying: objcbool; message 'isPlaying';
-    procedure setDelegate(newValue: id); message 'setDelegate:';
-    function delegate: id; message 'delegate';
+    procedure setDelegate(newValue: NSSoundDelegateProtocol); message 'setDelegate:';
+    function delegate: NSSoundDelegateProtocol; message 'delegate';
     function duration: NSTimeInterval; message 'duration'; { available in macos  }
     procedure setVolume(newValue: single); message 'setVolume:'; { available in macos  }
     function volume: single; message 'volume'; { available in macos  }

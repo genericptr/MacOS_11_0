@@ -60,8 +60,8 @@ type
     {$endif}
     procedure setBackgroundColor(newValue: SKColor); message 'setBackgroundColor:';
     function backgroundColor: SKColor; message 'backgroundColor';
-    procedure setDelegate(newValue: id); message 'setDelegate:'; { available in ios , tvos , watchos , macos  }
-    function delegate: id; message 'delegate'; { available in ios , tvos , watchos , macos  }
+    procedure setDelegate(newValue: SKSceneDelegateProtocol); message 'setDelegate:'; { available in ios , tvos , watchos , macos  }
+    function delegate: SKSceneDelegateProtocol; message 'delegate'; { available in ios , tvos , watchos , macos  }
     procedure setAnchorPoint(newValue: CGPoint); message 'setAnchorPoint:';
     function anchorPoint: CGPoint; message 'anchorPoint';
     function physicsWorld: SKPhysicsWorld; message 'physicsWorld';

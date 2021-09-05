@@ -20,7 +20,7 @@ type
   ABPersonImageAdditions = objccategory external (ABPerson)
     function setImageData (data: NSData): objcbool; message 'setImageData:';
     function imageData: NSData; message 'imageData';
-    function beginLoadingImageDataForClient (client: id): NSInteger; message 'beginLoadingImageDataForClient:';
+    function beginLoadingImageDataForClient (client: ABImageClientProtocol): NSInteger; message 'beginLoadingImageDataForClient:';
     class procedure cancelLoadingImageDataForTag (tag: NSInteger); message 'cancelLoadingImageDataForTag:';
   end;
 {$endif}

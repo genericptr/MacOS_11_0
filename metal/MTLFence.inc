@@ -9,7 +9,7 @@ type
 
 type
   MTLFenceProtocol = objcprotocol external name 'MTLFence' (NSObjectProtocol)
-    function device: id; message 'device';
+    function device: MTLDeviceProtocol; message 'device';
     procedure setLabel(newValue: NSString); message 'setLabel:';
     function label_: NSString; message 'label';
   end;

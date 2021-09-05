@@ -121,8 +121,8 @@ var
 type
   ICDevice = objcclass external (NSObject)
   public
-    procedure setDelegate(newValue: id); message 'setDelegate:'; { available in macos ,ios  }
-    function delegate: id; message 'delegate'; { available in macos ,ios  }
+    procedure setDelegate(newValue: ICDeviceDelegateProtocol); message 'setDelegate:'; { available in macos ,ios  }
+    function delegate: ICDeviceDelegateProtocol; message 'delegate'; { available in macos ,ios  }
     function type_: ICDeviceType; message 'type'; { available in macos ,ios  }
     function capabilities: NSArray; message 'capabilities'; { available in macos , ios  }
     function name: NSString; message 'name'; { available in macos , ios  }

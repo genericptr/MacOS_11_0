@@ -19,8 +19,8 @@ type
   NSSharingServicePickerTouchBarItem = objcclass external (NSTouchBarItem)
   public
     {$if  not defined(TARGET_OS_IPHONE)}
-    procedure setDelegate(newValue: id); message 'setDelegate:';
-    function delegate: id; message 'delegate';
+    procedure setDelegate(newValue: NSSharingServicePickerTouchBarItemDelegateProtocol); message 'setDelegate:';
+    function delegate: NSSharingServicePickerTouchBarItemDelegateProtocol; message 'delegate';
     {$endif}
     procedure setEnabled(newValue: objcbool); message 'setEnabled:';
     function isEnabled: objcbool; message 'isEnabled';

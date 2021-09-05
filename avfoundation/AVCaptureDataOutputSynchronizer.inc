@@ -21,8 +21,8 @@ type
   public
     function initWithDataOutputs (dataOutputs: NSArray): id; message 'initWithDataOutputs:';
     function dataOutputs: NSArray; message 'dataOutputs';
-    procedure setDelegate_queue (delegate: id; delegateCallbackQueue: dispatch_queue_t); message 'setDelegate:queue:';
-    function delegate: id; message 'delegate';
+    procedure setDelegate_queue (delegate: AVCaptureDataOutputSynchronizerDelegateProtocol; delegateCallbackQueue: dispatch_queue_t); message 'setDelegate:queue:';
+    function delegate: AVCaptureDataOutputSynchronizerDelegateProtocol; message 'delegate';
     function delegateCallbackQueue: dispatch_queue_t; message 'delegateCallbackQueue';
   end;
 {$endif}

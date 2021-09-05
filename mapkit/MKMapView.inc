@@ -132,7 +132,7 @@ type
     function dequeueReusableAnnotationViewWithIdentifier_forAnnotation (identifier: NSString; annotation: id): MKAnnotationView; message 'dequeueReusableAnnotationViewWithIdentifier:forAnnotation:'; { available in 10_13, 11_0 }
     procedure registerClass_forAnnotationViewWithReuseIdentifier (viewClass: pobjc_class; identifier: NSString); message 'registerClass:forAnnotationViewWithReuseIdentifier:'; { available in 10_13, 11_0 }
     procedure selectAnnotation_animated (annotation: id; animated: objcbool); message 'selectAnnotation:animated:';
-    procedure deselectAnnotation_animated (annotation: id; animated: objcbool); message 'deselectAnnotation:animated:';
+    procedure deselectAnnotation_animated (annotation: MKAnnotationProtocol; animated: objcbool); message 'deselectAnnotation:animated:';
     procedure setSelectedAnnotations(newValue: NSArray); message 'setSelectedAnnotations:';
     function selectedAnnotations: NSArray; message 'selectedAnnotations';
     function annotationVisibleRect: CGRect; message 'annotationVisibleRect';
@@ -160,21 +160,21 @@ type
   OverlaysAPI = objccategory external (MKMapView)
     procedure addOverlay_level (overlay: id; level: MKOverlayLevel); message 'addOverlay:level:'; { available in 10_9, 7_0 }
     procedure addOverlays_level (overlays: NSArray; level: MKOverlayLevel); message 'addOverlays:level:'; { available in 10_9, 7_0 }
-    procedure removeOverlay (overlay: id); message 'removeOverlay:'; { available in 10_9, 4_0 }
+    procedure removeOverlay (overlay: MKOverlayProtocol); message 'removeOverlay:'; { available in 10_9, 4_0 }
     procedure removeOverlays (overlays: NSArray); message 'removeOverlays:'; { available in 10_9, 4_0 }
-    procedure insertOverlay_atIndex_level (overlay: id; index: NSUInteger; level: MKOverlayLevel); message 'insertOverlay:atIndex:level:'; { available in 10_9, 7_0 }
-    procedure insertOverlay_aboveOverlay (overlay: id; sibling: id); message 'insertOverlay:aboveOverlay:'; { available in 10_9, 4_0 }
-    procedure insertOverlay_belowOverlay (overlay: id; sibling: id); message 'insertOverlay:belowOverlay:'; { available in 10_9, 4_0 }
+    procedure insertOverlay_atIndex_level (overlay: MKOverlayProtocol; index: NSUInteger; level: MKOverlayLevel); message 'insertOverlay:atIndex:level:'; { available in 10_9, 7_0 }
+    procedure insertOverlay_aboveOverlay (overlay: MKOverlayProtocol; sibling: MKOverlayProtocol); message 'insertOverlay:aboveOverlay:'; { available in 10_9, 4_0 }
+    procedure insertOverlay_belowOverlay (overlay: MKOverlayProtocol; sibling: id); message 'insertOverlay:belowOverlay:'; { available in 10_9, 4_0 }
     procedure exchangeOverlay_withOverlay (overlay1: id; overlay2: id); message 'exchangeOverlay:withOverlay:'; { available in 10_9, 7_0 }
     function overlays: NSArray; message 'overlays'; { available in 10_9, 4_0 }
     function overlaysInLevel (level: MKOverlayLevel): NSArray; message 'overlaysInLevel:'; { available in 10_9, 7_0 }
     function rendererForOverlay (overlay: id): MKOverlayRenderer; message 'rendererForOverlay:'; { available in 10_9, 7_0 }
     {$if defined(TARGET_OS_IPHONE)}
-    function viewForOverlay (overlay: id): MKOverlayViewPtr; message 'viewForOverlay:'; { unavailable in macos, tvos, watchos }
+    function viewForOverlay (overlay: MKOverlayProtocol): MKOverlayViewPtr; message 'viewForOverlay:'; { unavailable in macos, tvos, watchos }
     {$endif}
-    procedure addOverlay (overlay: id); message 'addOverlay:'; { available in 10_9, 4_0 }
+    procedure addOverlay (overlay: MKOverlayProtocol); message 'addOverlay:'; { available in 10_9, 4_0 }
     procedure addOverlays (overlays_: NSArray); message 'addOverlays:'; { available in 10_9, 4_0 }
-    procedure insertOverlay_atIndex (overlay: id; index: NSUInteger); message 'insertOverlay:atIndex:'; { available in 10_9, 4_0 }
+    procedure insertOverlay_atIndex (overlay: MKOverlayProtocol; index: NSUInteger); message 'insertOverlay:atIndex:'; { available in 10_9, 4_0 }
     procedure exchangeOverlayAtIndex_withOverlayAtIndex (index1: NSUInteger; index2: NSUInteger); message 'exchangeOverlayAtIndex:withOverlayAtIndex:'; { available in 10_9, 4_0 }
   end;
 {$endif}

@@ -33,7 +33,7 @@ type
     procedure setAutoPlayDelay(newValue: NSTimeInterval); message 'setAutoPlayDelay:';
     function autoPlayDelay: NSTimeInterval; message 'autoPlayDelay';
     class function sharedSlideshow: IKSlideshow; message 'sharedSlideshow';
-    procedure runSlideshowWithDataSource_inMode_options (dataSource: id; slideshowMode: NSString; slideshowOptions: NSDictionary); message 'runSlideshowWithDataSource:inMode:options:';
+    procedure runSlideshowWithDataSource_inMode_options (dataSource: IKSlideshowDataSourceProtocol; slideshowMode: NSString; slideshowOptions: NSDictionary); message 'runSlideshowWithDataSource:inMode:options:';
     procedure stopSlideshow (sender: id); message 'stopSlideshow:';
     procedure reloadData; message 'reloadData';
     procedure reloadSlideshowItemAtIndex (index: NSUInteger); message 'reloadSlideshowItemAtIndex:';

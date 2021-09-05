@@ -30,8 +30,8 @@ type
   CNContactFormatter = objcclass external (NSFormatter, NSSecureCodingProtocol)
   public
     class function descriptorForRequiredKeysForStyle (style: CNContactFormatterStyle): id; message 'descriptorForRequiredKeysForStyle:';
-    class function descriptorForRequiredKeysForNameOrder: id; message 'descriptorForRequiredKeysForNameOrder';
-    class function descriptorForRequiredKeysForDelimiter: id; message 'descriptorForRequiredKeysForDelimiter';
+    class function descriptorForRequiredKeysForNameOrder: CNKeyDescriptorProtocol; message 'descriptorForRequiredKeysForNameOrder';
+    class function descriptorForRequiredKeysForDelimiter: CNKeyDescriptorProtocol; message 'descriptorForRequiredKeysForDelimiter';
     class function stringFromContact_style (contact: CNContact; style: CNContactFormatterStyle): NSString; message 'stringFromContact:style:';
     class function attributedStringFromContact_style_defaultAttributes (contact: CNContact; style: CNContactFormatterStyle; attributes: NSDictionary): NSAttributedString; message 'attributedStringFromContact:style:defaultAttributes:';
     class function nameOrderForContact (contact: CNContact): CNContactDisplayNameOrder; message 'nameOrderForContact:';

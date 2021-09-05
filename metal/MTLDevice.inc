@@ -243,7 +243,7 @@ type
     function areBarycentricCoordsSupported: objcbool; message 'areBarycentricCoordsSupported'; { unavailable in ios }
     function supportsShaderBarycentricCoordinates: objcbool; message 'supportsShaderBarycentricCoordinates'; { unavailable in ios }
     function currentAllocatedSize: NSUInteger; message 'currentAllocatedSize'; { available in macos , ios  }
-    function newCommandQueue: id; message 'newCommandQueue';
+    function newCommandQueue: MTLCommandQueueProtocol; message 'newCommandQueue';
     function newCommandQueueWithMaxCommandBufferCount (maxCommandBufferCount: NSUInteger): id; message 'newCommandQueueWithMaxCommandBufferCount:';
     function heapTextureSizeAndAlignWithDescriptor (desc: MTLTextureDescriptor): MTLSizeAndAlign; message 'heapTextureSizeAndAlignWithDescriptor:'; { available in macos , ios  }
     function heapBufferSizeAndAlignWithLength_options (length: NSUInteger; options: MTLResourceOptions): MTLSizeAndAlign; message 'heapBufferSizeAndAlignWithLength:options:'; { available in macos , ios  }
@@ -257,7 +257,7 @@ type
     function newSharedTextureWithDescriptor (descriptor: MTLTextureDescriptor): id; message 'newSharedTextureWithDescriptor:'; { available in macos , ios  }
     function newSharedTextureWithHandle (sharedHandle: MTLSharedTextureHandle): id; message 'newSharedTextureWithHandle:'; { available in macos , ios  }
     function newSamplerStateWithDescriptor (descriptor: MTLSamplerDescriptor): id; message 'newSamplerStateWithDescriptor:';
-    function newDefaultLibrary: id; message 'newDefaultLibrary';
+    function newDefaultLibrary: MTLLibraryProtocol; message 'newDefaultLibrary';
     function newDefaultLibraryWithBundle_error (bundle: NSBundle; error: NSErrorPtr): id; message 'newDefaultLibraryWithBundle:error:'; { available in macos , ios  }
     function newLibraryWithFile_error (filepath: NSString; error: NSErrorPtr): id; message 'newLibraryWithFile:error:';
     function newLibraryWithURL_error (url: NSURL; error: NSErrorPtr): id; message 'newLibraryWithURL:error:'; { available in macos , ios  }
@@ -268,13 +268,13 @@ type
     function newRenderPipelineStateWithDescriptor_options_reflection_error (descriptor: MTLRenderPipelineDescriptor; options: MTLPipelineOption; reflection: MTLAutoreleasedRenderPipelineReflectionPtr; error: NSErrorPtr): id; message 'newRenderPipelineStateWithDescriptor:options:reflection:error:';
     procedure newRenderPipelineStateWithDescriptor_completionHandler (descriptor: MTLRenderPipelineDescriptor; completionHandler: MTLNewRenderPipelineStateCompletionHandler); message 'newRenderPipelineStateWithDescriptor:completionHandler:';
     procedure newRenderPipelineStateWithDescriptor_options_completionHandler (descriptor: MTLRenderPipelineDescriptor; options: MTLPipelineOption; completionHandler: MTLNewRenderPipelineStateWithReflectionCompletionHandler); message 'newRenderPipelineStateWithDescriptor:options:completionHandler:';
-    function newComputePipelineStateWithFunction_error (computeFunction: id; error: NSErrorPtr): id; message 'newComputePipelineStateWithFunction:error:';
-    function newComputePipelineStateWithFunction_options_reflection_error (computeFunction: id; options: MTLPipelineOption; reflection: MTLAutoreleasedComputePipelineReflectionPtr; error: NSErrorPtr): id; message 'newComputePipelineStateWithFunction:options:reflection:error:';
-    procedure newComputePipelineStateWithFunction_completionHandler (computeFunction: id; completionHandler: MTLNewComputePipelineStateCompletionHandler); message 'newComputePipelineStateWithFunction:completionHandler:';
-    procedure newComputePipelineStateWithFunction_options_completionHandler (computeFunction: id; options: MTLPipelineOption; completionHandler: MTLNewComputePipelineStateWithReflectionCompletionHandler); message 'newComputePipelineStateWithFunction:options:completionHandler:';
+    function newComputePipelineStateWithFunction_error (computeFunction: MTLFunctionProtocol; error: NSErrorPtr): id; message 'newComputePipelineStateWithFunction:error:';
+    function newComputePipelineStateWithFunction_options_reflection_error (computeFunction: MTLFunctionProtocol; options: MTLPipelineOption; reflection: MTLAutoreleasedComputePipelineReflectionPtr; error: NSErrorPtr): id; message 'newComputePipelineStateWithFunction:options:reflection:error:';
+    procedure newComputePipelineStateWithFunction_completionHandler (computeFunction: MTLFunctionProtocol; completionHandler: MTLNewComputePipelineStateCompletionHandler); message 'newComputePipelineStateWithFunction:completionHandler:';
+    procedure newComputePipelineStateWithFunction_options_completionHandler (computeFunction: MTLFunctionProtocol; options: MTLPipelineOption; completionHandler: MTLNewComputePipelineStateWithReflectionCompletionHandler); message 'newComputePipelineStateWithFunction:options:completionHandler:';
     function newComputePipelineStateWithDescriptor_options_reflection_error (descriptor: MTLComputePipelineDescriptor; options: MTLPipelineOption; reflection: MTLAutoreleasedComputePipelineReflectionPtr; error: NSErrorPtr): id; message 'newComputePipelineStateWithDescriptor:options:reflection:error:'; { available in macos , ios  }
     procedure newComputePipelineStateWithDescriptor_options_completionHandler (descriptor: MTLComputePipelineDescriptor; options: MTLPipelineOption; completionHandler: MTLNewComputePipelineStateWithReflectionCompletionHandler); message 'newComputePipelineStateWithDescriptor:options:completionHandler:'; { available in macos , ios  }
-    function newFence: id; message 'newFence'; { available in macos , ios  }
+    function newFence: MTLFenceProtocol; message 'newFence'; { available in macos , ios  }
     function supportsFeatureSet (featureSet: MTLFeatureSet): objcbool; message 'supportsFeatureSet:';
     function supportsFamily (gpuFamily: MTLGPUFamily): objcbool; message 'supportsFamily:'; { available in macos , ios  }
     function supportsTextureSampleCount (sampleCount: NSUInteger): objcbool; message 'supportsTextureSampleCount:'; { available in macos , ios  }
@@ -290,8 +290,8 @@ type
     function supportsRasterizationRateMapWithLayerCount (layerCount: NSUInteger): objcbool; message 'supportsRasterizationRateMapWithLayerCount:'; { available in macos , ios , macCatalyst  }
     function newRasterizationRateMapWithDescriptor (descriptor: MTLRasterizationRateMapDescriptor): id; message 'newRasterizationRateMapWithDescriptor:'; { available in macos , ios , macCatalyst  }
     function newIndirectCommandBufferWithDescriptor_maxCommandCount_options (descriptor: MTLIndirectCommandBufferDescriptor; maxCount: NSUInteger; options: MTLResourceOptions): id; message 'newIndirectCommandBufferWithDescriptor:maxCommandCount:options:'; { available in macos , ios  }
-    function newEvent: id; message 'newEvent'; { available in macos , ios  }
-    function newSharedEvent: id; message 'newSharedEvent'; { available in macos , ios  }
+    function newEvent: MTLEventProtocol; message 'newEvent'; { available in macos , ios  }
+    function newSharedEvent: MTLSharedEventProtocol; message 'newSharedEvent'; { available in macos , ios  }
     function newSharedEventWithHandle (sharedEventHandle: MTLSharedEventHandle): id; message 'newSharedEventWithHandle:'; { available in macos , ios  }
     function peerGroupID: cuint64; message 'peerGroupID'; { unavailable in ios }
     function peerIndex: cuint32; message 'peerIndex'; { unavailable in ios }
@@ -312,7 +312,7 @@ type
     function supportsCounterSampling (samplingPoint: MTLCounterSamplingPoint): objcbool; message 'supportsCounterSampling:'; { available in macos , ios  }
     function supportsVertexAmplificationCount (count: NSUInteger): objcbool; message 'supportsVertexAmplificationCount:'; { available in macos , ios , macCatalyst  }
     function supportsDynamicLibraries: objcbool; message 'supportsDynamicLibraries'; { available in macos , ios  }
-    function newDynamicLibrary_error (_library: id; error: NSErrorPtr): id; message 'newDynamicLibrary:error:'; { available in macos , ios  }
+    function newDynamicLibrary_error (_library: MTLLibraryProtocol; error: NSErrorPtr): id; message 'newDynamicLibrary:error:'; { available in macos , ios  }
     function newDynamicLibraryWithURL_error (url: NSURL; error: NSErrorPtr): id; message 'newDynamicLibraryWithURL:error:'; { available in macos , ios  }
     function newBinaryArchiveWithDescriptor_error (descriptor: MTLBinaryArchiveDescriptor; error: NSErrorPtr): id; message 'newBinaryArchiveWithDescriptor:error:'; { available in macos , ios  }
     function supportsRaytracing: objcbool; message 'supportsRaytracing'; { available in macos , ios  }

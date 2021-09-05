@@ -34,8 +34,8 @@ const
 type
   GKMatchmakerViewController = objcclass external (NSViewController, GKViewControllerProtocol)
   public
-    procedure setMatchmakerDelegate(newValue: id); message 'setMatchmakerDelegate:';
-    function matchmakerDelegate: id; message 'matchmakerDelegate';
+    procedure setMatchmakerDelegate(newValue: GKMatchmakerViewControllerDelegateProtocol); message 'setMatchmakerDelegate:';
+    function matchmakerDelegate: GKMatchmakerViewControllerDelegateProtocol; message 'matchmakerDelegate';
     function matchRequest: GKMatchRequest; message 'matchRequest';
     procedure setHosted(newValue: objcbool); message 'setHosted:';
     function isHosted: objcbool; message 'isHosted';

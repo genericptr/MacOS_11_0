@@ -11,13 +11,13 @@ type
 type
   MTKView = objcclass external (NSView, NSCodingProtocol, CALayerDelegateProtocol)
   public
-    function initWithFrame_device (frameRect: CGRect; device: id): id; message 'initWithFrame:device:'; { NS_DESIGNATED_INITIALIZER }
+    function initWithFrame_device (frameRect: CGRect; device: MTLDeviceProtocol): id; message 'initWithFrame:device:'; { NS_DESIGNATED_INITIALIZER }
     function initWithCoder (coder: NSCoder): id; message 'initWithCoder:'; { NS_DESIGNATED_INITIALIZER }
-    procedure setDelegate(newValue: id); message 'setDelegate:';
-    function delegate: id; message 'delegate';
-    procedure setDevice(newValue: id); message 'setDevice:';
-    function device: id; message 'device';
-    function currentDrawable: id; message 'currentDrawable';
+    procedure setDelegate(newValue: MTKViewDelegateProtocol); message 'setDelegate:';
+    function delegate: MTKViewDelegateProtocol; message 'delegate';
+    procedure setDevice(newValue: MTLDeviceProtocol); message 'setDevice:';
+    function device: MTLDeviceProtocol; message 'device';
+    function currentDrawable: CAMetalDrawableProtocol; message 'currentDrawable';
     procedure setFramebufferOnly(newValue: objcbool); message 'setFramebufferOnly:';
     function framebufferOnly: objcbool; message 'framebufferOnly';
     procedure setDepthStencilAttachmentTextureUsage(newValue: MTLTextureUsage); message 'setDepthStencilAttachmentTextureUsage:'; { available in macos , ios  }
@@ -38,8 +38,8 @@ type
     function clearDepth: double; message 'clearDepth';
     procedure setClearStencil(newValue: cuint32); message 'setClearStencil:';
     function clearStencil: cuint32; message 'clearStencil';
-    function depthStencilTexture: id; message 'depthStencilTexture';
-    function multisampleColorTexture: id; message 'multisampleColorTexture';
+    function depthStencilTexture: MTLTextureProtocol; message 'depthStencilTexture';
+    function multisampleColorTexture: MTLTextureProtocol; message 'multisampleColorTexture';
     procedure releaseDrawables; message 'releaseDrawables';
     function currentRenderPassDescriptor: MTLRenderPassDescriptor; message 'currentRenderPassDescriptor';
     procedure setPreferredFramesPerSecond(newValue: NSInteger); message 'setPreferredFramesPerSecond:';
@@ -51,7 +51,7 @@ type
     procedure setDrawableSize(newValue: CGSize); message 'setDrawableSize:';
     function drawableSize: CGSize; message 'drawableSize';
     function preferredDrawableSize: CGSize; message 'preferredDrawableSize'; { available in macos  }
-    function preferredDevice: id; message 'preferredDevice'; { available in macos , ios  }
+    function preferredDevice: MTLDeviceProtocol; message 'preferredDevice'; { available in macos , ios  }
     procedure setPaused(newValue: objcbool); message 'setPaused:';
     function isPaused: objcbool; message 'isPaused';
     procedure setColorspace(newValue: CGColorSpaceRef); message 'setColorspace:'; { available in 10_12 }

@@ -73,13 +73,13 @@ type
 type
   AVAssetDownloadURLSession = objcclass external (NSURLSession)
   public
-    class function sessionWithConfiguration_assetDownloadDelegate_delegateQueue (configuration: NSURLSessionConfiguration; delegate: id; delegateQueue: NSOperationQueue): AVAssetDownloadURLSession; message 'sessionWithConfiguration:assetDownloadDelegate:delegateQueue:';
+    class function sessionWithConfiguration_assetDownloadDelegate_delegateQueue (configuration: NSURLSessionConfiguration; delegate: AVAssetDownloadDelegateProtocol; delegateQueue: NSOperationQueue): AVAssetDownloadURLSession; message 'sessionWithConfiguration:assetDownloadDelegate:delegateQueue:';
     function assetDownloadTaskWithURLAsset_destinationURL_options (URLAsset: AVURLAsset; destinationURL: NSURL; options: NSDictionary): AVAssetDownloadTask; message 'assetDownloadTaskWithURLAsset:destinationURL:options:'; { unavailable in tvos, watchos }
     function assetDownloadTaskWithURLAsset_assetTitle_assetArtworkData_options (URLAsset: AVURLAsset; title: NSString; artworkData: NSData; options: NSDictionary): AVAssetDownloadTask; message 'assetDownloadTaskWithURLAsset:assetTitle:assetArtworkData:options:'; { unavailable in tvos, watchos }
     function aggregateAssetDownloadTaskWithURLAsset_mediaSelections_assetTitle_assetArtworkData_options (URLAsset: AVURLAsset; mediaSelections: NSArray; title: NSString; artworkData: NSData; options: NSDictionary): AVAggregateAssetDownloadTask; message 'aggregateAssetDownloadTaskWithURLAsset:mediaSelections:assetTitle:assetArtworkData:options:'; { unavailable in tvos, watchos }
     class function sharedSession_: NSURLSession; message 'sharedSession';
     class function sessionWithConfiguration (configuration: NSURLSessionConfiguration): NSURLSession; message 'sessionWithConfiguration:';
-    class function sessionWithConfiguration_delegate_delegateQueue (configuration: NSURLSessionConfiguration; delegate: id; queue: NSOperationQueue): NSURLSession; message 'sessionWithConfiguration:delegate:delegateQueue:';
+    class function sessionWithConfiguration_delegate_delegateQueue (configuration: NSURLSessionConfiguration; delegate: NSURLSessionDelegateProtocol; queue: NSOperationQueue): NSURLSession; message 'sessionWithConfiguration:delegate:delegateQueue:';
     function dataTaskWithRequest (request: NSURLRequest): NSURLSessionDataTask; message 'dataTaskWithRequest:';
     function dataTaskWithURL (url: NSURL): NSURLSessionDataTask; message 'dataTaskWithURL:';
     function uploadTaskWithRequest_fromFile (request: NSURLRequest; fileURL: NSURL): NSURLSessionUploadTask; message 'uploadTaskWithRequest:fromFile:';

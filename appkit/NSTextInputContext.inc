@@ -17,9 +17,9 @@ type
   NSTextInputContext = objcclass external (NSObject)
   public
     class function currentInputContext: NSTextInputContext; message 'currentInputContext';
-    function initWithClient (client: id): id; message 'initWithClient:'; { NS_DESIGNATED_INITIALIZER }
+    function initWithClient (client: NSTextInputClientProtocol): id; message 'initWithClient:'; { NS_DESIGNATED_INITIALIZER }
     function init: id; message 'init';
-    function client: id; message 'client';
+    function client: NSTextInputClientProtocol; message 'client';
     procedure setAcceptsGlyphInfo(newValue: objcbool); message 'setAcceptsGlyphInfo:';
     function acceptsGlyphInfo: objcbool; message 'acceptsGlyphInfo';
     procedure setAllowedInputSourceLocales(newValue: NSArray); message 'setAllowedInputSourceLocales:';

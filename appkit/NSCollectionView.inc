@@ -107,15 +107,15 @@ type
 type
   NSCollectionView = objcclass external (NSView, NSDraggingSourceProtocol, NSDraggingDestinationProtocol)
   public
-    procedure setDataSource(newValue: id); message 'setDataSource:'; { available in macos  }
-    function dataSource: id; message 'dataSource'; { available in macos  }
-    procedure setPrefetchDataSource(newValue: id); message 'setPrefetchDataSource:'; { available in macos  }
-    function prefetchDataSource: id; message 'prefetchDataSource'; { available in macos  }
+    procedure setDataSource(newValue: NSCollectionViewDataSourceProtocol); message 'setDataSource:'; { available in macos  }
+    function dataSource: NSCollectionViewDataSourceProtocol; message 'dataSource'; { available in macos  }
+    procedure setPrefetchDataSource(newValue: NSCollectionViewPrefetchingProtocol); message 'setPrefetchDataSource:'; { available in macos  }
+    function prefetchDataSource: NSCollectionViewPrefetchingProtocol; message 'prefetchDataSource'; { available in macos  }
     procedure setContent(newValue: NSArray); message 'setContent:';
     function content: NSArray; message 'content';
     procedure reloadData; message 'reloadData'; { available in macos  }
-    procedure setDelegate(newValue: id); message 'setDelegate:';
-    function delegate: id; message 'delegate';
+    procedure setDelegate(newValue: NSCollectionViewDelegateProtocol); message 'setDelegate:';
+    function delegate: NSCollectionViewDelegateProtocol; message 'delegate';
     procedure setBackgroundView(newValue: NSView); message 'setBackgroundView:'; { available in macos  }
     function backgroundView: NSView; message 'backgroundView'; { available in macos  }
     procedure setBackgroundViewScrollsWithContent(newValue: objcbool); message 'setBackgroundViewScrollsWithContent:'; { available in macos  }
@@ -215,16 +215,16 @@ type
     function collectionView_namesOfPromisedFilesDroppedAtDestination_forDraggedItemsAtIndexes (collectionView: NSCollectionView; dropURL: NSURL; indexes: NSIndexSet): NSArray; message 'collectionView:namesOfPromisedFilesDroppedAtDestination:forDraggedItemsAtIndexes:'; deprecated 'Use NSFilePromiseReceiver objects instead';
     function collectionView_draggingImageForItemsAtIndexPaths_withEvent_offset (collectionView: NSCollectionView; indexPaths: NSSet; event: NSEvent; dragImageOffset: NSPointPointer): NSImage; message 'collectionView:draggingImageForItemsAtIndexPaths:withEvent:offset:'; { available in macos  }
     function collectionView_draggingImageForItemsAtIndexes_withEvent_offset (collectionView: NSCollectionView; indexes: NSIndexSet; event: NSEvent; dragImageOffset: NSPointPointer): NSImage; message 'collectionView:draggingImageForItemsAtIndexes:withEvent:offset:'; { available in macos  }
-    function collectionView_validateDrop_proposedIndexPath_dropOperation (collectionView: NSCollectionView; draggingInfo: id; proposedDropIndexPath: NSIndexPathPtr; proposedDropOperation: NSCollectionViewDropOperationPtr): NSDragOperation; message 'collectionView:validateDrop:proposedIndexPath:dropOperation:'; { available in macos  }
-    function collectionView_validateDrop_proposedIndex_dropOperation (collectionView: NSCollectionView; draggingInfo: id; proposedDropIndex: NSIntegerPtr; proposedDropOperation: NSCollectionViewDropOperationPtr): NSDragOperation; message 'collectionView:validateDrop:proposedIndex:dropOperation:'; { available in macos  }
-    function collectionView_acceptDrop_indexPath_dropOperation (collectionView: NSCollectionView; draggingInfo: id; indexPath: NSIndexPath; dropOperation: NSCollectionViewDropOperation): objcbool; message 'collectionView:acceptDrop:indexPath:dropOperation:'; { available in macos  }
-    function collectionView_acceptDrop_index_dropOperation (collectionView: NSCollectionView; draggingInfo: id; index: NSInteger; dropOperation: NSCollectionViewDropOperation): objcbool; message 'collectionView:acceptDrop:index:dropOperation:'; { available in macos  }
+    function collectionView_validateDrop_proposedIndexPath_dropOperation (collectionView: NSCollectionView; draggingInfo: NSDraggingInfoProtocol; proposedDropIndexPath: NSIndexPathPtr; proposedDropOperation: NSCollectionViewDropOperationPtr): NSDragOperation; message 'collectionView:validateDrop:proposedIndexPath:dropOperation:'; { available in macos  }
+    function collectionView_validateDrop_proposedIndex_dropOperation (collectionView: NSCollectionView; draggingInfo: NSDraggingInfoProtocol; proposedDropIndex: NSIntegerPtr; proposedDropOperation: NSCollectionViewDropOperationPtr): NSDragOperation; message 'collectionView:validateDrop:proposedIndex:dropOperation:'; { available in macos  }
+    function collectionView_acceptDrop_indexPath_dropOperation (collectionView: NSCollectionView; draggingInfo: NSDraggingInfoProtocol; indexPath: NSIndexPath; dropOperation: NSCollectionViewDropOperation): objcbool; message 'collectionView:acceptDrop:indexPath:dropOperation:'; { available in macos  }
+    function collectionView_acceptDrop_index_dropOperation (collectionView: NSCollectionView; draggingInfo: NSDraggingInfoProtocol; index: NSInteger; dropOperation: NSCollectionViewDropOperation): objcbool; message 'collectionView:acceptDrop:index:dropOperation:'; { available in macos  }
     function collectionView_pasteboardWriterForItemAtIndexPath (collectionView: NSCollectionView; indexPath: NSIndexPath): id; message 'collectionView:pasteboardWriterForItemAtIndexPath:'; { available in macos  }
     function collectionView_pasteboardWriterForItemAtIndex (collectionView: NSCollectionView; index: NSUInteger): id; message 'collectionView:pasteboardWriterForItemAtIndex:';
     procedure collectionView_draggingSession_willBeginAtPoint_forItemsAtIndexPaths (collectionView: NSCollectionView; session: NSDraggingSession; screenPoint: NSPoint; indexPaths: NSSet); message 'collectionView:draggingSession:willBeginAtPoint:forItemsAtIndexPaths:'; { available in macos  }
     procedure collectionView_draggingSession_willBeginAtPoint_forItemsAtIndexes (collectionView: NSCollectionView; session: NSDraggingSession; screenPoint: NSPoint; indexes: NSIndexSet); message 'collectionView:draggingSession:willBeginAtPoint:forItemsAtIndexes:';
     procedure collectionView_draggingSession_endedAtPoint_dragOperation (collectionView: NSCollectionView; session: NSDraggingSession; screenPoint: NSPoint; operation: NSDragOperation); message 'collectionView:draggingSession:endedAtPoint:dragOperation:';
-    procedure collectionView_updateDraggingItemsForDrag (collectionView: NSCollectionView; draggingInfo: id); message 'collectionView:updateDraggingItemsForDrag:';
+    procedure collectionView_updateDraggingItemsForDrag (collectionView: NSCollectionView; draggingInfo: NSDraggingInfoProtocol); message 'collectionView:updateDraggingItemsForDrag:';
     function collectionView_shouldChangeItemsAtIndexPaths_toHighlightState (collectionView: NSCollectionView; indexPaths: NSSet; highlightState: NSCollectionViewItemHighlightState): NSSet; message 'collectionView:shouldChangeItemsAtIndexPaths:toHighlightState:'; { available in macos  }
     procedure collectionView_didChangeItemsAtIndexPaths_toHighlightState (collectionView: NSCollectionView; indexPaths: NSSet; highlightState: NSCollectionViewItemHighlightState); message 'collectionView:didChangeItemsAtIndexPaths:toHighlightState:'; { available in macos  }
     function collectionView_shouldSelectItemsAtIndexPaths (collectionView: NSCollectionView; indexPaths: NSSet): NSSet; message 'collectionView:shouldSelectItemsAtIndexPaths:'; { available in macos  }

@@ -11,7 +11,7 @@ type
   MTLFunctionHandleProtocol = objcprotocol external name 'MTLFunctionHandle' (NSObjectProtocol)
     function functionType: MTLFunctionType; message 'functionType';
     function name: NSString; message 'name';
-    function device: id; message 'device';
+    function device: MTLDeviceProtocol; message 'device';
   end;
 {$endif}
 

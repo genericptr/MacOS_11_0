@@ -9,11 +9,11 @@ type
 
 type
   GKStrategistProtocol = objcprotocol external name 'GKStrategist' (NSObjectProtocol)
-    procedure setGameModel(newValue: id); message 'setGameModel:';
-    function gameModel: id; message 'gameModel';
-    procedure setRandomSource(newValue: id); message 'setRandomSource:';
-    function randomSource: id; message 'randomSource';
-    function bestMoveForActivePlayer: id; message 'bestMoveForActivePlayer';
+    procedure setGameModel(newValue: GKGameModelProtocol); message 'setGameModel:';
+    function gameModel: GKGameModelProtocol; message 'gameModel';
+    procedure setRandomSource(newValue: GKRandomProtocol); message 'setRandomSource:';
+    function randomSource: GKRandomProtocol; message 'randomSource';
+    function bestMoveForActivePlayer: GKGameModelUpdateProtocol; message 'bestMoveForActivePlayer';
   end;
 {$endif}
 

@@ -18,8 +18,8 @@ type
   public
     function originalRequest: NSURLRequest; message 'originalRequest';
     function webView: WKWebView; message 'webView';
-    procedure setDelegate(newValue: id); message 'setDelegate:';
-    function delegate: id; message 'delegate';
+    procedure setDelegate(newValue: WKDownloadDelegateProtocol); message 'setDelegate:';
+    function delegate: WKDownloadDelegateProtocol; message 'delegate';
     procedure cancel (completionHandler: WKDownloadCancelCallback); message 'cancel:';
 
     { Adopted protocols }

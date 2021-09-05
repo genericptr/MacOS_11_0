@@ -44,7 +44,7 @@ type
     procedure fillData_offset (data: NSData; offset: NSUInteger); message 'fillData:offset:';
     function map: MDLMeshBufferMap; message 'map';
     function length: NSUInteger; message 'length';
-    function allocator: id; message 'allocator';
+    function allocator: MDLMeshBufferAllocatorProtocol; message 'allocator';
     function type_: MDLMeshBufferType; message 'type';
   end;
 {$endif}
@@ -59,7 +59,7 @@ type
     function data: NSData; message 'data';
 
     { Adopted protocols }
-    function allocator: id; message 'allocator';
+    function allocator: MDLMeshBufferAllocatorProtocol; message 'allocator';
     function copyWithZone (zone: NSZonePtr): id; message 'copyWithZone:';
     procedure fillData_offset (data: NSData; offset: NSUInteger); message 'fillData:offset:';
     function length: NSUInteger; message 'length';
@@ -82,8 +82,8 @@ type
     function newZoneForBuffersWithSize_andType (sizes: NSArray; types: NSArray): id; message 'newZoneForBuffersWithSize:andType:';
     function newBuffer_type (length: NSUInteger; type_: MDLMeshBufferType): id; message 'newBuffer:type:';
     function newBufferWithData_type (data: NSData; type_: MDLMeshBufferType): id; message 'newBufferWithData:type:';
-    function newBufferFromZone_length_type (zone: id; length: NSUInteger; type_: MDLMeshBufferType): id; message 'newBufferFromZone:length:type:';
-    function newBufferFromZone_data_type (zone: id; data: NSData; type_: MDLMeshBufferType): id; message 'newBufferFromZone:data:type:';
+    function newBufferFromZone_length_type (zone: MDLMeshBufferZoneProtocol; length: NSUInteger; type_: MDLMeshBufferType): id; message 'newBufferFromZone:length:type:';
+    function newBufferFromZone_data_type (zone: MDLMeshBufferZoneProtocol; data: NSData; type_: MDLMeshBufferType): id; message 'newBufferFromZone:data:type:';
   end;
 {$endif}
 
@@ -94,8 +94,8 @@ type
 
     { Adopted protocols }
     function newBuffer_type (length: NSUInteger; type_: MDLMeshBufferType): id; message 'newBuffer:type:';
-    function newBufferFromZone_data_type (zone: id; data: NSData; type_: MDLMeshBufferType): id; message 'newBufferFromZone:data:type:';
-    function newBufferFromZone_length_type (zone: id; length: NSUInteger; type_: MDLMeshBufferType): id; message 'newBufferFromZone:length:type:';
+    function newBufferFromZone_data_type (zone: MDLMeshBufferZoneProtocol; data: NSData; type_: MDLMeshBufferType): id; message 'newBufferFromZone:data:type:';
+    function newBufferFromZone_length_type (zone: MDLMeshBufferZoneProtocol; length: NSUInteger; type_: MDLMeshBufferType): id; message 'newBufferFromZone:length:type:';
     function newBufferWithData_type (data: NSData; type_: MDLMeshBufferType): id; message 'newBufferWithData:type:';
     function newZone (capacity: NSUInteger): id; message 'newZone:';
     function newZoneForBuffersWithSize_andType (sizes: NSArray; types: NSArray): id; message 'newZoneForBuffersWithSize:andType:';

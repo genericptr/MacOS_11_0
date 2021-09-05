@@ -103,8 +103,8 @@ type
     function initialSegmentStartTime: CMTime; message 'initialSegmentStartTime'; { unavailable in watchos }
     procedure setOutputFileTypeProfile(newValue: AVFileTypeProfile); message 'setOutputFileTypeProfile:'; { unavailable in watchos }
     function outputFileTypeProfile: AVFileTypeProfile; message 'outputFileTypeProfile'; { unavailable in watchos }
-    procedure setDelegate(newValue: id); message 'setDelegate:'; { unavailable in watchos }
-    function delegate: id; message 'delegate'; { unavailable in watchos }
+    procedure setDelegate(newValue: AVAssetWriterDelegateProtocol); message 'setDelegate:'; { unavailable in watchos }
+    function delegate: AVAssetWriterDelegateProtocol; message 'delegate'; { unavailable in watchos }
     procedure flushSegment; message 'flushSegment'; { unavailable in watchos }
   end;
 {$endif}

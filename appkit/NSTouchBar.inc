@@ -35,8 +35,8 @@ type
     function escapeKeyReplacementItemIdentifier: NSTouchBarItemIdentifier; message 'escapeKeyReplacementItemIdentifier';
     procedure setTemplateItems(newValue: NSSet); message 'setTemplateItems:';
     function templateItems: NSSet; message 'templateItems';
-    procedure setDelegate(newValue: id); message 'setDelegate:';
-    function delegate: id; message 'delegate';
+    procedure setDelegate(newValue: NSTouchBarDelegateProtocol); message 'setDelegate:';
+    function delegate: NSTouchBarDelegateProtocol; message 'delegate';
     function itemForIdentifier (identifier: NSTouchBarItemIdentifier): NSTouchBarItem; message 'itemForIdentifier:';
     function isVisible: objcbool; message 'isVisible';
     class procedure setAutomaticCustomizeTouchBarMenuItemEnabled(newValue: objcbool); message 'setAutomaticCustomizeTouchBarMenuItemEnabled:'; { available in macos , ios  }

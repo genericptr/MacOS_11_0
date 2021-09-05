@@ -28,8 +28,8 @@ type
   GKChallengeEventHandler = objcclass external (NSObject)
   public
     class function challengeEventHandler: GKChallengeEventHandler; message 'challengeEventHandler'; deprecated 'in 10_8, 10_10, 6_0, 7_0';
-    procedure setDelegate(newValue: id); message 'setDelegate:'; deprecated 'in 10_8, 10_10, 6_0, 7_0';
-    function delegate: id; message 'delegate'; deprecated 'in 10_8, 10_10, 6_0, 7_0';
+    procedure setDelegate(newValue: GKChallengeEventHandlerDelegateProtocol); message 'setDelegate:'; deprecated 'in 10_8, 10_10, 6_0, 7_0';
+    function delegate: GKChallengeEventHandlerDelegateProtocol; message 'delegate'; deprecated 'in 10_8, 10_10, 6_0, 7_0';
   end;
 {$endif}
 

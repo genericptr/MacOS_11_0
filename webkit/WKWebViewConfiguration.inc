@@ -86,7 +86,7 @@ type
     procedure setUserInterfaceDirectionPolicy(newValue: WKUserInterfaceDirectionPolicy); message 'setUserInterfaceDirectionPolicy:'; { available in macos  }
     function userInterfaceDirectionPolicy: WKUserInterfaceDirectionPolicy; message 'userInterfaceDirectionPolicy'; { available in macos  }
     {$endif}
-    procedure setURLSchemeHandler_forURLScheme (urlSchemeHandler: id; urlScheme: NSString); message 'setURLSchemeHandler:forURLScheme:'; { available in macos , ios  }
+    procedure setURLSchemeHandler_forURLScheme (urlSchemeHandler: WKURLSchemeHandlerProtocol; urlScheme: NSString); message 'setURLSchemeHandler:forURLScheme:'; { available in macos , ios  }
     function urlSchemeHandlerForURLScheme (urlScheme: NSString): id; message 'urlSchemeHandlerForURLScheme:'; { available in macos , ios  }
 
     { Adopted protocols }

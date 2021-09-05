@@ -77,7 +77,7 @@ type
     function areKeysAvailable (keyDescriptors: NSArray): objcbool; message 'areKeysAvailable:';
     class function localizedStringForKey (key: NSString): NSString; message 'localizedStringForKey:';
     class function comparatorForNameSortOrder (sortOrder: CNContactSortOrder): NSComparator; message 'comparatorForNameSortOrder:';
-    class function descriptorForAllComparatorKeys: id; message 'descriptorForAllComparatorKeys';
+    class function descriptorForAllComparatorKeys: CNKeyDescriptorProtocol; message 'descriptorForAllComparatorKeys';
     function isUnifiedWithContactWithIdentifier (contactIdentifier: NSString): objcbool; message 'isUnifiedWithContactWithIdentifier:';
 
     { Adopted protocols }

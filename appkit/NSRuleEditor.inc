@@ -48,8 +48,8 @@ const
 type
   NSRuleEditor = objcclass external (NSControl)
   public
-    procedure setDelegate(newValue: id); message 'setDelegate:';
-    function delegate: id; message 'delegate';
+    procedure setDelegate(newValue: NSRuleEditorDelegateProtocol); message 'setDelegate:';
+    function delegate: NSRuleEditorDelegateProtocol; message 'delegate';
     procedure setFormattingStringsFilename(newValue: NSString); message 'setFormattingStringsFilename:';
     function formattingStringsFilename: NSString; message 'formattingStringsFilename';
     procedure setFormattingDictionary(newValue: NSDictionary); message 'setFormattingDictionary:';

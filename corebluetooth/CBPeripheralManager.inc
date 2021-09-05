@@ -44,13 +44,13 @@ const
 type
   CBPeripheralManager = objcclass external (CBManager)
   public
-    procedure setDelegate(newValue: id); message 'setDelegate:';
-    function delegate: id; message 'delegate';
+    procedure setDelegate(newValue: CBPeripheralManagerDelegateProtocol); message 'setDelegate:';
+    function delegate: CBPeripheralManagerDelegateProtocol; message 'delegate';
     function isAdvertising: objcbool; message 'isAdvertising';
     class function authorizationStatus: CBPeripheralManagerAuthorizationStatus; message 'authorizationStatus'; deprecated 'in 10_9, 10_15, 7_0, 13_0, "Use CBManagerAuthorization instead"';
     function init: id; message 'init';
-    function initWithDelegate_queue (delegate_: id; queue: dispatch_queue_t): id; message 'initWithDelegate:queue:';
-    function initWithDelegate_queue_options (delegate_: id; queue: dispatch_queue_t; options: NSDictionary): id; message 'initWithDelegate:queue:options:'; { available in 10_9, 7_0 }
+    function initWithDelegate_queue (delegate_: CBPeripheralManagerDelegateProtocol; queue: dispatch_queue_t): id; message 'initWithDelegate:queue:';
+    function initWithDelegate_queue_options (delegate_: CBPeripheralManagerDelegateProtocol; queue: dispatch_queue_t; options: NSDictionary): id; message 'initWithDelegate:queue:options:'; { available in 10_9, 7_0 }
     procedure startAdvertising (advertisementData: NSDictionary); message 'startAdvertising:';
     procedure stopAdvertising; message 'stopAdvertising';
     procedure setDesiredConnectionLatency_forCentral (latency: CBPeripheralManagerConnectionLatency; central: CBCentral); message 'setDesiredConnectionLatency:forCentral:';

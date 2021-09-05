@@ -63,10 +63,10 @@ type
     function numberOfItems: NSInteger; message 'numberOfItems';
     procedure setCompletes(newValue: objcbool); message 'setCompletes:';
     function completes: objcbool; message 'completes';
-    procedure setDelegate(newValue: id); message 'setDelegate:';
-    function delegate: id; message 'delegate';
-    procedure setDataSource(newValue: id); message 'setDataSource:';
-    function dataSource: id; message 'dataSource';
+    procedure setDelegate(newValue: NSComboBoxDelegateProtocol); message 'setDelegate:';
+    function delegate: NSComboBoxDelegateProtocol; message 'delegate';
+    procedure setDataSource(newValue: NSComboBoxDataSourceProtocol); message 'setDataSource:';
+    function dataSource: NSComboBoxDataSourceProtocol; message 'dataSource';
     procedure addItemWithObjectValue (object_: id); message 'addItemWithObjectValue:';
     procedure addItemsWithObjectValues (objects: NSArray); message 'addItemsWithObjectValues:';
     procedure insertItemWithObjectValue_atIndex (object_: id; index: NSInteger); message 'insertItemWithObjectValue:atIndex:';

@@ -10,8 +10,8 @@ type
 type
   MKOverlayRenderer = objcclass external (NSObject)
   public
-    function initWithOverlay (overlay: id): id; message 'initWithOverlay:'; { NS_DESIGNATED_INITIALIZER }
-    function overlay: id; message 'overlay';
+    function initWithOverlay (overlay: MKOverlayProtocol): id; message 'initWithOverlay:'; { NS_DESIGNATED_INITIALIZER }
+    function overlay: MKOverlayProtocol; message 'overlay';
     function pointForMapPoint (mapPoint: MKMapPoint): CGPoint; message 'pointForMapPoint:';
     function mapPointForPoint (point: CGPoint): MKMapPoint; message 'mapPointForPoint:';
     function rectForMapRect (mapRect: MKMapRect): CGRect; message 'rectForMapRect:';

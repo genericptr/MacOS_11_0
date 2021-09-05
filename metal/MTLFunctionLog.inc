@@ -35,8 +35,8 @@ type
   MTLFunctionLogProtocol = objcprotocol external name 'MTLFunctionLog' (NSObjectProtocol)
     function type_: MTLFunctionLogType; message 'type';
     function encoderLabel: NSString; message 'encoderLabel';
-    function function_: id; message 'function';
-    function debugLocation: id; message 'debugLocation';
+    function function_: MTLFunctionProtocol; message 'function';
+    function debugLocation: MTLFunctionLogDebugLocationProtocol; message 'debugLocation';
   end;
 {$endif}
 

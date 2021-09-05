@@ -189,7 +189,7 @@ type
 
 type
   AVVideoCompositionValidation = objccategory external (AVVideoComposition)
-    function isValidForAsset_timeRange_validationDelegate (asset: AVAsset; timeRange: CMTimeRange; validationDelegate: id): objcbool; message 'isValidForAsset:timeRange:validationDelegate:'; { unavailable in watchos }
+    function isValidForAsset_timeRange_validationDelegate (asset: AVAsset; timeRange: CMTimeRange; validationDelegate: AVVideoCompositionValidationHandlingProtocol): objcbool; message 'isValidForAsset:timeRange:validationDelegate:'; { unavailable in watchos }
   end;
 {$endif}
 
@@ -200,8 +200,8 @@ type
   optional
     function videoComposition_shouldContinueValidatingAfterFindingInvalidValueForKey (videoComposition: AVVideoComposition; key: NSString): objcbool; message 'videoComposition:shouldContinueValidatingAfterFindingInvalidValueForKey:'; { unavailable in watchos }
     function videoComposition_shouldContinueValidatingAfterFindingEmptyTimeRange (videoComposition: AVVideoComposition; timeRange: CMTimeRange): objcbool; message 'videoComposition:shouldContinueValidatingAfterFindingEmptyTimeRange:'; { unavailable in watchos }
-    function videoComposition_shouldContinueValidatingAfterFindingInvalidTimeRangeInInstruction (videoComposition: AVVideoComposition; videoCompositionInstruction: id): objcbool; message 'videoComposition:shouldContinueValidatingAfterFindingInvalidTimeRangeInInstruction:'; { unavailable in watchos }
-    function videoComposition_shouldContinueValidatingAfterFindingInvalidTrackIDInInstruction_layerInstruction_asset (videoComposition: AVVideoComposition; videoCompositionInstruction: id; layerInstruction: AVVideoCompositionLayerInstruction; asset: AVAsset): objcbool; message 'videoComposition:shouldContinueValidatingAfterFindingInvalidTrackIDInInstruction:layerInstruction:asset:'; { unavailable in watchos }
+    function videoComposition_shouldContinueValidatingAfterFindingInvalidTimeRangeInInstruction (videoComposition: AVVideoComposition; videoCompositionInstruction: AVVideoCompositionInstructionProtocol): objcbool; message 'videoComposition:shouldContinueValidatingAfterFindingInvalidTimeRangeInInstruction:'; { unavailable in watchos }
+    function videoComposition_shouldContinueValidatingAfterFindingInvalidTrackIDInInstruction_layerInstruction_asset (videoComposition: AVVideoComposition; videoCompositionInstruction: AVVideoCompositionInstructionProtocol; layerInstruction: AVVideoCompositionLayerInstruction; asset: AVAsset): objcbool; message 'videoComposition:shouldContinueValidatingAfterFindingInvalidTrackIDInInstruction:layerInstruction:asset:'; { unavailable in watchos }
   end;
 {$endif}
 

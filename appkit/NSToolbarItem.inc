@@ -113,7 +113,7 @@ type
 
 type
   NSCloudSharingValidationProtocol = objcprotocol external name 'NSCloudSharingValidation' (NSObjectProtocol)
-    function cloudShareForUserInterfaceItem (item: id): CKShare; message 'cloudShareForUserInterfaceItem:';
+    function cloudShareForUserInterfaceItem (item: NSValidatedUserInterfaceItemProtocol): CKShare; message 'cloudShareForUserInterfaceItem:';
   end;
 {$endif}
 

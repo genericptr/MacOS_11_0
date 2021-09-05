@@ -33,8 +33,8 @@ type
   public
     function init: id; message 'init'; { NS_DESIGNATED_INITIALIZER }
     function initWithIdentity: id; message 'initWithIdentity'; deprecated 'replace with init';
-    function initWithTransformComponent (component: id): id; message 'initWithTransformComponent:';
-    function initWithTransformComponent_resetsTransform (component: id; resetsTransform: objcbool): id; message 'initWithTransformComponent:resetsTransform:';
+    function initWithTransformComponent (component: MDLTransformComponentProtocol): id; message 'initWithTransformComponent:';
+    function initWithTransformComponent_resetsTransform (component: MDLTransformComponentProtocol; resetsTransform: objcbool): id; message 'initWithTransformComponent:resetsTransform:';
     function initWithMatrix (matrix: matrix_float4x4): id; message 'initWithMatrix:';
     function initWithMatrix_resetsTransform (matrix: matrix_float4x4; resetsTransform: objcbool): id; message 'initWithMatrix:resetsTransform:';
     procedure setIdentity; message 'setIdentity';

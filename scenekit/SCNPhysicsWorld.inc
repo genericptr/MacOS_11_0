@@ -54,8 +54,8 @@ type
     function speed: CGFloat; message 'speed';
     procedure setTimeStep(newValue: NSTimeInterval); message 'setTimeStep:';
     function timeStep: NSTimeInterval; message 'timeStep';
-    procedure setContactDelegate(newValue: id); message 'setContactDelegate:';
-    function contactDelegate: id; message 'contactDelegate';
+    procedure setContactDelegate(newValue: SCNPhysicsContactDelegateProtocol); message 'setContactDelegate:';
+    function contactDelegate: SCNPhysicsContactDelegateProtocol; message 'contactDelegate';
     procedure addBehavior (behavior: SCNPhysicsBehavior); message 'addBehavior:';
     procedure removeBehavior (behavior: SCNPhysicsBehavior); message 'removeBehavior:';
     procedure removeAllBehaviors; message 'removeAllBehaviors';

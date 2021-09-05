@@ -50,16 +50,16 @@ const
 type
   NSAccessibilityCustomRotor = objcclass external (NSObject)
   public
-    function initWithLabel_itemSearchDelegate (label_: NSString; itemSearchDelegate: id): id; message 'initWithLabel:itemSearchDelegate:';
-    function initWithRotorType_itemSearchDelegate (rotorType: NSAccessibilityCustomRotorType; itemSearchDelegate: id): id; message 'initWithRotorType:itemSearchDelegate:';
+    function initWithLabel_itemSearchDelegate (label_: NSString; itemSearchDelegate: NSAccessibilityCustomRotorItemSearchDelegateProtocol): id; message 'initWithLabel:itemSearchDelegate:';
+    function initWithRotorType_itemSearchDelegate (rotorType: NSAccessibilityCustomRotorType; itemSearchDelegate: NSAccessibilityCustomRotorItemSearchDelegateProtocol): id; message 'initWithRotorType:itemSearchDelegate:';
     procedure setType(newValue: NSAccessibilityCustomRotorType); message 'setType:';
     function type_: NSAccessibilityCustomRotorType; message 'type';
     procedure setLabel(newValue: NSString); message 'setLabel:';
     function label_: NSString; message 'label';
-    procedure setItemSearchDelegate(newValue: id); message 'setItemSearchDelegate:';
-    function itemSearchDelegate: id; message 'itemSearchDelegate';
-    procedure setItemLoadingDelegate(newValue: id); message 'setItemLoadingDelegate:';
-    function itemLoadingDelegate: id; message 'itemLoadingDelegate';
+    procedure setItemSearchDelegate(newValue: NSAccessibilityCustomRotorItemSearchDelegateProtocol); message 'setItemSearchDelegate:';
+    function itemSearchDelegate: NSAccessibilityCustomRotorItemSearchDelegateProtocol; message 'itemSearchDelegate';
+    procedure setItemLoadingDelegate(newValue: NSAccessibilityElementLoadingProtocol); message 'setItemLoadingDelegate:';
+    function itemLoadingDelegate: NSAccessibilityElementLoadingProtocol; message 'itemLoadingDelegate';
   end;
 
 type
@@ -78,9 +78,9 @@ type
   public
     class function new_: id; message 'new';
     function init: id; message 'init';
-    function initWithTargetElement (targetElement: id): id; message 'initWithTargetElement:'; { NS_DESIGNATED_INITIALIZER }
+    function initWithTargetElement (targetElement: NSAccessibilityElementProtocol): id; message 'initWithTargetElement:'; { NS_DESIGNATED_INITIALIZER }
     function initWithItemLoadingToken_customLabel (itemLoadingToken: NSAccessibilityLoadingToken; customLabel: NSString): id; message 'initWithItemLoadingToken:customLabel:'; { NS_DESIGNATED_INITIALIZER }
-    function targetElement: id; message 'targetElement';
+    function targetElement: NSAccessibilityElementProtocol; message 'targetElement';
     function itemLoadingToken: NSAccessibilityLoadingToken; message 'itemLoadingToken';
     procedure setTargetRange(newValue: NSRange); message 'setTargetRange:';
     function targetRange: NSRange; message 'targetRange';

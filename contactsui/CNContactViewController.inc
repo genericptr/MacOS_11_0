@@ -10,7 +10,7 @@ type
 type
   CNContactViewController = objcclass external (NSViewController)
   public
-    class function descriptorForRequiredKeys: id; message 'descriptorForRequiredKeys';
+    class function descriptorForRequiredKeys: CNKeyDescriptorProtocol; message 'descriptorForRequiredKeys';
     procedure setContact(newValue: CNContact); message 'setContact:';
     function contact: CNContact; message 'contact';
   end;

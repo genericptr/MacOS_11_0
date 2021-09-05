@@ -44,8 +44,8 @@ type
   private
     _privateData: id;
   public
-    procedure setDelegate(newValue: id); message 'setDelegate:';
-    function delegate: id; message 'delegate';
+    procedure setDelegate(newValue: IKCameraDeviceViewDelegateProtocol); message 'setDelegate:';
+    function delegate: IKCameraDeviceViewDelegateProtocol; message 'delegate';
     procedure setCameraDevice(newValue: ICCameraDevicePtr); message 'setCameraDevice:';
     function cameraDevice: ICCameraDevicePtr; message 'cameraDevice';
     procedure setMode(newValue: IKCameraDeviceViewDisplayMode); message 'setMode:';

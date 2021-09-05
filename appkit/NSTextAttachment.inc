@@ -42,8 +42,8 @@ type
     function bounds: NSRect; message 'bounds'; { available in macos , ios , watchos , tvos  }
     procedure setFileWrapper(newValue: NSFileWrapper); message 'setFileWrapper:';
     function fileWrapper: NSFileWrapper; message 'fileWrapper';
-    procedure setAttachmentCell(newValue: id); message 'setAttachmentCell:'; { unavailable in ios, watchos, tvos }
-    function attachmentCell: id; message 'attachmentCell'; { unavailable in ios, watchos, tvos }
+    procedure setAttachmentCell(newValue: NSTextAttachmentCellProtocol); message 'setAttachmentCell:'; { unavailable in ios, watchos, tvos }
+    function attachmentCell: NSTextAttachmentCellProtocol; message 'attachmentCell'; { unavailable in ios, watchos, tvos }
 
     { Adopted protocols }
     function attachmentBoundsForTextContainer_proposedLineFragment_glyphPosition_characterIndex (textContainer: NSTextContainer; lineFrag: NSRect; position: CGPoint; charIndex: NSUInteger): NSRect; message 'attachmentBoundsForTextContainer:proposedLineFragment:glyphPosition:characterIndex:'; { available in macos , ios , watchos , tvos  }

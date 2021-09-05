@@ -16,11 +16,11 @@ type
     function explorationParameter: NSUInteger; message 'explorationParameter';
 
     { Adopted protocols }
-    function bestMoveForActivePlayer: id; message 'bestMoveForActivePlayer';
-    function gameModel: id; message 'gameModel';
-    function randomSource: id; message 'randomSource';
-    procedure setGameModel (newValue: id); message 'setGameModel:';
-    procedure setRandomSource (newValue: id); message 'setRandomSource:';
+    function bestMoveForActivePlayer: GKGameModelUpdateProtocol; message 'bestMoveForActivePlayer';
+    function gameModel: GKGameModelProtocol; message 'gameModel';
+    function randomSource: GKRandomProtocol; message 'randomSource';
+    procedure setGameModel (newValue: GKGameModelProtocol); message 'setGameModel:';
+    procedure setRandomSource (newValue: GKRandomProtocol); message 'setRandomSource:';
   end;
 {$endif}
 

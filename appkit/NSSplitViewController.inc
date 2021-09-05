@@ -25,7 +25,7 @@ type
     function splitViewItemForViewController (viewController: NSViewController): NSSplitViewItem; message 'splitViewItemForViewController:';
     procedure setMinimumThicknessForInlineSidebars(newValue: CGFloat); message 'setMinimumThicknessForInlineSidebars:'; { available in macos  }
     function minimumThicknessForInlineSidebars: CGFloat; message 'minimumThicknessForInlineSidebars'; { available in macos  }
-    function validateUserInterfaceItem (item: id): objcbool; message 'validateUserInterfaceItem:'; { available in macos  }
+    function validateUserInterfaceItem (item: NSValidatedUserInterfaceItemProtocol): objcbool; message 'validateUserInterfaceItem:'; { available in macos  }
     procedure viewDidLoad; message 'viewDidLoad'; { NS_REQUIRES_SUPER }
     function splitView_canCollapseSubview (splitView_: NSSplitView; subview: NSView): objcbool; message 'splitView:canCollapseSubview:'; { NS_REQUIRES_SUPER }
     function splitView_shouldCollapseSubview_forDoubleClickOnDividerAtIndex (splitView_: NSSplitView; subview: NSView; dividerIndex: NSInteger): objcbool; message 'splitView:shouldCollapseSubview:forDoubleClickOnDividerAtIndex:'; deprecated 'NSSplitView no longer supports collapsing sections via double-click. This delegate method is never called, and NSSplitViewController''s implementation always returns NO.';

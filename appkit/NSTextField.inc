@@ -36,8 +36,8 @@ type
     procedure setSelectable(newValue: objcbool); message 'setSelectable:';
     function isSelectable: objcbool; message 'isSelectable';
     procedure selectText (sender: id); message 'selectText:';
-    procedure setDelegate(newValue: id); message 'setDelegate:';
-    function delegate: id; message 'delegate';
+    procedure setDelegate(newValue: NSTextFieldDelegateProtocol); message 'setDelegate:';
+    function delegate: NSTextFieldDelegateProtocol; message 'delegate';
     function textShouldBeginEditing (textObject: NSText): objcbool; message 'textShouldBeginEditing:';
     function textShouldEndEditing (textObject: NSText): objcbool; message 'textShouldEndEditing:';
     procedure textDidBeginEditing (notification: NSNotification); message 'textDidBeginEditing:';
@@ -60,7 +60,7 @@ type
     { Adopted protocols }
     function contentType: NSTextContentType; message 'contentType'; { available in macos  }
     procedure setContentType (newValue: NSTextContentType); message 'setContentType:'; { available in macos  }
-    function validateUserInterfaceItem (item: id): objcbool; message 'validateUserInterfaceItem:';
+    function validateUserInterfaceItem (item: NSValidatedUserInterfaceItemProtocol): objcbool; message 'validateUserInterfaceItem:';
     function accessibilityValue: NSString; message 'accessibilityValue';
   end;
 

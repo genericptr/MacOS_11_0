@@ -18,8 +18,8 @@ type
     function managedObjectContext: NSManagedObjectContext; message 'managedObjectContext';
     function sectionNameKeyPath: NSString; message 'sectionNameKeyPath';
     function cacheName: NSString; message 'cacheName';
-    procedure setDelegate(newValue: id); message 'setDelegate:';
-    function delegate: id; message 'delegate';
+    procedure setDelegate(newValue: NSFetchedResultsControllerDelegateProtocol); message 'setDelegate:';
+    function delegate: NSFetchedResultsControllerDelegateProtocol; message 'delegate';
     class procedure deleteCacheWithName (name: NSString); message 'deleteCacheWithName:';
     function fetchedObjects: NSArray; message 'fetchedObjects';
     function objectAtIndexPath (indexPath: NSIndexPath): NSFetchRequestResultProtocol; message 'objectAtIndexPath:';
@@ -64,7 +64,7 @@ type
   optional
     procedure controller_didChangeObject_atIndexPath_forChangeType_newIndexPath (controller: NSFetchedResultsController; anObject: id; indexPath: NSIndexPath; type_: NSFetchedResultsChangeType; newIndexPath: NSIndexPath); message 'controller:didChangeObject:atIndexPath:forChangeType:newIndexPath:';
   optional
-    procedure controller_didChangeSection_atIndex_forChangeType (controller: NSFetchedResultsController; sectionInfo: id; sectionIndex: NSUInteger; type_: NSFetchedResultsChangeType); message 'controller:didChangeSection:atIndex:forChangeType:';
+    procedure controller_didChangeSection_atIndex_forChangeType (controller: NSFetchedResultsController; sectionInfo: NSFetchedResultsSectionInfoProtocol; sectionIndex: NSUInteger; type_: NSFetchedResultsChangeType); message 'controller:didChangeSection:atIndex:forChangeType:';
   optional
     procedure controllerWillChangeContent (controller: NSFetchedResultsController); message 'controllerWillChangeContent:';
   optional

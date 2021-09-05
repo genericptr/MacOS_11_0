@@ -55,9 +55,9 @@ type
     function initWithOutputSettings (outputSettings: NSDictionary): id; message 'initWithOutputSettings:'; { unavailable in watchos }
     function hasNewPixelBufferForItemTime (itemTime: CMTime): objcbool; message 'hasNewPixelBufferForItemTime:';
     function copyPixelBufferForItemTime_itemTimeForDisplay (itemTime: CMTime; outItemTimeForDisplay: CMTimePtr): CVPixelBufferRef; message 'copyPixelBufferForItemTime:itemTimeForDisplay:'; { CF_RETURNS_RETAINED }
-    procedure setDelegate_queue (delegate: id; delegateQueue: dispatch_queue_t); message 'setDelegate:queue:';
+    procedure setDelegate_queue (delegate: AVPlayerItemOutputPullDelegateProtocol; delegateQueue: dispatch_queue_t); message 'setDelegate:queue:';
     procedure requestNotificationOfMediaDataChangeWithAdvanceInterval (interval: NSTimeInterval); message 'requestNotificationOfMediaDataChangeWithAdvanceInterval:';
-    function delegate: id; message 'delegate';
+    function delegate: AVPlayerItemOutputPullDelegateProtocol; message 'delegate';
     function delegateQueue: dispatch_queue_t; message 'delegateQueue';
   end;
 {$endif}
@@ -79,8 +79,8 @@ type
   private
     _legibleOutputInternal: AVPlayerItemLegibleOutputInternal;
   public
-    procedure setDelegate_queue (delegate: id; delegateQueue: dispatch_queue_t); message 'setDelegate:queue:';
-    function delegate: id; message 'delegate';
+    procedure setDelegate_queue (delegate: AVPlayerItemLegibleOutputPushDelegateProtocol; delegateQueue: dispatch_queue_t); message 'setDelegate:queue:';
+    function delegate: AVPlayerItemLegibleOutputPushDelegateProtocol; message 'delegate';
     function delegateQueue: dispatch_queue_t; message 'delegateQueue';
     procedure setAdvanceIntervalForDelegateInvocation(newValue: NSTimeInterval); message 'setAdvanceIntervalForDelegateInvocation:';
     function advanceIntervalForDelegateInvocation: NSTimeInterval; message 'advanceIntervalForDelegateInvocation';
@@ -122,7 +122,7 @@ type
   public
     function initWithIdentifiers (identifiers: NSArray): id; message 'initWithIdentifiers:'; { NS_DESIGNATED_INITIALIZER }
     procedure setDelegate_queue (delegate: id; delegateQueue: dispatch_queue_t); message 'setDelegate:queue:';
-    function delegate: id; message 'delegate';
+    function delegate: AVPlayerItemMetadataOutputPushDelegateProtocol; message 'delegate';
     function delegateQueue: dispatch_queue_t; message 'delegateQueue';
     procedure setAdvanceIntervalForDelegateInvocation(newValue: NSTimeInterval); message 'setAdvanceIntervalForDelegateInvocation:';
     function advanceIntervalForDelegateInvocation: NSTimeInterval; message 'advanceIntervalForDelegateInvocation';

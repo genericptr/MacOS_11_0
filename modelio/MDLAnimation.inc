@@ -50,8 +50,8 @@ type
   public
     procedure setSkeleton(newValue: MDLSkeleton); message 'setSkeleton:';
     function skeleton: MDLSkeleton; message 'skeleton';
-    procedure setJointAnimation(newValue: id); message 'setJointAnimation:';
-    function jointAnimation: id; message 'jointAnimation';
+    procedure setJointAnimation(newValue: MDLJointAnimationProtocol); message 'setJointAnimation:';
+    function jointAnimation: MDLJointAnimationProtocol; message 'jointAnimation';
     procedure setJointPaths(newValue: NSArray); message 'setJointPaths:';
     function jointPaths: NSArray; message 'jointPaths';
     procedure setGeometryBindTransform(newValue: matrix_double4x4); message 'setGeometryBindTransform:';

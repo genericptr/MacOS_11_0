@@ -17,10 +17,10 @@ const
 type
   NSOutlineView = objcclass external (NSTableView, NSAccessibilityOutlineProtocol)
   public
-    procedure setDelegate(newValue: id); message 'setDelegate:';
-    function delegate: id; message 'delegate';
-    procedure setDataSource(newValue: id); message 'setDataSource:';
-    function dataSource: id; message 'dataSource';
+    procedure setDelegate(newValue: NSOutlineViewDelegateProtocol); message 'setDelegate:';
+    function delegate: NSOutlineViewDelegateProtocol; message 'delegate';
+    procedure setDataSource(newValue: NSOutlineViewDataSourceProtocol); message 'setDataSource:';
+    function dataSource: NSOutlineViewDataSourceProtocol; message 'dataSource';
     procedure setOutlineTableColumn(newValue: NSTableColumn); message 'setOutlineTableColumn:';
     function outlineTableColumn: NSTableColumn; message 'outlineTableColumn';
     function isExpandable (item: id): objcbool; message 'isExpandable:';
@@ -80,9 +80,9 @@ type
     procedure outlineView_draggingSession_willBeginAtPoint_forItems (outlineView: NSOutlineView; session: NSDraggingSession; screenPoint: NSPoint; draggedItems: NSArray); message 'outlineView:draggingSession:willBeginAtPoint:forItems:'; { available in macos  }
     procedure outlineView_draggingSession_endedAtPoint_operation (outlineView: NSOutlineView; session: NSDraggingSession; screenPoint: NSPoint; operation: NSDragOperation); message 'outlineView:draggingSession:endedAtPoint:operation:'; { available in macos  }
     function outlineView_writeItems_toPasteboard (outlineView: NSOutlineView; items: NSArray; pasteboard: NSPasteboard): objcbool; message 'outlineView:writeItems:toPasteboard:'; deprecated 'Use -outlineView:pasteboardWriterForItem: instead';
-    procedure outlineView_updateDraggingItemsForDrag (outlineView: NSOutlineView; draggingInfo: id); message 'outlineView:updateDraggingItemsForDrag:'; { available in macos  }
-    function outlineView_validateDrop_proposedItem_proposedChildIndex (outlineView: NSOutlineView; info: id; item: id; index: NSInteger): NSDragOperation; message 'outlineView:validateDrop:proposedItem:proposedChildIndex:';
-    function outlineView_acceptDrop_item_childIndex (outlineView: NSOutlineView; info: id; item: id; index: NSInteger): objcbool; message 'outlineView:acceptDrop:item:childIndex:';
+    procedure outlineView_updateDraggingItemsForDrag (outlineView: NSOutlineView; draggingInfo: NSDraggingInfoProtocol); message 'outlineView:updateDraggingItemsForDrag:'; { available in macos  }
+    function outlineView_validateDrop_proposedItem_proposedChildIndex (outlineView: NSOutlineView; info: NSDraggingInfoProtocol; item: id; index: NSInteger): NSDragOperation; message 'outlineView:validateDrop:proposedItem:proposedChildIndex:';
+    function outlineView_acceptDrop_item_childIndex (outlineView: NSOutlineView; info: NSDraggingInfoProtocol; item: id; index: NSInteger): objcbool; message 'outlineView:acceptDrop:item:childIndex:';
     function outlineView_namesOfPromisedFilesDroppedAtDestination_forDraggedItems (outlineView: NSOutlineView; dropDestination: NSURL; items: NSArray): NSArray; message 'outlineView:namesOfPromisedFilesDroppedAtDestination:forDraggedItems:'; deprecated 'Use NSFilePromiseReceiver objects instead';
   end;
 

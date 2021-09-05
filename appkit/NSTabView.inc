@@ -78,8 +78,8 @@ type
     procedure addTabViewItem (tabViewItem: NSTabViewItem); message 'addTabViewItem:';
     procedure insertTabViewItem_atIndex (tabViewItem: NSTabViewItem; index: NSInteger); message 'insertTabViewItem:atIndex:';
     procedure removeTabViewItem (tabViewItem: NSTabViewItem); message 'removeTabViewItem:';
-    procedure setDelegate(newValue: id); message 'setDelegate:';
-    function delegate: id; message 'delegate';
+    procedure setDelegate(newValue: NSTabViewDelegateProtocol); message 'setDelegate:';
+    function delegate: NSTabViewDelegateProtocol; message 'delegate';
     function tabViewItemAtPoint (point: NSPoint): NSTabViewItem; message 'tabViewItemAtPoint:';
     function contentRect: NSRect; message 'contentRect';
     function numberOfTabViewItems: NSInteger; message 'numberOfTabViewItems';

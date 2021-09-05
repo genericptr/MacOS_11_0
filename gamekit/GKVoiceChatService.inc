@@ -12,8 +12,8 @@ type
   public
     class function defaultVoiceChatService: GKVoiceChatService; message 'defaultVoiceChatService';
     class function isVoIPAllowed: objcbool; message 'isVoIPAllowed';
-    procedure setClient(newValue: id); message 'setClient:'; deprecated 'in 3_0, 7_0';
-    function client: id; message 'client'; deprecated 'in 3_0, 7_0';
+    procedure setClient(newValue: GKVoiceChatClientProtocol); message 'setClient:'; deprecated 'in 3_0, 7_0';
+    function client: GKVoiceChatClientProtocol; message 'client'; deprecated 'in 3_0, 7_0';
     function startVoiceChatWithParticipantID_error (participantID: NSString; error: NSErrorPtr): objcbool; message 'startVoiceChatWithParticipantID:error:';
     procedure stopVoiceChatWithParticipantID (participantID: NSString); message 'stopVoiceChatWithParticipantID:';
     function acceptCallID_error (callID: NSInteger; error: NSErrorPtr): objcbool; message 'acceptCallID:error:';

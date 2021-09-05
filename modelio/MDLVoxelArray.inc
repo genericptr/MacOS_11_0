@@ -51,8 +51,8 @@ type
     procedure setShellFieldExteriorThickness(newValue: single); message 'setShellFieldExteriorThickness:';
     function shellFieldExteriorThickness: single; message 'shellFieldExteriorThickness';
     function coarseMesh: MDLMesh; message 'coarseMesh';
-    function coarseMeshUsingAllocator (allocator: id): MDLMesh; message 'coarseMeshUsingAllocator:';
-    function meshUsingAllocator (allocator: id): MDLMesh; message 'meshUsingAllocator:';
+    function coarseMeshUsingAllocator (allocator: MDLMeshBufferAllocatorProtocol): MDLMesh; message 'coarseMeshUsingAllocator:';
+    function meshUsingAllocator (allocator: MDLMeshBufferAllocatorProtocol): MDLMesh; message 'meshUsingAllocator:';
   end;
 {$endif}
 

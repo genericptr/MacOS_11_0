@@ -19,10 +19,10 @@ type
   GKScene = objcclass external (NSObject, NSCopyingProtocol, NSSecureCodingProtocol)
   public
     class function sceneWithFileNamed (filename: NSString): id; message 'sceneWithFileNamed:';
-    class function sceneWithFileNamed_rootNode (filename: NSString; rootNode: id): id; message 'sceneWithFileNamed:rootNode:';
+    class function sceneWithFileNamed_rootNode (filename: NSString; rootNode: GKSceneRootNodeTypeProtocol): id; message 'sceneWithFileNamed:rootNode:';
     function entities: NSArray; message 'entities';
-    procedure setRootNode(newValue: id); message 'setRootNode:';
-    function rootNode: id; message 'rootNode';
+    procedure setRootNode(newValue: GKSceneRootNodeTypeProtocol); message 'setRootNode:';
+    function rootNode: GKSceneRootNodeTypeProtocol; message 'rootNode';
     function graphs: NSDictionary; message 'graphs';
     procedure addEntity (entity: GKEntity); message 'addEntity:';
     procedure removeEntity (entity: GKEntity); message 'removeEntity:';

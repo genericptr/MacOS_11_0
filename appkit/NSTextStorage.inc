@@ -30,8 +30,8 @@ type
     function editedMask: NSTextStorageEditActions; message 'editedMask';
     function editedRange: NSRange; message 'editedRange';
     function changeInLength: NSInteger; message 'changeInLength';
-    procedure setDelegate(newValue: id); message 'setDelegate:';
-    function delegate: id; message 'delegate';
+    procedure setDelegate(newValue: NSTextStorageDelegateProtocol); message 'setDelegate:';
+    function delegate: NSTextStorageDelegateProtocol; message 'delegate';
     procedure edited_range_changeInLength (editedMask_: NSTextStorageEditActions; editedRange_: NSRange; delta: NSInteger); message 'edited:range:changeInLength:';
     procedure processEditing; message 'processEditing';
     function fixesAttributesLazily: objcbool; message 'fixesAttributesLazily';

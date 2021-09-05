@@ -83,7 +83,7 @@ type
     function mediaPresentation: ICMediaPresentation; message 'mediaPresentation'; { available in macos , ios  }
     function filesOfType (fileUTType: NSString): NSArray; message 'filesOfType:'; { available in macos , ios  }
     procedure requestReadDataFromFile_atOffset_length_readDelegate_didReadDataSelector_contextInfo (file_: ICCameraFile; offset: off_t; length: off_t; readDelegate: id; selector: SEL; contextInfo: pointer); message 'requestReadDataFromFile:atOffset:length:readDelegate:didReadDataSelector:contextInfo:'; { unavailable in ios }
-    procedure requestDownloadFile_options_downloadDelegate_didDownloadSelector_contextInfo (file_: ICCameraFile; options: NSDictionary; downloadDelegate: id; selector: SEL; contextInfo: pointer); message 'requestDownloadFile:options:downloadDelegate:didDownloadSelector:contextInfo:'; { available in macos , ios  }
+    procedure requestDownloadFile_options_downloadDelegate_didDownloadSelector_contextInfo (file_: ICCameraFile; options: NSDictionary; downloadDelegate: ICCameraDeviceDownloadDelegateProtocol; selector: SEL; contextInfo: pointer); message 'requestDownloadFile:options:downloadDelegate:didDownloadSelector:contextInfo:'; { available in macos , ios  }
     procedure cancelDownload; message 'cancelDownload'; { unavailable in ios }
     procedure requestDeleteFiles (files: NSArray); message 'requestDeleteFiles:'; { available in macos , ios  }
     function requestDeleteFiles_deleteFailed_completion (files: NSArray; deleteFailed: ICCameraDeviceRequestDeleteFilesCallback; completion: ICCameraDeviceRequestDeleteFilesCallback): NSProgress; message 'requestDeleteFiles:deleteFailed:completion:'; { available in macos , ios  }

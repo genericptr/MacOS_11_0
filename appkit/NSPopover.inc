@@ -39,8 +39,8 @@ type
   public
     function init: id; message 'init'; { NS_DESIGNATED_INITIALIZER }
     function initWithCoder (coder: NSCoder): id; message 'initWithCoder:'; { NS_DESIGNATED_INITIALIZER }
-    procedure setDelegate(newValue: id); message 'setDelegate:';
-    function delegate: id; message 'delegate';
+    procedure setDelegate(newValue: NSPopoverDelegateProtocol); message 'setDelegate:';
+    function delegate: NSPopoverDelegateProtocol; message 'delegate';
     procedure setAppearance(newValue: NSAppearance); message 'setAppearance:'; { available in macos  }
     function appearance: NSAppearance; message 'appearance'; { available in macos  }
     function effectiveAppearance: NSAppearance; message 'effectiveAppearance'; { available in macos  }

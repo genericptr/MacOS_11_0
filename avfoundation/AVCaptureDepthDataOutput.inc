@@ -16,8 +16,8 @@ type
   public
     function init: id; message 'init';
     class function new_: id; message 'new';
-    procedure setDelegate_callbackQueue (delegate: id; callbackQueue: dispatch_queue_t); message 'setDelegate:callbackQueue:';
-    function delegate: id; message 'delegate';
+    procedure setDelegate_callbackQueue (delegate: AVCaptureDepthDataOutputDelegateProtocol; callbackQueue: dispatch_queue_t); message 'setDelegate:callbackQueue:';
+    function delegate: AVCaptureDepthDataOutputDelegateProtocol; message 'delegate';
     function delegateCallbackQueue: dispatch_queue_t; message 'delegateCallbackQueue';
     procedure setAlwaysDiscardsLateDepthData(newValue: objcbool); message 'setAlwaysDiscardsLateDepthData:';
     function alwaysDiscardsLateDepthData: objcbool; message 'alwaysDiscardsLateDepthData';

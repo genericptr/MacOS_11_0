@@ -30,7 +30,7 @@ type
     function canAdd: objcbool; message 'canAdd';
     procedure remove (sender: id); message 'remove:';
     function canRemove: objcbool; message 'canRemove';
-    function validateUserInterfaceItem (item: id): objcbool; message 'validateUserInterfaceItem:';
+    function validateUserInterfaceItem (item: NSValidatedUserInterfaceItemProtocol): objcbool; message 'validateUserInterfaceItem:';
   end;
 
 

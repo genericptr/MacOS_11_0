@@ -42,8 +42,8 @@ const
 type
   UNUserNotificationCenter = objcclass external (NSObject)
   public
-    procedure setDelegate(newValue: id); message 'setDelegate:';
-    function delegate: id; message 'delegate';
+    procedure setDelegate(newValue: UNUserNotificationCenterDelegateProtocol); message 'setDelegate:';
+    function delegate: UNUserNotificationCenterDelegateProtocol; message 'delegate';
     function supportsContentExtensions: objcbool; message 'supportsContentExtensions';
     class function currentNotificationCenter: UNUserNotificationCenter; message 'currentNotificationCenter';
     function init: id; message 'init';

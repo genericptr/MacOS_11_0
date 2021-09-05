@@ -33,8 +33,8 @@ type
     procedure setAction(newValue: SEL); message 'setAction:';
     function action: SEL; message 'action';
     function state: NSGestureRecognizerState; message 'state';
-    procedure setDelegate(newValue: id); message 'setDelegate:';
-    function delegate: id; message 'delegate';
+    procedure setDelegate(newValue: NSGestureRecognizerDelegateProtocol); message 'setDelegate:';
+    function delegate: NSGestureRecognizerDelegateProtocol; message 'delegate';
     procedure setEnabled(newValue: objcbool); message 'setEnabled:';
     function isEnabled: objcbool; message 'isEnabled';
     function view: NSView; message 'view';

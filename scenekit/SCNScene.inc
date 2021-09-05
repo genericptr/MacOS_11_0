@@ -45,7 +45,7 @@ type
     class function sceneNamed (name: NSString): id; message 'sceneNamed:'; { available in macos  }
     class function sceneNamed_inDirectory_options (name: NSString; directory: NSString; options: NSDictionary): id; message 'sceneNamed:inDirectory:options:'; { available in macos  }
     class function sceneWithURL_options_error (url: NSURL; options: NSDictionary; error: NSErrorPtr): id; message 'sceneWithURL:options:error:';
-    function writeToURL_options_delegate_progressHandler (url: NSURL; options: NSDictionary; delegate: id; progressHandler: SCNSceneExportProgressHandler): objcbool; message 'writeToURL:options:delegate:progressHandler:'; { unavailable in watchos }
+    function writeToURL_options_delegate_progressHandler (url: NSURL; options: NSDictionary; delegate: SCNSceneExportDelegateProtocol; progressHandler: SCNSceneExportProgressHandler): objcbool; message 'writeToURL:options:delegate:progressHandler:'; { unavailable in watchos }
     procedure setFogStartDistance(newValue: CGFloat); message 'setFogStartDistance:'; { available in macos  }
     function fogStartDistance: CGFloat; message 'fogStartDistance'; { available in macos  }
     procedure setFogEndDistance(newValue: CGFloat); message 'setFogEndDistance:'; { available in macos  }

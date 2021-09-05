@@ -63,7 +63,7 @@ type
     function documentClassNames: NSArray; message 'documentClassNames';
     function documentClassForType (typeName: NSString): pobjc_class; message 'documentClassForType:';
     function displayNameForType (typeName: NSString): NSString; message 'displayNameForType:';
-    function validateUserInterfaceItem (item: id): objcbool; message 'validateUserInterfaceItem:';
+    function validateUserInterfaceItem (item: NSValidatedUserInterfaceItemProtocol): objcbool; message 'validateUserInterfaceItem:';
 
     { Adopted protocols }
     procedure encodeWithCoder (coder: NSCoder); message 'encodeWithCoder:';

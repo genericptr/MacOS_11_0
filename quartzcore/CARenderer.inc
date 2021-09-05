@@ -21,7 +21,7 @@ type
     {$ifndef GL_SILENCE_DEPRECATION}
     {$else}
     {$endif}
-    class function rendererWithMTLTexture_options (tex: id; dict: NSDictionary): CARenderer; message 'rendererWithMTLTexture:options:'; { unavailable in ios, watchos, tvos }
+    class function rendererWithMTLTexture_options (tex: MTLTextureProtocol; dict: NSDictionary): CARenderer; message 'rendererWithMTLTexture:options:'; { unavailable in ios, watchos, tvos }
     procedure setLayer(newValue: CALayer); message 'setLayer:';
     function layer: CALayer; message 'layer';
     procedure setBounds(newValue: CGRect); message 'setBounds:';
@@ -32,7 +32,7 @@ type
     procedure render; message 'render';
     function nextFrameTime: CFTimeInterval; message 'nextFrameTime';
     procedure endFrame; message 'endFrame';
-    procedure setDestination (tex: id); message 'setDestination:';
+    procedure setDestination (tex: MTLTextureProtocol); message 'setDestination:';
   end;
 {$endif}
 

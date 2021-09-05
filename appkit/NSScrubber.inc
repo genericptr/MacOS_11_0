@@ -73,10 +73,10 @@ type
 type
   NSScrubber = objcclass external (NSView)
   public
-    procedure setDataSource(newValue: id); message 'setDataSource:';
-    function dataSource: id; message 'dataSource';
-    procedure setDelegate(newValue: id); message 'setDelegate:';
-    function delegate: id; message 'delegate';
+    procedure setDataSource(newValue: NSScrubberDataSourceProtocol); message 'setDataSource:';
+    function dataSource: NSScrubberDataSourceProtocol; message 'dataSource';
+    procedure setDelegate(newValue: NSScrubberDelegateProtocol); message 'setDelegate:';
+    function delegate: NSScrubberDelegateProtocol; message 'delegate';
     procedure setScrubberLayout(newValue: NSScrubberLayout); message 'setScrubberLayout:';
     function scrubberLayout: NSScrubberLayout; message 'scrubberLayout';
     function numberOfItems: NSInteger; message 'numberOfItems';

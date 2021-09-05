@@ -38,10 +38,10 @@ type
   WKWebView = objcclass external (NSView)
   public
     function configuration: WKWebViewConfiguration; message 'configuration';
-    procedure setNavigationDelegate(newValue: id); message 'setNavigationDelegate:';
-    function navigationDelegate: id; message 'navigationDelegate';
-    procedure setUIDelegate(newValue: id); message 'setUIDelegate:';
-    function UIDelegate: id; message 'UIDelegate';
+    procedure setNavigationDelegate(newValue: WKNavigationDelegateProtocol); message 'setNavigationDelegate:';
+    function navigationDelegate: WKNavigationDelegateProtocol; message 'navigationDelegate';
+    procedure setUIDelegate(newValue: WKUIDelegateProtocol); message 'setUIDelegate:';
+    function UIDelegate: WKUIDelegateProtocol; message 'UIDelegate';
     function backForwardList: WKBackForwardList; message 'backForwardList';
     function initWithFrame_configuration (frame: CGRect; configuration_: WKWebViewConfiguration): id; message 'initWithFrame:configuration:'; { NS_DESIGNATED_INITIALIZER }
     function initWithCoder (coder: NSCoder): id; message 'initWithCoder:'; { NS_DESIGNATED_INITIALIZER }

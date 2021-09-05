@@ -44,8 +44,8 @@ type
     procedure fetch (request: SRFetchRequest); message 'fetch:';
     function authorizationStatus: SRAuthorizationStatus; message 'authorizationStatus';
     function sensor: SRSensor; message 'sensor';
-    procedure setDelegate(newValue: id); message 'setDelegate:';
-    function delegate: id; message 'delegate';
+    procedure setDelegate(newValue: SRSensorReaderDelegateProtocol); message 'setDelegate:';
+    function delegate: SRSensorReaderDelegateProtocol; message 'delegate';
     class procedure requestAuthorizationForSensors_completion (sensors: NSSet; completion: SRSensorReaderRequestAuthorizationForSensorsCallback); message 'requestAuthorizationForSensors:completion:';
   end;
 {$endif}

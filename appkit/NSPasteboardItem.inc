@@ -13,7 +13,7 @@ type
   public
     function types: NSArray; message 'types';
     function availableTypeFromArray (types_: NSArray): NSPasteboardType; message 'availableTypeFromArray:';
-    function setDataProvider_forTypes (dataProvider: id; types_: NSArray): objcbool; message 'setDataProvider:forTypes:';
+    function setDataProvider_forTypes (dataProvider: NSPasteboardItemDataProviderProtocol; types_: NSArray): objcbool; message 'setDataProvider:forTypes:';
     function setData_forType (data: NSData; type_: NSPasteboardType): objcbool; message 'setData:forType:';
     function setString_forType (string_: NSString; type_: NSPasteboardType): objcbool; message 'setString:forType:';
     function setPropertyList_forType (propertyList: id; type_: NSPasteboardType): objcbool; message 'setPropertyList:forType:';

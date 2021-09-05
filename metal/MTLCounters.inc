@@ -102,8 +102,8 @@ type
 type
   MTLCounterSampleBufferDescriptor = objcclass external (NSObject, NSCopyingProtocol)
   public
-    procedure setCounterSet(newValue: id); message 'setCounterSet:'; { available in macos , ios  }
-    function counterSet: id; message 'counterSet'; { available in macos , ios  }
+    procedure setCounterSet(newValue: MTLCounterSetProtocol); message 'setCounterSet:'; { available in macos , ios  }
+    function counterSet: MTLCounterSetProtocol; message 'counterSet'; { available in macos , ios  }
     procedure setLabel(newValue: NSString); message 'setLabel:'; { available in macos , ios  }
     function label_: NSString; message 'label'; { available in macos , ios  }
     procedure setStorageMode(newValue: MTLStorageMode); message 'setStorageMode:'; { available in macos , ios  }

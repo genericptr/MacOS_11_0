@@ -54,8 +54,8 @@ type
   NSStackView = objcclass external (NSView)
   public
     class function stackViewWithViews (views: NSArray): id; message 'stackViewWithViews:';
-    procedure setDelegate(newValue: id); message 'setDelegate:';
-    function delegate: id; message 'delegate';
+    procedure setDelegate(newValue: NSStackViewDelegateProtocol); message 'setDelegate:';
+    function delegate: NSStackViewDelegateProtocol; message 'delegate';
     procedure setOrientation(newValue: NSUserInterfaceLayoutOrientation); message 'setOrientation:';
     function orientation: NSUserInterfaceLayoutOrientation; message 'orientation';
     {$if  not defined(TARGET_OS_IPHONE)}

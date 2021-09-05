@@ -13,9 +13,9 @@ type
     function userScripts: NSArray; message 'userScripts';
     procedure addUserScript (userScript: WKUserScript); message 'addUserScript:';
     procedure removeAllUserScripts; message 'removeAllUserScripts';
-    procedure addScriptMessageHandler_contentWorld_name (scriptMessageHandler: id; world: WKContentWorld; name: NSString); message 'addScriptMessageHandler:contentWorld:name:'; { available in macos , ios  }
-    procedure addScriptMessageHandlerWithReply_contentWorld_name (scriptMessageHandlerWithReply: id; contentWorld: WKContentWorld; name: NSString); message 'addScriptMessageHandlerWithReply:contentWorld:name:'; { available in macos , ios  }
-    procedure addScriptMessageHandler_name (scriptMessageHandler: id; name: NSString); message 'addScriptMessageHandler:name:';
+    procedure addScriptMessageHandler_contentWorld_name (scriptMessageHandler: WKScriptMessageHandlerProtocol; world: WKContentWorld; name: NSString); message 'addScriptMessageHandler:contentWorld:name:'; { available in macos , ios  }
+    procedure addScriptMessageHandlerWithReply_contentWorld_name (scriptMessageHandlerWithReply: WKScriptMessageHandlerWithReplyProtocol; contentWorld: WKContentWorld; name: NSString); message 'addScriptMessageHandlerWithReply:contentWorld:name:'; { available in macos , ios  }
+    procedure addScriptMessageHandler_name (scriptMessageHandler: WKScriptMessageHandlerProtocol; name: NSString); message 'addScriptMessageHandler:name:';
     procedure removeScriptMessageHandlerForName_contentWorld (name: NSString; contentWorld: WKContentWorld); message 'removeScriptMessageHandlerForName:contentWorld:'; { available in macos , ios  }
     procedure removeScriptMessageHandlerForName (name: NSString); message 'removeScriptMessageHandlerForName:';
     procedure removeAllScriptMessageHandlersFromContentWorld (contentWorld: WKContentWorld); message 'removeAllScriptMessageHandlersFromContentWorld:'; { available in macos , ios  }

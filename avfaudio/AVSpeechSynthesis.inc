@@ -106,8 +106,8 @@ type
 type
   AVSpeechSynthesizer = objcclass external (NSObject)
   public
-    procedure setDelegate(newValue: id); message 'setDelegate:';
-    function delegate: id; message 'delegate';
+    procedure setDelegate(newValue: AVSpeechSynthesizerDelegateProtocol); message 'setDelegate:';
+    function delegate: AVSpeechSynthesizerDelegateProtocol; message 'delegate';
     function isSpeaking: objcbool; message 'isSpeaking';
     function isPaused: objcbool; message 'isPaused';
     procedure speakUtterance (utterance: AVSpeechUtterance); message 'speakUtterance:';
