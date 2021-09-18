@@ -1,4 +1,4 @@
-{ Parsed from MetricKit.framework /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/System/Library/Frameworks/MetricKit.framework/Headers/MXNetworkTransferMetric.h }
+{ Parsed from MetricKit.framework MXNetworkTransferMetric.h }
 
 {$ifdef TYPES}
 type

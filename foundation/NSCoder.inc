@@ -1,4 +1,4 @@
-{ Parsed from Foundation.framework /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSCoder.h }
+{ Parsed from Foundation.framework NSCoder.h }
 
 { Types from NSExtendedCoder }
 {$ifdef TYPES}

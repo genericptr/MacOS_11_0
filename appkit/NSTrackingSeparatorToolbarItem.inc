@@ -1,4 +1,4 @@
-{ Parsed from AppKit.framework /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/System/Library/Frameworks/AppKit.framework/Headers/NSTrackingSeparatorToolbarItem.h }
+{ Parsed from AppKit.framework NSTrackingSeparatorToolbarItem.h }
 
 {$ifdef TYPES}
 type

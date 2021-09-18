@@ -1,4 +1,4 @@
-{ Parsed from ModelIO.framework /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/System/Library/Frameworks/ModelIO.framework/Headers/MDLTransform.h }
+{ Parsed from ModelIO.framework MDLTransform.h }
 
 {$ifdef TYPES}
 type

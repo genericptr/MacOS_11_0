@@ -1,4 +1,4 @@
-{ Parsed from SpriteKit.framework /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/System/Library/Frameworks/SpriteKit.framework/Headers/SKView.h }
+{ Parsed from SpriteKit.framework SKView.h }
 
 { Types from SKView }
 {$ifdef TYPES}

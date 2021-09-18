@@ -1,4 +1,4 @@
-{ Parsed from Automator.framework /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/System/Library/Frameworks/Automator.framework/Headers/AMWorkflowController.h }
+{ Parsed from Automator.framework AMWorkflowController.h }
 
 {$ifdef TYPES}
 type

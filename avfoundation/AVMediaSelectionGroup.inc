@@ -1,4 +1,4 @@
-{ Parsed from AVFoundation.framework /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/System/Library/Frameworks/AVFoundation.framework/Headers/AVMediaSelectionGroup.h }
+{ Parsed from AVFoundation.framework AVMediaSelectionGroup.h }
 
 {$ifdef TYPES}
 type

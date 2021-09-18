@@ -1,4 +1,4 @@
-{ Parsed from MapKit.framework /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/System/Library/Frameworks/MapKit.framework/Headers/MKLocalSearch.h }
+{ Parsed from MapKit.framework MKLocalSearch.h }
 
 {$ifdef TYPES}
 type

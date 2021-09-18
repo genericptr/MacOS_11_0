@@ -1,4 +1,4 @@
-{ Parsed from QuartzCore.framework /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/CAShapeLayer.h }
+{ Parsed from QuartzCore.framework CAShapeLayer.h }
 
 {$ifdef TYPES}
 type

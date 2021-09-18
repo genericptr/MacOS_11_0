@@ -1,4 +1,4 @@
-{ Parsed from CoreData.framework /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/System/Library/Frameworks/CoreData.framework/Headers/CoreDataErrors.h }
+{ Parsed from CoreData.framework CoreDataErrors.h }
 {$ifdef EXTERNAL_SYMBOLS}
 var
   NSDetailedErrorsKey: NSString { available in macosx ,ios  }; cvar; external;

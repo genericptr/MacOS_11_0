@@ -1,4 +1,4 @@
-{ Parsed from MapKit.framework /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/System/Library/Frameworks/MapKit.framework/Headers/MKOverlayPathRenderer.h }
+{ Parsed from MapKit.framework MKOverlayPathRenderer.h }
 
 { Types from MKOverlayPathRenderer }
 {$ifdef TYPES}

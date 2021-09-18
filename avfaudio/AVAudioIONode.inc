@@ -1,4 +1,4 @@
-{ Parsed from AVFAudio.framework /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/System/Library/Frameworks/AVFAudio.framework/Headers/AVAudioIONode.h }
+{ Parsed from AVFAudio.framework AVAudioIONode.h }
 
 { Types from AVAudioIONode }
 {$ifdef TYPES}

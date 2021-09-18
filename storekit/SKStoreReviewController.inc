@@ -1,4 +1,4 @@
-{ Parsed from StoreKit.framework /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/System/Library/Frameworks/StoreKit.framework/Headers/SKStoreReviewController.h }
+{ Parsed from StoreKit.framework SKStoreReviewController.h }
 
 { Types from SKStoreReviewController }
 {$ifdef TYPES}

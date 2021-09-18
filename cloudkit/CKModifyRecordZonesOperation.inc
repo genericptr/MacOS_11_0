@@ -1,4 +1,4 @@
-{ Parsed from CloudKit.framework /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/System/Library/Frameworks/CloudKit.framework/Headers/CKModifyRecordZonesOperation.h }
+{ Parsed from CloudKit.framework CKModifyRecordZonesOperation.h }
 
 {$ifdef CALLBACKS}
 type

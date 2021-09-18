@@ -1,4 +1,4 @@
-{ Parsed from ImageCaptureCore.framework /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/System/Library/Frameworks/ImageCaptureCore.framework/Headers/ImageCapturePlatform.h }
+{ Parsed from ImageCaptureCore.framework ImageCapturePlatform.h }
 
 {$ifdef TYPES}
 type

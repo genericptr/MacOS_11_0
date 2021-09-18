@@ -1,4 +1,4 @@
-{ Parsed from WebKit.framework /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/System/Library/Frameworks/WebKit.framework/Headers/DOMException.h }
+{ Parsed from WebKit.framework DOMException.h }
 {$ifdef EXTERNAL_SYMBOLS}
 var
   DOMException: NSString deprecated 'in 10_4, 10_14'; cvar; external;

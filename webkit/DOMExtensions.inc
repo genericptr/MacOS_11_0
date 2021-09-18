@@ -1,4 +1,4 @@
-{ Parsed from WebKit.framework /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/System/Library/Frameworks/WebKit.framework/Headers/DOMExtensions.h }
+{ Parsed from WebKit.framework DOMExtensions.h }
 {$ifdef CLASSES}
 
 type

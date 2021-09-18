@@ -1,4 +1,4 @@
-{ Parsed from MetricKit.framework /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/System/Library/Frameworks/MetricKit.framework/Headers/MXCPUExceptionDiagnostic.h }
+{ Parsed from MetricKit.framework MXCPUExceptionDiagnostic.h }
 
 {$ifdef TYPES}
 type

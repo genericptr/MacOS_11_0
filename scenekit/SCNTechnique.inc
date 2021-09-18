@@ -1,4 +1,4 @@
-{ Parsed from SceneKit.framework /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/System/Library/Frameworks/SceneKit.framework/Headers/SCNTechnique.h }
+{ Parsed from SceneKit.framework SCNTechnique.h }
 
 { Types from SCNTechnique }
 {$ifdef TYPES}

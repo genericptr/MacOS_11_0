@@ -1,4 +1,4 @@
-{ Parsed from QuickLook.framework /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/System/Library/Frameworks/QuickLook.framework/Headers/QLThumbnailImage.h }
+{ Parsed from QuickLook.framework QLThumbnailImage.h }
 
 {$if  not (defined(__QUICKLOOK_QLTHUMBNAILIMAGE__))}
 {$ifdef FUNCTIONS}

@@ -1,4 +1,4 @@
-{ Parsed from StoreKit.framework /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/System/Library/Frameworks/StoreKit.framework/Headers/SKArcadeService.h }
+{ Parsed from StoreKit.framework SKArcadeService.h }
 
 {$ifdef CALLBACKS}
 type

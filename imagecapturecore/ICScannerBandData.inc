@@ -1,4 +1,4 @@
-{ Parsed from ImageCaptureCore.framework /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/System/Library/Frameworks/ImageCaptureCore.framework/Headers/ICScannerBandData.h }
+{ Parsed from ImageCaptureCore.framework ICScannerBandData.h }
 
 {$ifdef TYPES}
 type

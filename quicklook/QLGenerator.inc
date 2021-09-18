@@ -1,4 +1,4 @@
-{ Parsed from QuickLook.framework /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/System/Library/Frameworks/QuickLook.framework/Headers/QLGenerator.h }
+{ Parsed from QuickLook.framework QLGenerator.h }
 
 {$if  not (defined(__QUICKLOOK_QLGENERATOR__))}
 {$ifdef TYPES}

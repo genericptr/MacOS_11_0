@@ -1,4 +1,4 @@
-{ Parsed from AddressBook.framework /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/System/Library/Frameworks/AddressBook.framework/Headers/ABAddressBook.h }
+{ Parsed from AddressBook.framework ABAddressBook.h }
 
 {$ifdef TYPES}
 type

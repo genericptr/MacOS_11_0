@@ -1,4 +1,4 @@
-{ Parsed from CalendarStore.framework /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/System/Library/Frameworks/CalendarStore.framework/Headers/CalendarStoreErrors.h }
+{ Parsed from CalendarStore.framework CalendarStoreErrors.h }
 {$ifdef EXTERNAL_SYMBOLS}
 var
   CalCalendarStoreErrorDomain: NSString deprecated 'in 10_5, 10_8'; cvar; external;

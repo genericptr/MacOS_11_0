@@ -1,4 +1,4 @@
-{ Parsed from CoreAudio.framework /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/System/Library/Frameworks/CoreAudio.framework/Headers/HostTime.h }
+{ Parsed from CoreAudio.framework HostTime.h }
 
 {$if  not (defined(CoreAudio_HostTime_h))}
 

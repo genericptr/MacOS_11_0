@@ -1,4 +1,4 @@
-{ Parsed from AppKit.framework /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/System/Library/Frameworks/AppKit.framework/Headers/AppKitErrors.h }
+{ Parsed from AppKit.framework AppKitErrors.h }
 {$ifdef TYPES}
 const
   NSTextReadInapplicableDocumentTypeError = 65806;

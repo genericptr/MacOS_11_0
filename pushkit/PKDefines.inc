@@ -1,4 +1,4 @@
-{ Parsed from PushKit.framework /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/System/Library/Frameworks/PushKit.framework/Headers/PKDefines.h }
+{ Parsed from PushKit.framework PKDefines.h }
 
 {$ifdef TYPES}
 type

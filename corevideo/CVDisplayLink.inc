@@ -1,4 +1,4 @@
-{ Parsed from CoreVideo.framework /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/System/Library/Frameworks/CoreVideo.framework/Headers/CVDisplayLink.h }
+{ Parsed from CoreVideo.framework CVDisplayLink.h }
 
 {$if  not (defined(__COREVIDEO_CVDISPLAYLINK_H__))}
 {$ifdef TYPES}

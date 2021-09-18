@@ -1,4 +1,4 @@
-{ Parsed from PDFKit.framework /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/System/Library/Frameworks/PDFKit.framework/Headers/PDFKitPlatform.h }
+{ Parsed from PDFKit.framework PDFKitPlatform.h }
 
 {$if (defined(TARGET_OS_MAC) and not (defined(TARGET_OS_SIMULATOR) or defined(TARGET_OS_IPHONE) or defined(TARGET_OS_MACCATALYST)))}
 {$ifdef TYPES}

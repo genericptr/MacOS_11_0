@@ -1,4 +1,4 @@
-{ Parsed from SpriteKit.framework /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/System/Library/Frameworks/SpriteKit.framework/Headers/SKNode.h }
+{ Parsed from SpriteKit.framework SKNode.h }
 
 { Types from SKNode }
 {$ifdef TYPES}

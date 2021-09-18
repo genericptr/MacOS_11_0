@@ -1,4 +1,4 @@
-{ Parsed from Metal.framework /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/System/Library/Frameworks/Metal.framework/Headers/MTLParallelRenderCommandEncoder.h }
+{ Parsed from Metal.framework MTLParallelRenderCommandEncoder.h }
 
 {$ifdef TYPES}
 type

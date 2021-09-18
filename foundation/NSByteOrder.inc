@@ -1,4 +1,4 @@
-{ Parsed from Foundation.framework /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSByteOrder.h }
+{ Parsed from Foundation.framework NSByteOrder.h }
 {$ifdef TYPES}
 const
   NS_UnknownByteOrder = CFByteOrderUnknown;

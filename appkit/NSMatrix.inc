@@ -1,4 +1,4 @@
-{ Parsed from AppKit.framework /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/System/Library/Frameworks/AppKit.framework/Headers/NSMatrix.h }
+{ Parsed from AppKit.framework NSMatrix.h }
 
 {$ifdef CALLBACKS}
 type

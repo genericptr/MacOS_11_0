@@ -1,4 +1,4 @@
-{ Parsed from Photos.framework /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/System/Library/Frameworks/Photos.framework/Headers/PhotosTypes.h }
+{ Parsed from Photos.framework PhotosTypes.h }
 
 {$ifndef Photos_PhotosTypes_h}
 {$ifdef TYPES}

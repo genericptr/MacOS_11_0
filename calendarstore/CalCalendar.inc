@@ -1,4 +1,4 @@
-{ Parsed from CalendarStore.framework /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/System/Library/Frameworks/CalendarStore.framework/Headers/CalCalendar.h }
+{ Parsed from CalendarStore.framework CalCalendar.h }
 
 {$ifdef TYPES}
 type

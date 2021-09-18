@@ -1,4 +1,4 @@
-{ Parsed from CoreVideo.framework /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/System/Library/Frameworks/CoreVideo.framework/Headers/CVImageBuffer.h }
+{ Parsed from CoreVideo.framework CVImageBuffer.h }
 
 {$if  not (defined(__COREVIDEO_CVIMAGEBUFFER_H__))}
 {$ifdef TYPES}

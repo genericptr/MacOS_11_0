@@ -1,4 +1,4 @@
-{ Parsed from CloudKit.framework /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/System/Library/Frameworks/CloudKit.framework/Headers/CKFetchSubscriptionsOperation.h }
+{ Parsed from CloudKit.framework CKFetchSubscriptionsOperation.h }
 
 {$ifdef CALLBACKS}
 type

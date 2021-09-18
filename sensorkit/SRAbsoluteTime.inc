@@ -1,4 +1,4 @@
-{ Parsed from SensorKit.framework /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/System/Library/Frameworks/SensorKit.framework/Headers/SRAbsoluteTime.h }
+{ Parsed from SensorKit.framework SRAbsoluteTime.h }
 
 {$ifndef SRAbsoluteTime_h}
 {$ifdef TYPES}

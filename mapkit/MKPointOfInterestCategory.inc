@@ -1,4 +1,4 @@
-{ Parsed from MapKit.framework /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/System/Library/Frameworks/MapKit.framework/Headers/MKPointOfInterestCategory.h }
+{ Parsed from MapKit.framework MKPointOfInterestCategory.h }
 {$ifdef TYPES}
 type
   MKPointOfInterestCategory = NSString;

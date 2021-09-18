@@ -1,4 +1,4 @@
-{ Parsed from CoreVideo.framework /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/System/Library/Frameworks/CoreVideo.framework/Headers/CVOpenGLBuffer.h }
+{ Parsed from CoreVideo.framework CVOpenGLBuffer.h }
 
 {$if  not (defined(__COREVIDEO_CVOPENGLBUFFER_H__))}
 {$ifdef TYPES}

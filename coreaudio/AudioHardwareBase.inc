@@ -1,4 +1,4 @@
-{ Parsed from CoreAudio.framework /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/System/Library/Frameworks/CoreAudio.framework/Headers/AudioHardwareBase.h }
+{ Parsed from CoreAudio.framework AudioHardwareBase.h }
 
 {$if  not (defined(CoreAudio_AudioHardwareBase_h))}
 

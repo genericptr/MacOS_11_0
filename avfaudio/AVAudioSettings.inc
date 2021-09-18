@@ -1,4 +1,4 @@
-{ Parsed from AVFAudio.framework /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/System/Library/Frameworks/AVFAudio.framework/Headers/AVAudioSettings.h }
+{ Parsed from AVFAudio.framework AVAudioSettings.h }
 {$ifdef EXTERNAL_SYMBOLS}
 var
   AVFormatIDKey: NSString { available in macos , ios , watchos , tvos  }; cvar; external;

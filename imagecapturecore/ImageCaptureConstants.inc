@@ -1,4 +1,4 @@
-{ Parsed from ImageCaptureCore.framework /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/System/Library/Frameworks/ImageCaptureCore.framework/Headers/ImageCaptureConstants.h }
+{ Parsed from ImageCaptureCore.framework ImageCaptureConstants.h }
 {$ifdef FUNCTIONS}
 function ICRunLoopMode: NSString; cdecl; external; { unavailable in ios }
 {$endif}

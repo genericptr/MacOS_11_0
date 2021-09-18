@@ -1,4 +1,4 @@
-{ Parsed from AppKit.framework /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/System/Library/Frameworks/AppKit.framework/Headers/NSOutlineView.h }
+{ Parsed from AppKit.framework NSOutlineView.h }
 
 {$ifdef TYPES}
 type

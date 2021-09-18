@@ -1,4 +1,4 @@
-{ Parsed from CoreVideo.framework /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/System/Library/Frameworks/CoreVideo.framework/Headers/CVPixelBufferPool.h }
+{ Parsed from CoreVideo.framework CVPixelBufferPool.h }
 
 {$if  not (defined(__COREVIDEO__CVPIXELBUFFERPOOL_H__))}
 {$ifdef TYPES}

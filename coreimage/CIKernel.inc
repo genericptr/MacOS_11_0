@@ -1,4 +1,4 @@
-{ Parsed from CoreImage.framework /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CIKernel.h }
+{ Parsed from CoreImage.framework CIKernel.h }
 
 {$ifdef TYPES}
 type

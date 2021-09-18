@@ -1,4 +1,4 @@
-{ Parsed from Foundation.framework /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSMetadataAttributes.h }
+{ Parsed from Foundation.framework NSMetadataAttributes.h }
 {$ifdef EXTERNAL_SYMBOLS}
 var
   NSMetadataItemFSNameKey: NSString { available in macos , ios , watchos , tvos  }; cvar; external;

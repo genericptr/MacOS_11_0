@@ -1,4 +1,4 @@
-{ Parsed from CoreImage.framework /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CIFilterGenerator.h }
+{ Parsed from CoreImage.framework CIFilterGenerator.h }
 
 {$ifdef TYPES}
 type

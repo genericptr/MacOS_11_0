@@ -1,4 +1,4 @@
-{ Parsed from StoreKit.framework /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/System/Library/Frameworks/StoreKit.framework/Headers/SKCloudServiceSetupViewController.h }
+{ Parsed from StoreKit.framework SKCloudServiceSetupViewController.h }
 
 { Types from SKCloudServiceSetupViewController }
 {$ifdef TYPES}

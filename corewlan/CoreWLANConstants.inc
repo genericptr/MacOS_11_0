@@ -1,4 +1,4 @@
-{ Parsed from CoreWLAN.framework /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/System/Library/Frameworks/CoreWLAN.framework/Headers/CoreWLANConstants.h }
+{ Parsed from CoreWLAN.framework CoreWLANConstants.h }
 
 {$ifndef _CORE_WLAN_CONSTANTS_H_}
 {$ifdef EXTERNAL_SYMBOLS}

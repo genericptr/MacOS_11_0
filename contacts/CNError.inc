@@ -1,4 +1,4 @@
-{ Parsed from Contacts.framework /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/System/Library/Frameworks/Contacts.framework/Headers/CNError.h }
+{ Parsed from Contacts.framework CNError.h }
 {$ifdef EXTERNAL_SYMBOLS}
 var
   CNErrorDomain: NSString { available in 10_11, 9_0 }; cvar; external;

@@ -1,4 +1,4 @@
-{ Parsed from CoreVideo.framework /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/System/Library/Frameworks/CoreVideo.framework/Headers/CVHostTime.h }
+{ Parsed from CoreVideo.framework CVHostTime.h }
 
 {$if  not (defined(__COREVIDEO_CVHOSTTIME_H__))}
 {$ifdef TYPES}

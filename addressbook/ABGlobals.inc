@@ -1,4 +1,4 @@
-{ Parsed from AddressBook.framework /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/System/Library/Frameworks/AddressBook.framework/Headers/ABGlobals.h }
+{ Parsed from AddressBook.framework ABGlobals.h }
 
 {$ifndef __ABGLOBALS__}
 {$ifdef EXTERNAL_SYMBOLS}

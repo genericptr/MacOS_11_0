@@ -1,4 +1,4 @@
-{ Parsed from SensorKit.framework /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/System/Library/Frameworks/SensorKit.framework/Headers/SRDevice.h }
+{ Parsed from SensorKit.framework SRDevice.h }
 
 {$ifdef TYPES}
 type

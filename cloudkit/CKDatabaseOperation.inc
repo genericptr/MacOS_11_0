@@ -1,4 +1,4 @@
-{ Parsed from CloudKit.framework /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/System/Library/Frameworks/CloudKit.framework/Headers/CKDatabaseOperation.h }
+{ Parsed from CloudKit.framework CKDatabaseOperation.h }
 
 {$ifdef TYPES}
 type

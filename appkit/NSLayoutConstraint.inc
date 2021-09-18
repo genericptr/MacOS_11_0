@@ -1,4 +1,4 @@
-{ Parsed from AppKit.framework /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/System/Library/Frameworks/AppKit.framework/Headers/NSLayoutConstraint.h }
+{ Parsed from AppKit.framework NSLayoutConstraint.h }
 
 { Types from NSLayoutConstraint }
 {$ifdef TYPES}

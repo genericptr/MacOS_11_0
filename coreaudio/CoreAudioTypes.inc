@@ -1,1 +1,1 @@
-{ Parsed from CoreAudio.framework /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/System/Library/Frameworks/CoreAudio.framework/Headers/CoreAudioTypes.h }
+{ Parsed from CoreAudio.framework CoreAudioTypes.h }

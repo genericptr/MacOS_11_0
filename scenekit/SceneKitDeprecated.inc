@@ -1,4 +1,4 @@
-{ Parsed from SceneKit.framework /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/System/Library/Frameworks/SceneKit.framework/Headers/SceneKitDeprecated.h }
+{ Parsed from SceneKit.framework SceneKitDeprecated.h }
 {$ifdef EXTERNAL_SYMBOLS}
 var
   SCNLightAttenuationStartKey: NSString { unavailable in ios, tvos, watchos, macCatalyst }; cvar; external;

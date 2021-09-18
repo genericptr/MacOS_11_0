@@ -1,4 +1,4 @@
-{ Parsed from StoreKit.framework /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/System/Library/Frameworks/StoreKit.framework/Headers/SKProductDiscount.h }
+{ Parsed from StoreKit.framework SKProductDiscount.h }
 
 {$ifdef TYPES}
 type

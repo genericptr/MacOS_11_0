@@ -1,4 +1,4 @@
-{ Parsed from CloudKit.framework /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/System/Library/Frameworks/CloudKit.framework/Headers/CKError.h }
+{ Parsed from CloudKit.framework CKError.h }
 {$ifdef EXTERNAL_SYMBOLS}
 var
   CKErrorDomain: NSString { available in macos , ios , watchos  }; cvar; external;

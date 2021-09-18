@@ -1,4 +1,4 @@
-{ Parsed from CoreVideo.framework /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/System/Library/Frameworks/CoreVideo.framework/Headers/CVPixelBufferIOSurface.h }
+{ Parsed from CoreVideo.framework CVPixelBufferIOSurface.h }
 
 {$if  not (defined(__COREVIDEO_CVPIXELBUFFERIOSURFACE_H__))}
 {$ifdef TYPES}

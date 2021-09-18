@@ -1,4 +1,4 @@
-{ Parsed from EventKit.framework /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/System/Library/Frameworks/EventKit.framework/Headers/EKError.h }
+{ Parsed from EventKit.framework EKError.h }
 {$ifdef EXTERNAL_SYMBOLS}
 var
   EKErrorDomain: NSString { available in 10_8, 4_0 }; cvar; external;

@@ -1,4 +1,4 @@
-{ Parsed from ReplayKit.framework /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/System/Library/Frameworks/ReplayKit.framework/Headers/RPBroadcastConfiguration.h }
+{ Parsed from ReplayKit.framework RPBroadcastConfiguration.h }
 
 {$ifdef TYPES}
 type

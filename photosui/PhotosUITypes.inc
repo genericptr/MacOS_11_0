@@ -1,4 +1,4 @@
-{ Parsed from PhotosUI.framework /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/System/Library/Frameworks/PhotosUI.framework/Headers/PhotosUITypes.h }
+{ Parsed from PhotosUI.framework PhotosUITypes.h }
 {$ifdef TYPES}
 type
   PHProjectType = NSString;

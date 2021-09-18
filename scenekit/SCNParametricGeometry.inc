@@ -1,4 +1,4 @@
-{ Parsed from SceneKit.framework /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/System/Library/Frameworks/SceneKit.framework/Headers/SCNParametricGeometry.h }
+{ Parsed from SceneKit.framework SCNParametricGeometry.h }
 
 {$ifdef TYPES}
 type

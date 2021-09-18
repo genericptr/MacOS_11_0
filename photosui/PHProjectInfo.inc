@@ -1,4 +1,4 @@
-{ Parsed from PhotosUI.framework /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/System/Library/Frameworks/PhotosUI.framework/Headers/PHProjectInfo.h }
+{ Parsed from PhotosUI.framework PHProjectInfo.h }
 
 {$ifdef TYPES}
 type

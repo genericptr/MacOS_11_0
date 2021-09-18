@@ -1,4 +1,4 @@
-{ Parsed from CoreWLAN.framework /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/System/Library/Frameworks/CoreWLAN.framework/Headers/CWNetwork.h }
+{ Parsed from CoreWLAN.framework CWNetwork.h }
 
 {$ifdef TYPES}
 type

@@ -1,4 +1,4 @@
-{ Parsed from ContactsUI.framework /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/System/Library/Frameworks/ContactsUI.framework/Headers/CNContactPicker.h }
+{ Parsed from ContactsUI.framework CNContactPicker.h }
 
 {$ifdef TYPES}
 type

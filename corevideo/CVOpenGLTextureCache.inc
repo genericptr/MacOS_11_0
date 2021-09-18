@@ -1,4 +1,4 @@
-{ Parsed from CoreVideo.framework /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/System/Library/Frameworks/CoreVideo.framework/Headers/CVOpenGLTextureCache.h }
+{ Parsed from CoreVideo.framework CVOpenGLTextureCache.h }
 
 {$if  not (defined(__COREVIDEO__CVOPENGLTEXTURECACHE_H__))}
 {$ifdef TYPES}

@@ -1,4 +1,4 @@
-{ Parsed from CoreHaptics.framework /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/System/Library/Frameworks/CoreHaptics.framework/Headers/CHHapticEngine.h }
+{ Parsed from CoreHaptics.framework CHHapticEngine.h }
 
 {$ifdef TYPES}
 type
