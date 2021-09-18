@@ -14,7 +14,7 @@ type
   public
     class function alloc: id; message 'alloc';
     class function allocWithZone (zone: NSZonePtr): id; message 'allocWithZone:';
-    class function class_: pobjc_class; message 'class';
+    class function classClass: pobjc_class; message 'class';
     procedure forwardInvocation (invocation: NSInvocation); message 'forwardInvocation:';
     function methodSignatureForSelector (sel_: SEL): NSMethodSignature; message 'methodSignatureForSelector:';
     procedure dealloc; message 'dealloc';
