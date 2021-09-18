@@ -80,7 +80,7 @@ const
   NSActivitySuddenTerminationDisabled = 1 shl 14;
   NSActivityAutomaticTerminationDisabled = 1 shl 15;
   NSActivityUserInitiated = $00FFFFFF + NSActivityIdleSystemSleepDisabled;
-  NSActivityUserInitiatedAllowingIdleSystemSleep = NSActivityUserInitiated and not NSActivityIdleSystemSleepDisabled;
+  NSActivityUserInitiatedAllowingIdleSystemSleep = NSActivityUserInitiated and (not NSActivityIdleSystemSleepDisabled);
   NSActivityBackground = $000000FF;
   NSActivityLatencyCritical = $FF00000000;
 {$endif}

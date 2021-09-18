@@ -220,6 +220,7 @@ uses
 {$define CGFLOAT_DEFINED}
 {$define NSINTEGER_DEFINED}
 {$define FRAMEWORK_LOADED_WEBKIT}
+{$define JSC_OBJC_API_ENABLED}
 
 type
   OpaqueRecord = record end;
