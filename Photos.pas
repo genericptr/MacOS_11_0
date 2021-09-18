@@ -2,6 +2,7 @@
 {$modeswitch objectivec1}
 {$modeswitch cvar}
 {$modeswitch cblocks}
+{$packrecords c}
 
 
 {$macro on}

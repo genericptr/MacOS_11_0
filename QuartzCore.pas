@@ -2,6 +2,7 @@
 {$modeswitch objectivec1}
 {$modeswitch cvar}
 {$modeswitch cblocks}
+{$packrecords c}
 
 {$ifdef COCOAALL}
 {$fatal "QuartzCore can't be used because -dCOCOAALL has been declared."}

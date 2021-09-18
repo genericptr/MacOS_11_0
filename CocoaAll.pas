@@ -2,6 +2,7 @@
 {$modeswitch objectivec1}
 {$modeswitch cvar}
 {$modeswitch cblocks}
+{$packrecords c}
 
 {$ifndef COCOAALL}
 {$error "You must compile with -dCOCOAALL to use COCOAALL."}
