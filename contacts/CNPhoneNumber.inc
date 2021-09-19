@@ -27,7 +27,7 @@ type
 {$ifdef EXTERNAL_SYMBOLS}
 var
   CNLabelPhoneNumberiPhone: NSString { available in 10_11, 9_0 }; cvar; external;
-  CNLabelPhoneNumberAppleWatch: NSString { available in macos , ios , watchos  }; cvar; external;
+  CNLabelPhoneNumberAppleWatch: NSString { available in macos 11.1, ios 14.3, watchos 7.2 }; cvar; external;
   CNLabelPhoneNumberMobile: NSString { available in 10_11, 9_0 }; cvar; external;
   CNLabelPhoneNumberMain: NSString { available in 10_11, 9_0 }; cvar; external;
   CNLabelPhoneNumberHomeFax: NSString { available in 10_11, 9_0 }; cvar; external;

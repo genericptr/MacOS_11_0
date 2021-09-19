@@ -157,9 +157,9 @@ type
 type
   GKLeaderboardEntry_GKChallengeUI = objccategory external name 'GKChallengeUI' (GKLeaderboardEntry)
     {$if defined(TARGET_OS_IPHONE)}
-    function challengeComposeControllerWithMessage_players_completionHandler (message_: NSString; players: NSArray; completionHandler: GKChallengeComposeCompletionBlock): UIViewController; message 'challengeComposeControllerWithMessage:players:completionHandler:'; { available in ios , tvos , watchos  }
+    function challengeComposeControllerWithMessage_players_completionHandler (message_: NSString; players: NSArray; completionHandler: GKChallengeComposeCompletionBlock): UIViewController; message 'challengeComposeControllerWithMessage:players:completionHandler:'; { available in ios 14.0, tvos 14.0, watchos 7.0 }
     {$else}
-    function challengeComposeControllerWithMessage_players_completionHandler (message_: NSString; players: NSArray; completionHandler: GKChallengeComposeCompletionBlock): NSViewController; message 'challengeComposeControllerWithMessage:players:completionHandler:'; { available in macos  }
+    function challengeComposeControllerWithMessage_players_completionHandler (message_: NSString; players: NSArray; completionHandler: GKChallengeComposeCompletionBlock): NSViewController; message 'challengeComposeControllerWithMessage:players:completionHandler:'; { available in macos 11.0 }
     {$endif}
   end;
 

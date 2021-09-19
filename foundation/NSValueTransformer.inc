@@ -14,12 +14,12 @@ type
 
 {$ifdef EXTERNAL_SYMBOLS}
 var
-  NSNegateBooleanTransformerName: NSValueTransformerName { available in macos , ios , watchos , tvos  }; cvar; external;
-  NSIsNilTransformerName: NSValueTransformerName { available in macos , ios , watchos , tvos  }; cvar; external;
-  NSIsNotNilTransformerName: NSValueTransformerName { available in macos , ios , watchos , tvos  }; cvar; external;
+  NSNegateBooleanTransformerName: NSValueTransformerName { available in macos 10.3, ios 3.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  NSIsNilTransformerName: NSValueTransformerName { available in macos 10.3, ios 3.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  NSIsNotNilTransformerName: NSValueTransformerName { available in macos 10.3, ios 3.0, watchos 2.0, tvos 9.0 }; cvar; external;
   NSUnarchiveFromDataTransformerName: NSValueTransformerName deprecated 'replace with NSSecureUnarchiveFromDataTransformerName'; cvar; external;
   NSKeyedUnarchiveFromDataTransformerName: NSValueTransformerName deprecated 'replace with NSSecureUnarchiveFromDataTransformerName'; cvar; external;
-  NSSecureUnarchiveFromDataTransformerName: NSValueTransformerName { available in macos , ios , watchos , tvos  }; cvar; external;
+  NSSecureUnarchiveFromDataTransformerName: NSValueTransformerName { available in macos 10.14, ios 12.0, watchos 5.0, tvos 12.0 }; cvar; external;
 {$endif}
 
 {$ifdef CLASSES}

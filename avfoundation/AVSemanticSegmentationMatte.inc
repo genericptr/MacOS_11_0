@@ -14,10 +14,10 @@ type
 
 {$ifdef EXTERNAL_SYMBOLS}
 var
-  AVSemanticSegmentationMatteTypeSkin: AVSemanticSegmentationMatteType { available in macos , ios , macCatalyst , tvos , watchos  }; cvar; external;
-  AVSemanticSegmentationMatteTypeHair: AVSemanticSegmentationMatteType { available in macos , ios , macCatalyst , tvos , watchos  }; cvar; external;
-  AVSemanticSegmentationMatteTypeTeeth: AVSemanticSegmentationMatteType { available in macos , ios , macCatalyst , tvos , watchos  }; cvar; external;
-  AVSemanticSegmentationMatteTypeGlasses: AVSemanticSegmentationMatteType { unavailable in tvos }; cvar; external;
+  AVSemanticSegmentationMatteTypeSkin: AVSemanticSegmentationMatteType { available in macos 10.15, ios 13.0, macCatalyst 14.0, tvos 13.0, watchos 6.0 }; cvar; external;
+  AVSemanticSegmentationMatteTypeHair: AVSemanticSegmentationMatteType { available in macos 10.15, ios 13.0, macCatalyst 14.0, tvos 13.0, watchos 6.0 }; cvar; external;
+  AVSemanticSegmentationMatteTypeTeeth: AVSemanticSegmentationMatteType { available in macos 10.15, ios 13.0, macCatalyst 14.0, tvos 13.0, watchos 6.0 }; cvar; external;
+  AVSemanticSegmentationMatteTypeGlasses: AVSemanticSegmentationMatteType { unavailable in tvos } { unavailable in watchos }; cvar; external;
 {$endif}
 
 {$ifdef CLASSES}

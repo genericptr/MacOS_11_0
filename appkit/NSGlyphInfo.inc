@@ -13,9 +13,9 @@ type
 type
   NSGlyphInfo = objcclass external (NSObject, NSCopyingProtocol, NSSecureCodingProtocol)
   public
-    class function glyphInfoWithCGGlyph_forFont_baseString (glyph: CGGlyph; font: NSFont; string_: NSString): NSGlyphInfo; message 'glyphInfoWithCGGlyph:forFont:baseString:'; { available in macos , ios , watchos , tvos  }
-    function glyphID: CGGlyph; message 'glyphID'; { available in macos , ios , watchos , tvos  }
-    function baseString: NSString; message 'baseString'; { available in macos , ios , watchos , tvos  }
+    class function glyphInfoWithCGGlyph_forFont_baseString (glyph: CGGlyph; font: NSFont; string_: NSString): NSGlyphInfo; message 'glyphInfoWithCGGlyph:forFont:baseString:'; { available in macos 10.13, ios 11.0, watchos 4.0, tvos 11.0 }
+    function glyphID: CGGlyph; message 'glyphID'; { available in macos 10.13, ios 11.0, watchos 4.0, tvos 11.0 }
+    function baseString: NSString; message 'baseString'; { available in macos 10.13, ios 11.0, watchos 4.0, tvos 11.0 }
 
     { Adopted protocols }
     function copyWithZone (zone: NSZonePtr): id; message 'copyWithZone:';

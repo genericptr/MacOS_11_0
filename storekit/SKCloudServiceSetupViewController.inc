@@ -33,9 +33,9 @@ type
 type
   SKCloudServiceSetupViewController = objcclass external (NSViewController)
   public
-    procedure setDelegate(newValue: SKCloudServiceSetupViewControllerDelegateProtocol); message 'setDelegate:'; { unavailable in macos }
-    function delegate: SKCloudServiceSetupViewControllerDelegateProtocol; message 'delegate'; { unavailable in macos }
-    procedure loadWithOptions_completionHandler (options: NSDictionary; completionHandler: SKCloudServiceSetupViewControllerLoadWithOptionsCallback); message 'loadWithOptions:completionHandler:'; { unavailable in macos }
+    procedure setDelegate(newValue: SKCloudServiceSetupViewControllerDelegateProtocol); message 'setDelegate:'; { unavailable in macos } { available in ios 10.1 }
+    function delegate: SKCloudServiceSetupViewControllerDelegateProtocol; message 'delegate'; { unavailable in macos } { available in ios 10.1 }
+    procedure loadWithOptions_completionHandler (options: NSDictionary; completionHandler: SKCloudServiceSetupViewControllerLoadWithOptionsCallback); message 'loadWithOptions:completionHandler:'; { unavailable in macos } { available in ios 10.1 }
   end;
 {$endif}
 
@@ -44,7 +44,7 @@ type
 type
   SKCloudServiceSetupViewControllerDelegateProtocol = objcprotocol external name 'SKCloudServiceSetupViewControllerDelegate' (NSObjectProtocol)
   optional
-    procedure cloudServiceSetupViewControllerDidDismiss (cloudServiceSetupViewController: SKCloudServiceSetupViewController); message 'cloudServiceSetupViewControllerDidDismiss:'; { unavailable in macos }
+    procedure cloudServiceSetupViewControllerDidDismiss (cloudServiceSetupViewController: SKCloudServiceSetupViewController); message 'cloudServiceSetupViewControllerDidDismiss:'; { unavailable in macos } { available in ios 10.1 }
   end;
 {$endif}
 
@@ -55,10 +55,10 @@ var
   SKCloudServiceSetupOptionsAffiliateTokenKey: SKCloudServiceSetupOptionsKey; cvar; external;
   SKCloudServiceSetupOptionsCampaignTokenKey: SKCloudServiceSetupOptionsKey; cvar; external;
   SKCloudServiceSetupOptionsMessageIdentifierKey: SKCloudServiceSetupOptionsKey; cvar; external;
-  SKCloudServiceSetupActionSubscribe: SKCloudServiceSetupAction { unavailable in macos }; cvar; external;
-  SKCloudServiceSetupMessageIdentifierJoin: SKCloudServiceSetupMessageIdentifier { unavailable in macos }; cvar; external;
-  SKCloudServiceSetupMessageIdentifierConnect: SKCloudServiceSetupMessageIdentifier { unavailable in macos }; cvar; external;
-  SKCloudServiceSetupMessageIdentifierAddMusic: SKCloudServiceSetupMessageIdentifier { unavailable in macos }; cvar; external;
-  SKCloudServiceSetupMessageIdentifierPlayMusic: SKCloudServiceSetupMessageIdentifier { unavailable in macos }; cvar; external;
+  SKCloudServiceSetupActionSubscribe: SKCloudServiceSetupAction { unavailable in macos } { available in ios 10.1 }; cvar; external;
+  SKCloudServiceSetupMessageIdentifierJoin: SKCloudServiceSetupMessageIdentifier { unavailable in macos } { available in ios 11.0 }; cvar; external;
+  SKCloudServiceSetupMessageIdentifierConnect: SKCloudServiceSetupMessageIdentifier { unavailable in macos } { available in ios 11.0 }; cvar; external;
+  SKCloudServiceSetupMessageIdentifierAddMusic: SKCloudServiceSetupMessageIdentifier { unavailable in macos } { available in ios 11.0 }; cvar; external;
+  SKCloudServiceSetupMessageIdentifierPlayMusic: SKCloudServiceSetupMessageIdentifier { unavailable in macos } { available in ios 11.0 }; cvar; external;
 {$endif}
 

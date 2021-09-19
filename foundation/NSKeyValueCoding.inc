@@ -34,13 +34,13 @@ type
     procedure setValue_forKey (value: id; key: NSString); message 'setValue:forKey:';
     function validateValue_forKey_error (ioValue: idPtr; inKey: NSString; outError: NSErrorPtr): objcbool; message 'validateValue:forKey:error:';
     function mutableArrayValueForKey (key: NSString): NSMutableArray; message 'mutableArrayValueForKey:';
-    function mutableOrderedSetValueForKey (key: NSString): NSMutableOrderedSet; message 'mutableOrderedSetValueForKey:'; { available in macos , ios , watchos , tvos  }
+    function mutableOrderedSetValueForKey (key: NSString): NSMutableOrderedSet; message 'mutableOrderedSetValueForKey:'; { available in macos 10.7, ios 5.0, watchos 2.0, tvos 9.0 }
     function mutableSetValueForKey (key: NSString): NSMutableSet; message 'mutableSetValueForKey:';
     function valueForKeyPath (keyPath: NSString): id; message 'valueForKeyPath:';
     procedure setValue_forKeyPath (value: id; keyPath: NSString); message 'setValue:forKeyPath:';
     function validateValue_forKeyPath_error (ioValue: idPtr; inKeyPath: NSString; outError: NSErrorPtr): objcbool; message 'validateValue:forKeyPath:error:';
     function mutableArrayValueForKeyPath (keyPath: NSString): NSMutableArray; message 'mutableArrayValueForKeyPath:';
-    function mutableOrderedSetValueForKeyPath (keyPath: NSString): NSMutableOrderedSet; message 'mutableOrderedSetValueForKeyPath:'; { available in macos , ios , watchos , tvos  }
+    function mutableOrderedSetValueForKeyPath (keyPath: NSString): NSMutableOrderedSet; message 'mutableOrderedSetValueForKeyPath:'; { available in macos 10.7, ios 5.0, watchos 2.0, tvos 9.0 }
     function mutableSetValueForKeyPath (keyPath: NSString): NSMutableSet; message 'mutableSetValueForKeyPath:';
     function valueForUndefinedKey (key: NSString): id; message 'valueForUndefinedKey:';
     procedure setValue_forUndefinedKey (value: id; key: NSString); message 'setValue:forUndefinedKey:';
@@ -67,8 +67,8 @@ type
 
 type
   NSOrderedSet_NSKeyValueCoding = objccategory external name 'NSKeyValueCoding' (NSOrderedSet)
-    function valueForKey (key: NSString): id; message 'valueForKey:'; { available in macos , ios , watchos , tvos  }
-    procedure setValue_forKey (value: id; key: NSString); message 'setValue:forKey:'; { available in macos , ios , watchos , tvos  }
+    function valueForKey (key: NSString): id; message 'valueForKey:'; { available in macos 10.7, ios 5.0, watchos 2.0, tvos 9.0 }
+    procedure setValue_forKey (value: id; key: NSString); message 'setValue:forKey:'; { available in macos 10.7, ios 5.0, watchos 2.0, tvos 9.0 }
   end;
 
 type

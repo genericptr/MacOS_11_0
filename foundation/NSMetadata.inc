@@ -40,10 +40,10 @@ type
     function notificationBatchingInterval: NSTimeInterval; message 'notificationBatchingInterval';
     procedure setSearchScopes(newValue: NSArray); message 'setSearchScopes:';
     function searchScopes: NSArray; message 'searchScopes';
-    procedure setSearchItems(newValue: NSArray); message 'setSearchItems:'; { available in macos , ios , watchos , tvos  }
-    function searchItems: NSArray; message 'searchItems'; { available in macos , ios , watchos , tvos  }
-    procedure setOperationQueue(newValue: NSOperationQueue); message 'setOperationQueue:'; { available in macos , ios , watchos , tvos  }
-    function operationQueue: NSOperationQueue; message 'operationQueue'; { available in macos , ios , watchos , tvos  }
+    procedure setSearchItems(newValue: NSArray); message 'setSearchItems:'; { available in macos 10.9, ios 7.0, watchos 2.0, tvos 9.0 }
+    function searchItems: NSArray; message 'searchItems'; { available in macos 10.9, ios 7.0, watchos 2.0, tvos 9.0 }
+    procedure setOperationQueue(newValue: NSOperationQueue); message 'setOperationQueue:'; { available in macos 10.9, ios 7.0, watchos 2.0, tvos 9.0 }
+    function operationQueue: NSOperationQueue; message 'operationQueue'; { available in macos 10.9, ios 7.0, watchos 2.0, tvos 9.0 }
     function startQuery: objcbool; message 'startQuery';
     procedure stopQuery; message 'stopQuery';
     function isStarted: objcbool; message 'isStarted';
@@ -53,8 +53,8 @@ type
     procedure enableUpdates; message 'enableUpdates';
     function resultCount: NSUInteger; message 'resultCount';
     function resultAtIndex (idx: NSUInteger): id; message 'resultAtIndex:';
-    procedure enumerateResultsUsingBlock (block: NSMetadataEnumerateResultsUsingBlockCallback); message 'enumerateResultsUsingBlock:'; { available in macos , ios , watchos , tvos  }
-    procedure enumerateResultsWithOptions_usingBlock (opts: NSEnumerationOptions; block: NSMetadataEnumerateResultsWithOptionsCallback); message 'enumerateResultsWithOptions:usingBlock:'; { available in macos , ios , watchos , tvos  }
+    procedure enumerateResultsUsingBlock (block: NSMetadataEnumerateResultsUsingBlockCallback); message 'enumerateResultsUsingBlock:'; { available in macos 10.9, ios 7.0, watchos 2.0, tvos 9.0 }
+    procedure enumerateResultsWithOptions_usingBlock (opts: NSEnumerationOptions; block: NSMetadataEnumerateResultsWithOptionsCallback); message 'enumerateResultsWithOptions:usingBlock:'; { available in macos 10.9, ios 7.0, watchos 2.0, tvos 9.0 }
     function results: NSArray; message 'results';
     function indexOfResult (result_: id): NSUInteger; message 'indexOfResult:';
     function valueLists: NSDictionary; message 'valueLists';
@@ -75,22 +75,22 @@ type
 
 {$ifdef EXTERNAL_SYMBOLS}
 var
-  NSMetadataQueryDidStartGatheringNotification: NSNotificationName { available in macos , ios , watchos , tvos  }; cvar; external;
-  NSMetadataQueryGatheringProgressNotification: NSNotificationName { available in macos , ios , watchos , tvos  }; cvar; external;
-  NSMetadataQueryDidFinishGatheringNotification: NSNotificationName { available in macos , ios , watchos , tvos  }; cvar; external;
-  NSMetadataQueryDidUpdateNotification: NSNotificationName { available in macos , ios , watchos , tvos  }; cvar; external;
-  NSMetadataQueryUpdateAddedItemsKey: NSString { available in macos , ios , watchos , tvos  }; cvar; external;
-  NSMetadataQueryUpdateChangedItemsKey: NSString { available in macos , ios , watchos , tvos  }; cvar; external;
-  NSMetadataQueryUpdateRemovedItemsKey: NSString { available in macos , ios , watchos , tvos  }; cvar; external;
-  NSMetadataQueryResultContentRelevanceAttribute: NSString { available in macos , ios , watchos , tvos  }; cvar; external;
-  NSMetadataQueryUserHomeScope: NSString { unavailable in ios, watchos, tvos }; cvar; external;
-  NSMetadataQueryLocalComputerScope: NSString { unavailable in ios, watchos, tvos }; cvar; external;
-  NSMetadataQueryNetworkScope: NSString { unavailable in ios, watchos, tvos }; cvar; external;
-  NSMetadataQueryIndexedLocalComputerScope: NSString { unavailable in ios, watchos, tvos }; cvar; external;
-  NSMetadataQueryIndexedNetworkScope: NSString { unavailable in ios, watchos, tvos }; cvar; external;
-  NSMetadataQueryUbiquitousDocumentsScope: NSString { available in macos , ios , watchos , tvos  }; cvar; external;
-  NSMetadataQueryUbiquitousDataScope: NSString { available in macos , ios , watchos , tvos  }; cvar; external;
-  NSMetadataQueryAccessibleUbiquitousExternalDocumentsScope: NSString { available in macos , ios , watchos , tvos  }; cvar; external;
+  NSMetadataQueryDidStartGatheringNotification: NSNotificationName { available in macos 10.4, ios 5.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  NSMetadataQueryGatheringProgressNotification: NSNotificationName { available in macos 10.4, ios 5.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  NSMetadataQueryDidFinishGatheringNotification: NSNotificationName { available in macos 10.4, ios 5.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  NSMetadataQueryDidUpdateNotification: NSNotificationName { available in macos 10.4, ios 5.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  NSMetadataQueryUpdateAddedItemsKey: NSString { available in macos 10.9, ios 8.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  NSMetadataQueryUpdateChangedItemsKey: NSString { available in macos 10.9, ios 8.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  NSMetadataQueryUpdateRemovedItemsKey: NSString { available in macos 10.9, ios 8.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  NSMetadataQueryResultContentRelevanceAttribute: NSString { available in macos 10.4, ios 5.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  NSMetadataQueryUserHomeScope: NSString { unavailable in ios, watchos, tvos } { available in macos 10.4 }; cvar; external;
+  NSMetadataQueryLocalComputerScope: NSString { unavailable in ios, watchos, tvos } { available in macos 10.4 }; cvar; external;
+  NSMetadataQueryNetworkScope: NSString { unavailable in ios, watchos, tvos } { available in macos 10.4 }; cvar; external;
+  NSMetadataQueryIndexedLocalComputerScope: NSString { unavailable in ios, watchos, tvos } { available in macos 10.9 }; cvar; external;
+  NSMetadataQueryIndexedNetworkScope: NSString { unavailable in ios, watchos, tvos } { available in macos 10.9 }; cvar; external;
+  NSMetadataQueryUbiquitousDocumentsScope: NSString { available in macos 10.7, ios 5.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  NSMetadataQueryUbiquitousDataScope: NSString { available in macos 10.7, ios 5.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  NSMetadataQueryAccessibleUbiquitousExternalDocumentsScope: NSString { available in macos 10.10, ios 8.0, watchos 2.0, tvos 9.0 }; cvar; external;
 {$endif}
 
 {$ifdef CLASSES}
@@ -101,7 +101,7 @@ type
     _item: id;
     _reserved: pointer;
   public
-    function initWithURL (url: NSURL): id; message 'initWithURL:'; { unavailable in ios, watchos, tvos }
+    function initWithURL (url: NSURL): id; message 'initWithURL:'; { unavailable in ios, watchos, tvos } { available in macos 10.9 }
     function valueForAttribute (key: NSString): id; message 'valueForAttribute:';
     function valuesForAttributes (keys: NSArray): NSDictionary; message 'valuesForAttributes:';
     function attributes: NSArray; message 'attributes';

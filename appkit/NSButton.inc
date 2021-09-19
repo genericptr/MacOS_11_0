@@ -10,11 +10,11 @@ type
 type
   NSButton = objcclass external (NSControl, NSUserInterfaceValidationsProtocol, NSAccessibilityButtonProtocol, NSUserInterfaceCompressionProtocol)
   public
-    class function buttonWithTitle_image_target_action (title: NSString; image: NSImage; target_: id; action_: SEL): id; message 'buttonWithTitle:image:target:action:'; { available in macos  }
-    class function buttonWithTitle_target_action (title: NSString; target_: id; action_: SEL): id; message 'buttonWithTitle:target:action:'; { available in macos  }
-    class function buttonWithImage_target_action (image: NSImage; target_: id; action_: SEL): id; message 'buttonWithImage:target:action:'; { available in macos  }
-    class function checkboxWithTitle_target_action (title: NSString; target_: id; action_: SEL): id; message 'checkboxWithTitle:target:action:'; { available in macos  }
-    class function radioButtonWithTitle_target_action (title: NSString; target_: id; action_: SEL): id; message 'radioButtonWithTitle:target:action:'; { available in macos  }
+    class function buttonWithTitle_image_target_action (title: NSString; image: NSImage; target_: id; action_: SEL): id; message 'buttonWithTitle:image:target:action:'; { available in macos 10.12 }
+    class function buttonWithTitle_target_action (title: NSString; target_: id; action_: SEL): id; message 'buttonWithTitle:target:action:'; { available in macos 10.12 }
+    class function buttonWithImage_target_action (image: NSImage; target_: id; action_: SEL): id; message 'buttonWithImage:target:action:'; { available in macos 10.12 }
+    class function checkboxWithTitle_target_action (title: NSString; target_: id; action_: SEL): id; message 'checkboxWithTitle:target:action:'; { available in macos 10.12 }
+    class function radioButtonWithTitle_target_action (title: NSString; target_: id; action_: SEL): id; message 'radioButtonWithTitle:target:action:'; { available in macos 10.12 }
     procedure setButtonType (type_: NSButtonType); message 'setButtonType:';
     procedure setTitle(newValue: NSString); message 'setTitle:';
     function title: NSString; message 'title';
@@ -24,14 +24,14 @@ type
     function alternateTitle: NSString; message 'alternateTitle';
     procedure setAttributedAlternateTitle(newValue: NSAttributedString); message 'setAttributedAlternateTitle:';
     function attributedAlternateTitle: NSAttributedString; message 'attributedAlternateTitle';
-    procedure setHasDestructiveAction(newValue: objcbool); message 'setHasDestructiveAction:'; { available in macos  }
-    function hasDestructiveAction: objcbool; message 'hasDestructiveAction'; { available in macos  }
+    procedure setHasDestructiveAction(newValue: objcbool); message 'setHasDestructiveAction:'; { available in macos 11.0 }
+    function hasDestructiveAction: objcbool; message 'hasDestructiveAction'; { available in macos 11.0 }
     procedure setSound(newValue: NSSound); message 'setSound:';
     function sound: NSSound; message 'sound';
-    procedure setSpringLoaded(newValue: objcbool); message 'setSpringLoaded:'; { available in macos  }
-    function isSpringLoaded: objcbool; message 'isSpringLoaded'; { available in macos  }
-    procedure setMaxAcceleratorLevel(newValue: NSInteger); message 'setMaxAcceleratorLevel:'; { available in macos  }
-    function maxAcceleratorLevel: NSInteger; message 'maxAcceleratorLevel'; { available in macos  }
+    procedure setSpringLoaded(newValue: objcbool); message 'setSpringLoaded:'; { available in macos 10.10.3 }
+    function isSpringLoaded: objcbool; message 'isSpringLoaded'; { available in macos 10.10.3 }
+    procedure setMaxAcceleratorLevel(newValue: NSInteger); message 'setMaxAcceleratorLevel:'; { available in macos 10.10.3 }
+    function maxAcceleratorLevel: NSInteger; message 'maxAcceleratorLevel'; { available in macos 10.10.3 }
     procedure setPeriodicDelay_interval (delay: single; interval: single); message 'setPeriodicDelay:interval:';
     procedure getPeriodicDelay_interval (delay: psingle; interval: psingle); message 'getPeriodicDelay:interval:';
     procedure setBezelStyle(newValue: NSBezelStyle); message 'setBezelStyle:';
@@ -48,16 +48,16 @@ type
     function alternateImage: NSImage; message 'alternateImage';
     procedure setImagePosition(newValue: NSCellImagePosition); message 'setImagePosition:';
     function imagePosition: NSCellImagePosition; message 'imagePosition';
-    procedure setImageScaling(newValue: NSImageScaling); message 'setImageScaling:'; { available in macos  }
-    function imageScaling: NSImageScaling; message 'imageScaling'; { available in macos  }
-    procedure setImageHugsTitle(newValue: objcbool); message 'setImageHugsTitle:'; { available in macos  }
-    function imageHugsTitle: objcbool; message 'imageHugsTitle'; { available in macos  }
-    procedure setSymbolConfiguration(newValue: NSImageSymbolConfiguration); message 'setSymbolConfiguration:'; { available in macos  }
-    function symbolConfiguration: NSImageSymbolConfiguration; message 'symbolConfiguration'; { available in macos  }
-    procedure setBezelColor(newValue: NSColor); message 'setBezelColor:'; { available in macos  }
-    function bezelColor: NSColor; message 'bezelColor'; { available in macos  }
-    procedure setContentTintColor(newValue: NSColor); message 'setContentTintColor:'; { available in macos  }
-    function contentTintColor: NSColor; message 'contentTintColor'; { available in macos  }
+    procedure setImageScaling(newValue: NSImageScaling); message 'setImageScaling:'; { available in macos 10.5 }
+    function imageScaling: NSImageScaling; message 'imageScaling'; { available in macos 10.5 }
+    procedure setImageHugsTitle(newValue: objcbool); message 'setImageHugsTitle:'; { available in macos 10.12 }
+    function imageHugsTitle: objcbool; message 'imageHugsTitle'; { available in macos 10.12 }
+    procedure setSymbolConfiguration(newValue: NSImageSymbolConfiguration); message 'setSymbolConfiguration:'; { available in macos 11 }
+    function symbolConfiguration: NSImageSymbolConfiguration; message 'symbolConfiguration'; { available in macos 11 }
+    procedure setBezelColor(newValue: NSColor); message 'setBezelColor:'; { available in macos 10.12.2 }
+    function bezelColor: NSColor; message 'bezelColor'; { available in macos 10.12.2 }
+    procedure setContentTintColor(newValue: NSColor); message 'setContentTintColor:'; { available in macos 10.14 }
+    function contentTintColor: NSColor; message 'contentTintColor'; { available in macos 10.14 }
     procedure setState(newValue: NSControlStateValue); message 'setState:';
     function state: NSControlStateValue; message 'state';
     procedure setAllowsMixedState(newValue: objcbool); message 'setAllowsMixedState:';
@@ -69,9 +69,9 @@ type
     procedure setKeyEquivalentModifierMask(newValue: NSEventModifierFlags); message 'setKeyEquivalentModifierMask:';
     function keyEquivalentModifierMask: NSEventModifierFlags; message 'keyEquivalentModifierMask';
     function performKeyEquivalent (key: NSEvent): objcbool; message 'performKeyEquivalent:';
-    procedure compressWithPrioritizedCompressionOptions (prioritizedOptions: NSArray); message 'compressWithPrioritizedCompressionOptions:'; { available in macos  }
-    function minimumSizeWithPrioritizedCompressionOptions (prioritizedOptions: NSArray): NSSize; message 'minimumSizeWithPrioritizedCompressionOptions:'; { available in macos  }
-    function activeCompressionOptions: NSUserInterfaceCompressionOptions; message 'activeCompressionOptions'; { available in macos  }
+    procedure compressWithPrioritizedCompressionOptions (prioritizedOptions: NSArray); message 'compressWithPrioritizedCompressionOptions:'; { available in macos 10.13 }
+    function minimumSizeWithPrioritizedCompressionOptions (prioritizedOptions: NSArray): NSSize; message 'minimumSizeWithPrioritizedCompressionOptions:'; { available in macos 10.13 }
+    function activeCompressionOptions: NSUserInterfaceCompressionOptions; message 'activeCompressionOptions'; { available in macos 10.13 }
 
     { Adopted protocols }
     function activeCompressionOptions_: NSUserInterfaceCompressionOptions; message 'activeCompressionOptions';

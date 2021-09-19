@@ -60,7 +60,7 @@ type
     function intersectsSet (set_: NSSet): objcbool; message 'intersectsSet:';
     function isSubsetOfOrderedSet (other: NSOrderedSet): objcbool; message 'isSubsetOfOrderedSet:';
     function isSubsetOfSet (set_: NSSet): objcbool; message 'isSubsetOfSet:';
-    function objectAtIndexedSubscript (idx: NSUInteger): id; message 'objectAtIndexedSubscript:'; { available in macos , ios , watchos , tvos  }
+    function objectAtIndexedSubscript (idx: NSUInteger): id; message 'objectAtIndexedSubscript:'; { available in macos 10.8, ios 6.0, watchos 2.0, tvos 9.0 }
     function objectEnumerator: NSEnumerator; message 'objectEnumerator';
     function reverseObjectEnumerator: NSEnumerator; message 'reverseObjectEnumerator';
     function reversedOrderedSet: NSOrderedSet; message 'reversedOrderedSet';
@@ -137,7 +137,7 @@ type
     procedure moveObjectsAtIndexes_toIndex (indexes: NSIndexSet; idx: NSUInteger); message 'moveObjectsAtIndexes:toIndex:';
     procedure insertObjects_atIndexes (objects: NSArray; indexes: NSIndexSet); message 'insertObjects:atIndexes:';
     procedure setObject_atIndex (obj: id; idx: NSUInteger); message 'setObject:atIndex:';
-    procedure setObject_atIndexedSubscript (obj: id; idx: NSUInteger); message 'setObject:atIndexedSubscript:'; { available in macos , ios , watchos , tvos  }
+    procedure setObject_atIndexedSubscript (obj: id; idx: NSUInteger); message 'setObject:atIndexedSubscript:'; { available in macos 10.8, ios 6.0, watchos 2.0, tvos 9.0 }
     procedure replaceObjectsInRange_withObjects_count (range: NSRange; objects: id { variable size array of id }; count_: NSUInteger); message 'replaceObjectsInRange:withObjects:count:';
     procedure replaceObjectsAtIndexes_withObjects (indexes: NSIndexSet; objects: NSArray); message 'replaceObjectsAtIndexes:withObjects:';
     procedure removeObjectsInRange (range: NSRange); message 'removeObjectsInRange:';

@@ -10,7 +10,7 @@ type
 type
   WKNavigation = objcclass external (NSObject)
   public
-    function effectiveContentMode: WKContentMode; message 'effectiveContentMode'; { available in ios  }
+    function effectiveContentMode: WKContentMode; message 'effectiveContentMode'; { available in ios 13.0 }
   end;
 {$endif}
 

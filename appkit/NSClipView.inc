@@ -24,11 +24,11 @@ type
     procedure viewBoundsChanged (notification: NSNotification); message 'viewBoundsChanged:';
     function autoscroll (event: NSEvent): objcbool; message 'autoscroll:';
     procedure scrollToPoint (newOrigin: NSPoint); message 'scrollToPoint:';
-    function constrainBoundsRect (proposedBounds: NSRect): NSRect; message 'constrainBoundsRect:'; { available in macos  }
-    procedure setContentInsets(newValue: NSEdgeInsets); message 'setContentInsets:'; { available in macos  }
-    function contentInsets: NSEdgeInsets; message 'contentInsets'; { available in macos  }
-    procedure setAutomaticallyAdjustsContentInsets(newValue: objcbool); message 'setAutomaticallyAdjustsContentInsets:'; { available in macos  }
-    function automaticallyAdjustsContentInsets: objcbool; message 'automaticallyAdjustsContentInsets'; { available in macos  }
+    function constrainBoundsRect (proposedBounds: NSRect): NSRect; message 'constrainBoundsRect:'; { available in macos 10.9 }
+    procedure setContentInsets(newValue: NSEdgeInsets); message 'setContentInsets:'; { available in macos 10.10 }
+    function contentInsets: NSEdgeInsets; message 'contentInsets'; { available in macos 10.10 }
+    procedure setAutomaticallyAdjustsContentInsets(newValue: objcbool); message 'setAutomaticallyAdjustsContentInsets:'; { available in macos 10.10 }
+    function automaticallyAdjustsContentInsets: objcbool; message 'automaticallyAdjustsContentInsets'; { available in macos 10.10 }
   end;
 
 

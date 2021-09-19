@@ -15,8 +15,8 @@ const
   NSTokenStyleDefault = 0;
   NSTokenStyleNone = 1;
   NSTokenStyleRounded = 2;
-  NSTokenStyleSquared = 3 { available in macos  };
-  NSTokenStylePlainSquared = 4 { available in macos  };
+  NSTokenStyleSquared = 3 { available in macos 10.10 };
+  NSTokenStylePlainSquared = 4 { available in macos 10.10 };
 {$endif}
 
 {$ifdef CLASSES}

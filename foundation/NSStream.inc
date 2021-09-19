@@ -68,7 +68,7 @@ type
     function getBuffer_length (buffer: pbyte; len: NSUIntegerPtr): objcbool; message 'getBuffer:length:';
     function hasBytesAvailable: objcbool; message 'hasBytesAvailable';
     function initWithData (data: NSData): id; message 'initWithData:'; { NS_DESIGNATED_INITIALIZER }
-    function initWithURL (url: NSURL): id; message 'initWithURL:'; { available in macos , ios , watchos , tvos  }
+    function initWithURL (url: NSURL): id; message 'initWithURL:'; { available in macos 10.6, ios 4.0, watchos 2.0, tvos 9.0 }
   end;
 
 type
@@ -78,13 +78,13 @@ type
     function hasSpaceAvailable: objcbool; message 'hasSpaceAvailable';
     function initToMemory: id; message 'initToMemory'; { NS_DESIGNATED_INITIALIZER }
     function initToBuffer_capacity (buffer: pbyte; capacity: NSUInteger): id; message 'initToBuffer:capacity:'; { NS_DESIGNATED_INITIALIZER }
-    function initWithURL_append (url: NSURL; shouldAppend: objcbool): id; message 'initWithURL:append:'; { available in macos , ios , watchos , tvos  }
+    function initWithURL_append (url: NSURL; shouldAppend: objcbool): id; message 'initWithURL:append:'; { available in macos 10.6, ios 4.0, watchos 2.0, tvos 9.0 }
   end;
 
 
 type
   NSSocketStreamCreationExtensions = objccategory external (NSStream)
-    class procedure getStreamsToHostWithName_port_inputStream_outputStream (hostname: NSString; port: NSInteger; inputStream: NSInputStreamPtr; outputStream: NSOutputStreamPtr); message 'getStreamsToHostWithName:port:inputStream:outputStream:'; { unavailable in watchos }
+    class procedure getStreamsToHostWithName_port_inputStream_outputStream (hostname: NSString; port: NSInteger; inputStream: NSInputStreamPtr; outputStream: NSOutputStreamPtr); message 'getStreamsToHostWithName:port:inputStream:outputStream:'; { unavailable in watchos } { available in macos 10.10, ios 8.0, tvos 9.0 }
     {$if defined(TARGET_OS_OSX)}
     class procedure getStreamsToHost_port_inputStream_outputStream (host: NSHost; port: NSInteger; inputStream: NSInputStreamPtr; outputStream: NSOutputStreamPtr); message 'getStreamsToHost:port:inputStream:outputStream:'; { unavailable in ios, watchos, tvos }
     {$endif}
@@ -92,7 +92,7 @@ type
 
 type
   NSStreamBoundPairCreationExtensions = objccategory external (NSStream)
-    class procedure getBoundStreamsWithBufferSize_inputStream_outputStream (bufferSize: NSUInteger; inputStream: NSInputStreamPtr; outputStream: NSOutputStreamPtr); message 'getBoundStreamsWithBufferSize:inputStream:outputStream:'; { available in macos , ios , watchos , tvos  }
+    class procedure getBoundStreamsWithBufferSize_inputStream_outputStream (bufferSize: NSUInteger; inputStream: NSInputStreamPtr; outputStream: NSOutputStreamPtr); message 'getBoundStreamsWithBufferSize:inputStream:outputStream:'; { available in macos 10.10, ios 8.0, watchos 2.0, tvos 9.0 }
   end;
 
 type
@@ -100,7 +100,7 @@ type
     function initWithFileAtPath (path: NSString): id; message 'initWithFileAtPath:';
     class function inputStreamWithData (data: NSData): id; message 'inputStreamWithData:';
     class function inputStreamWithFileAtPath (path: NSString): id; message 'inputStreamWithFileAtPath:';
-    class function inputStreamWithURL (url: NSURL): id; message 'inputStreamWithURL:'; { available in macos , ios , watchos , tvos  }
+    class function inputStreamWithURL (url: NSURL): id; message 'inputStreamWithURL:'; { available in macos 10.6, ios 4.0, watchos 2.0, tvos 9.0 }
   end;
 
 type
@@ -109,7 +109,7 @@ type
     class function outputStreamToMemory: id; message 'outputStreamToMemory';
     class function outputStreamToBuffer_capacity (buffer: pbyte; capacity: NSUInteger): id; message 'outputStreamToBuffer:capacity:';
     class function outputStreamToFileAtPath_append (path: NSString; shouldAppend: objcbool): id; message 'outputStreamToFileAtPath:append:';
-    class function outputStreamWithURL_append (url: NSURL; shouldAppend: objcbool): id; message 'outputStreamWithURL:append:'; { available in macos , ios , watchos , tvos  }
+    class function outputStreamWithURL_append (url: NSURL; shouldAppend: objcbool): id; message 'outputStreamWithURL:append:'; { available in macos 10.6, ios 4.0, watchos 2.0, tvos 9.0 }
   end;
 {$endif}
 
@@ -124,7 +124,7 @@ type
 
 {$ifdef EXTERNAL_SYMBOLS}
 var
-  NSStreamSocketSecurityLevelKey: NSStreamPropertyKey { available in macos , ios , watchos , tvos  }; cvar; external;
+  NSStreamSocketSecurityLevelKey: NSStreamPropertyKey { available in macos 10.3, ios 2.0, watchos 2.0, tvos 9.0 }; cvar; external;
 {$endif}
 
 {$ifdef TYPES}
@@ -135,12 +135,12 @@ type
 
 {$ifdef EXTERNAL_SYMBOLS}
 var
-  NSStreamSocketSecurityLevelNone: NSStreamSocketSecurityLevel { available in macos , ios , watchos , tvos  }; cvar; external;
-  NSStreamSocketSecurityLevelSSLv2: NSStreamSocketSecurityLevel { available in macos , ios , watchos , tvos  }; cvar; external;
-  NSStreamSocketSecurityLevelSSLv3: NSStreamSocketSecurityLevel { available in macos , ios , watchos , tvos  }; cvar; external;
-  NSStreamSocketSecurityLevelTLSv1: NSStreamSocketSecurityLevel { available in macos , ios , watchos , tvos  }; cvar; external;
-  NSStreamSocketSecurityLevelNegotiatedSSL: NSStreamSocketSecurityLevel { available in macos , ios , watchos , tvos  }; cvar; external;
-  NSStreamSOCKSProxyConfigurationKey: NSStreamPropertyKey { available in macos , ios , watchos , tvos  }; cvar; external;
+  NSStreamSocketSecurityLevelNone: NSStreamSocketSecurityLevel { available in macos 10.3, ios 2.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  NSStreamSocketSecurityLevelSSLv2: NSStreamSocketSecurityLevel { available in macos 10.3, ios 2.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  NSStreamSocketSecurityLevelSSLv3: NSStreamSocketSecurityLevel { available in macos 10.3, ios 2.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  NSStreamSocketSecurityLevelTLSv1: NSStreamSocketSecurityLevel { available in macos 10.3, ios 2.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  NSStreamSocketSecurityLevelNegotiatedSSL: NSStreamSocketSecurityLevel { available in macos 10.3, ios 2.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  NSStreamSOCKSProxyConfigurationKey: NSStreamPropertyKey { available in macos 10.3, ios 2.0, watchos 2.0, tvos 9.0 }; cvar; external;
 {$endif}
 
 {$ifdef TYPES}
@@ -151,11 +151,11 @@ type
 
 {$ifdef EXTERNAL_SYMBOLS}
 var
-  NSStreamSOCKSProxyHostKey: NSStreamSOCKSProxyConfiguration { available in macos , ios , watchos , tvos  }; cvar; external;
-  NSStreamSOCKSProxyPortKey: NSStreamSOCKSProxyConfiguration { available in macos , ios , watchos , tvos  }; cvar; external;
-  NSStreamSOCKSProxyVersionKey: NSStreamSOCKSProxyConfiguration { available in macos , ios , watchos , tvos  }; cvar; external;
-  NSStreamSOCKSProxyUserKey: NSStreamSOCKSProxyConfiguration { available in macos , ios , watchos , tvos  }; cvar; external;
-  NSStreamSOCKSProxyPasswordKey: NSStreamSOCKSProxyConfiguration { available in macos , ios , watchos , tvos  }; cvar; external;
+  NSStreamSOCKSProxyHostKey: NSStreamSOCKSProxyConfiguration { available in macos 10.3, ios 2.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  NSStreamSOCKSProxyPortKey: NSStreamSOCKSProxyConfiguration { available in macos 10.3, ios 2.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  NSStreamSOCKSProxyVersionKey: NSStreamSOCKSProxyConfiguration { available in macos 10.3, ios 2.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  NSStreamSOCKSProxyUserKey: NSStreamSOCKSProxyConfiguration { available in macos 10.3, ios 2.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  NSStreamSOCKSProxyPasswordKey: NSStreamSOCKSProxyConfiguration { available in macos 10.3, ios 2.0, watchos 2.0, tvos 9.0 }; cvar; external;
 {$endif}
 
 {$ifdef TYPES}
@@ -166,13 +166,13 @@ type
 
 {$ifdef EXTERNAL_SYMBOLS}
 var
-  NSStreamSOCKSProxyVersion4: NSStreamSOCKSProxyVersion { available in macos , ios , watchos , tvos  }; cvar; external;
-  NSStreamSOCKSProxyVersion5: NSStreamSOCKSProxyVersion { available in macos , ios , watchos , tvos  }; cvar; external;
-  NSStreamDataWrittenToMemoryStreamKey: NSStreamPropertyKey { available in macos , ios , watchos , tvos  }; cvar; external;
-  NSStreamFileCurrentOffsetKey: NSStreamPropertyKey { available in macos , ios , watchos , tvos  }; cvar; external;
-  NSStreamSocketSSLErrorDomain: NSErrorDomain { available in macos , ios , watchos , tvos  }; cvar; external;
-  NSStreamSOCKSErrorDomain: NSErrorDomain { available in macos , ios , watchos , tvos  }; cvar; external;
-  NSStreamNetworkServiceType: NSStreamPropertyKey { available in macos , ios , watchos , tvos  }; cvar; external;
+  NSStreamSOCKSProxyVersion4: NSStreamSOCKSProxyVersion { available in macos 10.3, ios 2.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  NSStreamSOCKSProxyVersion5: NSStreamSOCKSProxyVersion { available in macos 10.3, ios 2.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  NSStreamDataWrittenToMemoryStreamKey: NSStreamPropertyKey { available in macos 10.3, ios 2.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  NSStreamFileCurrentOffsetKey: NSStreamPropertyKey { available in macos 10.3, ios 2.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  NSStreamSocketSSLErrorDomain: NSErrorDomain { available in macos 10.3, ios 2.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  NSStreamSOCKSErrorDomain: NSErrorDomain { available in macos 10.3, ios 2.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  NSStreamNetworkServiceType: NSStreamPropertyKey { available in macos 10.7, ios 4.0, watchos 2.0, tvos 9.0 }; cvar; external;
 {$endif}
 
 {$ifdef TYPES}
@@ -183,10 +183,10 @@ type
 
 {$ifdef EXTERNAL_SYMBOLS}
 var
-  NSStreamNetworkServiceTypeVoIP: NSStreamNetworkServiceTypeValue { available in macos , ios , watchos , tvos  }; cvar; external;
-  NSStreamNetworkServiceTypeVideo: NSStreamNetworkServiceTypeValue { available in macos , ios , watchos , tvos  }; cvar; external;
-  NSStreamNetworkServiceTypeBackground: NSStreamNetworkServiceTypeValue { available in macos , ios , watchos , tvos  }; cvar; external;
-  NSStreamNetworkServiceTypeVoice: NSStreamNetworkServiceTypeValue { available in macos , ios , watchos , tvos  }; cvar; external;
-  NSStreamNetworkServiceTypeCallSignaling: NSStreamNetworkServiceTypeValue { available in macosx , ios , watchos , tvos  }; cvar; external;
+  NSStreamNetworkServiceTypeVoIP: NSStreamNetworkServiceTypeValue { available in macos 10.7, ios 4.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  NSStreamNetworkServiceTypeVideo: NSStreamNetworkServiceTypeValue { available in macos 10.7, ios 5.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  NSStreamNetworkServiceTypeBackground: NSStreamNetworkServiceTypeValue { available in macos 10.7, ios 5.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  NSStreamNetworkServiceTypeVoice: NSStreamNetworkServiceTypeValue { available in macos 10.7, ios 5.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  NSStreamNetworkServiceTypeCallSignaling: NSStreamNetworkServiceTypeValue { available in macosx 10.12, ios 10.0, watchos 3.0, tvos 10.0 }; cvar; external;
 {$endif}
 

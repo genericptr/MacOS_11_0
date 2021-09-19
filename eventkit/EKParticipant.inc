@@ -39,7 +39,7 @@ type
     function contactPredicate: NSPredicate; message 'contactPredicate'; { available in 10_11, 9_0 }
     {$if defined(TARGET_OS_IPHONE)}
     {$if  not defined(TARGET_OS_WATCH)}
-    function ABRecordWithAddressBook (addressBook: ABAddressBookRef): ABRecordRef; message 'ABRecordWithAddressBook:'; { available in ios , macCatalyst ) API_DEPRECATED("Use contactPredicate instead",  }
+    function ABRecordWithAddressBook (addressBook: ABAddressBookRef): ABRecordRef; message 'ABRecordWithAddressBook:'; { available in ios 4.0, macCatalyst 14.0 }
     {$endif}
     {$else}
     function ABPersonInAddressBook (addressBook: ABAddressBook): ABPerson; message 'ABPersonInAddressBook:'; deprecated 'in 10_8, 10_11, "Use contactPredicate instead"';

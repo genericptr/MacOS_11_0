@@ -50,14 +50,14 @@ type
     function alertStyle: NSAlertStyle; message 'alertStyle';
     procedure setDelegate(newValue: NSAlertDelegateProtocol); message 'setDelegate:';
     function delegate: NSAlertDelegateProtocol; message 'delegate';
-    procedure setShowsSuppressionButton(newValue: objcbool); message 'setShowsSuppressionButton:'; { available in macos  }
-    function showsSuppressionButton: objcbool; message 'showsSuppressionButton'; { available in macos  }
-    function suppressionButton: NSButton; message 'suppressionButton'; { available in macos  }
-    procedure setAccessoryView(newValue: NSView); message 'setAccessoryView:'; { available in macos  }
-    function accessoryView: NSView; message 'accessoryView'; { available in macos  }
-    procedure layout; message 'layout'; { available in macos  }
+    procedure setShowsSuppressionButton(newValue: objcbool); message 'setShowsSuppressionButton:'; { available in macos 10.5 }
+    function showsSuppressionButton: objcbool; message 'showsSuppressionButton'; { available in macos 10.5 }
+    function suppressionButton: NSButton; message 'suppressionButton'; { available in macos 10.5 }
+    procedure setAccessoryView(newValue: NSView); message 'setAccessoryView:'; { available in macos 10.5 }
+    function accessoryView: NSView; message 'accessoryView'; { available in macos 10.5 }
+    procedure layout; message 'layout'; { available in macos 10.5 }
     function runModal: NSModalResponse; message 'runModal';
-    procedure beginSheetModalForWindow_completionHandler (sheetWindow: NSWindow; handler: NSAlertBeginSheetModalForWindowCallback); message 'beginSheetModalForWindow:completionHandler:'; { available in macos  }
+    procedure beginSheetModalForWindow_completionHandler (sheetWindow: NSWindow; handler: NSAlertBeginSheetModalForWindowCallback); message 'beginSheetModalForWindow:completionHandler:'; { available in macos 10.9 }
     function window: NSWindow; message 'window';
   end;
 {$endif}

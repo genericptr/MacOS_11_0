@@ -49,7 +49,7 @@ type
     procedure setTimeStyle(newValue: NSDateIntervalFormatterStyle); message 'setTimeStyle:';
     function timeStyle: NSDateIntervalFormatterStyle; message 'timeStyle';
     function stringFromDate_toDate (fromDate: NSDate; toDate: NSDate): NSString; message 'stringFromDate:toDate:';
-    function stringFromDateInterval (dateInterval: NSDateInterval): NSString; message 'stringFromDateInterval:'; { available in macosx , ios , watchos , tvos  }
+    function stringFromDateInterval (dateInterval: NSDateInterval): NSString; message 'stringFromDateInterval:'; { available in macosx 10.12, ios 10.0, watchos 3.0, tvos 10.0 }
   end;
 {$endif}
 

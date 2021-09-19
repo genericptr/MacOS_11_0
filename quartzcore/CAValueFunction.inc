@@ -31,16 +31,16 @@ type
 
 {$ifdef EXTERNAL_SYMBOLS}
 var
-  kCAValueFunctionRotateX: CAValueFunctionName { available in macos , ios , watchos , tvos  }; cvar; external;
-  kCAValueFunctionRotateY: CAValueFunctionName { available in macos , ios , watchos , tvos  }; cvar; external;
-  kCAValueFunctionRotateZ: CAValueFunctionName { available in macos , ios , watchos , tvos  }; cvar; external;
-  kCAValueFunctionScale: CAValueFunctionName { available in macos , ios , watchos , tvos  }; cvar; external;
-  kCAValueFunctionScaleX: CAValueFunctionName { available in macos , ios , watchos , tvos  }; cvar; external;
-  kCAValueFunctionScaleY: CAValueFunctionName { available in macos , ios , watchos , tvos  }; cvar; external;
-  kCAValueFunctionScaleZ: CAValueFunctionName { available in macos , ios , watchos , tvos  }; cvar; external;
-  kCAValueFunctionTranslate: CAValueFunctionName { available in macos , ios , watchos , tvos  }; cvar; external;
-  kCAValueFunctionTranslateX: CAValueFunctionName { available in macos , ios , watchos , tvos  }; cvar; external;
-  kCAValueFunctionTranslateY: CAValueFunctionName { available in macos , ios , watchos , tvos  }; cvar; external;
-  kCAValueFunctionTranslateZ: CAValueFunctionName { available in macos , ios , watchos , tvos  }; cvar; external;
+  kCAValueFunctionRotateX: CAValueFunctionName { available in macos 10.6, ios 3.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  kCAValueFunctionRotateY: CAValueFunctionName { available in macos 10.6, ios 3.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  kCAValueFunctionRotateZ: CAValueFunctionName { available in macos 10.6, ios 3.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  kCAValueFunctionScale: CAValueFunctionName { available in macos 10.6, ios 3.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  kCAValueFunctionScaleX: CAValueFunctionName { available in macos 10.6, ios 3.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  kCAValueFunctionScaleY: CAValueFunctionName { available in macos 10.6, ios 3.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  kCAValueFunctionScaleZ: CAValueFunctionName { available in macos 10.6, ios 3.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  kCAValueFunctionTranslate: CAValueFunctionName { available in macos 10.6, ios 3.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  kCAValueFunctionTranslateX: CAValueFunctionName { available in macos 10.6, ios 3.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  kCAValueFunctionTranslateY: CAValueFunctionName { available in macos 10.6, ios 3.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  kCAValueFunctionTranslateZ: CAValueFunctionName { available in macos 10.6, ios 3.0, watchos 2.0, tvos 9.0 }; cvar; external;
 {$endif}
 

@@ -34,7 +34,7 @@ type
     function targetFrame: WKFrameInfo; message 'targetFrame';
     function navigationType: WKNavigationType; message 'navigationType';
     function request: NSURLRequest; message 'request';
-    function shouldPerformDownload: objcbool; message 'shouldPerformDownload'; { available in macos , ios  }
+    function shouldPerformDownload: objcbool; message 'shouldPerformDownload'; { available in macos 11.3, ios 14.5 }
     {$if  not defined(TARGET_OS_IPHONE)}
     function modifierFlags: NSEventModifierFlags; message 'modifierFlags';
     function buttonNumber: NSInteger; message 'buttonNumber';

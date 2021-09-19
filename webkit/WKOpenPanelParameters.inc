@@ -12,7 +12,7 @@ type
   WKOpenPanelParameters = objcclass external (NSObject)
   public
     function allowsMultipleSelection: objcbool; message 'allowsMultipleSelection';
-    function allowsDirectories: objcbool; message 'allowsDirectories'; { available in macos  }
+    function allowsDirectories: objcbool; message 'allowsDirectories'; { available in macos 10.13.4 }
   end;
 {$endif}
 

@@ -49,13 +49,13 @@ type
 
 {$ifdef EXTERNAL_SYMBOLS}
 var
-  kCAFillRuleNonZero: CAShapeLayerFillRule { available in macos , ios , watchos , tvos  }; cvar; external;
-  kCAFillRuleEvenOdd: CAShapeLayerFillRule { available in macos , ios , watchos , tvos  }; cvar; external;
-  kCALineJoinMiter: CAShapeLayerLineJoin { available in macos , ios , watchos , tvos  }; cvar; external;
-  kCALineJoinRound: CAShapeLayerLineJoin { available in macos , ios , watchos , tvos  }; cvar; external;
-  kCALineJoinBevel: CAShapeLayerLineJoin { available in macos , ios , watchos , tvos  }; cvar; external;
-  kCALineCapButt: CAShapeLayerLineCap { available in macos , ios , watchos , tvos  }; cvar; external;
-  kCALineCapRound: CAShapeLayerLineCap { available in macos , ios , watchos , tvos  }; cvar; external;
-  kCALineCapSquare: CAShapeLayerLineCap { available in macos , ios , watchos , tvos  }; cvar; external;
+  kCAFillRuleNonZero: CAShapeLayerFillRule { available in macos 10.6, ios 3.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  kCAFillRuleEvenOdd: CAShapeLayerFillRule { available in macos 10.6, ios 3.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  kCALineJoinMiter: CAShapeLayerLineJoin { available in macos 10.6, ios 3.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  kCALineJoinRound: CAShapeLayerLineJoin { available in macos 10.6, ios 3.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  kCALineJoinBevel: CAShapeLayerLineJoin { available in macos 10.6, ios 3.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  kCALineCapButt: CAShapeLayerLineCap { available in macos 10.6, ios 3.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  kCALineCapRound: CAShapeLayerLineCap { available in macos 10.6, ios 3.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  kCALineCapSquare: CAShapeLayerLineCap { available in macos 10.6, ios 3.0, watchos 2.0, tvos 9.0 }; cvar; external;
 {$endif}
 

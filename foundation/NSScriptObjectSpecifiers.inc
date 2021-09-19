@@ -62,7 +62,7 @@ type
     _descriptor: NSAppleEventDescriptor;
     _error: NSInteger;
   public
-    class function objectSpecifierWithDescriptor (descriptor: NSAppleEventDescriptor): NSScriptObjectSpecifier; message 'objectSpecifierWithDescriptor:'; { unavailable in ios, watchos, tvos }
+    class function objectSpecifierWithDescriptor (descriptor: NSAppleEventDescriptor): NSScriptObjectSpecifier; message 'objectSpecifierWithDescriptor:'; { unavailable in ios, watchos, tvos } { available in macos 10.5 }
     function initWithContainerSpecifier_key (container: NSScriptObjectSpecifier; property_: NSString): id; message 'initWithContainerSpecifier:key:';
     function initWithContainerClassDescription_containerSpecifier_key (classDesc: NSScriptClassDescription; container: NSScriptObjectSpecifier; property_: NSString): id; message 'initWithContainerClassDescription:containerSpecifier:key:'; { NS_DESIGNATED_INITIALIZER }
     function initWithCoder (inCoder: NSCoder): id; message 'initWithCoder:'; { NS_DESIGNATED_INITIALIZER }
@@ -85,7 +85,7 @@ type
     procedure setEvaluationErrorNumber(newValue: NSInteger); message 'setEvaluationErrorNumber:';
     function evaluationErrorNumber: NSInteger; message 'evaluationErrorNumber';
     function evaluationErrorSpecifier: NSScriptObjectSpecifier; message 'evaluationErrorSpecifier';
-    function descriptor: NSAppleEventDescriptor; message 'descriptor'; { unavailable in ios, watchos, tvos }
+    function descriptor: NSAppleEventDescriptor; message 'descriptor'; { unavailable in ios, watchos, tvos } { available in macos 10.5 }
 
     { Adopted protocols }
     procedure encodeWithCoder (coder: NSCoder); message 'encodeWithCoder:';
@@ -135,8 +135,8 @@ type
     _reserved0: pointer;
   public
     function initWithPosition_objectSpecifier (position: NSInsertionPosition; specifier: NSScriptObjectSpecifier): id; message 'initWithPosition:objectSpecifier:'; { NS_DESIGNATED_INITIALIZER }
-    function position: NSInsertionPosition; message 'position'; { unavailable in ios, watchos, tvos }
-    function objectSpecifier: NSScriptObjectSpecifier; message 'objectSpecifier'; { unavailable in ios, watchos, tvos }
+    function position: NSInsertionPosition; message 'position'; { unavailable in ios, watchos, tvos } { available in macos 10.5 }
+    function objectSpecifier: NSScriptObjectSpecifier; message 'objectSpecifier'; { unavailable in ios, watchos, tvos } { available in macos 10.5 }
     procedure setInsertionClassDescription (classDescription: NSScriptClassDescription); message 'setInsertionClassDescription:';
     procedure evaluate; message 'evaluate';
     function insertionContainer: id; message 'insertionContainer';

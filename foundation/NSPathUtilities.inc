@@ -53,23 +53,23 @@ const
   NSDocumentationDirectory = 8;
   NSDocumentDirectory = 9;
   NSCoreServiceDirectory = 10;
-  NSAutosavedInformationDirectory = 11 { available in macos , ios , watchos , tvos  };
+  NSAutosavedInformationDirectory = 11 { available in macos 10.6, ios 4.0, watchos 2.0, tvos 9.0 };
   NSDesktopDirectory = 12;
   NSCachesDirectory = 13;
   NSApplicationSupportDirectory = 14;
-  NSDownloadsDirectory = 15 { available in macos , ios , watchos , tvos  };
-  NSInputMethodsDirectory = 16 { available in macos , ios , watchos , tvos  };
-  NSMoviesDirectory = 17 { available in macos , ios , watchos , tvos  };
-  NSMusicDirectory = 18 { available in macos , ios , watchos , tvos  };
-  NSPicturesDirectory = 19 { available in macos , ios , watchos , tvos  };
-  NSPrinterDescriptionDirectory = 20 { available in macos , ios , watchos , tvos  };
-  NSSharedPublicDirectory = 21 { available in macos , ios , watchos , tvos  };
-  NSPreferencePanesDirectory = 22 { available in macos , ios , watchos , tvos  };
-  NSApplicationScriptsDirectory = 23 { unavailable in ios, watchos, tvos };
-  NSItemReplacementDirectory = 99 { available in macos , ios , watchos , tvos  };
+  NSDownloadsDirectory = 15 { available in macos 10.5, ios 2.0, watchos 2.0, tvos 9.0 };
+  NSInputMethodsDirectory = 16 { available in macos 10.6, ios 4.0, watchos 2.0, tvos 9.0 };
+  NSMoviesDirectory = 17 { available in macos 10.6, ios 4.0, watchos 2.0, tvos 9.0 };
+  NSMusicDirectory = 18 { available in macos 10.6, ios 4.0, watchos 2.0, tvos 9.0 };
+  NSPicturesDirectory = 19 { available in macos 10.6, ios 4.0, watchos 2.0, tvos 9.0 };
+  NSPrinterDescriptionDirectory = 20 { available in macos 10.6, ios 4.0, watchos 2.0, tvos 9.0 };
+  NSSharedPublicDirectory = 21 { available in macos 10.6, ios 4.0, watchos 2.0, tvos 9.0 };
+  NSPreferencePanesDirectory = 22 { available in macos 10.6, ios 4.0, watchos 2.0, tvos 9.0 };
+  NSApplicationScriptsDirectory = 23 { unavailable in ios, watchos, tvos } { available in macos 10.8 };
+  NSItemReplacementDirectory = 99 { available in macos 10.6, ios 4.0, watchos 2.0, tvos 9.0 };
   NSAllApplicationsDirectory = 100;
   NSAllLibrariesDirectory = 101;
-  NSTrashDirectory = 102 { unavailable in watchos, tvos };
+  NSTrashDirectory = 102 { unavailable in watchos, tvos } { available in macos 10.8, ios 11.0 };
 
 type
   NSSearchPathDomainMask = NSUInteger;

@@ -16,12 +16,12 @@ type
     function sortDescriptors: NSArray; message 'sortDescriptors';
     procedure setIncludeHiddenAssets(newValue: objcbool); message 'setIncludeHiddenAssets:';
     function includeHiddenAssets: objcbool; message 'includeHiddenAssets';
-    procedure setIncludeAllBurstAssets(newValue: objcbool); message 'setIncludeAllBurstAssets:'; { available in macos  }
-    function includeAllBurstAssets: objcbool; message 'includeAllBurstAssets'; { available in macos  }
-    procedure setIncludeAssetSourceTypes(newValue: PHAssetSourceType); message 'setIncludeAssetSourceTypes:'; { available in ios  }
-    function includeAssetSourceTypes: PHAssetSourceType; message 'includeAssetSourceTypes'; { available in ios  }
-    procedure setFetchLimit(newValue: NSUInteger); message 'setFetchLimit:'; { available in ios  }
-    function fetchLimit: NSUInteger; message 'fetchLimit'; { available in ios  }
+    procedure setIncludeAllBurstAssets(newValue: objcbool); message 'setIncludeAllBurstAssets:'; { available in macos 10.15 }
+    function includeAllBurstAssets: objcbool; message 'includeAllBurstAssets'; { available in macos 10.15 }
+    procedure setIncludeAssetSourceTypes(newValue: PHAssetSourceType); message 'setIncludeAssetSourceTypes:'; { available in ios 9 }
+    function includeAssetSourceTypes: PHAssetSourceType; message 'includeAssetSourceTypes'; { available in ios 9 }
+    procedure setFetchLimit(newValue: NSUInteger); message 'setFetchLimit:'; { available in ios 9 }
+    function fetchLimit: NSUInteger; message 'fetchLimit'; { available in ios 9 }
     procedure setWantsIncrementalChangeDetails(newValue: objcbool); message 'setWantsIncrementalChangeDetails:';
     function wantsIncrementalChangeDetails: objcbool; message 'wantsIncrementalChangeDetails';
 

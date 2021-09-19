@@ -11,10 +11,10 @@ type
   NSArrayController = objcclass external (NSObjectController)
   public
     procedure rearrangeObjects; message 'rearrangeObjects';
-    procedure setAutomaticallyRearrangesObjects(newValue: objcbool); message 'setAutomaticallyRearrangesObjects:'; { available in macos  }
-    function automaticallyRearrangesObjects: objcbool; message 'automaticallyRearrangesObjects'; { available in macos  }
-    function automaticRearrangementKeyPaths: NSArray; message 'automaticRearrangementKeyPaths'; { available in macos  }
-    procedure didChangeArrangementCriteria; message 'didChangeArrangementCriteria'; { available in macos  }
+    procedure setAutomaticallyRearrangesObjects(newValue: objcbool); message 'setAutomaticallyRearrangesObjects:'; { available in macos 10.5 }
+    function automaticallyRearrangesObjects: objcbool; message 'automaticallyRearrangesObjects'; { available in macos 10.5 }
+    function automaticRearrangementKeyPaths: NSArray; message 'automaticRearrangementKeyPaths'; { available in macos 10.5 }
+    procedure didChangeArrangementCriteria; message 'didChangeArrangementCriteria'; { available in macos 10.5 }
     procedure setSortDescriptors(newValue: NSArray); message 'setSortDescriptors:';
     function sortDescriptors: NSArray; message 'sortDescriptors';
     procedure setFilterPredicate(newValue: NSPredicate); message 'setFilterPredicate:';

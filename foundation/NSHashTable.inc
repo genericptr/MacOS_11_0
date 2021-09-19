@@ -9,11 +9,11 @@ type
 {$ifdef TYPES}
 const
   __FOUNDATION_NSHASHTABLE__ = 1;
-  NSHashTableStrongMemory = NSPointerFunctionsStrongMemory { available in macos , ios , watchos , tvos  };
+  NSHashTableStrongMemory = NSPointerFunctionsStrongMemory { available in macos 10.5, ios 6.0, watchos 2.0, tvos 9.0 };
   NSHashTableZeroingWeakMemory = NSPointerFunctionsZeroingWeakMemory { unavailable in ios, watchos, tvos };
-  NSHashTableCopyIn = NSPointerFunctionsCopyIn { available in macos , ios , watchos , tvos  };
-  NSHashTableObjectPointerPersonality = NSPointerFunctionsObjectPointerPersonality { available in macos , ios , watchos , tvos  };
-  NSHashTableWeakMemory = NSPointerFunctionsWeakMemory { available in macos , ios , watchos , tvos  };
+  NSHashTableCopyIn = NSPointerFunctionsCopyIn { available in macos 10.5, ios 6.0, watchos 2.0, tvos 9.0 };
+  NSHashTableObjectPointerPersonality = NSPointerFunctionsObjectPointerPersonality { available in macos 10.5, ios 6.0, watchos 2.0, tvos 9.0 };
+  NSHashTableWeakMemory = NSPointerFunctionsWeakMemory { available in macos 10.8, ios 6.0, watchos 2.0, tvos 9.0 };
 
 type
   NSHashTableOptions = NSUInteger;
@@ -29,7 +29,7 @@ type
     function initWithPointerFunctions_capacity (functions: NSPointerFunctions; initialCapacity: NSUInteger): id; message 'initWithPointerFunctions:capacity:'; { NS_DESIGNATED_INITIALIZER }
     class function hashTableWithOptions (options: NSPointerFunctionsOptions): NSHashTable; message 'hashTableWithOptions:';
     class function hashTableWithWeakObjects: id; message 'hashTableWithWeakObjects'; { unavailable in ios, watchos, tvos }
-    class function weakObjectsHashTable: NSHashTable; message 'weakObjectsHashTable'; { available in macos , ios , watchos , tvos  }
+    class function weakObjectsHashTable: NSHashTable; message 'weakObjectsHashTable'; { available in macos 10.8, ios 6.0, watchos 2.0, tvos 9.0 }
     function pointerFunctions: NSPointerFunctions; message 'pointerFunctions';
     function count: NSUInteger; message 'count';
     function member (object_: id): id; message 'member:';
@@ -106,7 +106,7 @@ function NSCreateHashTable(callBacks: NSHashTableCallBacks; capacity: NSUInteger
 
 {$ifdef EXTERNAL_SYMBOLS}
 var
-  NSIntegerHashCallBacks: NSHashTableCallBacks { unavailable in ios, watchos, tvos }; cvar; external;
+  NSIntegerHashCallBacks: NSHashTableCallBacks { unavailable in ios, watchos, tvos } { available in macos 10.5 }; cvar; external;
   NSNonOwnedPointerHashCallBacks: NSHashTableCallBacks; cvar; external;
   NSNonRetainedObjectHashCallBacks: NSHashTableCallBacks; cvar; external;
   NSObjectHashCallBacks: NSHashTableCallBacks; cvar; external;

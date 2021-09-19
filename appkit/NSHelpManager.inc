@@ -29,7 +29,7 @@ type
     function showContextHelpForObject_locationHint (object_: id; pt: NSPoint): objcbool; message 'showContextHelpForObject:locationHint:';
     procedure openHelpAnchor_inBook (anchor: NSHelpAnchorName; book: NSHelpBookName); message 'openHelpAnchor:inBook:';
     procedure findString_inBook (query: NSString; book: NSHelpBookName); message 'findString:inBook:';
-    function registerBooksInBundle (bundle: NSBundle): objcbool; message 'registerBooksInBundle:'; { available in macos  }
+    function registerBooksInBundle (bundle: NSBundle): objcbool; message 'registerBooksInBundle:'; { available in macos 10.6 }
   end;
 {$endif}
 

@@ -12,7 +12,7 @@ type
   MXMetricManager = objcclass external (NSObject)
   public
     function pastPayloads: NSArray; message 'pastPayloads';
-    function pastDiagnosticPayloads: NSArray; message 'pastDiagnosticPayloads'; { unavailable in macos, tvos, watchos }
+    function pastDiagnosticPayloads: NSArray; message 'pastDiagnosticPayloads'; { unavailable in macos, tvos, watchos } { available in ios 14.0 }
     class function sharedManager: MXMetricManager; message 'sharedManager';
     class function makeLogHandleWithCategory (category: NSString): os_log_t; message 'makeLogHandleWithCategory:';
     procedure addSubscriber (subscriber: MXMetricManagerSubscriberProtocol); message 'addSubscriber:';
@@ -27,7 +27,7 @@ type
   required
     procedure didReceiveMetricPayloads (payloads: NSArray); message 'didReceiveMetricPayloads:';
   optional
-    procedure didReceiveDiagnosticPayloads (payloads: NSArray); message 'didReceiveDiagnosticPayloads:'; { unavailable in macos, tvos, watchos }
+    procedure didReceiveDiagnosticPayloads (payloads: NSArray); message 'didReceiveDiagnosticPayloads:'; { unavailable in macos, tvos, watchos } { available in ios 14.0 }
   end;
 {$endif}
 

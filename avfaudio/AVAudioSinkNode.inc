@@ -8,7 +8,7 @@ type
 {$if defined(__OBJC2__)}
 {$ifdef TYPES}
 type
-  AVAudioSinkNodeReceiverBlock = reference to function (timestamp: AudioTimeStampPtr; frameCount: AVAudioFrameCount; inputData: AudioBufferListPtr): OSStatus; cblock; cdecl { available in macos , ios , tvos , watchos  };
+  AVAudioSinkNodeReceiverBlock = reference to function (timestamp: AudioTimeStampPtr; frameCount: AVAudioFrameCount; inputData: AudioBufferListPtr): OSStatus; cblock; cdecl { available in macos 10.15, ios 13.0, tvos 13.0, watchos 6.0 };
 {$endif}
 
 {$ifdef CLASSES}

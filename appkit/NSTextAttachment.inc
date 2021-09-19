@@ -13,15 +13,15 @@ type
 {$if  not defined(TARGET_OS_IPHONE)}
 {$ifdef TYPES}
 const
-  NSAttachmentCharacter = $FFFC { available in macos , ios , watchos , tvos  };
+  NSAttachmentCharacter = $FFFC { available in macos 10.0, ios 7.0, watchos 2.0, tvos 9.0 };
 {$endif}
 
 {$ifdef PROTOCOLS}
 
 type
   NSTextAttachmentContainerProtocol = objcprotocol external name 'NSTextAttachmentContainer' (NSObjectProtocol)
-    function imageForBounds_textContainer_characterIndex (imageBounds: NSRect; textContainer: NSTextContainer; charIndex: NSUInteger): NSImage; message 'imageForBounds:textContainer:characterIndex:'; { available in macos , ios , watchos , tvos  }
-    function attachmentBoundsForTextContainer_proposedLineFragment_glyphPosition_characterIndex (textContainer: NSTextContainer; lineFrag: NSRect; position: CGPoint; charIndex: NSUInteger): NSRect; message 'attachmentBoundsForTextContainer:proposedLineFragment:glyphPosition:characterIndex:'; { available in macos , ios , watchos , tvos  }
+    function imageForBounds_textContainer_characterIndex (imageBounds: NSRect; textContainer: NSTextContainer; charIndex: NSUInteger): NSImage; message 'imageForBounds:textContainer:characterIndex:'; { available in macos 10.11, ios 7.0, watchos 2.0, tvos 9.0 }
+    function attachmentBoundsForTextContainer_proposedLineFragment_glyphPosition_characterIndex (textContainer: NSTextContainer; lineFrag: NSRect; position: CGPoint; charIndex: NSUInteger): NSRect; message 'attachmentBoundsForTextContainer:proposedLineFragment:glyphPosition:characterIndex:'; { available in macos 10.11, ios 7.0, watchos 2.0, tvos 9.0 }
   end;
 {$endif}
 
@@ -30,25 +30,25 @@ type
 type
   NSTextAttachment = objcclass external (NSObject, NSTextAttachmentContainerProtocol, NSSecureCodingProtocol)
   public
-    function initWithData_ofType (contentData: NSData; uti: NSString): id; message 'initWithData:ofType:'; { available in macos , ios , watchos , tvos  }
+    function initWithData_ofType (contentData: NSData; uti: NSString): id; message 'initWithData:ofType:'; { available in macos 10.11, ios 7.0, watchos 2.0, tvos 9.0 }
     function initWithFileWrapper (fileWrapper: NSFileWrapper): id; message 'initWithFileWrapper:';
-    procedure setContents(newValue: NSData); message 'setContents:'; { available in macos , ios , watchos , tvos  }
-    function contents: NSData; message 'contents'; { available in macos , ios , watchos , tvos  }
-    procedure setFileType(newValue: NSString); message 'setFileType:'; { available in macos , ios , watchos , tvos  }
-    function fileType: NSString; message 'fileType'; { available in macos , ios , watchos , tvos  }
-    procedure setImage(newValue: NSImage); message 'setImage:'; { available in macos , ios , watchos , tvos  }
-    function image: NSImage; message 'image'; { available in macos , ios , watchos , tvos  }
-    procedure setBounds(newValue: NSRect); message 'setBounds:'; { available in macos , ios , watchos , tvos  }
-    function bounds: NSRect; message 'bounds'; { available in macos , ios , watchos , tvos  }
+    procedure setContents(newValue: NSData); message 'setContents:'; { available in macos 10.11, ios 7.0, watchos 2.0, tvos 9.0 }
+    function contents: NSData; message 'contents'; { available in macos 10.11, ios 7.0, watchos 2.0, tvos 9.0 }
+    procedure setFileType(newValue: NSString); message 'setFileType:'; { available in macos 10.11, ios 7.0, watchos 2.0, tvos 9.0 }
+    function fileType: NSString; message 'fileType'; { available in macos 10.11, ios 7.0, watchos 2.0, tvos 9.0 }
+    procedure setImage(newValue: NSImage); message 'setImage:'; { available in macos 10.11, ios 7.0, watchos 2.0, tvos 9.0 }
+    function image: NSImage; message 'image'; { available in macos 10.11, ios 7.0, watchos 2.0, tvos 9.0 }
+    procedure setBounds(newValue: NSRect); message 'setBounds:'; { available in macos 10.11, ios 7.0, watchos 2.0, tvos 9.0 }
+    function bounds: NSRect; message 'bounds'; { available in macos 10.11, ios 7.0, watchos 2.0, tvos 9.0 }
     procedure setFileWrapper(newValue: NSFileWrapper); message 'setFileWrapper:';
     function fileWrapper: NSFileWrapper; message 'fileWrapper';
-    procedure setAttachmentCell(newValue: NSTextAttachmentCellProtocol); message 'setAttachmentCell:'; { unavailable in ios, watchos, tvos }
-    function attachmentCell: NSTextAttachmentCellProtocol; message 'attachmentCell'; { unavailable in ios, watchos, tvos }
+    procedure setAttachmentCell(newValue: NSTextAttachmentCellProtocol); message 'setAttachmentCell:'; { unavailable in ios, watchos, tvos } { available in macos 10.0 }
+    function attachmentCell: NSTextAttachmentCellProtocol; message 'attachmentCell'; { unavailable in ios, watchos, tvos } { available in macos 10.0 }
 
     { Adopted protocols }
-    function attachmentBoundsForTextContainer_proposedLineFragment_glyphPosition_characterIndex (textContainer: NSTextContainer; lineFrag: NSRect; position: CGPoint; charIndex: NSUInteger): NSRect; message 'attachmentBoundsForTextContainer:proposedLineFragment:glyphPosition:characterIndex:'; { available in macos , ios , watchos , tvos  }
+    function attachmentBoundsForTextContainer_proposedLineFragment_glyphPosition_characterIndex (textContainer: NSTextContainer; lineFrag: NSRect; position: CGPoint; charIndex: NSUInteger): NSRect; message 'attachmentBoundsForTextContainer:proposedLineFragment:glyphPosition:characterIndex:'; { available in macos 10.11, ios 7.0, watchos 2.0, tvos 9.0 }
     procedure encodeWithCoder (coder: NSCoder); message 'encodeWithCoder:';
-    function imageForBounds_textContainer_characterIndex (imageBounds: NSRect; textContainer: NSTextContainer; charIndex: NSUInteger): NSImage; message 'imageForBounds:textContainer:characterIndex:'; { available in macos , ios , watchos , tvos  }
+    function imageForBounds_textContainer_characterIndex (imageBounds: NSRect; textContainer: NSTextContainer; charIndex: NSUInteger): NSImage; message 'imageForBounds:textContainer:characterIndex:'; { available in macos 10.11, ios 7.0, watchos 2.0, tvos 9.0 }
     function initWithCoder (coder: NSCoder): id; message 'initWithCoder:';
     class function supportsSecureCoding: objcbool; message 'supportsSecureCoding';
   end;
@@ -56,7 +56,7 @@ type
 
 type
   NSAttributedStringAttachmentConveniences = objccategory external (NSAttributedString)
-    class function attributedStringWithAttachment (attachment: NSTextAttachment): NSAttributedString; message 'attributedStringWithAttachment:'; { available in macos , ios , watchos , tvos  }
+    class function attributedStringWithAttachment (attachment: NSTextAttachment): NSAttributedString; message 'attributedStringWithAttachment:'; { available in macos 10.0, ios 7.0, watchos 2.0, tvos 9.0 }
   end;
 
 type

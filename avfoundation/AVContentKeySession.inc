@@ -34,15 +34,15 @@ type
 {$if defined(__NULL_MACRO__)}
 {$ifdef TYPES}
 type
-  AVContentKeySystem = NSString { available in macos , ios , tvos , watchos  };
-  AVContentKeySystemPtr = ^AVContentKeySystem { available in macos , ios , tvos , watchos  };
+  AVContentKeySystem = NSString { available in macos 10.12.4, ios 10.3, tvos 10.2, watchos 7.0 };
+  AVContentKeySystemPtr = ^AVContentKeySystem { available in macos 10.12.4, ios 10.3, tvos 10.2, watchos 7.0 };
 {$endif}
 
 {$ifdef EXTERNAL_SYMBOLS}
 var
-  AVContentKeySystemFairPlayStreaming: AVContentKeySystem { available in macos , ios , tvos , watchos  }; cvar; external;
-  AVContentKeySystemClearKey: AVContentKeySystem { available in macos , ios , tvos , watchos  }; cvar; external;
-  AVContentKeySystemAuthorizationToken: AVContentKeySystem { available in macos , ios , tvos , watchos  }; cvar; external;
+  AVContentKeySystemFairPlayStreaming: AVContentKeySystem { available in macos 10.12.4, ios 10.3, tvos 10.2, watchos 7.0 }; cvar; external;
+  AVContentKeySystemClearKey: AVContentKeySystem { available in macos 10.13, ios 11.0, tvos 11.0, watchos 7.0 }; cvar; external;
+  AVContentKeySystemAuthorizationToken: AVContentKeySystem { available in macos 10.15, ios 13.0, tvos 13.0, watchos 7.0 }; cvar; external;
 {$endif}
 
 {$ifdef CLASSES}
@@ -52,7 +52,7 @@ type
   private
     _session: AVContentKeySessionInternal;
   public
-    class function contentKeySessionWithKeySystem (keySystem: AVContentKeySystem): id; message 'contentKeySessionWithKeySystem:'; { available in macos , ios , tvos , watchos  }
+    class function contentKeySessionWithKeySystem (keySystem: AVContentKeySystem): id; message 'contentKeySessionWithKeySystem:'; { available in macos 10.13, ios 11.0, tvos 11.0, watchos 7.0 }
     class function contentKeySessionWithKeySystem_storageDirectoryAtURL (keySystem: AVContentKeySystem; storageURL: NSURL): id; message 'contentKeySessionWithKeySystem:storageDirectoryAtURL:';
     procedure setDelegate_queue (delegate: AVContentKeySessionDelegateProtocol; delegateQueue: dispatch_queue_t); message 'setDelegate:queue:';
     function delegate: AVContentKeySessionDelegateProtocol; message 'delegate';
@@ -63,9 +63,9 @@ type
     function contentProtectionSessionIdentifier: NSData; message 'contentProtectionSessionIdentifier';
     procedure processContentKeyRequestWithIdentifier_initializationData_options (identifier: id; initializationData: NSData; options: NSDictionary); message 'processContentKeyRequestWithIdentifier:initializationData:options:';
     procedure renewExpiringResponseDataForContentKeyRequest (contentKeyRequest: AVContentKeyRequest); message 'renewExpiringResponseDataForContentKeyRequest:';
-    procedure makeSecureTokenForExpirationDateOfPersistableContentKey_completionHandler (persistableContentKeyData: NSData; handler: AVContentKeySessionMakeSecureTokenForExpirationDateOfPersistableContentKeyCallback); message 'makeSecureTokenForExpirationDateOfPersistableContentKey:completionHandler:'; { unavailable in tvos }
-    procedure invalidatePersistableContentKey_options_completionHandler (persistableContentKeyData: NSData; options: NSDictionary; handler: AVContentKeySessionInvalidatePersistableContentKeyCallback); message 'invalidatePersistableContentKey:options:completionHandler:'; { unavailable in tvos }
-    procedure invalidateAllPersistableContentKeysForApp_options_completionHandler (appIdentifier: NSData; options: NSDictionary; handler: AVContentKeySessionInvalidateAllPersistableContentKeysForAppCallback); message 'invalidateAllPersistableContentKeysForApp:options:completionHandler:'; { unavailable in tvos }
+    procedure makeSecureTokenForExpirationDateOfPersistableContentKey_completionHandler (persistableContentKeyData: NSData; handler: AVContentKeySessionMakeSecureTokenForExpirationDateOfPersistableContentKeyCallback); message 'makeSecureTokenForExpirationDateOfPersistableContentKey:completionHandler:'; { unavailable in tvos } { available in macos 10.15, ios 11.0, watchos 7.0 }
+    procedure invalidatePersistableContentKey_options_completionHandler (persistableContentKeyData: NSData; options: NSDictionary; handler: AVContentKeySessionInvalidatePersistableContentKeyCallback); message 'invalidatePersistableContentKey:options:completionHandler:'; { unavailable in tvos } { available in macos 10.15, ios 12.2, watchos 7.0 }
+    procedure invalidateAllPersistableContentKeysForApp_options_completionHandler (appIdentifier: NSData; options: NSDictionary; handler: AVContentKeySessionInvalidateAllPersistableContentKeysForAppCallback); message 'invalidateAllPersistableContentKeysForApp:options:completionHandler:'; { unavailable in tvos } { available in macos 10.15, ios 12.2, watchos 7.0 }
   end;
 
 
@@ -85,15 +85,15 @@ type
 
 {$ifdef TYPES}
 type
-  AVContentKeyRequestRetryReason = NSString { available in macos , ios , tvos , watchos  };
-  AVContentKeyRequestRetryReasonPtr = ^AVContentKeyRequestRetryReason { available in macos , ios , tvos , watchos  };
+  AVContentKeyRequestRetryReason = NSString { available in macos 10.12.4, ios 10.3, tvos 10.2, watchos 7.0 };
+  AVContentKeyRequestRetryReasonPtr = ^AVContentKeyRequestRetryReason { available in macos 10.12.4, ios 10.3, tvos 10.2, watchos 7.0 };
 {$endif}
 
 {$ifdef EXTERNAL_SYMBOLS}
 var
-  AVContentKeyRequestRetryReasonTimedOut: AVContentKeyRequestRetryReason { available in macos , ios , tvos , watchos  }; cvar; external;
-  AVContentKeyRequestRetryReasonReceivedResponseWithExpiredLease: AVContentKeyRequestRetryReason { available in macos , ios , tvos , watchos  }; cvar; external;
-  AVContentKeyRequestRetryReasonReceivedObsoleteContentKey: AVContentKeyRequestRetryReason { available in macos , ios , tvos , watchos  }; cvar; external;
+  AVContentKeyRequestRetryReasonTimedOut: AVContentKeyRequestRetryReason { available in macos 10.12.4, ios 10.3, tvos 10.2, watchos 7.0 }; cvar; external;
+  AVContentKeyRequestRetryReasonReceivedResponseWithExpiredLease: AVContentKeyRequestRetryReason { available in macos 10.12.4, ios 10.3, tvos 10.2, watchos 7.0 }; cvar; external;
+  AVContentKeyRequestRetryReasonReceivedObsoleteContentKey: AVContentKeyRequestRetryReason { available in macos 10.12.4, ios 10.3, tvos 10.2, watchos 7.0 }; cvar; external;
 {$endif}
 
 {$ifdef PROTOCOLS}
@@ -107,17 +107,17 @@ type
   optional
     procedure contentKeySession_didProvidePersistableContentKeyRequest (session: AVContentKeySession; keyRequest: AVPersistableContentKeyRequest); message 'contentKeySession:didProvidePersistableContentKeyRequest:';
   optional
-    procedure contentKeySession_didUpdatePersistableContentKey_forContentKeyIdentifier (session: AVContentKeySession; persistableContentKey: NSData; keyIdentifier: id); message 'contentKeySession:didUpdatePersistableContentKey:forContentKeyIdentifier:'; { unavailable in tvos }
+    procedure contentKeySession_didUpdatePersistableContentKey_forContentKeyIdentifier (session: AVContentKeySession; persistableContentKey: NSData; keyIdentifier: id); message 'contentKeySession:didUpdatePersistableContentKey:forContentKeyIdentifier:'; { unavailable in tvos } { available in macos 10.15, ios 11.0, watchos 7.0 }
   optional
     procedure contentKeySession_contentKeyRequest_didFailWithError (session: AVContentKeySession; keyRequest: AVContentKeyRequest; err: NSError); message 'contentKeySession:contentKeyRequest:didFailWithError:';
   optional
     function contentKeySession_shouldRetryContentKeyRequest_reason (session: AVContentKeySession; keyRequest: AVContentKeyRequest; retryReason: AVContentKeyRequestRetryReason): objcbool; message 'contentKeySession:shouldRetryContentKeyRequest:reason:';
   optional
-    procedure contentKeySession_contentKeyRequestDidSucceed (session: AVContentKeySession; keyRequest: AVContentKeyRequest); message 'contentKeySession:contentKeyRequestDidSucceed:'; { available in macos , ios , tvos , watchos  }
+    procedure contentKeySession_contentKeyRequestDidSucceed (session: AVContentKeySession; keyRequest: AVContentKeyRequest); message 'contentKeySession:contentKeyRequestDidSucceed:'; { available in macos 10.14, ios 12.0, tvos 12.0, watchos 7.0 }
   optional
     procedure contentKeySessionContentProtectionSessionIdentifierDidChange (session: AVContentKeySession); message 'contentKeySessionContentProtectionSessionIdentifierDidChange:';
   optional
-    procedure contentKeySessionDidGenerateExpiredSessionReport (session: AVContentKeySession); message 'contentKeySessionDidGenerateExpiredSessionReport:'; { available in macos , ios , tvos , watchos  }
+    procedure contentKeySessionDidGenerateExpiredSessionReport (session: AVContentKeySession); message 'contentKeySessionDidGenerateExpiredSessionReport:'; { available in macos 10.14, ios 12.0, tvos 12.0, watchos 7.0 }
   end;
 {$endif}
 
@@ -146,15 +146,15 @@ type
     function error: NSError; message 'error';
     function identifier: id; message 'identifier';
     function initializationData: NSData; message 'initializationData';
-    function options: NSDictionary; message 'options'; { available in macos , ios , tvos , watchos  }
+    function options: NSDictionary; message 'options'; { available in macos 10.14.4, ios 12.2, tvos 12.2, watchos 7.0 }
     function canProvidePersistableContentKey: objcbool; message 'canProvidePersistableContentKey';
-    function contentKeySpecifier: AVContentKeySpecifier; message 'contentKeySpecifier'; { available in macos , ios , tvos , watchos  }
-    function contentKey: AVContentKey; message 'contentKey'; { available in macos , ios , tvos , watchos  }
+    function contentKeySpecifier: AVContentKeySpecifier; message 'contentKeySpecifier'; { available in macos 11.3, ios 14.5, tvos 14.5, watchos 7.4 }
+    function contentKey: AVContentKey; message 'contentKey'; { available in macos 11.3, ios 14.5, tvos 14.5, watchos 7.4 }
     procedure makeStreamingContentKeyRequestDataForApp_contentIdentifier_options_completionHandler (appIdentifier: NSData; contentIdentifier: NSData; options_: NSDictionary; handler: AVContentKeySessionMakeStreamingContentKeyRequestDataForAppCallback); message 'makeStreamingContentKeyRequestDataForApp:contentIdentifier:options:completionHandler:';
     procedure processContentKeyResponse (keyResponse: AVContentKeyResponse); message 'processContentKeyResponse:';
     procedure processContentKeyResponseError (error_: NSError); message 'processContentKeyResponseError:';
     procedure respondByRequestingPersistableContentKeyRequest; message 'respondByRequestingPersistableContentKeyRequest'; { unavailable in macos, tvos, watchos }
-    function respondByRequestingPersistableContentKeyRequestAndReturnError (outError: NSErrorPtr): objcbool; message 'respondByRequestingPersistableContentKeyRequestAndReturnError:'; { unavailable in tvos }
+    function respondByRequestingPersistableContentKeyRequestAndReturnError (outError: NSErrorPtr): objcbool; message 'respondByRequestingPersistableContentKeyRequestAndReturnError:'; { unavailable in tvos } { available in macos 10.15, ios 11.2, watchos 7.0 }
   end;
 
 type
@@ -176,14 +176,14 @@ type
     _keyResponse: AVContentKeyResponseInternal;
   public
     class function contentKeyResponseWithFairPlayStreamingKeyResponseData (keyResponseData: NSData): id; message 'contentKeyResponseWithFairPlayStreamingKeyResponseData:';
-    class function contentKeyResponseWithClearKeyData_initializationVector (keyData: NSData; initializationVector: NSData): id; message 'contentKeyResponseWithClearKeyData:initializationVector:'; { available in macos , ios , tvos , watchos  }
-    class function contentKeyResponseWithAuthorizationTokenData (authorizationTokenData: NSData): id; message 'contentKeyResponseWithAuthorizationTokenData:'; { available in macos , ios , tvos , watchos  }
+    class function contentKeyResponseWithClearKeyData_initializationVector (keyData: NSData; initializationVector: NSData): id; message 'contentKeyResponseWithClearKeyData:initializationVector:'; { available in macos 10.13, ios 11.0, tvos 11.0, watchos 7.0 }
+    class function contentKeyResponseWithAuthorizationTokenData (authorizationTokenData: NSData): id; message 'contentKeyResponseWithAuthorizationTokenData:'; { available in macos 10.15, ios 13.0, tvos 13.0, watchos 7.0 }
   end;
 {$endif}
 
 {$ifdef EXTERNAL_SYMBOLS}
 var
-  AVContentKeyRequestProtocolVersionsKey: NSString { available in macos , ios , tvos , watchos  }; cvar; external;
+  AVContentKeyRequestProtocolVersionsKey: NSString { available in macos 10.12.4, ios 10.3, tvos 10.2, watchos 7.0 }; cvar; external;
 {$endif}
 
 {$ifdef PROTOCOLS}
@@ -191,7 +191,7 @@ var
 type
   AVContentKeyRecipientProtocol = objcprotocol external name 'AVContentKeyRecipient'
   optional
-    procedure contentKeySession_didProvideContentKey (contentKeySession: AVContentKeySession; contentKey: AVContentKey); message 'contentKeySession:didProvideContentKey:'; { available in macos , ios , tvos , watchos  }
+    procedure contentKeySession_didProvideContentKey (contentKeySession: AVContentKeySession; contentKey: AVContentKey); message 'contentKeySession:didProvideContentKey:'; { available in macos 11.3, ios 14.5, tvos 14.5, watchos 7.4 }
   required
     function mayRequireContentKeysForMediaDataProcessing: objcbool; message 'mayRequireContentKeysForMediaDataProcessing';
   end;
@@ -217,7 +217,7 @@ type
 {$endif}
 
 {$ifdef FUNCTIONS}
-function AVSampleBufferAttachContentKey(sbuf: CMSampleBufferRef; contentKey: AVContentKey; outError: NSErrorPtr): objcbool; cdecl; external; { available in macos , ios , tvos , watchos  }
+function AVSampleBufferAttachContentKey(sbuf: CMSampleBufferRef; contentKey: AVContentKey; outError: NSErrorPtr): objcbool; cdecl; external; { available in macos 11.3, ios 14.5, tvos 14.5, watchos 7.4 }
 {$endif}
 
 {$else}

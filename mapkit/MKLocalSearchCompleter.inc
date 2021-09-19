@@ -35,10 +35,10 @@ type
     function region: MKCoordinateRegion; message 'region';
     procedure setFilterType(newValue: MKSearchCompletionFilterType); message 'setFilterType:'; { unavailable in watchos }
     function filterType: MKSearchCompletionFilterType; message 'filterType'; { unavailable in watchos }
-    procedure setResultTypes(newValue: MKLocalSearchCompleterResultType); message 'setResultTypes:'; { unavailable in watchos }
-    function resultTypes: MKLocalSearchCompleterResultType; message 'resultTypes'; { unavailable in watchos }
-    procedure setPointOfInterestFilter(newValue: MKPointOfInterestFilter); message 'setPointOfInterestFilter:'; { unavailable in watchos }
-    function pointOfInterestFilter: MKPointOfInterestFilter; message 'pointOfInterestFilter'; { unavailable in watchos }
+    procedure setResultTypes(newValue: MKLocalSearchCompleterResultType); message 'setResultTypes:'; { unavailable in watchos } { available in ios 13.0, macos 10.15, tvos 13.0 }
+    function resultTypes: MKLocalSearchCompleterResultType; message 'resultTypes'; { unavailable in watchos } { available in ios 13.0, macos 10.15, tvos 13.0 }
+    procedure setPointOfInterestFilter(newValue: MKPointOfInterestFilter); message 'setPointOfInterestFilter:'; { unavailable in watchos } { available in ios 13.0, macos 10.15, tvos 13.0 }
+    function pointOfInterestFilter: MKPointOfInterestFilter; message 'pointOfInterestFilter'; { unavailable in watchos } { available in ios 13.0, macos 10.15, tvos 13.0 }
     procedure setDelegate(newValue: id); message 'setDelegate:';
     function delegate: id; message 'delegate';
     function results: NSArray; message 'results';
@@ -55,7 +55,7 @@ type
 
 type
   MKLocalSearchRequestCategory = objccategory external (MKLocalSearchRequest)
-    function initWithCompletion (completion: MKLocalSearchCompletion): id; message 'initWithCompletion:'; { unavailable in watchos }
+    function initWithCompletion (completion: MKLocalSearchCompletion): id; message 'initWithCompletion:'; { unavailable in watchos } { available in 10_11_4, 9_3 }
   end;
 {$endif}
 

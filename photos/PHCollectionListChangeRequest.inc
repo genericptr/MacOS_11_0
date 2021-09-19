@@ -15,7 +15,7 @@ type
     class procedure deleteCollectionLists (collectionLists: NSFastEnumerationProtocol); message 'deleteCollectionLists:';
     class function changeRequestForCollectionList (collectionList: PHCollectionList): id; message 'changeRequestForCollectionList:';
     class function changeRequestForCollectionList_childCollections (collectionList: PHCollectionList; childCollections: PHFetchResult): id; message 'changeRequestForCollectionList:childCollections:';
-    class function changeRequestForTopLevelCollectionListUserCollections (childCollections: PHFetchResult): id; message 'changeRequestForTopLevelCollectionListUserCollections:'; { available in macos , ios , tvos  }
+    class function changeRequestForTopLevelCollectionListUserCollections (childCollections: PHFetchResult): id; message 'changeRequestForTopLevelCollectionListUserCollections:'; { available in macos 11, ios 14.2, tvos 14 }
     procedure setTitle(newValue: NSString); message 'setTitle:';
     function title: NSString; message 'title';
     procedure addChildCollections (collections: NSFastEnumerationProtocol); message 'addChildCollections:';

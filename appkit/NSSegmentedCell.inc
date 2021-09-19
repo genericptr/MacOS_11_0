@@ -23,8 +23,8 @@ type
     function widthForSegment (segment: NSInteger): CGFloat; message 'widthForSegment:';
     procedure setImage_forSegment (image_: NSImage; segment: NSInteger); message 'setImage:forSegment:';
     function imageForSegment (segment: NSInteger): NSImage; message 'imageForSegment:';
-    procedure setImageScaling_forSegment (scaling: NSImageScaling; segment: NSInteger); message 'setImageScaling:forSegment:'; { available in macos  }
-    function imageScalingForSegment (segment: NSInteger): NSImageScaling; message 'imageScalingForSegment:'; { available in macos  }
+    procedure setImageScaling_forSegment (scaling: NSImageScaling; segment: NSInteger); message 'setImageScaling:forSegment:'; { available in macos 10.5 }
+    function imageScalingForSegment (segment: NSInteger): NSImageScaling; message 'imageScalingForSegment:'; { available in macos 10.5 }
     procedure setLabel_forSegment (label_: NSString; segment: NSInteger); message 'setLabel:forSegment:';
     function labelForSegment (segment: NSInteger): NSString; message 'labelForSegment:';
     procedure setSelected_forSegment (selected: objcbool; segment: NSInteger); message 'setSelected:forSegment:';
@@ -37,15 +37,15 @@ type
     function toolTipForSegment (segment: NSInteger): NSString; message 'toolTipForSegment:';
     procedure setTag_forSegment (tag_: NSInteger; segment: NSInteger); message 'setTag:forSegment:';
     function tagForSegment (segment: NSInteger): NSInteger; message 'tagForSegment:';
-    procedure setSegmentStyle(newValue: NSSegmentStyle); message 'setSegmentStyle:'; { available in macos  }
-    function segmentStyle: NSSegmentStyle; message 'segmentStyle'; { available in macos  }
+    procedure setSegmentStyle(newValue: NSSegmentStyle); message 'setSegmentStyle:'; { available in macos 10.5 }
+    function segmentStyle: NSSegmentStyle; message 'segmentStyle'; { available in macos 10.5 }
     procedure drawSegment_inFrame_withView (segment: NSInteger; frame: NSRect; controlView_: NSView); message 'drawSegment:inFrame:withView:';
   end;
 
 
 type
   NSSegmentBackgroundStyle = objccategory external (NSSegmentedCell)
-    function interiorBackgroundStyleForSegment (segment: NSInteger): NSBackgroundStyle; message 'interiorBackgroundStyleForSegment:'; { available in macos  }
+    function interiorBackgroundStyleForSegment (segment: NSInteger): NSBackgroundStyle; message 'interiorBackgroundStyleForSegment:'; { available in macos 10.5 }
   end;
 {$endif}
 

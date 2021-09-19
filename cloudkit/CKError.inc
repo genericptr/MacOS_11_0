@@ -1,12 +1,12 @@
 { Parsed from CloudKit.framework CKError.h }
 {$ifdef EXTERNAL_SYMBOLS}
 var
-  CKErrorDomain: NSString { available in macos , ios , watchos  }; cvar; external;
-  CKPartialErrorsByItemIDKey: NSString { available in macos , ios , watchos  }; cvar; external;
-  CKRecordChangedErrorAncestorRecordKey: NSString { available in macos , ios , watchos  }; cvar; external;
-  CKRecordChangedErrorServerRecordKey: NSString { available in macos , ios , watchos  }; cvar; external;
-  CKRecordChangedErrorClientRecordKey: NSString { available in macos , ios , watchos  }; cvar; external;
-  CKErrorRetryAfterKey: NSString { available in macos , ios , watchos  }; cvar; external;
+  CKErrorDomain: NSString { available in macos 10.10, ios 8.0, watchos 3.0 }; cvar; external;
+  CKPartialErrorsByItemIDKey: NSString { available in macos 10.10, ios 8.0, watchos 3.0 }; cvar; external;
+  CKRecordChangedErrorAncestorRecordKey: NSString { available in macos 10.10, ios 8.0, watchos 3.0 }; cvar; external;
+  CKRecordChangedErrorServerRecordKey: NSString { available in macos 10.10, ios 8.0, watchos 3.0 }; cvar; external;
+  CKRecordChangedErrorClientRecordKey: NSString { available in macos 10.10, ios 8.0, watchos 3.0 }; cvar; external;
+  CKErrorRetryAfterKey: NSString { available in macos 10.10, ios 8.0, watchos 3.0 }; cvar; external;
 {$endif}
 
 {$ifdef TYPES}
@@ -43,12 +43,12 @@ const
   CKErrorZoneNotFound = 26;
   CKErrorLimitExceeded = 27;
   CKErrorUserDeletedZone = 28;
-  CKErrorTooManyParticipants = 29 { available in macos , ios , tvos  };
-  CKErrorAlreadyShared = 30 { available in macos , ios , tvos  };
-  CKErrorReferenceViolation = 31 { available in macos , ios , tvos  };
-  CKErrorManagedAccountRestricted = 32 { available in macos , ios , tvos  };
-  CKErrorParticipantMayNeedVerification = 33 { available in macos , ios , tvos  };
-  CKErrorServerResponseLost = 34 { available in macos , ios , tvos , watchos  };
-  CKErrorAssetNotAvailable = 35 { available in macos , ios , tvos , watchos  };
+  CKErrorTooManyParticipants = 29 { available in macos 10.12, ios 10.0, tvos 10.0 };
+  CKErrorAlreadyShared = 30 { available in macos 10.12, ios 10.0, tvos 10.0 };
+  CKErrorReferenceViolation = 31 { available in macos 10.12, ios 10.0, tvos 10.0 };
+  CKErrorManagedAccountRestricted = 32 { available in macos 10.12, ios 10.0, tvos 10.0 };
+  CKErrorParticipantMayNeedVerification = 33 { available in macos 10.12, ios 10.0, tvos 10.0 };
+  CKErrorServerResponseLost = 34 { available in macos 10.13, ios 11.0, tvos 11.0, watchos 4.0 };
+  CKErrorAssetNotAvailable = 35 { available in macos 10.13, ios 11.3, tvos 11.3, watchos 4.3 };
 {$endif}
 

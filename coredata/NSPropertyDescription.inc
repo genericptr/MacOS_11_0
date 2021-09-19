@@ -25,15 +25,15 @@ type
     function userInfo: NSDictionary; message 'userInfo';
     procedure setIndexed(newValue: objcbool); message 'setIndexed:'; deprecated 'in  "Use NSEntityDescription.indexes instead", ,,,';
     function isIndexed: objcbool; message 'isIndexed'; deprecated 'in  "Use NSEntityDescription.indexes instead", ,,,';
-    function versionHash: NSData; message 'versionHash'; { available in macosx ,ios  }
-    procedure setVersionHashModifier(newValue: NSString); message 'setVersionHashModifier:'; { available in macosx ,ios  }
-    function versionHashModifier: NSString; message 'versionHashModifier'; { available in macosx ,ios  }
-    procedure setIndexedBySpotlight(newValue: objcbool); message 'setIndexedBySpotlight:'; { available in macosx ,ios  }
-    function isIndexedBySpotlight: objcbool; message 'isIndexedBySpotlight'; { available in macosx ,ios  }
+    function versionHash: NSData; message 'versionHash'; { available in macosx 10.5,ios 3.0 }
+    procedure setVersionHashModifier(newValue: NSString); message 'setVersionHashModifier:'; { available in macosx 10.5,ios 3.0 }
+    function versionHashModifier: NSString; message 'versionHashModifier'; { available in macosx 10.5,ios 3.0 }
+    procedure setIndexedBySpotlight(newValue: objcbool); message 'setIndexedBySpotlight:'; { available in macosx 10.6,ios 3.0 }
+    function isIndexedBySpotlight: objcbool; message 'isIndexedBySpotlight'; { available in macosx 10.6,ios 3.0 }
     procedure setStoredInExternalRecord(newValue: objcbool); message 'setStoredInExternalRecord:'; deprecated 'Spotlight integration is deprecated. Use CoreSpotlight integration instead.';
     function isStoredInExternalRecord: objcbool; message 'isStoredInExternalRecord'; deprecated 'Spotlight integration is deprecated. Use CoreSpotlight integration instead.';
-    procedure setRenamingIdentifier(newValue: NSString); message 'setRenamingIdentifier:'; { available in macosx ,ios  }
-    function renamingIdentifier: NSString; message 'renamingIdentifier'; { available in macosx ,ios  }
+    procedure setRenamingIdentifier(newValue: NSString); message 'setRenamingIdentifier:'; { available in macosx 10.6,ios 3.0 }
+    function renamingIdentifier: NSString; message 'renamingIdentifier'; { available in macosx 10.6,ios 3.0 }
 
     { Adopted protocols }
     function copyWithZone (zone: NSZonePtr): id; message 'copyWithZone:';

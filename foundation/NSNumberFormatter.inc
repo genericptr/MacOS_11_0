@@ -15,10 +15,10 @@ const
   NSNumberFormatterPercentStyle = kCFNumberFormatterPercentStyle;
   NSNumberFormatterScientificStyle = kCFNumberFormatterScientificStyle;
   NSNumberFormatterSpellOutStyle = kCFNumberFormatterSpellOutStyle;
-  //NSNumberFormatterOrdinalStyle = kCFNumberFormatterOrdinalStyle { available in macos , ios , watchos , tvos  };
-  //NSNumberFormatterCurrencyISOCodeStyle = kCFNumberFormatterCurrencyISOCodeStyle { available in macos , ios , watchos , tvos  };
-  //NSNumberFormatterCurrencyPluralStyle = kCFNumberFormatterCurrencyPluralStyle { available in macos , ios , watchos , tvos  };
-  //NSNumberFormatterCurrencyAccountingStyle = kCFNumberFormatterCurrencyAccountingStyle { available in macos , ios , watchos , tvos  };
+  //NSNumberFormatterOrdinalStyle = kCFNumberFormatterOrdinalStyle { available in macos 10.11, ios 9.0, watchos 2.0, tvos 9.0 };
+  //NSNumberFormatterCurrencyISOCodeStyle = kCFNumberFormatterCurrencyISOCodeStyle { available in macos 10.11, ios 9.0, watchos 2.0, tvos 9.0 };
+  //NSNumberFormatterCurrencyPluralStyle = kCFNumberFormatterCurrencyPluralStyle { available in macos 10.11, ios 9.0, watchos 2.0, tvos 9.0 };
+  //NSNumberFormatterCurrencyAccountingStyle = kCFNumberFormatterCurrencyAccountingStyle { available in macos 10.11, ios 9.0, watchos 2.0, tvos 9.0 };
 
 type
   NSNumberFormatterPadPosition = NSUInteger;
@@ -79,12 +79,12 @@ type
     _cacheGeneration: NSInteger;
     _reserved:array[0..7] of pointer;
   public
-    procedure setFormattingContext(newValue: NSFormattingContext); message 'setFormattingContext:'; { available in macos , ios , watchos , tvos  }
-    function formattingContext: NSFormattingContext; message 'formattingContext'; { available in macos , ios , watchos , tvos  }
+    procedure setFormattingContext(newValue: NSFormattingContext); message 'setFormattingContext:'; { available in macos 10.10, ios 8.0, watchos 2.0, tvos 9.0 }
+    function formattingContext: NSFormattingContext; message 'formattingContext'; { available in macos 10.10, ios 8.0, watchos 2.0, tvos 9.0 }
     function getObjectValue_forString_range_error (obj: idPtr; string_: NSString; rangep: NSRangePtr; error: NSErrorPtr): objcbool; message 'getObjectValue:forString:range:error:';
     function stringFromNumber (number: NSNumber): NSString; message 'stringFromNumber:';
     function numberFromString (string_: NSString): NSNumber; message 'numberFromString:';
-    class function localizedStringFromNumber_numberStyle (num: NSNumber; nstyle: NSNumberFormatterStyle): NSString; message 'localizedStringFromNumber:numberStyle:'; { available in macos , ios , watchos , tvos  }
+    class function localizedStringFromNumber_numberStyle (num: NSNumber; nstyle: NSNumberFormatterStyle): NSString; message 'localizedStringFromNumber:numberStyle:'; { available in macos 10.6, ios 4.0, watchos 2.0, tvos 9.0 }
     class function defaultFormatterBehavior: NSNumberFormatterBehavior; message 'defaultFormatterBehavior';
     class procedure setDefaultFormatterBehavior (behavior: NSNumberFormatterBehavior); message 'setDefaultFormatterBehavior:';
     procedure setNumberStyle(newValue: NSNumberFormatterStyle); message 'setNumberStyle:';
@@ -187,18 +187,18 @@ type
     function minimum: NSNumber; message 'minimum';
     procedure setMaximum(newValue: NSNumber); message 'setMaximum:';
     function maximum: NSNumber; message 'maximum';
-    procedure setCurrencyGroupingSeparator(newValue: NSString); message 'setCurrencyGroupingSeparator:'; { available in macos , ios , watchos , tvos  }
-    function currencyGroupingSeparator: NSString; message 'currencyGroupingSeparator'; { available in macos , ios , watchos , tvos  }
-    procedure setLenient(newValue: objcbool); message 'setLenient:'; { available in macos , ios , watchos , tvos  }
-    function isLenient: objcbool; message 'isLenient'; { available in macos , ios , watchos , tvos  }
-    procedure setUsesSignificantDigits(newValue: objcbool); message 'setUsesSignificantDigits:'; { available in macos , ios , watchos , tvos  }
-    function usesSignificantDigits: objcbool; message 'usesSignificantDigits'; { available in macos , ios , watchos , tvos  }
-    procedure setMinimumSignificantDigits(newValue: NSUInteger); message 'setMinimumSignificantDigits:'; { available in macos , ios , watchos , tvos  }
-    function minimumSignificantDigits: NSUInteger; message 'minimumSignificantDigits'; { available in macos , ios , watchos , tvos  }
-    procedure setMaximumSignificantDigits(newValue: NSUInteger); message 'setMaximumSignificantDigits:'; { available in macos , ios , watchos , tvos  }
-    function maximumSignificantDigits: NSUInteger; message 'maximumSignificantDigits'; { available in macos , ios , watchos , tvos  }
-    procedure setPartialStringValidationEnabled(newValue: objcbool); message 'setPartialStringValidationEnabled:'; { available in macos , ios , watchos , tvos  }
-    function isPartialStringValidationEnabled: objcbool; message 'isPartialStringValidationEnabled'; { available in macos , ios , watchos , tvos  }
+    procedure setCurrencyGroupingSeparator(newValue: NSString); message 'setCurrencyGroupingSeparator:'; { available in macos 10.5, ios 2.0, watchos 2.0, tvos 9.0 }
+    function currencyGroupingSeparator: NSString; message 'currencyGroupingSeparator'; { available in macos 10.5, ios 2.0, watchos 2.0, tvos 9.0 }
+    procedure setLenient(newValue: objcbool); message 'setLenient:'; { available in macos 10.5, ios 2.0, watchos 2.0, tvos 9.0 }
+    function isLenient: objcbool; message 'isLenient'; { available in macos 10.5, ios 2.0, watchos 2.0, tvos 9.0 }
+    procedure setUsesSignificantDigits(newValue: objcbool); message 'setUsesSignificantDigits:'; { available in macos 10.5, ios 2.0, watchos 2.0, tvos 9.0 }
+    function usesSignificantDigits: objcbool; message 'usesSignificantDigits'; { available in macos 10.5, ios 2.0, watchos 2.0, tvos 9.0 }
+    procedure setMinimumSignificantDigits(newValue: NSUInteger); message 'setMinimumSignificantDigits:'; { available in macos 10.5, ios 2.0, watchos 2.0, tvos 9.0 }
+    function minimumSignificantDigits: NSUInteger; message 'minimumSignificantDigits'; { available in macos 10.5, ios 2.0, watchos 2.0, tvos 9.0 }
+    procedure setMaximumSignificantDigits(newValue: NSUInteger); message 'setMaximumSignificantDigits:'; { available in macos 10.5, ios 2.0, watchos 2.0, tvos 9.0 }
+    function maximumSignificantDigits: NSUInteger; message 'maximumSignificantDigits'; { available in macos 10.5, ios 2.0, watchos 2.0, tvos 9.0 }
+    procedure setPartialStringValidationEnabled(newValue: objcbool); message 'setPartialStringValidationEnabled:'; { available in macos 10.5, ios 2.0, watchos 2.0, tvos 9.0 }
+    function isPartialStringValidationEnabled: objcbool; message 'isPartialStringValidationEnabled'; { available in macos 10.5, ios 2.0, watchos 2.0, tvos 9.0 }
   end;
 {$endif}
 

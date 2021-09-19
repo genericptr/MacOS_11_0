@@ -11,7 +11,7 @@ type
 type
   NSValue = objcclass external (NSObject, NSCopyingProtocol, NSSecureCodingProtocol)
   public
-    procedure getValue_size (value: pointer; size: NSUInteger); message 'getValue:size:'; { available in macos , ios , watchos , tvos  }
+    procedure getValue_size (value: pointer; size: NSUInteger); message 'getValue:size:'; { available in macos 10.13, ios 11.0, watchos 4.0, tvos 11.0 }
     function objCType: PChar; message 'objCType';
     function initWithBytes_objCType (value: pointer; type_: PChar): id; message 'initWithBytes:objCType:'; { NS_DESIGNATED_INITIALIZER }
     function initWithCoder (coder: NSCoder): id; message 'initWithCoder:'; { NS_DESIGNATED_INITIALIZER }
@@ -56,8 +56,8 @@ type
     function initWithFloat (value: single): NSNumber; message 'initWithFloat:'; { NS_DESIGNATED_INITIALIZER }
     function initWithDouble (value: double): NSNumber; message 'initWithDouble:'; { NS_DESIGNATED_INITIALIZER }
     function initWithBool (value: objcbool): NSNumber; message 'initWithBool:'; { NS_DESIGNATED_INITIALIZER }
-    function initWithInteger (value: NSInteger): NSNumber; message 'initWithInteger:'; { available in macos , ios , watchos , tvos  }
-    function initWithUnsignedInteger (value: NSUInteger): NSNumber; message 'initWithUnsignedInteger:'; { available in macos , ios , watchos , tvos  }
+    function initWithInteger (value: NSInteger): NSNumber; message 'initWithInteger:'; { available in macos 10.5, ios 2.0, watchos 2.0, tvos 9.0 }
+    function initWithUnsignedInteger (value: NSUInteger): NSNumber; message 'initWithUnsignedInteger:'; { available in macos 10.5, ios 2.0, watchos 2.0, tvos 9.0 }
     function charValue: char; message 'charValue';
     function unsignedCharValue: char; message 'unsignedCharValue';
     function shortValue: cshort; message 'shortValue';
@@ -71,8 +71,8 @@ type
     function floatValue: single; message 'floatValue';
     function doubleValue: double; message 'doubleValue';
     function boolValue: objcbool; message 'boolValue';
-    function integerValue: NSInteger; message 'integerValue'; { available in macos , ios , watchos , tvos  }
-    function unsignedIntegerValue: NSUInteger; message 'unsignedIntegerValue'; { available in macos , ios , watchos , tvos  }
+    function integerValue: NSInteger; message 'integerValue'; { available in macos 10.5, ios 2.0, watchos 2.0, tvos 9.0 }
+    function unsignedIntegerValue: NSUInteger; message 'unsignedIntegerValue'; { available in macos 10.5, ios 2.0, watchos 2.0, tvos 9.0 }
     function stringValue: NSString; message 'stringValue';
     function compare (otherNumber: NSNumber): NSComparisonResult; message 'compare:';
     function isEqualToNumber (number: NSNumber): objcbool; message 'isEqualToNumber:';
@@ -95,8 +95,8 @@ type
     class function numberWithFloat (value: single): NSNumber; message 'numberWithFloat:';
     class function numberWithDouble (value: double): NSNumber; message 'numberWithDouble:';
     class function numberWithBool (value: objcbool): NSNumber; message 'numberWithBool:';
-    class function numberWithInteger (value: NSInteger): NSNumber; message 'numberWithInteger:'; { available in macos , ios , watchos , tvos  }
-    class function numberWithUnsignedInteger (value: NSUInteger): NSNumber; message 'numberWithUnsignedInteger:'; { available in macos , ios , watchos , tvos  }
+    class function numberWithInteger (value: NSInteger): NSNumber; message 'numberWithInteger:'; { available in macos 10.5, ios 2.0, watchos 2.0, tvos 9.0 }
+    class function numberWithUnsignedInteger (value: NSUInteger): NSNumber; message 'numberWithUnsignedInteger:'; { available in macos 10.5, ios 2.0, watchos 2.0, tvos 9.0 }
   end;
 
 type

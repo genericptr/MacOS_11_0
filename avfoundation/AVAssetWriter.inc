@@ -36,7 +36,7 @@ type
   public
     class function assetWriterWithURL_fileType_error (outputURL: NSURL; outputFileType: AVFileType; outError: NSErrorPtr): id; message 'assetWriterWithURL:fileType:error:';
     function initWithURL_fileType_error (outputURL: NSURL; outputFileType: AVFileType; outError: NSErrorPtr): id; message 'initWithURL:fileType:error:'; { NS_DESIGNATED_INITIALIZER }
-    function initWithContentType (outputContentType: UTTypePtr): id; message 'initWithContentType:'; { unavailable in watchos }
+    function initWithContentType (outputContentType: UTTypePtr): id; message 'initWithContentType:'; { unavailable in watchos } { available in macos 11.0, ios 14.0, tvos 14.0 }
     function outputURL: NSURL; message 'outputURL';
     function outputFileType: AVFileType; message 'outputFileType';
     function availableMediaTypes: NSArray; message 'availableMediaTypes';
@@ -46,8 +46,8 @@ type
     function metadata: NSArray; message 'metadata';
     procedure setShouldOptimizeForNetworkUse(newValue: objcbool); message 'setShouldOptimizeForNetworkUse:';
     function shouldOptimizeForNetworkUse: objcbool; message 'shouldOptimizeForNetworkUse';
-    procedure setDirectoryForTemporaryFiles(newValue: NSURL); message 'setDirectoryForTemporaryFiles:'; { unavailable in watchos }
-    function directoryForTemporaryFiles: NSURL; message 'directoryForTemporaryFiles'; { unavailable in watchos }
+    procedure setDirectoryForTemporaryFiles(newValue: NSURL); message 'setDirectoryForTemporaryFiles:'; { unavailable in watchos } { available in macos 10.10, ios 8.0, tvos 9.0 }
+    function directoryForTemporaryFiles: NSURL; message 'directoryForTemporaryFiles'; { unavailable in watchos } { available in macos 10.10, ios 8.0, tvos 9.0 }
     function inputs: NSArray; message 'inputs';
     function canApplyOutputSettings_forMediaType (outputSettings: NSDictionary; mediaType: AVMediaType): objcbool; message 'canApplyOutputSettings:forMediaType:';
     function canAddInput (input: AVAssetWriterInput): objcbool; message 'canAddInput:';
@@ -57,7 +57,7 @@ type
     procedure endSessionAtSourceTime (endTime: CMTime); message 'endSessionAtSourceTime:';
     procedure cancelWriting; message 'cancelWriting';
     function finishWriting: objcbool; message 'finishWriting'; { unavailable in watchos }
-    procedure finishWritingWithCompletionHandler (handler: AVAssetWriterFinishWritingWithCompletionHandlerCallback); message 'finishWritingWithCompletionHandler:'; { unavailable in watchos }
+    procedure finishWritingWithCompletionHandler (handler: AVAssetWriterFinishWritingWithCompletionHandlerCallback); message 'finishWritingWithCompletionHandler:'; { unavailable in watchos } { available in macos 10.9, ios 6.0, tvos 9.0 }
   end;
 
 
@@ -65,21 +65,21 @@ type
   AVAssetWriterFileTypeSpecificProperties = objccategory external (AVAssetWriter)
     procedure setMovieFragmentInterval(newValue: CMTime); message 'setMovieFragmentInterval:';
     function movieFragmentInterval: CMTime; message 'movieFragmentInterval';
-    procedure setInitialMovieFragmentSequenceNumber(newValue: NSInteger); message 'setInitialMovieFragmentSequenceNumber:'; { unavailable in watchos }
-    function initialMovieFragmentSequenceNumber: NSInteger; message 'initialMovieFragmentSequenceNumber'; { unavailable in watchos }
-    procedure setProducesCombinableFragments(newValue: objcbool); message 'setProducesCombinableFragments:'; { unavailable in watchos }
-    function producesCombinableFragments: objcbool; message 'producesCombinableFragments'; { unavailable in watchos }
+    procedure setInitialMovieFragmentSequenceNumber(newValue: NSInteger); message 'setInitialMovieFragmentSequenceNumber:'; { unavailable in watchos } { available in macos 11.0, ios 14.0, tvos 14.0 }
+    function initialMovieFragmentSequenceNumber: NSInteger; message 'initialMovieFragmentSequenceNumber'; { unavailable in watchos } { available in macos 11.0, ios 14.0, tvos 14.0 }
+    procedure setProducesCombinableFragments(newValue: objcbool); message 'setProducesCombinableFragments:'; { unavailable in watchos } { available in macos 11.0, ios 14.0, tvos 14.0 }
+    function producesCombinableFragments: objcbool; message 'producesCombinableFragments'; { unavailable in watchos } { available in macos 11.0, ios 14.0, tvos 14.0 }
     procedure setOverallDurationHint(newValue: CMTime); message 'setOverallDurationHint:';
     function overallDurationHint: CMTime; message 'overallDurationHint';
-    procedure setMovieTimeScale(newValue: CMTimeScale); message 'setMovieTimeScale:'; { unavailable in watchos }
-    function movieTimeScale: CMTimeScale; message 'movieTimeScale'; { unavailable in watchos }
+    procedure setMovieTimeScale(newValue: CMTimeScale); message 'setMovieTimeScale:'; { unavailable in watchos } { available in macos 10.7, ios 4.3, tvos 9.0 }
+    function movieTimeScale: CMTimeScale; message 'movieTimeScale'; { unavailable in watchos } { available in macos 10.7, ios 4.3, tvos 9.0 }
   end;
 
 type
   AVAssetWriterInputGroups = objccategory external (AVAssetWriter)
-    function canAddInputGroup (inputGroup: AVAssetWriterInputGroup): objcbool; message 'canAddInputGroup:'; { unavailable in watchos }
-    procedure addInputGroup (inputGroup: AVAssetWriterInputGroup); message 'addInputGroup:'; { unavailable in watchos }
-    function inputGroups: NSArray; message 'inputGroups'; { unavailable in watchos }
+    function canAddInputGroup (inputGroup: AVAssetWriterInputGroup): objcbool; message 'canAddInputGroup:'; { unavailable in watchos } { available in macos 10.9, ios 7.0, tvos 9.0 }
+    procedure addInputGroup (inputGroup: AVAssetWriterInputGroup); message 'addInputGroup:'; { unavailable in watchos } { available in macos 10.9, ios 7.0, tvos 9.0 }
+    function inputGroups: NSArray; message 'inputGroups'; { unavailable in watchos } { available in macos 10.9, ios 7.0, tvos 9.0 }
   end;
 
 
@@ -97,15 +97,15 @@ type
 
 type
   AVAssetWriterSegmentation = objccategory external (AVAssetWriter)
-    procedure setPreferredOutputSegmentInterval(newValue: CMTime); message 'setPreferredOutputSegmentInterval:'; { unavailable in watchos }
-    function preferredOutputSegmentInterval: CMTime; message 'preferredOutputSegmentInterval'; { unavailable in watchos }
-    procedure setInitialSegmentStartTime(newValue: CMTime); message 'setInitialSegmentStartTime:'; { unavailable in watchos }
-    function initialSegmentStartTime: CMTime; message 'initialSegmentStartTime'; { unavailable in watchos }
-    procedure setOutputFileTypeProfile(newValue: AVFileTypeProfile); message 'setOutputFileTypeProfile:'; { unavailable in watchos }
-    function outputFileTypeProfile: AVFileTypeProfile; message 'outputFileTypeProfile'; { unavailable in watchos }
-    procedure setDelegate(newValue: AVAssetWriterDelegateProtocol); message 'setDelegate:'; { unavailable in watchos }
-    function delegate: AVAssetWriterDelegateProtocol; message 'delegate'; { unavailable in watchos }
-    procedure flushSegment; message 'flushSegment'; { unavailable in watchos }
+    procedure setPreferredOutputSegmentInterval(newValue: CMTime); message 'setPreferredOutputSegmentInterval:'; { unavailable in watchos } { available in macos 11.0, ios 14.0, tvos 14.0 }
+    function preferredOutputSegmentInterval: CMTime; message 'preferredOutputSegmentInterval'; { unavailable in watchos } { available in macos 11.0, ios 14.0, tvos 14.0 }
+    procedure setInitialSegmentStartTime(newValue: CMTime); message 'setInitialSegmentStartTime:'; { unavailable in watchos } { available in macos 11.0, ios 14.0, tvos 14.0 }
+    function initialSegmentStartTime: CMTime; message 'initialSegmentStartTime'; { unavailable in watchos } { available in macos 11.0, ios 14.0, tvos 14.0 }
+    procedure setOutputFileTypeProfile(newValue: AVFileTypeProfile); message 'setOutputFileTypeProfile:'; { unavailable in watchos } { available in macos 11.0, ios 14.0, tvos 14.0 }
+    function outputFileTypeProfile: AVFileTypeProfile; message 'outputFileTypeProfile'; { unavailable in watchos } { available in macos 11.0, ios 14.0, tvos 14.0 }
+    procedure setDelegate(newValue: AVAssetWriterDelegateProtocol); message 'setDelegate:'; { unavailable in watchos } { available in macos 11.0, ios 14.0, tvos 14.0 }
+    function delegate: AVAssetWriterDelegateProtocol; message 'delegate'; { unavailable in watchos } { available in macos 11.0, ios 14.0, tvos 14.0 }
+    procedure flushSegment; message 'flushSegment'; { unavailable in watchos } { available in macos 11.0, ios 14.0, tvos 14.0 }
   end;
 {$endif}
 

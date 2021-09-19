@@ -38,14 +38,14 @@ const
   NSStackViewDistributionEqualCentering = 4;
 
 type
-  NSStackViewVisibilityPriority = single { available in macos  };
-  NSStackViewVisibilityPriorityPtr = ^NSStackViewVisibilityPriority { available in macos  };
+  NSStackViewVisibilityPriority = single { available in macos 10.9 };
+  NSStackViewVisibilityPriorityPtr = ^NSStackViewVisibilityPriority { available in macos 10.9 };
 
 const
-  NSStackViewVisibilityPriorityMustHold = 1000 { available in macos  };
-  NSStackViewVisibilityPriorityDetachOnlyIfNecessary = 900 { available in macos  };
-  NSStackViewVisibilityPriorityNotVisible = 0 { available in macos  };
-  NSStackViewSpacingUseDefault = FLT_MAX { available in macos  };
+  NSStackViewVisibilityPriorityMustHold = 1000 { available in macos 10.9 };
+  NSStackViewVisibilityPriorityDetachOnlyIfNecessary = 900 { available in macos 10.9 };
+  NSStackViewVisibilityPriorityNotVisible = 0 { available in macos 10.9 };
+  NSStackViewSpacingUseDefault = FLT_MAX { available in macos 10.9 };
 {$endif}
 
 {$ifdef CLASSES}
@@ -64,18 +64,18 @@ type
     {$endif}
     procedure setEdgeInsets(newValue: NSEdgeInsets); message 'setEdgeInsets:';
     function edgeInsets: NSEdgeInsets; message 'edgeInsets';
-    procedure setDistribution(newValue: NSStackViewDistribution); message 'setDistribution:'; { available in macos  }
-    function distribution: NSStackViewDistribution; message 'distribution'; { available in macos  }
+    procedure setDistribution(newValue: NSStackViewDistribution); message 'setDistribution:'; { available in macos 10.11 }
+    function distribution: NSStackViewDistribution; message 'distribution'; { available in macos 10.11 }
     procedure setSpacing(newValue: CGFloat); message 'setSpacing:';
     function spacing: CGFloat; message 'spacing';
     procedure setCustomSpacing_afterView (spacing_: CGFloat; view: NSView); message 'setCustomSpacing:afterView:';
     function customSpacingAfterView (view: NSView): CGFloat; message 'customSpacingAfterView:';
-    procedure setDetachesHiddenViews(newValue: objcbool); message 'setDetachesHiddenViews:'; { available in macos  }
-    function detachesHiddenViews: objcbool; message 'detachesHiddenViews'; { available in macos  }
-    function arrangedSubviews: NSArray; message 'arrangedSubviews'; { available in macos  }
-    procedure addArrangedSubview (view: NSView); message 'addArrangedSubview:'; { available in macos  }
-    procedure insertArrangedSubview_atIndex (view: NSView; index: NSInteger); message 'insertArrangedSubview:atIndex:'; { available in macos  }
-    procedure removeArrangedSubview (view: NSView); message 'removeArrangedSubview:'; { available in macos  }
+    procedure setDetachesHiddenViews(newValue: objcbool); message 'setDetachesHiddenViews:'; { available in macos 10.11 }
+    function detachesHiddenViews: objcbool; message 'detachesHiddenViews'; { available in macos 10.11 }
+    function arrangedSubviews: NSArray; message 'arrangedSubviews'; { available in macos 10.11 }
+    procedure addArrangedSubview (view: NSView); message 'addArrangedSubview:'; { available in macos 10.11 }
+    procedure insertArrangedSubview_atIndex (view: NSView; index: NSInteger); message 'insertArrangedSubview:atIndex:'; { available in macos 10.11 }
+    procedure removeArrangedSubview (view: NSView); message 'removeArrangedSubview:'; { available in macos 10.11 }
     function detachedViews: NSArray; message 'detachedViews';
     procedure setVisibilityPriority_forView (priority: NSStackViewVisibilityPriority; view: NSView); message 'setVisibilityPriority:forView:';
     function visibilityPriorityForView (view: NSView): NSStackViewVisibilityPriority; message 'visibilityPriorityForView:';

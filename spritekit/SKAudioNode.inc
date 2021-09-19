@@ -26,14 +26,14 @@ type
 
 type
   SKAction_SKAudioNode = objccategory external name 'SKAudioNode' (SKAction)
-    class function stereoPanTo_duration (v: single; duration_: NSTimeInterval): SKAction; message 'stereoPanTo:duration:'; { available in ios , tvos , watchos , macos  }
-    class function stereoPanBy_duration (v: single; duration_: NSTimeInterval): SKAction; message 'stereoPanBy:duration:'; { available in ios , tvos , watchos , macos  }
-    class function changeReverbTo_duration (v: single; duration_: NSTimeInterval): SKAction; message 'changeReverbTo:duration:'; { available in ios , tvos , watchos , macos  }
-    class function changeReverbBy_duration (v: single; duration_: NSTimeInterval): SKAction; message 'changeReverbBy:duration:'; { available in ios , tvos , watchos , macos  }
-    class function changeObstructionTo_duration (v: single; duration_: NSTimeInterval): SKAction; message 'changeObstructionTo:duration:'; { available in ios , tvos , watchos , macos  }
-    class function changeObstructionBy_duration (v: single; duration_: NSTimeInterval): SKAction; message 'changeObstructionBy:duration:'; { available in ios , tvos , watchos , macos  }
-    class function changeOcclusionTo_duration (v: single; duration_: NSTimeInterval): SKAction; message 'changeOcclusionTo:duration:'; { available in ios , tvos , watchos , macos  }
-    class function changeOcclusionBy_duration (v: single; duration_: NSTimeInterval): SKAction; message 'changeOcclusionBy:duration:'; { available in ios , tvos , watchos , macos  }
+    class function stereoPanTo_duration (v: single; duration_: NSTimeInterval): SKAction; message 'stereoPanTo:duration:'; { available in ios 9.0, tvos 9.0, watchos 2.0, macos 10.11 }
+    class function stereoPanBy_duration (v: single; duration_: NSTimeInterval): SKAction; message 'stereoPanBy:duration:'; { available in ios 9.0, tvos 9.0, watchos 2.0, macos 10.11 }
+    class function changeReverbTo_duration (v: single; duration_: NSTimeInterval): SKAction; message 'changeReverbTo:duration:'; { available in ios 9.0, tvos 9.0, watchos 2.0, macos 10.11 }
+    class function changeReverbBy_duration (v: single; duration_: NSTimeInterval): SKAction; message 'changeReverbBy:duration:'; { available in ios 9.0, tvos 9.0, watchos 2.0, macos 10.11 }
+    class function changeObstructionTo_duration (v: single; duration_: NSTimeInterval): SKAction; message 'changeObstructionTo:duration:'; { available in ios 9.0, tvos 9.0, watchos 2.0, macos 10.11 }
+    class function changeObstructionBy_duration (v: single; duration_: NSTimeInterval): SKAction; message 'changeObstructionBy:duration:'; { available in ios 9.0, tvos 9.0, watchos 2.0, macos 10.11 }
+    class function changeOcclusionTo_duration (v: single; duration_: NSTimeInterval): SKAction; message 'changeOcclusionTo:duration:'; { available in ios 9.0, tvos 9.0, watchos 2.0, macos 10.11 }
+    class function changeOcclusionBy_duration (v: single; duration_: NSTimeInterval): SKAction; message 'changeOcclusionBy:duration:'; { available in ios 9.0, tvos 9.0, watchos 2.0, macos 10.11 }
   end;
 {$endif}
 

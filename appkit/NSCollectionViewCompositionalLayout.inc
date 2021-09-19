@@ -50,7 +50,7 @@ type
 
 {$ifdef EXTERNAL_SYMBOLS}
 var
-  NSDirectionalEdgeInsetsZero: NSDirectionalEdgeInsets { available in macos  }; cvar; external;
+  NSDirectionalEdgeInsetsZero: NSDirectionalEdgeInsets { available in macos 10.15 }; cvar; external;
 {$endif}
 
 {$ifdef TYPES}

@@ -19,8 +19,8 @@ const
 
 {$ifdef EXTERNAL_SYMBOLS}
 var
-  NSCollectionElementKindSectionHeader: NSCollectionViewSupplementaryElementKind { available in macos  }; cvar; external;
-  NSCollectionElementKindSectionFooter: NSCollectionViewSupplementaryElementKind { available in macos  }; cvar; external;
+  NSCollectionElementKindSectionHeader: NSCollectionViewSupplementaryElementKind { available in macos 10.11 }; cvar; external;
+  NSCollectionElementKindSectionFooter: NSCollectionViewSupplementaryElementKind { available in macos 10.11 }; cvar; external;
 {$endif}
 
 {$ifdef CLASSES}
@@ -70,13 +70,13 @@ type
     function footerReferenceSize: NSSize; message 'footerReferenceSize';
     procedure setSectionInset(newValue: NSEdgeInsets); message 'setSectionInset:';
     function sectionInset: NSEdgeInsets; message 'sectionInset';
-    procedure setSectionHeadersPinToVisibleBounds(newValue: objcbool); message 'setSectionHeadersPinToVisibleBounds:'; { available in macos  }
-    function sectionHeadersPinToVisibleBounds: objcbool; message 'sectionHeadersPinToVisibleBounds'; { available in macos  }
-    procedure setSectionFootersPinToVisibleBounds(newValue: objcbool); message 'setSectionFootersPinToVisibleBounds:'; { available in macos  }
-    function sectionFootersPinToVisibleBounds: objcbool; message 'sectionFootersPinToVisibleBounds'; { available in macos  }
-    function sectionAtIndexIsCollapsed (sectionIndex: NSUInteger): objcbool; message 'sectionAtIndexIsCollapsed:'; { available in macos  }
-    procedure collapseSectionAtIndex (sectionIndex: NSUInteger); message 'collapseSectionAtIndex:'; { available in macos  }
-    procedure expandSectionAtIndex (sectionIndex: NSUInteger); message 'expandSectionAtIndex:'; { available in macos  }
+    procedure setSectionHeadersPinToVisibleBounds(newValue: objcbool); message 'setSectionHeadersPinToVisibleBounds:'; { available in macos 10.12 }
+    function sectionHeadersPinToVisibleBounds: objcbool; message 'sectionHeadersPinToVisibleBounds'; { available in macos 10.12 }
+    procedure setSectionFootersPinToVisibleBounds(newValue: objcbool); message 'setSectionFootersPinToVisibleBounds:'; { available in macos 10.12 }
+    function sectionFootersPinToVisibleBounds: objcbool; message 'sectionFootersPinToVisibleBounds'; { available in macos 10.12 }
+    function sectionAtIndexIsCollapsed (sectionIndex: NSUInteger): objcbool; message 'sectionAtIndexIsCollapsed:'; { available in macos 10.12 }
+    procedure collapseSectionAtIndex (sectionIndex: NSUInteger); message 'collapseSectionAtIndex:'; { available in macos 10.12 }
+    procedure expandSectionAtIndex (sectionIndex: NSUInteger); message 'expandSectionAtIndex:'; { available in macos 10.12 }
   end;
 {$endif}
 

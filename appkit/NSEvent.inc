@@ -42,17 +42,17 @@ const
   NSEventTypeOtherMouseDown = 25;
   NSEventTypeOtherMouseUp = 26;
   NSEventTypeOtherMouseDragged = 27;
-  NSEventTypeGesture = 29 { available in macos  };
-  NSEventTypeMagnify = 30 { available in macos  };
-  NSEventTypeSwipe = 31 { available in macos  };
-  NSEventTypeRotate = 18 { available in macos  };
-  NSEventTypeBeginGesture = 19 { available in macos  };
-  NSEventTypeEndGesture = 20 { available in macos  };
-  NSEventTypeSmartMagnify = 32 { available in macos  };
-  NSEventTypeQuickLook = 33 { available in macos  };
-  NSEventTypePressure = 34 { available in macos  };
-  NSEventTypeDirectTouch = 37 { available in macos  };
-  NSEventTypeChangeMode = 38 { available in macos  };
+  NSEventTypeGesture = 29 { available in macos 10.5 };
+  NSEventTypeMagnify = 30 { available in macos 10.5 };
+  NSEventTypeSwipe = 31 { available in macos 10.5 };
+  NSEventTypeRotate = 18 { available in macos 10.5 };
+  NSEventTypeBeginGesture = 19 { available in macos 10.5 };
+  NSEventTypeEndGesture = 20 { available in macos 10.5 };
+  NSEventTypeSmartMagnify = 32 { available in macos 10.8 };
+  NSEventTypeQuickLook = 33 { available in macos 10.8 };
+  NSEventTypePressure = 34 { available in macos 10.10.3 };
+  NSEventTypeDirectTouch = 37 { available in macos 10.10 };
+  NSEventTypeChangeMode = 38 { available in macos 10.15 };
 
 const
   NSLeftMouseDown = NSEventTypeLeftMouseDown deprecated 'replace with NSEventTypeLeftMouseDown';
@@ -107,16 +107,16 @@ const
   NSEventMaskOtherMouseDown = 1 shl NSEventTypeOtherMouseDown;
   NSEventMaskOtherMouseUp = 1 shl NSEventTypeOtherMouseUp;
   NSEventMaskOtherMouseDragged = 1 shl NSEventTypeOtherMouseDragged;
-  NSEventMaskGesture = 1 shl NSEventTypeGesture { available in macos  };
-  NSEventMaskMagnify = 1 shl NSEventTypeMagnify { available in macos  };
-  NSEventMaskSwipe = 1 shl NSEventTypeSwipe { available in macos  };
-  NSEventMaskRotate = 1 shl NSEventTypeRotate { available in macos  };
-  NSEventMaskBeginGesture = 1 shl NSEventTypeBeginGesture { available in macos  };
-  NSEventMaskEndGesture = 1 shl NSEventTypeEndGesture { available in macos  };
-  NSEventMaskSmartMagnify = 1 shl NSEventTypeSmartMagnify { available in macos  };
-  NSEventMaskPressure = 1 shl NSEventTypePressure { available in macos  };
-  NSEventMaskDirectTouch = 1 shl NSEventTypeDirectTouch { available in macos  };
-  NSEventMaskChangeMode = 1 shl NSEventTypeChangeMode { available in macos  };
+  NSEventMaskGesture = 1 shl NSEventTypeGesture { available in macos 10.5 };
+  NSEventMaskMagnify = 1 shl NSEventTypeMagnify { available in macos 10.5 };
+  NSEventMaskSwipe = 1 shl NSEventTypeSwipe { available in macos 10.5 };
+  NSEventMaskRotate = 1 shl NSEventTypeRotate { available in macos 10.5 };
+  NSEventMaskBeginGesture = 1 shl NSEventTypeBeginGesture { available in macos 10.5 };
+  NSEventMaskEndGesture = 1 shl NSEventTypeEndGesture { available in macos 10.5 };
+  NSEventMaskSmartMagnify = 1 shl NSEventTypeSmartMagnify { available in macos 10.8 };
+  NSEventMaskPressure = 1 shl NSEventTypePressure { available in macos 10.10.3 };
+  NSEventMaskDirectTouch = 1 shl NSEventTypeDirectTouch { available in macos 10.12.2 };
+  NSEventMaskChangeMode = 1 shl NSEventTypeChangeMode { available in macos 10.15 };
   NSEventMaskAny = NSUIntegerMax;
 
 const
@@ -245,7 +245,7 @@ const
   NSEventSubtypeMouseEvent = NX_SUBTYPE_DEFAULT;
   NSEventSubtypeTabletPoint = NX_SUBTYPE_TABLET_POINT;
   NSEventSubtypeTabletProximity = NX_SUBTYPE_TABLET_PROXIMITY;
-  NSEventSubtypeTouch = NX_SUBTYPE_MOUSE_TOUCH { available in macos  };
+  NSEventSubtypeTouch = NX_SUBTYPE_MOUSE_TOUCH { available in macos 10.6 };
 
 const
   NSWindowExposedEventType = NSEventSubtypeWindowExposed deprecated 'replace with NSEventSubtypeWindowExposed';
@@ -293,29 +293,29 @@ type
     function deltaX: CGFloat; message 'deltaX';
     function deltaY: CGFloat; message 'deltaY';
     function deltaZ: CGFloat; message 'deltaZ';
-    function hasPreciseScrollingDeltas: objcbool; message 'hasPreciseScrollingDeltas'; { available in macos  }
-    function scrollingDeltaX: CGFloat; message 'scrollingDeltaX'; { available in macos  }
-    function scrollingDeltaY: CGFloat; message 'scrollingDeltaY'; { available in macos  }
-    function momentumPhase: NSEventPhase; message 'momentumPhase'; { available in macos  }
-    function isDirectionInvertedFromDevice: objcbool; message 'isDirectionInvertedFromDevice'; { available in macos  }
+    function hasPreciseScrollingDeltas: objcbool; message 'hasPreciseScrollingDeltas'; { available in macos 10.7 }
+    function scrollingDeltaX: CGFloat; message 'scrollingDeltaX'; { available in macos 10.7 }
+    function scrollingDeltaY: CGFloat; message 'scrollingDeltaY'; { available in macos 10.7 }
+    function momentumPhase: NSEventPhase; message 'momentumPhase'; { available in macos 10.7 }
+    function isDirectionInvertedFromDevice: objcbool; message 'isDirectionInvertedFromDevice'; { available in macos 10.7 }
     function characters: NSString; message 'characters';
     function charactersIgnoringModifiers: NSString; message 'charactersIgnoringModifiers';
-    function charactersByApplyingModifiers (modifiers: NSEventModifierFlags): NSString; message 'charactersByApplyingModifiers:'; { available in macos  }
+    function charactersByApplyingModifiers (modifiers: NSEventModifierFlags): NSString; message 'charactersByApplyingModifiers:'; { available in macos 10.15 }
     function isARepeat: objcbool; message 'isARepeat';
     function keyCode: cushort; message 'keyCode';
     function trackingNumber: NSInteger; message 'trackingNumber';
     function userData: pointer; message 'userData';
-    function trackingArea: NSTrackingArea; message 'trackingArea'; { available in macos  }
+    function trackingArea: NSTrackingArea; message 'trackingArea'; { available in macos 10.5 }
     function subtype: NSEventSubtype; message 'subtype';
     function data1: NSInteger; message 'data1';
     function data2: NSInteger; message 'data2';
-    function eventRef: pointer; message 'eventRef'; { available in macos  }
-    class function eventWithEventRef (eventRef_: pointer): NSEvent; message 'eventWithEventRef:'; { available in macos  }
-    function CGEvent: CGEventRef; message 'CGEvent'; { available in macos  }
-    class function eventWithCGEvent (cgEvent_: CGEventRef): NSEvent; message 'eventWithCGEvent:'; { available in macos  }
-    class procedure setMouseCoalescingEnabled(newValue: objcbool); message 'setMouseCoalescingEnabled:'; { available in macos  }
-    class function isMouseCoalescingEnabled: objcbool; message 'isMouseCoalescingEnabled'; { available in macos  }
-    function magnification: CGFloat; message 'magnification'; { available in macos  }
+    function eventRef: pointer; message 'eventRef'; { available in macos 10.5 }
+    class function eventWithEventRef (eventRef_: pointer): NSEvent; message 'eventWithEventRef:'; { available in macos 10.5 }
+    function CGEvent: CGEventRef; message 'CGEvent'; { available in macos 10.5 }
+    class function eventWithCGEvent (cgEvent_: CGEventRef): NSEvent; message 'eventWithCGEvent:'; { available in macos 10.5 }
+    class procedure setMouseCoalescingEnabled(newValue: objcbool); message 'setMouseCoalescingEnabled:'; { available in macos 10.5 }
+    class function isMouseCoalescingEnabled: objcbool; message 'isMouseCoalescingEnabled'; { available in macos 10.5 }
+    function magnification: CGFloat; message 'magnification'; { available in macos 10.5 }
     function deviceID: NSUInteger; message 'deviceID';
     function rotation: single; message 'rotation';
     function absoluteX: NSInteger; message 'absoluteX';
@@ -335,17 +335,17 @@ type
     function capabilityMask: NSUInteger; message 'capabilityMask';
     function pointingDeviceType: NSPointingDeviceType; message 'pointingDeviceType';
     function isEnteringProximity: objcbool; message 'isEnteringProximity';
-    function touchesMatchingPhase_inView (phase: NSTouchPhase; view: NSView): NSSet; message 'touchesMatchingPhase:inView:'; { available in macos  }
-    function allTouches: NSSet; message 'allTouches'; { available in macos  }
-    function touchesForView (view: NSView): NSSet; message 'touchesForView:'; { available in macos  }
-    function coalescedTouchesForTouch (touch: NSTouch): NSArray; message 'coalescedTouchesForTouch:'; { available in macos  }
-    function phase: NSEventPhase; message 'phase'; { available in macos  }
-    function stage: NSInteger; message 'stage'; { available in macos  }
-    function stageTransition: CGFloat; message 'stageTransition'; { available in macos  }
-    function associatedEventsMask: NSEventMask; message 'associatedEventsMask'; { available in macos  }
-    function pressureBehavior: NSPressureBehavior; message 'pressureBehavior'; { available in macos  }
-    class function isSwipeTrackingFromScrollEventsEnabled: objcbool; message 'isSwipeTrackingFromScrollEventsEnabled'; { available in macos  }
-    procedure trackSwipeEventWithOptions_dampenAmountThresholdMin_max_usingHandler (options: NSEventSwipeTrackingOptions; minDampenThreshold: CGFloat; maxDampenThreshold: CGFloat; trackingHandler: NSEventTrackSwipeEventWithOptionsCallback); message 'trackSwipeEventWithOptions:dampenAmountThresholdMin:max:usingHandler:'; { available in macos  }
+    function touchesMatchingPhase_inView (phase: NSTouchPhase; view: NSView): NSSet; message 'touchesMatchingPhase:inView:'; { available in macos 10.6 }
+    function allTouches: NSSet; message 'allTouches'; { available in macos 10.12 }
+    function touchesForView (view: NSView): NSSet; message 'touchesForView:'; { available in macos 10.12 }
+    function coalescedTouchesForTouch (touch: NSTouch): NSArray; message 'coalescedTouchesForTouch:'; { available in macos 10.12.2 }
+    function phase: NSEventPhase; message 'phase'; { available in macos 10.7 }
+    function stage: NSInteger; message 'stage'; { available in macos 10.10.3 }
+    function stageTransition: CGFloat; message 'stageTransition'; { available in macos 10.10.3 }
+    function associatedEventsMask: NSEventMask; message 'associatedEventsMask'; { available in macos 10.10.3 }
+    function pressureBehavior: NSPressureBehavior; message 'pressureBehavior'; { available in macos 10.11 }
+    class function isSwipeTrackingFromScrollEventsEnabled: objcbool; message 'isSwipeTrackingFromScrollEventsEnabled'; { available in macos 10.7 }
+    procedure trackSwipeEventWithOptions_dampenAmountThresholdMin_max_usingHandler (options: NSEventSwipeTrackingOptions; minDampenThreshold: CGFloat; maxDampenThreshold: CGFloat; trackingHandler: NSEventTrackSwipeEventWithOptionsCallback); message 'trackSwipeEventWithOptions:dampenAmountThresholdMin:max:usingHandler:'; { available in macos 10.7 }
     class procedure startPeriodicEventsAfterDelay_withPeriod (delay: NSTimeInterval; period: NSTimeInterval); message 'startPeriodicEventsAfterDelay:withPeriod:';
     class procedure stopPeriodicEvents; message 'stopPeriodicEvents';
     class function mouseEventWithType_location_modifierFlags_timestamp_windowNumber_context_eventNumber_clickCount_pressure (type_: NSEventType; location: NSPoint; flags: NSEventModifierFlags; time: NSTimeInterval; wNum: NSInteger; unusedPassNil: NSGraphicsContext; eNum: NSInteger; cNum: NSInteger; pressure_: single): NSEvent; message 'mouseEventWithType:location:modifierFlags:timestamp:windowNumber:context:eventNumber:clickCount:pressure:';
@@ -353,14 +353,14 @@ type
     class function enterExitEventWithType_location_modifierFlags_timestamp_windowNumber_context_eventNumber_trackingNumber_userData (type_: NSEventType; location: NSPoint; flags: NSEventModifierFlags; time: NSTimeInterval; wNum: NSInteger; unusedPassNil: NSGraphicsContext; eNum: NSInteger; tNum: NSInteger; data: pointer): NSEvent; message 'enterExitEventWithType:location:modifierFlags:timestamp:windowNumber:context:eventNumber:trackingNumber:userData:';
     class function otherEventWithType_location_modifierFlags_timestamp_windowNumber_context_subtype_data1_data2 (type_: NSEventType; location: NSPoint; flags: NSEventModifierFlags; time: NSTimeInterval; wNum: NSInteger; unusedPassNil: NSGraphicsContext; subtype_: cshort; d1: NSInteger; d2: NSInteger): NSEvent; message 'otherEventWithType:location:modifierFlags:timestamp:windowNumber:context:subtype:data1:data2:';
     class function mouseLocation: NSPoint; message 'mouseLocation';
-    class function modifierFlags_: NSEventModifierFlags; message 'modifierFlags'; { available in macos  }
-    class function pressedMouseButtons: NSUInteger; message 'pressedMouseButtons'; { available in macos  }
-    class function doubleClickInterval: NSTimeInterval; message 'doubleClickInterval'; { available in macos  }
-    class function keyRepeatDelay: NSTimeInterval; message 'keyRepeatDelay'; { available in macos  }
-    class function keyRepeatInterval: NSTimeInterval; message 'keyRepeatInterval'; { available in macos  }
-    class function addGlobalMonitorForEventsMatchingMask_handler (mask: NSEventMask; block: NSEventAddGlobalMonitorForEventsMatchingMaskCallback): id; message 'addGlobalMonitorForEventsMatchingMask:handler:'; { available in macos  }
-    class function addLocalMonitorForEventsMatchingMask_handler (mask: NSEventMask; block: NSEventAddLocalMonitorForEventsMatchingMaskCallback): id; message 'addLocalMonitorForEventsMatchingMask:handler:'; { available in macos  }
-    class procedure removeMonitor (eventMonitor: id); message 'removeMonitor:'; { available in macos  }
+    class function modifierFlags_: NSEventModifierFlags; message 'modifierFlags'; { available in macos 10.6 }
+    class function pressedMouseButtons: NSUInteger; message 'pressedMouseButtons'; { available in macos 10.6 }
+    class function doubleClickInterval: NSTimeInterval; message 'doubleClickInterval'; { available in macos 10.6 }
+    class function keyRepeatDelay: NSTimeInterval; message 'keyRepeatDelay'; { available in macos 10.6 }
+    class function keyRepeatInterval: NSTimeInterval; message 'keyRepeatInterval'; { available in macos 10.6 }
+    class function addGlobalMonitorForEventsMatchingMask_handler (mask: NSEventMask; block: NSEventAddGlobalMonitorForEventsMatchingMaskCallback): id; message 'addGlobalMonitorForEventsMatchingMask:handler:'; { available in macos 10.6 }
+    class function addLocalMonitorForEventsMatchingMask_handler (mask: NSEventMask; block: NSEventAddLocalMonitorForEventsMatchingMaskCallback): id; message 'addLocalMonitorForEventsMatchingMask:handler:'; { available in macos 10.6 }
+    class procedure removeMonitor (eventMonitor: id); message 'removeMonitor:'; { available in macos 10.6 }
 
     { Adopted protocols }
     function copyWithZone (zone: NSZonePtr): id; message 'copyWithZone:';

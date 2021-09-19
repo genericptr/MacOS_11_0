@@ -14,7 +14,7 @@ const
   NSURLCredentialPersistenceNone = 0;
   NSURLCredentialPersistenceForSession = 1;
   NSURLCredentialPersistencePermanent = 2;
-  NSURLCredentialPersistenceSynchronizable = 3 { available in macos , ios , watchos , tvos  };
+  NSURLCredentialPersistenceSynchronizable = 3 { available in macos 10.8, ios 6.0, watchos 2.0, tvos 9.0 };
 {$endif}
 
 {$ifdef CLASSES}
@@ -45,16 +45,16 @@ type
 
 type
   NSClientCertificate = objccategory external (NSURLCredential)
-    function initWithIdentity_certificates_persistence (identity: SecIdentityRef; certArray: NSArray; persistence_: NSURLCredentialPersistence): id; message 'initWithIdentity:certificates:persistence:'; { available in macos , ios , watchos , tvos  }
-    class function credentialWithIdentity_certificates_persistence (identity: SecIdentityRef; certArray: NSArray; persistence_: NSURLCredentialPersistence): NSURLCredential; message 'credentialWithIdentity:certificates:persistence:'; { available in macos , ios , watchos , tvos  }
+    function initWithIdentity_certificates_persistence (identity: SecIdentityRef; certArray: NSArray; persistence_: NSURLCredentialPersistence): id; message 'initWithIdentity:certificates:persistence:'; { available in macos 10.6, ios 3.0, watchos 2.0, tvos 9.0 }
+    class function credentialWithIdentity_certificates_persistence (identity: SecIdentityRef; certArray: NSArray; persistence_: NSURLCredentialPersistence): NSURLCredential; message 'credentialWithIdentity:certificates:persistence:'; { available in macos 10.6, ios 3.0, watchos 2.0, tvos 9.0 }
     function identity: SecIdentityRef; message 'identity';
-    function certificates: NSArray; message 'certificates'; { available in macos , ios , watchos , tvos  }
+    function certificates: NSArray; message 'certificates'; { available in macos 10.6, ios 3.0, watchos 2.0, tvos 9.0 }
   end;
 
 type
   NSServerTrust = objccategory external (NSURLCredential)
-    function initWithTrust (trust: SecTrustRef): id; message 'initWithTrust:'; { available in macos , ios , watchos , tvos  }
-    class function credentialForTrust (trust: SecTrustRef): NSURLCredential; message 'credentialForTrust:'; { available in macos , ios , watchos , tvos  }
+    function initWithTrust (trust: SecTrustRef): id; message 'initWithTrust:'; { available in macos 10.6, ios 3.0, watchos 2.0, tvos 9.0 }
+    class function credentialForTrust (trust: SecTrustRef): NSURLCredential; message 'credentialForTrust:'; { available in macos 10.6, ios 3.0, watchos 2.0, tvos 9.0 }
   end;
 {$endif}
 

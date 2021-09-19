@@ -28,13 +28,13 @@ const
   UNAuthorizationOptionSound = 1 shl 1;
   UNAuthorizationOptionAlert = 1 shl 2;
   UNAuthorizationOptionCarPlay = 1 shl 3;
-  UNAuthorizationOptionCriticalAlert = 0 { available in macos , ios , watchos , tvos ) = (1 << 4 };
-  UNAuthorizationOptionProvidesAppNotificationSettings = 1 { available in macos , ios , watchos , tvos ) = (1 << 5 };
-  UNAuthorizationOptionProvisional = 2 { available in macos , ios , watchos , tvos ) = (1 << 6 };
-  UNAuthorizationOptionAnnouncement = 3 { unavailable in macos, tvos) = (1 << 7 };
+  UNAuthorizationOptionCriticalAlert = 0 { available in macos 10.14, ios 12.0, watchos 5.0, tvos 12.0 };
+  UNAuthorizationOptionProvidesAppNotificationSettings = 1 { available in macos 10.14, ios 12.0, watchos 5.0, tvos 12.0 };
+  UNAuthorizationOptionProvisional = 2 { available in macos 10.14, ios 12.0, watchos 5.0, tvos 12.0 };
+  UNAuthorizationOptionAnnouncement = 3 { unavailable in macos, tvos } { available in ios 13.0, watchos 6.0 };
 
 const
-  UNAuthorizationOptionNone = 0 { unavailable in "Use [] instead.") __API_AVAILABLE(macos , ios , watchos , tvos  };
+  UNAuthorizationOptionNone = 0 { unavailable in "Use [] instead." } { available in macos 10.14, ios 10.0, watchos 3.0, tvos 10.0 };
 {$endif}
 
 {$ifdef CLASSES}
@@ -70,11 +70,11 @@ const
   UNNotificationPresentationOptionBadge = 1 shl 0;
   UNNotificationPresentationOptionSound = 1 shl 1;
   UNNotificationPresentationOptionAlert = 1 shl 2 deprecated 'Use UNNotificationPresentationOptionList | UNNotificationPresentationOptionBanner';
-  UNNotificationPresentationOptionList = 0 { available in macos , ios , watchos , tvos ) = (1 << 3 };
-  UNNotificationPresentationOptionBanner = 1 { available in macos , ios , watchos , tvos ) = (1 << 4 };
+  UNNotificationPresentationOptionList = 0 { available in macos 11.0, ios 14.0, watchos 7.0, tvos 14.0 };
+  UNNotificationPresentationOptionBanner = 1 { available in macos 11.0, ios 14.0, watchos 7.0, tvos 14.0 };
 
 const
-  UNNotificationPresentationOptionNone = 0 { unavailable in "Use [] instead.") __API_AVAILABLE(macos , ios , watchos , tvos  };
+  UNNotificationPresentationOptionNone = 0 { unavailable in "Use [] instead." } { available in macos 10.14, ios 10.0, watchos 3.0, tvos 10.0 };
 {$endif}
 
 {$ifdef PROTOCOLS}
@@ -82,9 +82,9 @@ const
 type
   UNUserNotificationCenterDelegateProtocol = objcprotocol external name 'UNUserNotificationCenterDelegate' (NSObjectProtocol)
   optional
-    procedure userNotificationCenter_willPresentNotification_withCompletionHandler (center: UNUserNotificationCenter; notification: UNNotification; completionHandler: UNUserNotificationCenterUserNotificationCenterCallback); message 'userNotificationCenter:willPresentNotification:withCompletionHandler:'; { available in macos , ios , watchos , tvos  }
-    procedure userNotificationCenter_didReceiveNotificationResponse_withCompletionHandler (center: UNUserNotificationCenter; response: UNNotificationResponse; completionHandler: UNUserNotificationCenterUserNotificationCenterCallback); message 'userNotificationCenter:didReceiveNotificationResponse:withCompletionHandler:'; { unavailable in tvos }
-    procedure userNotificationCenter_openSettingsForNotification (center: UNUserNotificationCenter; notification: UNNotification); message 'userNotificationCenter:openSettingsForNotification:'; { unavailable in watchos, tvos }
+    procedure userNotificationCenter_willPresentNotification_withCompletionHandler (center: UNUserNotificationCenter; notification: UNNotification; completionHandler: UNUserNotificationCenterUserNotificationCenterCallback); message 'userNotificationCenter:willPresentNotification:withCompletionHandler:'; { available in macos 10.14, ios 10.0, watchos 3.0, tvos 10.0 }
+    procedure userNotificationCenter_didReceiveNotificationResponse_withCompletionHandler (center: UNUserNotificationCenter; response: UNNotificationResponse; completionHandler: UNUserNotificationCenterUserNotificationCenterCallback); message 'userNotificationCenter:didReceiveNotificationResponse:withCompletionHandler:'; { unavailable in tvos } { available in macos 10.14, ios 10.0, watchos 3.0 }
+    procedure userNotificationCenter_openSettingsForNotification (center: UNUserNotificationCenter; notification: UNNotification); message 'userNotificationCenter:openSettingsForNotification:'; { unavailable in watchos, tvos } { available in macos 10.14, ios 12.0 }
   end;
 {$endif}
 

@@ -36,11 +36,11 @@ type
     function initWithChanges (changes: NSArray): id; message 'initWithChanges:';
     function initWithInsertIndexes_insertedObjects_removeIndexes_removedObjects_additionalChanges (inserts: NSIndexSet; insertedObjects: NSArray; removes: NSIndexSet; removedObjects: NSArray; changes: NSArray): id; message 'initWithInsertIndexes:insertedObjects:removeIndexes:removedObjects:additionalChanges:'; { NS_DESIGNATED_INITIALIZER }
     function initWithInsertIndexes_insertedObjects_removeIndexes_removedObjects (inserts: NSIndexSet; insertedObjects: NSArray; removes: NSIndexSet; removedObjects: NSArray): id; message 'initWithInsertIndexes:insertedObjects:removeIndexes:removedObjects:';
-    function insertions: NSArray; message 'insertions'; { available in macosx , ios , watchos , tvos  }
-    function removals: NSArray; message 'removals'; { available in macosx , ios , watchos , tvos  }
+    function insertions: NSArray; message 'insertions'; { available in macosx 10.15, ios 13.0, watchos 6.0, tvos 13.0 }
+    function removals: NSArray; message 'removals'; { available in macosx 10.15, ios 13.0, watchos 6.0, tvos 13.0 }
     function hasChanges: objcbool; message 'hasChanges';
     function differenceByTransformingChangesWithBlock (block: NSOrderedCollectionDifferenceDifferenceByTransformingChangesWithBlockCallback): NSOrderedCollectionDifference; message 'differenceByTransformingChangesWithBlock:';
-    function inverseDifference: id; message 'inverseDifference'; { available in macosx , ios , watchos , tvos  }
+    function inverseDifference: id; message 'inverseDifference'; { available in macosx 10.15, ios 13.0, watchos 6.0, tvos 13.0 }
 
     { Adopted protocols }
     function countByEnumeratingWithState_objects_count (state: NSFastEnumerationStatePtr; buffer: idPtr { variable size array of id }; len: NSUInteger): NSUInteger; message 'countByEnumeratingWithState:objects:count:';

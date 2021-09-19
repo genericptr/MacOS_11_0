@@ -27,19 +27,19 @@ type
   NSPointerFunctionsOptionsPtr = ^NSPointerFunctionsOptions;
 
 const
-  NSPointerFunctionsStrongMemory = 0 shl 0 { available in macos , ios , watchos , tvos  };
+  NSPointerFunctionsStrongMemory = 0 shl 0 { available in macos 10.5, ios 6.0, watchos 2.0, tvos 9.0 };
   NSPointerFunctionsZeroingWeakMemory = 1 shl 0 { unavailable in ios, watchos, tvos };
-  NSPointerFunctionsOpaqueMemory = 2 shl 0 { available in macos , ios , watchos , tvos  };
-  NSPointerFunctionsMallocMemory = 3 shl 0 { available in macos , ios , watchos , tvos  };
-  NSPointerFunctionsMachVirtualMemory = 4 shl 0 { available in macos , ios , watchos , tvos  };
-  NSPointerFunctionsWeakMemory = 5 shl 0 { available in macos , ios , watchos , tvos  };
-  NSPointerFunctionsObjectPersonality = 0 shl 8 { available in macos , ios , watchos , tvos  };
-  NSPointerFunctionsOpaquePersonality = 1 shl 8 { available in macos , ios , watchos , tvos  };
-  NSPointerFunctionsObjectPointerPersonality = 2 shl 8 { available in macos , ios , watchos , tvos  };
-  NSPointerFunctionsCStringPersonality = 3 shl 8 { available in macos , ios , watchos , tvos  };
-  NSPointerFunctionsStructPersonality = 4 shl 8 { available in macos , ios , watchos , tvos  };
-  NSPointerFunctionsIntegerPersonality = 5 shl 8 { available in macos , ios , watchos , tvos  };
-  NSPointerFunctionsCopyIn = 1 shl 16 { available in macos , ios , watchos , tvos  };
+  NSPointerFunctionsOpaqueMemory = 2 shl 0 { available in macos 10.5, ios 6.0, watchos 2.0, tvos 9.0 };
+  NSPointerFunctionsMallocMemory = 3 shl 0 { available in macos 10.5, ios 6.0, watchos 2.0, tvos 9.0 };
+  NSPointerFunctionsMachVirtualMemory = 4 shl 0 { available in macos 10.5, ios 6.0, watchos 2.0, tvos 9.0 };
+  NSPointerFunctionsWeakMemory = 5 shl 0 { available in macos 10.8, ios 6.0, watchos 2.0, tvos 9.0 };
+  NSPointerFunctionsObjectPersonality = 0 shl 8 { available in macos 10.5, ios 6.0, watchos 2.0, tvos 9.0 };
+  NSPointerFunctionsOpaquePersonality = 1 shl 8 { available in macos 10.5, ios 6.0, watchos 2.0, tvos 9.0 };
+  NSPointerFunctionsObjectPointerPersonality = 2 shl 8 { available in macos 10.5, ios 6.0, watchos 2.0, tvos 9.0 };
+  NSPointerFunctionsCStringPersonality = 3 shl 8 { available in macos 10.5, ios 6.0, watchos 2.0, tvos 9.0 };
+  NSPointerFunctionsStructPersonality = 4 shl 8 { available in macos 10.5, ios 6.0, watchos 2.0, tvos 9.0 };
+  NSPointerFunctionsIntegerPersonality = 5 shl 8 { available in macos 10.5, ios 6.0, watchos 2.0, tvos 9.0 };
+  NSPointerFunctionsCopyIn = 1 shl 16 { available in macos 10.5, ios 6.0, watchos 2.0, tvos 9.0 };
 {$endif}
 
 {$ifdef CLASSES}

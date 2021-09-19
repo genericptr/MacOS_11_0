@@ -27,11 +27,11 @@ type
     function allowsContentModifications: objcbool; message 'allowsContentModifications';
     function isSubscribed: objcbool; message 'isSubscribed'; { available in 10_8, 5_0 }
     function isImmutable: objcbool; message 'isImmutable'; { available in 10_8, 5_0 }
-    procedure setCGColor(newValue: CGColorRef); message 'setCGColor:'; { available in ios , macos , watchos  }
-    function CGColor: CGColorRef; message 'CGColor'; { available in ios , macos , watchos  }
+    procedure setCGColor(newValue: CGColorRef); message 'setCGColor:'; { available in ios 4.0, macos 10.15, watchos 2.0 }
+    function CGColor: CGColorRef; message 'CGColor'; { available in ios 4.0, macos 10.15, watchos 2.0 }
     {$if defined(TARGET_OS_OSX)}
-    procedure setColor(newValue: NSColor); message 'setColor:'; { available in macos  }
-    function color: NSColor; message 'color'; { available in macos  }
+    procedure setColor(newValue: NSColor); message 'setColor:'; { available in macos 10.8 }
+    function color: NSColor; message 'color'; { available in macos 10.8 }
     {$endif}
     function supportedEventAvailabilities: EKCalendarEventAvailabilityMask; message 'supportedEventAvailabilities';
     function allowedEntityTypes: EKEntityMask; message 'allowedEntityTypes'; { available in 10_8, 6_0 }

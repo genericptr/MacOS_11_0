@@ -39,10 +39,10 @@ var
   SCNSceneSourceAssetDirectoryURLsKey: SCNSceneSourceLoadingOption; cvar; external;
   SCNSceneSourceOverrideAssetURLsKey: SCNSceneSourceLoadingOption; cvar; external;
   SCNSceneSourceStrictConformanceKey: SCNSceneSourceLoadingOption; cvar; external;
-  SCNSceneSourceConvertUnitsToMetersKey: SCNSceneSourceLoadingOption { available in macos , ios , tvos , watchos  }; cvar; external;
-  SCNSceneSourceConvertToYUpKey: SCNSceneSourceLoadingOption { available in macos , ios , tvos , watchos  }; cvar; external;
-  SCNSceneSourceAnimationImportPolicyKey: SCNSceneSourceLoadingOption { available in macos  }; cvar; external;
-  SCNSceneSourceLoadingOptionPreserveOriginalTopology: SCNSceneSourceLoadingOption { available in macos , ios , tvos  }; cvar; external;
+  SCNSceneSourceConvertUnitsToMetersKey: SCNSceneSourceLoadingOption { available in macos 10.10, ios 11.0, tvos 11.0, watchos 4.0 }; cvar; external;
+  SCNSceneSourceConvertToYUpKey: SCNSceneSourceLoadingOption { available in macos 10.10, ios 11.0, tvos 11.0, watchos 4.0 }; cvar; external;
+  SCNSceneSourceAnimationImportPolicyKey: SCNSceneSourceLoadingOption { available in macos 10.10 }; cvar; external;
+  SCNSceneSourceLoadingOptionPreserveOriginalTopology: SCNSceneSourceLoadingOption { available in macos 10.12, ios 10.0, tvos 10.0 }; cvar; external;
 {$endif}
 
 {$ifdef TYPES}
@@ -53,10 +53,10 @@ type
 
 {$ifdef EXTERNAL_SYMBOLS}
 var
-  SCNSceneSourceAnimationImportPolicyPlay: SCNSceneSourceAnimationImportPolicy { available in macos  }; cvar; external;
-  SCNSceneSourceAnimationImportPolicyPlayRepeatedly: SCNSceneSourceAnimationImportPolicy { available in macos  }; cvar; external;
-  SCNSceneSourceAnimationImportPolicyDoNotPlay: SCNSceneSourceAnimationImportPolicy { available in macos  }; cvar; external;
-  SCNSceneSourceAnimationImportPolicyPlayUsingSceneTimeBase: SCNSceneSourceAnimationImportPolicy { available in macos  }; cvar; external;
+  SCNSceneSourceAnimationImportPolicyPlay: SCNSceneSourceAnimationImportPolicy { available in macos 10.10 }; cvar; external;
+  SCNSceneSourceAnimationImportPolicyPlayRepeatedly: SCNSceneSourceAnimationImportPolicy { available in macos 10.10 }; cvar; external;
+  SCNSceneSourceAnimationImportPolicyDoNotPlay: SCNSceneSourceAnimationImportPolicy { available in macos 10.10 }; cvar; external;
+  SCNSceneSourceAnimationImportPolicyPlayUsingSceneTimeBase: SCNSceneSourceAnimationImportPolicy { available in macos 10.10 }; cvar; external;
   SCNDetailedErrorsKey: NSString; cvar; external;
   SCNConsistencyElementIDErrorKey: NSString; cvar; external;
   SCNConsistencyElementTypeErrorKey: NSString; cvar; external;
@@ -103,7 +103,7 @@ type
     function propertyForKey (key: NSString): id; message 'propertyForKey:';
     function entryWithIdentifier_withClass (uid: NSString; entryClass: pobjc_class): id; message 'entryWithIdentifier:withClass:';
     function identifiersOfEntriesWithClass (entryClass: pobjc_class): NSArray; message 'identifiersOfEntriesWithClass:';
-    function entriesPassingTest (predicate: SCNSceneSourceEntriesPassingTestCallback): NSArray; message 'entriesPassingTest:'; { available in macos  }
+    function entriesPassingTest (predicate: SCNSceneSourceEntriesPassingTestCallback): NSArray; message 'entriesPassingTest:'; { available in macos 10.9 }
   end;
 {$endif}
 

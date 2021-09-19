@@ -12,6 +12,6 @@ const
   MLFeatureTypeImage = 4;
   MLFeatureTypeMultiArray = 5;
   MLFeatureTypeDictionary = 6;
-  MLFeatureTypeSequence = 7 { available in macos , ios , watchos , tvos  };
+  MLFeatureTypeSequence = 7 { available in macos 10.14, ios 12.0, watchos 5.0, tvos 12.0 };
 {$endif}
 

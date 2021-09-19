@@ -13,15 +13,15 @@ type
     function projectType: PHProjectType; message 'projectType';
     function localizedTitle: NSString; message 'localizedTitle';
     function localizedDescription: NSString; message 'localizedDescription';
-    function localizedAttributedDescription: NSAttributedString; message 'localizedAttributedDescription'; { available in macos  }
+    function localizedAttributedDescription: NSAttributedString; message 'localizedAttributedDescription'; { available in macos 10.14 }
     function image: NSImage; message 'image';
     function subtypeDescriptions: NSArray; message 'subtypeDescriptions';
-    function canProvideSubtypes: objcbool; message 'canProvideSubtypes'; { available in macos  }
+    function canProvideSubtypes: objcbool; message 'canProvideSubtypes'; { available in macos 10.14 }
     function initWithProjectType_title_description_image_subtypeDescriptions (projectType_: PHProjectType; localizedTitle_: NSString; localizedDescription_: NSString; image_: NSImage; subtypeDescriptions_: NSArray): id; message 'initWithProjectType:title:description:image:subtypeDescriptions:'; { NS_DESIGNATED_INITIALIZER }
-    function initWithProjectType_title_attributedDescription_image_subtypeDescriptions (projectType_: PHProjectType; localizedTitle_: NSString; localizedAttributedDescription_: NSAttributedString; image_: NSImage; subtypeDescriptions_: NSArray): id; message 'initWithProjectType:title:attributedDescription:image:subtypeDescriptions:'; { available in macos  }
+    function initWithProjectType_title_attributedDescription_image_subtypeDescriptions (projectType_: PHProjectType; localizedTitle_: NSString; localizedAttributedDescription_: NSAttributedString; image_: NSImage; subtypeDescriptions_: NSArray): id; message 'initWithProjectType:title:attributedDescription:image:subtypeDescriptions:'; { available in macos 10.14 }
     function initWithProjectType_title_description_image (projectType_: PHProjectType; localizedTitle_: NSString; localizedDescription_: NSString; image_: NSImage): id; message 'initWithProjectType:title:description:image:';
-    function initWithProjectType_title_description_image_canProvideSubtypes (projectType_: PHProjectType; localizedTitle_: NSString; localizedDescription_: NSString; image_: NSImage; canProvideSubtypes_: objcbool): id; message 'initWithProjectType:title:description:image:canProvideSubtypes:'; { available in macos  }
-    function initWithProjectType_title_attributedDescription_image_canProvideSubtypes (projectType_: PHProjectType; localizedTitle_: NSString; localizedAttributedDescription_: NSAttributedString; image_: NSImage; canProvideSubtypes_: objcbool): id; message 'initWithProjectType:title:attributedDescription:image:canProvideSubtypes:'; { available in macos  }
+    function initWithProjectType_title_description_image_canProvideSubtypes (projectType_: PHProjectType; localizedTitle_: NSString; localizedDescription_: NSString; image_: NSImage; canProvideSubtypes_: objcbool): id; message 'initWithProjectType:title:description:image:canProvideSubtypes:'; { available in macos 10.14 }
+    function initWithProjectType_title_attributedDescription_image_canProvideSubtypes (projectType_: PHProjectType; localizedTitle_: NSString; localizedAttributedDescription_: NSAttributedString; image_: NSImage; canProvideSubtypes_: objcbool): id; message 'initWithProjectType:title:attributedDescription:image:canProvideSubtypes:'; { available in macos 10.14 }
     function init: id; message 'init';
     class function new_: id; message 'new';
 

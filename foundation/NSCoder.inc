@@ -29,7 +29,7 @@ type
     procedure encodeValueOfObjCType_at (type_: PChar; addr: pointer); message 'encodeValueOfObjCType:at:';
     procedure encodeDataObject (data: NSData); message 'encodeDataObject:';
     function decodeDataObject: NSData; message 'decodeDataObject';
-    procedure decodeValueOfObjCType_at_size (type_: PChar; data: pointer; size: NSUInteger); message 'decodeValueOfObjCType:at:size:'; { available in macos , ios , watchos , tvos  }
+    procedure decodeValueOfObjCType_at_size (type_: PChar; data: pointer; size: NSUInteger); message 'decodeValueOfObjCType:at:size:'; { available in macos 10.13, ios 11.0, watchos 4.0, tvos 11.0 }
     function versionForClassName (className: NSString): NSInteger; message 'versionForClassName:';
   end;
 
@@ -45,7 +45,7 @@ type
     procedure encodeArrayOfObjCType_count_at (type_: PChar; count: NSUInteger; array_: pointer); message 'encodeArrayOfObjCType:count:at:';
     procedure encodeBytes_length (byteaddr: pointer; length: NSUInteger); message 'encodeBytes:length:';
     function decodeObject: id; message 'decodeObject';
-    function decodeTopLevelObjectAndReturnError (error: NSErrorPtr): id; message 'decodeTopLevelObjectAndReturnError:'; { available in macos , ios , watchos , tvos  }
+    function decodeTopLevelObjectAndReturnError (error: NSErrorPtr): id; message 'decodeTopLevelObjectAndReturnError:'; { available in macos 10.11, ios 9.0, watchos 2.0, tvos 9.0 }
     procedure decodeValuesOfObjCTypes (types: PChar); varargs; message 'decodeValuesOfObjCTypes:';
     procedure decodeArrayOfObjCType_count_at (itemType: PChar; count: NSUInteger; array_: pointer); message 'decodeArrayOfObjCType:count:at:';
     function decodeBytesWithReturnedLength (lengthp: NSUIntegerPtr): pointer; message 'decodeBytesWithReturnedLength:';
@@ -68,7 +68,7 @@ type
     procedure encodeBytes_length_forKey (bytes: pbyte; length: NSUInteger; key: NSString); message 'encodeBytes:length:forKey:';
     function containsValueForKey (key: NSString): objcbool; message 'containsValueForKey:';
     function decodeObjectForKey (key: NSString): id; message 'decodeObjectForKey:';
-    function decodeTopLevelObjectForKey_error (key: NSString; error: NSErrorPtr): id; message 'decodeTopLevelObjectForKey:error:'; { available in macos , ios , watchos , tvos  }
+    function decodeTopLevelObjectForKey_error (key: NSString; error: NSErrorPtr): id; message 'decodeTopLevelObjectForKey:error:'; { available in macos 10.11, ios 9.0, watchos 2.0, tvos 9.0 }
     function decodeBoolForKey (key: NSString): objcbool; message 'decodeBoolForKey:';
     function decodeIntForKey (key: NSString): cint; message 'decodeIntForKey:';
     function decodeInt32ForKey (key: NSString): cint32; message 'decodeInt32ForKey:';
@@ -76,22 +76,22 @@ type
     function decodeFloatForKey (key: NSString): single; message 'decodeFloatForKey:';
     function decodeDoubleForKey (key: NSString): double; message 'decodeDoubleForKey:';
     function decodeBytesForKey_returnedLength (key: NSString; lengthp: NSUIntegerPtr): pbyte; message 'decodeBytesForKey:returnedLength:';
-    procedure encodeInteger_forKey (value: NSInteger; key: NSString); message 'encodeInteger:forKey:'; { available in macos , ios , watchos , tvos  }
-    function decodeIntegerForKey (key: NSString): NSInteger; message 'decodeIntegerForKey:'; { available in macos , ios , watchos , tvos  }
-    function requiresSecureCoding: objcbool; message 'requiresSecureCoding'; { available in macos , ios , watchos , tvos  }
-    function decodeObjectOfClass_forKey (aClass: pobjc_class; key: NSString): id; message 'decodeObjectOfClass:forKey:'; { available in macos , ios , watchos , tvos  }
-    function decodeTopLevelObjectOfClass_forKey_error (aClass: pobjc_class; key: NSString; error: NSErrorPtr): id; message 'decodeTopLevelObjectOfClass:forKey:error:'; { available in macos , ios , watchos , tvos  }
-    function decodeArrayOfObjectsOfClass_forKey (cls: pobjc_class; key: NSString): NSArray; message 'decodeArrayOfObjectsOfClass:forKey:'; { available in macos , ios , watchos , tvos  }
-    function decodeDictionaryWithKeysOfClass_objectsOfClass_forKey (keyCls: pobjc_class; objectCls: pobjc_class; key: NSString): NSDictionary; message 'decodeDictionaryWithKeysOfClass:objectsOfClass:forKey:'; { available in macos , ios , watchos , tvos  }
-    function decodeObjectOfClasses_forKey (classes: NSSet; key: NSString): id; message 'decodeObjectOfClasses:forKey:'; { available in macos , ios , watchos , tvos  }
-    function decodeTopLevelObjectOfClasses_forKey_error (classes: NSSet; key: NSString; error: NSErrorPtr): id; message 'decodeTopLevelObjectOfClasses:forKey:error:'; { available in macos , ios , watchos , tvos  }
-    function decodeArrayOfObjectsOfClasses_forKey (classes: NSSet; key: NSString): NSArray; message 'decodeArrayOfObjectsOfClasses:forKey:'; { available in macos , ios , watchos , tvos  }
-    function decodeDictionaryWithKeysOfClasses_objectsOfClasses_forKey (keyClasses: NSSet; objectClasses: NSSet; key: NSString): NSDictionary; message 'decodeDictionaryWithKeysOfClasses:objectsOfClasses:forKey:'; { available in macos , ios , watchos , tvos  }
-    function decodePropertyListForKey (key: NSString): id; message 'decodePropertyListForKey:'; { available in macos , ios , watchos , tvos  }
-    function allowedClasses: NSSet; message 'allowedClasses'; { available in macos , ios , watchos , tvos  }
-    procedure failWithError (error: NSError); message 'failWithError:'; { available in macos , ios , watchos , tvos  }
-    function decodingFailurePolicy: NSDecodingFailurePolicy; message 'decodingFailurePolicy'; { available in macos , ios , watchos , tvos  }
-    function error: NSError; message 'error'; { available in macos , ios , watchos , tvos  }
+    procedure encodeInteger_forKey (value: NSInteger; key: NSString); message 'encodeInteger:forKey:'; { available in macos 10.5, ios 2.0, watchos 2.0, tvos 9.0 }
+    function decodeIntegerForKey (key: NSString): NSInteger; message 'decodeIntegerForKey:'; { available in macos 10.5, ios 2.0, watchos 2.0, tvos 9.0 }
+    function requiresSecureCoding: objcbool; message 'requiresSecureCoding'; { available in macos 10.8, ios 6.0, watchos 2.0, tvos 9.0 }
+    function decodeObjectOfClass_forKey (aClass: pobjc_class; key: NSString): id; message 'decodeObjectOfClass:forKey:'; { available in macos 10.8, ios 6.0, watchos 2.0, tvos 9.0 }
+    function decodeTopLevelObjectOfClass_forKey_error (aClass: pobjc_class; key: NSString; error: NSErrorPtr): id; message 'decodeTopLevelObjectOfClass:forKey:error:'; { available in macos 10.11, ios 9.0, watchos 2.0, tvos 9.0 }
+    function decodeArrayOfObjectsOfClass_forKey (cls: pobjc_class; key: NSString): NSArray; message 'decodeArrayOfObjectsOfClass:forKey:'; { available in macos 11.0, ios 14.0, watchos 7.0, tvos 14.0 }
+    function decodeDictionaryWithKeysOfClass_objectsOfClass_forKey (keyCls: pobjc_class; objectCls: pobjc_class; key: NSString): NSDictionary; message 'decodeDictionaryWithKeysOfClass:objectsOfClass:forKey:'; { available in macos 11.0, ios 14.0, watchos 7.0, tvos 14.0 }
+    function decodeObjectOfClasses_forKey (classes: NSSet; key: NSString): id; message 'decodeObjectOfClasses:forKey:'; { available in macos 10.8, ios 6.0, watchos 2.0, tvos 9.0 }
+    function decodeTopLevelObjectOfClasses_forKey_error (classes: NSSet; key: NSString; error: NSErrorPtr): id; message 'decodeTopLevelObjectOfClasses:forKey:error:'; { available in macos 10.11, ios 9.0, watchos 2.0, tvos 9.0 }
+    function decodeArrayOfObjectsOfClasses_forKey (classes: NSSet; key: NSString): NSArray; message 'decodeArrayOfObjectsOfClasses:forKey:'; { available in macos 11.0, ios 14.0, watchos 7.0, tvos 14.0 }
+    function decodeDictionaryWithKeysOfClasses_objectsOfClasses_forKey (keyClasses: NSSet; objectClasses: NSSet; key: NSString): NSDictionary; message 'decodeDictionaryWithKeysOfClasses:objectsOfClasses:forKey:'; { available in macos 11.0, ios 14.0, watchos 7.0, tvos 14.0 }
+    function decodePropertyListForKey (key: NSString): id; message 'decodePropertyListForKey:'; { available in macos 10.8, ios 6.0, watchos 2.0, tvos 9.0 }
+    function allowedClasses: NSSet; message 'allowedClasses'; { available in macos 10.8, ios 6.0, watchos 2.0, tvos 9.0 }
+    procedure failWithError (error: NSError); message 'failWithError:'; { available in macos 10.11, ios 9.0, watchos 2.0, tvos 9.0 }
+    function decodingFailurePolicy: NSDecodingFailurePolicy; message 'decodingFailurePolicy'; { available in macos 10.11, ios 9.0, watchos 2.0, tvos 9.0 }
+    function error: NSError; message 'error'; { available in macos 10.11, ios 9.0, watchos 2.0, tvos 9.0 }
   end;
 {$endif}
 

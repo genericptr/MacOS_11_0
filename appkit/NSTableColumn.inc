@@ -44,10 +44,10 @@ type
     function sortDescriptorPrototype: NSSortDescriptor; message 'sortDescriptorPrototype';
     procedure setResizingMask(newValue: NSTableColumnResizingOptions); message 'setResizingMask:';
     function resizingMask: NSTableColumnResizingOptions; message 'resizingMask';
-    procedure setHeaderToolTip(newValue: NSString); message 'setHeaderToolTip:'; { available in macos  }
-    function headerToolTip: NSString; message 'headerToolTip'; { available in macos  }
-    procedure setHidden(newValue: objcbool); message 'setHidden:'; { available in macos  }
-    function isHidden: objcbool; message 'isHidden'; { available in macos  }
+    procedure setHeaderToolTip(newValue: NSString); message 'setHeaderToolTip:'; { available in macos 10.5 }
+    function headerToolTip: NSString; message 'headerToolTip'; { available in macos 10.5 }
+    procedure setHidden(newValue: objcbool); message 'setHidden:'; { available in macos 10.5 }
+    function isHidden: objcbool; message 'isHidden'; { available in macos 10.5 }
 
     { Adopted protocols }
     procedure encodeWithCoder (coder: NSCoder); message 'encodeWithCoder:';

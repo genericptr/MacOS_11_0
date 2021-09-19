@@ -21,9 +21,9 @@ type
     procedure setVideoGravity(newValue: AVLayerVideoGravity); message 'setVideoGravity:';
     function videoGravity: AVLayerVideoGravity; message 'videoGravity';
     function isReadyForDisplay: objcbool; message 'isReadyForDisplay';
-    function videoRect: CGRect; message 'videoRect'; { unavailable in watchos }
-    procedure setPixelBufferAttributes(newValue: NSDictionary); message 'setPixelBufferAttributes:'; { unavailable in watchos }
-    function pixelBufferAttributes: NSDictionary; message 'pixelBufferAttributes'; { unavailable in watchos }
+    function videoRect: CGRect; message 'videoRect'; { unavailable in watchos } { available in macos 10.9, ios 7.0, tvos 9.0 }
+    procedure setPixelBufferAttributes(newValue: NSDictionary); message 'setPixelBufferAttributes:'; { unavailable in watchos } { available in macos 10.11, ios 9.0, tvos 9.0 }
+    function pixelBufferAttributes: NSDictionary; message 'pixelBufferAttributes'; { unavailable in watchos } { available in macos 10.11, ios 9.0, tvos 9.0 }
   end;
 {$endif}
 

@@ -38,10 +38,10 @@ type
     function type_: SCNPhysicsBodyType; message 'type';
     procedure setMass(newValue: CGFloat); message 'setMass:';
     function mass: CGFloat; message 'mass';
-    procedure setMomentOfInertia(newValue: SCNVector3); message 'setMomentOfInertia:'; { available in macos , ios  }
-    function momentOfInertia: SCNVector3; message 'momentOfInertia'; { available in macos , ios  }
-    procedure setUsesDefaultMomentOfInertia(newValue: objcbool); message 'setUsesDefaultMomentOfInertia:'; { available in macos , ios  }
-    function usesDefaultMomentOfInertia: objcbool; message 'usesDefaultMomentOfInertia'; { available in macos , ios  }
+    procedure setMomentOfInertia(newValue: SCNVector3); message 'setMomentOfInertia:'; { available in macos 10.11, ios 9.0 }
+    function momentOfInertia: SCNVector3; message 'momentOfInertia'; { available in macos 10.11, ios 9.0 }
+    procedure setUsesDefaultMomentOfInertia(newValue: objcbool); message 'setUsesDefaultMomentOfInertia:'; { available in macos 10.11, ios 9.0 }
+    function usesDefaultMomentOfInertia: objcbool; message 'usesDefaultMomentOfInertia'; { available in macos 10.11, ios 9.0 }
     procedure setCharge(newValue: CGFloat); message 'setCharge:';
     function charge: CGFloat; message 'charge';
     procedure setFriction(newValue: CGFloat); message 'setFriction:';
@@ -71,24 +71,24 @@ type
     function categoryBitMask: NSUInteger; message 'categoryBitMask';
     procedure setCollisionBitMask(newValue: NSUInteger); message 'setCollisionBitMask:';
     function collisionBitMask: NSUInteger; message 'collisionBitMask';
-    procedure setContactTestBitMask(newValue: NSUInteger); message 'setContactTestBitMask:'; { available in macos , ios  }
-    function contactTestBitMask: NSUInteger; message 'contactTestBitMask'; { available in macos , ios  }
-    procedure setAffectedByGravity(newValue: objcbool); message 'setAffectedByGravity:'; { available in macos , ios  }
-    function isAffectedByGravity: objcbool; message 'isAffectedByGravity'; { available in macos , ios  }
+    procedure setContactTestBitMask(newValue: NSUInteger); message 'setContactTestBitMask:'; { available in macos 10.11, ios 9.0 }
+    function contactTestBitMask: NSUInteger; message 'contactTestBitMask'; { available in macos 10.11, ios 9.0 }
+    procedure setAffectedByGravity(newValue: objcbool); message 'setAffectedByGravity:'; { available in macos 10.11, ios 9.0 }
+    function isAffectedByGravity: objcbool; message 'isAffectedByGravity'; { available in macos 10.11, ios 9.0 }
     procedure applyForce_impulse (direction: SCNVector3; impulse: objcbool); message 'applyForce:impulse:';
     procedure applyForce_atPosition_impulse (direction: SCNVector3; position: SCNVector3; impulse: objcbool); message 'applyForce:atPosition:impulse:';
     procedure applyTorque_impulse (torque: SCNVector4; impulse: objcbool); message 'applyTorque:impulse:';
     procedure clearAllForces; message 'clearAllForces';
     procedure resetTransform; message 'resetTransform';
-    procedure setResting (resting: objcbool); message 'setResting:'; { available in macos , ios , tvos , watchos  }
-    procedure setContinuousCollisionDetectionThreshold(newValue: CGFloat); message 'setContinuousCollisionDetectionThreshold:'; { available in macos , ios , tvos , watchos  }
-    function continuousCollisionDetectionThreshold: CGFloat; message 'continuousCollisionDetectionThreshold'; { available in macos , ios , tvos , watchos  }
-    procedure setCenterOfMassOffset(newValue: SCNVector3); message 'setCenterOfMassOffset:'; { available in macos , ios , tvos , watchos  }
-    function centerOfMassOffset: SCNVector3; message 'centerOfMassOffset'; { available in macos , ios , tvos , watchos  }
-    procedure setLinearRestingThreshold(newValue: CGFloat); message 'setLinearRestingThreshold:'; { available in macos , ios , tvos , watchos  }
-    function linearRestingThreshold: CGFloat; message 'linearRestingThreshold'; { available in macos , ios , tvos , watchos  }
-    procedure setAngularRestingThreshold(newValue: CGFloat); message 'setAngularRestingThreshold:'; { available in macos , ios , tvos , watchos  }
-    function angularRestingThreshold: CGFloat; message 'angularRestingThreshold'; { available in macos , ios , tvos , watchos  }
+    procedure setResting (resting: objcbool); message 'setResting:'; { available in macos 10.14, ios 12.0, tvos 12.0, watchos 5.0 }
+    procedure setContinuousCollisionDetectionThreshold(newValue: CGFloat); message 'setContinuousCollisionDetectionThreshold:'; { available in macos 10.14, ios 12.0, tvos 12.0, watchos 5.0 }
+    function continuousCollisionDetectionThreshold: CGFloat; message 'continuousCollisionDetectionThreshold'; { available in macos 10.14, ios 12.0, tvos 12.0, watchos 5.0 }
+    procedure setCenterOfMassOffset(newValue: SCNVector3); message 'setCenterOfMassOffset:'; { available in macos 10.14, ios 12.0, tvos 12.0, watchos 5.0 }
+    function centerOfMassOffset: SCNVector3; message 'centerOfMassOffset'; { available in macos 10.14, ios 12.0, tvos 12.0, watchos 5.0 }
+    procedure setLinearRestingThreshold(newValue: CGFloat); message 'setLinearRestingThreshold:'; { available in macos 10.14, ios 12.0, tvos 12.0, watchos 5.0 }
+    function linearRestingThreshold: CGFloat; message 'linearRestingThreshold'; { available in macos 10.14, ios 12.0, tvos 12.0, watchos 5.0 }
+    procedure setAngularRestingThreshold(newValue: CGFloat); message 'setAngularRestingThreshold:'; { available in macos 10.14, ios 12.0, tvos 12.0, watchos 5.0 }
+    function angularRestingThreshold: CGFloat; message 'angularRestingThreshold'; { available in macos 10.14, ios 12.0, tvos 12.0, watchos 5.0 }
 
     { Adopted protocols }
     function copyWithZone (zone: NSZonePtr): id; message 'copyWithZone:';

@@ -13,12 +13,12 @@ type
 const
   CKRecordZoneCapabilityFetchChanges = 1 shl 0;
   CKRecordZoneCapabilityAtomic = 1 shl 1;
-  CKRecordZoneCapabilitySharing = 1 shl 2 { available in macos , ios , tvos  };
+  CKRecordZoneCapabilitySharing = 1 shl 2 { available in macos 10.12, ios 10.0, tvos 10.0 };
 {$endif}
 
 {$ifdef EXTERNAL_SYMBOLS}
 var
-  CKRecordZoneDefaultName: NSString { available in macos , ios , watchos  }; cvar; external;
+  CKRecordZoneDefaultName: NSString { available in macos 10.10, ios 8.0, watchos 3.0 }; cvar; external;
 {$endif}
 
 {$ifdef CLASSES}

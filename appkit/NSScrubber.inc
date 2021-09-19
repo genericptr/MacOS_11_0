@@ -19,19 +19,19 @@ type
 type
   NSScrubberDataSourceProtocol = objcprotocol external name 'NSScrubberDataSource' (NSObjectProtocol)
   required
-    function numberOfItemsForScrubber (scrubber: NSScrubber): NSInteger; message 'numberOfItemsForScrubber:'; { available in macos  }
-    function scrubber_viewForItemAtIndex (scrubber: NSScrubber; index: NSInteger): NSScrubberItemView; message 'scrubber:viewForItemAtIndex:'; { available in macos  }
+    function numberOfItemsForScrubber (scrubber: NSScrubber): NSInteger; message 'numberOfItemsForScrubber:'; { available in macos 10.12.2 }
+    function scrubber_viewForItemAtIndex (scrubber: NSScrubber; index: NSInteger): NSScrubberItemView; message 'scrubber:viewForItemAtIndex:'; { available in macos 10.12.2 }
   end;
 
 type
   NSScrubberDelegateProtocol = objcprotocol external name 'NSScrubberDelegate' (NSObjectProtocol)
   optional
-    procedure scrubber_didSelectItemAtIndex (scrubber: NSScrubber; selectedIndex: NSInteger); message 'scrubber:didSelectItemAtIndex:'; { available in macos  }
-    procedure scrubber_didHighlightItemAtIndex (scrubber: NSScrubber; highlightedIndex: NSInteger); message 'scrubber:didHighlightItemAtIndex:'; { available in macos  }
-    procedure scrubber_didChangeVisibleRange (scrubber: NSScrubber; visibleRange: NSRange); message 'scrubber:didChangeVisibleRange:'; { available in macos  }
-    procedure didBeginInteractingWithScrubber (scrubber: NSScrubber); message 'didBeginInteractingWithScrubber:'; { available in macos  }
-    procedure didFinishInteractingWithScrubber (scrubber: NSScrubber); message 'didFinishInteractingWithScrubber:'; { available in macos  }
-    procedure didCancelInteractingWithScrubber (scrubber: NSScrubber); message 'didCancelInteractingWithScrubber:'; { available in macos  }
+    procedure scrubber_didSelectItemAtIndex (scrubber: NSScrubber; selectedIndex: NSInteger); message 'scrubber:didSelectItemAtIndex:'; { available in macos 10.12.2 }
+    procedure scrubber_didHighlightItemAtIndex (scrubber: NSScrubber; highlightedIndex: NSInteger); message 'scrubber:didHighlightItemAtIndex:'; { available in macos 10.12.2 }
+    procedure scrubber_didChangeVisibleRange (scrubber: NSScrubber; visibleRange: NSRange); message 'scrubber:didChangeVisibleRange:'; { available in macos 10.12.2 }
+    procedure didBeginInteractingWithScrubber (scrubber: NSScrubber); message 'didBeginInteractingWithScrubber:'; { available in macos 10.12.2 }
+    procedure didFinishInteractingWithScrubber (scrubber: NSScrubber); message 'didFinishInteractingWithScrubber:'; { available in macos 10.12.2 }
+    procedure didCancelInteractingWithScrubber (scrubber: NSScrubber); message 'didCancelInteractingWithScrubber:'; { available in macos 10.12.2 }
   end;
 {$endif}
 

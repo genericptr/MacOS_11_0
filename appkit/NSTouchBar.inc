@@ -9,8 +9,8 @@ type
 
 {$ifdef TYPES}
 type
-  NSTouchBarCustomizationIdentifier = NSString { available in ios  };
-  NSTouchBarCustomizationIdentifierPtr = ^NSTouchBarCustomizationIdentifier { available in ios  };
+  NSTouchBarCustomizationIdentifier = NSString { available in ios 13.0 };
+  NSTouchBarCustomizationIdentifierPtr = ^NSTouchBarCustomizationIdentifier { available in ios 13.0 };
 {$endif}
 
 {$ifdef CLASSES}
@@ -39,8 +39,8 @@ type
     function delegate: NSTouchBarDelegateProtocol; message 'delegate';
     function itemForIdentifier (identifier: NSTouchBarItemIdentifier): NSTouchBarItem; message 'itemForIdentifier:';
     function isVisible: objcbool; message 'isVisible';
-    class procedure setAutomaticCustomizeTouchBarMenuItemEnabled(newValue: objcbool); message 'setAutomaticCustomizeTouchBarMenuItemEnabled:'; { available in macos , ios  }
-    class function isAutomaticCustomizeTouchBarMenuItemEnabled: objcbool; message 'isAutomaticCustomizeTouchBarMenuItemEnabled'; { available in macos , ios  }
+    class procedure setAutomaticCustomizeTouchBarMenuItemEnabled(newValue: objcbool); message 'setAutomaticCustomizeTouchBarMenuItemEnabled:'; { available in macos 10.15, ios 13.0 }
+    class function isAutomaticCustomizeTouchBarMenuItemEnabled: objcbool; message 'isAutomaticCustomizeTouchBarMenuItemEnabled'; { available in macos 10.15, ios 13.0 }
 
     { Adopted protocols }
     procedure encodeWithCoder (coder: NSCoder); message 'encodeWithCoder:';
@@ -58,7 +58,7 @@ type
 type
   NSTouchBarProviderProtocol = objcprotocol external name 'NSTouchBarProvider' (NSObjectProtocol)
   required
-    function touchBar: NSTouchBar; message 'touchBar'; { available in macos  }
+    function touchBar: NSTouchBar; message 'touchBar'; { available in macos 10.12.2 }
   end;
 {$endif}
 
@@ -67,16 +67,16 @@ type
 
 type
   NSTouchBarProvider = objccategory external (NSResponder)
-    procedure setTouchBar(newValue: NSTouchBar); message 'setTouchBar:'; { available in macos  }
-    function touchBar: NSTouchBar; message 'touchBar'; { available in macos  }
-    function makeTouchBar: NSTouchBar; message 'makeTouchBar'; { available in macos  }
+    procedure setTouchBar(newValue: NSTouchBar); message 'setTouchBar:'; { available in macos 10.12.2 }
+    function touchBar: NSTouchBar; message 'touchBar'; { available in macos 10.12.2 }
+    function makeTouchBar: NSTouchBar; message 'makeTouchBar'; { available in macos 10.12.2 }
   end;
 
 type
   NSTouchBarCustomization = objccategory external (NSApplication)
-    procedure setAutomaticCustomizeTouchBarMenuItemEnabled(newValue: objcbool); message 'setAutomaticCustomizeTouchBarMenuItemEnabled:'; { available in macos  }
-    function isAutomaticCustomizeTouchBarMenuItemEnabled: objcbool; message 'isAutomaticCustomizeTouchBarMenuItemEnabled'; { available in macos  }
-    procedure toggleTouchBarCustomizationPalette (sender: id); message 'toggleTouchBarCustomizationPalette:'; { available in macos  }
+    procedure setAutomaticCustomizeTouchBarMenuItemEnabled(newValue: objcbool); message 'setAutomaticCustomizeTouchBarMenuItemEnabled:'; { available in macos 10.12.2 }
+    function isAutomaticCustomizeTouchBarMenuItemEnabled: objcbool; message 'isAutomaticCustomizeTouchBarMenuItemEnabled'; { available in macos 10.12.2 }
+    procedure toggleTouchBarCustomizationPalette (sender: id); message 'toggleTouchBarCustomizationPalette:'; { available in macos 10.12.2 }
   end;
 {$endif}
 

@@ -37,9 +37,9 @@ type
 type
   NSSeguePerformingProtocol = objcprotocol external name 'NSSeguePerforming' (NSObjectProtocol)
   optional
-    procedure prepareForSegue_sender (segue: NSStoryboardSegue; sender: id); message 'prepareForSegue:sender:'; { available in macos  }
-    procedure performSegueWithIdentifier_sender (identifier: NSStoryboardSegueIdentifier; sender: id); message 'performSegueWithIdentifier:sender:'; { available in macos  }
-    function shouldPerformSegueWithIdentifier_sender (identifier: NSStoryboardSegueIdentifier; sender: id): objcbool; message 'shouldPerformSegueWithIdentifier:sender:'; { available in macos  }
+    procedure prepareForSegue_sender (segue: NSStoryboardSegue; sender: id); message 'prepareForSegue:sender:'; { available in macos 10.10 }
+    procedure performSegueWithIdentifier_sender (identifier: NSStoryboardSegueIdentifier; sender: id); message 'performSegueWithIdentifier:sender:'; { available in macos 10.10 }
+    function shouldPerformSegueWithIdentifier_sender (identifier: NSStoryboardSegueIdentifier; sender: id): objcbool; message 'shouldPerformSegueWithIdentifier:sender:'; { available in macos 10.10 }
   end;
 {$endif}
 

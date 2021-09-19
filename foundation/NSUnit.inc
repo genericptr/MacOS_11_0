@@ -141,10 +141,10 @@ type
     class function hours: NSUnitDuration; message 'hours';
     class function minutes: NSUnitDuration; message 'minutes';
     class function seconds: NSUnitDuration; message 'seconds';
-    class function milliseconds: NSUnitDuration; message 'milliseconds'; { available in macos , ios , tvos , watchos  }
-    class function microseconds: NSUnitDuration; message 'microseconds'; { available in macos , ios , tvos , watchos  }
-    class function nanoseconds: NSUnitDuration; message 'nanoseconds'; { available in macos , ios , tvos , watchos  }
-    class function picoseconds: NSUnitDuration; message 'picoseconds'; { available in macos , ios , tvos , watchos  }
+    class function milliseconds: NSUnitDuration; message 'milliseconds'; { available in macos 10.15, ios 13.0, tvos 13.0, watchos 6.0 }
+    class function microseconds: NSUnitDuration; message 'microseconds'; { available in macos 10.15, ios 13.0, tvos 13.0, watchos 6.0 }
+    class function nanoseconds: NSUnitDuration; message 'nanoseconds'; { available in macos 10.15, ios 13.0, tvos 13.0, watchos 6.0 }
+    class function picoseconds: NSUnitDuration; message 'picoseconds'; { available in macos 10.15, ios 13.0, tvos 13.0, watchos 6.0 }
   end;
 
 type
@@ -209,7 +209,7 @@ type
     class function millihertz: NSUnitFrequency; message 'millihertz';
     class function microhertz: NSUnitFrequency; message 'microhertz';
     class function nanohertz: NSUnitFrequency; message 'nanohertz';
-    class function framesPerSecond: NSUnitFrequency; message 'framesPerSecond'; { available in macos , ios , tvos , watchos  }
+    class function framesPerSecond: NSUnitFrequency; message 'framesPerSecond'; { available in macos 10.15, ios 13.0, tvos 13.0, watchos 6.0 }
   end;
 
 type

@@ -26,7 +26,7 @@ type
 
 {$ifdef EXTERNAL_SYMBOLS}
 var
-  NSCollectionElementKindInterItemGapIndicator: NSCollectionViewSupplementaryElementKind { available in macos  }; cvar; external;
+  NSCollectionElementKindInterItemGapIndicator: NSCollectionViewSupplementaryElementKind { available in macos 10.11 }; cvar; external;
 {$endif}
 
 {$ifdef CLASSES}

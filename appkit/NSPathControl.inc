@@ -11,23 +11,23 @@ type
 type
   NSPathControl = objcclass external (NSControl)
   public
-    procedure setEditable(newValue: objcbool); message 'setEditable:'; { available in macos  }
-    function isEditable: objcbool; message 'isEditable'; { available in macos  }
-    procedure setAllowedTypes(newValue: NSArray); message 'setAllowedTypes:'; { available in macos  }
-    function allowedTypes: NSArray; message 'allowedTypes'; { available in macos  }
-    procedure setPlaceholderString(newValue: NSString); message 'setPlaceholderString:'; { available in macos  }
-    function placeholderString: NSString; message 'placeholderString'; { available in macos  }
-    procedure setPlaceholderAttributedString(newValue: NSAttributedString); message 'setPlaceholderAttributedString:'; { available in macos  }
-    function placeholderAttributedString: NSAttributedString; message 'placeholderAttributedString'; { available in macos  }
+    procedure setEditable(newValue: objcbool); message 'setEditable:'; { available in macos 10.10 }
+    function isEditable: objcbool; message 'isEditable'; { available in macos 10.10 }
+    procedure setAllowedTypes(newValue: NSArray); message 'setAllowedTypes:'; { available in macos 10.10 }
+    function allowedTypes: NSArray; message 'allowedTypes'; { available in macos 10.10 }
+    procedure setPlaceholderString(newValue: NSString); message 'setPlaceholderString:'; { available in macos 10.10 }
+    function placeholderString: NSString; message 'placeholderString'; { available in macos 10.10 }
+    procedure setPlaceholderAttributedString(newValue: NSAttributedString); message 'setPlaceholderAttributedString:'; { available in macos 10.10 }
+    function placeholderAttributedString: NSAttributedString; message 'placeholderAttributedString'; { available in macos 10.10 }
     procedure setURL(newValue: NSURL); message 'setURL:';
     function URL: NSURL; message 'URL';
     procedure setDoubleAction(newValue: SEL); message 'setDoubleAction:';
     function doubleAction: SEL; message 'doubleAction';
     procedure setPathStyle(newValue: NSPathStyle); message 'setPathStyle:';
     function pathStyle: NSPathStyle; message 'pathStyle';
-    function clickedPathItem: NSPathControlItem; message 'clickedPathItem'; { available in macos  }
-    procedure setPathItems(newValue: NSArray); message 'setPathItems:'; { available in macos  }
-    function pathItems: NSArray; message 'pathItems'; { available in macos  }
+    function clickedPathItem: NSPathControlItem; message 'clickedPathItem'; { available in macos 10.10 }
+    procedure setPathItems(newValue: NSArray); message 'setPathItems:'; { available in macos 10.10 }
+    function pathItems: NSArray; message 'pathItems'; { available in macos 10.10 }
     procedure setBackgroundColor(newValue: NSColor); message 'setBackgroundColor:';
     function backgroundColor: NSColor; message 'backgroundColor';
     procedure setDelegate(newValue: NSPathControlDelegateProtocol); message 'setDelegate:';

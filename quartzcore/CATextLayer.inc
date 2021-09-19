@@ -41,14 +41,14 @@ type
 
 {$ifdef EXTERNAL_SYMBOLS}
 var
-  kCATruncationNone: CATextLayerTruncationMode { available in macos , ios , watchos , tvos  }; cvar; external;
-  kCATruncationStart: CATextLayerTruncationMode { available in macos , ios , watchos , tvos  }; cvar; external;
-  kCATruncationEnd: CATextLayerTruncationMode { available in macos , ios , watchos , tvos  }; cvar; external;
-  kCATruncationMiddle: CATextLayerTruncationMode { available in macos , ios , watchos , tvos  }; cvar; external;
-  kCAAlignmentNatural: CATextLayerAlignmentMode { available in macos , ios , watchos , tvos  }; cvar; external;
-  kCAAlignmentLeft: CATextLayerAlignmentMode { available in macos , ios , watchos , tvos  }; cvar; external;
-  kCAAlignmentRight: CATextLayerAlignmentMode { available in macos , ios , watchos , tvos  }; cvar; external;
-  kCAAlignmentCenter: CATextLayerAlignmentMode { available in macos , ios , watchos , tvos  }; cvar; external;
-  kCAAlignmentJustified: CATextLayerAlignmentMode { available in macos , ios , watchos , tvos  }; cvar; external;
+  kCATruncationNone: CATextLayerTruncationMode { available in macos 10.5, ios 3.2, watchos 2.0, tvos 9.0 }; cvar; external;
+  kCATruncationStart: CATextLayerTruncationMode { available in macos 10.5, ios 3.2, watchos 2.0, tvos 9.0 }; cvar; external;
+  kCATruncationEnd: CATextLayerTruncationMode { available in macos 10.5, ios 3.2, watchos 2.0, tvos 9.0 }; cvar; external;
+  kCATruncationMiddle: CATextLayerTruncationMode { available in macos 10.5, ios 3.2, watchos 2.0, tvos 9.0 }; cvar; external;
+  kCAAlignmentNatural: CATextLayerAlignmentMode { available in macos 10.5, ios 3.2, watchos 2.0, tvos 9.0 }; cvar; external;
+  kCAAlignmentLeft: CATextLayerAlignmentMode { available in macos 10.5, ios 3.2, watchos 2.0, tvos 9.0 }; cvar; external;
+  kCAAlignmentRight: CATextLayerAlignmentMode { available in macos 10.5, ios 3.2, watchos 2.0, tvos 9.0 }; cvar; external;
+  kCAAlignmentCenter: CATextLayerAlignmentMode { available in macos 10.5, ios 3.2, watchos 2.0, tvos 9.0 }; cvar; external;
+  kCAAlignmentJustified: CATextLayerAlignmentMode { available in macos 10.5, ios 3.2, watchos 2.0, tvos 9.0 }; cvar; external;
 {$endif}
 

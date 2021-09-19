@@ -67,10 +67,10 @@ type
     function supplementaryViewProvider: NSCollectionViewDiffableDataSourceSupplementaryViewProvider; message 'supplementaryViewProvider';
 
     { Adopted protocols }
-    function collectionView_itemForRepresentedObjectAtIndexPath (collectionView: NSCollectionView; indexPath: NSIndexPath): NSCollectionViewItem; message 'collectionView:itemForRepresentedObjectAtIndexPath:'; { available in macos  }
-    function collectionView_numberOfItemsInSection (collectionView: NSCollectionView; section: NSInteger): NSInteger; message 'collectionView:numberOfItemsInSection:'; { available in macos  }
+    function collectionView_itemForRepresentedObjectAtIndexPath (collectionView: NSCollectionView; indexPath: NSIndexPath): NSCollectionViewItem; message 'collectionView:itemForRepresentedObjectAtIndexPath:'; { available in macos 10.11 }
+    function collectionView_numberOfItemsInSection (collectionView: NSCollectionView; section: NSInteger): NSInteger; message 'collectionView:numberOfItemsInSection:'; { available in macos 10.11 }
     function collectionView_viewForSupplementaryElementOfKind_atIndexPath (collectionView: NSCollectionView; kind: NSCollectionViewSupplementaryElementKind; indexPath: NSIndexPath): NSView; message 'collectionView:viewForSupplementaryElementOfKind:atIndexPath:';
-    function numberOfSectionsInCollectionView (collectionView: NSCollectionView): NSInteger; message 'numberOfSectionsInCollectionView:'; { available in macos  }
+    function numberOfSectionsInCollectionView (collectionView: NSCollectionView): NSInteger; message 'numberOfSectionsInCollectionView:'; { available in macos 10.11 }
   end;
 {$endif}
 

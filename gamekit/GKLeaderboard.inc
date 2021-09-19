@@ -60,17 +60,17 @@ type
   public
     function title: NSString; message 'title';
     function groupIdentifier: NSString; message 'groupIdentifier'; { available in 10_9, 6_0 }
-    function baseLeaderboardID: NSString; message 'baseLeaderboardID'; { available in ios , macos , tvos , watchos  }
-    function type_: GKLeaderboardType; message 'type'; { available in ios , macos , tvos , watchos  }
-    function startDate: NSDate; message 'startDate'; { available in ios , macos , tvos , watchos  }
-    function nextStartDate: NSDate; message 'nextStartDate'; { available in ios , macos , tvos , watchos  }
-    function duration: NSTimeInterval; message 'duration'; { available in ios , macos , tvos , watchos  }
+    function baseLeaderboardID: NSString; message 'baseLeaderboardID'; { available in ios 14.0, macos 11.0, tvos 14.0, watchos 7.0 }
+    function type_: GKLeaderboardType; message 'type'; { available in ios 14.0, macos 11.0, tvos 14.0, watchos 7.0 }
+    function startDate: NSDate; message 'startDate'; { available in ios 14.0, macos 11.0, tvos 14.0, watchos 7.0 }
+    function nextStartDate: NSDate; message 'nextStartDate'; { available in ios 14.0, macos 11.0, tvos 14.0, watchos 7.0 }
+    function duration: NSTimeInterval; message 'duration'; { available in ios 14.0, macos 11.0, tvos 14.0, watchos 7.0 }
     class procedure loadLeaderboardsWithIDs_completionHandler (leaderboardIDs: NSArray; completionHandler: GKLeaderboardLoadLeaderboardsWithIDsCallback); message 'loadLeaderboardsWithIDs:completionHandler:';
-    procedure loadPreviousOccurrenceWithCompletionHandler (completionHandler: GKLeaderboardLoadPreviousOccurrenceWithCompletionHandlerCallback); message 'loadPreviousOccurrenceWithCompletionHandler:'; { available in ios , macos , tvos , watchos  }
-    class procedure submitScore_context_player_leaderboardIDs_completionHandler (score: NSInteger; context: NSUInteger; player: GKPlayer; leaderboardIDs: NSArray; completionHandler: GKLeaderboardSubmitScoreCallback); message 'submitScore:context:player:leaderboardIDs:completionHandler:'; { available in ios , macos , tvos , watchos  }
-    procedure submitScore_context_player_completionHandler (score: NSInteger; context: NSUInteger; player: GKPlayer; completionHandler: GKLeaderboardSubmitScoreCallback); message 'submitScore:context:player:completionHandler:'; { available in ios , macos , tvos , watchos  }
-    procedure loadEntriesForPlayerScope_timeScope_range_completionHandler (playerScope: GKLeaderboardPlayerScope; timeScope: GKLeaderboardTimeScope; range: NSRange; completionHandler: GKLeaderboardLoadEntriesForPlayerScopeCallback); message 'loadEntriesForPlayerScope:timeScope:range:completionHandler:'; { available in ios , macos , tvos , watchos  }
-    procedure loadEntriesForPlayers_timeScope_completionHandler (players: NSArray; timeScope: GKLeaderboardTimeScope; completionHandler: GKLeaderboardLoadEntriesForPlayersCallback); message 'loadEntriesForPlayers:timeScope:completionHandler:'; { available in ios , macos , tvos , watchos  }
+    procedure loadPreviousOccurrenceWithCompletionHandler (completionHandler: GKLeaderboardLoadPreviousOccurrenceWithCompletionHandlerCallback); message 'loadPreviousOccurrenceWithCompletionHandler:'; { available in ios 14.0, macos 11.0, tvos 14.0, watchos 7.0 }
+    class procedure submitScore_context_player_leaderboardIDs_completionHandler (score: NSInteger; context: NSUInteger; player: GKPlayer; leaderboardIDs: NSArray; completionHandler: GKLeaderboardSubmitScoreCallback); message 'submitScore:context:player:leaderboardIDs:completionHandler:'; { available in ios 14.0, macos 11.0, tvos 14.0, watchos 7.0 }
+    procedure submitScore_context_player_completionHandler (score: NSInteger; context: NSUInteger; player: GKPlayer; completionHandler: GKLeaderboardSubmitScoreCallback); message 'submitScore:context:player:completionHandler:'; { available in ios 14.0, macos 11.0, tvos 14.0, watchos 7.0 }
+    procedure loadEntriesForPlayerScope_timeScope_range_completionHandler (playerScope: GKLeaderboardPlayerScope; timeScope: GKLeaderboardTimeScope; range: NSRange; completionHandler: GKLeaderboardLoadEntriesForPlayerScopeCallback); message 'loadEntriesForPlayerScope:timeScope:range:completionHandler:'; { available in ios 14.0, macos 11.0, tvos 14.0, watchos 7.0 }
+    procedure loadEntriesForPlayers_timeScope_completionHandler (players: NSArray; timeScope: GKLeaderboardTimeScope; completionHandler: GKLeaderboardLoadEntriesForPlayersCallback); message 'loadEntriesForPlayers:timeScope:completionHandler:'; { available in ios 14.0, macos 11.0, tvos 14.0, watchos 7.0 }
   end;
 
 

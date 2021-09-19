@@ -24,13 +24,13 @@ type
   CKOperation = objcclass external (NSOperation)
   public
     function init: id; message 'init'; { NS_DESIGNATED_INITIALIZER }
-    procedure setConfiguration(newValue: CKOperationConfiguration); message 'setConfiguration:'; { available in macos , ios , tvos , watchos  }
-    function configuration: CKOperationConfiguration; message 'configuration'; { available in macos , ios , tvos , watchos  }
-    procedure setGroup(newValue: CKOperationGroup); message 'setGroup:'; { available in macos , ios , tvos , watchos  }
-    function group: CKOperationGroup; message 'group'; { available in macos , ios , tvos , watchos  }
-    function operationID: CKOperationID; message 'operationID'; { available in macos , ios , tvos , watchos  }
-    procedure setLongLivedOperationWasPersistedBlock(newValue: CKOperationLongLivedOperationWasPersistedBlockCallback); message 'setLongLivedOperationWasPersistedBlock:'; { available in macos , ios , tvos , watchos  }
-    function longLivedOperationWasPersistedBlock: CKOperationLongLivedOperationWasPersistedBlockCallback; message 'longLivedOperationWasPersistedBlock'; { available in macos , ios , tvos , watchos  }
+    procedure setConfiguration(newValue: CKOperationConfiguration); message 'setConfiguration:'; { available in macos 10.13, ios 11.0, tvos 11.0, watchos 4.0 }
+    function configuration: CKOperationConfiguration; message 'configuration'; { available in macos 10.13, ios 11.0, tvos 11.0, watchos 4.0 }
+    procedure setGroup(newValue: CKOperationGroup); message 'setGroup:'; { available in macos 10.13, ios 11.0, tvos 11.0, watchos 4.0 }
+    function group: CKOperationGroup; message 'group'; { available in macos 10.13, ios 11.0, tvos 11.0, watchos 4.0 }
+    function operationID: CKOperationID; message 'operationID'; { available in macos 10.12, ios 9.3, tvos 9.2, watchos 3.0 }
+    procedure setLongLivedOperationWasPersistedBlock(newValue: CKOperationLongLivedOperationWasPersistedBlockCallback); message 'setLongLivedOperationWasPersistedBlock:'; { available in macos 10.12, ios 9.3, tvos 9.2, watchos 3.0 }
+    function longLivedOperationWasPersistedBlock: CKOperationLongLivedOperationWasPersistedBlockCallback; message 'longLivedOperationWasPersistedBlock'; { available in macos 10.12, ios 9.3, tvos 9.2, watchos 3.0 }
   end;
 
 type

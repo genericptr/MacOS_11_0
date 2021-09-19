@@ -25,7 +25,7 @@ const
   PHAuthorizationStatusRestricted = 1;
   PHAuthorizationStatusDenied = 2;
   PHAuthorizationStatusAuthorized = 3;
-  PHAuthorizationStatusLimited = 4 { available in ios  };
+  PHAuthorizationStatusLimited = 4 { available in ios 14 };
 
 type
   PHAccessLevel = NSInteger;
@@ -45,7 +45,7 @@ type
 
 type
   PHPhotoLibraryAvailabilityObserverProtocol = objcprotocol external name 'PHPhotoLibraryAvailabilityObserver' (NSObjectProtocol)
-    procedure photoLibraryDidBecomeUnavailable (photoLibrary: PHPhotoLibrary); message 'photoLibraryDidBecomeUnavailable:'; { available in macos , ios , tvos  }
+    procedure photoLibraryDidBecomeUnavailable (photoLibrary: PHPhotoLibrary); message 'photoLibraryDidBecomeUnavailable:'; { available in macos 10.15, ios 13, tvos 13 }
   end;
 {$endif}
 
@@ -55,13 +55,13 @@ type
   PHPhotoLibrary = objcclass external (NSObject)
   public
     class function sharedPhotoLibrary: PHPhotoLibrary; message 'sharedPhotoLibrary';
-    class function authorizationStatusForAccessLevel (accessLevel: PHAccessLevel): PHAuthorizationStatus; message 'authorizationStatusForAccessLevel:'; { available in macosx , ios , tvos  }
-    class procedure requestAuthorizationForAccessLevel_handler (accessLevel: PHAccessLevel; handler: PHPhotoLibraryRequestAuthorizationForAccessLevelCallback); message 'requestAuthorizationForAccessLevel:handler:'; { available in macosx , ios , tvos  }
+    class function authorizationStatusForAccessLevel (accessLevel: PHAccessLevel): PHAuthorizationStatus; message 'authorizationStatusForAccessLevel:'; { available in macosx 11.0, ios 14, tvos 14 }
+    class procedure requestAuthorizationForAccessLevel_handler (accessLevel: PHAccessLevel; handler: PHPhotoLibraryRequestAuthorizationForAccessLevelCallback); message 'requestAuthorizationForAccessLevel:handler:'; { available in macosx 11.0, ios 14, tvos 14 }
     class function authorizationStatus: PHAuthorizationStatus; message 'authorizationStatus'; deprecated 'replace with +authorizationStatusForAccessLevel:';
     class procedure requestAuthorization (handler: PHPhotoLibraryRequestAuthorizationCallback); message 'requestAuthorization:'; deprecated 'replace with +requestAuthorizationForAccessLevel:handler:';
-    function unavailabilityReason: NSError; message 'unavailabilityReason'; { available in macos , ios , tvos  }
-    procedure registerAvailabilityObserver (observer: PHPhotoLibraryAvailabilityObserverProtocol); message 'registerAvailabilityObserver:'; { available in macos , ios , tvos  }
-    procedure unregisterAvailabilityObserver (observer: PHPhotoLibraryAvailabilityObserverProtocol); message 'unregisterAvailabilityObserver:'; { available in macos , ios , tvos  }
+    function unavailabilityReason: NSError; message 'unavailabilityReason'; { available in macos 10.15, ios 13, tvos 13 }
+    procedure registerAvailabilityObserver (observer: PHPhotoLibraryAvailabilityObserverProtocol); message 'registerAvailabilityObserver:'; { available in macos 10.15, ios 13, tvos 13 }
+    procedure unregisterAvailabilityObserver (observer: PHPhotoLibraryAvailabilityObserverProtocol); message 'unregisterAvailabilityObserver:'; { available in macos 10.15, ios 13, tvos 13 }
     procedure performChanges_completionHandler (changeBlock: dispatch_block_t; completionHandler: PHPhotoLibraryPerformChangesCallback); message 'performChanges:completionHandler:';
     function performChangesAndWait_error (changeBlock: dispatch_block_t; error: NSErrorPtr): objcbool; message 'performChangesAndWait:error:';
     procedure registerChangeObserver (observer: PHPhotoLibraryChangeObserverProtocol); message 'registerChangeObserver:';

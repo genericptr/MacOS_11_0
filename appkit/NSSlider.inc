@@ -10,8 +10,8 @@ type
 type
   NSSlider = objcclass external (NSControl, NSAccessibilitySliderProtocol)
   public
-    procedure setSliderType(newValue: NSSliderType); message 'setSliderType:'; { available in macos  }
-    function sliderType: NSSliderType; message 'sliderType'; { available in macos  }
+    procedure setSliderType(newValue: NSSliderType); message 'setSliderType:'; { available in macos 10.10 }
+    function sliderType: NSSliderType; message 'sliderType'; { available in macos 10.10 }
     procedure setMinValue(newValue: double); message 'setMinValue:';
     function minValue: double; message 'minValue';
     procedure setMaxValue(newValue: double); message 'setMaxValue:';
@@ -20,16 +20,16 @@ type
     function altIncrementValue: double; message 'altIncrementValue';
     function knobThickness: CGFloat; message 'knobThickness';
     function acceptsFirstMouse (event: NSEvent): objcbool; message 'acceptsFirstMouse:';
-    procedure setVertical(newValue: objcbool); message 'setVertical:'; { available in macos  }
-    function isVertical: objcbool; message 'isVertical'; { available in macos  }
-    procedure setTrackFillColor(newValue: NSColor); message 'setTrackFillColor:'; { available in macos  }
-    function trackFillColor: NSColor; message 'trackFillColor'; { available in macos  }
+    procedure setVertical(newValue: objcbool); message 'setVertical:'; { available in macos 10.12 }
+    function isVertical: objcbool; message 'isVertical'; { available in macos 10.12 }
+    procedure setTrackFillColor(newValue: NSColor); message 'setTrackFillColor:'; { available in macos 10.12.2 }
+    function trackFillColor: NSColor; message 'trackFillColor'; { available in macos 10.12.2 }
   end;
 
 
 type
   NSSliderVerticalGetter = objccategory external (NSSlider)
-    function isVertical: objcbool; message 'isVertical'; { available in macos  }
+    function isVertical: objcbool; message 'isVertical'; { available in macos 10.0 }
   end;
 
 type
@@ -48,8 +48,8 @@ type
 
 type
   NSSliderConvenience = objccategory external (NSSlider)
-    class function sliderWithTarget_action (target_: id; action_: SEL): id; message 'sliderWithTarget:action:'; { available in macos  }
-    class function sliderWithValue_minValue_maxValue_target_action (value: double; minValue_: double; maxValue_: double; target_: id; action_: SEL): id; message 'sliderWithValue:minValue:maxValue:target:action:'; { available in macos  }
+    class function sliderWithTarget_action (target_: id; action_: SEL): id; message 'sliderWithTarget:action:'; { available in macos 10.12 }
+    class function sliderWithValue_minValue_maxValue_target_action (value: double; minValue_: double; maxValue_: double; target_: id; action_: SEL): id; message 'sliderWithValue:minValue:maxValue:target:action:'; { available in macos 10.12 }
   end;
 
 type

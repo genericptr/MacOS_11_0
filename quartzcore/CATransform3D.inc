@@ -16,23 +16,23 @@ type
 
 {$ifdef EXTERNAL_SYMBOLS}
 var
-  CATransform3DIdentity: CATransform3D { available in macos , ios , watchos , tvos  }; cvar; external;
+  CATransform3DIdentity: CATransform3D { available in macos 10.5, ios 2.0, watchos 2.0, tvos 9.0 }; cvar; external;
 {$endif}
 
 {$ifdef FUNCTIONS}
-function CATransform3DIsIdentity(t: CATransform3D): cbool; cdecl; external; { available in macos , ios , watchos , tvos  }
-function CATransform3DEqualToTransform(a: CATransform3D; b: CATransform3D): cbool; cdecl; external; { available in macos , ios , watchos , tvos  }
-function CATransform3DMakeTranslation(tx: CGFloat; ty: CGFloat; tz: CGFloat): CATransform3D; cdecl; external; { available in macos , ios , watchos , tvos  }
-function CATransform3DMakeScale(sx: CGFloat; sy: CGFloat; sz: CGFloat): CATransform3D; cdecl; external; { available in macos , ios , watchos , tvos  }
-function CATransform3DMakeRotation(angle: CGFloat; x: CGFloat; y: CGFloat; z: CGFloat): CATransform3D; cdecl; external; { available in macos , ios , watchos , tvos  }
-function CATransform3DTranslate(t: CATransform3D; tx: CGFloat; ty: CGFloat; tz: CGFloat): CATransform3D; cdecl; external; { available in macos , ios , watchos , tvos  }
-function CATransform3DScale(t: CATransform3D; sx: CGFloat; sy: CGFloat; sz: CGFloat): CATransform3D; cdecl; external; { available in macos , ios , watchos , tvos  }
-function CATransform3DRotate(t: CATransform3D; angle: CGFloat; x: CGFloat; y: CGFloat; z: CGFloat): CATransform3D; cdecl; external; { available in macos , ios , watchos , tvos  }
-function CATransform3DConcat(a: CATransform3D; b: CATransform3D): CATransform3D; cdecl; external; { available in macos , ios , watchos , tvos  }
-function CATransform3DInvert(t: CATransform3D): CATransform3D; cdecl; external; { available in macos , ios , watchos , tvos  }
-function CATransform3DMakeAffineTransform(m: CGAffineTransform): CATransform3D; cdecl; external; { available in macos , ios , watchos , tvos  }
-function CATransform3DIsAffine(t: CATransform3D): cbool; cdecl; external; { available in macos , ios , watchos , tvos  }
-function CATransform3DGetAffineTransform(t: CATransform3D): CGAffineTransform; cdecl; external; { available in macos , ios , watchos , tvos  }
+function CATransform3DIsIdentity(t: CATransform3D): cbool; cdecl; external; { available in macos 10.5, ios 2.0, watchos 2.0, tvos 9.0 }
+function CATransform3DEqualToTransform(a: CATransform3D; b: CATransform3D): cbool; cdecl; external; { available in macos 10.5, ios 2.0, watchos 2.0, tvos 9.0 }
+function CATransform3DMakeTranslation(tx: CGFloat; ty: CGFloat; tz: CGFloat): CATransform3D; cdecl; external; { available in macos 10.5, ios 2.0, watchos 2.0, tvos 9.0 }
+function CATransform3DMakeScale(sx: CGFloat; sy: CGFloat; sz: CGFloat): CATransform3D; cdecl; external; { available in macos 10.5, ios 2.0, watchos 2.0, tvos 9.0 }
+function CATransform3DMakeRotation(angle: CGFloat; x: CGFloat; y: CGFloat; z: CGFloat): CATransform3D; cdecl; external; { available in macos 10.5, ios 2.0, watchos 2.0, tvos 9.0 }
+function CATransform3DTranslate(t: CATransform3D; tx: CGFloat; ty: CGFloat; tz: CGFloat): CATransform3D; cdecl; external; { available in macos 10.5, ios 2.0, watchos 2.0, tvos 9.0 }
+function CATransform3DScale(t: CATransform3D; sx: CGFloat; sy: CGFloat; sz: CGFloat): CATransform3D; cdecl; external; { available in macos 10.5, ios 2.0, watchos 2.0, tvos 9.0 }
+function CATransform3DRotate(t: CATransform3D; angle: CGFloat; x: CGFloat; y: CGFloat; z: CGFloat): CATransform3D; cdecl; external; { available in macos 10.5, ios 2.0, watchos 2.0, tvos 9.0 }
+function CATransform3DConcat(a: CATransform3D; b: CATransform3D): CATransform3D; cdecl; external; { available in macos 10.5, ios 2.0, watchos 2.0, tvos 9.0 }
+function CATransform3DInvert(t: CATransform3D): CATransform3D; cdecl; external; { available in macos 10.5, ios 2.0, watchos 2.0, tvos 9.0 }
+function CATransform3DMakeAffineTransform(m: CGAffineTransform): CATransform3D; cdecl; external; { available in macos 10.5, ios 2.0, watchos 2.0, tvos 9.0 }
+function CATransform3DIsAffine(t: CATransform3D): cbool; cdecl; external; { available in macos 10.5, ios 2.0, watchos 2.0, tvos 9.0 }
+function CATransform3DGetAffineTransform(t: CATransform3D): CGAffineTransform; cdecl; external; { available in macos 10.5, ios 2.0, watchos 2.0, tvos 9.0 }
 {$endif}
 
 {$ifdef __OBJC__}

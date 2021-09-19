@@ -39,20 +39,20 @@ type
     class function localizedStringFromPersonNameComponents_style_options (components: NSPersonNameComponents; nameFormatStyle: NSPersonNameComponentsFormatterStyle; nameOptions: NSPersonNameComponentsFormatterOptions): NSString; message 'localizedStringFromPersonNameComponents:style:options:';
     function stringFromPersonNameComponents (components: NSPersonNameComponents): NSString; message 'stringFromPersonNameComponents:';
     function annotatedStringFromPersonNameComponents (components: NSPersonNameComponents): NSAttributedString; message 'annotatedStringFromPersonNameComponents:';
-    function personNameComponentsFromString (string_: NSString): NSPersonNameComponents; message 'personNameComponentsFromString:'; { available in macosx , ios , watchos , tvos  }
+    function personNameComponentsFromString (string_: NSString): NSPersonNameComponents; message 'personNameComponentsFromString:'; { available in macosx 10.12, ios 10.0, watchos 3.0, tvos 10.0 }
     function getObjectValue_forString_errorDescription (obj: idPtr; string_: NSString; error: NSStringPtr): objcbool; message 'getObjectValue:forString:errorDescription:';
   end;
 {$endif}
 
 {$ifdef EXTERNAL_SYMBOLS}
 var
-  NSPersonNameComponentKey: NSString { available in macos , ios , watchos , tvos  }; cvar; external;
-  NSPersonNameComponentGivenName: NSString { available in macos , ios , watchos , tvos  }; cvar; external;
-  NSPersonNameComponentFamilyName: NSString { available in macos , ios , watchos , tvos  }; cvar; external;
-  NSPersonNameComponentMiddleName: NSString { available in macos , ios , watchos , tvos  }; cvar; external;
-  NSPersonNameComponentPrefix: NSString { available in macos , ios , watchos , tvos  }; cvar; external;
-  NSPersonNameComponentSuffix: NSString { available in macos , ios , watchos , tvos  }; cvar; external;
-  NSPersonNameComponentNickname: NSString { available in macos , ios , watchos , tvos  }; cvar; external;
-  NSPersonNameComponentDelimiter: NSString { available in macos , ios , watchos , tvos  }; cvar; external;
+  NSPersonNameComponentKey: NSString { available in macos 10.11, ios 9.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  NSPersonNameComponentGivenName: NSString { available in macos 10.11, ios 9.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  NSPersonNameComponentFamilyName: NSString { available in macos 10.11, ios 9.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  NSPersonNameComponentMiddleName: NSString { available in macos 10.11, ios 9.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  NSPersonNameComponentPrefix: NSString { available in macos 10.11, ios 9.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  NSPersonNameComponentSuffix: NSString { available in macos 10.11, ios 9.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  NSPersonNameComponentNickname: NSString { available in macos 10.11, ios 9.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  NSPersonNameComponentDelimiter: NSString { available in macos 10.11, ios 9.0, watchos 2.0, tvos 9.0 }; cvar; external;
 {$endif}
 

@@ -10,8 +10,8 @@ type
 
 {$ifdef EXTERNAL_SYMBOLS}
 var
-  NSNetServicesErrorCode: NSString { unavailable in watchos }; cvar; external;
-  NSNetServicesErrorDomain: NSErrorDomain { unavailable in watchos }; cvar; external;
+  NSNetServicesErrorCode: NSString { unavailable in watchos } { available in macos 10.2, ios 2.0, tvos 9.0 }; cvar; external;
+  NSNetServicesErrorDomain: NSErrorDomain { unavailable in watchos } { available in macos 10.2, ios 2.0, tvos 9.0 }; cvar; external;
 {$endif}
 
 {$ifdef TYPES}
@@ -28,7 +28,7 @@ const
   NSNetServicesCancelledError = -72005;
   NSNetServicesInvalidError = -72006;
   NSNetServicesTimeoutError = -72007;
-  NSNetServicesMissingRequiredConfigurationError = -72008 { unavailable in watchos };
+  NSNetServicesMissingRequiredConfigurationError = -72008 { unavailable in watchos } { available in macos 11.0, ios 14.0, tvos 14.0 };
 
 type
   NSNetServiceOptions = NSUInteger;
@@ -36,7 +36,7 @@ type
 
 const
   NSNetServiceNoAutoRename = 1 shl 0;
-  NSNetServiceListenForConnections = 1 shl 1 { available in macos , ios , watchos , tvos  };
+  NSNetServiceListenForConnections = 1 shl 1 { available in macos 10.9, ios 7.0, watchos 2.0, tvos 9.0 };
 {$endif}
 
 {$ifdef CLASSES}
@@ -54,16 +54,16 @@ type
     procedure removeFromRunLoop_forMode (aRunLoop: NSRunLoop; mode: NSRunLoopMode); message 'removeFromRunLoop:forMode:';
     procedure setDelegate(newValue: NSNetServiceDelegateProtocol); message 'setDelegate:';
     function delegate: NSNetServiceDelegateProtocol; message 'delegate';
-    procedure setIncludesPeerToPeer(newValue: objcbool); message 'setIncludesPeerToPeer:'; { available in macos , ios , watchos , tvos  }
-    function includesPeerToPeer: objcbool; message 'includesPeerToPeer'; { available in macos , ios , watchos , tvos  }
+    procedure setIncludesPeerToPeer(newValue: objcbool); message 'setIncludesPeerToPeer:'; { available in macos 10.10, ios 7.0, watchos 2.0, tvos 9.0 }
+    function includesPeerToPeer: objcbool; message 'includesPeerToPeer'; { available in macos 10.10, ios 7.0, watchos 2.0, tvos 9.0 }
     function name: NSString; message 'name';
     function type_: NSString; message 'type';
     function domain: NSString; message 'domain';
     function hostName: NSString; message 'hostName';
     function addresses: NSArray; message 'addresses';
-    function port: NSInteger; message 'port'; { available in macos , ios , watchos , tvos  }
+    function port: NSInteger; message 'port'; { available in macos 10.5, ios 2.0, watchos 2.0, tvos 9.0 }
     procedure publish; message 'publish';
-    procedure publishWithOptions (options: NSNetServiceOptions); message 'publishWithOptions:'; { available in macos , ios , watchos , tvos  }
+    procedure publishWithOptions (options: NSNetServiceOptions); message 'publishWithOptions:'; { available in macos 10.5, ios 2.0, watchos 2.0, tvos 9.0 }
     procedure resolve; message 'resolve'; deprecated 'Not supported';
     procedure stop; message 'stop';
     class function dictionaryFromTXTRecordData (txtData: NSData): NSDictionary; message 'dictionaryFromTXTRecordData:';
@@ -86,8 +86,8 @@ type
     function init: id; message 'init';
     procedure setDelegate(newValue: NSNetServiceBrowserDelegateProtocol); message 'setDelegate:';
     function delegate: NSNetServiceBrowserDelegateProtocol; message 'delegate';
-    procedure setIncludesPeerToPeer(newValue: objcbool); message 'setIncludesPeerToPeer:'; { available in macos , ios , watchos , tvos  }
-    function includesPeerToPeer: objcbool; message 'includesPeerToPeer'; { available in macos , ios , watchos , tvos  }
+    procedure setIncludesPeerToPeer(newValue: objcbool); message 'setIncludesPeerToPeer:'; { available in macos 10.10, ios 7.0, watchos 2.0, tvos 9.0 }
+    function includesPeerToPeer: objcbool; message 'includesPeerToPeer'; { available in macos 10.10, ios 7.0, watchos 2.0, tvos 9.0 }
     procedure scheduleInRunLoop_forMode (aRunLoop: NSRunLoop; mode: NSRunLoopMode); message 'scheduleInRunLoop:forMode:';
     procedure removeFromRunLoop_forMode (aRunLoop: NSRunLoop; mode: NSRunLoopMode); message 'removeFromRunLoop:forMode:';
     procedure searchForBrowsableDomains; message 'searchForBrowsableDomains';
@@ -110,7 +110,7 @@ type
     procedure netService_didNotResolve (sender: NSNetService; errorDict: NSDictionary); message 'netService:didNotResolve:';
     procedure netServiceDidStop (sender: NSNetService); message 'netServiceDidStop:';
     procedure netService_didUpdateTXTRecordData (sender: NSNetService; data: NSData); message 'netService:didUpdateTXTRecordData:';
-    procedure netService_didAcceptConnectionWithInputStream_outputStream (sender: NSNetService; inputStream: NSInputStream; outputStream: NSOutputStream); message 'netService:didAcceptConnectionWithInputStream:outputStream:'; { available in macos , ios , watchos , tvos  }
+    procedure netService_didAcceptConnectionWithInputStream_outputStream (sender: NSNetService; inputStream: NSInputStream; outputStream: NSOutputStream); message 'netService:didAcceptConnectionWithInputStream:outputStream:'; { available in macos 10.9, ios 7.0, watchos 2.0, tvos 9.0 }
   end;
 
 type

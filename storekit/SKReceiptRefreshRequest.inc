@@ -12,19 +12,19 @@ type
   private
     _properties: NSDictionary;
   public
-    function initWithReceiptProperties (properties: NSDictionary): id; message 'initWithReceiptProperties:'; { available in ios , macos , watchos  }
-    function receiptProperties: NSDictionary; message 'receiptProperties'; { available in ios , macos , watchos  }
+    function initWithReceiptProperties (properties: NSDictionary): id; message 'initWithReceiptProperties:'; { available in ios 7.0, macos 10.9, watchos 6.2 }
+    function receiptProperties: NSDictionary; message 'receiptProperties'; { available in ios 7.0, macos 10.9, watchos 6.2 }
   end;
 {$endif}
 
 {$ifdef FUNCTIONS}
-function SKTerminateForInvalidReceipt: pointer; cdecl; external; { available in ios , macos , watchos  }
+function SKTerminateForInvalidReceipt: pointer; cdecl; external; { available in ios 7.1, macos 10.14, watchos 6.2 }
 {$endif}
 
 {$ifdef EXTERNAL_SYMBOLS}
 var
-  SKReceiptPropertyIsExpired: NSString { available in ios , macos , watchos  }; cvar; external;
-  SKReceiptPropertyIsRevoked: NSString { available in ios , macos , watchos  }; cvar; external;
-  SKReceiptPropertyIsVolumePurchase: NSString { available in ios , macos , watchos  }; cvar; external;
+  SKReceiptPropertyIsExpired: NSString { available in ios 7.0, macos 10.9, watchos 6.2 }; cvar; external;
+  SKReceiptPropertyIsRevoked: NSString { available in ios 7.0, macos 10.9, watchos 6.2 }; cvar; external;
+  SKReceiptPropertyIsVolumePurchase: NSString { available in ios 7.0, macos 10.9, watchos 6.2 }; cvar; external;
 {$endif}
 

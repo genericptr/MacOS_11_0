@@ -17,9 +17,9 @@ type
 
 {$ifdef EXTERNAL_SYMBOLS}
 var
-  CKRecordTypeUserRecord: CKRecordType { available in macos , ios , watchos  }; cvar; external;
-  CKRecordParentKey: CKRecordFieldKey { available in macos , ios , tvos , watchos  }; cvar; external;
-  CKRecordShareKey: CKRecordFieldKey { available in macos , ios , tvos , watchos  }; cvar; external;
+  CKRecordTypeUserRecord: CKRecordType { available in macos 10.10, ios 8.0, watchos 3.0 }; cvar; external;
+  CKRecordParentKey: CKRecordFieldKey { available in macos 10.12, ios 10.0, tvos 10.0, watchos 3.0 }; cvar; external;
+  CKRecordShareKey: CKRecordFieldKey { available in macos 10.12, ios 10.0, tvos 10.0, watchos 3.0 }; cvar; external;
 {$endif}
 
 {$ifdef PROTOCOLS}
@@ -54,11 +54,11 @@ type
     procedure setObject_forKeyedSubscript (object_: CKRecordValueProtocol; key: CKRecordFieldKey); message 'setObject:forKeyedSubscript:';
     function changedKeys: NSArray; message 'changedKeys';
     procedure encodeSystemFieldsWithCoder (coder: NSCoder); message 'encodeSystemFieldsWithCoder:';
-    function share: CKReference; message 'share'; { available in macos , ios , tvos , watchos  }
-    procedure setParent(newValue: CKReference); message 'setParent:'; { available in macos , ios , tvos , watchos  }
-    function parent: CKReference; message 'parent'; { available in macos , ios , tvos , watchos  }
-    procedure setParentReferenceFromRecord (parentRecord: CKRecord); message 'setParentReferenceFromRecord:'; { available in macos , ios , tvos , watchos  }
-    procedure setParentReferenceFromRecordID (parentRecordID: CKRecordID); message 'setParentReferenceFromRecordID:'; { available in macos , ios , tvos , watchos  }
+    function share: CKReference; message 'share'; { available in macos 10.12, ios 10.0, tvos 10.0, watchos 3.0 }
+    procedure setParent(newValue: CKReference); message 'setParent:'; { available in macos 10.12, ios 10.0, tvos 10.0, watchos 3.0 }
+    function parent: CKReference; message 'parent'; { available in macos 10.12, ios 10.0, tvos 10.0, watchos 3.0 }
+    procedure setParentReferenceFromRecord (parentRecord: CKRecord); message 'setParentReferenceFromRecord:'; { available in macos 10.12, ios 10.0, tvos 10.0, watchos 3.0 }
+    procedure setParentReferenceFromRecordID (parentRecordID: CKRecordID); message 'setParentReferenceFromRecordID:'; { available in macos 10.12, ios 10.0, tvos 10.0, watchos 3.0 }
 
     { Adopted protocols }
     function copyWithZone (zone: NSZonePtr): id; message 'copyWithZone:';

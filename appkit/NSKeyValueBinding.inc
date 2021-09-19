@@ -21,11 +21,11 @@ type
   NSBindingSelectionMarker = objcclass external (NSObject, NSCopyingProtocol)
   public
     function init: id; message 'init';
-    class function multipleValuesSelectionMarker: NSBindingSelectionMarker; message 'multipleValuesSelectionMarker'; { available in macos  }
-    class function noSelectionMarker: NSBindingSelectionMarker; message 'noSelectionMarker'; { available in macos  }
-    class function notApplicableSelectionMarker: NSBindingSelectionMarker; message 'notApplicableSelectionMarker'; { available in macos  }
-    class procedure setDefaultPlaceholder_forMarker_onClass_withBinding (placeholder: id; marker: NSBindingSelectionMarker; objectClass: pobjc_class; binding: NSBindingName); message 'setDefaultPlaceholder:forMarker:onClass:withBinding:'; { available in macos  }
-    class function defaultPlaceholderForMarker_onClass_withBinding (marker: NSBindingSelectionMarker; objectClass: pobjc_class; binding: NSBindingName): id; message 'defaultPlaceholderForMarker:onClass:withBinding:'; { available in macos  }
+    class function multipleValuesSelectionMarker: NSBindingSelectionMarker; message 'multipleValuesSelectionMarker'; { available in macos 10.14 }
+    class function noSelectionMarker: NSBindingSelectionMarker; message 'noSelectionMarker'; { available in macos 10.14 }
+    class function notApplicableSelectionMarker: NSBindingSelectionMarker; message 'notApplicableSelectionMarker'; { available in macos 10.14 }
+    class procedure setDefaultPlaceholder_forMarker_onClass_withBinding (placeholder: id; marker: NSBindingSelectionMarker; objectClass: pobjc_class; binding: NSBindingName); message 'setDefaultPlaceholder:forMarker:onClass:withBinding:'; { available in macos 10.15 }
+    class function defaultPlaceholderForMarker_onClass_withBinding (marker: NSBindingSelectionMarker; objectClass: pobjc_class; binding: NSBindingName): id; message 'defaultPlaceholderForMarker:onClass:withBinding:'; { available in macos 10.15 }
 
     { Adopted protocols }
     function copyWithZone (zone: NSZonePtr): id; message 'copyWithZone:';
@@ -66,7 +66,7 @@ type
     procedure bind_toObject_withKeyPath_options (binding: NSBindingName; observable: id; keyPath: NSString; options: NSDictionary); message 'bind:toObject:withKeyPath:options:';
     procedure unbind (binding: NSBindingName); message 'unbind:';
     function infoForBinding (binding: NSBindingName): NSDictionary; message 'infoForBinding:';
-    function optionDescriptionsForBinding (binding: NSBindingName): NSArray; message 'optionDescriptionsForBinding:'; { available in macos  }
+    function optionDescriptionsForBinding (binding: NSBindingName): NSArray; message 'optionDescriptionsForBinding:'; { available in macos 10.5 }
   end;
 
 type
@@ -83,7 +83,7 @@ type
     procedure discardEditing; message 'discardEditing';
     function commitEditing: objcbool; message 'commitEditing';
     procedure commitEditingWithDelegate_didCommitSelector_contextInfo (delegate: id; didCommitSelector: SEL; contextInfo: pointer); message 'commitEditingWithDelegate:didCommitSelector:contextInfo:';
-    function commitEditingAndReturnError (error: NSErrorPtr): objcbool; message 'commitEditingAndReturnError:'; { available in macos  }
+    function commitEditingAndReturnError (error: NSErrorPtr): objcbool; message 'commitEditingAndReturnError:'; { available in macos 10.7 }
   end;
 
 type
@@ -125,7 +125,7 @@ var
   NSContentArrayBinding: NSBindingName; cvar; external;
   NSContentArrayForMultipleSelectionBinding: NSBindingName; cvar; external;
   NSContentBinding: NSBindingName; cvar; external;
-  NSContentDictionaryBinding: NSBindingName { available in macos  }; cvar; external;
+  NSContentDictionaryBinding: NSBindingName { available in macos 10.5 }; cvar; external;
   NSContentHeightBinding: NSBindingName; cvar; external;
   NSContentObjectBinding: NSBindingName; cvar; external;
   NSContentObjectsBinding: NSBindingName; cvar; external;
@@ -141,7 +141,7 @@ var
   NSDoubleClickTargetBinding: NSBindingName; cvar; external;
   NSEditableBinding: NSBindingName; cvar; external;
   NSEnabledBinding: NSBindingName; cvar; external;
-  NSExcludedKeysBinding: NSBindingName { available in macos  }; cvar; external;
+  NSExcludedKeysBinding: NSBindingName { available in macos 10.5 }; cvar; external;
   NSFilterPredicateBinding: NSBindingName; cvar; external;
   NSFontBinding: NSBindingName; cvar; external;
   NSFontBoldBinding: NSBindingName; cvar; external;
@@ -152,12 +152,12 @@ var
   NSHeaderTitleBinding: NSBindingName; cvar; external;
   NSHiddenBinding: NSBindingName; cvar; external;
   NSImageBinding: NSBindingName; cvar; external;
-  NSIncludedKeysBinding: NSBindingName { available in macos  }; cvar; external;
-  NSInitialKeyBinding: NSBindingName { available in macos  }; cvar; external;
-  NSInitialValueBinding: NSBindingName { available in macos  }; cvar; external;
+  NSIncludedKeysBinding: NSBindingName { available in macos 10.5 }; cvar; external;
+  NSInitialKeyBinding: NSBindingName { available in macos 10.5 }; cvar; external;
+  NSInitialValueBinding: NSBindingName { available in macos 10.5 }; cvar; external;
   NSIsIndeterminateBinding: NSBindingName; cvar; external;
   NSLabelBinding: NSBindingName; cvar; external;
-  NSLocalizedKeyDictionaryBinding: NSBindingName { available in macos  }; cvar; external;
+  NSLocalizedKeyDictionaryBinding: NSBindingName { available in macos 10.5 }; cvar; external;
   NSManagedObjectContextBinding: NSBindingName; cvar; external;
   NSMaximumRecentsBinding: NSBindingName; cvar; external;
   NSMaxValueBinding: NSBindingName; cvar; external;
@@ -167,7 +167,7 @@ var
   NSMixedStateImageBinding: NSBindingName; cvar; external;
   NSOffStateImageBinding: NSBindingName; cvar; external;
   NSOnStateImageBinding: NSBindingName; cvar; external;
-  NSPositioningRectBinding: NSBindingName { available in macos  }; cvar; external;
+  NSPositioningRectBinding: NSBindingName { available in macos 10.7 }; cvar; external;
   NSPredicateBinding: NSBindingName; cvar; external;
   NSRecentSearchesBinding: NSBindingName; cvar; external;
   NSRepresentedFilenameBinding: NSBindingName; cvar; external;
@@ -187,7 +187,7 @@ var
   NSTextColorBinding: NSBindingName; cvar; external;
   NSTitleBinding: NSBindingName; cvar; external;
   NSToolTipBinding: NSBindingName; cvar; external;
-  NSTransparentBinding: NSBindingName { available in macos  }; cvar; external;
+  NSTransparentBinding: NSBindingName { available in macos 10.5 }; cvar; external;
   NSValueBinding: NSBindingName; cvar; external;
   NSValuePathBinding: NSBindingName; cvar; external;
   NSValueURLBinding: NSBindingName; cvar; external;
@@ -205,7 +205,7 @@ var
   NSDeletesObjectsOnRemoveBindingsOption: NSBindingOption; cvar; external;
   NSDisplayNameBindingOption: NSBindingOption; cvar; external;
   NSDisplayPatternBindingOption: NSBindingOption; cvar; external;
-  NSContentPlacementTagBindingOption: NSBindingOption { available in macos  }; cvar; external;
+  NSContentPlacementTagBindingOption: NSBindingOption { available in macos 10.5 }; cvar; external;
   NSHandlesContentAsCompoundValueBindingOption: NSBindingOption; cvar; external;
   NSInsertsNullPlaceholderBindingOption: NSBindingOption; cvar; external;
   NSInvokesSeparatelyWithArrayObjectsBindingOption: NSBindingOption; cvar; external;

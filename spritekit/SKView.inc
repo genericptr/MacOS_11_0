@@ -27,26 +27,26 @@ type
     function showsDrawCount: objcbool; message 'showsDrawCount';
     procedure setShowsNodeCount(newValue: objcbool); message 'setShowsNodeCount:';
     function showsNodeCount: objcbool; message 'showsNodeCount';
-    procedure setShowsQuadCount(newValue: objcbool); message 'setShowsQuadCount:'; { available in ios , tvos , watchos , macos  }
-    function showsQuadCount: objcbool; message 'showsQuadCount'; { available in ios , tvos , watchos , macos  }
-    procedure setShowsPhysics(newValue: objcbool); message 'setShowsPhysics:'; { available in ios , tvos , watchos , macos  }
-    function showsPhysics: objcbool; message 'showsPhysics'; { available in ios , tvos , watchos , macos  }
-    procedure setShowsFields(newValue: objcbool); message 'setShowsFields:'; { available in ios , tvos , watchos , macos  }
-    function showsFields: objcbool; message 'showsFields'; { available in ios , tvos , watchos , macos  }
+    procedure setShowsQuadCount(newValue: objcbool); message 'setShowsQuadCount:'; { available in ios 8.0, tvos 9.0, watchos 1.0, macos 10.10 }
+    function showsQuadCount: objcbool; message 'showsQuadCount'; { available in ios 8.0, tvos 9.0, watchos 1.0, macos 10.10 }
+    procedure setShowsPhysics(newValue: objcbool); message 'setShowsPhysics:'; { available in ios 8.0, tvos 9.0, watchos 1.0, macos 10.10 }
+    function showsPhysics: objcbool; message 'showsPhysics'; { available in ios 8.0, tvos 9.0, watchos 1.0, macos 10.10 }
+    procedure setShowsFields(newValue: objcbool); message 'setShowsFields:'; { available in ios 8.0, tvos 9.0, watchos 1.0, macos 10.10 }
+    function showsFields: objcbool; message 'showsFields'; { available in ios 8.0, tvos 9.0, watchos 1.0, macos 10.10 }
     procedure setAsynchronous(newValue: objcbool); message 'setAsynchronous:';
     function isAsynchronous: objcbool; message 'isAsynchronous';
-    procedure setAllowsTransparency(newValue: objcbool); message 'setAllowsTransparency:'; { available in ios , tvos , watchos , macos  }
-    function allowsTransparency: objcbool; message 'allowsTransparency'; { available in ios , tvos , watchos , macos  }
+    procedure setAllowsTransparency(newValue: objcbool); message 'setAllowsTransparency:'; { available in ios 8.0, tvos 9.0, watchos 1.0, macos 10.10 }
+    function allowsTransparency: objcbool; message 'allowsTransparency'; { available in ios 8.0, tvos 9.0, watchos 1.0, macos 10.10 }
     procedure setIgnoresSiblingOrder(newValue: objcbool); message 'setIgnoresSiblingOrder:';
     function ignoresSiblingOrder: objcbool; message 'ignoresSiblingOrder';
-    procedure setShouldCullNonVisibleNodes(newValue: objcbool); message 'setShouldCullNonVisibleNodes:'; { available in ios , tvos , watchos , macos  }
-    function shouldCullNonVisibleNodes: objcbool; message 'shouldCullNonVisibleNodes'; { available in ios , tvos , watchos , macos  }
-    procedure setPreferredFramesPerSecond(newValue: NSInteger); message 'setPreferredFramesPerSecond:'; { available in ios , tvos , watchos , macos  }
-    function preferredFramesPerSecond: NSInteger; message 'preferredFramesPerSecond'; { available in ios , tvos , watchos , macos  }
+    procedure setShouldCullNonVisibleNodes(newValue: objcbool); message 'setShouldCullNonVisibleNodes:'; { available in ios 8.0, tvos 9.0, watchos 1.0, macos 10.10 }
+    function shouldCullNonVisibleNodes: objcbool; message 'shouldCullNonVisibleNodes'; { available in ios 8.0, tvos 9.0, watchos 1.0, macos 10.10 }
+    procedure setPreferredFramesPerSecond(newValue: NSInteger); message 'setPreferredFramesPerSecond:'; { available in ios 10.0, tvos 10.0, watchos 3.0, macos 10.12 }
+    function preferredFramesPerSecond: NSInteger; message 'preferredFramesPerSecond'; { available in ios 10.0, tvos 10.0, watchos 3.0, macos 10.12 }
     procedure setDisableDepthStencilBuffer(newValue: objcbool); message 'setDisableDepthStencilBuffer:';
     function disableDepthStencilBuffer: objcbool; message 'disableDepthStencilBuffer';
-    procedure setDelegate(newValue: NSObjectPtr); message 'setDelegate:'; { available in ios , tvos , watchos , macos  }
-    function delegate: NSObjectPtr; message 'delegate'; { available in ios , tvos , watchos , macos  }
+    procedure setDelegate(newValue: NSObjectPtr); message 'setDelegate:'; { available in ios 10.0, tvos 10.0, watchos 3.0, macos 10.12 }
+    function delegate: NSObjectPtr; message 'delegate'; { available in ios 10.0, tvos 10.0, watchos 3.0, macos 10.12 }
     procedure setFrameInterval(newValue: NSInteger); message 'setFrameInterval:'; deprecated 'in 10_8, 10_12, 7_0, 10_0';
     function frameInterval: NSInteger; message 'frameInterval'; deprecated 'in 10_8, 10_12, 7_0, 10_0';
     procedure setPreferredFrameRate(newValue: single); message 'setPreferredFrameRate:'; deprecated 'in 10_12, 10_12, 10_0, 10_0';

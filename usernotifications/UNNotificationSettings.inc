@@ -14,8 +14,8 @@ const
   UNAuthorizationStatusNotDetermined = 0;
   UNAuthorizationStatusDenied = 1;
   UNAuthorizationStatusAuthorized = 2;
-  UNAuthorizationStatusProvisional = 3 { available in macos , ios , watchos , tvos  };
-  UNAuthorizationStatusEphemeral = 4 { unavailable in macos, watchos, tvos };
+  UNAuthorizationStatusProvisional = 3 { available in macos 10.14, ios 12.0, watchos 5.0, tvos 12.0 };
+  UNAuthorizationStatusEphemeral = 4 { unavailable in macos, watchos, tvos } { available in ios 14.0 };
 
 type
   UNShowPreviewsSetting = NSInteger;
@@ -58,10 +58,10 @@ type
     function lockScreenSetting: UNNotificationSetting; message 'lockScreenSetting'; { unavailable in watchos, tvos }
     function carPlaySetting: UNNotificationSetting; message 'carPlaySetting'; { unavailable in macos, tvos, watchos }
     function alertStyle: UNAlertStyle; message 'alertStyle'; { unavailable in watchos, tvos }
-    function showPreviewsSetting: UNShowPreviewsSetting; message 'showPreviewsSetting'; { unavailable in watchos, tvos }
-    function criticalAlertSetting: UNNotificationSetting; message 'criticalAlertSetting'; { unavailable in tvos }
-    function providesAppNotificationSettings: objcbool; message 'providesAppNotificationSettings'; { unavailable in tvos }
-    function announcementSetting: UNNotificationSetting; message 'announcementSetting'; { unavailable in macos, tvos }
+    function showPreviewsSetting: UNShowPreviewsSetting; message 'showPreviewsSetting'; { unavailable in watchos, tvos } { available in macos 10.14, ios 11.0 }
+    function criticalAlertSetting: UNNotificationSetting; message 'criticalAlertSetting'; { unavailable in tvos } { available in macos 10.14, ios 12.0, watchos 5.0 }
+    function providesAppNotificationSettings: objcbool; message 'providesAppNotificationSettings'; { unavailable in tvos } { available in macos 10.14, ios 12.0, watchos 5.0 }
+    function announcementSetting: UNNotificationSetting; message 'announcementSetting'; { unavailable in macos, tvos } { available in ios 13.0, watchos 6.0 }
     function init: id; message 'init';
 
     { Adopted protocols }

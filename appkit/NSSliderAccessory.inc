@@ -26,7 +26,7 @@ type
     {$if  not defined(TARGET_OS_IPHONE)}
     class function accessoryWithImage (image: NSImage): NSSliderAccessory; message 'accessoryWithImage:';
     {$else}
-    class function accessoryWithImage (image: UIImage): NSSliderAccessory; message 'accessoryWithImage:'; { available in ios  }
+    class function accessoryWithImage (image: UIImage): NSSliderAccessory; message 'accessoryWithImage:'; { available in ios 13.0 }
     {$endif}
     procedure setBehavior(newValue: NSSliderAccessoryBehavior); message 'setBehavior:';
     function behavior: NSSliderAccessoryBehavior; message 'behavior';

@@ -195,7 +195,7 @@ type
   optional
     procedure PDFViewWillClickOnLink_withURL (sender: PDFView; url: NSURL); message 'PDFViewWillClickOnLink:withURL:'; { available in 10_5, 11_0 }
     {$if (defined(PDFKIT_PLATFORM_OSX))}
-    function PDFViewWillChangeScaleFactor_toScale (sender: PDFView; scaler: CGFloat): CGFloat; message 'PDFViewWillChangeScaleFactor:toScale:'; { available in 10_5, NA }
+    function PDFViewWillChangeScaleFactor_toScale (sender: PDFView; scaler: CGFloat): CGFloat; message 'PDFViewWillChangeScaleFactor:toScale:'; { available in macos 10.5 }
     function PDFViewPrintJobTitle (sender: PDFView): NSString; message 'PDFViewPrintJobTitle:'; { available in 10_5, NA }
     procedure PDFViewPerformPrint (sender: PDFView); message 'PDFViewPerformPrint:'; { available in 10_5, NA }
     {$elseif (defined(PDFKIT_PLATFORM_IOS))}

@@ -19,8 +19,8 @@ const
   NSButtonTypeMomentaryChange = 5;
   NSButtonTypeOnOff = 6;
   NSButtonTypeMomentaryPushIn = 7;
-  NSButtonTypeAccelerator = 8 { available in macos  };
-  NSButtonTypeMultiLevelAccelerator = 9 { available in macos  };
+  NSButtonTypeAccelerator = 8 { available in macos 10.10.3 };
+  NSButtonTypeMultiLevelAccelerator = 9 { available in macos 10.10.3 };
 
 type
   NSBezelStyle = NSUInteger;
@@ -39,7 +39,7 @@ const
   NSBezelStyleRoundRect = 12;
   NSBezelStyleRecessed = 13;
   NSBezelStyleRoundedDisclosure = 14;
-  NSBezelStyleInline = 15 { available in macos  };
+  NSBezelStyleInline = 15 { available in macos 10.7 };
 {$endif}
 
 {$ifdef CLASSES}
@@ -69,8 +69,8 @@ type
     function alternateImage: NSImage; message 'alternateImage';
     procedure setImagePosition(newValue: NSCellImagePosition); message 'setImagePosition:';
     function imagePosition: NSCellImagePosition; message 'imagePosition';
-    procedure setImageScaling(newValue: NSImageScaling); message 'setImageScaling:'; { available in macos  }
-    function imageScaling: NSImageScaling; message 'imageScaling'; { available in macos  }
+    procedure setImageScaling(newValue: NSImageScaling); message 'setImageScaling:'; { available in macos 10.5 }
+    function imageScaling: NSImageScaling; message 'imageScaling'; { available in macos 10.5 }
     procedure setKeyEquivalent(newValue: NSString); message 'setKeyEquivalent:';
     function keyEquivalent: NSString; message 'keyEquivalent';
     procedure setKeyEquivalentModifierMask(newValue: NSEventModifierFlags); message 'setKeyEquivalentModifierMask:';

@@ -36,9 +36,9 @@ type
     function placeholderString: NSString; message 'placeholderString';
     procedure setPlaceholderAttributedString(newValue: NSAttributedString); message 'setPlaceholderAttributedString:';
     function placeholderAttributedString: NSAttributedString; message 'placeholderAttributedString';
-    procedure setWantsNotificationForMarkedText (flag: objcbool); message 'setWantsNotificationForMarkedText:'; { available in macos  }
-    procedure setAllowedInputSourceLocales(newValue: NSArray); message 'setAllowedInputSourceLocales:'; { available in macos  }
-    function allowedInputSourceLocales: NSArray; message 'allowedInputSourceLocales'; { available in macos  }
+    procedure setWantsNotificationForMarkedText (flag: objcbool); message 'setWantsNotificationForMarkedText:'; { available in macos 10.5 }
+    procedure setAllowedInputSourceLocales(newValue: NSArray); message 'setAllowedInputSourceLocales:'; { available in macos 10.5 }
+    function allowedInputSourceLocales: NSArray; message 'allowedInputSourceLocales'; { available in macos 10.5 }
   end;
 {$endif}
 

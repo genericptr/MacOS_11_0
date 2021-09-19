@@ -3,13 +3,13 @@
 
 type
   NSNibLoading = objccategory external (NSBundle)
-    function loadNibNamed_owner_topLevelObjects (nibName: NSNibName; owner: id; topLevelObjects: NSArrayPtr): objcbool; message 'loadNibNamed:owner:topLevelObjects:'; { available in macos  }
+    function loadNibNamed_owner_topLevelObjects (nibName: NSNibName; owner: id; topLevelObjects: NSArrayPtr): objcbool; message 'loadNibNamed:owner:topLevelObjects:'; { available in macos 10.8 }
   end;
 
 type
   NSNibAwaking = objccategory external (NSObject)
     procedure awakeFromNib; message 'awakeFromNib';
-    procedure prepareForInterfaceBuilder; message 'prepareForInterfaceBuilder'; { available in macos  }
+    procedure prepareForInterfaceBuilder; message 'prepareForInterfaceBuilder'; { available in macos 10.10 }
   end;
 
 type

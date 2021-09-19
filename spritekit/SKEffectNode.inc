@@ -30,9 +30,9 @@ type
     function blendMode: SKBlendMode; message 'blendMode';
     procedure setShader(newValue: SKShader); message 'setShader:';
     function shader: SKShader; message 'shader';
-    procedure setAttributeValues(newValue: NSDictionary); message 'setAttributeValues:'; { available in ios , tvos , watchos , macos  }
-    function attributeValues: NSDictionary; message 'attributeValues'; { available in ios , tvos , watchos , macos  }
-    function valueForAttributeNamed (key: NSString): SKAttributeValue; message 'valueForAttributeNamed:'; { available in ios , tvos , watchos , macos  }
+    procedure setAttributeValues(newValue: NSDictionary); message 'setAttributeValues:'; { available in ios 10.0, tvos 10.0, watchos 3.0, macos 10.12 }
+    function attributeValues: NSDictionary; message 'attributeValues'; { available in ios 10.0, tvos 10.0, watchos 3.0, macos 10.12 }
+    function valueForAttributeNamed (key: NSString): SKAttributeValue; message 'valueForAttributeNamed:'; { available in ios 10.0, tvos 10.0, watchos 3.0, macos 10.12 }
     procedure setValue_forAttributeNamed (value: SKAttributeValue; key: NSString); message 'setValue:forAttributeNamed:';
 
     { Adopted protocols }

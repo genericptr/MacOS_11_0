@@ -16,16 +16,16 @@ type
 
 {$ifdef EXTERNAL_SYMBOLS}
 var
-  CHHapticEventParameterIDHapticIntensity: CHHapticEventParameterID { unavailable in watchos }; cvar; external;
-  CHHapticEventParameterIDHapticSharpness: CHHapticEventParameterID { unavailable in watchos }; cvar; external;
-  CHHapticEventParameterIDAttackTime: CHHapticEventParameterID { unavailable in watchos }; cvar; external;
-  CHHapticEventParameterIDDecayTime: CHHapticEventParameterID { unavailable in watchos }; cvar; external;
-  CHHapticEventParameterIDReleaseTime: CHHapticEventParameterID { unavailable in watchos }; cvar; external;
-  CHHapticEventParameterIDSustained: CHHapticEventParameterID { unavailable in watchos }; cvar; external;
-  CHHapticEventParameterIDAudioVolume: CHHapticEventParameterID { unavailable in watchos }; cvar; external;
-  CHHapticEventParameterIDAudioPitch: CHHapticEventParameterID { unavailable in watchos }; cvar; external;
-  CHHapticEventParameterIDAudioPan: CHHapticEventParameterID { unavailable in watchos }; cvar; external;
-  CHHapticEventParameterIDAudioBrightness: CHHapticEventParameterID { unavailable in watchos }; cvar; external;
+  CHHapticEventParameterIDHapticIntensity: CHHapticEventParameterID { unavailable in watchos } { available in ios 13.0, macos 10.15, tvos 14.0, macCatalyst 13.0 }; cvar; external;
+  CHHapticEventParameterIDHapticSharpness: CHHapticEventParameterID { unavailable in watchos } { available in ios 13.0, macos 10.15, tvos 14.0, macCatalyst 13.0 }; cvar; external;
+  CHHapticEventParameterIDAttackTime: CHHapticEventParameterID { unavailable in watchos } { available in ios 13.0, macos 10.15, tvos 14.0, macCatalyst 13.0 }; cvar; external;
+  CHHapticEventParameterIDDecayTime: CHHapticEventParameterID { unavailable in watchos } { available in ios 13.0, macos 10.15, tvos 14.0, macCatalyst 13.0 }; cvar; external;
+  CHHapticEventParameterIDReleaseTime: CHHapticEventParameterID { unavailable in watchos } { available in ios 13.0, macos 10.15, tvos 14.0, macCatalyst 13.0 }; cvar; external;
+  CHHapticEventParameterIDSustained: CHHapticEventParameterID { unavailable in watchos } { available in ios 13.0, macos 10.15, tvos 14.0, macCatalyst 13.0 }; cvar; external;
+  CHHapticEventParameterIDAudioVolume: CHHapticEventParameterID { unavailable in watchos } { available in ios 13.0, macos 10.15, tvos 14.0, macCatalyst 13.0 }; cvar; external;
+  CHHapticEventParameterIDAudioPitch: CHHapticEventParameterID { unavailable in watchos } { available in ios 13.0, macos 10.15, tvos 14.0, macCatalyst 13.0 }; cvar; external;
+  CHHapticEventParameterIDAudioPan: CHHapticEventParameterID { unavailable in watchos } { available in ios 13.0, macos 10.15, tvos 14.0, macCatalyst 13.0 }; cvar; external;
+  CHHapticEventParameterIDAudioBrightness: CHHapticEventParameterID { unavailable in watchos } { available in ios 13.0, macos 10.15, tvos 14.0, macCatalyst 13.0 }; cvar; external;
 {$endif}
 
 {$ifdef TYPES}
@@ -36,18 +36,18 @@ type
 
 {$ifdef EXTERNAL_SYMBOLS}
 var
-  CHHapticDynamicParameterIDHapticIntensityControl: CHHapticDynamicParameterID { unavailable in watchos }; cvar; external;
-  CHHapticDynamicParameterIDHapticSharpnessControl: CHHapticDynamicParameterID { unavailable in watchos }; cvar; external;
-  CHHapticDynamicParameterIDHapticAttackTimeControl: CHHapticDynamicParameterID { unavailable in watchos }; cvar; external;
-  CHHapticDynamicParameterIDHapticDecayTimeControl: CHHapticDynamicParameterID { unavailable in watchos }; cvar; external;
-  CHHapticDynamicParameterIDHapticReleaseTimeControl: CHHapticDynamicParameterID { unavailable in watchos }; cvar; external;
-  CHHapticDynamicParameterIDAudioVolumeControl: CHHapticDynamicParameterID { unavailable in watchos }; cvar; external;
-  CHHapticDynamicParameterIDAudioPanControl: CHHapticDynamicParameterID { unavailable in watchos }; cvar; external;
-  CHHapticDynamicParameterIDAudioBrightnessControl: CHHapticDynamicParameterID { unavailable in watchos }; cvar; external;
-  CHHapticDynamicParameterIDAudioPitchControl: CHHapticDynamicParameterID { unavailable in watchos }; cvar; external;
-  CHHapticDynamicParameterIDAudioAttackTimeControl: CHHapticDynamicParameterID { unavailable in watchos }; cvar; external;
-  CHHapticDynamicParameterIDAudioDecayTimeControl: CHHapticDynamicParameterID { unavailable in watchos }; cvar; external;
-  CHHapticDynamicParameterIDAudioReleaseTimeControl: CHHapticDynamicParameterID { unavailable in watchos }; cvar; external;
+  CHHapticDynamicParameterIDHapticIntensityControl: CHHapticDynamicParameterID { unavailable in watchos } { available in ios 13.0, macos 10.15, tvos 14.0, macCatalyst 13.0 }; cvar; external;
+  CHHapticDynamicParameterIDHapticSharpnessControl: CHHapticDynamicParameterID { unavailable in watchos } { available in ios 13.0, macos 10.15, tvos 14.0, macCatalyst 13.0 }; cvar; external;
+  CHHapticDynamicParameterIDHapticAttackTimeControl: CHHapticDynamicParameterID { unavailable in watchos } { available in ios 13.0, macos 10.15, tvos 14.0, macCatalyst 13.0 }; cvar; external;
+  CHHapticDynamicParameterIDHapticDecayTimeControl: CHHapticDynamicParameterID { unavailable in watchos } { available in ios 13.0, macos 10.15, tvos 14.0, macCatalyst 13.0 }; cvar; external;
+  CHHapticDynamicParameterIDHapticReleaseTimeControl: CHHapticDynamicParameterID { unavailable in watchos } { available in ios 13.0, macos 10.15, tvos 14.0, macCatalyst 13.0 }; cvar; external;
+  CHHapticDynamicParameterIDAudioVolumeControl: CHHapticDynamicParameterID { unavailable in watchos } { available in ios 13.0, macos 10.15, tvos 14.0, macCatalyst 13.0 }; cvar; external;
+  CHHapticDynamicParameterIDAudioPanControl: CHHapticDynamicParameterID { unavailable in watchos } { available in ios 13.0, macos 10.15, tvos 14.0, macCatalyst 13.0 }; cvar; external;
+  CHHapticDynamicParameterIDAudioBrightnessControl: CHHapticDynamicParameterID { unavailable in watchos } { available in ios 13.0, macos 10.15, tvos 14.0, macCatalyst 13.0 }; cvar; external;
+  CHHapticDynamicParameterIDAudioPitchControl: CHHapticDynamicParameterID { unavailable in watchos } { available in ios 13.0, macos 10.15, tvos 14.0, macCatalyst 13.0 }; cvar; external;
+  CHHapticDynamicParameterIDAudioAttackTimeControl: CHHapticDynamicParameterID { unavailable in watchos } { available in ios 13.0, macos 10.15, tvos 14.0, macCatalyst 13.0 }; cvar; external;
+  CHHapticDynamicParameterIDAudioDecayTimeControl: CHHapticDynamicParameterID { unavailable in watchos } { available in ios 13.0, macos 10.15, tvos 14.0, macCatalyst 13.0 }; cvar; external;
+  CHHapticDynamicParameterIDAudioReleaseTimeControl: CHHapticDynamicParameterID { unavailable in watchos } { available in ios 13.0, macos 10.15, tvos 14.0, macCatalyst 13.0 }; cvar; external;
 {$endif}
 
 {$ifdef CLASSES}

@@ -9,7 +9,7 @@ type
 var
   kCIFilterGeneratorExportedKey: NSString { available in 10_5 }; cvar; external;
   kCIFilterGeneratorExportedKeyTargetObject: NSString { available in 10_5 }; cvar; external;
-  kCIFilterGeneratorExportedKeyName: NSString { available in 10_5 }; cvar; external;
+  kCIFilterGeneratorExportedKeyName: NSString { available in 10_5 } { available in 10_5 }; cvar; external;
 {$endif}
 
 {$ifdef CLASSES}

@@ -7,7 +7,7 @@ type
 
 {$ifdef EXTERNAL_SYMBOLS}
 var
-  NSSystemClockDidChangeNotification: NSNotificationName { available in macos , ios , watchos , tvos  }; cvar; external;
+  NSSystemClockDidChangeNotification: NSNotificationName { available in macos 10.6, ios 4.0, watchos 2.0, tvos 9.0 }; cvar; external;
 {$endif}
 
 {$ifdef TYPES}
@@ -42,7 +42,7 @@ type
     function timeIntervalSinceNow: NSTimeInterval; message 'timeIntervalSinceNow';
     function timeIntervalSince1970: NSTimeInterval; message 'timeIntervalSince1970';
     function addTimeInterval (seconds: NSTimeInterval): id; message 'addTimeInterval:'; deprecated 'Use dateByAddingTimeInterval instead';
-    function dateByAddingTimeInterval (ti: NSTimeInterval): id; message 'dateByAddingTimeInterval:'; { available in macos , ios , watchos , tvos  }
+    function dateByAddingTimeInterval (ti: NSTimeInterval): id; message 'dateByAddingTimeInterval:'; { available in macos 10.6, ios 2.0, watchos 2.0, tvos 9.0 }
     function earlierDate (anotherDate: NSDate): NSDate; message 'earlierDate:';
     function laterDate (anotherDate: NSDate): NSDate; message 'laterDate:';
     function compare (other: NSDate): NSComparisonResult; message 'compare:';
@@ -61,7 +61,7 @@ type
     class function dateWithTimeInterval_sinceDate (secsToBeAdded: NSTimeInterval; date_: NSDate): id; message 'dateWithTimeInterval:sinceDate:';
     class function distantFuture: NSDate; message 'distantFuture';
     class function distantPast: NSDate; message 'distantPast';
-    class function now: NSDate; message 'now'; { available in macos , ios , watchos , tvos  }
+    class function now: NSDate; message 'now'; { available in macos 10.15, ios 13.0, watchos 6.0, tvos 13.0 }
     function initWithTimeIntervalSinceNow (secs: NSTimeInterval): id; message 'initWithTimeIntervalSinceNow:';
     function initWithTimeIntervalSince1970 (secs: NSTimeInterval): id; message 'initWithTimeIntervalSince1970:';
     function initWithTimeInterval_sinceDate (secsToBeAdded: NSTimeInterval; date_: NSDate): id; message 'initWithTimeInterval:sinceDate:';

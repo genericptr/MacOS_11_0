@@ -61,22 +61,22 @@ type
     function isExecuting: objcbool; message 'isExecuting';
     function isFinished: objcbool; message 'isFinished';
     function isConcurrent: objcbool; message 'isConcurrent';
-    function isAsynchronous: objcbool; message 'isAsynchronous'; { available in macos , ios , watchos , tvos  }
+    function isAsynchronous: objcbool; message 'isAsynchronous'; { available in macos 10.8, ios 7.0, watchos 2.0, tvos 9.0 }
     function isReady: objcbool; message 'isReady';
     procedure addDependency (op: NSOperation); message 'addDependency:';
     procedure removeDependency (op: NSOperation); message 'removeDependency:';
     function dependencies: NSArray; message 'dependencies';
     procedure setQueuePriority(newValue: NSOperationQueuePriority); message 'setQueuePriority:';
     function queuePriority: NSOperationQueuePriority; message 'queuePriority';
-    procedure setCompletionBlock(newValue: NSOperationCompletionBlockCallback); message 'setCompletionBlock:'; { available in macos , ios , watchos , tvos  }
-    function completionBlock: NSOperationCompletionBlockCallback; message 'completionBlock'; { available in macos , ios , watchos , tvos  }
-    procedure waitUntilFinished; message 'waitUntilFinished'; { available in macos , ios , watchos , tvos  }
+    procedure setCompletionBlock(newValue: NSOperationCompletionBlockCallback); message 'setCompletionBlock:'; { available in macos 10.6, ios 4.0, watchos 2.0, tvos 9.0 }
+    function completionBlock: NSOperationCompletionBlockCallback; message 'completionBlock'; { available in macos 10.6, ios 4.0, watchos 2.0, tvos 9.0 }
+    procedure waitUntilFinished; message 'waitUntilFinished'; { available in macos 10.6, ios 4.0, watchos 2.0, tvos 9.0 }
     procedure setThreadPriority(newValue: double); message 'setThreadPriority:'; deprecated 'Not supported';
     function threadPriority: double; message 'threadPriority'; deprecated 'Not supported';
-    procedure setQualityOfService(newValue: NSQualityOfService); message 'setQualityOfService:'; { available in macos , ios , watchos , tvos  }
-    function qualityOfService: NSQualityOfService; message 'qualityOfService'; { available in macos , ios , watchos , tvos  }
-    procedure setName(newValue: NSString); message 'setName:'; { available in macos , ios , watchos , tvos  }
-    function name: NSString; message 'name'; { available in macos , ios , watchos , tvos  }
+    procedure setQualityOfService(newValue: NSQualityOfService); message 'setQualityOfService:'; { available in macos 10.10, ios 8.0, watchos 2.0, tvos 9.0 }
+    function qualityOfService: NSQualityOfService; message 'qualityOfService'; { available in macos 10.10, ios 8.0, watchos 2.0, tvos 9.0 }
+    procedure setName(newValue: NSString); message 'setName:'; { available in macos 10.10, ios 8.0, watchos 2.0, tvos 9.0 }
+    function name: NSString; message 'name'; { available in macos 10.10, ios 8.0, watchos 2.0, tvos 9.0 }
   end;
 
 type
@@ -106,8 +106,8 @@ type
 
 {$ifdef EXTERNAL_SYMBOLS}
 var
-  NSInvocationOperationVoidResultException: NSExceptionName { available in macos , ios , watchos , tvos  }; cvar; external;
-  NSInvocationOperationCancelledException: NSExceptionName { available in macos , ios , watchos , tvos  }; cvar; external;
+  NSInvocationOperationVoidResultException: NSExceptionName { available in macos 10.5, ios 2.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  NSInvocationOperationCancelledException: NSExceptionName { available in macos 10.5, ios 2.0, watchos 2.0, tvos 9.0 }; cvar; external;
 {$endif}
 
 {$ifdef TYPES}
@@ -123,25 +123,25 @@ type
     _private: id;
     _reserved: pointer;
   public
-    function progress: NSProgress; message 'progress'; { available in macos , ios , tvos , watchos  }
+    function progress: NSProgress; message 'progress'; { available in macos 10.15, ios 13.0, tvos 13.0, watchos 6.0 }
     procedure addOperation (op: NSOperation); message 'addOperation:';
-    procedure addOperations_waitUntilFinished (ops: NSArray; wait: objcbool); message 'addOperations:waitUntilFinished:'; { available in macos , ios , watchos , tvos  }
-    procedure addOperationWithBlock (block: NSOperationAddOperationWithBlockCallback); message 'addOperationWithBlock:'; { available in macos , ios , watchos , tvos  }
-    procedure addBarrierBlock (barrier: NSOperationAddBarrierBlockCallback); message 'addBarrierBlock:'; { available in macos , ios , tvos , watchos  }
+    procedure addOperations_waitUntilFinished (ops: NSArray; wait: objcbool); message 'addOperations:waitUntilFinished:'; { available in macos 10.6, ios 4.0, watchos 2.0, tvos 9.0 }
+    procedure addOperationWithBlock (block: NSOperationAddOperationWithBlockCallback); message 'addOperationWithBlock:'; { available in macos 10.6, ios 4.0, watchos 2.0, tvos 9.0 }
+    procedure addBarrierBlock (barrier: NSOperationAddBarrierBlockCallback); message 'addBarrierBlock:'; { available in macos 10.15, ios 13.0, tvos 13.0, watchos 6.0 }
     procedure setMaxConcurrentOperationCount(newValue: NSInteger); message 'setMaxConcurrentOperationCount:';
     function maxConcurrentOperationCount: NSInteger; message 'maxConcurrentOperationCount';
     procedure setSuspended(newValue: objcbool); message 'setSuspended:';
     function isSuspended: objcbool; message 'isSuspended';
-    procedure setName(newValue: NSString); message 'setName:'; { available in macos , ios , watchos , tvos  }
-    function name: NSString; message 'name'; { available in macos , ios , watchos , tvos  }
-    procedure setQualityOfService(newValue: NSQualityOfService); message 'setQualityOfService:'; { available in macos , ios , watchos , tvos  }
-    function qualityOfService: NSQualityOfService; message 'qualityOfService'; { available in macos , ios , watchos , tvos  }
-    procedure setUnderlyingQueue(newValue: dispatch_queue_t); message 'setUnderlyingQueue:'; { available in macos , ios , watchos , tvos  }
-    function underlyingQueue: dispatch_queue_t; message 'underlyingQueue'; { available in macos , ios , watchos , tvos  }
+    procedure setName(newValue: NSString); message 'setName:'; { available in macos 10.6, ios 4.0, watchos 2.0, tvos 9.0 }
+    function name: NSString; message 'name'; { available in macos 10.6, ios 4.0, watchos 2.0, tvos 9.0 }
+    procedure setQualityOfService(newValue: NSQualityOfService); message 'setQualityOfService:'; { available in macos 10.10, ios 8.0, watchos 2.0, tvos 9.0 }
+    function qualityOfService: NSQualityOfService; message 'qualityOfService'; { available in macos 10.10, ios 8.0, watchos 2.0, tvos 9.0 }
+    procedure setUnderlyingQueue(newValue: dispatch_queue_t); message 'setUnderlyingQueue:'; { available in macos 10.10, ios 8.0, watchos 2.0, tvos 9.0 }
+    function underlyingQueue: dispatch_queue_t; message 'underlyingQueue'; { available in macos 10.10, ios 8.0, watchos 2.0, tvos 9.0 }
     procedure cancelAllOperations; message 'cancelAllOperations';
     procedure waitUntilAllOperationsAreFinished; message 'waitUntilAllOperationsAreFinished';
-    class function currentQueue: NSOperationQueue; message 'currentQueue'; { available in macos , ios , watchos , tvos  }
-    class function mainQueue: NSOperationQueue; message 'mainQueue'; { available in macos , ios , watchos , tvos  }
+    class function currentQueue: NSOperationQueue; message 'currentQueue'; { available in macos 10.6, ios 4.0, watchos 2.0, tvos 9.0 }
+    class function mainQueue: NSOperationQueue; message 'mainQueue'; { available in macos 10.6, ios 4.0, watchos 2.0, tvos 9.0 }
 
     { Adopted protocols }
     function progress_: NSProgress; message 'progress';

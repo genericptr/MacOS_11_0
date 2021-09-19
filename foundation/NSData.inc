@@ -22,7 +22,7 @@ type
 const
   NSDataReadingMappedIfSafe = 1 shl 0;
   NSDataReadingUncached = 1 shl 1;
-  NSDataReadingMappedAlways = 1 shl 3 { available in macos , ios , watchos , tvos  };
+  NSDataReadingMappedAlways = 1 shl 3 { available in macos 10.7, ios 5.0, watchos 2.0, tvos 9.0 };
   NSDataReadingMapped = NSDataReadingMappedIfSafe deprecated 'replace with NSDataReadingMappedIfSafe';
   NSMappedRead = NSDataReadingMapped deprecated 'replace with NSDataReadingMapped';
   NSUncachedRead = NSDataReadingUncached deprecated 'replace with NSDataReadingUncached';
@@ -33,12 +33,12 @@ type
 
 const
   NSDataWritingAtomic = 1 shl 0;
-  NSDataWritingWithoutOverwriting = 1 shl 1 { available in macos , ios , watchos , tvos  };
-  NSDataWritingFileProtectionNone = $10000000 { available in macos , ios , watchos , tvos  };
-  NSDataWritingFileProtectionComplete = $20000000 { available in macos , ios , watchos , tvos  };
-  NSDataWritingFileProtectionCompleteUnlessOpen = $30000000 { available in macos , ios , watchos , tvos  };
-  NSDataWritingFileProtectionCompleteUntilFirstUserAuthentication = $40000000 { available in macos , ios , watchos , tvos  };
-  NSDataWritingFileProtectionMask = $f0000000 { available in macos , ios , watchos , tvos  };
+  NSDataWritingWithoutOverwriting = 1 shl 1 { available in macos 10.8, ios 6.0, watchos 2.0, tvos 9.0 };
+  NSDataWritingFileProtectionNone = $10000000 { available in macos 11.0, ios 4.0, watchos 2.0, tvos 9.0 };
+  NSDataWritingFileProtectionComplete = $20000000 { available in macos 11.0, ios 4.0, watchos 2.0, tvos 9.0 };
+  NSDataWritingFileProtectionCompleteUnlessOpen = $30000000 { available in macos 11.0, ios 5.0, watchos 2.0, tvos 9.0 };
+  NSDataWritingFileProtectionCompleteUntilFirstUserAuthentication = $40000000 { available in macos 11.0, ios 5.0, watchos 2.0, tvos 9.0 };
+  NSDataWritingFileProtectionMask = $f0000000 { available in macos 11.0, ios 4.0, watchos 2.0, tvos 9.0 };
   NSAtomicWrite = NSDataWritingAtomic deprecated 'replace with NSDataWritingAtomic';
 
 type
@@ -95,8 +95,8 @@ type
     function writeToURL_atomically (url: NSURL; atomically: objcbool): objcbool; message 'writeToURL:atomically:';
     function writeToFile_options_error (path: NSString; writeOptionsMask: NSDataWritingOptions; errorPtr: NSErrorPtr): objcbool; message 'writeToFile:options:error:';
     function writeToURL_options_error (url: NSURL; writeOptionsMask: NSDataWritingOptions; errorPtr: NSErrorPtr): objcbool; message 'writeToURL:options:error:';
-    function rangeOfData_options_range (dataToFind: NSData; mask: NSDataSearchOptions; searchRange: NSRange): NSRange; message 'rangeOfData:options:range:'; { available in macos , ios , watchos , tvos  }
-    procedure enumerateByteRangesUsingBlock (block: NSDataEnumerateByteRangesUsingBlockCallback); message 'enumerateByteRangesUsingBlock:'; { available in macos , ios , watchos , tvos  }
+    function rangeOfData_options_range (dataToFind: NSData; mask: NSDataSearchOptions; searchRange: NSRange): NSRange; message 'rangeOfData:options:range:'; { available in macos 10.6, ios 4.0, watchos 2.0, tvos 9.0 }
+    procedure enumerateByteRangesUsingBlock (block: NSDataEnumerateByteRangesUsingBlockCallback); message 'enumerateByteRangesUsingBlock:'; { available in macos 10.9, ios 7.0, watchos 2.0, tvos 9.0 }
   end;
 
 type
@@ -112,7 +112,7 @@ type
     function initWithBytes_length (bytes_: pointer; length_: NSUInteger): id; message 'initWithBytes:length:';
     function initWithBytesNoCopy_length (bytes_: pointer; length_: NSUInteger): id; message 'initWithBytesNoCopy:length:';
     function initWithBytesNoCopy_length_freeWhenDone (bytes_: pointer; length_: NSUInteger; b: objcbool): id; message 'initWithBytesNoCopy:length:freeWhenDone:';
-    function initWithBytesNoCopy_length_deallocator (bytes_: pointer; length_: NSUInteger; deallocator: NSDataInitWithBytesNoCopyCallback): id; message 'initWithBytesNoCopy:length:deallocator:'; { available in macos , ios , watchos , tvos  }
+    function initWithBytesNoCopy_length_deallocator (bytes_: pointer; length_: NSUInteger; deallocator: NSDataInitWithBytesNoCopyCallback): id; message 'initWithBytesNoCopy:length:deallocator:'; { available in macos 10.9, ios 7.0, watchos 2.0, tvos 9.0 }
     function initWithContentsOfFile_options_error (path: NSString; readOptionsMask: NSDataReadingOptions; errorPtr: NSErrorPtr): id; message 'initWithContentsOfFile:options:error:';
     function initWithContentsOfURL_options_error (url: NSURL; readOptionsMask: NSDataReadingOptions; errorPtr: NSErrorPtr): id; message 'initWithContentsOfURL:options:error:';
     function initWithContentsOfFile (path: NSString): id; message 'initWithContentsOfFile:';
@@ -123,10 +123,10 @@ type
 
 type
   NSDataBase64Encoding = objccategory external (NSData)
-    function initWithBase64EncodedString_options (base64String: NSString; options: NSDataBase64DecodingOptions): id; message 'initWithBase64EncodedString:options:'; { available in macos , ios , watchos , tvos  }
-    function base64EncodedStringWithOptions (options: NSDataBase64EncodingOptions): NSString; message 'base64EncodedStringWithOptions:'; { available in macos , ios , watchos , tvos  }
-    function initWithBase64EncodedData_options (base64Data: NSData; options: NSDataBase64DecodingOptions): id; message 'initWithBase64EncodedData:options:'; { available in macos , ios , watchos , tvos  }
-    function base64EncodedDataWithOptions (options: NSDataBase64EncodingOptions): NSData; message 'base64EncodedDataWithOptions:'; { available in macos , ios , watchos , tvos  }
+    function initWithBase64EncodedString_options (base64String: NSString; options: NSDataBase64DecodingOptions): id; message 'initWithBase64EncodedString:options:'; { available in macos 10.9, ios 7.0, watchos 2.0, tvos 9.0 }
+    function base64EncodedStringWithOptions (options: NSDataBase64EncodingOptions): NSString; message 'base64EncodedStringWithOptions:'; { available in macos 10.9, ios 7.0, watchos 2.0, tvos 9.0 }
+    function initWithBase64EncodedData_options (base64Data: NSData; options: NSDataBase64DecodingOptions): id; message 'initWithBase64EncodedData:options:'; { available in macos 10.9, ios 7.0, watchos 2.0, tvos 9.0 }
+    function base64EncodedDataWithOptions (options: NSDataBase64EncodingOptions): NSData; message 'base64EncodedDataWithOptions:'; { available in macos 10.9, ios 7.0, watchos 2.0, tvos 9.0 }
   end;
 {$endif}
 
@@ -146,8 +146,8 @@ const
 
 type
   NSDataCompression = objccategory external (NSData)
-    function decompressedDataUsingAlgorithm_error (algorithm: NSDataCompressionAlgorithm; error: NSErrorPtr): id; message 'decompressedDataUsingAlgorithm:error:'; { available in macos , ios , watchos , tvos  }
-    function compressedDataUsingAlgorithm_error (algorithm: NSDataCompressionAlgorithm; error: NSErrorPtr): id; message 'compressedDataUsingAlgorithm:error:'; { available in macos , ios , watchos , tvos  }
+    function decompressedDataUsingAlgorithm_error (algorithm: NSDataCompressionAlgorithm; error: NSErrorPtr): id; message 'decompressedDataUsingAlgorithm:error:'; { available in macos 10.15, ios 13.0, watchos 6.0, tvos 13.0 }
+    function compressedDataUsingAlgorithm_error (algorithm: NSDataCompressionAlgorithm; error: NSErrorPtr): id; message 'compressedDataUsingAlgorithm:error:'; { available in macos 10.15, ios 13.0, watchos 6.0, tvos 13.0 }
   end;
 
 type
@@ -190,8 +190,8 @@ type
 
 type
   NSMutableDataCompression = objccategory external (NSMutableData)
-    function decompressUsingAlgorithm_error (algorithm: NSDataCompressionAlgorithm; error: NSErrorPtr): objcbool; message 'decompressUsingAlgorithm:error:'; { available in macos , ios , watchos , tvos  }
-    function compressUsingAlgorithm_error (algorithm: NSDataCompressionAlgorithm; error: NSErrorPtr): objcbool; message 'compressUsingAlgorithm:error:'; { available in macos , ios , watchos , tvos  }
+    function decompressUsingAlgorithm_error (algorithm: NSDataCompressionAlgorithm; error: NSErrorPtr): objcbool; message 'decompressUsingAlgorithm:error:'; { available in macos 10.15, ios 13.0, watchos 6.0, tvos 13.0 }
+    function compressUsingAlgorithm_error (algorithm: NSDataCompressionAlgorithm; error: NSErrorPtr): objcbool; message 'compressUsingAlgorithm:error:'; { available in macos 10.15, ios 13.0, watchos 6.0, tvos 13.0 }
   end;
 
 

@@ -38,6 +38,6 @@ type
 
 {$ifdef EXTERNAL_SYMBOLS}
 var
-  NSTextInputContextKeyboardSelectionDidChangeNotification: NSNotificationName { available in macos  }; cvar; external;
+  NSTextInputContextKeyboardSelectionDidChangeNotification: NSNotificationName { available in macos 10.6 }; cvar; external;
 {$endif}
 

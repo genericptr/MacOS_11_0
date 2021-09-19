@@ -13,17 +13,17 @@ type
 
 {$ifdef EXTERNAL_SYMBOLS}
 var
-  NSTextContentTypeUsername: NSTextContentType { available in macos  }; cvar; external;
-  NSTextContentTypePassword: NSTextContentType { available in macos  }; cvar; external;
-  NSTextContentTypeOneTimeCode: NSTextContentType { available in macos  }; cvar; external;
+  NSTextContentTypeUsername: NSTextContentType { available in macos 11.0 }; cvar; external;
+  NSTextContentTypePassword: NSTextContentType { available in macos 11.0 }; cvar; external;
+  NSTextContentTypeOneTimeCode: NSTextContentType { available in macos 11.0 }; cvar; external;
 {$endif}
 
 {$ifdef PROTOCOLS}
 
 type
   NSTextContentProtocol = objcprotocol external name 'NSTextContent'
-    procedure setContentType(newValue: NSTextContentType); message 'setContentType:'; { available in macos  }
-    function contentType: NSTextContentType; message 'contentType'; { available in macos  }
+    procedure setContentType(newValue: NSTextContentType); message 'setContentType:'; { available in macos 11.0 }
+    function contentType: NSTextContentType; message 'contentType'; { available in macos 11.0 }
   end;
 {$endif}
 

@@ -138,17 +138,17 @@ type
 
 type
   NSAnimatablePropertyContainerProtocol = objcprotocol external name 'NSAnimatablePropertyContainer'
-    function animator: id; message 'animator'; { available in macos  }
-    procedure setAnimations(newValue: NSDictionary); message 'setAnimations:'; { available in macos  }
-    function animations: NSDictionary; message 'animations'; { available in macos  }
-    function animationForKey (key: NSAnimatablePropertyKey): id; message 'animationForKey:'; { available in macos  }
-    class function defaultAnimationForKey (key: NSAnimatablePropertyKey): id; message 'defaultAnimationForKey:'; { available in macos  }
+    function animator: id; message 'animator'; { available in macos 10.5 }
+    procedure setAnimations(newValue: NSDictionary); message 'setAnimations:'; { available in macos 10.5 }
+    function animations: NSDictionary; message 'animations'; { available in macos 10.5 }
+    function animationForKey (key: NSAnimatablePropertyKey): id; message 'animationForKey:'; { available in macos 10.5 }
+    class function defaultAnimationForKey (key: NSAnimatablePropertyKey): id; message 'defaultAnimationForKey:'; { available in macos 10.5 }
   end;
 {$endif}
 
 {$ifdef EXTERNAL_SYMBOLS}
 var
-  NSAnimationTriggerOrderIn: NSAnimatablePropertyKey { available in macos  }; cvar; external;
-  NSAnimationTriggerOrderOut: NSAnimatablePropertyKey { available in macos  }; cvar; external;
+  NSAnimationTriggerOrderIn: NSAnimatablePropertyKey { available in macos 10.5 }; cvar; external;
+  NSAnimationTriggerOrderOut: NSAnimatablePropertyKey { available in macos 10.5 }; cvar; external;
 {$endif}
 

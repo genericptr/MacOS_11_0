@@ -28,7 +28,7 @@ type
     function instance: MDLObject; message 'instance';
     function path: NSString; message 'path';
     function objectAtPath (path_: NSString): MDLObject; message 'objectAtPath:';
-    procedure enumerateChildObjectsOfClass_root_usingBlock_stopPointer (objectClass: pobjc_class; root: MDLObject; block: MDLObjectEnumerateChildObjectsOfClassCallback; stopPointer: objcboolPtr); message 'enumerateChildObjectsOfClass:root:usingBlock:stopPointer:'; { available in macos , ios , tvos  }
+    procedure enumerateChildObjectsOfClass_root_usingBlock_stopPointer (objectClass: pobjc_class; root: MDLObject; block: MDLObjectEnumerateChildObjectsOfClassCallback; stopPointer: objcboolPtr); message 'enumerateChildObjectsOfClass:root:usingBlock:stopPointer:'; { available in macos 10.13, ios 11.0, tvos 11.0 }
     procedure setTransform(newValue: MDLTransformComponentProtocol); message 'setTransform:';
     function transform: MDLTransformComponentProtocol; message 'transform';
     procedure setChildren(newValue: MDLObjectContainerComponentProtocol); message 'setChildren:';
@@ -48,9 +48,9 @@ type
 
     { Adopted protocols }
     procedure addObject (object_: MDLObject); message 'addObject:';
-    function count: NSUInteger; message 'count'; { available in macos , ios , tvos  }
+    function count: NSUInteger; message 'count'; { available in macos 10.13, ios 11.0, tvos 11.0 }
     function countByEnumeratingWithState_objects_count (state: NSFastEnumerationStatePtr; buffer: idPtr { variable size array of id }; len: NSUInteger): NSUInteger; message 'countByEnumeratingWithState:objects:count:';
-    function objectAtIndexedSubscript (index: NSUInteger): MDLObject; message 'objectAtIndexedSubscript:'; { available in macos , ios , tvos  }
+    function objectAtIndexedSubscript (index: NSUInteger): MDLObject; message 'objectAtIndexedSubscript:'; { available in macos 10.13, ios 11.0, tvos 11.0 }
     function objects: NSArray; message 'objects';
     procedure removeObject (object_: MDLObject); message 'removeObject:';
   end;

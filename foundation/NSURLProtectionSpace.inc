@@ -7,21 +7,21 @@ type
 
 {$ifdef EXTERNAL_SYMBOLS}
 var
-  NSURLProtectionSpaceHTTP: NSString { available in macos , ios , watchos , tvos  }; cvar; external;
-  NSURLProtectionSpaceHTTPS: NSString { available in macos , ios , watchos , tvos  }; cvar; external;
-  NSURLProtectionSpaceFTP: NSString { available in macos , ios , watchos , tvos  }; cvar; external;
-  NSURLProtectionSpaceHTTPProxy: NSString { available in macos , ios , watchos , tvos  }; cvar; external;
-  NSURLProtectionSpaceHTTPSProxy: NSString { available in macos , ios , watchos , tvos  }; cvar; external;
-  NSURLProtectionSpaceFTPProxy: NSString { available in macos , ios , watchos , tvos  }; cvar; external;
-  NSURLProtectionSpaceSOCKSProxy: NSString { available in macos , ios , watchos , tvos  }; cvar; external;
-  NSURLAuthenticationMethodDefault: NSString { available in macos , ios , watchos , tvos  }; cvar; external;
-  NSURLAuthenticationMethodHTTPBasic: NSString { available in macos , ios , watchos , tvos  }; cvar; external;
-  NSURLAuthenticationMethodHTTPDigest: NSString { available in macos , ios , watchos , tvos  }; cvar; external;
-  NSURLAuthenticationMethodHTMLForm: NSString { available in macos , ios , watchos , tvos  }; cvar; external;
-  NSURLAuthenticationMethodNTLM: NSString { available in macos , ios , watchos , tvos  }; cvar; external;
-  NSURLAuthenticationMethodNegotiate: NSString { available in macos , ios , watchos , tvos  }; cvar; external;
-  NSURLAuthenticationMethodClientCertificate: NSString { available in macos , ios , watchos , tvos  }; cvar; external;
-  NSURLAuthenticationMethodServerTrust: NSString { available in macos , ios , watchos , tvos  }; cvar; external;
+  NSURLProtectionSpaceHTTP: NSString { available in macos 10.5, ios 2.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  NSURLProtectionSpaceHTTPS: NSString { available in macos 10.5, ios 2.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  NSURLProtectionSpaceFTP: NSString { available in macos 10.5, ios 2.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  NSURLProtectionSpaceHTTPProxy: NSString { available in macos 10.2, ios 2.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  NSURLProtectionSpaceHTTPSProxy: NSString { available in macos 10.2, ios 2.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  NSURLProtectionSpaceFTPProxy: NSString { available in macos 10.2, ios 2.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  NSURLProtectionSpaceSOCKSProxy: NSString { available in macos 10.2, ios 2.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  NSURLAuthenticationMethodDefault: NSString { available in macos 10.2, ios 2.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  NSURLAuthenticationMethodHTTPBasic: NSString { available in macos 10.2, ios 2.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  NSURLAuthenticationMethodHTTPDigest: NSString { available in macos 10.2, ios 2.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  NSURLAuthenticationMethodHTMLForm: NSString { available in macos 10.2, ios 2.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  NSURLAuthenticationMethodNTLM: NSString { available in macos 10.5, ios 2.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  NSURLAuthenticationMethodNegotiate: NSString { available in macos 10.5, ios 2.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  NSURLAuthenticationMethodClientCertificate: NSString { available in macos 10.6, ios 3.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  NSURLAuthenticationMethodServerTrust: NSString { available in macos 10.6, ios 3.0, watchos 2.0, tvos 9.0 }; cvar; external;
 {$endif}
 
 {$ifdef CLASSES}
@@ -52,12 +52,12 @@ type
 
 type
   NSClientCertificateSpace = objccategory external (NSURLProtectionSpace)
-    function distinguishedNames: NSArray; message 'distinguishedNames'; { available in macos , ios , watchos , tvos  }
+    function distinguishedNames: NSArray; message 'distinguishedNames'; { available in macos 10.6, ios 3.0, watchos 2.0, tvos 9.0 }
   end;
 
 type
   NSServerTrustValidationSpace = objccategory external (NSURLProtectionSpace)
-    function serverTrust: SecTrustRef; message 'serverTrust'; { available in macos , ios , watchos , tvos  }
+    function serverTrust: SecTrustRef; message 'serverTrust'; { available in macos 10.6, ios 3.0, watchos 2.0, tvos 9.0 }
   end;
 {$endif}
 

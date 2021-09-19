@@ -33,10 +33,10 @@ type
     class function paletteFontOfSize (fontSize: CGFloat): NSFont; message 'paletteFontOfSize:';
     class function toolTipsFontOfSize (fontSize: CGFloat): NSFont; message 'toolTipsFontOfSize:';
     class function controlContentFontOfSize (fontSize: CGFloat): NSFont; message 'controlContentFontOfSize:';
-    class function systemFontOfSize_weight (fontSize: CGFloat; weight: NSFontWeight): NSFont; message 'systemFontOfSize:weight:'; { available in macos  }
-    class function monospacedDigitSystemFontOfSize_weight (fontSize: CGFloat; weight: NSFontWeight): NSFont; message 'monospacedDigitSystemFontOfSize:weight:'; { available in macos  }
-    class function monospacedSystemFontOfSize_weight (fontSize: CGFloat; weight: NSFontWeight): NSFont; message 'monospacedSystemFontOfSize:weight:'; { available in macos  }
-    function fontWithSize (fontSize: CGFloat): NSFont; message 'fontWithSize:'; { available in macos  }
+    class function systemFontOfSize_weight (fontSize: CGFloat; weight: NSFontWeight): NSFont; message 'systemFontOfSize:weight:'; { available in macos 10.11 }
+    class function monospacedDigitSystemFontOfSize_weight (fontSize: CGFloat; weight: NSFontWeight): NSFont; message 'monospacedDigitSystemFontOfSize:weight:'; { available in macos 10.11 }
+    class function monospacedSystemFontOfSize_weight (fontSize: CGFloat; weight: NSFontWeight): NSFont; message 'monospacedSystemFontOfSize:weight:'; { available in macos 10.15 }
+    function fontWithSize (fontSize: CGFloat): NSFont; message 'fontWithSize:'; { available in macos 10.15 }
     class function systemFontSize: CGFloat; message 'systemFontSize';
     class function smallSystemFontSize: CGFloat; message 'smallSystemFontSize';
     class function labelFontSize: CGFloat; message 'labelFontSize';
@@ -62,14 +62,14 @@ type
     function capHeight: CGFloat; message 'capHeight';
     function xHeight: CGFloat; message 'xHeight';
     function isFixedPitch: objcbool; message 'isFixedPitch';
-    function boundingRectForCGGlyph (glyph: CGGlyph): NSRect; message 'boundingRectForCGGlyph:'; { available in macos  }
-    function advancementForCGGlyph (glyph: CGGlyph): NSSize; message 'advancementForCGGlyph:'; { available in macos  }
-    procedure getBoundingRects_forCGGlyphs_count (bounds: NSRectArray; glyphs: CGGlyphPtr; glyphCount: NSUInteger); message 'getBoundingRects:forCGGlyphs:count:'; { available in macos  }
-    procedure getAdvancements_forCGGlyphs_count (advancements: NSSizeArray; glyphs: CGGlyphPtr; glyphCount: NSUInteger); message 'getAdvancements:forCGGlyphs:count:'; { available in macos  }
+    function boundingRectForCGGlyph (glyph: CGGlyph): NSRect; message 'boundingRectForCGGlyph:'; { available in macos 10.13 }
+    function advancementForCGGlyph (glyph: CGGlyph): NSSize; message 'advancementForCGGlyph:'; { available in macos 10.13 }
+    procedure getBoundingRects_forCGGlyphs_count (bounds: NSRectArray; glyphs: CGGlyphPtr; glyphCount: NSUInteger); message 'getBoundingRects:forCGGlyphs:count:'; { available in macos 10.13 }
+    procedure getAdvancements_forCGGlyphs_count (advancements: NSSizeArray; glyphs: CGGlyphPtr; glyphCount: NSUInteger); message 'getAdvancements:forCGGlyphs:count:'; { available in macos 10.13 }
     procedure set_; message 'set';
     procedure setInContext (graphicsContext: NSGraphicsContext); message 'setInContext:';
-    function verticalFont: NSFont; message 'verticalFont'; { available in macos  }
-    function isVertical: objcbool; message 'isVertical'; { available in macos  }
+    function verticalFont: NSFont; message 'verticalFont'; { available in macos 10.7 }
+    function isVertical: objcbool; message 'isVertical'; { available in macos 10.7 }
 
     { Adopted protocols }
     function copyWithZone (zone: NSZonePtr): id; message 'copyWithZone:';
@@ -134,7 +134,7 @@ type
 
 type
   NSFont_TextStyles = objccategory external (NSFont)
-    class function preferredFontForTextStyle_options (style: NSFontTextStyle; options: NSDictionary): NSFont; message 'preferredFontForTextStyle:options:'; { available in macos  }
+    class function preferredFontForTextStyle_options (style: NSFontTextStyle; options: NSDictionary): NSFont; message 'preferredFontForTextStyle:options:'; { available in macos 11.0 }
   end;
 {$endif}
 

@@ -55,8 +55,8 @@ type
     function init: id; message 'init';
     class function new_: id; message 'new';
     function userIdentity: CKUserIdentity; message 'userIdentity';
-    procedure setRole(newValue: CKShareParticipantRole); message 'setRole:'; { available in macos , ios , tvos , watchos  }
-    function role: CKShareParticipantRole; message 'role'; { available in macos , ios , tvos , watchos  }
+    procedure setRole(newValue: CKShareParticipantRole); message 'setRole:'; { available in macos 10.14, ios 12.0, tvos 12.0, watchos 5.0 }
+    function role: CKShareParticipantRole; message 'role'; { available in macos 10.14, ios 12.0, tvos 12.0, watchos 5.0 }
     procedure setType(newValue: CKShareParticipantType); message 'setType:'; deprecated 'replace with role';
     function type_: CKShareParticipantType; message 'type'; deprecated 'replace with role';
     function acceptanceStatus: CKShareParticipantAcceptanceStatus; message 'acceptanceStatus';

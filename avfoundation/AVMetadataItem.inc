@@ -23,12 +23,12 @@ type
   private
     _priv: AVMetadataItemInternal;
   public
-    function identifier: AVMetadataIdentifier; message 'identifier'; { available in macos , ios , tvos , watchos  }
-    function extendedLanguageTag: NSString; message 'extendedLanguageTag'; { available in macos , ios , tvos , watchos  }
+    function identifier: AVMetadataIdentifier; message 'identifier'; { available in macos 10.10, ios 8.0, tvos 9.0, watchos 1.0 }
+    function extendedLanguageTag: NSString; message 'extendedLanguageTag'; { available in macos 10.10, ios 8.0, tvos 9.0, watchos 1.0 }
     function locale: NSLocale; message 'locale';
     function time: CMTime; message 'time';
-    function duration: CMTime; message 'duration'; { available in macos , ios , tvos , watchos  }
-    function dataType: NSString; message 'dataType'; { available in macos , ios , tvos , watchos  }
+    function duration: CMTime; message 'duration'; { available in macos 10.7, ios 4.2, tvos 9.0, watchos 1.0 }
+    function dataType: NSString; message 'dataType'; { available in macos 10.10, ios 8.0, tvos 9.0, watchos 1.0 }
     function value: id; message 'value';
     function extraAttributes: NSDictionary; message 'extraAttributes';
 
@@ -42,7 +42,7 @@ type
 
 type
   AVMetadataItemDateRepresentation = objccategory external (AVMetadataItem)
-    function startDate: NSDate; message 'startDate'; { available in macos , ios , tvos , watchos  }
+    function startDate: NSDate; message 'startDate'; { available in macos 10.11, ios 9.0, tvos 9.0, watchos 2.0 }
   end;
 
 type
@@ -55,22 +55,22 @@ type
 
 type
   AVAsynchronousKeyValueLoading = objccategory external (AVMetadataItem)
-    function statusOfValueForKey_error (key: NSString; outError: NSErrorPtr): AVKeyValueStatus; message 'statusOfValueForKey:error:'; { available in macos , ios , tvos , watchos  }
-    procedure loadValuesAsynchronouslyForKeys_completionHandler (keys: NSArray; handler: AVMetadataItemLoadValuesAsynchronouslyForKeysCallback); message 'loadValuesAsynchronouslyForKeys:completionHandler:'; { available in macos , ios , tvos , watchos  }
+    function statusOfValueForKey_error (key: NSString; outError: NSErrorPtr): AVKeyValueStatus; message 'statusOfValueForKey:error:'; { available in macos 10.7, ios 4.2, tvos 9.0, watchos 1.0 }
+    procedure loadValuesAsynchronouslyForKeys_completionHandler (keys: NSArray; handler: AVMetadataItemLoadValuesAsynchronouslyForKeysCallback); message 'loadValuesAsynchronouslyForKeys:completionHandler:'; { available in macos 10.7, ios 4.2, tvos 9.0, watchos 1.0 }
   end;
 
 type
   AVMetadataItemArrayFiltering = objccategory external (AVMetadataItem)
-    class function metadataItemsFromArray_filteredAndSortedAccordingToPreferredLanguages (metadataItems: NSArray; preferredLanguages: NSArray): NSArray; message 'metadataItemsFromArray:filteredAndSortedAccordingToPreferredLanguages:'; { available in macos , ios , tvos , watchos  }
-    class function metadataItemsFromArray_filteredByIdentifier (metadataItems: NSArray; identifier_: AVMetadataIdentifier): NSArray; message 'metadataItemsFromArray:filteredByIdentifier:'; { available in macos , ios , tvos , watchos  }
-    class function metadataItemsFromArray_filteredByMetadataItemFilter (metadataItems: NSArray; metadataItemFilter: AVMetadataItemFilter): NSArray; message 'metadataItemsFromArray:filteredByMetadataItemFilter:'; { available in macos , ios , tvos , watchos  }
+    class function metadataItemsFromArray_filteredAndSortedAccordingToPreferredLanguages (metadataItems: NSArray; preferredLanguages: NSArray): NSArray; message 'metadataItemsFromArray:filteredAndSortedAccordingToPreferredLanguages:'; { available in macos 10.8, ios 6.0, tvos 9.0, watchos 1.0 }
+    class function metadataItemsFromArray_filteredByIdentifier (metadataItems: NSArray; identifier_: AVMetadataIdentifier): NSArray; message 'metadataItemsFromArray:filteredByIdentifier:'; { available in macos 10.10, ios 8.0, tvos 9.0, watchos 1.0 }
+    class function metadataItemsFromArray_filteredByMetadataItemFilter (metadataItems: NSArray; metadataItemFilter: AVMetadataItemFilter): NSArray; message 'metadataItemsFromArray:filteredByMetadataItemFilter:'; { available in macos 10.9, ios 7.0, tvos 9.0, watchos 1.0 }
   end;
 
 type
   AVMetadataItemKeyAndKeyspace = objccategory external (AVMetadataItem)
-    class function identifierForKey_keySpace (key: id; keySpace: AVMetadataKeySpace): AVMetadataIdentifier; message 'identifierForKey:keySpace:'; { available in macos , ios , tvos , watchos  }
-    class function keySpaceForIdentifier (identifier_: AVMetadataIdentifier): AVMetadataKeySpace; message 'keySpaceForIdentifier:'; { available in macos , ios , tvos , watchos  }
-    class function keyForIdentifier (identifier_: AVMetadataIdentifier): id; message 'keyForIdentifier:'; { available in macos , ios , tvos , watchos  }
+    class function identifierForKey_keySpace (key: id; keySpace: AVMetadataKeySpace): AVMetadataIdentifier; message 'identifierForKey:keySpace:'; { available in macos 10.10, ios 8.0, tvos 9.0, watchos 1.0 }
+    class function keySpaceForIdentifier (identifier_: AVMetadataIdentifier): AVMetadataKeySpace; message 'keySpaceForIdentifier:'; { available in macos 10.10, ios 8.0, tvos 9.0, watchos 1.0 }
+    class function keyForIdentifier (identifier_: AVMetadataIdentifier): id; message 'keyForIdentifier:'; { available in macos 10.10, ios 8.0, tvos 9.0, watchos 1.0 }
     function key: id; message 'key';
     function commonKey: AVMetadataKey; message 'commonKey';
     function keySpace: AVMetadataKeySpace; message 'keySpace';
@@ -82,18 +82,18 @@ type
   private
     _mutablePriv: AVMutableMetadataItemInternal;
   public
-    procedure setIdentifier(newValue: AVMetadataIdentifier); message 'setIdentifier:'; { available in macos , ios , tvos , watchos  }
-    function identifier: AVMetadataIdentifier; message 'identifier'; { available in macos , ios , tvos , watchos  }
-    procedure setExtendedLanguageTag(newValue: NSString); message 'setExtendedLanguageTag:'; { available in macos , ios , tvos , watchos  }
-    function extendedLanguageTag: NSString; message 'extendedLanguageTag'; { available in macos , ios , tvos , watchos  }
+    procedure setIdentifier(newValue: AVMetadataIdentifier); message 'setIdentifier:'; { available in macos 10.10, ios 8.0, tvos 9.0, watchos 1.0 }
+    function identifier: AVMetadataIdentifier; message 'identifier'; { available in macos 10.10, ios 8.0, tvos 9.0, watchos 1.0 }
+    procedure setExtendedLanguageTag(newValue: NSString); message 'setExtendedLanguageTag:'; { available in macos 10.10, ios 8.0, tvos 9.0, watchos 1.0 }
+    function extendedLanguageTag: NSString; message 'extendedLanguageTag'; { available in macos 10.10, ios 8.0, tvos 9.0, watchos 1.0 }
     procedure setLocale(newValue: NSLocale); message 'setLocale:';
     function locale: NSLocale; message 'locale';
     procedure setTime(newValue: CMTime); message 'setTime:';
     function time: CMTime; message 'time';
-    procedure setDuration(newValue: CMTime); message 'setDuration:'; { available in macos , ios , tvos , watchos  }
-    function duration: CMTime; message 'duration'; { available in macos , ios , tvos , watchos  }
-    procedure setDataType(newValue: NSString); message 'setDataType:'; { available in macos , ios , tvos , watchos  }
-    function dataType: NSString; message 'dataType'; { available in macos , ios , tvos , watchos  }
+    procedure setDuration(newValue: CMTime); message 'setDuration:'; { available in macos 10.7, ios 4.2, tvos 9.0, watchos 1.0 }
+    function duration: CMTime; message 'duration'; { available in macos 10.7, ios 4.2, tvos 9.0, watchos 1.0 }
+    procedure setDataType(newValue: NSString); message 'setDataType:'; { available in macos 10.10, ios 8.0, tvos 9.0, watchos 1.0 }
+    function dataType: NSString; message 'dataType'; { available in macos 10.10, ios 8.0, tvos 9.0, watchos 1.0 }
     procedure setValue(newValue: id); message 'setValue:';
     function value: id; message 'value';
     procedure setExtraAttributes(newValue: NSDictionary); message 'setExtraAttributes:';
@@ -104,8 +104,8 @@ type
 
 type
   AVMutableMetadataItemDateRepresentation = objccategory external (AVMutableMetadataItem)
-    procedure setStartDate(newValue: NSDate); message 'setStartDate:'; { available in macos , ios , tvos , watchos  }
-    function startDate: NSDate; message 'startDate'; { available in macos , ios , tvos , watchos  }
+    procedure setStartDate(newValue: NSDate); message 'setStartDate:'; { available in macos 10.11, ios 9.0, tvos 9.0, watchos 2.0 }
+    function startDate: NSDate; message 'startDate'; { available in macos 10.11, ios 9.0, tvos 9.0, watchos 2.0 }
   end;
 
 type
@@ -118,7 +118,7 @@ type
 
 type
   AVMetadataItemLazyValueLoading = objccategory external (AVMetadataItem)
-    class function metadataItemWithPropertiesOfMetadataItem_valueLoadingHandler (metadataItem: AVMetadataItem; handler: AVMetadataItemMetadataItemWithPropertiesOfMetadataItemCallback): AVMetadataItem; message 'metadataItemWithPropertiesOfMetadataItem:valueLoadingHandler:'; { available in macos , ios , tvos , watchos  }
+    class function metadataItemWithPropertiesOfMetadataItem_valueLoadingHandler (metadataItem: AVMetadataItem; handler: AVMetadataItemMetadataItemWithPropertiesOfMetadataItemCallback): AVMetadataItem; message 'metadataItemWithPropertiesOfMetadataItem:valueLoadingHandler:'; { available in macos 10.11, ios 9.0, tvos 9.0, watchos 2.0 }
   end;
 
 

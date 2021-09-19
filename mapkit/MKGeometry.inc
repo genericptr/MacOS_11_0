@@ -52,35 +52,35 @@ type
 {$endif}
 {$ifdef EXTERNAL_SYMBOLS}
 var
-  MKMapSizeWorld: MKMapSize { available in 10_9, 4_0 }; cvar; external;
-  MKMapRectWorld: MKMapRect { available in 10_9, 4_0 }; cvar; external;
+  MKMapSizeWorld: MKMapSize { available in 10_9, 4_0 } { available in 9_2 }; cvar; external;
+  MKMapRectWorld: MKMapRect { available in 10_9, 4_0 } { available in 9_2 }; cvar; external;
 {$endif}
 
 {$ifdef FUNCTIONS}
-function MKMapPointForCoordinate(coordinate: CLLocationCoordinate2D): MKMapPoint; cdecl; external; { available in 10_9, 4_0 }
-function MKCoordinateForMapPoint(mapPoint: MKMapPoint): CLLocationCoordinate2D; cdecl; external; { available in 10_9, 4_0 }
-function MKMetersPerMapPointAtLatitude(latitude: CLLocationDegrees): CLLocationDistance; cdecl; external; { available in 10_9, 4_0 }
-function MKMapPointsPerMeterAtLatitude(latitude: CLLocationDegrees): double; cdecl; external; { available in 10_9, 4_0 }
-function MKMetersBetweenMapPoints(a: MKMapPoint; b: MKMapPoint): CLLocationDistance; cdecl; external; { available in 10_9, 4_0 }
+function MKMapPointForCoordinate(coordinate: CLLocationCoordinate2D): MKMapPoint; cdecl; external; { available in 10_9, 4_0 } { available in 9_2 }
+function MKCoordinateForMapPoint(mapPoint: MKMapPoint): CLLocationCoordinate2D; cdecl; external; { available in 10_9, 4_0 } { available in 9_2 }
+function MKMetersPerMapPointAtLatitude(latitude: CLLocationDegrees): CLLocationDistance; cdecl; external; { available in 10_9, 4_0 } { available in 9_2 }
+function MKMapPointsPerMeterAtLatitude(latitude: CLLocationDegrees): double; cdecl; external; { available in 10_9, 4_0 } { available in 9_2 }
+function MKMetersBetweenMapPoints(a: MKMapPoint; b: MKMapPoint): CLLocationDistance; cdecl; external; { available in 10_9, 4_0 } { available in 9_2 }
 {$endif}
 
 {$ifdef EXTERNAL_SYMBOLS}
 var
-  MKMapRectNull: MKMapRect { available in 10_9, 4_0 }; cvar; external;
+  MKMapRectNull: MKMapRect { available in 10_9, 4_0 } { available in 9_2 }; cvar; external;
 {$endif}
 
 {$ifdef FUNCTIONS}
-function MKMapRectUnion(rect1: MKMapRect; rect2: MKMapRect): MKMapRect; cdecl; external; { available in 10_9, 4_0 }
-function MKMapRectIntersection(rect1: MKMapRect; rect2: MKMapRect): MKMapRect; cdecl; external; { available in 10_9, 4_0 }
-function MKMapRectInset(rect: MKMapRect; dx: double; dy: double): MKMapRect; cdecl; external; { available in 10_9, 4_0 }
-function MKMapRectOffset(rect: MKMapRect; dx: double; dy: double): MKMapRect; cdecl; external; { available in 10_9, 4_0 }
-function MKMapRectDivide(rect: MKMapRect; slice: MKMapRectPtr; remainder: MKMapRectPtr; amount: double; edge: CGRectEdge): pointer; cdecl; external; { available in 10_9, 4_0 }
-function MKMapRectContainsPoint(rect: MKMapRect; point: MKMapPoint): objcbool; cdecl; external; { available in 10_9, 4_0 }
-function MKMapRectContainsRect(rect1: MKMapRect; rect2: MKMapRect): objcbool; cdecl; external; { available in 10_9, 4_0 }
-function MKMapRectIntersectsRect(rect1: MKMapRect; rect2: MKMapRect): objcbool; cdecl; external; { available in 10_9, 4_0 }
-function MKCoordinateRegionForMapRect(rect: MKMapRect): MKCoordinateRegion; cdecl; external; { available in 10_9, 4_0 }
-function MKMapRectSpans180thMeridian(rect: MKMapRect): objcbool; cdecl; external; { available in 10_9, 4_0 }
-function MKMapRectRemainder(rect: MKMapRect): MKMapRect; cdecl; external; { available in 10_9, 4_0 }
+function MKMapRectUnion(rect1: MKMapRect; rect2: MKMapRect): MKMapRect; cdecl; external; { available in 10_9, 4_0 } { available in 9_2 }
+function MKMapRectIntersection(rect1: MKMapRect; rect2: MKMapRect): MKMapRect; cdecl; external; { available in 10_9, 4_0 } { available in 9_2 }
+function MKMapRectInset(rect: MKMapRect; dx: double; dy: double): MKMapRect; cdecl; external; { available in 10_9, 4_0 } { available in 9_2 }
+function MKMapRectOffset(rect: MKMapRect; dx: double; dy: double): MKMapRect; cdecl; external; { available in 10_9, 4_0 } { available in 9_2 }
+function MKMapRectDivide(rect: MKMapRect; slice: MKMapRectPtr; remainder: MKMapRectPtr; amount: double; edge: CGRectEdge): pointer; cdecl; external; { available in 10_9, 4_0 } { available in 9_2 }
+function MKMapRectContainsPoint(rect: MKMapRect; point: MKMapPoint): objcbool; cdecl; external; { available in 10_9, 4_0 } { available in 9_2 }
+function MKMapRectContainsRect(rect1: MKMapRect; rect2: MKMapRect): objcbool; cdecl; external; { available in 10_9, 4_0 } { available in 9_2 }
+function MKMapRectIntersectsRect(rect1: MKMapRect; rect2: MKMapRect): objcbool; cdecl; external; { available in 10_9, 4_0 } { available in 9_2 }
+function MKCoordinateRegionForMapRect(rect: MKMapRect): MKCoordinateRegion; cdecl; external; { available in 10_9, 4_0 } { available in 9_2 }
+function MKMapRectSpans180thMeridian(rect: MKMapRect): objcbool; cdecl; external; { available in 10_9, 4_0 } { available in 9_2 }
+function MKMapRectRemainder(rect: MKMapRect): MKMapRect; cdecl; external; { available in 10_9, 4_0 } { available in 9_2 }
 {$endif}
 
 {$ifdef CLASSES}

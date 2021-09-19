@@ -15,9 +15,9 @@ type
   public
     function preferredLanguages: NSArray; message 'preferredLanguages';
     function preferredMediaCharacteristics: NSArray; message 'preferredMediaCharacteristics';
-    function principalMediaCharacteristics: NSArray; message 'principalMediaCharacteristics'; { available in macos , ios , tvos , watchos  }
+    function principalMediaCharacteristics: NSArray; message 'principalMediaCharacteristics'; { available in macos 10.14, ios 12.0, tvos 12.0, watchos 5.0 }
     function initWithPreferredLanguages_preferredMediaCharacteristics (preferredLanguages_: NSArray; preferredMediaCharacteristics_: NSArray): id; message 'initWithPreferredLanguages:preferredMediaCharacteristics:';
-    function initWithPrincipalMediaCharacteristics_preferredLanguages_preferredMediaCharacteristics (principalMediaCharacteristics_: NSArray; preferredLanguages_: NSArray; preferredMediaCharacteristics_: NSArray): id; message 'initWithPrincipalMediaCharacteristics:preferredLanguages:preferredMediaCharacteristics:'; { available in macos , ios , tvos , watchos  }
+    function initWithPrincipalMediaCharacteristics_preferredLanguages_preferredMediaCharacteristics (principalMediaCharacteristics_: NSArray; preferredLanguages_: NSArray; preferredMediaCharacteristics_: NSArray): id; message 'initWithPrincipalMediaCharacteristics:preferredLanguages:preferredMediaCharacteristics:'; { available in macos 10.14, ios 12.0, tvos 12.0, watchos 5.0 }
   end;
 {$endif}
 

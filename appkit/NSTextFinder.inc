@@ -34,8 +34,8 @@ type
 
 {$ifdef EXTERNAL_SYMBOLS}
 var
-  NSTextFinderCaseInsensitiveKey: NSPasteboardTypeTextFinderOptionKey { available in macos  }; cvar; external;
-  NSTextFinderMatchingTypeKey: NSPasteboardTypeTextFinderOptionKey { available in macos  }; cvar; external;
+  NSTextFinderCaseInsensitiveKey: NSPasteboardTypeTextFinderOptionKey { available in macos 10.7 }; cvar; external;
+  NSTextFinderMatchingTypeKey: NSPasteboardTypeTextFinderOptionKey { available in macos 10.7 }; cvar; external;
 {$endif}
 
 {$ifdef TYPES}

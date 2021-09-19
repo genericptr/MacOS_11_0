@@ -56,8 +56,8 @@ type
 //type
 //  AUAudioUnit_ViewController = objccategory external (AUAudioUnit)
 //    procedure requestViewControllerWithCompletionHandler (completionHandler: AUViewControllerRequestViewControllerWithCompletionHandlerCallback); message 'requestViewControllerWithCompletionHandler:';
-//    function supportedViewConfigurations (availableViewConfigurations: NSArray): NSIndexSet; message 'supportedViewConfigurations:'; { unavailable in watchos, tvos }
-//    procedure selectViewConfiguration (viewConfiguration: AUAudioUnitViewConfiguration); message 'selectViewConfiguration:'; { unavailable in watchos, tvos }
+//    function supportedViewConfigurations (availableViewConfigurations: NSArray): NSIndexSet; message 'supportedViewConfigurations:'; { unavailable in watchos, tvos } { available in macosx 10.13, ios 11.0 }
+//    procedure selectViewConfiguration (viewConfiguration: AUAudioUnitViewConfiguration); message 'selectViewConfiguration:'; { unavailable in watchos, tvos } { available in macosx 10.13, ios 11.0 }
 //  end;
 {$endif}
 

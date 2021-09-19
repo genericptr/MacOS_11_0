@@ -31,13 +31,13 @@ type
   private
     _internal: id;
   public
-    function price: NSDecimalNumber; message 'price'; { available in ios , macos , watchos  }
-    function priceLocale: NSLocale; message 'priceLocale'; { available in ios , macos , watchos  }
-    function identifier: NSString; message 'identifier'; { available in ios , macos , watchos  }
-    function subscriptionPeriod: SKProductSubscriptionPeriod; message 'subscriptionPeriod'; { available in ios , macos , watchos  }
-    function numberOfPeriods: NSUInteger; message 'numberOfPeriods'; { available in ios , macos , watchos  }
-    function paymentMode: SKProductDiscountPaymentMode; message 'paymentMode'; { available in ios , macos , watchos  }
-    function type_: SKProductDiscountType; message 'type'; { available in ios , macos , watchos  }
+    function price: NSDecimalNumber; message 'price'; { available in ios 11.2, macos 10.13.2, watchos 6.2 }
+    function priceLocale: NSLocale; message 'priceLocale'; { available in ios 11.2, macos 10.13.2, watchos 6.2 }
+    function identifier: NSString; message 'identifier'; { available in ios 12.2, macos 10.14.4, watchos 6.2 }
+    function subscriptionPeriod: SKProductSubscriptionPeriod; message 'subscriptionPeriod'; { available in ios 11.2, macos 10.13.2, watchos 6.2 }
+    function numberOfPeriods: NSUInteger; message 'numberOfPeriods'; { available in ios 11.2, macos 10.13.2, watchos 6.2 }
+    function paymentMode: SKProductDiscountPaymentMode; message 'paymentMode'; { available in ios 11.2, macos 10.13.2, watchos 6.2 }
+    function type_: SKProductDiscountType; message 'type'; { available in ios 12.2, macos 10.14.4, watchos 6.2 }
   end;
 {$endif}
 

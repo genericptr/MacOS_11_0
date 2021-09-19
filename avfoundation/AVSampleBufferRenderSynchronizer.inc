@@ -24,11 +24,11 @@ type
     function timebase: CMTimebaseRef; message 'timebase';
     procedure setRate(newValue: single); message 'setRate:';
     function rate: single; message 'rate';
-    function currentTime: CMTime; message 'currentTime'; { available in macos , ios , tvos , watchos  }
+    function currentTime: CMTime; message 'currentTime'; { available in macos 10.14, ios 12.0, tvos 12.0, watchos 5.0 }
     procedure setRate_time (rate_: single; time: CMTime); message 'setRate:time:';
-    procedure setRate_time_atHostTime (rate_: single; time: CMTime; hostTime: CMTime); message 'setRate:time:atHostTime:'; { available in macos , ios , tvos , watchos  }
-    procedure setDelaysRateChangeUntilHasSufficientMediaData(newValue: objcbool); message 'setDelaysRateChangeUntilHasSufficientMediaData:'; { available in macos , ios , tvos , watchos  }
-    function delaysRateChangeUntilHasSufficientMediaData: objcbool; message 'delaysRateChangeUntilHasSufficientMediaData'; { available in macos , ios , tvos , watchos  }
+    procedure setRate_time_atHostTime (rate_: single; time: CMTime; hostTime: CMTime); message 'setRate:time:atHostTime:'; { available in macos 11.3, ios 14.5, tvos 14.5, watchos 7.4 }
+    procedure setDelaysRateChangeUntilHasSufficientMediaData(newValue: objcbool); message 'setDelaysRateChangeUntilHasSufficientMediaData:'; { available in macos 11.3, ios 14.5, tvos 14.5, watchos 7.4 }
+    function delaysRateChangeUntilHasSufficientMediaData: objcbool; message 'delaysRateChangeUntilHasSufficientMediaData'; { available in macos 11.3, ios 14.5, tvos 14.5, watchos 7.4 }
   end;
 
 

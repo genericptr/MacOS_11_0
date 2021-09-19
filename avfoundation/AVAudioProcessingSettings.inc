@@ -9,10 +9,10 @@ type
 
 {$ifdef EXTERNAL_SYMBOLS}
 var
-  AVAudioTimePitchAlgorithmLowQualityZeroLatency: AVAudioTimePitchAlgorithm { unavailable in macos }; cvar; external;
-  AVAudioTimePitchAlgorithmTimeDomain: AVAudioTimePitchAlgorithm { available in macos , ios , tvos , watchos  }; cvar; external;
-  AVAudioTimePitchAlgorithmSpectral: AVAudioTimePitchAlgorithm { available in macos , ios , tvos , watchos  }; cvar; external;
-  AVAudioTimePitchAlgorithmVarispeed: AVAudioTimePitchAlgorithm { available in macos , ios , tvos , watchos  }; cvar; external;
+  AVAudioTimePitchAlgorithmLowQualityZeroLatency: AVAudioTimePitchAlgorithm { unavailable in macos } { available in ios 7.0, tvos 9.0, watchos 1.0 }; cvar; external;
+  AVAudioTimePitchAlgorithmTimeDomain: AVAudioTimePitchAlgorithm { available in macos 10.9, ios 7.0, tvos 9.0, watchos 1.0 }; cvar; external;
+  AVAudioTimePitchAlgorithmSpectral: AVAudioTimePitchAlgorithm { available in macos 10.9, ios 7.0, tvos 9.0, watchos 1.0 }; cvar; external;
+  AVAudioTimePitchAlgorithmVarispeed: AVAudioTimePitchAlgorithm { available in macos 10.9, ios 7.0, tvos 9.0, watchos 1.0 }; cvar; external;
 {$endif}
 
 {$else}

@@ -22,10 +22,10 @@ type
   NSLevelIndicator = objcclass external (NSControl)
   private
   public
-    procedure setLevelIndicatorStyle(newValue: NSLevelIndicatorStyle); message 'setLevelIndicatorStyle:'; { available in macos  }
-    function levelIndicatorStyle: NSLevelIndicatorStyle; message 'levelIndicatorStyle'; { available in macos  }
-    procedure setEditable(newValue: objcbool); message 'setEditable:'; { available in macos  }
-    function isEditable: objcbool; message 'isEditable'; { available in macos  }
+    procedure setLevelIndicatorStyle(newValue: NSLevelIndicatorStyle); message 'setLevelIndicatorStyle:'; { available in macos 10.10 }
+    function levelIndicatorStyle: NSLevelIndicatorStyle; message 'levelIndicatorStyle'; { available in macos 10.10 }
+    procedure setEditable(newValue: objcbool); message 'setEditable:'; { available in macos 10.13 }
+    function isEditable: objcbool; message 'isEditable'; { available in macos 10.13 }
     procedure setMinValue(newValue: double); message 'setMinValue:';
     function minValue: double; message 'minValue';
     procedure setMaxValue(newValue: double); message 'setMaxValue:';
@@ -42,20 +42,20 @@ type
     function numberOfMajorTickMarks: NSInteger; message 'numberOfMajorTickMarks';
     function tickMarkValueAtIndex (index: NSInteger): double; message 'tickMarkValueAtIndex:';
     function rectOfTickMarkAtIndex (index: NSInteger): NSRect; message 'rectOfTickMarkAtIndex:';
-    procedure setFillColor(newValue: NSColor); message 'setFillColor:'; { available in macos  }
-    function fillColor: NSColor; message 'fillColor'; { available in macos  }
-    procedure setWarningFillColor(newValue: NSColor); message 'setWarningFillColor:'; { available in macos  }
-    function warningFillColor: NSColor; message 'warningFillColor'; { available in macos  }
-    procedure setCriticalFillColor(newValue: NSColor); message 'setCriticalFillColor:'; { available in macos  }
-    function criticalFillColor: NSColor; message 'criticalFillColor'; { available in macos  }
-    procedure setDrawsTieredCapacityLevels(newValue: objcbool); message 'setDrawsTieredCapacityLevels:'; { available in macos  }
-    function drawsTieredCapacityLevels: objcbool; message 'drawsTieredCapacityLevels'; { available in macos  }
-    procedure setPlaceholderVisibility(newValue: NSLevelIndicatorPlaceholderVisibility); message 'setPlaceholderVisibility:'; { available in macos  }
-    function placeholderVisibility: NSLevelIndicatorPlaceholderVisibility; message 'placeholderVisibility'; { available in macos  }
-    procedure setRatingImage(newValue: NSImage); message 'setRatingImage:'; { available in macos  }
-    function ratingImage: NSImage; message 'ratingImage'; { available in macos  }
-    procedure setRatingPlaceholderImage(newValue: NSImage); message 'setRatingPlaceholderImage:'; { available in macos  }
-    function ratingPlaceholderImage: NSImage; message 'ratingPlaceholderImage'; { available in macos  }
+    procedure setFillColor(newValue: NSColor); message 'setFillColor:'; { available in macos 10.13 }
+    function fillColor: NSColor; message 'fillColor'; { available in macos 10.13 }
+    procedure setWarningFillColor(newValue: NSColor); message 'setWarningFillColor:'; { available in macos 10.13 }
+    function warningFillColor: NSColor; message 'warningFillColor'; { available in macos 10.13 }
+    procedure setCriticalFillColor(newValue: NSColor); message 'setCriticalFillColor:'; { available in macos 10.13 }
+    function criticalFillColor: NSColor; message 'criticalFillColor'; { available in macos 10.13 }
+    procedure setDrawsTieredCapacityLevels(newValue: objcbool); message 'setDrawsTieredCapacityLevels:'; { available in macos 10.13 }
+    function drawsTieredCapacityLevels: objcbool; message 'drawsTieredCapacityLevels'; { available in macos 10.13 }
+    procedure setPlaceholderVisibility(newValue: NSLevelIndicatorPlaceholderVisibility); message 'setPlaceholderVisibility:'; { available in macos 10.13 }
+    function placeholderVisibility: NSLevelIndicatorPlaceholderVisibility; message 'placeholderVisibility'; { available in macos 10.13 }
+    procedure setRatingImage(newValue: NSImage); message 'setRatingImage:'; { available in macos 10.13 }
+    function ratingImage: NSImage; message 'ratingImage'; { available in macos 10.13 }
+    procedure setRatingPlaceholderImage(newValue: NSImage); message 'setRatingPlaceholderImage:'; { available in macos 10.13 }
+    function ratingPlaceholderImage: NSImage; message 'ratingPlaceholderImage'; { available in macos 10.13 }
   end;
 {$endif}
 

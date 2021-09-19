@@ -14,7 +14,7 @@ type
   public
     function canContainAssets: objcbool; message 'canContainAssets';
     function canContainCollections: objcbool; message 'canContainCollections';
-    function localizedTitle: NSString; message 'localizedTitle'; { available in macos  }
+    function localizedTitle: NSString; message 'localizedTitle'; { available in macos 10.13 }
     function canPerformEditOperation (anOperation: PHCollectionEditOperation): objcbool; message 'canPerformEditOperation:';
     class function fetchCollectionsInCollectionList_options (collectionList: PHCollectionList; options: PHFetchOptions): PHFetchResult; message 'fetchCollectionsInCollectionList:options:';
     class function fetchTopLevelUserCollectionsWithOptions (options: PHFetchOptions): PHFetchResult; message 'fetchTopLevelUserCollectionsWithOptions:';

@@ -26,7 +26,7 @@ type
     function name: NSNotificationName; message 'name';
     function object_: id; message 'object';
     function userInfo: NSDictionary; message 'userInfo';
-    function initWithName_object_userInfo (name_: NSNotificationName; object_: id; userInfo_: NSDictionary): id; message 'initWithName:object:userInfo:'; { available in macos , ios , watchos , tvos  }
+    function initWithName_object_userInfo (name_: NSNotificationName; object_: id; userInfo_: NSDictionary): id; message 'initWithName:object:userInfo:'; { available in macos 10.6, ios 4.0, watchos 2.0, tvos 9.0 }
     function initWithCoder (coder: NSCoder): id; message 'initWithCoder:'; { NS_DESIGNATED_INITIALIZER }
 
     { Adopted protocols }
@@ -57,7 +57,7 @@ type
     procedure postNotificationName_object_userInfo (aName: NSNotificationName; anObject: id; aUserInfo: NSDictionary); message 'postNotificationName:object:userInfo:';
     procedure removeObserver (observer: id); message 'removeObserver:';
     procedure removeObserver_name_object (observer: id; aName: NSNotificationName; anObject: id); message 'removeObserver:name:object:';
-    function addObserverForName_object_queue_usingBlock (name: NSNotificationName; obj: id; queue: NSOperationQueue; block: NSNotificationAddObserverForNameCallback): id; message 'addObserverForName:object:queue:usingBlock:'; { available in macos , ios , watchos , tvos  }
+    function addObserverForName_object_queue_usingBlock (name: NSNotificationName; obj: id; queue: NSOperationQueue; block: NSNotificationAddObserverForNameCallback): id; message 'addObserverForName:object:queue:usingBlock:'; { available in macos 10.6, ios 4.0, watchos 2.0, tvos 9.0 }
   end;
 {$endif}
 

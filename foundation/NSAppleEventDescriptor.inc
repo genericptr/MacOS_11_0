@@ -39,18 +39,18 @@ type
     class function descriptorWithBoolean (boolean_: Boolean): NSAppleEventDescriptor; message 'descriptorWithBoolean:';
     class function descriptorWithEnumCode (enumerator: OSType): NSAppleEventDescriptor; message 'descriptorWithEnumCode:';
     class function descriptorWithInt32 (signedInt: SInt32): NSAppleEventDescriptor; message 'descriptorWithInt32:';
-    class function descriptorWithDouble (doubleValue: double): NSAppleEventDescriptor; message 'descriptorWithDouble:'; { unavailable in ios, watchos, tvos }
+    class function descriptorWithDouble (doubleValue: double): NSAppleEventDescriptor; message 'descriptorWithDouble:'; { unavailable in ios, watchos, tvos } { available in macos 10.11 }
     class function descriptorWithTypeCode (typeCode: OSType): NSAppleEventDescriptor; message 'descriptorWithTypeCode:';
     class function descriptorWithString (string_: NSString): NSAppleEventDescriptor; message 'descriptorWithString:';
-    class function descriptorWithDate (date: NSDate): NSAppleEventDescriptor; message 'descriptorWithDate:'; { unavailable in ios, watchos, tvos }
-    class function descriptorWithFileURL (fileURL: NSURL): NSAppleEventDescriptor; message 'descriptorWithFileURL:'; { unavailable in ios, watchos, tvos }
+    class function descriptorWithDate (date: NSDate): NSAppleEventDescriptor; message 'descriptorWithDate:'; { unavailable in ios, watchos, tvos } { available in macos 10.11 }
+    class function descriptorWithFileURL (fileURL: NSURL): NSAppleEventDescriptor; message 'descriptorWithFileURL:'; { unavailable in ios, watchos, tvos } { available in macos 10.11 }
     class function appleEventWithEventClass_eventID_targetDescriptor_returnID_transactionID (eventClass: AEEventClass; eventID: AEEventID; targetDescriptor: NSAppleEventDescriptor; returnID: AEReturnID; transactionID: AETransactionID): NSAppleEventDescriptor; message 'appleEventWithEventClass:eventID:targetDescriptor:returnID:transactionID:';
     class function listDescriptor: NSAppleEventDescriptor; message 'listDescriptor';
     class function recordDescriptor: NSAppleEventDescriptor; message 'recordDescriptor';
-    class function currentProcessDescriptor: NSAppleEventDescriptor; message 'currentProcessDescriptor'; { unavailable in ios, watchos, tvos }
-    class function descriptorWithProcessIdentifier (processIdentifier: pid_t): NSAppleEventDescriptor; message 'descriptorWithProcessIdentifier:'; { unavailable in ios, watchos, tvos }
-    class function descriptorWithBundleIdentifier (bundleIdentifier: NSString): NSAppleEventDescriptor; message 'descriptorWithBundleIdentifier:'; { unavailable in ios, watchos, tvos }
-    class function descriptorWithApplicationURL (applicationURL: NSURL): NSAppleEventDescriptor; message 'descriptorWithApplicationURL:'; { unavailable in ios, watchos, tvos }
+    class function currentProcessDescriptor: NSAppleEventDescriptor; message 'currentProcessDescriptor'; { unavailable in ios, watchos, tvos } { available in macos 10.11 }
+    class function descriptorWithProcessIdentifier (processIdentifier: pid_t): NSAppleEventDescriptor; message 'descriptorWithProcessIdentifier:'; { unavailable in ios, watchos, tvos } { available in macos 10.11 }
+    class function descriptorWithBundleIdentifier (bundleIdentifier: NSString): NSAppleEventDescriptor; message 'descriptorWithBundleIdentifier:'; { unavailable in ios, watchos, tvos } { available in macos 10.11 }
+    class function descriptorWithApplicationURL (applicationURL: NSURL): NSAppleEventDescriptor; message 'descriptorWithApplicationURL:'; { unavailable in ios, watchos, tvos } { available in macos 10.11 }
     function initWithAEDescNoCopy (aeDesc: AEDescPtr): id; message 'initWithAEDescNoCopy:'; { NS_DESIGNATED_INITIALIZER }
     function initWithDescriptorType_bytes_length (descriptorType: DescType; bytes: pointer; byteCount: NSUInteger): id; message 'initWithDescriptorType:bytes:length:';
     function initWithDescriptorType_data (descriptorType: DescType; data: NSData): id; message 'initWithDescriptorType:data:';
@@ -63,11 +63,11 @@ type
     function booleanValue: Boolean; message 'booleanValue';
     function enumCodeValue: OSType; message 'enumCodeValue';
     function int32Value: SInt32; message 'int32Value';
-    function doubleValue: double; message 'doubleValue'; { unavailable in ios, watchos, tvos }
+    function doubleValue: double; message 'doubleValue'; { unavailable in ios, watchos, tvos } { available in macos 10.11 }
     function typeCodeValue: OSType; message 'typeCodeValue';
     function stringValue: NSString; message 'stringValue';
-    function dateValue: NSDate; message 'dateValue'; { unavailable in ios, watchos, tvos }
-    function fileURLValue: NSURL; message 'fileURLValue'; { unavailable in ios, watchos, tvos }
+    function dateValue: NSDate; message 'dateValue'; { unavailable in ios, watchos, tvos } { available in macos 10.11 }
+    function fileURLValue: NSURL; message 'fileURLValue'; { unavailable in ios, watchos, tvos } { available in macos 10.11 }
     function eventClass: AEEventClass; message 'eventClass';
     function eventID: AEEventID; message 'eventID';
     function returnID: AEReturnID; message 'returnID';
@@ -77,8 +77,8 @@ type
     procedure removeParamDescriptorWithKeyword (keyword: AEKeyword); message 'removeParamDescriptorWithKeyword:';
     procedure setAttributeDescriptor_forKeyword (descriptor: NSAppleEventDescriptor; keyword: AEKeyword); message 'setAttributeDescriptor:forKeyword:';
     function attributeDescriptorForKeyword (keyword: AEKeyword): NSAppleEventDescriptor; message 'attributeDescriptorForKeyword:';
-    function sendEventWithOptions_timeout_error (sendOptions: NSAppleEventSendOptions; timeoutInSeconds: NSTimeInterval; error: NSErrorPtr): NSAppleEventDescriptor; message 'sendEventWithOptions:timeout:error:'; { unavailable in ios, watchos, tvos }
-    function isRecordDescriptor: objcbool; message 'isRecordDescriptor'; { unavailable in ios, watchos, tvos }
+    function sendEventWithOptions_timeout_error (sendOptions: NSAppleEventSendOptions; timeoutInSeconds: NSTimeInterval; error: NSErrorPtr): NSAppleEventDescriptor; message 'sendEventWithOptions:timeout:error:'; { unavailable in ios, watchos, tvos } { available in macos 10.11 }
+    function isRecordDescriptor: objcbool; message 'isRecordDescriptor'; { unavailable in ios, watchos, tvos } { available in macos 10.11 }
     function numberOfItems: NSInteger; message 'numberOfItems';
     procedure insertDescriptor_atIndex (descriptor: NSAppleEventDescriptor; index: NSInteger); message 'insertDescriptor:atIndex:';
     function descriptorAtIndex (index: NSInteger): NSAppleEventDescriptor; message 'descriptorAtIndex:';

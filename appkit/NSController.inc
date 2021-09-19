@@ -20,7 +20,7 @@ type
     function isEditing: objcbool; message 'isEditing';
 
     { Adopted protocols }
-    function commitEditingAndReturnError (error: NSErrorPtr): objcbool; message 'commitEditingAndReturnError:'; { available in macos  }
+    function commitEditingAndReturnError (error: NSErrorPtr): objcbool; message 'commitEditingAndReturnError:'; { available in macos 10.7 }
     procedure encodeWithCoder (coder: NSCoder); message 'encodeWithCoder:';
   end;
 {$endif}

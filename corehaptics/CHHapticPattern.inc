@@ -13,19 +13,19 @@ type
 
 {$ifdef EXTERNAL_SYMBOLS}
 var
-  CHHapticPatternKeyVersion: CHHapticPatternKey { unavailable in watchos }; cvar; external;
-  CHHapticPatternKeyPattern: CHHapticPatternKey { unavailable in watchos }; cvar; external;
-  CHHapticPatternKeyEvent: CHHapticPatternKey { unavailable in watchos }; cvar; external;
-  CHHapticPatternKeyEventType: CHHapticPatternKey { unavailable in watchos }; cvar; external;
-  CHHapticPatternKeyTime: CHHapticPatternKey { unavailable in watchos }; cvar; external;
-  CHHapticPatternKeyEventDuration: CHHapticPatternKey { unavailable in watchos }; cvar; external;
-  CHHapticPatternKeyEventWaveformPath: CHHapticPatternKey { unavailable in watchos }; cvar; external;
-  CHHapticPatternKeyEventParameters: CHHapticPatternKey { unavailable in watchos }; cvar; external;
-  CHHapticPatternKeyParameter: CHHapticPatternKey { unavailable in watchos }; cvar; external;
-  CHHapticPatternKeyParameterID: CHHapticPatternKey { unavailable in watchos }; cvar; external;
-  CHHapticPatternKeyParameterValue: CHHapticPatternKey { unavailable in watchos }; cvar; external;
-  CHHapticPatternKeyParameterCurve: CHHapticPatternKey { unavailable in watchos }; cvar; external;
-  CHHapticPatternKeyParameterCurveControlPoints: CHHapticPatternKey { unavailable in watchos }; cvar; external;
+  CHHapticPatternKeyVersion: CHHapticPatternKey { unavailable in watchos } { available in ios 13.0, macos 10.15, tvos 14.0, macCatalyst 13.0 }; cvar; external;
+  CHHapticPatternKeyPattern: CHHapticPatternKey { unavailable in watchos } { available in ios 13.0, macos 10.15, tvos 14.0, macCatalyst 13.0 }; cvar; external;
+  CHHapticPatternKeyEvent: CHHapticPatternKey { unavailable in watchos } { available in ios 13.0, macos 10.15, tvos 14.0, macCatalyst 13.0 }; cvar; external;
+  CHHapticPatternKeyEventType: CHHapticPatternKey { unavailable in watchos } { available in ios 13.0, macos 10.15, tvos 14.0, macCatalyst 13.0 }; cvar; external;
+  CHHapticPatternKeyTime: CHHapticPatternKey { unavailable in watchos } { available in ios 13.0, macos 10.15, tvos 14.0, macCatalyst 13.0 }; cvar; external;
+  CHHapticPatternKeyEventDuration: CHHapticPatternKey { unavailable in watchos } { available in ios 13.0, macos 10.15, tvos 14.0, macCatalyst 13.0 }; cvar; external;
+  CHHapticPatternKeyEventWaveformPath: CHHapticPatternKey { unavailable in watchos } { available in ios 13.0, macos 10.15, tvos 14.0, macCatalyst 13.0 }; cvar; external;
+  CHHapticPatternKeyEventParameters: CHHapticPatternKey { unavailable in watchos } { available in ios 13.0, macos 10.15, tvos 14.0, macCatalyst 13.0 }; cvar; external;
+  CHHapticPatternKeyParameter: CHHapticPatternKey { unavailable in watchos } { available in ios 13.0, macos 10.15, tvos 14.0, macCatalyst 13.0 }; cvar; external;
+  CHHapticPatternKeyParameterID: CHHapticPatternKey { unavailable in watchos } { available in ios 13.0, macos 10.15, tvos 14.0, macCatalyst 13.0 }; cvar; external;
+  CHHapticPatternKeyParameterValue: CHHapticPatternKey { unavailable in watchos } { available in ios 13.0, macos 10.15, tvos 14.0, macCatalyst 13.0 }; cvar; external;
+  CHHapticPatternKeyParameterCurve: CHHapticPatternKey { unavailable in watchos } { available in ios 13.0, macos 10.15, tvos 14.0, macCatalyst 13.0 }; cvar; external;
+  CHHapticPatternKeyParameterCurveControlPoints: CHHapticPatternKey { unavailable in watchos } { available in ios 13.0, macos 10.15, tvos 14.0, macCatalyst 13.0 }; cvar; external;
 {$endif}
 
 {$ifdef CLASSES}

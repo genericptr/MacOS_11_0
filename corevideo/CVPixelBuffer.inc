@@ -46,25 +46,25 @@ type
 
 {$ifdef EXTERNAL_SYMBOLS}
 var
-  kCVPixelBufferPixelFormatTypeKey: CFStringRef { available in macosx , ios , tvos , watchos  }; cvar; external;
-  kCVPixelBufferMemoryAllocatorKey: CFStringRef { available in macosx , ios , tvos , watchos  }; cvar; external;
-  kCVPixelBufferWidthKey: CFStringRef { available in macosx , ios , tvos , watchos  }; cvar; external;
-  kCVPixelBufferHeightKey: CFStringRef { available in macosx , ios , tvos , watchos  }; cvar; external;
-  kCVPixelBufferExtendedPixelsLeftKey: CFStringRef { available in macosx , ios , tvos , watchos  }; cvar; external;
-  kCVPixelBufferExtendedPixelsTopKey: CFStringRef { available in macosx , ios , tvos , watchos  }; cvar; external;
-  kCVPixelBufferExtendedPixelsRightKey: CFStringRef { available in macosx , ios , tvos , watchos  }; cvar; external;
-  kCVPixelBufferExtendedPixelsBottomKey: CFStringRef { available in macosx , ios , tvos , watchos  }; cvar; external;
-  kCVPixelBufferBytesPerRowAlignmentKey: CFStringRef { available in macosx , ios , tvos , watchos  }; cvar; external;
-  kCVPixelBufferCGBitmapContextCompatibilityKey: CFStringRef { available in macosx , ios , tvos , watchos  }; cvar; external;
-  kCVPixelBufferCGImageCompatibilityKey: CFStringRef { available in macosx , ios , tvos , watchos  }; cvar; external;
-  kCVPixelBufferOpenGLCompatibilityKey: CFStringRef { available in macosx , ios , tvos , watchos  }; cvar; external;
-  kCVPixelBufferPlaneAlignmentKey: CFStringRef { available in macosx , ios , tvos , watchos  }; cvar; external;
-  kCVPixelBufferIOSurfacePropertiesKey: CFStringRef { available in macosx , ios , tvos , watchos  }; cvar; external;
-  kCVPixelBufferOpenGLESCompatibilityKey: CFStringRef { unavailable in macosx }; cvar; external;
-  kCVPixelBufferMetalCompatibilityKey: CFStringRef { available in macosx , ios , tvos , watchos  }; cvar; external;
-  kCVPixelBufferOpenGLTextureCacheCompatibilityKey: CFStringRef { unavailable in ios, tvos, watchos }; cvar; external;
-  kCVPixelBufferOpenGLESTextureCacheCompatibilityKey: CFStringRef { unavailable in macosx }; cvar; external;
-  kCVPixelBufferVersatileBayerKey_BayerPattern: CFStringRef { unavailable in macosx }; cvar; external;
+  kCVPixelBufferPixelFormatTypeKey: CFStringRef { available in macosx 10.4, ios 4.0, tvos 9.0, watchos 4.0 }; cvar; external;
+  kCVPixelBufferMemoryAllocatorKey: CFStringRef { available in macosx 10.4, ios 4.0, tvos 9.0, watchos 4.0 }; cvar; external;
+  kCVPixelBufferWidthKey: CFStringRef { available in macosx 10.4, ios 4.0, tvos 9.0, watchos 4.0 }; cvar; external;
+  kCVPixelBufferHeightKey: CFStringRef { available in macosx 10.4, ios 4.0, tvos 9.0, watchos 4.0 }; cvar; external;
+  kCVPixelBufferExtendedPixelsLeftKey: CFStringRef { available in macosx 10.4, ios 4.0, tvos 9.0, watchos 4.0 }; cvar; external;
+  kCVPixelBufferExtendedPixelsTopKey: CFStringRef { available in macosx 10.4, ios 4.0, tvos 9.0, watchos 4.0 }; cvar; external;
+  kCVPixelBufferExtendedPixelsRightKey: CFStringRef { available in macosx 10.4, ios 4.0, tvos 9.0, watchos 4.0 }; cvar; external;
+  kCVPixelBufferExtendedPixelsBottomKey: CFStringRef { available in macosx 10.4, ios 4.0, tvos 9.0, watchos 4.0 }; cvar; external;
+  kCVPixelBufferBytesPerRowAlignmentKey: CFStringRef { available in macosx 10.4, ios 4.0, tvos 9.0, watchos 4.0 }; cvar; external;
+  kCVPixelBufferCGBitmapContextCompatibilityKey: CFStringRef { available in macosx 10.4, ios 4.0, tvos 9.0, watchos 4.0 }; cvar; external;
+  kCVPixelBufferCGImageCompatibilityKey: CFStringRef { available in macosx 10.4, ios 4.0, tvos 9.0, watchos 4.0 }; cvar; external;
+  kCVPixelBufferOpenGLCompatibilityKey: CFStringRef { available in macosx 10.4, ios 4.0, tvos 9.0, watchos 4.0 }; cvar; external;
+  kCVPixelBufferPlaneAlignmentKey: CFStringRef { available in macosx 10.6, ios 4.0, tvos 9.0, watchos 4.0 }; cvar; external;
+  kCVPixelBufferIOSurfacePropertiesKey: CFStringRef { available in macosx 10.6, ios 4.0, tvos 9.0, watchos 4.0 }; cvar; external;
+  kCVPixelBufferOpenGLESCompatibilityKey: CFStringRef { unavailable in macosx } { unavailable in macCatalyst }; cvar; external;
+  kCVPixelBufferMetalCompatibilityKey: CFStringRef { available in macosx 10.11, ios 8.0, tvos 9.0, watchos 4.0 }; cvar; external;
+  kCVPixelBufferOpenGLTextureCacheCompatibilityKey: CFStringRef { unavailable in ios, tvos, watchos } { available in macosx 10.11 }; cvar; external;
+  kCVPixelBufferOpenGLESTextureCacheCompatibilityKey: CFStringRef { unavailable in macosx } { unavailable in macCatalyst }; cvar; external;
+  kCVPixelBufferVersatileBayerKey_BayerPattern: CFStringRef { unavailable in macosx } { unavailable in macCatalyst }; cvar; external;
 {$endif}
 
 {$ifdef TYPES}
@@ -77,15 +77,15 @@ const
 
 {$ifdef EXTERNAL_SYMBOLS}
 var
-  kCVPixelBufferProResRAWKey_SenselSitingOffsets: CFStringRef { unavailable in macosx }; cvar; external;
-  kCVPixelBufferProResRAWKey_BlackLevel: CFStringRef { unavailable in macosx }; cvar; external;
-  kCVPixelBufferProResRAWKey_WhiteLevel: CFStringRef { unavailable in macosx }; cvar; external;
-  kCVPixelBufferProResRAWKey_WhiteBalanceCCT: CFStringRef { unavailable in macosx }; cvar; external;
-  kCVPixelBufferProResRAWKey_WhiteBalanceRedFactor: CFStringRef { unavailable in macosx }; cvar; external;
-  kCVPixelBufferProResRAWKey_WhiteBalanceBlueFactor: CFStringRef { unavailable in macosx }; cvar; external;
-  kCVPixelBufferProResRAWKey_ColorMatrix: CFStringRef { unavailable in macosx }; cvar; external;
-  kCVPixelBufferProResRAWKey_GainFactor: CFStringRef { unavailable in macosx }; cvar; external;
-  kCVPixelBufferProResRAWKey_RecommendedCrop: CFStringRef { unavailable in macosx }; cvar; external;
+  kCVPixelBufferProResRAWKey_SenselSitingOffsets: CFStringRef { unavailable in macosx } { unavailable in macCatalyst }; cvar; external;
+  kCVPixelBufferProResRAWKey_BlackLevel: CFStringRef { unavailable in macosx } { unavailable in macCatalyst }; cvar; external;
+  kCVPixelBufferProResRAWKey_WhiteLevel: CFStringRef { unavailable in macosx } { unavailable in macCatalyst }; cvar; external;
+  kCVPixelBufferProResRAWKey_WhiteBalanceCCT: CFStringRef { unavailable in macosx } { unavailable in macCatalyst }; cvar; external;
+  kCVPixelBufferProResRAWKey_WhiteBalanceRedFactor: CFStringRef { unavailable in macosx } { unavailable in macCatalyst }; cvar; external;
+  kCVPixelBufferProResRAWKey_WhiteBalanceBlueFactor: CFStringRef { unavailable in macosx } { unavailable in macCatalyst }; cvar; external;
+  kCVPixelBufferProResRAWKey_ColorMatrix: CFStringRef { unavailable in macosx } { unavailable in macCatalyst }; cvar; external;
+  kCVPixelBufferProResRAWKey_GainFactor: CFStringRef { unavailable in macosx } { unavailable in macCatalyst }; cvar; external;
+  kCVPixelBufferProResRAWKey_RecommendedCrop: CFStringRef { unavailable in macosx } { unavailable in macCatalyst }; cvar; external;
 {$endif}
 
 {$ifdef TYPES}

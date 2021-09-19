@@ -47,9 +47,9 @@ type
 
 type
   NSURLSessionTaskAdditions = objccategory external (NSURLProtocol)
-    class function canInitWithTask (task: NSURLSessionTask): objcbool; message 'canInitWithTask:'; { available in macos , ios , watchos , tvos  }
-    function initWithTask_cachedResponse_client (task: NSURLSessionTask; cachedResponse_: NSCachedURLResponse; client_: NSURLProtocolClientProtocol): id; message 'initWithTask:cachedResponse:client:'; { available in macos , ios , watchos , tvos  }
-    function task: NSURLSessionTask; message 'task'; { available in macos , ios , watchos , tvos  }
+    class function canInitWithTask (task: NSURLSessionTask): objcbool; message 'canInitWithTask:'; { available in macos 10.10, ios 8.0, watchos 2.0, tvos 9.0 }
+    function initWithTask_cachedResponse_client (task: NSURLSessionTask; cachedResponse_: NSCachedURLResponse; client_: NSURLProtocolClientProtocol): id; message 'initWithTask:cachedResponse:client:'; { available in macos 10.10, ios 8.0, watchos 2.0, tvos 9.0 }
+    function task: NSURLSessionTask; message 'task'; { available in macos 10.10, ios 8.0, watchos 2.0, tvos 9.0 }
   end;
 {$endif}
 

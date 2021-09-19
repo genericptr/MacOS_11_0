@@ -18,8 +18,8 @@ type
     procedure attachColorList (colorList: NSColorList); message 'attachColorList:';
     procedure detachColorList (colorList: NSColorList); message 'detachColorList:';
     procedure setMode (mode: NSColorPanelMode); message 'setMode:';
-    function buttonToolTip: NSString; message 'buttonToolTip'; { available in macos  }
-    function minContentSize: NSSize; message 'minContentSize'; { available in macos  }
+    function buttonToolTip: NSString; message 'buttonToolTip'; { available in macos 10.5 }
+    function minContentSize: NSSize; message 'minContentSize'; { available in macos 10.5 }
   end;
 
 type

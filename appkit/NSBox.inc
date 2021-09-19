@@ -26,7 +26,7 @@ type
 const
   NSBoxPrimary = 0;
   NSBoxSeparator = 2;
-  NSBoxCustom = 4 { available in macos  };
+  NSBoxCustom = 4 { available in macos 10.5 };
 {$endif}
 
 {$ifdef CLASSES}
@@ -51,16 +51,16 @@ type
     procedure setFrameFromContentFrame (contentFrame: NSRect); message 'setFrameFromContentFrame:';
     procedure setContentView(newValue: NSView); message 'setContentView:';
     function contentView: NSView; message 'contentView';
-    procedure setTransparent(newValue: objcbool); message 'setTransparent:'; { available in macos  }
-    function isTransparent: objcbool; message 'isTransparent'; { available in macos  }
-    procedure setBorderWidth(newValue: CGFloat); message 'setBorderWidth:'; { available in macos  }
-    function borderWidth: CGFloat; message 'borderWidth'; { available in macos  }
-    procedure setCornerRadius(newValue: CGFloat); message 'setCornerRadius:'; { available in macos  }
-    function cornerRadius: CGFloat; message 'cornerRadius'; { available in macos  }
-    procedure setBorderColor(newValue: NSColor); message 'setBorderColor:'; { available in macos  }
-    function borderColor: NSColor; message 'borderColor'; { available in macos  }
-    procedure setFillColor(newValue: NSColor); message 'setFillColor:'; { available in macos  }
-    function fillColor: NSColor; message 'fillColor'; { available in macos  }
+    procedure setTransparent(newValue: objcbool); message 'setTransparent:'; { available in macos 10.5 }
+    function isTransparent: objcbool; message 'isTransparent'; { available in macos 10.5 }
+    procedure setBorderWidth(newValue: CGFloat); message 'setBorderWidth:'; { available in macos 10.5 }
+    function borderWidth: CGFloat; message 'borderWidth'; { available in macos 10.5 }
+    procedure setCornerRadius(newValue: CGFloat); message 'setCornerRadius:'; { available in macos 10.5 }
+    function cornerRadius: CGFloat; message 'cornerRadius'; { available in macos 10.5 }
+    procedure setBorderColor(newValue: NSColor); message 'setBorderColor:'; { available in macos 10.5 }
+    function borderColor: NSColor; message 'borderColor'; { available in macos 10.5 }
+    procedure setFillColor(newValue: NSColor); message 'setFillColor:'; { available in macos 10.5 }
+    function fillColor: NSColor; message 'fillColor'; { available in macos 10.5 }
   end;
 
 

@@ -269,10 +269,10 @@ type
     procedure removeProperty (property_: MDLMaterialProperty); message 'removeProperty:';
     function propertyNamed (name: NSString): MDLMaterialProperty; message 'propertyNamed:';
     function propertyWithSemantic (semantic: MDLMaterialSemantic): MDLMaterialProperty; message 'propertyWithSemantic:';
-    function propertiesWithSemantic (semantic: MDLMaterialSemantic): NSArray; message 'propertiesWithSemantic:'; { available in macos , ios , tvos  }
+    function propertiesWithSemantic (semantic: MDLMaterialSemantic): NSArray; message 'propertiesWithSemantic:'; { available in macos 10.13, ios 11.0, tvos 11.0 }
     procedure removeAllProperties; message 'removeAllProperties';
-    procedure resolveTexturesWithResolver (resolver: MDLAssetResolverProtocol); message 'resolveTexturesWithResolver:'; { available in macos , ios , tvos  }
-    procedure loadTexturesUsingResolver (resolver: MDLAssetResolverProtocol); message 'loadTexturesUsingResolver:'; { available in macos , ios , tvos  }
+    procedure resolveTexturesWithResolver (resolver: MDLAssetResolverProtocol); message 'resolveTexturesWithResolver:'; { available in macos 10.13, ios 11.0, tvos 11.0 }
+    procedure loadTexturesUsingResolver (resolver: MDLAssetResolverProtocol); message 'loadTexturesUsingResolver:'; { available in macos 10.13, ios 11.0, tvos 11.0 }
     function scatteringFunction: MDLScatteringFunction; message 'scatteringFunction';
     procedure setName(newValue: NSString); message 'setName:';
     function name: NSString; message 'name';

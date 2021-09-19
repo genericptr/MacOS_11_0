@@ -14,8 +14,8 @@ type
     function buttonMask: NSUInteger; message 'buttonMask';
     procedure setNumberOfClicksRequired(newValue: NSInteger); message 'setNumberOfClicksRequired:';
     function numberOfClicksRequired: NSInteger; message 'numberOfClicksRequired';
-    procedure setNumberOfTouchesRequired(newValue: NSInteger); message 'setNumberOfTouchesRequired:'; { available in macos  }
-    function numberOfTouchesRequired: NSInteger; message 'numberOfTouchesRequired'; { available in macos  }
+    procedure setNumberOfTouchesRequired(newValue: NSInteger); message 'setNumberOfTouchesRequired:'; { available in macos 10.12.2 }
+    function numberOfTouchesRequired: NSInteger; message 'numberOfTouchesRequired'; { available in macos 10.12.2 }
   end;
 {$endif}
 

@@ -53,7 +53,7 @@ type
 type
   AVCaptureFileOutputDelegateProtocol = objcprotocol external name 'AVCaptureFileOutputDelegate' (NSObjectProtocol)
   required
-    function captureOutputShouldProvideSampleAccurateRecordingStart (output: AVCaptureOutput): objcbool; message 'captureOutputShouldProvideSampleAccurateRecordingStart:'; { unavailable in ios, macCatalyst, watchos, tvos }
+    function captureOutputShouldProvideSampleAccurateRecordingStart (output: AVCaptureOutput): objcbool; message 'captureOutputShouldProvideSampleAccurateRecordingStart:'; { unavailable in ios, macCatalyst, watchos, tvos } { available in macos 10.8 }
   optional
     procedure captureOutput_didOutputSampleBuffer_fromConnection (output: AVCaptureFileOutput; sampleBuffer: CMSampleBufferRef; connection: AVCaptureConnection); message 'captureOutput:didOutputSampleBuffer:fromConnection:';
   end;
@@ -72,12 +72,12 @@ type
     function movieFragmentInterval: CMTime; message 'movieFragmentInterval';
     procedure setMetadata(newValue: NSArray); message 'setMetadata:';
     function metadata: NSArray; message 'metadata';
-    function availableVideoCodecTypes: NSArray; message 'availableVideoCodecTypes'; { unavailable in macos, tvos }
-    function supportedOutputSettingsKeysForConnection (connection: AVCaptureConnection): NSArray; message 'supportedOutputSettingsKeysForConnection:'; { unavailable in macos, tvos }
-    function outputSettingsForConnection (connection: AVCaptureConnection): NSDictionary; message 'outputSettingsForConnection:'; { unavailable in tvos }
-    procedure setOutputSettings_forConnection (outputSettings: NSDictionary; connection: AVCaptureConnection); message 'setOutputSettings:forConnection:'; { unavailable in tvos }
-    function recordsVideoOrientationAndMirroringChangesAsMetadataTrackForConnection (connection: AVCaptureConnection): objcbool; message 'recordsVideoOrientationAndMirroringChangesAsMetadataTrackForConnection:'; { unavailable in macos, tvos }
-    procedure setRecordsVideoOrientationAndMirroringChanges_asMetadataTrackForConnection (doRecordChanges: objcbool; connection: AVCaptureConnection); message 'setRecordsVideoOrientationAndMirroringChanges:asMetadataTrackForConnection:'; { unavailable in macos, tvos }
+    function availableVideoCodecTypes: NSArray; message 'availableVideoCodecTypes'; { unavailable in macos, tvos } { available in ios 10.0, macCatalyst 14.0 }
+    function supportedOutputSettingsKeysForConnection (connection: AVCaptureConnection): NSArray; message 'supportedOutputSettingsKeysForConnection:'; { unavailable in macos, tvos } { unavailable in watchos }
+    function outputSettingsForConnection (connection: AVCaptureConnection): NSDictionary; message 'outputSettingsForConnection:'; { unavailable in tvos } { available in ios 10.0, macCatalyst 14.0 }
+    procedure setOutputSettings_forConnection (outputSettings: NSDictionary; connection: AVCaptureConnection); message 'setOutputSettings:forConnection:'; { unavailable in tvos } { available in ios 10.0, macCatalyst 14.0 }
+    function recordsVideoOrientationAndMirroringChangesAsMetadataTrackForConnection (connection: AVCaptureConnection): objcbool; message 'recordsVideoOrientationAndMirroringChangesAsMetadataTrackForConnection:'; { unavailable in macos, tvos } { available in ios 9.0, macCatalyst 14.0 }
+    procedure setRecordsVideoOrientationAndMirroringChanges_asMetadataTrackForConnection (doRecordChanges: objcbool; connection: AVCaptureConnection); message 'setRecordsVideoOrientationAndMirroringChanges:asMetadataTrackForConnection:'; { unavailable in macos, tvos } { available in ios 9.0, macCatalyst 14.0 }
   end;
 
 type

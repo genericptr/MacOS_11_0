@@ -43,10 +43,10 @@ type
 type
   NSCandidateListTouchBarItemDelegateProtocol = objcprotocol external name 'NSCandidateListTouchBarItemDelegate' (NSObjectProtocol)
   optional
-    procedure candidateListTouchBarItem_beginSelectingCandidateAtIndex (anItem: NSCandidateListTouchBarItem; index: NSInteger); message 'candidateListTouchBarItem:beginSelectingCandidateAtIndex:'; { unavailable in macCatalyst }
-    procedure candidateListTouchBarItem_changeSelectionFromCandidateAtIndex_toIndex (anItem: NSCandidateListTouchBarItem; previousIndex: NSInteger; index: NSInteger); message 'candidateListTouchBarItem:changeSelectionFromCandidateAtIndex:toIndex:'; { unavailable in macCatalyst }
-    procedure candidateListTouchBarItem_endSelectingCandidateAtIndex (anItem: NSCandidateListTouchBarItem; index: NSInteger); message 'candidateListTouchBarItem:endSelectingCandidateAtIndex:'; { unavailable in macCatalyst }
-    procedure candidateListTouchBarItem_changedCandidateListVisibility (anItem: NSCandidateListTouchBarItem; isVisible: objcbool); message 'candidateListTouchBarItem:changedCandidateListVisibility:'; { unavailable in macCatalyst }
+    procedure candidateListTouchBarItem_beginSelectingCandidateAtIndex (anItem: NSCandidateListTouchBarItem; index: NSInteger); message 'candidateListTouchBarItem:beginSelectingCandidateAtIndex:'; { unavailable in macCatalyst } { available in macos 10.12.2 }
+    procedure candidateListTouchBarItem_changeSelectionFromCandidateAtIndex_toIndex (anItem: NSCandidateListTouchBarItem; previousIndex: NSInteger; index: NSInteger); message 'candidateListTouchBarItem:changeSelectionFromCandidateAtIndex:toIndex:'; { unavailable in macCatalyst } { available in macos 10.12.2 }
+    procedure candidateListTouchBarItem_endSelectingCandidateAtIndex (anItem: NSCandidateListTouchBarItem; index: NSInteger); message 'candidateListTouchBarItem:endSelectingCandidateAtIndex:'; { unavailable in macCatalyst } { available in macos 10.12.2 }
+    procedure candidateListTouchBarItem_changedCandidateListVisibility (anItem: NSCandidateListTouchBarItem; isVisible: objcbool); message 'candidateListTouchBarItem:changedCandidateListVisibility:'; { unavailable in macCatalyst } { available in macos 10.12.2 }
   end;
 {$endif}
 
@@ -54,12 +54,12 @@ type
 
 type
   NSView_NSCandidateListTouchBarItem = objccategory external name 'NSCandidateListTouchBarItem' (NSView)
-    function candidateListTouchBarItem: NSCandidateListTouchBarItem; message 'candidateListTouchBarItem'; { available in macos  }
+    function candidateListTouchBarItem: NSCandidateListTouchBarItem; message 'candidateListTouchBarItem'; { available in macos 10.12.2 }
   end;
 {$endif}
 
 {$ifdef EXTERNAL_SYMBOLS}
 var
-  NSTouchBarItemIdentifierCandidateList: NSTouchBarItemIdentifier { unavailable in macCatalyst }; cvar; external;
+  NSTouchBarItemIdentifierCandidateList: NSTouchBarItemIdentifier { unavailable in macCatalyst } { available in macos 10.12.2 }; cvar; external;
 {$endif}
 

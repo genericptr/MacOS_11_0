@@ -30,7 +30,7 @@ type
     class function punctuationCharacterSet: NSCharacterSet; message 'punctuationCharacterSet';
     class function capitalizedLetterCharacterSet: NSCharacterSet; message 'capitalizedLetterCharacterSet';
     class function symbolCharacterSet: NSCharacterSet; message 'symbolCharacterSet';
-    class function newlineCharacterSet: NSCharacterSet; message 'newlineCharacterSet'; { available in macos , ios , watchos , tvos  }
+    class function newlineCharacterSet: NSCharacterSet; message 'newlineCharacterSet'; { available in macos 10.5, ios 2.0, watchos 2.0, tvos 9.0 }
     class function characterSetWithRange (aRange: NSRange): NSCharacterSet; message 'characterSetWithRange:';
     class function characterSetWithCharactersInString (aString: NSString): NSCharacterSet; message 'characterSetWithCharactersInString:';
     class function characterSetWithBitmapRepresentation (data: NSData): NSCharacterSet; message 'characterSetWithBitmapRepresentation:';
@@ -74,7 +74,7 @@ type
     class function punctuationCharacterSet_: NSMutableCharacterSet; message 'punctuationCharacterSet';
     class function capitalizedLetterCharacterSet_: NSMutableCharacterSet; message 'capitalizedLetterCharacterSet';
     class function symbolCharacterSet_: NSMutableCharacterSet; message 'symbolCharacterSet';
-    class function newlineCharacterSet_: NSMutableCharacterSet; message 'newlineCharacterSet'; { available in macos , ios , watchos , tvos  }
+    class function newlineCharacterSet_: NSMutableCharacterSet; message 'newlineCharacterSet'; { available in macos 10.5, ios 2.0, watchos 2.0, tvos 9.0 }
     class function characterSetWithRange (aRange: NSRange): NSMutableCharacterSet; message 'characterSetWithRange:';
     class function characterSetWithCharactersInString (aString: NSString): NSMutableCharacterSet; message 'characterSetWithCharactersInString:';
     class function characterSetWithBitmapRepresentation (data: NSData): NSMutableCharacterSet; message 'characterSetWithBitmapRepresentation:';

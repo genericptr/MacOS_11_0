@@ -24,13 +24,13 @@ type
 
 {$ifdef EXTERNAL_SYMBOLS}
 var
-  NSSharingServiceNameComposeEmail: NSSharingServiceName { available in macos  }; cvar; external;
-  NSSharingServiceNameComposeMessage: NSSharingServiceName { available in macos  }; cvar; external;
-  NSSharingServiceNameSendViaAirDrop: NSSharingServiceName { available in macos  }; cvar; external;
-  NSSharingServiceNameAddToSafariReadingList: NSSharingServiceName { available in macos  }; cvar; external;
-  NSSharingServiceNameAddToIPhoto: NSSharingServiceName { available in macos  }; cvar; external;
-  NSSharingServiceNameAddToAperture: NSSharingServiceName { available in macos  }; cvar; external;
-  NSSharingServiceNameUseAsDesktopPicture: NSSharingServiceName { available in macos  }; cvar; external;
+  NSSharingServiceNameComposeEmail: NSSharingServiceName { available in macos 10.8 }; cvar; external;
+  NSSharingServiceNameComposeMessage: NSSharingServiceName { available in macos 10.8 }; cvar; external;
+  NSSharingServiceNameSendViaAirDrop: NSSharingServiceName { available in macos 10.8 }; cvar; external;
+  NSSharingServiceNameAddToSafariReadingList: NSSharingServiceName { available in macos 10.8 }; cvar; external;
+  NSSharingServiceNameAddToIPhoto: NSSharingServiceName { available in macos 10.8 }; cvar; external;
+  NSSharingServiceNameAddToAperture: NSSharingServiceName { available in macos 10.8 }; cvar; external;
+  NSSharingServiceNameUseAsDesktopPicture: NSSharingServiceName { available in macos 10.8 }; cvar; external;
   NSSharingServiceNamePostOnFacebook: NSSharingServiceName deprecated 'This service is no longer included with the system.'; cvar; external;
   NSSharingServiceNamePostOnTwitter: NSSharingServiceName deprecated 'This service is no longer included with the system.'; cvar; external;
   NSSharingServiceNamePostOnSinaWeibo: NSSharingServiceName deprecated 'This service is no longer included with the system.'; cvar; external;
@@ -43,7 +43,7 @@ var
   NSSharingServiceNamePostVideoOnVimeo: NSSharingServiceName deprecated 'This service is no longer included with the system.'; cvar; external;
   NSSharingServiceNamePostVideoOnYouku: NSSharingServiceName deprecated 'This service is no longer included with the system.'; cvar; external;
   NSSharingServiceNamePostVideoOnTudou: NSSharingServiceName deprecated 'This service is no longer included with the system.'; cvar; external;
-  NSSharingServiceNameCloudSharing: NSSharingServiceName { available in macos  }; cvar; external;
+  NSSharingServiceNameCloudSharing: NSSharingServiceName { available in macos 10.12 }; cvar; external;
 {$endif}
 
 {$ifdef CLASSES}
@@ -56,16 +56,16 @@ type
     function title: NSString; message 'title';
     function image: NSImage; message 'image';
     function alternateImage: NSImage; message 'alternateImage';
-    procedure setMenuItemTitle(newValue: NSString); message 'setMenuItemTitle:'; { available in macos  }
-    function menuItemTitle: NSString; message 'menuItemTitle'; { available in macos  }
-    procedure setRecipients(newValue: NSArray); message 'setRecipients:'; { available in macos  }
-    function recipients: NSArray; message 'recipients'; { available in macos  }
-    procedure setSubject(newValue: NSString); message 'setSubject:'; { available in macos  }
-    function subject: NSString; message 'subject'; { available in macos  }
-    function messageBody: NSString; message 'messageBody'; { available in macos  }
-    function permanentLink: NSURL; message 'permanentLink'; { available in macos  }
-    function accountName: NSString; message 'accountName'; { available in macos  }
-    function attachmentFileURLs: NSArray; message 'attachmentFileURLs'; { available in macos  }
+    procedure setMenuItemTitle(newValue: NSString); message 'setMenuItemTitle:'; { available in macos 10.9 }
+    function menuItemTitle: NSString; message 'menuItemTitle'; { available in macos 10.9 }
+    procedure setRecipients(newValue: NSArray); message 'setRecipients:'; { available in macos 10.9 }
+    function recipients: NSArray; message 'recipients'; { available in macos 10.9 }
+    procedure setSubject(newValue: NSString); message 'setSubject:'; { available in macos 10.9 }
+    function subject: NSString; message 'subject'; { available in macos 10.9 }
+    function messageBody: NSString; message 'messageBody'; { available in macos 10.9 }
+    function permanentLink: NSURL; message 'permanentLink'; { available in macos 10.9 }
+    function accountName: NSString; message 'accountName'; { available in macos 10.9 }
+    function attachmentFileURLs: NSArray; message 'attachmentFileURLs'; { available in macos 10.9 }
     class function sharingServicesForItems (items: NSArray): NSArray; message 'sharingServicesForItems:';
     class function sharingServiceNamed (serviceName: NSSharingServiceName): NSSharingService; message 'sharingServiceNamed:';
     function initWithTitle_image_alternateImage_handler (title_: NSString; image_: NSImage; alternateImage_: NSImage; block: NSSharingServiceInitWithTitleCallback): id; message 'initWithTitle:image:alternateImage:handler:'; { NS_DESIGNATED_INITIALIZER }
@@ -130,8 +130,8 @@ type
 
 type
   NSCloudKitSharing = objccategory external (NSItemProvider)
-    procedure registerCloudKitShareWithPreparationHandler (preparationHandler: NSSharingServiceRegisterCloudKitShareWithPreparationHandlerCallback); message 'registerCloudKitShareWithPreparationHandler:'; { available in macos  }
-    procedure registerCloudKitShare_container (share: CKShare; container: CKContainer); message 'registerCloudKitShare:container:'; { available in macos  }
+    procedure registerCloudKitShareWithPreparationHandler (preparationHandler: NSSharingServiceRegisterCloudKitShareWithPreparationHandlerCallback); message 'registerCloudKitShareWithPreparationHandler:'; { available in macos 10.12 }
+    procedure registerCloudKitShare_container (share: CKShare; container: CKContainer); message 'registerCloudKitShare:container:'; { available in macos 10.12 }
   end;
 
 

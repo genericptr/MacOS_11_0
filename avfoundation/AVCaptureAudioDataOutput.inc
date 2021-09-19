@@ -21,7 +21,7 @@ type
     function sampleBufferCallbackQueue: dispatch_queue_t; message 'sampleBufferCallbackQueue';
     procedure setAudioSettings(newValue: NSDictionary); message 'setAudioSettings:'; { unavailable in ios, macCatalyst, watchos, tvos }
     function audioSettings: NSDictionary; message 'audioSettings'; { unavailable in ios, macCatalyst, watchos, tvos }
-    function recommendedAudioSettingsForAssetWriterWithOutputFileType (outputFileType: AVFileType): NSDictionary; message 'recommendedAudioSettingsForAssetWriterWithOutputFileType:'; { unavailable in tvos }
+    function recommendedAudioSettingsForAssetWriterWithOutputFileType (outputFileType: AVFileType): NSDictionary; message 'recommendedAudioSettingsForAssetWriterWithOutputFileType:'; { unavailable in tvos } { available in macos 10.15, ios 7.0, macCatalyst 14.0 }
   end;
 {$endif}
 

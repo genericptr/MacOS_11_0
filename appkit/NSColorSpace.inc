@@ -30,24 +30,24 @@ type
     function ICCProfileData: NSData; message 'ICCProfileData';
     function initWithColorSyncProfile (prof: pointer): id; message 'initWithColorSyncProfile:';
     function colorSyncProfile: pointer; message 'colorSyncProfile';
-    function initWithCGColorSpace (cgColorSpace: CGColorSpaceRef): id; message 'initWithCGColorSpace:'; { available in macos  }
-    function CGColorSpace: CGColorSpaceRef; message 'CGColorSpace'; { available in macos  }
+    function initWithCGColorSpace (cgColorSpace: CGColorSpaceRef): id; message 'initWithCGColorSpace:'; { available in macos 10.5 }
+    function CGColorSpace: CGColorSpaceRef; message 'CGColorSpace'; { available in macos 10.5 }
     function numberOfColorComponents: NSInteger; message 'numberOfColorComponents';
     function colorSpaceModel: NSColorSpaceModel; message 'colorSpaceModel';
     function localizedName: NSString; message 'localizedName';
-    class function sRGBColorSpace: NSColorSpace; message 'sRGBColorSpace'; { available in macos  }
-    class function genericGamma22GrayColorSpace: NSColorSpace; message 'genericGamma22GrayColorSpace'; { available in macos  }
-    class function extendedSRGBColorSpace: NSColorSpace; message 'extendedSRGBColorSpace'; { available in macos  }
-    class function extendedGenericGamma22GrayColorSpace: NSColorSpace; message 'extendedGenericGamma22GrayColorSpace'; { available in macos  }
-    class function displayP3ColorSpace: NSColorSpace; message 'displayP3ColorSpace'; { available in macos  }
-    class function adobeRGB1998ColorSpace: NSColorSpace; message 'adobeRGB1998ColorSpace'; { available in macos  }
+    class function sRGBColorSpace: NSColorSpace; message 'sRGBColorSpace'; { available in macos 10.5 }
+    class function genericGamma22GrayColorSpace: NSColorSpace; message 'genericGamma22GrayColorSpace'; { available in macos 10.6 }
+    class function extendedSRGBColorSpace: NSColorSpace; message 'extendedSRGBColorSpace'; { available in macos 10.12 }
+    class function extendedGenericGamma22GrayColorSpace: NSColorSpace; message 'extendedGenericGamma22GrayColorSpace'; { available in macos 10.12 }
+    class function displayP3ColorSpace: NSColorSpace; message 'displayP3ColorSpace'; { available in macos 10.12 }
+    class function adobeRGB1998ColorSpace: NSColorSpace; message 'adobeRGB1998ColorSpace'; { available in macos 10.5 }
     class function genericRGBColorSpace: NSColorSpace; message 'genericRGBColorSpace';
     class function genericGrayColorSpace: NSColorSpace; message 'genericGrayColorSpace';
     class function genericCMYKColorSpace: NSColorSpace; message 'genericCMYKColorSpace';
     class function deviceRGBColorSpace: NSColorSpace; message 'deviceRGBColorSpace';
     class function deviceGrayColorSpace: NSColorSpace; message 'deviceGrayColorSpace';
     class function deviceCMYKColorSpace: NSColorSpace; message 'deviceCMYKColorSpace';
-    class function availableColorSpacesWithModel (model: NSColorSpaceModel): NSArray; message 'availableColorSpacesWithModel:'; { available in macos  }
+    class function availableColorSpacesWithModel (model: NSColorSpaceModel): NSArray; message 'availableColorSpacesWithModel:'; { available in macos 10.6 }
 
     { Adopted protocols }
     procedure encodeWithCoder (coder: NSCoder); message 'encodeWithCoder:';

@@ -36,11 +36,11 @@ type
     function initCircularRegionWithCenter_radius_identifier (center: CLLocationCoordinate2D; radius: CLLocationDistance; identifier: NSString): id; message 'initCircularRegionWithCenter:radius:identifier:'; { unavailable in tvos }
     function center: CLLocationCoordinate2D; message 'center'; { unavailable in tvos }
     function radius: CLLocationDistance; message 'radius'; { unavailable in tvos }
-    function identifier: NSString; message 'identifier'; { available in ios , macos  }
-    procedure setNotifyOnEntry(newValue: objcbool); message 'setNotifyOnEntry:'; { available in ios , macos  }
-    function notifyOnEntry: objcbool; message 'notifyOnEntry'; { available in ios , macos  }
-    procedure setNotifyOnExit(newValue: objcbool); message 'setNotifyOnExit:'; { available in ios , macos  }
-    function notifyOnExit: objcbool; message 'notifyOnExit'; { available in ios , macos  }
+    function identifier: NSString; message 'identifier'; { available in ios 4.0, macos 10.7 }
+    procedure setNotifyOnEntry(newValue: objcbool); message 'setNotifyOnEntry:'; { available in ios 7.0, macos 10.10 }
+    function notifyOnEntry: objcbool; message 'notifyOnEntry'; { available in ios 7.0, macos 10.10 }
+    procedure setNotifyOnExit(newValue: objcbool); message 'setNotifyOnExit:'; { available in ios 7.0, macos 10.10 }
+    function notifyOnExit: objcbool; message 'notifyOnExit'; { available in ios 7.0, macos 10.10 }
     function containsCoordinate (coordinate: CLLocationCoordinate2D): objcbool; message 'containsCoordinate:'; { unavailable in tvos }
 
     { Adopted protocols }

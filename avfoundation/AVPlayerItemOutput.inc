@@ -40,10 +40,10 @@ type
     function itemTimeForHostTime (hostTimeInSeconds: CFTimeInterval): CMTime; message 'itemTimeForHostTime:';
     function itemTimeForMachAbsoluteTime (machAbsoluteTime: cint64): CMTime; message 'itemTimeForMachAbsoluteTime:';
     {$if  not defined(TARGET_OS_IPHONE)}
-    function itemTimeForCVTimeStamp (timestamp: CVTimeStamp): CMTime; message 'itemTimeForCVTimeStamp:'; { unavailable in ios, tvos, watchos }
+    function itemTimeForCVTimeStamp (timestamp: CVTimeStamp): CMTime; message 'itemTimeForCVTimeStamp:'; { unavailable in ios, tvos, watchos } { available in macos 10.8 }
     {$endif}
-    procedure setSuppressesPlayerRendering(newValue: objcbool); message 'setSuppressesPlayerRendering:'; { unavailable in watchos }
-    function suppressesPlayerRendering: objcbool; message 'suppressesPlayerRendering'; { unavailable in watchos }
+    procedure setSuppressesPlayerRendering(newValue: objcbool); message 'setSuppressesPlayerRendering:'; { unavailable in watchos } { available in macos 10.8, ios 6.0, tvos 9.0 }
+    function suppressesPlayerRendering: objcbool; message 'suppressesPlayerRendering'; { unavailable in watchos } { available in macos 10.8, ios 6.0, tvos 9.0 }
   end;
 
 type
@@ -52,7 +52,7 @@ type
     _videoOutputInternal: AVPlayerItemVideoOutputInternal;
   public
     function initWithPixelBufferAttributes (pixelBufferAttributes: NSDictionary): id; message 'initWithPixelBufferAttributes:'; { NS_DESIGNATED_INITIALIZER }
-    function initWithOutputSettings (outputSettings: NSDictionary): id; message 'initWithOutputSettings:'; { unavailable in watchos }
+    function initWithOutputSettings (outputSettings: NSDictionary): id; message 'initWithOutputSettings:'; { unavailable in watchos } { available in macos 10.12, ios 10.0, tvos 10.0 }
     function hasNewPixelBufferForItemTime (itemTime: CMTime): objcbool; message 'hasNewPixelBufferForItemTime:';
     function copyPixelBufferForItemTime_itemTimeForDisplay (itemTime: CMTime; outItemTimeForDisplay: CMTimePtr): CVPixelBufferRef; message 'copyPixelBufferForItemTime:itemTimeForDisplay:'; { CF_RETURNS_RETAINED }
     procedure setDelegate_queue (delegate: AVPlayerItemOutputPullDelegateProtocol; delegateQueue: dispatch_queue_t); message 'setDelegate:queue:';
@@ -67,8 +67,8 @@ type
 type
   AVPlayerItemOutputPullDelegateProtocol = objcprotocol external name 'AVPlayerItemOutputPullDelegate' (NSObjectProtocol)
   optional
-    procedure outputMediaDataWillChange (sender: AVPlayerItemOutput); message 'outputMediaDataWillChange:'; { available in macos , ios , tvos , watchos  }
-    procedure outputSequenceWasFlushed (output: AVPlayerItemOutput); message 'outputSequenceWasFlushed:'; { available in macos , ios , tvos , watchos  }
+    procedure outputMediaDataWillChange (sender: AVPlayerItemOutput); message 'outputMediaDataWillChange:'; { available in macos 10.8, ios 6.0, tvos 9.0, watchos 1.0 }
+    procedure outputSequenceWasFlushed (output: AVPlayerItemOutput); message 'outputSequenceWasFlushed:'; { available in macos 10.8, ios 6.0, tvos 9.0, watchos 1.0 }
   end;
 {$endif}
 

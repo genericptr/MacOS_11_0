@@ -14,8 +14,8 @@ type
     function rect: CGRect; message 'rect';
     procedure setSnapshotWidth(newValue: NSNumber); message 'setSnapshotWidth:';
     function snapshotWidth: NSNumber; message 'snapshotWidth';
-    procedure setAfterScreenUpdates(newValue: objcbool); message 'setAfterScreenUpdates:'; { available in macos , ios  }
-    function afterScreenUpdates: objcbool; message 'afterScreenUpdates'; { available in macos , ios  }
+    procedure setAfterScreenUpdates(newValue: objcbool); message 'setAfterScreenUpdates:'; { available in macos 10.15, ios 13.0 }
+    function afterScreenUpdates: objcbool; message 'afterScreenUpdates'; { available in macos 10.15, ios 13.0 }
 
     { Adopted protocols }
     function copyWithZone (zone: NSZonePtr): id; message 'copyWithZone:';

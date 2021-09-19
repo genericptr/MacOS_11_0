@@ -47,9 +47,9 @@ type
     procedure spellServer_didLearnWord_inLanguage (sender: NSSpellServer; word: NSString; language: NSString); message 'spellServer:didLearnWord:inLanguage:';
     procedure spellServer_didForgetWord_inLanguage (sender: NSSpellServer; word: NSString; language: NSString); message 'spellServer:didForgetWord:inLanguage:';
     function spellServer_suggestCompletionsForPartialWordRange_inString_language (sender: NSSpellServer; range: NSRange; string_: NSString; language: NSString): NSArray; message 'spellServer:suggestCompletionsForPartialWordRange:inString:language:';
-    function spellServer_checkGrammarInString_language_details (sender: NSSpellServer; stringToCheck: NSString; language: NSString; details: NSArrayPtr): NSRange; message 'spellServer:checkGrammarInString:language:details:'; { unavailable in ios, watchos, tvos }
-    function spellServer_checkString_offset_types_options_orthography_wordCount (sender: NSSpellServer; stringToCheck: NSString; offset: NSUInteger; checkingTypes: NSTextCheckingTypes; options: NSDictionary; orthography: NSOrthography; wordCount: NSIntegerPtr): NSArray; message 'spellServer:checkString:offset:types:options:orthography:wordCount:'; { unavailable in ios, watchos, tvos }
-    procedure spellServer_recordResponse_toCorrection_forWord_language (sender: NSSpellServer; response: NSUInteger; correction: NSString; word: NSString; language: NSString); message 'spellServer:recordResponse:toCorrection:forWord:language:'; { unavailable in ios, watchos, tvos }
+    function spellServer_checkGrammarInString_language_details (sender: NSSpellServer; stringToCheck: NSString; language: NSString; details: NSArrayPtr): NSRange; message 'spellServer:checkGrammarInString:language:details:'; { unavailable in ios, watchos, tvos } { available in macos 10.5 }
+    function spellServer_checkString_offset_types_options_orthography_wordCount (sender: NSSpellServer; stringToCheck: NSString; offset: NSUInteger; checkingTypes: NSTextCheckingTypes; options: NSDictionary; orthography: NSOrthography; wordCount: NSIntegerPtr): NSArray; message 'spellServer:checkString:offset:types:options:orthography:wordCount:'; { unavailable in ios, watchos, tvos } { available in macos 10.6 }
+    procedure spellServer_recordResponse_toCorrection_forWord_language (sender: NSSpellServer; response: NSUInteger; correction: NSString; word: NSString; language: NSString); message 'spellServer:recordResponse:toCorrection:forWord:language:'; { unavailable in ios, watchos, tvos } { available in macos 10.7 }
   end;
 {$endif}
 

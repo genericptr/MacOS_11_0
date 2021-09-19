@@ -13,7 +13,7 @@ type
     function containerIdentifier: NSString; message 'containerIdentifier';
     function share: CKShare; message 'share';
     function rootRecordID: CKRecordID; message 'rootRecordID';
-    function participantRole: CKShareParticipantRole; message 'participantRole'; { available in macos , ios , tvos , watchos  }
+    function participantRole: CKShareParticipantRole; message 'participantRole'; { available in macos 10.14, ios 12.0, tvos 12.0, watchos 5.0 }
     function participantType: CKShareParticipantType; message 'participantType'; deprecated 'replace with participantRole';
     function participantStatus: CKShareParticipantAcceptanceStatus; message 'participantStatus';
     function participantPermission: CKShareParticipantPermission; message 'participantPermission';

@@ -41,7 +41,7 @@ type
     function init: id; message 'init';
     class function new_: id; message 'new';
     procedure addOperation (operation: CKDatabaseOperation); message 'addOperation:';
-    function databaseScope: CKDatabaseScope; message 'databaseScope'; { available in macos , ios , tvos , watchos  }
+    function databaseScope: CKDatabaseScope; message 'databaseScope'; { available in macos 10.12, ios 10.0, tvos 10.0, watchos 3.0 }
   end;
 
 
@@ -55,10 +55,10 @@ type
     procedure fetchRecordZoneWithID_completionHandler (zoneID: CKRecordZoneID; completionHandler: CKDatabaseFetchRecordZoneWithIDCallback); message 'fetchRecordZoneWithID:completionHandler:';
     procedure saveRecordZone_completionHandler (zone: CKRecordZone; completionHandler: CKDatabaseSaveRecordZoneCallback); message 'saveRecordZone:completionHandler:';
     procedure deleteRecordZoneWithID_completionHandler (zoneID: CKRecordZoneID; completionHandler: CKDatabaseDeleteRecordZoneWithIDCallback); message 'deleteRecordZoneWithID:completionHandler:';
-    procedure fetchSubscriptionWithID_completionHandler (subscriptionID: CKSubscriptionID; completionHandler: CKDatabaseFetchSubscriptionWithIDCallback); message 'fetchSubscriptionWithID:completionHandler:'; { available in macos , ios , tvos , watchos  }
-    procedure fetchAllSubscriptionsWithCompletionHandler (completionHandler: CKDatabaseFetchAllSubscriptionsWithCompletionHandlerCallback); message 'fetchAllSubscriptionsWithCompletionHandler:'; { available in macos , ios , tvos , watchos  }
-    procedure saveSubscription_completionHandler (subscription: CKSubscription; completionHandler: CKDatabaseSaveSubscriptionCallback); message 'saveSubscription:completionHandler:'; { available in macos , ios , tvos , watchos  }
-    procedure deleteSubscriptionWithID_completionHandler (subscriptionID: CKSubscriptionID; completionHandler: CKDatabaseDeleteSubscriptionWithIDCallback); message 'deleteSubscriptionWithID:completionHandler:'; { available in macos , ios , tvos , watchos  }
+    procedure fetchSubscriptionWithID_completionHandler (subscriptionID: CKSubscriptionID; completionHandler: CKDatabaseFetchSubscriptionWithIDCallback); message 'fetchSubscriptionWithID:completionHandler:'; { available in macos 10.10, ios 8.0, tvos 9.0, watchos 6.0 }
+    procedure fetchAllSubscriptionsWithCompletionHandler (completionHandler: CKDatabaseFetchAllSubscriptionsWithCompletionHandlerCallback); message 'fetchAllSubscriptionsWithCompletionHandler:'; { available in macos 10.10, ios 8.0, tvos 9.0, watchos 6.0 }
+    procedure saveSubscription_completionHandler (subscription: CKSubscription; completionHandler: CKDatabaseSaveSubscriptionCallback); message 'saveSubscription:completionHandler:'; { available in macos 10.10, ios 8.0, tvos 9.0, watchos 6.0 }
+    procedure deleteSubscriptionWithID_completionHandler (subscriptionID: CKSubscriptionID; completionHandler: CKDatabaseDeleteSubscriptionWithIDCallback); message 'deleteSubscriptionWithID:completionHandler:'; { available in macos 10.10, ios 8.0, tvos 9.0, watchos 6.0 }
   end;
 {$endif}
 

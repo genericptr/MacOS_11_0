@@ -9,11 +9,11 @@ type
 {$ifdef TYPES}
 const
   __FOUNDATION_NSMAPTABLE__ = 1;
-  NSMapTableStrongMemory = NSPointerFunctionsStrongMemory { available in macos , ios , watchos , tvos  };
+  NSMapTableStrongMemory = NSPointerFunctionsStrongMemory { available in macos 10.5, ios 6.0, watchos 2.0, tvos 9.0 };
   NSMapTableZeroingWeakMemory = NSPointerFunctionsZeroingWeakMemory { unavailable in ios, watchos, tvos };
-  NSMapTableCopyIn = NSPointerFunctionsCopyIn { available in macos , ios , watchos , tvos  };
-  NSMapTableObjectPointerPersonality = NSPointerFunctionsObjectPointerPersonality { available in macos , ios , watchos , tvos  };
-  NSMapTableWeakMemory = NSPointerFunctionsWeakMemory { available in macos , ios , watchos , tvos  };
+  NSMapTableCopyIn = NSPointerFunctionsCopyIn { available in macos 10.5, ios 6.0, watchos 2.0, tvos 9.0 };
+  NSMapTableObjectPointerPersonality = NSPointerFunctionsObjectPointerPersonality { available in macos 10.5, ios 6.0, watchos 2.0, tvos 9.0 };
+  NSMapTableWeakMemory = NSPointerFunctionsWeakMemory { available in macos 10.8, ios 6.0, watchos 2.0, tvos 9.0 };
 
 type
   NSMapTableOptions = NSUInteger;
@@ -32,10 +32,10 @@ type
     class function mapTableWithWeakToStrongObjects: id; message 'mapTableWithWeakToStrongObjects'; { unavailable in ios, watchos, tvos }
     class function mapTableWithStrongToWeakObjects: id; message 'mapTableWithStrongToWeakObjects'; { unavailable in ios, watchos, tvos }
     class function mapTableWithWeakToWeakObjects: id; message 'mapTableWithWeakToWeakObjects'; { unavailable in ios, watchos, tvos }
-    class function strongToStrongObjectsMapTable: NSMapTable; message 'strongToStrongObjectsMapTable'; { available in macos , ios , watchos , tvos  }
-    class function weakToStrongObjectsMapTable: NSMapTable; message 'weakToStrongObjectsMapTable'; { available in macos , ios , watchos , tvos  }
-    class function strongToWeakObjectsMapTable: NSMapTable; message 'strongToWeakObjectsMapTable'; { available in macos , ios , watchos , tvos  }
-    class function weakToWeakObjectsMapTable: NSMapTable; message 'weakToWeakObjectsMapTable'; { available in macos , ios , watchos , tvos  }
+    class function strongToStrongObjectsMapTable: NSMapTable; message 'strongToStrongObjectsMapTable'; { available in macos 10.8, ios 6.0, watchos 2.0, tvos 9.0 }
+    class function weakToStrongObjectsMapTable: NSMapTable; message 'weakToStrongObjectsMapTable'; { available in macos 10.8, ios 6.0, watchos 2.0, tvos 9.0 }
+    class function strongToWeakObjectsMapTable: NSMapTable; message 'strongToWeakObjectsMapTable'; { available in macos 10.8, ios 6.0, watchos 2.0, tvos 9.0 }
+    class function weakToWeakObjectsMapTable: NSMapTable; message 'weakToWeakObjectsMapTable'; { available in macos 10.8, ios 6.0, watchos 2.0, tvos 9.0 }
     function keyPointerFunctions: NSPointerFunctions; message 'keyPointerFunctions';
     function valuePointerFunctions: NSPointerFunctions; message 'valuePointerFunctions';
     function objectForKey (aKey: id): id; message 'objectForKey:';
@@ -116,14 +116,14 @@ function NSCreateMapTable(keyCallBacks: NSMapTableKeyCallBacks; valueCallBacks: 
 
 {$ifdef EXTERNAL_SYMBOLS}
 var
-  NSIntegerMapKeyCallBacks: NSMapTableKeyCallBacks { unavailable in ios, watchos, tvos }; cvar; external;
+  NSIntegerMapKeyCallBacks: NSMapTableKeyCallBacks { unavailable in ios, watchos, tvos } { available in macos 10.5 }; cvar; external;
   NSNonOwnedPointerMapKeyCallBacks: NSMapTableKeyCallBacks; cvar; external;
   NSNonOwnedPointerOrNullMapKeyCallBacks: NSMapTableKeyCallBacks; cvar; external;
   NSNonRetainedObjectMapKeyCallBacks: NSMapTableKeyCallBacks; cvar; external;
   NSObjectMapKeyCallBacks: NSMapTableKeyCallBacks; cvar; external;
   NSOwnedPointerMapKeyCallBacks: NSMapTableKeyCallBacks; cvar; external;
   NSIntMapKeyCallBacks: NSMapTableKeyCallBacks deprecated 'Not supported'; cvar; external;
-  NSIntegerMapValueCallBacks: NSMapTableValueCallBacks { unavailable in ios, watchos, tvos }; cvar; external;
+  NSIntegerMapValueCallBacks: NSMapTableValueCallBacks { unavailable in ios, watchos, tvos } { available in macos 10.5 }; cvar; external;
   NSNonOwnedPointerMapValueCallBacks: NSMapTableValueCallBacks; cvar; external;
   NSObjectMapValueCallBacks: NSMapTableValueCallBacks; cvar; external;
   NSNonRetainedObjectMapValueCallBacks: NSMapTableValueCallBacks; cvar; external;

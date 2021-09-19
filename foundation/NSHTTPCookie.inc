@@ -15,22 +15,22 @@ type
 
 {$ifdef EXTERNAL_SYMBOLS}
 var
-  NSHTTPCookieName: NSHTTPCookiePropertyKey { available in macos , ios , watchos , tvos  }; cvar; external;
-  NSHTTPCookieValue: NSHTTPCookiePropertyKey { available in macos , ios , watchos , tvos  }; cvar; external;
-  NSHTTPCookieOriginURL: NSHTTPCookiePropertyKey { available in macos , ios , watchos , tvos  }; cvar; external;
-  NSHTTPCookieVersion: NSHTTPCookiePropertyKey { available in macos , ios , watchos , tvos  }; cvar; external;
-  NSHTTPCookieDomain: NSHTTPCookiePropertyKey { available in macos , ios , watchos , tvos  }; cvar; external;
-  NSHTTPCookiePath: NSHTTPCookiePropertyKey { available in macos , ios , watchos , tvos  }; cvar; external;
-  NSHTTPCookieSecure: NSHTTPCookiePropertyKey { available in macos , ios , watchos , tvos  }; cvar; external;
-  NSHTTPCookieExpires: NSHTTPCookiePropertyKey { available in macos , ios , watchos , tvos  }; cvar; external;
-  NSHTTPCookieComment: NSHTTPCookiePropertyKey { available in macos , ios , watchos , tvos  }; cvar; external;
-  NSHTTPCookieCommentURL: NSHTTPCookiePropertyKey { available in macos , ios , watchos , tvos  }; cvar; external;
-  NSHTTPCookieDiscard: NSHTTPCookiePropertyKey { available in macos , ios , watchos , tvos  }; cvar; external;
-  NSHTTPCookieMaximumAge: NSHTTPCookiePropertyKey { available in macos , ios , watchos , tvos  }; cvar; external;
-  NSHTTPCookiePort: NSHTTPCookiePropertyKey { available in macos , ios , watchos , tvos  }; cvar; external;
-  NSHTTPCookieSameSitePolicy: NSHTTPCookiePropertyKey { available in macos , ios , watchos , tvos  }; cvar; external;
-  NSHTTPCookieSameSiteLax: NSHTTPCookieStringPolicy { available in macos , ios , watchos , tvos  }; cvar; external;
-  NSHTTPCookieSameSiteStrict: NSHTTPCookieStringPolicy { available in macos , ios , watchos , tvos  }; cvar; external;
+  NSHTTPCookieName: NSHTTPCookiePropertyKey { available in macos 10.2, ios 2.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  NSHTTPCookieValue: NSHTTPCookiePropertyKey { available in macos 10.2, ios 2.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  NSHTTPCookieOriginURL: NSHTTPCookiePropertyKey { available in macos 10.2, ios 2.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  NSHTTPCookieVersion: NSHTTPCookiePropertyKey { available in macos 10.2, ios 2.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  NSHTTPCookieDomain: NSHTTPCookiePropertyKey { available in macos 10.2, ios 2.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  NSHTTPCookiePath: NSHTTPCookiePropertyKey { available in macos 10.2, ios 2.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  NSHTTPCookieSecure: NSHTTPCookiePropertyKey { available in macos 10.2, ios 2.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  NSHTTPCookieExpires: NSHTTPCookiePropertyKey { available in macos 10.2, ios 2.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  NSHTTPCookieComment: NSHTTPCookiePropertyKey { available in macos 10.2, ios 2.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  NSHTTPCookieCommentURL: NSHTTPCookiePropertyKey { available in macos 10.2, ios 2.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  NSHTTPCookieDiscard: NSHTTPCookiePropertyKey { available in macos 10.2, ios 2.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  NSHTTPCookieMaximumAge: NSHTTPCookiePropertyKey { available in macos 10.2, ios 2.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  NSHTTPCookiePort: NSHTTPCookiePropertyKey { available in macos 10.2, ios 2.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  NSHTTPCookieSameSitePolicy: NSHTTPCookiePropertyKey { available in macos 10.15, ios 13.0, watchos 6.0, tvos 13.0 }; cvar; external;
+  NSHTTPCookieSameSiteLax: NSHTTPCookieStringPolicy { available in macos 10.15, ios 13.0, watchos 6.0, tvos 13.0 }; cvar; external;
+  NSHTTPCookieSameSiteStrict: NSHTTPCookieStringPolicy { available in macos 10.15, ios 13.0, watchos 6.0, tvos 13.0 }; cvar; external;
 {$endif}
 
 {$ifdef CLASSES}
@@ -57,7 +57,7 @@ type
     function comment: NSString; message 'comment';
     function commentURL: NSURL; message 'commentURL';
     function portList: NSArray; message 'portList';
-    function sameSitePolicy: NSHTTPCookieStringPolicy; message 'sameSitePolicy'; { available in macos , ios , watchos , tvos  }
+    function sameSitePolicy: NSHTTPCookieStringPolicy; message 'sameSitePolicy'; { available in macos 10.15, ios 13.0, watchos 6.0, tvos 13.0 }
   end;
 {$endif}
 

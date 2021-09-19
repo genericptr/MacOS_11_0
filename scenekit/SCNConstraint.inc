@@ -28,19 +28,19 @@ type
 type
   SCNConstraint = objcclass external (NSObject, NSCopyingProtocol, NSSecureCodingProtocol, SCNAnimatableProtocol)
   public
-    procedure setEnabled(newValue: objcbool); message 'setEnabled:'; { available in macos  }
-    function isEnabled: objcbool; message 'isEnabled'; { available in macos  }
-    procedure setInfluenceFactor(newValue: CGFloat); message 'setInfluenceFactor:'; { available in macos  }
-    function influenceFactor: CGFloat; message 'influenceFactor'; { available in macos  }
-    procedure setIncremental(newValue: objcbool); message 'setIncremental:'; { available in macos , ios , tvos , watchos  }
-    function isIncremental: objcbool; message 'isIncremental'; { available in macos , ios , tvos , watchos  }
+    procedure setEnabled(newValue: objcbool); message 'setEnabled:'; { available in macos 10.10 }
+    function isEnabled: objcbool; message 'isEnabled'; { available in macos 10.10 }
+    procedure setInfluenceFactor(newValue: CGFloat); message 'setInfluenceFactor:'; { available in macos 10.10 }
+    function influenceFactor: CGFloat; message 'influenceFactor'; { available in macos 10.10 }
+    procedure setIncremental(newValue: objcbool); message 'setIncremental:'; { available in macos 10.13, ios 11.0, tvos 11.0, watchos 4.0 }
+    function isIncremental: objcbool; message 'isIncremental'; { available in macos 10.13, ios 11.0, tvos 11.0, watchos 4.0 }
 
     { Adopted protocols }
     procedure addAnimation_forKey (animation: SCNAnimationProtocol; key: NSString); message 'addAnimation:forKey:';
-    procedure addAnimationPlayer_forKey (player: SCNAnimationPlayer; key: NSString); message 'addAnimationPlayer:forKey:'; { available in macos , ios , tvos , watchos  }
+    procedure addAnimationPlayer_forKey (player: SCNAnimationPlayer; key: NSString); message 'addAnimationPlayer:forKey:'; { available in macos 10.13, ios 11.0, tvos 11.0, watchos 4.0 }
     function animationForKey (key: NSString): CAAnimationPtr; message 'animationForKey:'; deprecated 'replace with -animationPlayerForKey:';
     function animationKeys: NSArray; message 'animationKeys';
-    function animationPlayerForKey (key: NSString): SCNAnimationPlayer; message 'animationPlayerForKey:'; { available in macos , ios , tvos , watchos  }
+    function animationPlayerForKey (key: NSString): SCNAnimationPlayer; message 'animationPlayerForKey:'; { available in macos 10.13, ios 11.0, tvos 11.0, watchos 4.0 }
     function copyWithZone (zone: NSZonePtr): id; message 'copyWithZone:';
     procedure encodeWithCoder (coder: NSCoder); message 'encodeWithCoder:';
     function initWithCoder (coder: NSCoder): id; message 'initWithCoder:';
@@ -48,7 +48,7 @@ type
     procedure pauseAnimationForKey (key: NSString); message 'pauseAnimationForKey:'; deprecated 'Use -[SCNAnimationPlayer setPaused:] instead';
     procedure removeAllAnimations; message 'removeAllAnimations';
     procedure removeAnimationForKey (key: NSString); message 'removeAnimationForKey:';
-    procedure removeAnimationForKey_blendOutDuration (key: NSString; duration: CGFloat); message 'removeAnimationForKey:blendOutDuration:'; { available in macos , ios , tvos , watchos  }
+    procedure removeAnimationForKey_blendOutDuration (key: NSString; duration: CGFloat); message 'removeAnimationForKey:blendOutDuration:'; { available in macos 10.13, ios 11.0, tvos 11.0, watchos 4.0 }
     procedure removeAnimationForKey_fadeOutDuration (key: NSString; duration: CGFloat); message 'removeAnimationForKey:fadeOutDuration:'; deprecated 'replace with -removeAnimationForKey:blendOutDuration:';
     procedure resumeAnimationForKey (key: NSString); message 'resumeAnimationForKey:'; deprecated 'Use -[SCNAnimationPlayer setPaused:] instead';
     procedure setSpeed_forAnimationKey (speed: CGFloat; key: NSString); message 'setSpeed:forAnimationKey:'; deprecated 'Use -[SCNAnimationPlayer setSpeed:] instead';
@@ -62,11 +62,11 @@ type
     procedure setTarget(newValue: SCNNode); message 'setTarget:';
     function target: SCNNode; message 'target';
     procedure setTargetOffset(newValue: SCNVector3); message 'setTargetOffset:'; { available in macos , ios , tvos , watchos  }
-    function targetOffset: SCNVector3; message 'targetOffset'; { available in macos , ios , tvos , watchos  }
-    procedure setLocalFront(newValue: SCNVector3); message 'setLocalFront:'; { available in macos , ios , tvos , watchos  }
-    function localFront: SCNVector3; message 'localFront'; { available in macos , ios , tvos , watchos  }
-    procedure setWorldUp(newValue: SCNVector3); message 'setWorldUp:'; { available in macos , ios , tvos , watchos  }
-    function worldUp: SCNVector3; message 'worldUp'; { available in macos , ios , tvos , watchos  }
+    function targetOffset: SCNVector3; message 'targetOffset'; { available in macos 10.12, ios 10.0, tvos 10.0 }
+    procedure setLocalFront(newValue: SCNVector3); message 'setLocalFront:'; { available in macos 10.13, ios 11.0, tvos 11.0, watchos 4.0 }
+    function localFront: SCNVector3; message 'localFront'; { available in macos 10.13, ios 11.0, tvos 11.0, watchos 4.0 }
+    procedure setWorldUp(newValue: SCNVector3); message 'setWorldUp:'; { available in macos 10.13, ios 11.0, tvos 11.0, watchos 4.0 }
+    function worldUp: SCNVector3; message 'worldUp'; { available in macos 10.13, ios 11.0, tvos 11.0, watchos 4.0 }
     procedure setGimbalLockEnabled(newValue: objcbool); message 'setGimbalLockEnabled:';
     function gimbalLockEnabled: objcbool; message 'gimbalLockEnabled';
   end;

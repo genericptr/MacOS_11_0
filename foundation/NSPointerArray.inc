@@ -45,8 +45,8 @@ type
     class function pointerArrayWithStrongObjects: id; message 'pointerArrayWithStrongObjects'; { unavailable in ios, watchos, tvos }
     class function pointerArrayWithWeakObjects: id; message 'pointerArrayWithWeakObjects'; { unavailable in ios, watchos, tvos }
     {$endif}
-    class function strongObjectsPointerArray: NSPointerArray; message 'strongObjectsPointerArray'; { available in macos , ios , watchos , tvos  }
-    class function weakObjectsPointerArray: NSPointerArray; message 'weakObjectsPointerArray'; { available in macos , ios , watchos , tvos  }
+    class function strongObjectsPointerArray: NSPointerArray; message 'strongObjectsPointerArray'; { available in macos 10.8, ios 6.0, watchos 2.0, tvos 9.0 }
+    class function weakObjectsPointerArray: NSPointerArray; message 'weakObjectsPointerArray'; { available in macos 10.8, ios 6.0, watchos 2.0, tvos 9.0 }
     function allObjects: NSArray; message 'allObjects';
   end;
 {$endif}

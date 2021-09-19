@@ -10,9 +10,9 @@ type
 type
   NSPersistentHistoryTransaction = objcclass external (NSObject, NSCopyingProtocol)
   public
-    class function entityDescriptionWithContext (context: NSManagedObjectContext): NSEntityDescription; message 'entityDescriptionWithContext:'; { available in macosx ,ios ,tvos ,watchos  }
-    class function entityDescription: NSEntityDescription; message 'entityDescription'; { available in macosx ,ios ,tvos ,watchos  }
-    class function fetchRequest: NSFetchRequest; message 'fetchRequest'; { available in macosx ,ios ,tvos ,watchos  }
+    class function entityDescriptionWithContext (context: NSManagedObjectContext): NSEntityDescription; message 'entityDescriptionWithContext:'; { available in macosx 10.15,ios 13.0,tvos 13.0,watchos 6.0 }
+    class function entityDescription: NSEntityDescription; message 'entityDescription'; { available in macosx 10.15,ios 13.0,tvos 13.0,watchos 6.0 }
+    class function fetchRequest: NSFetchRequest; message 'fetchRequest'; { available in macosx 10.15,ios 13.0,tvos 13.0,watchos 6.0 }
     function timestamp: NSDate; message 'timestamp';
     function changes: NSArray; message 'changes';
     function transactionNumber: cint64; message 'transactionNumber';

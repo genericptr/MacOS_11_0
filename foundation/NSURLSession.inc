@@ -123,8 +123,8 @@ type
     function earliestBeginDate: NSDate; message 'earliestBeginDate'; { available in macos , ios , watchos , tvos  }
     procedure setCountOfBytesClientExpectsToSend(newValue: cint64); message 'setCountOfBytesClientExpectsToSend:'; { available in macos , ios , watchos , tvos  }
     function countOfBytesClientExpectsToSend: cint64; message 'countOfBytesClientExpectsToSend'; { available in macos , ios , watchos , tvos  }
-    procedure setCountOfBytesClientExpectsToReceive(newValue: cint64); message 'setCountOfBytesClientExpectsToReceive:'; { available in macos , ios , watchos , tvos  }
-    function countOfBytesClientExpectsToReceive: cint64; message 'countOfBytesClientExpectsToReceive'; { available in macos , ios , watchos , tvos  }
+    procedure setCountOfBytesClientExpectsToReceive(newValue: cint64); message 'setCountOfBytesClientExpectsToReceive:'; { available in macos 10.13, ios 11.0, watchos 4.0, tvos 11.0 }
+    function countOfBytesClientExpectsToReceive: cint64; message 'countOfBytesClientExpectsToReceive'; { available in macos 10.13, ios 11.0, watchos 4.0, tvos 11.0 }
     function countOfBytesReceived: cint64; message 'countOfBytesReceived';
     function countOfBytesSent: cint64; message 'countOfBytesSent';
     function countOfBytesExpectedToSend: cint64; message 'countOfBytesExpectedToSend';
@@ -295,13 +295,13 @@ type
     procedure setAllowsConstrainedNetworkAccess(newValue: objcbool); message 'setAllowsConstrainedNetworkAccess:'; { available in macos , ios , watchos , tvos  }
     function allowsConstrainedNetworkAccess: objcbool; message 'allowsConstrainedNetworkAccess'; { available in macos , ios , watchos , tvos  }
     procedure setWaitsForConnectivity(newValue: objcbool); message 'setWaitsForConnectivity:'; { available in macos , ios , watchos , tvos  }
-    function waitsForConnectivity: objcbool; message 'waitsForConnectivity'; { available in macos , ios , watchos , tvos  }
-    procedure setDiscretionary(newValue: objcbool); message 'setDiscretionary:'; { available in macos , ios , watchos , tvos  }
-    function isDiscretionary: objcbool; message 'isDiscretionary'; { available in macos , ios , watchos , tvos  }
-    procedure setSharedContainerIdentifier(newValue: NSString); message 'setSharedContainerIdentifier:'; { available in macos , ios , watchos , tvos  }
-    function sharedContainerIdentifier: NSString; message 'sharedContainerIdentifier'; { available in macos , ios , watchos , tvos  }
-    procedure setSessionSendsLaunchEvents(newValue: objcbool); message 'setSessionSendsLaunchEvents:'; { available in macos , ios , watchos , tvos  }
-    function sessionSendsLaunchEvents: objcbool; message 'sessionSendsLaunchEvents'; { available in macos , ios , watchos , tvos  }
+    function waitsForConnectivity: objcbool; message 'waitsForConnectivity'; { available in macos 10.15, ios 13.0, watchos 6.0, tvos 13.0 }
+    procedure setDiscretionary(newValue: objcbool); message 'setDiscretionary:'; { available in macos 10.15, ios 13.0, watchos 6.0, tvos 13.0 }
+    function isDiscretionary: objcbool; message 'isDiscretionary'; { available in macos 10.15, ios 13.0, watchos 6.0, tvos 13.0 }
+    procedure setSharedContainerIdentifier(newValue: NSString); message 'setSharedContainerIdentifier:'; { available in macos 10.15, ios 13.0, watchos 6.0, tvos 13.0 }
+    function sharedContainerIdentifier: NSString; message 'sharedContainerIdentifier'; { available in macos 10.13, ios 11.0, watchos 4.0, tvos 11.0 }
+    procedure setSessionSendsLaunchEvents(newValue: objcbool); message 'setSessionSendsLaunchEvents:'; { available in macos 10.13, ios 11.0, watchos 4.0, tvos 11.0 }
+    function sessionSendsLaunchEvents: objcbool; message 'sessionSendsLaunchEvents'; { available in macos 10.10, ios 7.0, watchos 2.0, tvos 9.0 }
     procedure setConnectionProxyDictionary(newValue: NSDictionary); message 'setConnectionProxyDictionary:';
     function connectionProxyDictionary: NSDictionary; message 'connectionProxyDictionary';
     procedure setTLSMinimumSupportedProtocol(newValue: SSLProtocol); message 'setTLSMinimumSupportedProtocol:'; deprecated 'replace with TLSMinimumSupportedProtocolVersion';
@@ -392,7 +392,7 @@ type
     procedure URLSession_task_didReceiveChallenge_completionHandler (session: NSURLSession; task: NSURLSessionTask; challenge: NSURLAuthenticationChallenge; completionHandler: NSURLSessionURLSessionCallback); message 'URLSession:task:didReceiveChallenge:completionHandler:';
     procedure URLSession_task_needNewBodyStream (session: NSURLSession; task: NSURLSessionTask; completionHandler: NSURLSessionURLSessionCallback); message 'URLSession:task:needNewBodyStream:';
     procedure URLSession_task_didSendBodyData_totalBytesSent_totalBytesExpectedToSend (session: NSURLSession; task: NSURLSessionTask; bytesSent: cint64; totalBytesSent: cint64; totalBytesExpectedToSend: cint64); message 'URLSession:task:didSendBodyData:totalBytesSent:totalBytesExpectedToSend:';
-    procedure URLSession_task_didFinishCollectingMetrics (session: NSURLSession; task: NSURLSessionTask; metrics: NSURLSessionTaskMetrics); message 'URLSession:task:didFinishCollectingMetrics:'; { available in macosx , ios , watchos , tvos  }
+    procedure URLSession_task_didFinishCollectingMetrics (session: NSURLSession; task: NSURLSessionTask; metrics: NSURLSessionTaskMetrics); message 'URLSession:task:didFinishCollectingMetrics:'; { available in macos 10.13, ios 11.0, watchos 4.0, tvos 11.0 }
     procedure URLSession_task_didCompleteWithError (session: NSURLSession; task: NSURLSessionTask; error: NSError); message 'URLSession:task:didCompleteWithError:';
   end;
 
@@ -494,18 +494,18 @@ type
     function countOfRequestBodyBytesBeforeEncoding: cint64; message 'countOfRequestBodyBytesBeforeEncoding'; { available in macos , ios , watchos , tvos  }
     function countOfResponseHeaderBytesReceived: cint64; message 'countOfResponseHeaderBytesReceived'; { available in macos , ios , watchos , tvos  }
     function countOfResponseBodyBytesReceived: cint64; message 'countOfResponseBodyBytesReceived'; { available in macos , ios , watchos , tvos  }
-    function countOfResponseBodyBytesAfterDecoding: cint64; message 'countOfResponseBodyBytesAfterDecoding'; { available in macos , ios , watchos , tvos  }
-    function localAddress: NSString; message 'localAddress'; { available in macos , ios , watchos , tvos  }
-    function localPort: NSNumber; message 'localPort'; { available in macos , ios , watchos , tvos  }
-    function remoteAddress: NSString; message 'remoteAddress'; { available in macos , ios , watchos , tvos  }
-    function remotePort: NSNumber; message 'remotePort'; { available in macos , ios , watchos , tvos  }
-    function negotiatedTLSProtocolVersion: NSNumber; message 'negotiatedTLSProtocolVersion'; { available in macos , ios , watchos , tvos  }
-    function negotiatedTLSCipherSuite: NSNumber; message 'negotiatedTLSCipherSuite'; { available in macos , ios , watchos , tvos  }
-    function isCellular: objcbool; message 'isCellular'; { available in macos , ios , watchos , tvos  }
-    function isExpensive: objcbool; message 'isExpensive'; { available in macos , ios , watchos , tvos  }
-    function isConstrained: objcbool; message 'isConstrained'; { available in macos , ios , watchos , tvos  }
-    function isMultipath: objcbool; message 'isMultipath'; { available in macos , ios , watchos , tvos  }
-    function domainResolutionProtocol: NSURLSessionTaskMetricsDomainResolutionProtocol; message 'domainResolutionProtocol'; { available in macos , ios , watchos , tvos  }
+    function countOfResponseBodyBytesAfterDecoding: cint64; message 'countOfResponseBodyBytesAfterDecoding'; { available in macos 10.15, ios 13.0, watchos 6.0, tvos 13.0 }
+    function localAddress: NSString; message 'localAddress'; { available in macos 10.15, ios 13.0, watchos 6.0, tvos 13.0 }
+    function localPort: NSNumber; message 'localPort'; { available in macos 10.15, ios 13.0, watchos 6.0, tvos 13.0 }
+    function remoteAddress: NSString; message 'remoteAddress'; { available in macos 10.15, ios 13.0, watchos 6.0, tvos 13.0 }
+    function remotePort: NSNumber; message 'remotePort'; { available in macos 10.15, ios 13.0, watchos 6.0, tvos 13.0 }
+    function negotiatedTLSProtocolVersion: NSNumber; message 'negotiatedTLSProtocolVersion'; { available in macos 10.15, ios 13.0, watchos 6.0, tvos 13.0 }
+    function negotiatedTLSCipherSuite: NSNumber; message 'negotiatedTLSCipherSuite'; { available in macos 10.15, ios 13.0, watchos 6.0, tvos 13.0 }
+    function isCellular: objcbool; message 'isCellular'; { available in macos 10.15, ios 13.0, watchos 6.0, tvos 13.0 }
+    function isExpensive: objcbool; message 'isExpensive'; { available in macos 10.15, ios 13.0, watchos 6.0, tvos 13.0 }
+    function isConstrained: objcbool; message 'isConstrained'; { available in macos 10.15, ios 13.0, watchos 6.0, tvos 13.0 }
+    function isMultipath: objcbool; message 'isMultipath'; { available in macos 10.15, ios 13.0, watchos 6.0, tvos 13.0 }
+    function domainResolutionProtocol: NSURLSessionTaskMetricsDomainResolutionProtocol; message 'domainResolutionProtocol'; { available in macos 10.15, ios 13.0, watchos 6.0, tvos 13.0 }
     function init: id; message 'init'; deprecated 'Not supported';
     class function new_: id; message 'new'; deprecated 'Not supported';
   end;

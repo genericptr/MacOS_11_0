@@ -51,7 +51,7 @@ type
     class function bezierPath: NSBezierPath; message 'bezierPath';
     class function bezierPathWithRect (rect: NSRect): NSBezierPath; message 'bezierPathWithRect:';
     class function bezierPathWithOvalInRect (rect: NSRect): NSBezierPath; message 'bezierPathWithOvalInRect:';
-    class function bezierPathWithRoundedRect_xRadius_yRadius (rect: NSRect; xRadius: CGFloat; yRadius: CGFloat): NSBezierPath; message 'bezierPathWithRoundedRect:xRadius:yRadius:'; { available in macos  }
+    class function bezierPathWithRoundedRect_xRadius_yRadius (rect: NSRect; xRadius: CGFloat; yRadius: CGFloat): NSBezierPath; message 'bezierPathWithRoundedRect:xRadius:yRadius:'; { available in macos 10.5 }
     class procedure fillRect (rect: NSRect); message 'fillRect:';
     class procedure strokeRect (rect: NSRect); message 'strokeRect:';
     class procedure clipRect (rect: NSRect); message 'clipRect:';
@@ -113,9 +113,9 @@ type
     procedure appendBezierPathWithArcWithCenter_radius_startAngle_endAngle_clockwise (center: NSPoint; radius: CGFloat; startAngle: CGFloat; endAngle: CGFloat; clockwise: objcbool); message 'appendBezierPathWithArcWithCenter:radius:startAngle:endAngle:clockwise:';
     procedure appendBezierPathWithArcWithCenter_radius_startAngle_endAngle (center: NSPoint; radius: CGFloat; startAngle: CGFloat; endAngle: CGFloat); message 'appendBezierPathWithArcWithCenter:radius:startAngle:endAngle:';
     procedure appendBezierPathWithArcFromPoint_toPoint_radius (point1: NSPoint; point2: NSPoint; radius: CGFloat); message 'appendBezierPathWithArcFromPoint:toPoint:radius:';
-    procedure appendBezierPathWithCGGlyph_inFont (glyph: CGGlyph; font: NSFont); message 'appendBezierPathWithCGGlyph:inFont:'; { available in macos  }
-    procedure appendBezierPathWithCGGlyphs_count_inFont (glyphs: CGGlyphPtr; count: NSInteger; font: NSFont); message 'appendBezierPathWithCGGlyphs:count:inFont:'; { available in macos  }
-    procedure appendBezierPathWithRoundedRect_xRadius_yRadius (rect: NSRect; xRadius: CGFloat; yRadius: CGFloat); message 'appendBezierPathWithRoundedRect:xRadius:yRadius:'; { available in macos  }
+    procedure appendBezierPathWithCGGlyph_inFont (glyph: CGGlyph; font: NSFont); message 'appendBezierPathWithCGGlyph:inFont:'; { available in macos 10.13 }
+    procedure appendBezierPathWithCGGlyphs_count_inFont (glyphs: CGGlyphPtr; count: NSInteger; font: NSFont); message 'appendBezierPathWithCGGlyphs:count:inFont:'; { available in macos 10.13 }
+    procedure appendBezierPathWithRoundedRect_xRadius_yRadius (rect: NSRect; xRadius: CGFloat; yRadius: CGFloat); message 'appendBezierPathWithRoundedRect:xRadius:yRadius:'; { available in macos 10.5 }
     function containsPoint (point: NSPoint): objcbool; message 'containsPoint:';
 
     { Adopted protocols }

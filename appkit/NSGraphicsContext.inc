@@ -38,7 +38,7 @@ const
   NSImageInterpolationDefault = 0;
   NSImageInterpolationNone = 1;
   NSImageInterpolationLow = 2;
-  NSImageInterpolationMedium = 4 { available in macos  };
+  NSImageInterpolationMedium = 4 { available in macos 10.6 };
   NSImageInterpolationHigh = 3;
 {$endif}
 
@@ -50,7 +50,7 @@ type
     class function graphicsContextWithAttributes (attributes: NSDictionary): NSGraphicsContext; message 'graphicsContextWithAttributes:';
     class function graphicsContextWithWindow (window: NSWindow): NSGraphicsContext; message 'graphicsContextWithWindow:';
     class function graphicsContextWithBitmapImageRep (bitmapRep: NSBitmapImageRep): NSGraphicsContext; message 'graphicsContextWithBitmapImageRep:';
-    class function graphicsContextWithCGContext_flipped (graphicsPort: CGContextRef; initialFlippedState: objcbool): NSGraphicsContext; message 'graphicsContextWithCGContext:flipped:'; { available in macos  }
+    class function graphicsContextWithCGContext_flipped (graphicsPort: CGContextRef; initialFlippedState: objcbool): NSGraphicsContext; message 'graphicsContextWithCGContext:flipped:'; { available in macos 10.10 }
     class procedure setCurrentContext(newValue: NSGraphicsContext); message 'setCurrentContext:';
     class function currentContext: NSGraphicsContext; message 'currentContext';
     class function currentContextDrawingToScreen: objcbool; message 'currentContextDrawingToScreen';
@@ -61,7 +61,7 @@ type
     procedure saveGraphicsState; message 'saveGraphicsState';
     procedure restoreGraphicsState; message 'restoreGraphicsState';
     procedure flushGraphics; message 'flushGraphics';
-    function CGContext: CGContextRef; message 'CGContext'; { available in macos  }
+    function CGContext: CGContextRef; message 'CGContext'; { available in macos 10.10 }
     function isFlipped: objcbool; message 'isFlipped';
   end;
 
@@ -76,8 +76,8 @@ type
     function patternPhase: NSPoint; message 'patternPhase';
     procedure setCompositingOperation(newValue: NSCompositingOperation); message 'setCompositingOperation:';
     function compositingOperation: NSCompositingOperation; message 'compositingOperation';
-    procedure setColorRenderingIntent(newValue: NSColorRenderingIntent); message 'setColorRenderingIntent:'; { available in macos  }
-    function colorRenderingIntent: NSColorRenderingIntent; message 'colorRenderingIntent'; { available in macos  }
+    procedure setColorRenderingIntent(newValue: NSColorRenderingIntent); message 'setColorRenderingIntent:'; { available in macos 10.5 }
+    function colorRenderingIntent: NSColorRenderingIntent; message 'colorRenderingIntent'; { available in macos 10.5 }
   end;
 
 type

@@ -47,17 +47,17 @@ type
     class procedure setCurrentOperation(newValue: NSPrintOperation); message 'setCurrentOperation:';
     class function currentOperation: NSPrintOperation; message 'currentOperation';
     function isCopyingOperation: objcbool; message 'isCopyingOperation';
-    function preferredRenderingQuality: NSPrintRenderingQuality; message 'preferredRenderingQuality'; { available in macos  }
-    procedure setJobTitle(newValue: NSString); message 'setJobTitle:'; { available in macos  }
-    function jobTitle: NSString; message 'jobTitle'; { available in macos  }
+    function preferredRenderingQuality: NSPrintRenderingQuality; message 'preferredRenderingQuality'; { available in macos 10.7 }
+    procedure setJobTitle(newValue: NSString); message 'setJobTitle:'; { available in macos 10.5 }
+    function jobTitle: NSString; message 'jobTitle'; { available in macos 10.5 }
     procedure setShowsPrintPanel(newValue: objcbool); message 'setShowsPrintPanel:';
     function showsPrintPanel: objcbool; message 'showsPrintPanel';
     procedure setShowsProgressPanel(newValue: objcbool); message 'setShowsProgressPanel:';
     function showsProgressPanel: objcbool; message 'showsProgressPanel';
     procedure setPrintPanel(newValue: NSPrintPanel); message 'setPrintPanel:';
     function printPanel: NSPrintPanel; message 'printPanel';
-    procedure setPDFPanel(newValue: NSPDFPanel); message 'setPDFPanel:'; { available in macos  }
-    function PDFPanel: NSPDFPanel; message 'PDFPanel'; { available in macos  }
+    procedure setPDFPanel(newValue: NSPDFPanel); message 'setPDFPanel:'; { available in macos 10.9 }
+    function PDFPanel: NSPDFPanel; message 'PDFPanel'; { available in macos 10.9 }
     procedure setCanSpawnSeparateThread(newValue: objcbool); message 'setCanSpawnSeparateThread:';
     function canSpawnSeparateThread: objcbool; message 'canSpawnSeparateThread';
     procedure setPageOrder(newValue: NSPrintingPageOrder); message 'setPageOrder:';
@@ -68,7 +68,7 @@ type
     procedure setPrintInfo(newValue: NSPrintInfo); message 'setPrintInfo:';
     function printInfo: NSPrintInfo; message 'printInfo';
     function context: NSGraphicsContext; message 'context';
-    function pageRange: NSRange; message 'pageRange'; { available in macos  }
+    function pageRange: NSRange; message 'pageRange'; { available in macos 10.5 }
     function currentPage: NSInteger; message 'currentPage';
     function createContext: NSGraphicsContext; message 'createContext';
     procedure destroyContext; message 'destroyContext';

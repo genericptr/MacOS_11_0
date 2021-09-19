@@ -8,8 +8,8 @@ type
 
 {$ifdef EXTERNAL_SYMBOLS}
 var
-  UNNotificationDefaultActionIdentifier: NSString { unavailable in tvos }; cvar; external;
-  UNNotificationDismissActionIdentifier: NSString { unavailable in tvos }; cvar; external;
+  UNNotificationDefaultActionIdentifier: NSString { unavailable in tvos } { available in macos 10.14, ios 10.0, watchos 3.0 }; cvar; external;
+  UNNotificationDismissActionIdentifier: NSString { unavailable in tvos } { available in macos 10.14, ios 10.0, watchos 3.0 }; cvar; external;
 {$endif}
 
 {$ifdef CLASSES}

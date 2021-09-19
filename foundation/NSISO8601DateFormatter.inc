@@ -11,20 +11,20 @@ type
   NSISO8601DateFormatOptionsPtr = ^NSISO8601DateFormatOptions;
 
 //const
-//  NSISO8601DateFormatWithYear = kCFISO8601DateFormatWithYear { available in macosx , ios , watchos , tvos  };
-//  NSISO8601DateFormatWithMonth = kCFISO8601DateFormatWithMonth { available in macosx , ios , watchos , tvos  };
-//  NSISO8601DateFormatWithWeekOfYear = kCFISO8601DateFormatWithWeekOfYear { available in macosx , ios , watchos , tvos  };
-//  NSISO8601DateFormatWithDay = kCFISO8601DateFormatWithDay { available in macosx , ios , watchos , tvos  };
-//  NSISO8601DateFormatWithTime = kCFISO8601DateFormatWithTime { available in macosx , ios , watchos , tvos  };
-//  NSISO8601DateFormatWithTimeZone = kCFISO8601DateFormatWithTimeZone { available in macosx , ios , watchos , tvos  };
-//  NSISO8601DateFormatWithSpaceBetweenDateAndTime = kCFISO8601DateFormatWithSpaceBetweenDateAndTime { available in macosx , ios , watchos , tvos  };
-//  NSISO8601DateFormatWithDashSeparatorInDate = kCFISO8601DateFormatWithDashSeparatorInDate { available in macosx , ios , watchos , tvos  };
-//  NSISO8601DateFormatWithColonSeparatorInTime = kCFISO8601DateFormatWithColonSeparatorInTime { available in macosx , ios , watchos , tvos  };
-//  NSISO8601DateFormatWithColonSeparatorInTimeZone = kCFISO8601DateFormatWithColonSeparatorInTimeZone { available in macosx , ios , watchos , tvos  };
-//  NSISO8601DateFormatWithFractionalSeconds = kCFISO8601DateFormatWithFractionalSeconds { available in macosx , ios , watchos , tvos  };
-//  NSISO8601DateFormatWithFullDate = kCFISO8601DateFormatWithFullDate { available in macosx , ios , watchos , tvos  };
-//  NSISO8601DateFormatWithFullTime = kCFISO8601DateFormatWithFullTime { available in macosx , ios , watchos , tvos  };
-//  NSISO8601DateFormatWithInternetDateTime = kCFISO8601DateFormatWithInternetDateTime { available in macosx , ios , watchos , tvos  };
+//  NSISO8601DateFormatWithYear = kCFISO8601DateFormatWithYear { available in macosx 10.12, ios 10.0, watchos 3.0, tvos 10.0 };
+//  NSISO8601DateFormatWithMonth = kCFISO8601DateFormatWithMonth { available in macosx 10.12, ios 10.0, watchos 3.0, tvos 10.0 };
+//  NSISO8601DateFormatWithWeekOfYear = kCFISO8601DateFormatWithWeekOfYear { available in macosx 10.12, ios 10.0, watchos 3.0, tvos 10.0 };
+//  NSISO8601DateFormatWithDay = kCFISO8601DateFormatWithDay { available in macosx 10.12, ios 10.0, watchos 3.0, tvos 10.0 };
+//  NSISO8601DateFormatWithTime = kCFISO8601DateFormatWithTime { available in macosx 10.12, ios 10.0, watchos 3.0, tvos 10.0 };
+//  NSISO8601DateFormatWithTimeZone = kCFISO8601DateFormatWithTimeZone { available in macosx 10.12, ios 10.0, watchos 3.0, tvos 10.0 };
+//  NSISO8601DateFormatWithSpaceBetweenDateAndTime = kCFISO8601DateFormatWithSpaceBetweenDateAndTime { available in macosx 10.12, ios 10.0, watchos 3.0, tvos 10.0 };
+//  NSISO8601DateFormatWithDashSeparatorInDate = kCFISO8601DateFormatWithDashSeparatorInDate { available in macosx 10.12, ios 10.0, watchos 3.0, tvos 10.0 };
+//  NSISO8601DateFormatWithColonSeparatorInTime = kCFISO8601DateFormatWithColonSeparatorInTime { available in macosx 10.12, ios 10.0, watchos 3.0, tvos 10.0 };
+//  NSISO8601DateFormatWithColonSeparatorInTimeZone = kCFISO8601DateFormatWithColonSeparatorInTimeZone { available in macosx 10.12, ios 10.0, watchos 3.0, tvos 10.0 };
+//  NSISO8601DateFormatWithFractionalSeconds = kCFISO8601DateFormatWithFractionalSeconds { available in macosx 10.13, ios 11.0, watchos 4.0, tvos 11.0 };
+//  NSISO8601DateFormatWithFullDate = kCFISO8601DateFormatWithFullDate { available in macosx 10.12, ios 10.0, watchos 3.0, tvos 10.0 };
+//  NSISO8601DateFormatWithFullTime = kCFISO8601DateFormatWithFullTime { available in macosx 10.12, ios 10.0, watchos 3.0, tvos 10.0 };
+//  NSISO8601DateFormatWithInternetDateTime = kCFISO8601DateFormatWithInternetDateTime { available in macosx 10.12, ios 10.0, watchos 3.0, tvos 10.0 };
 {$endif}
 
 {$ifdef CLASSES}

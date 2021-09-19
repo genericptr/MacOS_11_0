@@ -26,10 +26,10 @@ type
   public
     class function savePanel: NSSavePanel; message 'savePanel';
     function URL: NSURL; message 'URL';
-    procedure setDirectoryURL(newValue: NSURL); message 'setDirectoryURL:'; { available in macos  }
-    function directoryURL: NSURL; message 'directoryURL'; { available in macos  }
-    procedure setAllowedContentTypes(newValue: NSArray); message 'setAllowedContentTypes:'; { available in macos  }
-    function allowedContentTypes: NSArray; message 'allowedContentTypes'; { available in macos  }
+    procedure setDirectoryURL(newValue: NSURL); message 'setDirectoryURL:'; { available in macos 10.6 }
+    function directoryURL: NSURL; message 'directoryURL'; { available in macos 10.6 }
+    procedure setAllowedContentTypes(newValue: NSArray); message 'setAllowedContentTypes:'; { available in macos 11.0 }
+    function allowedContentTypes: NSArray; message 'allowedContentTypes'; { available in macos 11.0 }
     procedure setAllowsOtherFileTypes(newValue: objcbool); message 'setAllowsOtherFileTypes:';
     function allowsOtherFileTypes: objcbool; message 'allowsOtherFileTypes';
     procedure setAccessoryView(newValue: NSView); message 'setAccessoryView:';
@@ -51,21 +51,21 @@ type
     function title: NSString; message 'title';
     procedure setNameFieldLabel(newValue: NSString); message 'setNameFieldLabel:';
     function nameFieldLabel: NSString; message 'nameFieldLabel';
-    procedure setNameFieldStringValue(newValue: NSString); message 'setNameFieldStringValue:'; { available in macos  }
-    function nameFieldStringValue: NSString; message 'nameFieldStringValue'; { available in macos  }
+    procedure setNameFieldStringValue(newValue: NSString); message 'setNameFieldStringValue:'; { available in macos 10.6 }
+    function nameFieldStringValue: NSString; message 'nameFieldStringValue'; { available in macos 10.6 }
     procedure setMessage(newValue: NSString); message 'setMessage:';
     function message_: NSString; message 'message';
     procedure validateVisibleColumns; message 'validateVisibleColumns';
     procedure setShowsHiddenFiles(newValue: objcbool); message 'setShowsHiddenFiles:';
     function showsHiddenFiles: objcbool; message 'showsHiddenFiles';
-    procedure setShowsTagField(newValue: objcbool); message 'setShowsTagField:'; { available in macos  }
-    function showsTagField: objcbool; message 'showsTagField'; { available in macos  }
-    procedure setTagNames(newValue: NSArray); message 'setTagNames:'; { available in macos  }
-    function tagNames: NSArray; message 'tagNames'; { available in macos  }
+    procedure setShowsTagField(newValue: objcbool); message 'setShowsTagField:'; { available in macos 10.9 }
+    function showsTagField: objcbool; message 'showsTagField'; { available in macos 10.9 }
+    procedure setTagNames(newValue: NSArray); message 'setTagNames:'; { available in macos 10.9 }
+    function tagNames: NSArray; message 'tagNames'; { available in macos 10.9 }
     procedure ok (sender: id); message 'ok:';
     procedure cancel (sender: id); message 'cancel:';
-    procedure beginSheetModalForWindow_completionHandler (window: NSWindow; handler: NSSavePanelBeginSheetModalForWindowCallback); message 'beginSheetModalForWindow:completionHandler:'; { available in macos  }
-    procedure beginWithCompletionHandler (handler: NSSavePanelBeginWithCompletionHandlerCallback); message 'beginWithCompletionHandler:'; { available in macos  }
+    procedure beginSheetModalForWindow_completionHandler (window: NSWindow; handler: NSSavePanelBeginSheetModalForWindowCallback); message 'beginSheetModalForWindow:completionHandler:'; { available in macos 10.6 }
+    procedure beginWithCompletionHandler (handler: NSSavePanelBeginWithCompletionHandlerCallback); message 'beginWithCompletionHandler:'; { available in macos 10.6 }
     function runModal: NSModalResponse; message 'runModal';
   end;
 {$endif}
@@ -75,9 +75,9 @@ type
 type
   NSOpenSavePanelDelegateProtocol = objcprotocol external name 'NSOpenSavePanelDelegate' (NSObjectProtocol)
   optional
-    function panel_shouldEnableURL (sender: id; url: NSURL): objcbool; message 'panel:shouldEnableURL:'; { available in macos  }
-    function panel_validateURL_error (sender: id; url: NSURL; outError: NSErrorPtr): objcbool; message 'panel:validateURL:error:'; { available in macos  }
-    procedure panel_didChangeToDirectoryURL (sender: id; url: NSURL); message 'panel:didChangeToDirectoryURL:'; { available in macos  }
+    function panel_shouldEnableURL (sender: id; url: NSURL): objcbool; message 'panel:shouldEnableURL:'; { available in macos 10.6 }
+    function panel_validateURL_error (sender: id; url: NSURL; outError: NSErrorPtr): objcbool; message 'panel:validateURL:error:'; { available in macos 10.6 }
+    procedure panel_didChangeToDirectoryURL (sender: id; url: NSURL); message 'panel:didChangeToDirectoryURL:'; { available in macos 10.6 }
     function panel_userEnteredFilename_confirmed (sender: id; filename: NSString; okFlag: objcbool): NSString; message 'panel:userEnteredFilename:confirmed:';
     procedure panel_willExpand (sender: id; expanding: objcbool); message 'panel:willExpand:';
     procedure panelSelectionDidChange (sender: id); message 'panelSelectionDidChange:';

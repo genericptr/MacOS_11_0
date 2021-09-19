@@ -74,32 +74,32 @@ const
   MTLDataTypeBool2 = 54;
   MTLDataTypeBool3 = 55;
   MTLDataTypeBool4 = 56;
-  MTLDataTypeTexture = 58 { available in macos , ios  };
-  MTLDataTypeSampler = 59 { available in macos , ios  };
-  MTLDataTypePointer = 60 { available in macos , ios  };
-  MTLDataTypeR8Unorm = 62 { unavailable in tvos };
-  MTLDataTypeR8Snorm = 63 { unavailable in tvos };
-  MTLDataTypeR16Unorm = 64 { unavailable in tvos };
-  MTLDataTypeR16Snorm = 65 { unavailable in tvos };
-  MTLDataTypeRG8Unorm = 66 { unavailable in tvos };
-  MTLDataTypeRG8Snorm = 67 { unavailable in tvos };
-  MTLDataTypeRG16Unorm = 68 { unavailable in tvos };
-  MTLDataTypeRG16Snorm = 69 { unavailable in tvos };
-  MTLDataTypeRGBA8Unorm = 70 { unavailable in tvos };
-  MTLDataTypeRGBA8Unorm_sRGB = 71 { unavailable in tvos };
-  MTLDataTypeRGBA8Snorm = 72 { unavailable in tvos };
-  MTLDataTypeRGBA16Unorm = 73 { unavailable in tvos };
-  MTLDataTypeRGBA16Snorm = 74 { unavailable in tvos };
-  MTLDataTypeRGB10A2Unorm = 75 { unavailable in tvos };
-  MTLDataTypeRG11B10Float = 76 { unavailable in tvos };
-  MTLDataTypeRGB9E5Float = 77 { unavailable in tvos };
-  MTLDataTypeRenderPipeline = 78 { available in macos , ios  };
-  MTLDataTypeComputePipeline = 79 { available in ios ,macos  };
-  MTLDataTypeIndirectCommandBuffer = 80 { available in macos , ios  };
-  MTLDataTypeVisibleFunctionTable = 115 { available in macos , ios  };
-  MTLDataTypeIntersectionFunctionTable = 116 { available in macos , ios  };
-  MTLDataTypePrimitiveAccelerationStructure = 117 { available in macos , ios  };
-  MTLDataTypeInstanceAccelerationStructure = 118 { available in macos , ios  };
+  MTLDataTypeTexture = 58 { available in macos 10.13, ios 11.0 };
+  MTLDataTypeSampler = 59 { available in macos 10.13, ios 11.0 };
+  MTLDataTypePointer = 60 { available in macos 10.13, ios 11.0 };
+  MTLDataTypeR8Unorm = 62 { unavailable in tvos } { available in macos 11.0, macCatalyst 14.0, ios 11.0 };
+  MTLDataTypeR8Snorm = 63 { unavailable in tvos } { available in macos 11.0, macCatalyst 14.0, ios 11.0 };
+  MTLDataTypeR16Unorm = 64 { unavailable in tvos } { available in macos 11.0, macCatalyst 14.0, ios 11.0 };
+  MTLDataTypeR16Snorm = 65 { unavailable in tvos } { available in macos 11.0, macCatalyst 14.0, ios 11.0 };
+  MTLDataTypeRG8Unorm = 66 { unavailable in tvos } { available in macos 11.0, macCatalyst 14.0, ios 11.0 };
+  MTLDataTypeRG8Snorm = 67 { unavailable in tvos } { available in macos 11.0, macCatalyst 14.0, ios 11.0 };
+  MTLDataTypeRG16Unorm = 68 { unavailable in tvos } { available in macos 11.0, macCatalyst 14.0, ios 11.0 };
+  MTLDataTypeRG16Snorm = 69 { unavailable in tvos } { available in macos 11.0, macCatalyst 14.0, ios 11.0 };
+  MTLDataTypeRGBA8Unorm = 70 { unavailable in tvos } { available in macos 11.0, macCatalyst 14.0, ios 11.0 };
+  MTLDataTypeRGBA8Unorm_sRGB = 71 { unavailable in tvos } { available in macos 11.0, macCatalyst 14.0, ios 11.0 };
+  MTLDataTypeRGBA8Snorm = 72 { unavailable in tvos } { available in macos 11.0, macCatalyst 14.0, ios 11.0 };
+  MTLDataTypeRGBA16Unorm = 73 { unavailable in tvos } { available in macos 11.0, macCatalyst 14.0, ios 11.0 };
+  MTLDataTypeRGBA16Snorm = 74 { unavailable in tvos } { available in macos 11.0, macCatalyst 14.0, ios 11.0 };
+  MTLDataTypeRGB10A2Unorm = 75 { unavailable in tvos } { available in macos 11.0, macCatalyst 14.0, ios 11.0 };
+  MTLDataTypeRG11B10Float = 76 { unavailable in tvos } { available in macos 11.0, macCatalyst 14.0, ios 11.0 };
+  MTLDataTypeRGB9E5Float = 77 { unavailable in tvos } { available in macos 11.0, macCatalyst 14.0, ios 11.0 };
+  MTLDataTypeRenderPipeline = 78 { available in macos 10.14, ios 13.0 };
+  MTLDataTypeComputePipeline = 79 { available in ios 13.0,macos 11.0 };
+  MTLDataTypeIndirectCommandBuffer = 80 { available in macos 10.14, ios 12.0 };
+  MTLDataTypeVisibleFunctionTable = 115 { available in macos 11.0, ios 14.0 };
+  MTLDataTypeIntersectionFunctionTable = 116 { available in macos 11.0, ios 14.0 };
+  MTLDataTypePrimitiveAccelerationStructure = 117 { available in macos 11.0, ios 14.0 };
+  MTLDataTypeInstanceAccelerationStructure = 118 { available in macos 11.0, ios 14.0 };
 
 type
   MTLArgumentType = NSUInteger;
@@ -110,12 +110,12 @@ const
   MTLArgumentTypeThreadgroupMemory = 1;
   MTLArgumentTypeTexture = 2;
   MTLArgumentTypeSampler = 3;
-  MTLArgumentTypeImageblockData = 16 { unavailable in tvos };
-  MTLArgumentTypeImageblock = 17 { unavailable in tvos };
-  MTLArgumentTypeVisibleFunctionTable = 24 { available in macos , ios  };
-  MTLArgumentTypePrimitiveAccelerationStructure = 25 { available in macos , ios  };
-  MTLArgumentTypeInstanceAccelerationStructure = 26 { available in macos , ios  };
-  MTLArgumentTypeIntersectionFunctionTable = 27 { available in macos , ios  };
+  MTLArgumentTypeImageblockData = 16 { unavailable in tvos } { available in macos 11.0, macCatalyst 14.0, ios 11.0 };
+  MTLArgumentTypeImageblock = 17 { unavailable in tvos } { available in macos 11.0, macCatalyst 14.0, ios 11.0 };
+  MTLArgumentTypeVisibleFunctionTable = 24 { available in macos 11.0, ios 14.0 };
+  MTLArgumentTypePrimitiveAccelerationStructure = 25 { available in macos 11.0, ios 14.0 };
+  MTLArgumentTypeInstanceAccelerationStructure = 26 { available in macos 11.0, ios 14.0 };
+  MTLArgumentTypeIntersectionFunctionTable = 27 { available in macos 11.0, ios 14.0 };
 
 type
   MTLArgumentAccess = NSUInteger;
@@ -143,9 +143,9 @@ type
     function dataType: MTLDataType; message 'dataType';
     function structType: MTLStructType; message 'structType';
     function arrayType: MTLArrayType; message 'arrayType';
-    function textureReferenceType: MTLTextureReferenceType; message 'textureReferenceType'; { available in macos , ios  }
-    function pointerType: MTLPointerType; message 'pointerType'; { available in macos , ios  }
-    function argumentIndex: NSUInteger; message 'argumentIndex'; { available in macos , ios  }
+    function textureReferenceType: MTLTextureReferenceType; message 'textureReferenceType'; { available in macos 10.13, ios 11.0 }
+    function pointerType: MTLPointerType; message 'pointerType'; { available in macos 10.13, ios 11.0 }
+    function argumentIndex: NSUInteger; message 'argumentIndex'; { available in macos 10.13, ios 11.0 }
   end;
 
 type
@@ -161,11 +161,11 @@ type
     function elementType: MTLDataType; message 'elementType';
     function arrayLength: NSUInteger; message 'arrayLength';
     function stride: NSUInteger; message 'stride';
-    function argumentIndexStride: NSUInteger; message 'argumentIndexStride'; { available in macos , ios  }
+    function argumentIndexStride: NSUInteger; message 'argumentIndexStride'; { available in macos 10.13, ios 11.0 }
     function elementStructType: MTLStructType; message 'elementStructType';
     function elementArrayType: MTLArrayType; message 'elementArrayType';
-    function elementTextureReferenceType: MTLTextureReferenceType; message 'elementTextureReferenceType'; { available in macos , ios  }
-    function elementPointerType: MTLPointerType; message 'elementPointerType'; { available in macos , ios  }
+    function elementTextureReferenceType: MTLTextureReferenceType; message 'elementTextureReferenceType'; { available in macos 10.13, ios 11.0 }
+    function elementPointerType: MTLPointerType; message 'elementPointerType'; { available in macos 10.13, ios 11.0 }
   end;
 
 type
@@ -175,9 +175,9 @@ type
     function access: MTLArgumentAccess; message 'access';
     function alignment: NSUInteger; message 'alignment';
     function dataSize: NSUInteger; message 'dataSize';
-    function elementIsArgumentBuffer: objcbool; message 'elementIsArgumentBuffer'; { available in macos , ios  }
-    function elementStructType: MTLStructType; message 'elementStructType'; { available in macos , ios  }
-    function elementArrayType: MTLArrayType; message 'elementArrayType'; { available in macos , ios  }
+    function elementIsArgumentBuffer: objcbool; message 'elementIsArgumentBuffer'; { available in macos 10.13, ios 11.0 }
+    function elementStructType: MTLStructType; message 'elementStructType'; { available in macos 10.13, ios 11.0 }
+    function elementArrayType: MTLArrayType; message 'elementArrayType'; { available in macos 10.13, ios 11.0 }
   end;
 
 type
@@ -201,13 +201,13 @@ type
     function bufferDataSize: NSUInteger; message 'bufferDataSize';
     function bufferDataType: MTLDataType; message 'bufferDataType';
     function bufferStructType: MTLStructType; message 'bufferStructType';
-    function bufferPointerType: MTLPointerType; message 'bufferPointerType'; { available in macos , ios  }
+    function bufferPointerType: MTLPointerType; message 'bufferPointerType'; { available in macos 10.13, ios 11.0 }
     function threadgroupMemoryAlignment: NSUInteger; message 'threadgroupMemoryAlignment';
     function threadgroupMemoryDataSize: NSUInteger; message 'threadgroupMemoryDataSize';
     function textureType: MTLTextureType; message 'textureType';
     function textureDataType: MTLDataType; message 'textureDataType';
-    function isDepthTexture: objcbool; message 'isDepthTexture'; { available in macos , ios  }
-    function arrayLength: NSUInteger; message 'arrayLength'; { available in macos , ios  }
+    function isDepthTexture: objcbool; message 'isDepthTexture'; { available in macos 10.12, ios 10.0 }
+    function arrayLength: NSUInteger; message 'arrayLength'; { available in macos 10.13, ios 10.0 }
   end;
 {$endif}
 

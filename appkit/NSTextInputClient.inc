@@ -26,7 +26,7 @@ type
     function fractionOfDistanceThroughGlyphForPoint (point: NSPoint): CGFloat; message 'fractionOfDistanceThroughGlyphForPoint:';
     function baselineDeltaForCharacterAtIndex (anIndex: NSUInteger): CGFloat; message 'baselineDeltaForCharacterAtIndex:';
     function windowLevel: NSInteger; message 'windowLevel';
-    function drawsVerticallyForCharacterAtIndex (charIndex: NSUInteger): objcbool; message 'drawsVerticallyForCharacterAtIndex:'; { available in macos  }
+    function drawsVerticallyForCharacterAtIndex (charIndex: NSUInteger): objcbool; message 'drawsVerticallyForCharacterAtIndex:'; { available in macos 10.6 }
   end;
 {$endif}
 

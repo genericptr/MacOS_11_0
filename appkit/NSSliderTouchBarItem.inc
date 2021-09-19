@@ -7,14 +7,14 @@ type
 
 {$ifdef TYPES}
 type
-  NSSliderAccessoryWidth = CGFloat { available in macos , ios  };
-  NSSliderAccessoryWidthPtr = ^NSSliderAccessoryWidth { available in macos , ios  };
+  NSSliderAccessoryWidth = CGFloat { available in macos 10.12.2, ios 13.0 };
+  NSSliderAccessoryWidthPtr = ^NSSliderAccessoryWidth { available in macos 10.12.2, ios 13.0 };
 {$endif}
 
 {$ifdef EXTERNAL_SYMBOLS}
 var
-  NSSliderAccessoryWidthDefault: NSSliderAccessoryWidth { available in macos , ios  }; cvar; external;
-  NSSliderAccessoryWidthWide: NSSliderAccessoryWidth { available in macos , ios  }; cvar; external;
+  NSSliderAccessoryWidthDefault: NSSliderAccessoryWidth { available in macos 10.12.2, ios 13.0 }; cvar; external;
+  NSSliderAccessoryWidthWide: NSSliderAccessoryWidth { available in macos 10.12.2, ios 13.0 }; cvar; external;
 {$endif}
 
 {$ifdef CLASSES}
@@ -25,12 +25,12 @@ type
     function view: NSView; message 'view'; { unavailable in ios }
     procedure setSlider(newValue: NSSlider); message 'setSlider:'; { unavailable in ios }
     function slider: NSSlider; message 'slider'; { unavailable in ios }
-    procedure setDoubleValue(newValue: double); message 'setDoubleValue:'; { available in macos , ios  }
-    function doubleValue: double; message 'doubleValue'; { available in macos , ios  }
-    procedure setMinimumSliderWidth(newValue: CGFloat); message 'setMinimumSliderWidth:'; { available in macos , ios  }
-    function minimumSliderWidth: CGFloat; message 'minimumSliderWidth'; { available in macos , ios  }
-    procedure setMaximumSliderWidth(newValue: CGFloat); message 'setMaximumSliderWidth:'; { available in macos , ios  }
-    function maximumSliderWidth: CGFloat; message 'maximumSliderWidth'; { available in macos , ios  }
+    procedure setDoubleValue(newValue: double); message 'setDoubleValue:'; { available in macos 10.15, ios 13.0 }
+    function doubleValue: double; message 'doubleValue'; { available in macos 10.15, ios 13.0 }
+    procedure setMinimumSliderWidth(newValue: CGFloat); message 'setMinimumSliderWidth:'; { available in macos 10.15, ios 13.0 }
+    function minimumSliderWidth: CGFloat; message 'minimumSliderWidth'; { available in macos 10.15, ios 13.0 }
+    procedure setMaximumSliderWidth(newValue: CGFloat); message 'setMaximumSliderWidth:'; { available in macos 10.15, ios 13.0 }
+    function maximumSliderWidth: CGFloat; message 'maximumSliderWidth'; { available in macos 10.15, ios 13.0 }
     procedure setLabel(newValue: NSString); message 'setLabel:';
     function label_: NSString; message 'label';
     procedure setMinimumValueAccessory(newValue: NSSliderAccessory); message 'setMinimumValueAccessory:';

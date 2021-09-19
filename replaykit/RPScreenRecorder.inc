@@ -42,22 +42,22 @@ type
     class function sharedRecorder: RPScreenRecorder; message 'sharedRecorder';
     function init: id; message 'init'; { unavailable in ios, tvos, macCatalyst, macos }
     procedure startRecordingWithMicrophoneEnabled_handler (microphoneEnabled: objcbool; handler: RPScreenRecorderStartRecordingWithMicrophoneEnabledCallback); message 'startRecordingWithMicrophoneEnabled:handler:'; { unavailable in macos }
-    procedure startRecordingWithHandler (handler: RPScreenRecorderStartRecordingWithHandlerCallback); message 'startRecordingWithHandler:'; { available in ios , tvos , macos  }
+    procedure startRecordingWithHandler (handler: RPScreenRecorderStartRecordingWithHandlerCallback); message 'startRecordingWithHandler:'; { available in ios 10.0, tvos 10.0, macos 11.0 }
     procedure stopRecordingWithHandler (handler: RPScreenRecorderStopRecordingWithHandlerCallback); message 'stopRecordingWithHandler:';
     procedure stopRecordingWithOutputURL_completionHandler (url: NSURL; completionHandler: RPScreenRecorderStopRecordingWithOutputURLCallback); message 'stopRecordingWithOutputURL:completionHandler:';
     procedure discardRecordingWithHandler (handler: RPScreenRecorderDiscardRecordingWithHandlerCallback); message 'discardRecordingWithHandler:';
-    procedure startCaptureWithHandler_completionHandler (captureHandler: RPScreenRecorderStartCaptureWithHandlerCallback; completionHandler: RPScreenRecorderStartCaptureWithHandlerCallback); message 'startCaptureWithHandler:completionHandler:'; { available in ios , tvos , macos  }
-    procedure stopCaptureWithHandler (handler: RPScreenRecorderStopCaptureWithHandlerCallback); message 'stopCaptureWithHandler:'; { available in ios , tvos , macos  }
+    procedure startCaptureWithHandler_completionHandler (captureHandler: RPScreenRecorderStartCaptureWithHandlerCallback; completionHandler: RPScreenRecorderStartCaptureWithHandlerCallback); message 'startCaptureWithHandler:completionHandler:'; { available in ios 11.0, tvos 11.0, macos 11.0 }
+    procedure stopCaptureWithHandler (handler: RPScreenRecorderStopCaptureWithHandlerCallback); message 'stopCaptureWithHandler:'; { available in ios 11.0, tvos 11.0, macos 11.0 }
     procedure setDelegate(newValue: RPScreenRecorderDelegateProtocol); message 'setDelegate:';
     function delegate: RPScreenRecorderDelegateProtocol; message 'delegate';
     function isAvailable: objcbool; message 'isAvailable';
     function isRecording: objcbool; message 'isRecording';
     procedure setMicrophoneEnabled(newValue: objcbool); message 'setMicrophoneEnabled:'; { unavailable in tvos }
     function isMicrophoneEnabled: objcbool; message 'isMicrophoneEnabled'; { unavailable in tvos }
-    procedure setCameraEnabled(newValue: objcbool); message 'setCameraEnabled:'; { unavailable in tvos }
-    function isCameraEnabled: objcbool; message 'isCameraEnabled'; { unavailable in tvos }
-    procedure setCameraPosition(newValue: RPCameraPosition); message 'setCameraPosition:'; { unavailable in tvos }
-    function cameraPosition: RPCameraPosition; message 'cameraPosition'; { unavailable in tvos }
+    procedure setCameraEnabled(newValue: objcbool); message 'setCameraEnabled:'; { unavailable in tvos } { available in ios 10.0, macos 11.0 }
+    function isCameraEnabled: objcbool; message 'isCameraEnabled'; { unavailable in tvos } { available in ios 10.0, macos 11.0 }
+    procedure setCameraPosition(newValue: RPCameraPosition); message 'setCameraPosition:'; { unavailable in tvos } { available in ios 11.0, macos 11.0 }
+    function cameraPosition: RPCameraPosition; message 'cameraPosition'; { unavailable in tvos } { available in ios 11.0, macos 11.0 }
     function cameraPreviewView: NSViewPtr; message 'cameraPreviewView'; { unavailable in tvos }
   end;
 {$endif}

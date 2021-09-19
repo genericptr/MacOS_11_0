@@ -53,10 +53,10 @@ type
     procedure removeAllActionsWithTarget (target: id); message 'removeAllActionsWithTarget:';
     procedure registerUndoWithTarget_selector_object (target: id; selector: SEL; anObject: id); message 'registerUndoWithTarget:selector:object:';
     function prepareWithInvocationTarget (target: id): id; message 'prepareWithInvocationTarget:';
-    procedure registerUndoWithTarget_handler (target: id; undoHandler: NSUndoManagerRegisterUndoWithTargetCallback); message 'registerUndoWithTarget:handler:'; { available in macos , ios , watchos , tvos  }
-    procedure setActionIsDiscardable (discardable: objcbool); message 'setActionIsDiscardable:'; { available in macos , ios , watchos , tvos  }
-    function undoActionIsDiscardable: objcbool; message 'undoActionIsDiscardable'; { available in macos , ios , watchos , tvos  }
-    function redoActionIsDiscardable: objcbool; message 'redoActionIsDiscardable'; { available in macos , ios , watchos , tvos  }
+    procedure registerUndoWithTarget_handler (target: id; undoHandler: NSUndoManagerRegisterUndoWithTargetCallback); message 'registerUndoWithTarget:handler:'; { available in macos 10.11, ios 9.0, watchos 2.0, tvos 9.0 }
+    procedure setActionIsDiscardable (discardable: objcbool); message 'setActionIsDiscardable:'; { available in macos 10.7, ios 5.0, watchos 2.0, tvos 9.0 }
+    function undoActionIsDiscardable: objcbool; message 'undoActionIsDiscardable'; { available in macos 10.7, ios 5.0, watchos 2.0, tvos 9.0 }
+    function redoActionIsDiscardable: objcbool; message 'redoActionIsDiscardable'; { available in macos 10.7, ios 5.0, watchos 2.0, tvos 9.0 }
     function undoActionName: NSString; message 'undoActionName';
     function redoActionName: NSString; message 'redoActionName';
     procedure setActionName (actionName: NSString); message 'setActionName:';
@@ -69,13 +69,13 @@ type
 
 {$ifdef EXTERNAL_SYMBOLS}
 var
-  NSUndoManagerCheckpointNotification: NSNotificationName { available in macos , ios , watchos , tvos  }; cvar; external;
-  NSUndoManagerWillUndoChangeNotification: NSNotificationName { available in macos , ios , watchos , tvos  }; cvar; external;
-  NSUndoManagerWillRedoChangeNotification: NSNotificationName { available in macos , ios , watchos , tvos  }; cvar; external;
-  NSUndoManagerDidUndoChangeNotification: NSNotificationName { available in macos , ios , watchos , tvos  }; cvar; external;
-  NSUndoManagerDidRedoChangeNotification: NSNotificationName { available in macos , ios , watchos , tvos  }; cvar; external;
-  NSUndoManagerDidOpenUndoGroupNotification: NSNotificationName { available in macos , ios , watchos , tvos  }; cvar; external;
-  NSUndoManagerWillCloseUndoGroupNotification: NSNotificationName { available in macos , ios , watchos , tvos  }; cvar; external;
-  NSUndoManagerDidCloseUndoGroupNotification: NSNotificationName { available in macos , ios , watchos , tvos  }; cvar; external;
+  NSUndoManagerCheckpointNotification: NSNotificationName { available in macos 10.0, ios 3.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  NSUndoManagerWillUndoChangeNotification: NSNotificationName { available in macos 10.0, ios 3.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  NSUndoManagerWillRedoChangeNotification: NSNotificationName { available in macos 10.0, ios 3.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  NSUndoManagerDidUndoChangeNotification: NSNotificationName { available in macos 10.0, ios 3.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  NSUndoManagerDidRedoChangeNotification: NSNotificationName { available in macos 10.0, ios 3.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  NSUndoManagerDidOpenUndoGroupNotification: NSNotificationName { available in macos 10.0, ios 3.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  NSUndoManagerWillCloseUndoGroupNotification: NSNotificationName { available in macos 10.0, ios 3.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  NSUndoManagerDidCloseUndoGroupNotification: NSNotificationName { available in macos 10.7, ios 5.0, watchos 2.0, tvos 9.0 }; cvar; external;
 {$endif}
 

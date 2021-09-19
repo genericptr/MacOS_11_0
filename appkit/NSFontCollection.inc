@@ -23,9 +23,9 @@ type
 
 {$ifdef EXTERNAL_SYMBOLS}
 var
-  NSFontCollectionIncludeDisabledFontsOption: NSFontCollectionMatchingOptionKey { available in macos  }; cvar; external;
-  NSFontCollectionRemoveDuplicatesOption: NSFontCollectionMatchingOptionKey { available in macos  }; cvar; external;
-  NSFontCollectionDisallowAutoActivationOption: NSFontCollectionMatchingOptionKey { available in macos  }; cvar; external;
+  NSFontCollectionIncludeDisabledFontsOption: NSFontCollectionMatchingOptionKey { available in macos 10.7 }; cvar; external;
+  NSFontCollectionRemoveDuplicatesOption: NSFontCollectionMatchingOptionKey { available in macos 10.7 }; cvar; external;
+  NSFontCollectionDisallowAutoActivationOption: NSFontCollectionMatchingOptionKey { available in macos 10.7 }; cvar; external;
 {$endif}
 
 {$ifdef TYPES}
@@ -81,7 +81,7 @@ type
 
 {$ifdef EXTERNAL_SYMBOLS}
 var
-  NSFontCollectionDidChangeNotification: NSNotificationName { available in macos  }; cvar; external;
+  NSFontCollectionDidChangeNotification: NSNotificationName { available in macos 10.7 }; cvar; external;
 {$endif}
 
 {$ifdef TYPES}
@@ -92,10 +92,10 @@ type
 
 {$ifdef EXTERNAL_SYMBOLS}
 var
-  NSFontCollectionActionKey: NSFontCollectionUserInfoKey { available in macos  }; cvar; external;
-  NSFontCollectionNameKey: NSFontCollectionUserInfoKey { available in macos  }; cvar; external;
-  NSFontCollectionOldNameKey: NSFontCollectionUserInfoKey { available in macos  }; cvar; external;
-  NSFontCollectionVisibilityKey: NSFontCollectionUserInfoKey { available in macos  }; cvar; external;
+  NSFontCollectionActionKey: NSFontCollectionUserInfoKey { available in macos 10.7 }; cvar; external;
+  NSFontCollectionNameKey: NSFontCollectionUserInfoKey { available in macos 10.7 }; cvar; external;
+  NSFontCollectionOldNameKey: NSFontCollectionUserInfoKey { available in macos 10.7 }; cvar; external;
+  NSFontCollectionVisibilityKey: NSFontCollectionUserInfoKey { available in macos 10.7 }; cvar; external;
 {$endif}
 
 {$ifdef TYPES}
@@ -106,12 +106,12 @@ type
 
 {$ifdef EXTERNAL_SYMBOLS}
 var
-  NSFontCollectionWasShown: NSFontCollectionActionTypeKey { available in macos  }; cvar; external;
-  NSFontCollectionWasHidden: NSFontCollectionActionTypeKey { available in macos  }; cvar; external;
-  NSFontCollectionWasRenamed: NSFontCollectionActionTypeKey { available in macos  }; cvar; external;
-  NSFontCollectionAllFonts: NSFontCollectionName { available in macos  }; cvar; external;
-  NSFontCollectionUser: NSFontCollectionName { available in macos  }; cvar; external;
-  NSFontCollectionFavorites: NSFontCollectionName { available in macos  }; cvar; external;
-  NSFontCollectionRecentlyUsed: NSFontCollectionName { available in macos  }; cvar; external;
+  NSFontCollectionWasShown: NSFontCollectionActionTypeKey { available in macos 10.7 }; cvar; external;
+  NSFontCollectionWasHidden: NSFontCollectionActionTypeKey { available in macos 10.7 }; cvar; external;
+  NSFontCollectionWasRenamed: NSFontCollectionActionTypeKey { available in macos 10.7 }; cvar; external;
+  NSFontCollectionAllFonts: NSFontCollectionName { available in macos 10.7 }; cvar; external;
+  NSFontCollectionUser: NSFontCollectionName { available in macos 10.7 }; cvar; external;
+  NSFontCollectionFavorites: NSFontCollectionName { available in macos 10.7 }; cvar; external;
+  NSFontCollectionRecentlyUsed: NSFontCollectionName { available in macos 10.7 }; cvar; external;
 {$endif}
 

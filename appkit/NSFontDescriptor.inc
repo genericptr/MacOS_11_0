@@ -49,10 +49,10 @@ type
   NSFontWeightPtr = ^NSFontWeight;
   NSFontDescriptorSystemDesign = NSString;
   NSFontDescriptorSystemDesignPtr = ^NSFontDescriptorSystemDesign;
-  NSFontTextStyle = NSString { available in macos  };
-  NSFontTextStylePtr = ^NSFontTextStyle { available in macos  };
-  NSFontTextStyleOptionKey = NSString { available in macos  };
-  NSFontTextStyleOptionKeyPtr = ^NSFontTextStyleOptionKey { available in macos  };
+  NSFontTextStyle = NSString { available in macos 11.0 };
+  NSFontTextStylePtr = ^NSFontTextStyle { available in macos 11.0 };
+  NSFontTextStyleOptionKey = NSString { available in macos 11.0 };
+  NSFontTextStyleOptionKeyPtr = ^NSFontTextStyleOptionKey { available in macos 11.0 };
 {$endif}
 
 {$ifdef CLASSES}
@@ -64,7 +64,7 @@ type
     function pointSize: CGFloat; message 'pointSize';
     function matrix: NSAffineTransform; message 'matrix';
     function symbolicTraits: NSFontDescriptorSymbolicTraits; message 'symbolicTraits';
-    function requiresFontAssetRequest: objcbool; message 'requiresFontAssetRequest'; { available in macos  }
+    function requiresFontAssetRequest: objcbool; message 'requiresFontAssetRequest'; { available in macos 10.13 }
     function objectForKey (attribute: NSFontDescriptorAttributeName): id; message 'objectForKey:';
     function fontAttributes: NSDictionary; message 'fontAttributes';
     class function fontDescriptorWithFontAttributes (attributes: NSDictionary): NSFontDescriptor; message 'fontDescriptorWithFontAttributes:';
@@ -72,14 +72,14 @@ type
     class function fontDescriptorWithName_matrix (fontName: NSString; matrix_: NSAffineTransform): NSFontDescriptor; message 'fontDescriptorWithName:matrix:';
     function initWithFontAttributes (attributes: NSDictionary): id; message 'initWithFontAttributes:';
     function matchingFontDescriptorsWithMandatoryKeys (mandatoryKeys: NSSet): NSArray; message 'matchingFontDescriptorsWithMandatoryKeys:';
-    function matchingFontDescriptorWithMandatoryKeys (mandatoryKeys: NSSet): NSFontDescriptor; message 'matchingFontDescriptorWithMandatoryKeys:'; { available in macos  }
+    function matchingFontDescriptorWithMandatoryKeys (mandatoryKeys: NSSet): NSFontDescriptor; message 'matchingFontDescriptorWithMandatoryKeys:'; { available in macos 10.5 }
     function fontDescriptorByAddingAttributes (attributes: NSDictionary): NSFontDescriptor; message 'fontDescriptorByAddingAttributes:';
     function fontDescriptorWithSymbolicTraits (symbolicTraits_: NSFontDescriptorSymbolicTraits): NSFontDescriptor; message 'fontDescriptorWithSymbolicTraits:';
     function fontDescriptorWithSize (newPointSize: CGFloat): NSFontDescriptor; message 'fontDescriptorWithSize:';
     function fontDescriptorWithMatrix (matrix_: NSAffineTransform): NSFontDescriptor; message 'fontDescriptorWithMatrix:';
     function fontDescriptorWithFace (newFace: NSString): NSFontDescriptor; message 'fontDescriptorWithFace:';
     function fontDescriptorWithFamily (newFamily: NSString): NSFontDescriptor; message 'fontDescriptorWithFamily:';
-    function fontDescriptorWithDesign (design: NSFontDescriptorSystemDesign): id; message 'fontDescriptorWithDesign:'; { available in macos  }
+    function fontDescriptorWithDesign (design: NSFontDescriptorSystemDesign): id; message 'fontDescriptorWithDesign:'; { available in macos 10.15 }
 
     { Adopted protocols }
     function copyWithZone (zone: NSZonePtr): id; message 'copyWithZone:';
@@ -102,7 +102,7 @@ var
   NSFontCascadeListAttribute: NSFontDescriptorAttributeName; cvar; external;
   NSFontTraitsAttribute: NSFontDescriptorAttributeName; cvar; external;
   NSFontFixedAdvanceAttribute: NSFontDescriptorAttributeName; cvar; external;
-  NSFontFeatureSettingsAttribute: NSFontDescriptorAttributeName { available in macos  }; cvar; external;
+  NSFontFeatureSettingsAttribute: NSFontDescriptorAttributeName { available in macos 10.5 }; cvar; external;
   NSFontSymbolicTrait: NSFontDescriptorTraitKey; cvar; external;
   NSFontWeightTrait: NSFontDescriptorTraitKey; cvar; external;
   NSFontWidthTrait: NSFontDescriptorTraitKey; cvar; external;
@@ -112,32 +112,32 @@ var
   NSFontVariationAxisMaximumValueKey: NSFontDescriptorVariationKey; cvar; external;
   NSFontVariationAxisDefaultValueKey: NSFontDescriptorVariationKey; cvar; external;
   NSFontVariationAxisNameKey: NSFontDescriptorVariationKey; cvar; external;
-  NSFontFeatureTypeIdentifierKey: NSFontDescriptorFeatureKey { available in macos  }; cvar; external;
-  NSFontFeatureSelectorIdentifierKey: NSFontDescriptorFeatureKey { available in macos  }; cvar; external;
-  NSFontWeightUltraLight: NSFontWeight { available in macos  }; cvar; external;
-  NSFontWeightThin: NSFontWeight { available in macos  }; cvar; external;
-  NSFontWeightLight: NSFontWeight { available in macos  }; cvar; external;
-  NSFontWeightRegular: NSFontWeight { available in macos  }; cvar; external;
-  NSFontWeightMedium: NSFontWeight { available in macos  }; cvar; external;
-  NSFontWeightSemibold: NSFontWeight { available in macos  }; cvar; external;
-  NSFontWeightBold: NSFontWeight { available in macos  }; cvar; external;
-  NSFontWeightHeavy: NSFontWeight { available in macos  }; cvar; external;
-  NSFontWeightBlack: NSFontWeight { available in macos  }; cvar; external;
-  NSFontDescriptorSystemDesignDefault: NSFontDescriptorSystemDesign { available in macos  }; cvar; external;
-  NSFontDescriptorSystemDesignSerif: NSFontDescriptorSystemDesign { available in macos  }; cvar; external;
-  NSFontDescriptorSystemDesignMonospaced: NSFontDescriptorSystemDesign { available in macos  }; cvar; external;
-  NSFontDescriptorSystemDesignRounded: NSFontDescriptorSystemDesign { available in macos  }; cvar; external;
-  NSFontTextStyleLargeTitle: NSFontTextStyle { available in macos  }; cvar; external;
-  NSFontTextStyleTitle1: NSFontTextStyle { available in macos  }; cvar; external;
-  NSFontTextStyleTitle2: NSFontTextStyle { available in macos  }; cvar; external;
-  NSFontTextStyleTitle3: NSFontTextStyle { available in macos  }; cvar; external;
-  NSFontTextStyleHeadline: NSFontTextStyle { available in macos  }; cvar; external;
-  NSFontTextStyleSubheadline: NSFontTextStyle { available in macos  }; cvar; external;
-  NSFontTextStyleBody: NSFontTextStyle { available in macos  }; cvar; external;
-  NSFontTextStyleCallout: NSFontTextStyle { available in macos  }; cvar; external;
-  NSFontTextStyleFootnote: NSFontTextStyle { available in macos  }; cvar; external;
-  NSFontTextStyleCaption1: NSFontTextStyle { available in macos  }; cvar; external;
-  NSFontTextStyleCaption2: NSFontTextStyle { available in macos  }; cvar; external;
+  NSFontFeatureTypeIdentifierKey: NSFontDescriptorFeatureKey { available in macos 10.5 }; cvar; external;
+  NSFontFeatureSelectorIdentifierKey: NSFontDescriptorFeatureKey { available in macos 10.5 }; cvar; external;
+  NSFontWeightUltraLight: NSFontWeight { available in macos 10.11 }; cvar; external;
+  NSFontWeightThin: NSFontWeight { available in macos 10.11 }; cvar; external;
+  NSFontWeightLight: NSFontWeight { available in macos 10.11 }; cvar; external;
+  NSFontWeightRegular: NSFontWeight { available in macos 10.11 }; cvar; external;
+  NSFontWeightMedium: NSFontWeight { available in macos 10.11 }; cvar; external;
+  NSFontWeightSemibold: NSFontWeight { available in macos 10.11 }; cvar; external;
+  NSFontWeightBold: NSFontWeight { available in macos 10.11 }; cvar; external;
+  NSFontWeightHeavy: NSFontWeight { available in macos 10.11 }; cvar; external;
+  NSFontWeightBlack: NSFontWeight { available in macos 10.11 }; cvar; external;
+  NSFontDescriptorSystemDesignDefault: NSFontDescriptorSystemDesign { available in macos 10.15 }; cvar; external;
+  NSFontDescriptorSystemDesignSerif: NSFontDescriptorSystemDesign { available in macos 10.15 }; cvar; external;
+  NSFontDescriptorSystemDesignMonospaced: NSFontDescriptorSystemDesign { available in macos 10.15 }; cvar; external;
+  NSFontDescriptorSystemDesignRounded: NSFontDescriptorSystemDesign { available in macos 10.15 }; cvar; external;
+  NSFontTextStyleLargeTitle: NSFontTextStyle { available in macos 11.0 }; cvar; external;
+  NSFontTextStyleTitle1: NSFontTextStyle { available in macos 11.0 }; cvar; external;
+  NSFontTextStyleTitle2: NSFontTextStyle { available in macos 11.0 }; cvar; external;
+  NSFontTextStyleTitle3: NSFontTextStyle { available in macos 11.0 }; cvar; external;
+  NSFontTextStyleHeadline: NSFontTextStyle { available in macos 11.0 }; cvar; external;
+  NSFontTextStyleSubheadline: NSFontTextStyle { available in macos 11.0 }; cvar; external;
+  NSFontTextStyleBody: NSFontTextStyle { available in macos 11.0 }; cvar; external;
+  NSFontTextStyleCallout: NSFontTextStyle { available in macos 11.0 }; cvar; external;
+  NSFontTextStyleFootnote: NSFontTextStyle { available in macos 11.0 }; cvar; external;
+  NSFontTextStyleCaption1: NSFontTextStyle { available in macos 11.0 }; cvar; external;
+  NSFontTextStyleCaption2: NSFontTextStyle { available in macos 11.0 }; cvar; external;
 {$endif}
 
 {$ifdef TYPES}
@@ -178,7 +178,7 @@ var
 
 type
   NSFontDescriptor_TextStyles = objccategory external (NSFontDescriptor)
-    class function preferredFontDescriptorForTextStyle_options (style: NSFontTextStyle; options: NSDictionary): NSFontDescriptor; message 'preferredFontDescriptorForTextStyle:options:'; { available in macos  }
+    class function preferredFontDescriptorForTextStyle_options (style: NSFontTextStyle; options: NSDictionary): NSFontDescriptor; message 'preferredFontDescriptorForTextStyle:options:'; { available in macos 11.0 }
   end;
 {$endif}
 

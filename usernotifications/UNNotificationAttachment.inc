@@ -26,9 +26,9 @@ type
 
 {$ifdef EXTERNAL_SYMBOLS}
 var
-  UNNotificationAttachmentOptionsTypeHintKey: NSString { unavailable in tvos }; cvar; external;
-  UNNotificationAttachmentOptionsThumbnailHiddenKey: NSString { unavailable in tvos }; cvar; external;
-  UNNotificationAttachmentOptionsThumbnailClippingRectKey: NSString { unavailable in tvos }; cvar; external;
-  UNNotificationAttachmentOptionsThumbnailTimeKey: NSString { unavailable in tvos }; cvar; external;
+  UNNotificationAttachmentOptionsTypeHintKey: NSString { unavailable in tvos } { available in macos 10.14, ios 10.0, watchos 3.0 }; cvar; external;
+  UNNotificationAttachmentOptionsThumbnailHiddenKey: NSString { unavailable in tvos } { available in macos 10.14, ios 10.0, watchos 3.0 }; cvar; external;
+  UNNotificationAttachmentOptionsThumbnailClippingRectKey: NSString { unavailable in tvos } { available in macos 10.14, ios 10.0, watchos 3.0 }; cvar; external;
+  UNNotificationAttachmentOptionsThumbnailTimeKey: NSString { unavailable in tvos } { available in macos 10.14, ios 10.0, watchos 3.0 }; cvar; external;
 {$endif}
 

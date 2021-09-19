@@ -21,9 +21,9 @@ const
   NSTextCheckingTypeDash = 1 shl 7;
   NSTextCheckingTypeReplacement = 1 shl 8;
   NSTextCheckingTypeCorrection = 1 shl 9;
-  NSTextCheckingTypeRegularExpression = 1 shl 10 { available in macos , ios , watchos , tvos  };
-  NSTextCheckingTypePhoneNumber = 1 shl 11 { available in macos , ios , watchos , tvos  };
-  NSTextCheckingTypeTransitInformation = 1 shl 12 { available in macos , ios , watchos , tvos  };
+  NSTextCheckingTypeRegularExpression = 1 shl 10 { available in macos 10.7, ios 4.0, watchos 2.0, tvos 9.0 };
+  NSTextCheckingTypePhoneNumber = 1 shl 11 { available in macos 10.7, ios 4.0, watchos 2.0, tvos 9.0 };
+  NSTextCheckingTypeTransitInformation = 1 shl 12 { available in macos 10.7, ios 4.0, watchos 2.0, tvos 9.0 };
 
 type
   NSTextCheckingTypes = cuint64;
@@ -55,33 +55,33 @@ type
     function date: NSDate; message 'date';
     function timeZone: NSTimeZone; message 'timeZone';
     function duration: NSTimeInterval; message 'duration';
-    function components: NSDictionary; message 'components'; { available in macos , ios , watchos , tvos  }
+    function components: NSDictionary; message 'components'; { available in macos 10.7, ios 4.0, watchos 2.0, tvos 9.0 }
     function URL: NSURL; message 'URL';
     function replacementString: NSString; message 'replacementString';
-    function alternativeStrings: NSArray; message 'alternativeStrings'; { available in macos , ios , watchos , tvos  }
-    function regularExpression: NSRegularExpression; message 'regularExpression'; { available in macos , ios , watchos , tvos  }
-    function phoneNumber: NSString; message 'phoneNumber'; { available in macos , ios , watchos , tvos  }
-    function numberOfRanges: NSUInteger; message 'numberOfRanges'; { available in macos , ios , watchos , tvos  }
-    function rangeAtIndex (idx: NSUInteger): NSRange; message 'rangeAtIndex:'; { available in macos , ios , watchos , tvos  }
-    function rangeWithName (name: NSString): NSRange; message 'rangeWithName:'; { available in macosx , ios , watchos , tvos  }
-    function resultByAdjustingRangesWithOffset (offset: NSInteger): NSTextCheckingResult; message 'resultByAdjustingRangesWithOffset:'; { available in macos , ios , watchos , tvos  }
+    function alternativeStrings: NSArray; message 'alternativeStrings'; { available in macos 10.9, ios 7.0, watchos 2.0, tvos 9.0 }
+    function regularExpression: NSRegularExpression; message 'regularExpression'; { available in macos 10.7, ios 4.0, watchos 2.0, tvos 9.0 }
+    function phoneNumber: NSString; message 'phoneNumber'; { available in macos 10.7, ios 4.0, watchos 2.0, tvos 9.0 }
+    function numberOfRanges: NSUInteger; message 'numberOfRanges'; { available in macos 10.7, ios 4.0, watchos 2.0, tvos 9.0 }
+    function rangeAtIndex (idx: NSUInteger): NSRange; message 'rangeAtIndex:'; { available in macos 10.7, ios 4.0, watchos 2.0, tvos 9.0 }
+    function rangeWithName (name: NSString): NSRange; message 'rangeWithName:'; { available in macosx 10.13, ios 11.0, watchos 4.0, tvos 11.0 }
+    function resultByAdjustingRangesWithOffset (offset: NSInteger): NSTextCheckingResult; message 'resultByAdjustingRangesWithOffset:'; { available in macos 10.7, ios 5.0, watchos 2.0, tvos 9.0 }
     function addressComponents: NSDictionary; message 'addressComponents';
   end;
 {$endif}
 
 {$ifdef EXTERNAL_SYMBOLS}
 var
-  NSTextCheckingNameKey: NSTextCheckingKey { available in macos , ios , watchos , tvos  }; cvar; external;
-  NSTextCheckingJobTitleKey: NSTextCheckingKey { available in macos , ios , watchos , tvos  }; cvar; external;
-  NSTextCheckingOrganizationKey: NSTextCheckingKey { available in macos , ios , watchos , tvos  }; cvar; external;
-  NSTextCheckingStreetKey: NSTextCheckingKey { available in macos , ios , watchos , tvos  }; cvar; external;
-  NSTextCheckingCityKey: NSTextCheckingKey { available in macos , ios , watchos , tvos  }; cvar; external;
-  NSTextCheckingStateKey: NSTextCheckingKey { available in macos , ios , watchos , tvos  }; cvar; external;
-  NSTextCheckingZIPKey: NSTextCheckingKey { available in macos , ios , watchos , tvos  }; cvar; external;
-  NSTextCheckingCountryKey: NSTextCheckingKey { available in macos , ios , watchos , tvos  }; cvar; external;
-  NSTextCheckingPhoneKey: NSTextCheckingKey { available in macos , ios , watchos , tvos  }; cvar; external;
-  NSTextCheckingAirlineKey: NSTextCheckingKey { available in macos , ios , watchos , tvos  }; cvar; external;
-  NSTextCheckingFlightKey: NSTextCheckingKey { available in macos , ios , watchos , tvos  }; cvar; external;
+  NSTextCheckingNameKey: NSTextCheckingKey { available in macos 10.6, ios 4.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  NSTextCheckingJobTitleKey: NSTextCheckingKey { available in macos 10.6, ios 4.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  NSTextCheckingOrganizationKey: NSTextCheckingKey { available in macos 10.6, ios 4.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  NSTextCheckingStreetKey: NSTextCheckingKey { available in macos 10.6, ios 4.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  NSTextCheckingCityKey: NSTextCheckingKey { available in macos 10.6, ios 4.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  NSTextCheckingStateKey: NSTextCheckingKey { available in macos 10.6, ios 4.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  NSTextCheckingZIPKey: NSTextCheckingKey { available in macos 10.6, ios 4.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  NSTextCheckingCountryKey: NSTextCheckingKey { available in macos 10.6, ios 4.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  NSTextCheckingPhoneKey: NSTextCheckingKey { available in macos 10.6, ios 4.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  NSTextCheckingAirlineKey: NSTextCheckingKey { available in macos 10.7, ios 4.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  NSTextCheckingFlightKey: NSTextCheckingKey { available in macos 10.7, ios 4.0, watchos 2.0, tvos 9.0 }; cvar; external;
 {$endif}
 
 {$ifdef CLASSES}
@@ -99,10 +99,10 @@ type
     class function dashCheckingResultWithRange_replacementString (range_: NSRange; replacementString: NSString): NSTextCheckingResult; message 'dashCheckingResultWithRange:replacementString:';
     class function replacementCheckingResultWithRange_replacementString (range_: NSRange; replacementString: NSString): NSTextCheckingResult; message 'replacementCheckingResultWithRange:replacementString:';
     class function correctionCheckingResultWithRange_replacementString (range_: NSRange; replacementString: NSString): NSTextCheckingResult; message 'correctionCheckingResultWithRange:replacementString:';
-    class function correctionCheckingResultWithRange_replacementString_alternativeStrings (range_: NSRange; replacementString: NSString; alternativeStrings: NSArray): NSTextCheckingResult; message 'correctionCheckingResultWithRange:replacementString:alternativeStrings:'; { available in macos , ios , watchos , tvos  }
-    class function regularExpressionCheckingResultWithRanges_count_regularExpression (ranges: NSRangePointer; count: NSUInteger; regularExpression: NSRegularExpression): NSTextCheckingResult; message 'regularExpressionCheckingResultWithRanges:count:regularExpression:'; { available in macos , ios , watchos , tvos  }
-    class function phoneNumberCheckingResultWithRange_phoneNumber (range_: NSRange; phoneNumber: NSString): NSTextCheckingResult; message 'phoneNumberCheckingResultWithRange:phoneNumber:'; { available in macos , ios , watchos , tvos  }
-    class function transitInformationCheckingResultWithRange_components (range_: NSRange; components: NSDictionary): NSTextCheckingResult; message 'transitInformationCheckingResultWithRange:components:'; { available in macos , ios , watchos , tvos  }
+    class function correctionCheckingResultWithRange_replacementString_alternativeStrings (range_: NSRange; replacementString: NSString; alternativeStrings: NSArray): NSTextCheckingResult; message 'correctionCheckingResultWithRange:replacementString:alternativeStrings:'; { available in macos 10.9, ios 7.0, watchos 2.0, tvos 9.0 }
+    class function regularExpressionCheckingResultWithRanges_count_regularExpression (ranges: NSRangePointer; count: NSUInteger; regularExpression: NSRegularExpression): NSTextCheckingResult; message 'regularExpressionCheckingResultWithRanges:count:regularExpression:'; { available in macos 10.7, ios 4.0, watchos 2.0, tvos 9.0 }
+    class function phoneNumberCheckingResultWithRange_phoneNumber (range_: NSRange; phoneNumber: NSString): NSTextCheckingResult; message 'phoneNumberCheckingResultWithRange:phoneNumber:'; { available in macos 10.7, ios 4.0, watchos 2.0, tvos 9.0 }
+    class function transitInformationCheckingResultWithRange_components (range_: NSRange; components: NSDictionary): NSTextCheckingResult; message 'transitInformationCheckingResultWithRange:components:'; { available in macos 10.7, ios 4.0, watchos 2.0, tvos 9.0 }
   end;
 {$endif}
 

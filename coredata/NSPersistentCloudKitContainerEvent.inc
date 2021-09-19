@@ -18,8 +18,8 @@ const
 
 {$ifdef EXTERNAL_SYMBOLS}
 var
-  NSPersistentCloudKitContainerEventChangedNotification: NSNotificationName { available in macosx ,ios ,tvos ,watchos  }; cvar; external;
-  NSPersistentCloudKitContainerEventUserInfoKey: NSString { available in macosx ,ios ,tvos ,watchos  }; cvar; external;
+  NSPersistentCloudKitContainerEventChangedNotification: NSNotificationName { available in macosx 11.0,ios 14.0,tvos 14.0,watchos 7.0 }; cvar; external;
+  NSPersistentCloudKitContainerEventUserInfoKey: NSString { available in macosx 11.0,ios 14.0,tvos 14.0,watchos 7.0 }; cvar; external;
 {$endif}
 
 {$ifdef CLASSES}

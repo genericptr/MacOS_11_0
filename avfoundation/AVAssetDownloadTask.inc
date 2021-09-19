@@ -22,12 +22,12 @@ type
 {$if defined(__NULL_MACRO__)}
 {$ifdef EXTERNAL_SYMBOLS}
 var
-  AVAssetDownloadTaskMinimumRequiredMediaBitrateKey: NSString { unavailable in tvos, watchos }; cvar; external;
-  AVAssetDownloadTaskMinimumRequiredPresentationSizeKey: NSString { unavailable in tvos, watchos }; cvar; external;
-  AVAssetDownloadTaskMediaSelectionKey: NSString { unavailable in tvos, watchos }; cvar; external;
-  AVAssetDownloadTaskMediaSelectionPrefersMultichannelKey: NSString { unavailable in tvos, watchos }; cvar; external;
-  AVAssetDownloadTaskPrefersLosslessAudioKey: NSString { unavailable in tvos, watchos }; cvar; external;
-  AVAssetDownloadTaskPrefersHDRKey: NSString { unavailable in tvos, watchos }; cvar; external;
+  AVAssetDownloadTaskMinimumRequiredMediaBitrateKey: NSString { unavailable in tvos, watchos } { available in macos 10.15, ios 9.0 }; cvar; external;
+  AVAssetDownloadTaskMinimumRequiredPresentationSizeKey: NSString { unavailable in tvos, watchos } { available in macos 11.0, ios 14.0 }; cvar; external;
+  AVAssetDownloadTaskMediaSelectionKey: NSString { unavailable in tvos, watchos } { available in macos 10.15, ios 9.0 }; cvar; external;
+  AVAssetDownloadTaskMediaSelectionPrefersMultichannelKey: NSString { unavailable in tvos, watchos } { available in macos 10.15, ios 13.0 }; cvar; external;
+  AVAssetDownloadTaskPrefersLosslessAudioKey: NSString { unavailable in tvos, watchos } { available in macos 11.3, ios 14.5 }; cvar; external;
+  AVAssetDownloadTaskPrefersHDRKey: NSString { unavailable in tvos, watchos } { available in macos 11.0, ios 14.0 }; cvar; external;
 {$endif}
 
 {$ifdef CLASSES}
@@ -36,7 +36,7 @@ type
   AVAssetDownloadTask = objcclass external (NSURLSessionTask)
   public
     function URLAsset: AVURLAsset; message 'URLAsset';
-    function destinationURL: NSURL; message 'destinationURL'; { unavailable in tvos, watchos }
+    function destinationURL: NSURL; message 'destinationURL'; { unavailable in tvos, watchos } { unavailable in macos }
     function options: NSDictionary; message 'options';
     function loadedTimeRanges: NSArray; message 'loadedTimeRanges';
     function originalRequest: NSURLRequest; message 'originalRequest';
@@ -59,12 +59,12 @@ type
 type
   AVAssetDownloadDelegateProtocol = objcprotocol external name 'AVAssetDownloadDelegate' (NSURLSessionTaskDelegateProtocol)
   optional
-    procedure URLSession_assetDownloadTask_didFinishDownloadingToURL (session: NSURLSession; assetDownloadTask: AVAssetDownloadTask; location: NSURL); message 'URLSession:assetDownloadTask:didFinishDownloadingToURL:'; { unavailable in tvos, watchos }
-    procedure URLSession_assetDownloadTask_didLoadTimeRange_totalTimeRangesLoaded_timeRangeExpectedToLoad (session: NSURLSession; assetDownloadTask: AVAssetDownloadTask; timeRange: CMTimeRange; loadedTimeRanges: NSArray; timeRangeExpectedToLoad: CMTimeRange); message 'URLSession:assetDownloadTask:didLoadTimeRange:totalTimeRangesLoaded:timeRangeExpectedToLoad:'; { unavailable in tvos, watchos }
-    procedure URLSession_assetDownloadTask_didResolveMediaSelection (session: NSURLSession; assetDownloadTask: AVAssetDownloadTask; resolvedMediaSelection: AVMediaSelection); message 'URLSession:assetDownloadTask:didResolveMediaSelection:'; { unavailable in tvos, watchos }
-    procedure URLSession_aggregateAssetDownloadTask_willDownloadToURL (session: NSURLSession; aggregateAssetDownloadTask: AVAggregateAssetDownloadTask; location: NSURL); message 'URLSession:aggregateAssetDownloadTask:willDownloadToURL:'; { unavailable in tvos, watchos }
-    procedure URLSession_aggregateAssetDownloadTask_didCompleteForMediaSelection (session: NSURLSession; aggregateAssetDownloadTask: AVAggregateAssetDownloadTask; mediaSelection: AVMediaSelection); message 'URLSession:aggregateAssetDownloadTask:didCompleteForMediaSelection:'; { unavailable in tvos, watchos }
-    procedure URLSession_aggregateAssetDownloadTask_didLoadTimeRange_totalTimeRangesLoaded_timeRangeExpectedToLoad_forMediaSelection (session: NSURLSession; aggregateAssetDownloadTask: AVAggregateAssetDownloadTask; timeRange: CMTimeRange; loadedTimeRanges: NSArray; timeRangeExpectedToLoad: CMTimeRange; mediaSelection: AVMediaSelection); message 'URLSession:aggregateAssetDownloadTask:didLoadTimeRange:totalTimeRangesLoaded:timeRangeExpectedToLoad:forMediaSelection:'; { unavailable in tvos, watchos }
+    procedure URLSession_assetDownloadTask_didFinishDownloadingToURL (session: NSURLSession; assetDownloadTask: AVAssetDownloadTask; location: NSURL); message 'URLSession:assetDownloadTask:didFinishDownloadingToURL:'; { unavailable in tvos, watchos } { available in macos 10.15, ios 10.0 }
+    procedure URLSession_assetDownloadTask_didLoadTimeRange_totalTimeRangesLoaded_timeRangeExpectedToLoad (session: NSURLSession; assetDownloadTask: AVAssetDownloadTask; timeRange: CMTimeRange; loadedTimeRanges: NSArray; timeRangeExpectedToLoad: CMTimeRange); message 'URLSession:assetDownloadTask:didLoadTimeRange:totalTimeRangesLoaded:timeRangeExpectedToLoad:'; { unavailable in tvos, watchos } { available in macos 10.15, ios 9.0 }
+    procedure URLSession_assetDownloadTask_didResolveMediaSelection (session: NSURLSession; assetDownloadTask: AVAssetDownloadTask; resolvedMediaSelection: AVMediaSelection); message 'URLSession:assetDownloadTask:didResolveMediaSelection:'; { unavailable in tvos, watchos } { available in macos 10.15, ios 9.0 }
+    procedure URLSession_aggregateAssetDownloadTask_willDownloadToURL (session: NSURLSession; aggregateAssetDownloadTask: AVAggregateAssetDownloadTask; location: NSURL); message 'URLSession:aggregateAssetDownloadTask:willDownloadToURL:'; { unavailable in tvos, watchos } { available in macos 10.15, ios 11.0 }
+    procedure URLSession_aggregateAssetDownloadTask_didCompleteForMediaSelection (session: NSURLSession; aggregateAssetDownloadTask: AVAggregateAssetDownloadTask; mediaSelection: AVMediaSelection); message 'URLSession:aggregateAssetDownloadTask:didCompleteForMediaSelection:'; { unavailable in tvos, watchos } { available in macos 10.15, ios 11.0 }
+    procedure URLSession_aggregateAssetDownloadTask_didLoadTimeRange_totalTimeRangesLoaded_timeRangeExpectedToLoad_forMediaSelection (session: NSURLSession; aggregateAssetDownloadTask: AVAggregateAssetDownloadTask; timeRange: CMTimeRange; loadedTimeRanges: NSArray; timeRangeExpectedToLoad: CMTimeRange; mediaSelection: AVMediaSelection); message 'URLSession:aggregateAssetDownloadTask:didLoadTimeRange:totalTimeRangesLoaded:timeRangeExpectedToLoad:forMediaSelection:'; { unavailable in tvos, watchos } { available in macos 10.15, ios 11.0 }
   end;
 {$endif}
 
@@ -74,9 +74,9 @@ type
   AVAssetDownloadURLSession = objcclass external (NSURLSession)
   public
     class function sessionWithConfiguration_assetDownloadDelegate_delegateQueue (configuration: NSURLSessionConfiguration; delegate: AVAssetDownloadDelegateProtocol; delegateQueue: NSOperationQueue): AVAssetDownloadURLSession; message 'sessionWithConfiguration:assetDownloadDelegate:delegateQueue:';
-    function assetDownloadTaskWithURLAsset_destinationURL_options (URLAsset: AVURLAsset; destinationURL: NSURL; options: NSDictionary): AVAssetDownloadTask; message 'assetDownloadTaskWithURLAsset:destinationURL:options:'; { unavailable in tvos, watchos }
-    function assetDownloadTaskWithURLAsset_assetTitle_assetArtworkData_options (URLAsset: AVURLAsset; title: NSString; artworkData: NSData; options: NSDictionary): AVAssetDownloadTask; message 'assetDownloadTaskWithURLAsset:assetTitle:assetArtworkData:options:'; { unavailable in tvos, watchos }
-    function aggregateAssetDownloadTaskWithURLAsset_mediaSelections_assetTitle_assetArtworkData_options (URLAsset: AVURLAsset; mediaSelections: NSArray; title: NSString; artworkData: NSData; options: NSDictionary): AVAggregateAssetDownloadTask; message 'aggregateAssetDownloadTaskWithURLAsset:mediaSelections:assetTitle:assetArtworkData:options:'; { unavailable in tvos, watchos }
+    function assetDownloadTaskWithURLAsset_destinationURL_options (URLAsset: AVURLAsset; destinationURL: NSURL; options: NSDictionary): AVAssetDownloadTask; message 'assetDownloadTaskWithURLAsset:destinationURL:options:'; { unavailable in tvos, watchos } { unavailable in macos }
+    function assetDownloadTaskWithURLAsset_assetTitle_assetArtworkData_options (URLAsset: AVURLAsset; title: NSString; artworkData: NSData; options: NSDictionary): AVAssetDownloadTask; message 'assetDownloadTaskWithURLAsset:assetTitle:assetArtworkData:options:'; { unavailable in tvos, watchos } { available in macos 10.15, ios 10.0 }
+    function aggregateAssetDownloadTaskWithURLAsset_mediaSelections_assetTitle_assetArtworkData_options (URLAsset: AVURLAsset; mediaSelections: NSArray; title: NSString; artworkData: NSData; options: NSDictionary): AVAggregateAssetDownloadTask; message 'aggregateAssetDownloadTaskWithURLAsset:mediaSelections:assetTitle:assetArtworkData:options:'; { unavailable in tvos, watchos } { available in macos 10.15, ios 11.0 }
     class function sharedSession_: NSURLSession; message 'sharedSession';
     class function sessionWithConfiguration (configuration: NSURLSessionConfiguration): NSURLSession; message 'sessionWithConfiguration:';
     class function sessionWithConfiguration_delegate_delegateQueue (configuration: NSURLSessionConfiguration; delegate: NSURLSessionDelegateProtocol; queue: NSOperationQueue): NSURLSession; message 'sessionWithConfiguration:delegate:delegateQueue:';

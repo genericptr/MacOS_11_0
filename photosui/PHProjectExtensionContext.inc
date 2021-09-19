@@ -18,8 +18,8 @@ type
   public
     function photoLibrary: PHPhotoLibrary; message 'photoLibrary';
     function project: PHProject; message 'project';
-    procedure showEditorForAsset (asset: PHAsset); message 'showEditorForAsset:'; { available in macos  }
-    function updatedProjectInfoFromProjectInfo_completion (existingProjectInfo: PHProjectInfo; completion: PHProjectExtensionContextUpdatedProjectInfoFromProjectInfoCallback): NSProgress; message 'updatedProjectInfoFromProjectInfo:completion:'; { available in macos  }
+    procedure showEditorForAsset (asset: PHAsset); message 'showEditorForAsset:'; { available in macos 10.14 }
+    function updatedProjectInfoFromProjectInfo_completion (existingProjectInfo: PHProjectInfo; completion: PHProjectExtensionContextUpdatedProjectInfoFromProjectInfoCallback): NSProgress; message 'updatedProjectInfoFromProjectInfo:completion:'; { available in macos 10.14 }
   end;
 {$endif}
 

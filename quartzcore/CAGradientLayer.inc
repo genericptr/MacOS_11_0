@@ -31,8 +31,8 @@ type
 
 {$ifdef EXTERNAL_SYMBOLS}
 var
-  kCAGradientLayerAxial: CAGradientLayerType { available in macos , ios , watchos , tvos  }; cvar; external;
-  kCAGradientLayerRadial: CAGradientLayerType { available in macos , ios , watchos , tvos  }; cvar; external;
-  kCAGradientLayerConic: CAGradientLayerType { available in macos , ios , watchos , tvos  }; cvar; external;
+  kCAGradientLayerAxial: CAGradientLayerType { available in macos 10.6, ios 3.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  kCAGradientLayerRadial: CAGradientLayerType { available in macos 10.6, ios 3.2, watchos 2.0, tvos 9.0 }; cvar; external;
+  kCAGradientLayerConic: CAGradientLayerType { available in macos 10.14, ios 12.0, watchos 5.0, tvos 12.0 }; cvar; external;
 {$endif}
 

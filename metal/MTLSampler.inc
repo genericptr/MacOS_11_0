@@ -30,11 +30,11 @@ type
 
 const
   MTLSamplerAddressModeClampToEdge = 0;
-  MTLSamplerAddressModeMirrorClampToEdge = 1 { available in macos , ios  };
+  MTLSamplerAddressModeMirrorClampToEdge = 1 { available in macos 10.11, ios 14.0 };
   MTLSamplerAddressModeRepeat = 2;
   MTLSamplerAddressModeMirrorRepeat = 3;
   MTLSamplerAddressModeClampToZero = 4;
-  MTLSamplerAddressModeClampToBorderColor = 5 { available in macos , ios  };
+  MTLSamplerAddressModeClampToBorderColor = 5 { available in macos 10.12, ios 14.0 };
 
 type
   MTLSamplerBorderColor = NSUInteger;
@@ -65,20 +65,20 @@ type
     function tAddressMode: MTLSamplerAddressMode; message 'tAddressMode';
     procedure setRAddressMode(newValue: MTLSamplerAddressMode); message 'setRAddressMode:';
     function rAddressMode: MTLSamplerAddressMode; message 'rAddressMode';
-    procedure setBorderColor(newValue: MTLSamplerBorderColor); message 'setBorderColor:'; { available in macos , ios  }
-    function borderColor: MTLSamplerBorderColor; message 'borderColor'; { available in macos , ios  }
+    procedure setBorderColor(newValue: MTLSamplerBorderColor); message 'setBorderColor:'; { available in macos 10.12, ios 14.0 }
+    function borderColor: MTLSamplerBorderColor; message 'borderColor'; { available in macos 10.12, ios 14.0 }
     procedure setNormalizedCoordinates(newValue: objcbool); message 'setNormalizedCoordinates:';
     function normalizedCoordinates: objcbool; message 'normalizedCoordinates';
     procedure setLodMinClamp(newValue: single); message 'setLodMinClamp:';
     function lodMinClamp: single; message 'lodMinClamp';
     procedure setLodMaxClamp(newValue: single); message 'setLodMaxClamp:';
     function lodMaxClamp: single; message 'lodMaxClamp';
-    procedure setLodAverage(newValue: objcbool); message 'setLodAverage:'; { available in ios , macos , macCatalyst  }
-    function lodAverage: objcbool; message 'lodAverage'; { available in ios , macos , macCatalyst  }
-    procedure setCompareFunction(newValue: MTLCompareFunction); message 'setCompareFunction:'; { available in macos , ios  }
-    function compareFunction: MTLCompareFunction; message 'compareFunction'; { available in macos , ios  }
-    procedure setSupportArgumentBuffers(newValue: objcbool); message 'setSupportArgumentBuffers:'; { available in macos , ios  }
-    function supportArgumentBuffers: objcbool; message 'supportArgumentBuffers'; { available in macos , ios  }
+    procedure setLodAverage(newValue: objcbool); message 'setLodAverage:'; { available in ios 9.0, macos 11.0, macCatalyst 14.0 }
+    function lodAverage: objcbool; message 'lodAverage'; { available in ios 9.0, macos 11.0, macCatalyst 14.0 }
+    procedure setCompareFunction(newValue: MTLCompareFunction); message 'setCompareFunction:'; { available in macos 10.11, ios 9.0 }
+    function compareFunction: MTLCompareFunction; message 'compareFunction'; { available in macos 10.11, ios 9.0 }
+    procedure setSupportArgumentBuffers(newValue: objcbool); message 'setSupportArgumentBuffers:'; { available in macos 10.13, ios 11.0 }
+    function supportArgumentBuffers: objcbool; message 'supportArgumentBuffers'; { available in macos 10.13, ios 11.0 }
     procedure setLabel(newValue: NSString); message 'setLabel:';
     function label_: NSString; message 'label';
 

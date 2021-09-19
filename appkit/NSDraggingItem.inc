@@ -20,8 +20,8 @@ type
 
 {$ifdef EXTERNAL_SYMBOLS}
 var
-  NSDraggingImageComponentIconKey: NSDraggingImageComponentKey { available in macos  }; cvar; external;
-  NSDraggingImageComponentLabelKey: NSDraggingImageComponentKey { available in macos  }; cvar; external;
+  NSDraggingImageComponentIconKey: NSDraggingImageComponentKey { available in macos 10.7 }; cvar; external;
+  NSDraggingImageComponentLabelKey: NSDraggingImageComponentKey { available in macos 10.7 }; cvar; external;
 {$endif}
 
 {$ifdef CLASSES}

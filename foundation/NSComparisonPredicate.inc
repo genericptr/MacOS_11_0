@@ -13,7 +13,7 @@ type
 const
   NSCaseInsensitivePredicateOption = $01;
   NSDiacriticInsensitivePredicateOption = $02;
-  NSNormalizedPredicateOption = $04 { available in macos , ios , watchos , tvos  };
+  NSNormalizedPredicateOption = $04 { available in macos 10.6, ios 4.0, watchos 2.0, tvos 9.0 };
 
 type
   NSComparisonPredicateModifier = NSUInteger;
@@ -41,8 +41,8 @@ const
   NSEndsWithPredicateOperatorType = 9;
   NSInPredicateOperatorType = 10;
   NSCustomSelectorPredicateOperatorType = 11;
-  NSContainsPredicateOperatorType = 99 { available in macos , ios , watchos , tvos  };
-  NSBetweenPredicateOperatorType = 100 { available in macos , ios , watchos , tvos  };
+  NSContainsPredicateOperatorType = 99 { available in macos 10.5, ios 3.0, watchos 2.0, tvos 9.0 };
+  NSBetweenPredicateOperatorType = 100 { available in macos 10.5, ios 3.0, watchos 2.0, tvos 9.0 };
 {$endif}
 
 {$ifdef CLASSES}

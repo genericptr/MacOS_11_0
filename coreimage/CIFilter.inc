@@ -114,8 +114,8 @@ type
     function outputImage: CIImage; message 'outputImage'; { available in 10_10, 5_0 }
     procedure setName(newValue: NSString); message 'setName:';
     function name: NSString; message 'name';
-    procedure setEnabled(newValue: objcbool); message 'setEnabled:'; { available in 10_5 }
-    function isEnabled: objcbool; message 'isEnabled'; { available in 10_5 }
+    procedure setEnabled(newValue: objcbool); message 'setEnabled:'; { available in 10_5,5_0 }
+    function isEnabled: objcbool; message 'isEnabled'; { available in 10_5,10_0 }
     function inputKeys: NSArray; message 'inputKeys';
     function outputKeys: NSArray; message 'outputKeys';
     procedure setDefaults; message 'setDefaults';

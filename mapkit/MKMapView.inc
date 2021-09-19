@@ -34,13 +34,13 @@ type
 const
   MKUserTrackingModeNone = 0;
   MKUserTrackingModeFollow = 1;
-  MKUserTrackingModeFollowWithHeading = 2 { unavailable in macos };
+  MKUserTrackingModeFollowWithHeading = 2 { unavailable in macos } { unavailable in tvos };
 {$endif}
 
 {$ifdef EXTERNAL_SYMBOLS}
 var
-  MKMapViewDefaultAnnotationViewReuseIdentifier: NSString { available in 10_13, 11_0 }; cvar; external;
-  MKMapViewDefaultClusterAnnotationViewReuseIdentifier: NSString { available in 10_13, 11_0 }; cvar; external;
+  MKMapViewDefaultAnnotationViewReuseIdentifier: NSString { available in 10_13, 11_0 } { available in 11_0 }; cvar; external;
+  MKMapViewDefaultClusterAnnotationViewReuseIdentifier: NSString { available in 10_13, 11_0 } { available in 11_0 }; cvar; external;
 {$endif}
 
 {$ifdef CLASSES}
@@ -76,9 +76,9 @@ type
     procedure setCameraZoomRange(newValue: MKMapCameraZoomRange); message 'setCameraZoomRange:'; { unavailable in watchos }
     function cameraZoomRange: MKMapCameraZoomRange; message 'cameraZoomRange'; { unavailable in watchos }
     procedure setCameraZoomRange_animated (cameraZoomRange_: MKMapCameraZoomRange; animated: objcbool); message 'setCameraZoomRange:animated:'; { unavailable in watchos }
-    procedure setCameraBoundary(newValue: MKMapCameraBoundary); message 'setCameraBoundary:'; { unavailable in watchos }
-    function cameraBoundary: MKMapCameraBoundary; message 'cameraBoundary'; { unavailable in watchos }
-    procedure setCameraBoundary_animated (cameraBoundary_: MKMapCameraBoundary; animated: objcbool); message 'setCameraBoundary:animated:'; { unavailable in watchos }
+    procedure setCameraBoundary(newValue: MKMapCameraBoundary); message 'setCameraBoundary:'; { unavailable in watchos } { available in ios 13.0, macos 10.15, tvos 13.0 }
+    function cameraBoundary: MKMapCameraBoundary; message 'cameraBoundary'; { unavailable in watchos } { available in ios 13.0, macos 10.15, tvos 13.0 }
+    procedure setCameraBoundary_animated (cameraBoundary_: MKMapCameraBoundary; animated: objcbool); message 'setCameraBoundary:animated:'; { unavailable in watchos } { available in ios 13.0, macos 10.15, tvos 13.0 }
     {$if defined(TARGET_OS_IPHONE)}
     function convertCoordinate_toPointToView (coordinate: CLLocationCoordinate2D; view: UIViewPtr): CGPoint; message 'convertCoordinate:toPointToView:';
     function convertPoint_toCoordinateFromView (point: CGPoint; view: UIViewPtr): CLLocationCoordinate2D; message 'convertPoint:toCoordinateFromView:';
@@ -97,23 +97,23 @@ type
     procedure setRotateEnabled(newValue: objcbool); message 'setRotateEnabled:'; { unavailable in tvos }
     function isRotateEnabled: objcbool; message 'isRotateEnabled'; { unavailable in tvos }
     procedure setPitchEnabled(newValue: objcbool); message 'setPitchEnabled:'; { unavailable in tvos }
-    function isPitchEnabled: objcbool; message 'isPitchEnabled'; { unavailable in tvos }
-    procedure setShowsPitchControl(newValue: objcbool); message 'setShowsPitchControl:'; { unavailable in ios, watchos, tvos }
-    function showsPitchControl: objcbool; message 'showsPitchControl'; { unavailable in ios, watchos, tvos }
-    procedure setShowsZoomControls(newValue: objcbool); message 'setShowsZoomControls:'; { unavailable in ios, watchos, tvos }
-    function showsZoomControls: objcbool; message 'showsZoomControls'; { unavailable in ios, watchos, tvos }
-    procedure setShowsCompass(newValue: objcbool); message 'setShowsCompass:'; { unavailable in tvos }
-    function showsCompass: objcbool; message 'showsCompass'; { unavailable in tvos }
-    procedure setShowsScale(newValue: objcbool); message 'setShowsScale:'; { available in 10_10, 9_0 }
-    function showsScale: objcbool; message 'showsScale'; { available in 10_10, 9_0 }
-    procedure setPointOfInterestFilter(newValue: MKPointOfInterestFilter); message 'setPointOfInterestFilter:'; { unavailable in watchos }
+    function isPitchEnabled: objcbool; message 'isPitchEnabled'; { unavailable in tvos } { available in 10_9, 7_0 }
+    procedure setShowsPitchControl(newValue: objcbool); message 'setShowsPitchControl:'; { unavailable in tvos } { available in 10_9, 7_0 }
+    function showsPitchControl: objcbool; message 'showsPitchControl'; { unavailable in tvos } { available in 10_9, 7_0 }
+    procedure setShowsZoomControls(newValue: objcbool); message 'setShowsZoomControls:'; { unavailable in tvos } { available in 10_9, 7_0 }
+    function showsZoomControls: objcbool; message 'showsZoomControls'; { unavailable in ios, watchos, tvos } { available in macos 11.0, macCatalyst 14.0 }
+    procedure setShowsCompass(newValue: objcbool); message 'setShowsCompass:'; { unavailable in ios, watchos, tvos } { available in macos 11.0, macCatalyst 14.0 }
+    function showsCompass: objcbool; message 'showsCompass'; { unavailable in ios, watchos, tvos } { available in macos 10.9, macCatalyst 13.0 }
+    procedure setShowsScale(newValue: objcbool); message 'setShowsScale:'; { available in macos 10.9, macCatalyst 13.0 }
+    function showsScale: objcbool; message 'showsScale'; { available in 10_9, 9_0 }
+    procedure setPointOfInterestFilter(newValue: MKPointOfInterestFilter); message 'setPointOfInterestFilter:'; { unavailable in tvos } { available in 10_9, 9_0 }
     function pointOfInterestFilter: MKPointOfInterestFilter; message 'pointOfInterestFilter'; { unavailable in watchos }
     procedure setShowsPointsOfInterest(newValue: objcbool); message 'setShowsPointsOfInterest:'; { unavailable in watchos }
-    function showsPointsOfInterest: objcbool; message 'showsPointsOfInterest'; { unavailable in watchos }
-    procedure setShowsBuildings(newValue: objcbool); message 'setShowsBuildings:'; { available in 10_9, 7_0 }
+    function showsPointsOfInterest: objcbool; message 'showsPointsOfInterest'; { unavailable in watchos } { available in ios 13.0, macos 10.15, tvos 13.0 }
+    procedure setShowsBuildings(newValue: objcbool); message 'setShowsBuildings:'; { available in ios 13.0, macos 10.15, tvos 13.0 }
     function showsBuildings: objcbool; message 'showsBuildings'; { available in 10_9, 7_0 }
     procedure setShowsTraffic(newValue: objcbool); message 'setShowsTraffic:'; { available in 10_11, 9_0 }
-    function showsTraffic: objcbool; message 'showsTraffic'; { available in 10_11, 9_0 }
+    function showsTraffic: objcbool; message 'showsTraffic'; { available in 10_9, 7_0 }
     procedure setShowsUserLocation(newValue: objcbool); message 'setShowsUserLocation:';
     function showsUserLocation: objcbool; message 'showsUserLocation';
     function userLocation: MKUserLocation; message 'userLocation';
@@ -129,7 +129,7 @@ type
     function annotationsInMapRect (mapRect: MKMapRect): NSSet; message 'annotationsInMapRect:'; { available in 10_9, 4_2 }
     function viewForAnnotation (annotation: id): MKAnnotationView; message 'viewForAnnotation:';
     function dequeueReusableAnnotationViewWithIdentifier (identifier: NSString): MKAnnotationView; message 'dequeueReusableAnnotationViewWithIdentifier:';
-    function dequeueReusableAnnotationViewWithIdentifier_forAnnotation (identifier: NSString; annotation: id): MKAnnotationView; message 'dequeueReusableAnnotationViewWithIdentifier:forAnnotation:'; { available in 10_13, 11_0 }
+    function dequeueReusableAnnotationViewWithIdentifier_forAnnotation (identifier: NSString; annotation: id): MKAnnotationView; message 'dequeueReusableAnnotationViewWithIdentifier:forAnnotation:'; { available in 10_9, 4_2 }
     procedure registerClass_forAnnotationViewWithReuseIdentifier (viewClass: pobjc_class; identifier: NSString); message 'registerClass:forAnnotationViewWithReuseIdentifier:'; { available in 10_13, 11_0 }
     procedure selectAnnotation_animated (annotation: id; animated: objcbool); message 'selectAnnotation:animated:';
     procedure deselectAnnotation_animated (annotation: MKAnnotationProtocol; animated: objcbool); message 'deselectAnnotation:animated:';
@@ -160,15 +160,15 @@ type
   OverlaysAPI = objccategory external (MKMapView)
     procedure addOverlay_level (overlay: id; level: MKOverlayLevel); message 'addOverlay:level:'; { available in 10_9, 7_0 }
     procedure addOverlays_level (overlays: NSArray; level: MKOverlayLevel); message 'addOverlays:level:'; { available in 10_9, 7_0 }
-    procedure removeOverlay (overlay: MKOverlayProtocol); message 'removeOverlay:'; { available in 10_9, 4_0 }
-    procedure removeOverlays (overlays: NSArray); message 'removeOverlays:'; { available in 10_9, 4_0 }
-    procedure insertOverlay_atIndex_level (overlay: MKOverlayProtocol; index: NSUInteger; level: MKOverlayLevel); message 'insertOverlay:atIndex:level:'; { available in 10_9, 7_0 }
+    procedure removeOverlay (overlay: MKOverlayProtocol); message 'removeOverlay:'; { available in 10_9, 7_0 }
+    procedure removeOverlays (overlays: NSArray); message 'removeOverlays:'; { available in 10_9, 7_0 }
+    procedure insertOverlay_atIndex_level (overlay: MKOverlayProtocol; index: NSUInteger; level: MKOverlayLevel); message 'insertOverlay:atIndex:level:'; { available in 10_9, 4_0 }
     procedure insertOverlay_aboveOverlay (overlay: MKOverlayProtocol; sibling: MKOverlayProtocol); message 'insertOverlay:aboveOverlay:'; { available in 10_9, 4_0 }
-    procedure insertOverlay_belowOverlay (overlay: MKOverlayProtocol; sibling: id); message 'insertOverlay:belowOverlay:'; { available in 10_9, 4_0 }
-    procedure exchangeOverlay_withOverlay (overlay1: id; overlay2: id); message 'exchangeOverlay:withOverlay:'; { available in 10_9, 7_0 }
+    procedure insertOverlay_belowOverlay (overlay: MKOverlayProtocol; sibling: id); message 'insertOverlay:belowOverlay:'; { available in 10_9, 7_0 }
+    procedure exchangeOverlay_withOverlay (overlay1: id; overlay2: id); message 'exchangeOverlay:withOverlay:'; { available in 10_9, 4_0 }
     function overlays: NSArray; message 'overlays'; { available in 10_9, 4_0 }
     function overlaysInLevel (level: MKOverlayLevel): NSArray; message 'overlaysInLevel:'; { available in 10_9, 7_0 }
-    function rendererForOverlay (overlay: id): MKOverlayRenderer; message 'rendererForOverlay:'; { available in 10_9, 7_0 }
+    function rendererForOverlay (overlay: id): MKOverlayRenderer; message 'rendererForOverlay:'; { available in 10_9, 4_0 }
     {$if defined(TARGET_OS_IPHONE)}
     function viewForOverlay (overlay: MKOverlayProtocol): MKOverlayViewPtr; message 'viewForOverlay:'; { unavailable in macos, tvos, watchos }
     {$endif}
@@ -205,12 +205,12 @@ type
     procedure mapView_didFailToLocateUserWithError (mapView: MKMapView; error: NSError); message 'mapView:didFailToLocateUserWithError:'; { available in 10_9, 4_0 }
     procedure mapView_annotationView_didChangeDragState_fromOldState (mapView: MKMapView; view: MKAnnotationView; newState: MKAnnotationViewDragState; oldState: MKAnnotationViewDragState); message 'mapView:annotationView:didChangeDragState:fromOldState:'; { unavailable in tvos }
     procedure mapView_didChangeUserTrackingMode_animated (mapView: MKMapView; mode: MKUserTrackingMode; animated: objcbool); message 'mapView:didChangeUserTrackingMode:animated:'; { unavailable in watchos }
-    function mapView_rendererForOverlay (mapView: MKMapView; overlay: id): MKOverlayRenderer; message 'mapView:rendererForOverlay:'; { available in 10_9, 7_0 }
-    procedure mapView_didAddOverlayRenderers (mapView: MKMapView; renderers: NSArray); message 'mapView:didAddOverlayRenderers:'; { available in 10_9, 7_0 }
+    function mapView_rendererForOverlay (mapView: MKMapView; overlay: id): MKOverlayRenderer; message 'mapView:rendererForOverlay:'; { available in 10_9, 4_0 }
+    procedure mapView_didAddOverlayRenderers (mapView: MKMapView; renderers: NSArray); message 'mapView:didAddOverlayRenderers:'; { available in ios 5.0, tvos 9.2, macos 11.0 }
     {$if defined(TARGET_OS_IPHONE)}
     function mapView_viewForOverlay (mapView: MKMapView; overlay: id): MKOverlayViewPtr; message 'mapView:viewForOverlay:'; { unavailable in macos, tvos, watchos }
     procedure mapView_didAddOverlayViews (mapView: MKMapView; overlayViews: NSArray); message 'mapView:didAddOverlayViews:'; { unavailable in macos, tvos, watchos }
     {$endif}
-    function mapView_clusterAnnotationForMemberAnnotations (mapView: MKMapView; memberAnnotations: NSArray): MKClusterAnnotation; message 'mapView:clusterAnnotationForMemberAnnotations:'; { unavailable in watchos }
+    function mapView_clusterAnnotationForMemberAnnotations (mapView: MKMapView; memberAnnotations: NSArray): MKClusterAnnotation; message 'mapView:clusterAnnotationForMemberAnnotations:'; { unavailable in macos, tvos, watchos }
   end;
 {$endif}

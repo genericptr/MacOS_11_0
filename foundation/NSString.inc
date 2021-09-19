@@ -14,8 +14,8 @@ const
   NSStringEnumerationByComposedCharacterSequences = 2;
   NSStringEnumerationByWords = 3;
   NSStringEnumerationBySentences = 4;
-  NSStringEnumerationByCaretPositions = 5 { available in macos , ios , watchos , tvos  };
-  NSStringEnumerationByDeletionClusters = 6 { available in macos , ios , watchos , tvos  };
+  NSStringEnumerationByCaretPositions = 5 { available in macos 11.0, ios 14.0, watchos 7.0, tvos 14.0 };
+  NSStringEnumerationByDeletionClusters = 6 { available in macos 11.0, ios 14.0, watchos 7.0, tvos 14.0 };
   NSStringEnumerationReverse = 1 shl 8;
   NSStringEnumerationSubstringNotRequired = 1 shl 9;
   NSStringEnumerationLocalized = 1 shl 10;
@@ -57,10 +57,10 @@ const
   NSBackwardsSearch = 4;
   NSAnchoredSearch = 8;
   NSNumericSearch = 64;
-  NSDiacriticInsensitiveSearch = 128 { available in macos , ios , watchos , tvos  };
-  NSWidthInsensitiveSearch = 256 { available in macos , ios , watchos , tvos  };
-  NSForcedOrderingSearch = 512 { available in macos , ios , watchos , tvos  };
-  NSRegularExpressionSearch = 1024 { available in macos , ios , watchos , tvos  };
+  NSDiacriticInsensitiveSearch = 128 { available in macos 10.5, ios 2.0, watchos 2.0, tvos 9.0 };
+  NSWidthInsensitiveSearch = 256 { available in macos 10.5, ios 2.0, watchos 2.0, tvos 9.0 };
+  NSForcedOrderingSearch = 512 { available in macos 10.5, ios 2.0, watchos 2.0, tvos 9.0 };
+  NSRegularExpressionSearch = 1024 { available in macos 10.7, ios 3.2, watchos 2.0, tvos 9.0 };
 
 type
   NSStringEncoding = NSUInteger;
@@ -104,47 +104,47 @@ type
     function caseInsensitiveCompare (string_: NSString): NSComparisonResult; message 'caseInsensitiveCompare:';
     function localizedCompare (string_: NSString): NSComparisonResult; message 'localizedCompare:';
     function localizedCaseInsensitiveCompare (string_: NSString): NSComparisonResult; message 'localizedCaseInsensitiveCompare:';
-    function localizedStandardCompare (string_: NSString): NSComparisonResult; message 'localizedStandardCompare:'; { available in macos , ios , watchos , tvos  }
+    function localizedStandardCompare (string_: NSString): NSComparisonResult; message 'localizedStandardCompare:'; { available in macos 10.6, ios 4.0, watchos 2.0, tvos 9.0 }
     function isEqualToString (aString: NSString): objcbool; message 'isEqualToString:';
     function hasPrefix (str: NSString): objcbool; message 'hasPrefix:';
     function hasSuffix (str: NSString): objcbool; message 'hasSuffix:';
     function commonPrefixWithString_options (str: NSString; mask: NSStringCompareOptions): NSString; message 'commonPrefixWithString:options:';
-    function containsString (str: NSString): objcbool; message 'containsString:'; { available in macos , ios , watchos , tvos  }
-    function localizedCaseInsensitiveContainsString (str: NSString): objcbool; message 'localizedCaseInsensitiveContainsString:'; { available in macos , ios , watchos , tvos  }
-    function localizedStandardContainsString (str: NSString): objcbool; message 'localizedStandardContainsString:'; { available in macos , ios , watchos , tvos  }
-    function localizedStandardRangeOfString (str: NSString): NSRange; message 'localizedStandardRangeOfString:'; { available in macos , ios , watchos , tvos  }
+    function containsString (str: NSString): objcbool; message 'containsString:'; { available in macos 10.10, ios 8.0, watchos 2.0, tvos 9.0 }
+    function localizedCaseInsensitiveContainsString (str: NSString): objcbool; message 'localizedCaseInsensitiveContainsString:'; { available in macos 10.10, ios 8.0, watchos 2.0, tvos 9.0 }
+    function localizedStandardContainsString (str: NSString): objcbool; message 'localizedStandardContainsString:'; { available in macos 10.11, ios 9.0, watchos 2.0, tvos 9.0 }
+    function localizedStandardRangeOfString (str: NSString): NSRange; message 'localizedStandardRangeOfString:'; { available in macos 10.11, ios 9.0, watchos 2.0, tvos 9.0 }
     function rangeOfString (searchString: NSString): NSRange; message 'rangeOfString:';
     function rangeOfString_options (searchString: NSString; mask: NSStringCompareOptions): NSRange; message 'rangeOfString:options:';
     function rangeOfString_options_range (searchString: NSString; mask: NSStringCompareOptions; rangeOfReceiverToSearch: NSRange): NSRange; message 'rangeOfString:options:range:';
-    function rangeOfString_options_range_locale (searchString: NSString; mask: NSStringCompareOptions; rangeOfReceiverToSearch: NSRange; locale: NSLocale): NSRange; message 'rangeOfString:options:range:locale:'; { available in macos , ios , watchos , tvos  }
+    function rangeOfString_options_range_locale (searchString: NSString; mask: NSStringCompareOptions; rangeOfReceiverToSearch: NSRange; locale: NSLocale): NSRange; message 'rangeOfString:options:range:locale:'; { available in macos 10.5, ios 2.0, watchos 2.0, tvos 9.0 }
     function rangeOfCharacterFromSet (searchSet: NSCharacterSet): NSRange; message 'rangeOfCharacterFromSet:';
     function rangeOfCharacterFromSet_options (searchSet: NSCharacterSet; mask: NSStringCompareOptions): NSRange; message 'rangeOfCharacterFromSet:options:';
     function rangeOfCharacterFromSet_options_range (searchSet: NSCharacterSet; mask: NSStringCompareOptions; rangeOfReceiverToSearch: NSRange): NSRange; message 'rangeOfCharacterFromSet:options:range:';
     function rangeOfComposedCharacterSequenceAtIndex (index: NSUInteger): NSRange; message 'rangeOfComposedCharacterSequenceAtIndex:';
-    function rangeOfComposedCharacterSequencesForRange (range: NSRange): NSRange; message 'rangeOfComposedCharacterSequencesForRange:'; { available in macos , ios , watchos , tvos  }
+    function rangeOfComposedCharacterSequencesForRange (range: NSRange): NSRange; message 'rangeOfComposedCharacterSequencesForRange:'; { available in macos 10.5, ios 2.0, watchos 2.0, tvos 9.0 }
     function stringByAppendingString (aString: NSString): NSString; message 'stringByAppendingString:';
     function stringByAppendingFormat (format: NSString): NSString; varargs; message 'stringByAppendingFormat:';
     function doubleValue: double; message 'doubleValue';
     function floatValue: single; message 'floatValue';
     function intValue: cint; message 'intValue';
-    function integerValue: NSInteger; message 'integerValue'; { available in macos , ios , watchos , tvos  }
-    function longLongValue: clonglong; message 'longLongValue'; { available in macos , ios , watchos , tvos  }
-    function boolValue: objcbool; message 'boolValue'; { available in macos , ios , watchos , tvos  }
+    function integerValue: NSInteger; message 'integerValue'; { available in macos 10.5, ios 2.0, watchos 2.0, tvos 9.0 }
+    function longLongValue: clonglong; message 'longLongValue'; { available in macos 10.5, ios 2.0, watchos 2.0, tvos 9.0 }
+    function boolValue: objcbool; message 'boolValue'; { available in macos 10.5, ios 2.0, watchos 2.0, tvos 9.0 }
     function uppercaseString: NSString; message 'uppercaseString';
     function lowercaseString: NSString; message 'lowercaseString';
     function capitalizedString: NSString; message 'capitalizedString';
-    function localizedUppercaseString: NSString; message 'localizedUppercaseString'; { available in macos , ios , watchos , tvos  }
-    function localizedLowercaseString: NSString; message 'localizedLowercaseString'; { available in macos , ios , watchos , tvos  }
-    function localizedCapitalizedString: NSString; message 'localizedCapitalizedString'; { available in macos , ios , watchos , tvos  }
-    function uppercaseStringWithLocale (locale: NSLocale): NSString; message 'uppercaseStringWithLocale:'; { available in macos , ios , watchos , tvos  }
-    function lowercaseStringWithLocale (locale: NSLocale): NSString; message 'lowercaseStringWithLocale:'; { available in macos , ios , watchos , tvos  }
-    function capitalizedStringWithLocale (locale: NSLocale): NSString; message 'capitalizedStringWithLocale:'; { available in macos , ios , watchos , tvos  }
+    function localizedUppercaseString: NSString; message 'localizedUppercaseString'; { available in macos 10.11, ios 9.0, watchos 2.0, tvos 9.0 }
+    function localizedLowercaseString: NSString; message 'localizedLowercaseString'; { available in macos 10.11, ios 9.0, watchos 2.0, tvos 9.0 }
+    function localizedCapitalizedString: NSString; message 'localizedCapitalizedString'; { available in macos 10.11, ios 9.0, watchos 2.0, tvos 9.0 }
+    function uppercaseStringWithLocale (locale: NSLocale): NSString; message 'uppercaseStringWithLocale:'; { available in macos 10.8, ios 6.0, watchos 2.0, tvos 9.0 }
+    function lowercaseStringWithLocale (locale: NSLocale): NSString; message 'lowercaseStringWithLocale:'; { available in macos 10.8, ios 6.0, watchos 2.0, tvos 9.0 }
+    function capitalizedStringWithLocale (locale: NSLocale): NSString; message 'capitalizedStringWithLocale:'; { available in macos 10.8, ios 6.0, watchos 2.0, tvos 9.0 }
     procedure getLineStart_end_contentsEnd_forRange (startPtr: NSUIntegerPtr; lineEndPtr: NSUIntegerPtr; contentsEndPtr: NSUIntegerPtr; range: NSRange); message 'getLineStart:end:contentsEnd:forRange:';
     function lineRangeForRange (range: NSRange): NSRange; message 'lineRangeForRange:';
     procedure getParagraphStart_end_contentsEnd_forRange (startPtr: NSUIntegerPtr; parEndPtr: NSUIntegerPtr; contentsEndPtr: NSUIntegerPtr; range: NSRange); message 'getParagraphStart:end:contentsEnd:forRange:';
     function paragraphRangeForRange (range: NSRange): NSRange; message 'paragraphRangeForRange:';
-    procedure enumerateSubstringsInRange_options_usingBlock (range: NSRange; opts: NSStringEnumerationOptions; block: NSStringEnumerateSubstringsInRangeCallback); message 'enumerateSubstringsInRange:options:usingBlock:'; { available in macos , ios , watchos , tvos  }
-    procedure enumerateLinesUsingBlock (block: NSStringEnumerateLinesUsingBlockCallback); message 'enumerateLinesUsingBlock:'; { available in macos , ios , watchos , tvos  }
+    procedure enumerateSubstringsInRange_options_usingBlock (range: NSRange; opts: NSStringEnumerationOptions; block: NSStringEnumerateSubstringsInRangeCallback); message 'enumerateSubstringsInRange:options:usingBlock:'; { available in macos 10.6, ios 4.0, watchos 2.0, tvos 9.0 }
+    procedure enumerateLinesUsingBlock (block: NSStringEnumerateLinesUsingBlockCallback); message 'enumerateLinesUsingBlock:'; { available in macos 10.6, ios 4.0, watchos 2.0, tvos 9.0 }
     function UTF8String: PChar; message 'UTF8String';
     function fastestEncoding: NSStringEncoding; message 'fastestEncoding';
     function smallestEncoding: NSStringEncoding; message 'smallestEncoding';
@@ -164,14 +164,14 @@ type
     function decomposedStringWithCompatibilityMapping: NSString; message 'decomposedStringWithCompatibilityMapping';
     function precomposedStringWithCompatibilityMapping: NSString; message 'precomposedStringWithCompatibilityMapping';
     function componentsSeparatedByString (separator: NSString): NSArray; message 'componentsSeparatedByString:';
-    function componentsSeparatedByCharactersInSet (separator: NSCharacterSet): NSArray; message 'componentsSeparatedByCharactersInSet:'; { available in macos , ios , watchos , tvos  }
+    function componentsSeparatedByCharactersInSet (separator: NSCharacterSet): NSArray; message 'componentsSeparatedByCharactersInSet:'; { available in macos 10.5, ios 2.0, watchos 2.0, tvos 9.0 }
     function stringByTrimmingCharactersInSet (set_: NSCharacterSet): NSString; message 'stringByTrimmingCharactersInSet:';
     function stringByPaddingToLength_withString_startingAtIndex (newLength: NSUInteger; padString: NSString; padIndex: NSUInteger): NSString; message 'stringByPaddingToLength:withString:startingAtIndex:';
-    function stringByFoldingWithOptions_locale (options: NSStringCompareOptions; locale: NSLocale): NSString; message 'stringByFoldingWithOptions:locale:'; { available in macos , ios , watchos , tvos  }
-    function stringByReplacingOccurrencesOfString_withString_options_range (target: NSString; replacement: NSString; options: NSStringCompareOptions; searchRange: NSRange): NSString; message 'stringByReplacingOccurrencesOfString:withString:options:range:'; { available in macos , ios , watchos , tvos  }
-    function stringByReplacingOccurrencesOfString_withString (target: NSString; replacement: NSString): NSString; message 'stringByReplacingOccurrencesOfString:withString:'; { available in macos , ios , watchos , tvos  }
-    function stringByReplacingCharactersInRange_withString (range: NSRange; replacement: NSString): NSString; message 'stringByReplacingCharactersInRange:withString:'; { available in macos , ios , watchos , tvos  }
-    function stringByApplyingTransform_reverse (transform: NSStringTransform; reverse: objcbool): NSString; message 'stringByApplyingTransform:reverse:'; { available in macos , ios , watchos , tvos  }
+    function stringByFoldingWithOptions_locale (options: NSStringCompareOptions; locale: NSLocale): NSString; message 'stringByFoldingWithOptions:locale:'; { available in macos 10.5, ios 2.0, watchos 2.0, tvos 9.0 }
+    function stringByReplacingOccurrencesOfString_withString_options_range (target: NSString; replacement: NSString; options: NSStringCompareOptions; searchRange: NSRange): NSString; message 'stringByReplacingOccurrencesOfString:withString:options:range:'; { available in macos 10.5, ios 2.0, watchos 2.0, tvos 9.0 }
+    function stringByReplacingOccurrencesOfString_withString (target: NSString; replacement: NSString): NSString; message 'stringByReplacingOccurrencesOfString:withString:'; { available in macos 10.5, ios 2.0, watchos 2.0, tvos 9.0 }
+    function stringByReplacingCharactersInRange_withString (range: NSRange; replacement: NSString): NSString; message 'stringByReplacingCharactersInRange:withString:'; { available in macos 10.5, ios 2.0, watchos 2.0, tvos 9.0 }
+    function stringByApplyingTransform_reverse (transform: NSStringTransform; reverse: objcbool): NSString; message 'stringByApplyingTransform:reverse:'; { available in macos 10.11, ios 9.0, watchos 2.0, tvos 9.0 }
     function writeToURL_atomically_encoding_error (url: NSURL; useAuxiliaryFile: objcbool; enc: NSStringEncoding; error: NSErrorPtr): objcbool; message 'writeToURL:atomically:encoding:error:';
     function writeToFile_atomically_encoding_error (path: NSString; useAuxiliaryFile: objcbool; enc: NSStringEncoding; error: NSErrorPtr): objcbool; message 'writeToFile:atomically:encoding:error:';
     function description: NSString; message 'description';
@@ -218,7 +218,7 @@ type
 
 type
   NSStringEncodingDetection = objccategory external (NSString)
-    class function stringEncodingForData_encodingOptions_convertedString_usedLossyConversion (data: NSData; opts: NSDictionary; string_: NSStringPtr; usedLossyConversion: objcboolPtr): NSStringEncoding; message 'stringEncodingForData:encodingOptions:convertedString:usedLossyConversion:'; { available in macos , ios , watchos , tvos  }
+    class function stringEncodingForData_encodingOptions_convertedString_usedLossyConversion (data: NSData; opts: NSDictionary; string_: NSStringPtr; usedLossyConversion: objcboolPtr): NSStringEncoding; message 'stringEncodingForData:encodingOptions:convertedString:usedLossyConversion:'; { available in macos 10.10, ios 8.0, watchos 2.0, tvos 9.0 }
   end;
 
 type
@@ -241,7 +241,7 @@ type
     procedure appendFormat (format: NSString); varargs; message 'appendFormat:';
     procedure setString (aString: NSString); message 'setString:';
     function replaceOccurrencesOfString_withString_options_range (target: NSString; replacement: NSString; options: NSStringCompareOptions; searchRange: NSRange): NSUInteger; message 'replaceOccurrencesOfString:withString:options:range:';
-    function applyTransform_reverse_range_updatedRange (transform: NSStringTransform; reverse: objcbool; range: NSRange; resultingRange: NSRangePointer): objcbool; message 'applyTransform:reverse:range:updatedRange:'; { available in macos , ios , watchos , tvos  }
+    function applyTransform_reverse_range_updatedRange (transform: NSStringTransform; reverse: objcbool; range: NSRange; resultingRange: NSRangePointer): objcbool; message 'applyTransform:reverse:range:updatedRange:'; { available in macos 10.11, ios 9.0, watchos 2.0, tvos 9.0 }
     function initWithCapacity (capacity: NSUInteger): NSMutableString; message 'initWithCapacity:';
     class function stringWithCapacity (capacity: NSUInteger): NSMutableString; message 'stringWithCapacity:';
   end;

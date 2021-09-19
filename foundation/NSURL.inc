@@ -42,8 +42,8 @@ const
   NSURLBookmarkCreationPreferFileIDResolution = 1 shl 8 deprecated 'Not supported';
   NSURLBookmarkCreationMinimalBookmark = 1 shl 9;
   NSURLBookmarkCreationSuitableForBookmarkFile = 1 shl 10;
-  NSURLBookmarkCreationWithSecurityScope = 1 shl 11 { unavailable in ios, watchos, tvos };
-  NSURLBookmarkCreationSecurityScopeAllowOnlyReadAccess = 1 shl 12 { unavailable in ios, watchos, tvos };
+  NSURLBookmarkCreationWithSecurityScope = 1 shl 11 { unavailable in ios, watchos, tvos } { available in macos 10.7, macCatalyst 13.0 };
+  NSURLBookmarkCreationSecurityScopeAllowOnlyReadAccess = 1 shl 12 { unavailable in ios, watchos, tvos } { available in macos 10.7, macCatalyst 13.0 };
 
 type
   NSURLBookmarkResolutionOptions = NSUInteger;
@@ -53,7 +53,7 @@ type
 const
   NSURLBookmarkResolutionWithoutUI = 1 shl 8;
   NSURLBookmarkResolutionWithoutMounting = 1 shl 9;
-  NSURLBookmarkResolutionWithSecurityScope = 1 shl 10 { unavailable in ios, watchos, tvos };
+  NSURLBookmarkResolutionWithSecurityScope = 1 shl 10 { unavailable in ios, watchos, tvos } { available in macos 10.7, macCatalyst 13.0 };
 
 type
   NSURLBookmarkFileCreationOptions = NSUInteger;
@@ -87,25 +87,25 @@ type
     _reserved: pointer;
   public
     function initWithScheme_host_path (scheme: NSString; host: NSString; path: NSString): id; message 'initWithScheme:host:path:'; deprecated 'Use NSURLComponents instead, which lets you create a valid URL with any valid combination of URL components and subcomponents (not just scheme, host and path), and lets you set components and subcomponents with either percent-encoded or un-percent-encoded strings.';
-    function initFileURLWithPath_isDirectory_relativeToURL (path: NSString; isDir: objcbool; baseURL: NSURL): id; message 'initFileURLWithPath:isDirectory:relativeToURL:'; { available in macos , ios , watchos , tvos  }
-    function initFileURLWithPath_relativeToURL (path: NSString; baseURL: NSURL): id; message 'initFileURLWithPath:relativeToURL:'; { available in macos , ios , watchos , tvos  }
-    function initFileURLWithPath_isDirectory (path: NSString; isDir: objcbool): id; message 'initFileURLWithPath:isDirectory:'; { available in macos , ios , watchos , tvos  }
+    function initFileURLWithPath_isDirectory_relativeToURL (path: NSString; isDir: objcbool; baseURL: NSURL): id; message 'initFileURLWithPath:isDirectory:relativeToURL:'; { available in macos 10.11, ios 9.0, watchos 2.0, tvos 9.0 }
+    function initFileURLWithPath_relativeToURL (path: NSString; baseURL: NSURL): id; message 'initFileURLWithPath:relativeToURL:'; { available in macos 10.11, ios 9.0, watchos 2.0, tvos 9.0 }
+    function initFileURLWithPath_isDirectory (path: NSString; isDir: objcbool): id; message 'initFileURLWithPath:isDirectory:'; { available in macos 10.5, ios 2.0, watchos 2.0, tvos 9.0 }
     function initFileURLWithPath (path: NSString): id; message 'initFileURLWithPath:'; { NS_DESIGNATED_INITIALIZER }
-    class function fileURLWithPath_isDirectory_relativeToURL (path: NSString; isDir: objcbool; baseURL: NSURL): NSURL; message 'fileURLWithPath:isDirectory:relativeToURL:'; { available in macos , ios , watchos , tvos  }
-    class function fileURLWithPath_relativeToURL (path: NSString; baseURL: NSURL): NSURL; message 'fileURLWithPath:relativeToURL:'; { available in macos , ios , watchos , tvos  }
-    class function fileURLWithPath_isDirectory (path: NSString; isDir: objcbool): NSURL; message 'fileURLWithPath:isDirectory:'; { available in macos , ios , watchos , tvos  }
+    class function fileURLWithPath_isDirectory_relativeToURL (path: NSString; isDir: objcbool; baseURL: NSURL): NSURL; message 'fileURLWithPath:isDirectory:relativeToURL:'; { available in macos 10.11, ios 9.0, watchos 2.0, tvos 9.0 }
+    class function fileURLWithPath_relativeToURL (path: NSString; baseURL: NSURL): NSURL; message 'fileURLWithPath:relativeToURL:'; { available in macos 10.11, ios 9.0, watchos 2.0, tvos 9.0 }
+    class function fileURLWithPath_isDirectory (path: NSString; isDir: objcbool): NSURL; message 'fileURLWithPath:isDirectory:'; { available in macos 10.5, ios 2.0, watchos 2.0, tvos 9.0 }
     class function fileURLWithPath (path: NSString): NSURL; message 'fileURLWithPath:';
-    function initFileURLWithFileSystemRepresentation_isDirectory_relativeToURL (path: PChar; isDir: objcbool; baseURL: NSURL): id; message 'initFileURLWithFileSystemRepresentation:isDirectory:relativeToURL:'; { available in macos , ios , watchos , tvos  }
-    class function fileURLWithFileSystemRepresentation_isDirectory_relativeToURL (path: PChar; isDir: objcbool; baseURL: NSURL): NSURL; message 'fileURLWithFileSystemRepresentation:isDirectory:relativeToURL:'; { available in macos , ios , watchos , tvos  }
+    function initFileURLWithFileSystemRepresentation_isDirectory_relativeToURL (path: PChar; isDir: objcbool; baseURL: NSURL): id; message 'initFileURLWithFileSystemRepresentation:isDirectory:relativeToURL:'; { available in macos 10.9, ios 7.0, watchos 2.0, tvos 9.0 }
+    class function fileURLWithFileSystemRepresentation_isDirectory_relativeToURL (path: PChar; isDir: objcbool; baseURL: NSURL): NSURL; message 'fileURLWithFileSystemRepresentation:isDirectory:relativeToURL:'; { available in macos 10.9, ios 7.0, watchos 2.0, tvos 9.0 }
     function initWithString (URLString: NSString): id; message 'initWithString:';
     function initWithString_relativeToURL (URLString: NSString; baseURL: NSURL): id; message 'initWithString:relativeToURL:'; { NS_DESIGNATED_INITIALIZER }
     class function URLWithString (URLString: NSString): id; message 'URLWithString:';
     class function URLWithString_relativeToURL (URLString: NSString; baseURL: NSURL): id; message 'URLWithString:relativeToURL:';
-    function initWithDataRepresentation_relativeToURL (data: NSData; baseURL: NSURL): id; message 'initWithDataRepresentation:relativeToURL:'; { available in macos , ios , watchos , tvos  }
-    class function URLWithDataRepresentation_relativeToURL (data: NSData; baseURL: NSURL): NSURL; message 'URLWithDataRepresentation:relativeToURL:'; { available in macos , ios , watchos , tvos  }
-    function initAbsoluteURLWithDataRepresentation_relativeToURL (data: NSData; baseURL: NSURL): id; message 'initAbsoluteURLWithDataRepresentation:relativeToURL:'; { available in macos , ios , watchos , tvos  }
-    class function absoluteURLWithDataRepresentation_relativeToURL (data: NSData; baseURL: NSURL): NSURL; message 'absoluteURLWithDataRepresentation:relativeToURL:'; { available in macos , ios , watchos , tvos  }
-    function dataRepresentation: NSData; message 'dataRepresentation'; { available in macos , ios , watchos , tvos  }
+    function initWithDataRepresentation_relativeToURL (data: NSData; baseURL: NSURL): id; message 'initWithDataRepresentation:relativeToURL:'; { available in macos 10.11, ios 9.0, watchos 2.0, tvos 9.0 }
+    class function URLWithDataRepresentation_relativeToURL (data: NSData; baseURL: NSURL): NSURL; message 'URLWithDataRepresentation:relativeToURL:'; { available in macos 10.11, ios 9.0, watchos 2.0, tvos 9.0 }
+    function initAbsoluteURLWithDataRepresentation_relativeToURL (data: NSData; baseURL: NSURL): id; message 'initAbsoluteURLWithDataRepresentation:relativeToURL:'; { available in macos 10.11, ios 9.0, watchos 2.0, tvos 9.0 }
+    class function absoluteURLWithDataRepresentation_relativeToURL (data: NSData; baseURL: NSURL): NSURL; message 'absoluteURLWithDataRepresentation:relativeToURL:'; { available in macos 10.11, ios 9.0, watchos 2.0, tvos 9.0 }
+    function dataRepresentation: NSData; message 'dataRepresentation'; { available in macos 10.11, ios 9.0, watchos 2.0, tvos 9.0 }
     function absoluteString: NSString; message 'absoluteString';
     function relativeString: NSString; message 'relativeString';
     function baseURL: NSURL; message 'baseURL';
@@ -121,31 +121,31 @@ type
     function parameterString: NSString; message 'parameterString'; deprecated 'The parameterString method is deprecated. Post deprecation for applications linked with or after the macOS 10.15, and for all iOS, watchOS, and tvOS applications, parameterString will always return nil, and the path method will return the complete path including the semicolon separator and params component if the URL string contains them.';
     function query: NSString; message 'query';
     function relativePath: NSString; message 'relativePath';
-    function hasDirectoryPath: objcbool; message 'hasDirectoryPath'; { available in macos , ios , watchos , tvos  }
-    function getFileSystemRepresentation_maxLength (buffer: PChar; maxBufferLength: NSUInteger): objcbool; message 'getFileSystemRepresentation:maxLength:'; { available in macos , ios , watchos , tvos  }
-    function fileSystemRepresentation: PChar; message 'fileSystemRepresentation'; { available in macos , ios , watchos , tvos  }
+    function hasDirectoryPath: objcbool; message 'hasDirectoryPath'; { available in macos 10.11, ios 9.0, watchos 2.0, tvos 9.0 }
+    function getFileSystemRepresentation_maxLength (buffer: PChar; maxBufferLength: NSUInteger): objcbool; message 'getFileSystemRepresentation:maxLength:'; { available in macos 10.9, ios 7.0, watchos 2.0, tvos 9.0 }
+    function fileSystemRepresentation: PChar; message 'fileSystemRepresentation'; { available in macos 10.9, ios 7.0, watchos 2.0, tvos 9.0 }
     function isFileURL: objcbool; message 'isFileURL';
     function standardizedURL: NSURL; message 'standardizedURL';
-    function checkResourceIsReachableAndReturnError (error: NSErrorPtr): objcbool; message 'checkResourceIsReachableAndReturnError:'; { available in macos , ios , watchos , tvos  }
-    function isFileReferenceURL: objcbool; message 'isFileReferenceURL'; { available in macos , ios , watchos , tvos  }
-    function fileReferenceURL: NSURL; message 'fileReferenceURL'; { available in macos , ios , watchos , tvos  }
-    function filePathURL: NSURL; message 'filePathURL'; { available in macos , ios , watchos , tvos  }
-    function getResourceValue_forKey_error (value: idPtr; key: NSURLResourceKey; error: NSErrorPtr): objcbool; message 'getResourceValue:forKey:error:'; { available in macos , ios , watchos , tvos  }
-    function resourceValuesForKeys_error (keys: NSArray; error: NSErrorPtr): NSDictionary; message 'resourceValuesForKeys:error:'; { available in macos , ios , watchos , tvos  }
-    function setResourceValue_forKey_error (value: id; key: NSURLResourceKey; error: NSErrorPtr): objcbool; message 'setResourceValue:forKey:error:'; { available in macos , ios , watchos , tvos  }
-    function setResourceValues_error (keyedValues: NSDictionary; error: NSErrorPtr): objcbool; message 'setResourceValues:error:'; { available in macos , ios , watchos , tvos  }
-    procedure removeCachedResourceValueForKey (key: NSURLResourceKey); message 'removeCachedResourceValueForKey:'; { available in macos , ios , watchos , tvos  }
-    procedure removeAllCachedResourceValues; message 'removeAllCachedResourceValues'; { available in macos , ios , watchos , tvos  }
-    procedure setTemporaryResourceValue_forKey (value: id; key: NSURLResourceKey); message 'setTemporaryResourceValue:forKey:'; { available in macos , ios , watchos , tvos  }
-    function bookmarkDataWithOptions_includingResourceValuesForKeys_relativeToURL_error (options: NSURLBookmarkCreationOptions; keys: NSArray; relativeURL: NSURL; error: NSErrorPtr): NSData; message 'bookmarkDataWithOptions:includingResourceValuesForKeys:relativeToURL:error:'; { available in macos , ios , watchos , tvos  }
-    function initByResolvingBookmarkData_options_relativeToURL_bookmarkDataIsStale_error (bookmarkData: NSData; options: NSURLBookmarkResolutionOptions; relativeURL: NSURL; isStale: objcboolPtr; error: NSErrorPtr): id; message 'initByResolvingBookmarkData:options:relativeToURL:bookmarkDataIsStale:error:'; { available in macos , ios , watchos , tvos  }
-    class function URLByResolvingBookmarkData_options_relativeToURL_bookmarkDataIsStale_error (bookmarkData: NSData; options: NSURLBookmarkResolutionOptions; relativeURL: NSURL; isStale: objcboolPtr; error: NSErrorPtr): id; message 'URLByResolvingBookmarkData:options:relativeToURL:bookmarkDataIsStale:error:'; { available in macos , ios , watchos , tvos  }
-    class function resourceValuesForKeys_fromBookmarkData (keys: NSArray; bookmarkData: NSData): NSDictionary; message 'resourceValuesForKeys:fromBookmarkData:'; { available in macos , ios , watchos , tvos  }
-    class function writeBookmarkData_toURL_options_error (bookmarkData: NSData; bookmarkFileURL: NSURL; options: NSURLBookmarkFileCreationOptions; error: NSErrorPtr): objcbool; message 'writeBookmarkData:toURL:options:error:'; { available in macos , ios , watchos , tvos  }
-    class function bookmarkDataWithContentsOfURL_error (bookmarkFileURL: NSURL; error: NSErrorPtr): NSData; message 'bookmarkDataWithContentsOfURL:error:'; { available in macos , ios , watchos , tvos  }
-    class function URLByResolvingAliasFileAtURL_options_error (url: NSURL; options: NSURLBookmarkResolutionOptions; error: NSErrorPtr): id; message 'URLByResolvingAliasFileAtURL:options:error:'; { available in macos , ios , watchos , tvos  }
-    function startAccessingSecurityScopedResource: objcbool; message 'startAccessingSecurityScopedResource'; { available in macos , ios , watchos , tvos  }
-    procedure stopAccessingSecurityScopedResource; message 'stopAccessingSecurityScopedResource'; { available in macos , ios , watchos , tvos  }
+    function checkResourceIsReachableAndReturnError (error: NSErrorPtr): objcbool; message 'checkResourceIsReachableAndReturnError:'; { available in macos 10.6, ios 4.0, watchos 2.0, tvos 9.0 }
+    function isFileReferenceURL: objcbool; message 'isFileReferenceURL'; { available in macos 10.6, ios 4.0, watchos 2.0, tvos 9.0 }
+    function fileReferenceURL: NSURL; message 'fileReferenceURL'; { available in macos 10.6, ios 4.0, watchos 2.0, tvos 9.0 }
+    function filePathURL: NSURL; message 'filePathURL'; { available in macos 10.6, ios 4.0, watchos 2.0, tvos 9.0 }
+    function getResourceValue_forKey_error (value: idPtr; key: NSURLResourceKey; error: NSErrorPtr): objcbool; message 'getResourceValue:forKey:error:'; { available in macos 10.6, ios 4.0, watchos 2.0, tvos 9.0 }
+    function resourceValuesForKeys_error (keys: NSArray; error: NSErrorPtr): NSDictionary; message 'resourceValuesForKeys:error:'; { available in macos 10.6, ios 4.0, watchos 2.0, tvos 9.0 }
+    function setResourceValue_forKey_error (value: id; key: NSURLResourceKey; error: NSErrorPtr): objcbool; message 'setResourceValue:forKey:error:'; { available in macos 10.6, ios 4.0, watchos 2.0, tvos 9.0 }
+    function setResourceValues_error (keyedValues: NSDictionary; error: NSErrorPtr): objcbool; message 'setResourceValues:error:'; { available in macos 10.6, ios 4.0, watchos 2.0, tvos 9.0 }
+    procedure removeCachedResourceValueForKey (key: NSURLResourceKey); message 'removeCachedResourceValueForKey:'; { available in macos 10.9, ios 7.0, watchos 2.0, tvos 9.0 }
+    procedure removeAllCachedResourceValues; message 'removeAllCachedResourceValues'; { available in macos 10.9, ios 7.0, watchos 2.0, tvos 9.0 }
+    procedure setTemporaryResourceValue_forKey (value: id; key: NSURLResourceKey); message 'setTemporaryResourceValue:forKey:'; { available in macos 10.9, ios 7.0, watchos 2.0, tvos 9.0 }
+    function bookmarkDataWithOptions_includingResourceValuesForKeys_relativeToURL_error (options: NSURLBookmarkCreationOptions; keys: NSArray; relativeURL: NSURL; error: NSErrorPtr): NSData; message 'bookmarkDataWithOptions:includingResourceValuesForKeys:relativeToURL:error:'; { available in macos 10.6, ios 4.0, watchos 2.0, tvos 9.0 }
+    function initByResolvingBookmarkData_options_relativeToURL_bookmarkDataIsStale_error (bookmarkData: NSData; options: NSURLBookmarkResolutionOptions; relativeURL: NSURL; isStale: objcboolPtr; error: NSErrorPtr): id; message 'initByResolvingBookmarkData:options:relativeToURL:bookmarkDataIsStale:error:'; { available in macos 10.6, ios 4.0, watchos 2.0, tvos 9.0 }
+    class function URLByResolvingBookmarkData_options_relativeToURL_bookmarkDataIsStale_error (bookmarkData: NSData; options: NSURLBookmarkResolutionOptions; relativeURL: NSURL; isStale: objcboolPtr; error: NSErrorPtr): id; message 'URLByResolvingBookmarkData:options:relativeToURL:bookmarkDataIsStale:error:'; { available in macos 10.6, ios 4.0, watchos 2.0, tvos 9.0 }
+    class function resourceValuesForKeys_fromBookmarkData (keys: NSArray; bookmarkData: NSData): NSDictionary; message 'resourceValuesForKeys:fromBookmarkData:'; { available in macos 10.6, ios 4.0, watchos 2.0, tvos 9.0 }
+    class function writeBookmarkData_toURL_options_error (bookmarkData: NSData; bookmarkFileURL: NSURL; options: NSURLBookmarkFileCreationOptions; error: NSErrorPtr): objcbool; message 'writeBookmarkData:toURL:options:error:'; { available in macos 10.6, ios 4.0, watchos 2.0, tvos 9.0 }
+    class function bookmarkDataWithContentsOfURL_error (bookmarkFileURL: NSURL; error: NSErrorPtr): NSData; message 'bookmarkDataWithContentsOfURL:error:'; { available in macos 10.6, ios 4.0, watchos 2.0, tvos 9.0 }
+    class function URLByResolvingAliasFileAtURL_options_error (url: NSURL; options: NSURLBookmarkResolutionOptions; error: NSErrorPtr): id; message 'URLByResolvingAliasFileAtURL:options:error:'; { available in macos 10.10, ios 8.0, watchos 2.0, tvos 9.0 }
+    function startAccessingSecurityScopedResource: objcbool; message 'startAccessingSecurityScopedResource'; { available in macos 10.7, ios 8.0, watchos 2.0, tvos 9.0 }
+    procedure stopAccessingSecurityScopedResource; message 'stopAccessingSecurityScopedResource'; { available in macos 10.7, ios 8.0, watchos 2.0, tvos 9.0 }
 
     { Adopted protocols }
     function copyWithZone (zone: NSZonePtr): id; message 'copyWithZone:';
@@ -157,9 +157,9 @@ type
 
 type
   NSPromisedItems = objccategory external (NSURL)
-    function getPromisedItemResourceValue_forKey_error (value: idPtr; key: NSURLResourceKey; error: NSErrorPtr): objcbool; message 'getPromisedItemResourceValue:forKey:error:'; { available in macos , ios , watchos , tvos  }
-    function promisedItemResourceValuesForKeys_error (keys: NSArray; error: NSErrorPtr): NSDictionary; message 'promisedItemResourceValuesForKeys:error:'; { available in macos , ios , watchos , tvos  }
-    function checkPromisedItemIsReachableAndReturnError (error: NSErrorPtr): objcbool; message 'checkPromisedItemIsReachableAndReturnError:'; { available in macos , ios , watchos , tvos  }
+    function getPromisedItemResourceValue_forKey_error (value: idPtr; key: NSURLResourceKey; error: NSErrorPtr): objcbool; message 'getPromisedItemResourceValue:forKey:error:'; { available in macos 10.10, ios 8.0, watchos 2.0, tvos 9.0 }
+    function promisedItemResourceValuesForKeys_error (keys: NSArray; error: NSErrorPtr): NSDictionary; message 'promisedItemResourceValuesForKeys:error:'; { available in macos 10.10, ios 8.0, watchos 2.0, tvos 9.0 }
+    function checkPromisedItemIsReachableAndReturnError (error: NSErrorPtr): objcbool; message 'checkPromisedItemIsReachableAndReturnError:'; { available in macos 10.10, ios 8.0, watchos 2.0, tvos 9.0 }
   end;
 
 type
@@ -195,7 +195,7 @@ type
     class function componentsWithString (URLString: NSString): id; message 'componentsWithString:';
     function URL: NSURL; message 'URL';
     function URLRelativeToURL (baseURL: NSURL): NSURL; message 'URLRelativeToURL:';
-    function string_: NSString; message 'string'; { available in macos , ios , watchos , tvos  }
+    function string_: NSString; message 'string'; { available in macos 10.10, ios 8.0, watchos 2.0, tvos 9.0 }
     procedure setScheme(newValue: NSString); message 'setScheme:';
     function scheme: NSString; message 'scheme';
     procedure setUser(newValue: NSString); message 'setUser:';
@@ -224,18 +224,18 @@ type
     function percentEncodedQuery: NSString; message 'percentEncodedQuery';
     procedure setPercentEncodedFragment(newValue: NSString); message 'setPercentEncodedFragment:';
     function percentEncodedFragment: NSString; message 'percentEncodedFragment';
-    function rangeOfScheme: NSRange; message 'rangeOfScheme'; { available in macos , ios , watchos , tvos  }
-    function rangeOfUser: NSRange; message 'rangeOfUser'; { available in macos , ios , watchos , tvos  }
-    function rangeOfPassword: NSRange; message 'rangeOfPassword'; { available in macos , ios , watchos , tvos  }
-    function rangeOfHost: NSRange; message 'rangeOfHost'; { available in macos , ios , watchos , tvos  }
-    function rangeOfPort: NSRange; message 'rangeOfPort'; { available in macos , ios , watchos , tvos  }
-    function rangeOfPath: NSRange; message 'rangeOfPath'; { available in macos , ios , watchos , tvos  }
-    function rangeOfQuery: NSRange; message 'rangeOfQuery'; { available in macos , ios , watchos , tvos  }
-    function rangeOfFragment: NSRange; message 'rangeOfFragment'; { available in macos , ios , watchos , tvos  }
-    procedure setQueryItems(newValue: NSArray); message 'setQueryItems:'; { available in macos , ios , watchos , tvos  }
-    function queryItems: NSArray; message 'queryItems'; { available in macos , ios , watchos , tvos  }
-    procedure setPercentEncodedQueryItems(newValue: NSArray); message 'setPercentEncodedQueryItems:'; { available in macosx , ios , watchos , tvos  }
-    function percentEncodedQueryItems: NSArray; message 'percentEncodedQueryItems'; { available in macosx , ios , watchos , tvos  }
+    function rangeOfScheme: NSRange; message 'rangeOfScheme'; { available in macos 10.11, ios 9.0, watchos 2.0, tvos 9.0 }
+    function rangeOfUser: NSRange; message 'rangeOfUser'; { available in macos 10.11, ios 9.0, watchos 2.0, tvos 9.0 }
+    function rangeOfPassword: NSRange; message 'rangeOfPassword'; { available in macos 10.11, ios 9.0, watchos 2.0, tvos 9.0 }
+    function rangeOfHost: NSRange; message 'rangeOfHost'; { available in macos 10.11, ios 9.0, watchos 2.0, tvos 9.0 }
+    function rangeOfPort: NSRange; message 'rangeOfPort'; { available in macos 10.11, ios 9.0, watchos 2.0, tvos 9.0 }
+    function rangeOfPath: NSRange; message 'rangeOfPath'; { available in macos 10.11, ios 9.0, watchos 2.0, tvos 9.0 }
+    function rangeOfQuery: NSRange; message 'rangeOfQuery'; { available in macos 10.11, ios 9.0, watchos 2.0, tvos 9.0 }
+    function rangeOfFragment: NSRange; message 'rangeOfFragment'; { available in macos 10.11, ios 9.0, watchos 2.0, tvos 9.0 }
+    procedure setQueryItems(newValue: NSArray); message 'setQueryItems:'; { available in macos 10.10, ios 8.0, watchos 2.0, tvos 9.0 }
+    function queryItems: NSArray; message 'queryItems'; { available in macos 10.10, ios 8.0, watchos 2.0, tvos 9.0 }
+    procedure setPercentEncodedQueryItems(newValue: NSArray); message 'setPercentEncodedQueryItems:'; { available in macosx 10.13, ios 11.0, watchos 4.0, tvos 11.0 }
+    function percentEncodedQueryItems: NSArray; message 'percentEncodedQueryItems'; { available in macosx 10.13, ios 11.0, watchos 4.0, tvos 11.0 }
 
     { Adopted protocols }
     function copyWithZone (zone: NSZonePtr): id; message 'copyWithZone:';
@@ -244,35 +244,35 @@ type
 
 type
   NSCharacterSet_NSURLUtilities = objccategory external name 'NSURLUtilities' (NSCharacterSet)
-    class function URLUserAllowedCharacterSet: NSCharacterSet; message 'URLUserAllowedCharacterSet'; { available in macos , ios , watchos , tvos  }
-    class function URLPasswordAllowedCharacterSet: NSCharacterSet; message 'URLPasswordAllowedCharacterSet'; { available in macos , ios , watchos , tvos  }
-    class function URLHostAllowedCharacterSet: NSCharacterSet; message 'URLHostAllowedCharacterSet'; { available in macos , ios , watchos , tvos  }
-    class function URLPathAllowedCharacterSet: NSCharacterSet; message 'URLPathAllowedCharacterSet'; { available in macos , ios , watchos , tvos  }
-    class function URLQueryAllowedCharacterSet: NSCharacterSet; message 'URLQueryAllowedCharacterSet'; { available in macos , ios , watchos , tvos  }
-    class function URLFragmentAllowedCharacterSet: NSCharacterSet; message 'URLFragmentAllowedCharacterSet'; { available in macos , ios , watchos , tvos  }
+    class function URLUserAllowedCharacterSet: NSCharacterSet; message 'URLUserAllowedCharacterSet'; { available in macos 10.9, ios 7.0, watchos 2.0, tvos 9.0 }
+    class function URLPasswordAllowedCharacterSet: NSCharacterSet; message 'URLPasswordAllowedCharacterSet'; { available in macos 10.9, ios 7.0, watchos 2.0, tvos 9.0 }
+    class function URLHostAllowedCharacterSet: NSCharacterSet; message 'URLHostAllowedCharacterSet'; { available in macos 10.9, ios 7.0, watchos 2.0, tvos 9.0 }
+    class function URLPathAllowedCharacterSet: NSCharacterSet; message 'URLPathAllowedCharacterSet'; { available in macos 10.9, ios 7.0, watchos 2.0, tvos 9.0 }
+    class function URLQueryAllowedCharacterSet: NSCharacterSet; message 'URLQueryAllowedCharacterSet'; { available in macos 10.9, ios 7.0, watchos 2.0, tvos 9.0 }
+    class function URLFragmentAllowedCharacterSet: NSCharacterSet; message 'URLFragmentAllowedCharacterSet'; { available in macos 10.9, ios 7.0, watchos 2.0, tvos 9.0 }
   end;
 
 type
   NSURLUtilities = objccategory external (NSString)
-    function stringByAddingPercentEncodingWithAllowedCharacters (allowedCharacters: NSCharacterSet): NSString; message 'stringByAddingPercentEncodingWithAllowedCharacters:'; { available in macos , ios , watchos , tvos  }
-    function stringByRemovingPercentEncoding: NSString; message 'stringByRemovingPercentEncoding'; { available in macos , ios , watchos , tvos  }
+    function stringByAddingPercentEncodingWithAllowedCharacters (allowedCharacters: NSCharacterSet): NSString; message 'stringByAddingPercentEncodingWithAllowedCharacters:'; { available in macos 10.9, ios 7.0, watchos 2.0, tvos 9.0 }
+    function stringByRemovingPercentEncoding: NSString; message 'stringByRemovingPercentEncoding'; { available in macos 10.9, ios 7.0, watchos 2.0, tvos 9.0 }
     function stringByAddingPercentEscapesUsingEncoding (enc: NSStringEncoding): NSString; message 'stringByAddingPercentEscapesUsingEncoding:'; deprecated 'Use -stringByAddingPercentEncodingWithAllowedCharacters: instead, which always uses the recommended UTF-8 encoding, and which encodes for a specific URL component or subcomponent since each URL component or subcomponent has different rules for what characters are valid.';
     function stringByReplacingPercentEscapesUsingEncoding (enc: NSStringEncoding): NSString; message 'stringByReplacingPercentEscapesUsingEncoding:'; deprecated 'Use -stringByRemovingPercentEncoding instead, which always uses the recommended UTF-8 encoding.';
   end;
 
 type
   NSURLPathUtilities = objccategory external (NSURL)
-    class function fileURLWithPathComponents (components: NSArray): NSURL; message 'fileURLWithPathComponents:'; { available in macos , ios , watchos , tvos  }
-    function pathComponents: NSArray; message 'pathComponents'; { available in macos , ios , watchos , tvos  }
-    function lastPathComponent: NSString; message 'lastPathComponent'; { available in macos , ios , watchos , tvos  }
-    function pathExtension: NSString; message 'pathExtension'; { available in macos , ios , watchos , tvos  }
-    function URLByAppendingPathComponent (pathComponent: NSString): NSURL; message 'URLByAppendingPathComponent:'; { available in macos , ios , watchos , tvos  }
-    function URLByAppendingPathComponent_isDirectory (pathComponent: NSString; isDirectory: objcbool): NSURL; message 'URLByAppendingPathComponent:isDirectory:'; { available in macos , ios , watchos , tvos  }
-    function URLByDeletingLastPathComponent: NSURL; message 'URLByDeletingLastPathComponent'; { available in macos , ios , watchos , tvos  }
-    function URLByAppendingPathExtension (pathExtension_: NSString): NSURL; message 'URLByAppendingPathExtension:'; { available in macos , ios , watchos , tvos  }
-    function URLByDeletingPathExtension: NSURL; message 'URLByDeletingPathExtension'; { available in macos , ios , watchos , tvos  }
-    function URLByStandardizingPath: NSURL; message 'URLByStandardizingPath'; { available in macos , ios , watchos , tvos  }
-    function URLByResolvingSymlinksInPath: NSURL; message 'URLByResolvingSymlinksInPath'; { available in macos , ios , watchos , tvos  }
+    class function fileURLWithPathComponents (components: NSArray): NSURL; message 'fileURLWithPathComponents:'; { available in macos 10.6, ios 4.0, watchos 2.0, tvos 9.0 }
+    function pathComponents: NSArray; message 'pathComponents'; { available in macos 10.6, ios 4.0, watchos 2.0, tvos 9.0 }
+    function lastPathComponent: NSString; message 'lastPathComponent'; { available in macos 10.6, ios 4.0, watchos 2.0, tvos 9.0 }
+    function pathExtension: NSString; message 'pathExtension'; { available in macos 10.6, ios 4.0, watchos 2.0, tvos 9.0 }
+    function URLByAppendingPathComponent (pathComponent: NSString): NSURL; message 'URLByAppendingPathComponent:'; { available in macos 10.6, ios 4.0, watchos 2.0, tvos 9.0 }
+    function URLByAppendingPathComponent_isDirectory (pathComponent: NSString; isDirectory: objcbool): NSURL; message 'URLByAppendingPathComponent:isDirectory:'; { available in macos 10.7, ios 5.0, watchos 2.0, tvos 9.0 }
+    function URLByDeletingLastPathComponent: NSURL; message 'URLByDeletingLastPathComponent'; { available in macos 10.6, ios 4.0, watchos 2.0, tvos 9.0 }
+    function URLByAppendingPathExtension (pathExtension_: NSString): NSURL; message 'URLByAppendingPathExtension:'; { available in macos 10.6, ios 4.0, watchos 2.0, tvos 9.0 }
+    function URLByDeletingPathExtension: NSURL; message 'URLByDeletingPathExtension'; { available in macos 10.6, ios 4.0, watchos 2.0, tvos 9.0 }
+    function URLByStandardizingPath: NSURL; message 'URLByStandardizingPath'; { available in macos 10.6, ios 4.0, watchos 2.0, tvos 9.0 }
+    function URLByResolvingSymlinksInPath: NSURL; message 'URLByResolvingSymlinksInPath'; { available in macos 10.6, ios 4.0, watchos 2.0, tvos 9.0 }
   end;
 {$endif}
 

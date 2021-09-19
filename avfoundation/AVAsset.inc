@@ -42,8 +42,8 @@ type
     function preferredVolume: single; message 'preferredVolume';
     function preferredTransform: CGAffineTransform; message 'preferredTransform';
     function naturalSize: CGSize; message 'naturalSize'; { unavailable in watchos }
-    function preferredDisplayCriteria: AVDisplayCriteria; message 'preferredDisplayCriteria'; { unavailable in ios }
-    function minimumTimeOffsetFromLive: CMTime; message 'minimumTimeOffsetFromLive'; { available in macos , ios , tvos , watchos  }
+    function preferredDisplayCriteria: AVDisplayCriteria; message 'preferredDisplayCriteria'; { unavailable in ios } { unavailable in macos, watchos }
+    function minimumTimeOffsetFromLive: CMTime; message 'minimumTimeOffsetFromLive'; { available in macos 10.15, ios 13.0, tvos 13.0, watchos 6.0 }
 
     { Adopted protocols }
     function copyWithZone (zone: NSZonePtr): id; message 'copyWithZone:';
@@ -60,7 +60,7 @@ type
 
 type
   AVAsset_AVAssetReferenceRestrictions = objccategory external name 'AVAssetReferenceRestrictions' (AVAsset)
-    function referenceRestrictions: AVAssetReferenceRestrictions; message 'referenceRestrictions'; { unavailable in watchos }
+    function referenceRestrictions: AVAssetReferenceRestrictions; message 'referenceRestrictions'; { unavailable in watchos } { available in macos 10.7, ios 5.0, tvos 9.0 }
   end;
 
 type
@@ -69,65 +69,65 @@ type
     function trackWithTrackID (trackID: CMPersistentTrackID): AVAssetTrack; message 'trackWithTrackID:';
     function tracksWithMediaType (mediaType: AVMediaType): NSArray; message 'tracksWithMediaType:';
     function tracksWithMediaCharacteristic (mediaCharacteristic: AVMediaCharacteristic): NSArray; message 'tracksWithMediaCharacteristic:';
-    function trackGroups: NSArray; message 'trackGroups'; { available in macos , ios , tvos , watchos  }
+    function trackGroups: NSArray; message 'trackGroups'; { available in macos 10.9, ios 7.0, tvos 9.0, watchos 1.0 }
   end;
 
 type
   AVAssetMetadataReading = objccategory external (AVAsset)
-    function creationDate: AVMetadataItem; message 'creationDate'; { available in macos , ios , tvos , watchos  }
+    function creationDate: AVMetadataItem; message 'creationDate'; { available in macos 10.8, ios 5.0, tvos 9.0, watchos 1.0 }
     function lyrics: NSString; message 'lyrics';
     function commonMetadata: NSArray; message 'commonMetadata';
-    function metadata: NSArray; message 'metadata'; { available in macos , ios , tvos , watchos  }
+    function metadata: NSArray; message 'metadata'; { available in macos 10.10, ios 8.0, tvos 9.0, watchos 1.0 }
     function availableMetadataFormats: NSArray; message 'availableMetadataFormats';
     function metadataForFormat (format: AVMetadataFormat): NSArray; message 'metadataForFormat:';
   end;
 
 type
   AVAssetChapterInspection = objccategory external (AVAsset)
-    function availableChapterLocales: NSArray; message 'availableChapterLocales'; { available in macos , ios , tvos , watchos  }
-    function chapterMetadataGroupsWithTitleLocale_containingItemsWithCommonKeys (locale: NSLocale; commonKeys: NSArray): NSArray; message 'chapterMetadataGroupsWithTitleLocale:containingItemsWithCommonKeys:'; { available in macos , ios , tvos , watchos  }
-    function chapterMetadataGroupsBestMatchingPreferredLanguages (preferredLanguages: NSArray): NSArray; message 'chapterMetadataGroupsBestMatchingPreferredLanguages:'; { available in macos , ios , tvos , watchos  }
+    function availableChapterLocales: NSArray; message 'availableChapterLocales'; { available in macos 10.7, ios 4.3, tvos 9.0, watchos 1.0 }
+    function chapterMetadataGroupsWithTitleLocale_containingItemsWithCommonKeys (locale: NSLocale; commonKeys: NSArray): NSArray; message 'chapterMetadataGroupsWithTitleLocale:containingItemsWithCommonKeys:'; { available in macos 10.7, ios 4.3, tvos 9.0, watchos 1.0 }
+    function chapterMetadataGroupsBestMatchingPreferredLanguages (preferredLanguages: NSArray): NSArray; message 'chapterMetadataGroupsBestMatchingPreferredLanguages:'; { available in macos 10.8, ios 6.0, tvos 9.0, watchos 1.0 }
   end;
 
 type
   AVAssetMediaSelection = objccategory external (AVAsset)
-    function availableMediaCharacteristicsWithMediaSelectionOptions: NSArray; message 'availableMediaCharacteristicsWithMediaSelectionOptions'; { available in macos , ios , tvos , watchos  }
-    function mediaSelectionGroupForMediaCharacteristic (mediaCharacteristic: AVMediaCharacteristic): AVMediaSelectionGroup; message 'mediaSelectionGroupForMediaCharacteristic:'; { available in macos , ios , tvos , watchos  }
-    function preferredMediaSelection: AVMediaSelection; message 'preferredMediaSelection'; { available in macos , ios , tvos , watchos  }
-    function allMediaSelections: NSArray; message 'allMediaSelections'; { available in macos , ios , tvos , watchos  }
+    function availableMediaCharacteristicsWithMediaSelectionOptions: NSArray; message 'availableMediaCharacteristicsWithMediaSelectionOptions'; { available in macos 10.8, ios 5.0, tvos 9.0, watchos 1.0 }
+    function mediaSelectionGroupForMediaCharacteristic (mediaCharacteristic: AVMediaCharacteristic): AVMediaSelectionGroup; message 'mediaSelectionGroupForMediaCharacteristic:'; { available in macos 10.8, ios 5.0, tvos 9.0, watchos 1.0 }
+    function preferredMediaSelection: AVMediaSelection; message 'preferredMediaSelection'; { available in macos 10.11, ios 9.0, tvos 9.0, watchos 2.0 }
+    function allMediaSelections: NSArray; message 'allMediaSelections'; { available in macos 10.13, ios 11.0, tvos 11.0, watchos 4.0 }
   end;
 
 type
   AVAssetProtectedContent = objccategory external (AVAsset)
-    function hasProtectedContent: objcbool; message 'hasProtectedContent'; { unavailable in watchos }
+    function hasProtectedContent: objcbool; message 'hasProtectedContent'; { unavailable in watchos } { available in macos 10.7, ios 4.2, tvos 9.0 }
   end;
 
 type
   AVAssetFragments = objccategory external (AVAsset)
-    function canContainFragments: objcbool; message 'canContainFragments'; { unavailable in watchos }
-    function containsFragments: objcbool; message 'containsFragments'; { unavailable in watchos }
-    function overallDurationHint: CMTime; message 'overallDurationHint'; { available in macos , ios , tvos , watchos  }
+    function canContainFragments: objcbool; message 'canContainFragments'; { unavailable in watchos } { available in macos 10.11, ios 9.0, tvos 9.0 }
+    function containsFragments: objcbool; message 'containsFragments'; { unavailable in watchos } { available in macos 10.11, ios 9.0, tvos 9.0 }
+    function overallDurationHint: CMTime; message 'overallDurationHint'; { available in macos 10.12.2, ios 10.2, tvos 10.2, watchos 3.2 }
   end;
 
 type
   AVAssetUsability = objccategory external (AVAsset)
-    function isPlayable: objcbool; message 'isPlayable'; { available in macos , ios , tvos , watchos  }
-    function isExportable: objcbool; message 'isExportable'; { unavailable in watchos }
-    function isReadable: objcbool; message 'isReadable'; { unavailable in watchos }
-    function isComposable: objcbool; message 'isComposable'; { available in macos , ios , tvos , watchos  }
-    function isCompatibleWithSavedPhotosAlbum: objcbool; message 'isCompatibleWithSavedPhotosAlbum'; { unavailable in macos, watchos }
-    function isCompatibleWithAirPlayVideo: objcbool; message 'isCompatibleWithAirPlayVideo'; { unavailable in watchos }
+    function isPlayable: objcbool; message 'isPlayable'; { available in macos 10.7, ios 4.3, tvos 9.0, watchos 1.0 }
+    function isExportable: objcbool; message 'isExportable'; { unavailable in watchos } { available in macos 10.7, ios 4.3, tvos 9.0 }
+    function isReadable: objcbool; message 'isReadable'; { unavailable in watchos } { available in macos 10.7, ios 4.3, tvos 9.0 }
+    function isComposable: objcbool; message 'isComposable'; { available in macos 10.7, ios 4.3, tvos 9.0, watchos 1.0 }
+    function isCompatibleWithSavedPhotosAlbum: objcbool; message 'isCompatibleWithSavedPhotosAlbum'; { unavailable in macos, watchos } { available in ios 5.0, tvos 9.0 }
+    function isCompatibleWithAirPlayVideo: objcbool; message 'isCompatibleWithAirPlayVideo'; { unavailable in watchos } { available in macos 10.11, ios 9.0, tvos 9.0 }
   end;
 {$endif}
 
 {$ifdef EXTERNAL_SYMBOLS}
 var
-  AVURLAssetPreferPreciseDurationAndTimingKey: NSString { available in macos , ios , tvos , watchos  }; cvar; external;
-  AVURLAssetReferenceRestrictionsKey: NSString { unavailable in watchos }; cvar; external;
-  AVURLAssetHTTPCookiesKey: NSString { available in macos , ios , tvos , watchos  }; cvar; external;
-  AVURLAssetAllowsCellularAccessKey: NSString { available in macos , ios , tvos , watchos  }; cvar; external;
-  AVURLAssetAllowsExpensiveNetworkAccessKey: NSString { available in macos , ios , tvos , watchos  }; cvar; external;
-  AVURLAssetAllowsConstrainedNetworkAccessKey: NSString { available in macos , ios , tvos , watchos  }; cvar; external;
+  AVURLAssetPreferPreciseDurationAndTimingKey: NSString { available in macos 10.7, ios 4.0, tvos 9.0, watchos 1.0 }; cvar; external;
+  AVURLAssetReferenceRestrictionsKey: NSString { unavailable in watchos } { available in macos 10.7, ios 5.0, tvos 9.0 }; cvar; external;
+  AVURLAssetHTTPCookiesKey: NSString { available in macos 10.15, ios 8.0, tvos 9.0, watchos 1.0 }; cvar; external;
+  AVURLAssetAllowsCellularAccessKey: NSString { available in macos 10.15, ios 10.0, tvos 10.0, watchos 3.0 }; cvar; external;
+  AVURLAssetAllowsExpensiveNetworkAccessKey: NSString { available in macos 10.15, ios 13.0, tvos 13.0, watchos 6.0 }; cvar; external;
+  AVURLAssetAllowsConstrainedNetworkAccessKey: NSString { available in macos 10.15, ios 13.0, tvos 13.0, watchos 6.0 }; cvar; external;
 {$endif}
 
 {$ifdef CLASSES}
@@ -137,9 +137,9 @@ type
   private
     _URLAsset: AVURLAssetInternal;
   public
-    class function audiovisualTypes: NSArray; message 'audiovisualTypes'; { available in macos , ios , tvos , watchos  }
-    class function audiovisualMIMETypes: NSArray; message 'audiovisualMIMETypes'; { available in macos , ios , tvos , watchos  }
-    class function isPlayableExtendedMIMEType (extendedMIMEType: NSString): objcbool; message 'isPlayableExtendedMIMEType:'; { available in macos , ios , tvos , watchos  }
+    class function audiovisualTypes: NSArray; message 'audiovisualTypes'; { available in macos 10.7, ios 5.0, tvos 9.0, watchos 1.0 }
+    class function audiovisualMIMETypes: NSArray; message 'audiovisualMIMETypes'; { available in macos 10.7, ios 5.0, tvos 9.0, watchos 1.0 }
+    class function isPlayableExtendedMIMEType (extendedMIMEType: NSString): objcbool; message 'isPlayableExtendedMIMEType:'; { available in macos 10.7, ios 5.0, tvos 9.0, watchos 1.0 }
     class function URLAssetWithURL_options (URL: NSURL; options: NSDictionary): id; message 'URLAssetWithURL:options:';
     function initWithURL_options (URL: NSURL; options: NSDictionary): id; message 'initWithURL:options:'; { NS_DESIGNATED_INITIALIZER }
     function URL: NSURL; message 'URL';
@@ -148,12 +148,12 @@ type
 
 type
   AVURLAssetURLHandling = objccategory external (AVURLAsset)
-    function resourceLoader: AVAssetResourceLoader; message 'resourceLoader'; { unavailable in watchos }
+    function resourceLoader: AVAssetResourceLoader; message 'resourceLoader'; { unavailable in watchos } { available in macos 10.9, ios 6.0, tvos 9.0 }
   end;
 
 type
   AVURLAssetCache = objccategory external (AVURLAsset)
-    function assetCache: AVAssetCache; message 'assetCache'; { unavailable in watchos }
+    function assetCache: AVAssetCache; message 'assetCache'; { unavailable in watchos } { available in macos 10.12, ios 10.0, tvos 10.0 }
   end;
 
 type
@@ -168,18 +168,18 @@ type
 
 {$ifdef EXTERNAL_SYMBOLS}
 var
-  AVAssetDurationDidChangeNotification: NSString { available in macos , ios , tvos , watchos  }; cvar; external;
-  AVAssetContainsFragmentsDidChangeNotification: NSString { unavailable in watchos }; cvar; external;
-  AVAssetWasDefragmentedNotification: NSString { unavailable in watchos }; cvar; external;
-  AVAssetChapterMetadataGroupsDidChangeNotification: NSString { available in macos , ios , tvos , watchos  }; cvar; external;
-  AVAssetMediaSelectionGroupsDidChangeNotification: NSString { available in macos , ios , tvos , watchos  }; cvar; external;
+  AVAssetDurationDidChangeNotification: NSString { available in macos 10.11, ios 9.0, tvos 9.0, watchos 2.0 }; cvar; external;
+  AVAssetContainsFragmentsDidChangeNotification: NSString { unavailable in watchos } { available in macos 10.11, ios 12.0, tvos 12.0 }; cvar; external;
+  AVAssetWasDefragmentedNotification: NSString { unavailable in watchos } { available in macos 10.11, ios 12.0, tvos 12.0 }; cvar; external;
+  AVAssetChapterMetadataGroupsDidChangeNotification: NSString { available in macos 10.11, ios 9.0, tvos 9.0, watchos 2.0 }; cvar; external;
+  AVAssetMediaSelectionGroupsDidChangeNotification: NSString { available in macos 10.11, ios 9.0, tvos 9.0, watchos 2.0 }; cvar; external;
 {$endif}
 
 {$ifdef PROTOCOLS}
 
 type
   AVFragmentMindingProtocol = objcprotocol external name 'AVFragmentMinding'
-    function isAssociatedWithFragmentMinder: objcbool; message 'isAssociatedWithFragmentMinder'; { available in macos , ios , tvos , watchos  }
+    function isAssociatedWithFragmentMinder: objcbool; message 'isAssociatedWithFragmentMinder'; { available in macos 10.11, ios 12.0, tvos 12.0, watchos 6.0 }
   end;
 {$endif}
 
@@ -194,7 +194,7 @@ type
     function tracks: NSArray; message 'tracks';
 
     { Adopted protocols }
-    function isAssociatedWithFragmentMinder: objcbool; message 'isAssociatedWithFragmentMinder'; { available in macos , ios , tvos , watchos  }
+    function isAssociatedWithFragmentMinder: objcbool; message 'isAssociatedWithFragmentMinder'; { available in macos 10.11, ios 12.0, tvos 12.0, watchos 6.0 }
   end;
 
 
@@ -223,7 +223,7 @@ type
 
 type
   AVURLAssetContentKeyEligibility = objccategory external (AVURLAsset)
-    function mayRequireContentKeysForMediaDataProcessing: objcbool; message 'mayRequireContentKeysForMediaDataProcessing'; { available in macos , ios , tvos , watchos  }
+    function mayRequireContentKeysForMediaDataProcessing: objcbool; message 'mayRequireContentKeysForMediaDataProcessing'; { available in macos 10.12.4, ios 10.3, tvos 10.2, watchos 3.3 }
   end;
 {$endif}
 

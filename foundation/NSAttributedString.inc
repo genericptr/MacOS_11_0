@@ -61,8 +61,8 @@ type
     function initWithString (str: NSString): id; message 'initWithString:';
     function initWithString_attributes (str: NSString; attrs: NSDictionary): id; message 'initWithString:attributes:';
     function initWithAttributedString (attrStr: NSAttributedString): id; message 'initWithAttributedString:';
-    procedure enumerateAttributesInRange_options_usingBlock (enumerationRange: NSRange; opts: NSAttributedStringEnumerationOptions; block: NSAttributedStringEnumerateAttributesInRangeCallback); message 'enumerateAttributesInRange:options:usingBlock:'; { available in macos , ios , watchos , tvos  }
-    procedure enumerateAttribute_inRange_options_usingBlock (attrName: NSAttributedStringKey; enumerationRange: NSRange; opts: NSAttributedStringEnumerationOptions; block: NSAttributedStringEnumerateAttributeCallback); message 'enumerateAttribute:inRange:options:usingBlock:'; { available in macos , ios , watchos , tvos  }
+    procedure enumerateAttributesInRange_options_usingBlock (enumerationRange: NSRange; opts: NSAttributedStringEnumerationOptions; block: NSAttributedStringEnumerateAttributesInRangeCallback); message 'enumerateAttributesInRange:options:usingBlock:'; { available in macos 10.6, ios 4.0, watchos 2.0, tvos 9.0 }
+    procedure enumerateAttribute_inRange_options_usingBlock (attrName: NSAttributedStringKey; enumerationRange: NSRange; opts: NSAttributedStringEnumerationOptions; block: NSAttributedStringEnumerateAttributeCallback); message 'enumerateAttribute:inRange:options:usingBlock:'; { available in macos 10.6, ios 4.0, watchos 2.0, tvos 9.0 }
   end;
 
 

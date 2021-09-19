@@ -52,7 +52,7 @@ const
   NSTableViewGridNone = 0;
   NSTableViewSolidVerticalGridLineMask = 1 shl 0;
   NSTableViewSolidHorizontalGridLineMask = 1 shl 1;
-  NSTableViewDashedHorizontalGridLineMask = 1 shl 3 { available in macos  };
+  NSTableViewDashedHorizontalGridLineMask = 1 shl 3 { available in macos 10.7 };
 
 type
   NSTableViewRowSizeStyle = NSInteger;
@@ -81,7 +81,7 @@ type
   NSTableViewSelectionHighlightStylePtr = ^NSTableViewSelectionHighlightStyle;
 
 const
-  NSTableViewSelectionHighlightStyleNone = -1 { available in macos  };
+  NSTableViewSelectionHighlightStyleNone = -1 { available in macos 10.6 };
   NSTableViewSelectionHighlightStyleRegular = 0;
   NSTableViewSelectionHighlightStyleSourceList = 1 deprecated 'Set the NSTableView.style property to NSTableViewStyleSourceList instead.';
 
@@ -93,7 +93,7 @@ const
   NSTableViewDraggingDestinationFeedbackStyleNone = -1;
   NSTableViewDraggingDestinationFeedbackStyleRegular = 0;
   NSTableViewDraggingDestinationFeedbackStyleSourceList = 1;
-  NSTableViewDraggingDestinationFeedbackStyleGap = 2 { available in macos  };
+  NSTableViewDraggingDestinationFeedbackStyleGap = 2 { available in macos 10.9 };
 
 type
   NSTableRowActionEdge = NSInteger;
@@ -139,9 +139,9 @@ type
     function backgroundColor: NSColor; message 'backgroundColor';
     procedure setGridColor(newValue: NSColor); message 'setGridColor:';
     function gridColor: NSColor; message 'gridColor';
-    procedure setRowSizeStyle(newValue: NSTableViewRowSizeStyle); message 'setRowSizeStyle:'; { available in macos  }
-    function rowSizeStyle: NSTableViewRowSizeStyle; message 'rowSizeStyle'; { available in macos  }
-    function effectiveRowSizeStyle: NSTableViewRowSizeStyle; message 'effectiveRowSizeStyle'; { available in macos  }
+    procedure setRowSizeStyle(newValue: NSTableViewRowSizeStyle); message 'setRowSizeStyle:'; { available in macos 10.7 }
+    function rowSizeStyle: NSTableViewRowSizeStyle; message 'rowSizeStyle'; { available in macos 10.7 }
+    function effectiveRowSizeStyle: NSTableViewRowSizeStyle; message 'effectiveRowSizeStyle'; { available in macos 10.7 }
     procedure setRowHeight(newValue: CGFloat); message 'setRowHeight:';
     function rowHeight: CGFloat; message 'rowHeight';
     procedure noteHeightOfRowsWithIndexesChanged (indexSet: NSIndexSet); message 'noteHeightOfRowsWithIndexesChanged:';
@@ -160,7 +160,7 @@ type
     procedure scrollColumnToVisible (column: NSInteger); message 'scrollColumnToVisible:';
     procedure reloadData; message 'reloadData';
     procedure noteNumberOfRowsChanged; message 'noteNumberOfRowsChanged';
-    procedure reloadDataForRowIndexes_columnIndexes (rowIndexes: NSIndexSet; columnIndexes: NSIndexSet); message 'reloadDataForRowIndexes:columnIndexes:'; { available in macos  }
+    procedure reloadDataForRowIndexes_columnIndexes (rowIndexes: NSIndexSet; columnIndexes: NSIndexSet); message 'reloadDataForRowIndexes:columnIndexes:'; { available in macos 10.6 }
     function editedColumn: NSInteger; message 'editedColumn';
     function editedRow: NSInteger; message 'editedRow';
     function clickedColumn: NSInteger; message 'clickedColumn';
@@ -199,18 +199,18 @@ type
     function isRowSelected (row: NSInteger): objcbool; message 'isRowSelected:';
     function numberOfSelectedColumns: NSInteger; message 'numberOfSelectedColumns';
     function numberOfSelectedRows: NSInteger; message 'numberOfSelectedRows';
-    procedure setAllowsTypeSelect(newValue: objcbool); message 'setAllowsTypeSelect:'; { available in macos  }
-    function allowsTypeSelect: objcbool; message 'allowsTypeSelect'; { available in macos  }
-    procedure setStyle(newValue: NSTableViewStyle); message 'setStyle:'; { available in macos  }
-    function style: NSTableViewStyle; message 'style'; { available in macos  }
-    function effectiveStyle: NSTableViewStyle; message 'effectiveStyle'; { available in macos  }
-    procedure setSelectionHighlightStyle(newValue: NSTableViewSelectionHighlightStyle); message 'setSelectionHighlightStyle:'; { available in macos  }
-    function selectionHighlightStyle: NSTableViewSelectionHighlightStyle; message 'selectionHighlightStyle'; { available in macos  }
-    procedure setDraggingDestinationFeedbackStyle(newValue: NSTableViewDraggingDestinationFeedbackStyle); message 'setDraggingDestinationFeedbackStyle:'; { available in macos  }
-    function draggingDestinationFeedbackStyle: NSTableViewDraggingDestinationFeedbackStyle; message 'draggingDestinationFeedbackStyle'; { available in macos  }
+    procedure setAllowsTypeSelect(newValue: objcbool); message 'setAllowsTypeSelect:'; { available in macos 10.5 }
+    function allowsTypeSelect: objcbool; message 'allowsTypeSelect'; { available in macos 10.5 }
+    procedure setStyle(newValue: NSTableViewStyle); message 'setStyle:'; { available in macos 11.0 }
+    function style: NSTableViewStyle; message 'style'; { available in macos 11.0 }
+    function effectiveStyle: NSTableViewStyle; message 'effectiveStyle'; { available in macos 11.0 }
+    procedure setSelectionHighlightStyle(newValue: NSTableViewSelectionHighlightStyle); message 'setSelectionHighlightStyle:'; { available in macos 10.5 }
+    function selectionHighlightStyle: NSTableViewSelectionHighlightStyle; message 'selectionHighlightStyle'; { available in macos 10.5 }
+    procedure setDraggingDestinationFeedbackStyle(newValue: NSTableViewDraggingDestinationFeedbackStyle); message 'setDraggingDestinationFeedbackStyle:'; { available in macos 10.6 }
+    function draggingDestinationFeedbackStyle: NSTableViewDraggingDestinationFeedbackStyle; message 'draggingDestinationFeedbackStyle'; { available in macos 10.6 }
     function rectOfColumn (column: NSInteger): NSRect; message 'rectOfColumn:';
     function rectOfRow (row: NSInteger): NSRect; message 'rectOfRow:';
-    function columnIndexesInRect (rect: NSRect): NSIndexSet; message 'columnIndexesInRect:'; { available in macos  }
+    function columnIndexesInRect (rect: NSRect): NSIndexSet; message 'columnIndexesInRect:'; { available in macos 10.5 }
     function rowsInRect (rect: NSRect): NSRange; message 'rowsInRect:';
     function columnAtPoint (point: NSPoint): NSInteger; message 'columnAtPoint:';
     function rowAtPoint (point: NSPoint): NSInteger; message 'rowAtPoint:';
@@ -224,34 +224,34 @@ type
     procedure highlightSelectionInClipRect (clipRect: NSRect); message 'highlightSelectionInClipRect:';
     procedure drawGridInClipRect (clipRect: NSRect); message 'drawGridInClipRect:';
     procedure drawBackgroundInClipRect (clipRect: NSRect); message 'drawBackgroundInClipRect:';
-    function viewAtColumn_row_makeIfNecessary (column: NSInteger; row: NSInteger; makeIfNecessary: objcbool): NSView; message 'viewAtColumn:row:makeIfNecessary:'; { available in macos  }
-    function rowViewAtRow_makeIfNecessary (row: NSInteger; makeIfNecessary: objcbool): NSTableRowView; message 'rowViewAtRow:makeIfNecessary:'; { available in macos  }
-    function rowForView (view: NSView): NSInteger; message 'rowForView:'; { available in macos  }
-    function columnForView (view: NSView): NSInteger; message 'columnForView:'; { available in macos  }
-    function makeViewWithIdentifier_owner (identifier: NSUserInterfaceItemIdentifier; owner: id): NSView; message 'makeViewWithIdentifier:owner:'; { available in macos  }
-    procedure enumerateAvailableRowViewsUsingBlock (handler: NSTableViewEnumerateAvailableRowViewsUsingBlockCallback); message 'enumerateAvailableRowViewsUsingBlock:'; { available in macos  }
-    procedure setFloatsGroupRows(newValue: objcbool); message 'setFloatsGroupRows:'; { available in macos  }
-    function floatsGroupRows: objcbool; message 'floatsGroupRows'; { available in macos  }
-    procedure setRowActionsVisible(newValue: objcbool); message 'setRowActionsVisible:'; { available in macos  }
-    function rowActionsVisible: objcbool; message 'rowActionsVisible'; { available in macos  }
-    procedure beginUpdates; message 'beginUpdates'; { available in macos  }
-    procedure endUpdates; message 'endUpdates'; { available in macos  }
-    procedure insertRowsAtIndexes_withAnimation (indexes: NSIndexSet; animationOptions: NSTableViewAnimationOptions); message 'insertRowsAtIndexes:withAnimation:'; { available in macos  }
-    procedure removeRowsAtIndexes_withAnimation (indexes: NSIndexSet; animationOptions: NSTableViewAnimationOptions); message 'removeRowsAtIndexes:withAnimation:'; { available in macos  }
-    procedure moveRowAtIndex_toIndex (oldIndex: NSInteger; newIndex: NSInteger); message 'moveRowAtIndex:toIndex:'; { available in macos  }
-    procedure hideRowsAtIndexes_withAnimation (indexes: NSIndexSet; rowAnimation: NSTableViewAnimationOptions); message 'hideRowsAtIndexes:withAnimation:'; { available in macos  }
-    procedure unhideRowsAtIndexes_withAnimation (indexes: NSIndexSet; rowAnimation: NSTableViewAnimationOptions); message 'unhideRowsAtIndexes:withAnimation:'; { available in macos  }
-    function hiddenRowIndexes: NSIndexSet; message 'hiddenRowIndexes'; { available in macos  }
-    procedure registerNib_forIdentifier (nib: NSNib; identifier: NSUserInterfaceItemIdentifier); message 'registerNib:forIdentifier:'; { available in macos  }
-    function registeredNibsByIdentifier: NSDictionary; message 'registeredNibsByIdentifier'; { available in macos  }
-    procedure didAddRowView_forRow (rowView: NSTableRowView; row: NSInteger); message 'didAddRowView:forRow:'; { available in macos  }
-    procedure didRemoveRowView_forRow (rowView: NSTableRowView; row: NSInteger); message 'didRemoveRowView:forRow:'; { available in macos  }
-    procedure setUsesStaticContents(newValue: objcbool); message 'setUsesStaticContents:'; { available in macos  }
-    function usesStaticContents: objcbool; message 'usesStaticContents'; { available in macos  }
-    procedure setUserInterfaceLayoutDirection(newValue: NSUserInterfaceLayoutDirection); message 'setUserInterfaceLayoutDirection:'; { available in macos  }
-    function userInterfaceLayoutDirection: NSUserInterfaceLayoutDirection; message 'userInterfaceLayoutDirection'; { available in macos  }
-    procedure setUsesAutomaticRowHeights(newValue: objcbool); message 'setUsesAutomaticRowHeights:'; { available in macos  }
-    function usesAutomaticRowHeights: objcbool; message 'usesAutomaticRowHeights'; { available in macos  }
+    function viewAtColumn_row_makeIfNecessary (column: NSInteger; row: NSInteger; makeIfNecessary: objcbool): NSView; message 'viewAtColumn:row:makeIfNecessary:'; { available in macos 10.7 }
+    function rowViewAtRow_makeIfNecessary (row: NSInteger; makeIfNecessary: objcbool): NSTableRowView; message 'rowViewAtRow:makeIfNecessary:'; { available in macos 10.7 }
+    function rowForView (view: NSView): NSInteger; message 'rowForView:'; { available in macos 10.7 }
+    function columnForView (view: NSView): NSInteger; message 'columnForView:'; { available in macos 10.7 }
+    function makeViewWithIdentifier_owner (identifier: NSUserInterfaceItemIdentifier; owner: id): NSView; message 'makeViewWithIdentifier:owner:'; { available in macos 10.7 }
+    procedure enumerateAvailableRowViewsUsingBlock (handler: NSTableViewEnumerateAvailableRowViewsUsingBlockCallback); message 'enumerateAvailableRowViewsUsingBlock:'; { available in macos 10.7 }
+    procedure setFloatsGroupRows(newValue: objcbool); message 'setFloatsGroupRows:'; { available in macos 10.7 }
+    function floatsGroupRows: objcbool; message 'floatsGroupRows'; { available in macos 10.7 }
+    procedure setRowActionsVisible(newValue: objcbool); message 'setRowActionsVisible:'; { available in macos 10.11 }
+    function rowActionsVisible: objcbool; message 'rowActionsVisible'; { available in macos 10.11 }
+    procedure beginUpdates; message 'beginUpdates'; { available in macos 10.7 }
+    procedure endUpdates; message 'endUpdates'; { available in macos 10.7 }
+    procedure insertRowsAtIndexes_withAnimation (indexes: NSIndexSet; animationOptions: NSTableViewAnimationOptions); message 'insertRowsAtIndexes:withAnimation:'; { available in macos 10.7 }
+    procedure removeRowsAtIndexes_withAnimation (indexes: NSIndexSet; animationOptions: NSTableViewAnimationOptions); message 'removeRowsAtIndexes:withAnimation:'; { available in macos 10.7 }
+    procedure moveRowAtIndex_toIndex (oldIndex: NSInteger; newIndex: NSInteger); message 'moveRowAtIndex:toIndex:'; { available in macos 10.7 }
+    procedure hideRowsAtIndexes_withAnimation (indexes: NSIndexSet; rowAnimation: NSTableViewAnimationOptions); message 'hideRowsAtIndexes:withAnimation:'; { available in macos 10.11 }
+    procedure unhideRowsAtIndexes_withAnimation (indexes: NSIndexSet; rowAnimation: NSTableViewAnimationOptions); message 'unhideRowsAtIndexes:withAnimation:'; { available in macos 10.11 }
+    function hiddenRowIndexes: NSIndexSet; message 'hiddenRowIndexes'; { available in macos 10.11 }
+    procedure registerNib_forIdentifier (nib: NSNib; identifier: NSUserInterfaceItemIdentifier); message 'registerNib:forIdentifier:'; { available in macos 10.8 }
+    function registeredNibsByIdentifier: NSDictionary; message 'registeredNibsByIdentifier'; { available in macos 10.8 }
+    procedure didAddRowView_forRow (rowView: NSTableRowView; row: NSInteger); message 'didAddRowView:forRow:'; { available in macos 10.7 }
+    procedure didRemoveRowView_forRow (rowView: NSTableRowView; row: NSInteger); message 'didRemoveRowView:forRow:'; { available in macos 10.7 }
+    procedure setUsesStaticContents(newValue: objcbool); message 'setUsesStaticContents:'; { available in macos 10.10 }
+    function usesStaticContents: objcbool; message 'usesStaticContents'; { available in macos 10.10 }
+    procedure setUserInterfaceLayoutDirection(newValue: NSUserInterfaceLayoutDirection); message 'setUserInterfaceLayoutDirection:'; { available in macos 10.8 }
+    function userInterfaceLayoutDirection: NSUserInterfaceLayoutDirection; message 'userInterfaceLayoutDirection'; { available in macos 10.8 }
+    procedure setUsesAutomaticRowHeights(newValue: objcbool); message 'setUsesAutomaticRowHeights:'; { available in macos 10.13 }
+    function usesAutomaticRowHeights: objcbool; message 'usesAutomaticRowHeights'; { available in macos 10.13 }
 
     { Adopted protocols }
     function accessibilityHeaderGroup: NSString; message 'accessibilityHeaderGroup'; deprecated 'replace with accessibilityHeader';
@@ -265,32 +265,32 @@ type
     procedure textDidEndEditing (notification: NSNotification); message 'textDidEndEditing:';
     function textShouldBeginEditing (textObject: NSText): objcbool; message 'textShouldBeginEditing:';
     function textShouldEndEditing (textObject: NSText): objcbool; message 'textShouldEndEditing:';
-    function textView_candidates_forSelectedRange (textView: NSTextView; candidates: NSArray; selectedRange: NSRange): NSArray; message 'textView:candidates:forSelectedRange:'; { available in macos  }
-    function textView_candidatesForSelectedRange (textView: NSTextView; selectedRange: NSRange): NSArray; message 'textView:candidatesForSelectedRange:'; { available in macos  }
+    function textView_candidates_forSelectedRange (textView: NSTextView; candidates: NSArray; selectedRange: NSRange): NSArray; message 'textView:candidates:forSelectedRange:'; { available in macos 10.12.2 }
+    function textView_candidatesForSelectedRange (textView: NSTextView; selectedRange: NSRange): NSArray; message 'textView:candidatesForSelectedRange:'; { available in macos 10.12.2 }
     procedure textView_clickedOnCell_inRect (textView: NSTextView; cell: NSTextAttachmentCellProtocol; cellFrame: NSRect); message 'textView:clickedOnCell:inRect:'; deprecated 'Use -textView:clickedOnCell:inRect:atIndex: instead';
     procedure textView_clickedOnCell_inRect_atIndex (textView: NSTextView; cell: NSTextAttachmentCellProtocol; cellFrame: NSRect; charIndex: NSUInteger); message 'textView:clickedOnCell:inRect:atIndex:';
     function textView_clickedOnLink (textView: NSTextView; link: id): objcbool; message 'textView:clickedOnLink:'; deprecated 'Use -textView:clickedOnLink:atIndex: instead';
     function textView_clickedOnLink_atIndex (textView: NSTextView; link: id; charIndex: NSUInteger): objcbool; message 'textView:clickedOnLink:atIndex:';
     function textView_completions_forPartialWordRange_indexOfSelectedItem (textView: NSTextView; words: NSArray; charRange: NSRange; index: NSIntegerPtr): NSArray; message 'textView:completions:forPartialWordRange:indexOfSelectedItem:';
-    function textView_didCheckTextInRange_types_options_results_orthography_wordCount (view: NSTextView; range: NSRange; checkingTypes: NSTextCheckingTypes; options: NSDictionary; results: NSArray; orthography: NSOrthography; wordCount: NSInteger): NSArray; message 'textView:didCheckTextInRange:types:options:results:orthography:wordCount:'; { available in macos  }
+    function textView_didCheckTextInRange_types_options_results_orthography_wordCount (view: NSTextView; range: NSRange; checkingTypes: NSTextCheckingTypes; options: NSDictionary; results: NSArray; orthography: NSOrthography; wordCount: NSInteger): NSArray; message 'textView:didCheckTextInRange:types:options:results:orthography:wordCount:'; { available in macos 10.6 }
     function textView_doCommandBySelector (textView: NSTextView; commandSelector: SEL): objcbool; message 'textView:doCommandBySelector:';
     procedure textView_doubleClickedOnCell_inRect (textView: NSTextView; cell: NSTextAttachmentCellProtocol; cellFrame: NSRect); message 'textView:doubleClickedOnCell:inRect:'; deprecated 'Use -textView:doubleClickedOnCell:inRect:atIndex: instead';
     procedure textView_doubleClickedOnCell_inRect_atIndex (textView: NSTextView; cell: NSTextAttachmentCellProtocol; cellFrame: NSRect; charIndex: NSUInteger); message 'textView:doubleClickedOnCell:inRect:atIndex:';
     procedure textView_draggedCell_inRect_event (view: NSTextView; cell: NSTextAttachmentCellProtocol; rect: NSRect; event: NSEvent); message 'textView:draggedCell:inRect:event:'; deprecated 'Use -textView:draggedCell:inRect:event:atIndex: instead';
     procedure textView_draggedCell_inRect_event_atIndex (view: NSTextView; cell: NSTextAttachmentCellProtocol; rect: NSRect; event: NSEvent; charIndex: NSUInteger); message 'textView:draggedCell:inRect:event:atIndex:';
-    function textView_menu_forEvent_atIndex (view: NSTextView; menu: NSMenu; event: NSEvent; charIndex: NSUInteger): NSMenu; message 'textView:menu:forEvent:atIndex:'; { available in macos  }
+    function textView_menu_forEvent_atIndex (view: NSTextView; menu: NSMenu; event: NSEvent; charIndex: NSUInteger): NSMenu; message 'textView:menu:forEvent:atIndex:'; { available in macos 10.5 }
     function textView_shouldChangeTextInRange_replacementString (textView: NSTextView; affectedCharRange: NSRange; replacementString: NSString): objcbool; message 'textView:shouldChangeTextInRange:replacementString:';
     function textView_shouldChangeTextInRanges_replacementStrings (textView: NSTextView; affectedRanges: NSArray; replacementStrings: NSArray): objcbool; message 'textView:shouldChangeTextInRanges:replacementStrings:';
     function textView_shouldChangeTypingAttributes_toAttributes (textView: NSTextView; oldTypingAttributes: NSDictionary; newTypingAttributes: NSDictionary): NSDictionary; message 'textView:shouldChangeTypingAttributes:toAttributes:';
-    function textView_shouldSelectCandidateAtIndex (textView: NSTextView; index: NSUInteger): objcbool; message 'textView:shouldSelectCandidateAtIndex:'; { available in macos  }
-    function textView_shouldSetSpellingState_range (textView: NSTextView; value: NSInteger; affectedCharRange: NSRange): NSInteger; message 'textView:shouldSetSpellingState:range:'; { available in macos  }
-    function textView_shouldUpdateTouchBarItemIdentifiers (textView: NSTextView; identifiers: NSArray): NSArray; message 'textView:shouldUpdateTouchBarItemIdentifiers:'; { available in macos  }
-    function textView_URLForContentsOfTextAttachment_atIndex (textView: NSTextView; textAttachment: NSTextAttachment; charIndex: NSUInteger): NSURL; message 'textView:URLForContentsOfTextAttachment:atIndex:'; { available in macos  }
+    function textView_shouldSelectCandidateAtIndex (textView: NSTextView; index: NSUInteger): objcbool; message 'textView:shouldSelectCandidateAtIndex:'; { available in macos 10.12.2 }
+    function textView_shouldSetSpellingState_range (textView: NSTextView; value: NSInteger; affectedCharRange: NSRange): NSInteger; message 'textView:shouldSetSpellingState:range:'; { available in macos 10.5 }
+    function textView_shouldUpdateTouchBarItemIdentifiers (textView: NSTextView; identifiers: NSArray): NSArray; message 'textView:shouldUpdateTouchBarItemIdentifiers:'; { available in macos 10.12.2 }
+    function textView_URLForContentsOfTextAttachment_atIndex (textView: NSTextView; textAttachment: NSTextAttachment; charIndex: NSUInteger): NSURL; message 'textView:URLForContentsOfTextAttachment:atIndex:'; { available in macos 10.7 }
     function textView_willChangeSelectionFromCharacterRange_toCharacterRange (textView: NSTextView; oldSelectedCharRange: NSRange; newSelectedCharRange: NSRange): NSRange; message 'textView:willChangeSelectionFromCharacterRange:toCharacterRange:';
     function textView_willChangeSelectionFromCharacterRanges_toCharacterRanges (textView: NSTextView; oldSelectedCharRanges: NSArray; newSelectedCharRanges: NSArray): NSArray; message 'textView:willChangeSelectionFromCharacterRanges:toCharacterRanges:';
-    function textView_willCheckTextInRange_options_types (view: NSTextView; range: NSRange; options: NSDictionary; checkingTypes: NSTextCheckingTypesPtr): NSDictionary; message 'textView:willCheckTextInRange:options:types:'; { available in macos  }
+    function textView_willCheckTextInRange_options_types (view: NSTextView; range: NSRange; options: NSDictionary; checkingTypes: NSTextCheckingTypesPtr): NSDictionary; message 'textView:willCheckTextInRange:options:types:'; { available in macos 10.6 }
     function textView_willDisplayToolTip_forCharacterAtIndex (textView: NSTextView; tooltip: NSString; characterIndex: NSUInteger): NSString; message 'textView:willDisplayToolTip:forCharacterAtIndex:';
-    function textView_willShowSharingServicePicker_forItems (textView: NSTextView; servicePicker: NSSharingServicePicker; items: NSArray): NSSharingServicePicker; message 'textView:willShowSharingServicePicker:forItems:'; { available in macos  }
+    function textView_willShowSharingServicePicker_forItems (textView: NSTextView; servicePicker: NSSharingServicePicker; items: NSArray): NSSharingServicePicker; message 'textView:willShowSharingServicePicker:forItems:'; { available in macos 10.8 }
     function textView_writablePasteboardTypesForCell_atIndex (view: NSTextView; cell: NSTextAttachmentCellProtocol; charIndex: NSUInteger): NSArray; message 'textView:writablePasteboardTypesForCell:atIndex:';
     function textView_writeCell_atIndex_toPasteboard_type (view: NSTextView; cell: NSTextAttachmentCellProtocol; charIndex: NSUInteger; pboard: NSPasteboard; type_: NSPasteboardType): objcbool; message 'textView:writeCell:atIndex:toPasteboard:type:';
     procedure textViewDidChangeSelection (notification: NSNotification); message 'textViewDidChangeSelection:';
@@ -305,31 +305,31 @@ type
 type
   NSTableViewDelegateProtocol = objcprotocol external name 'NSTableViewDelegate' (NSControlTextEditingDelegateProtocol)
   optional
-    function tableView_viewForTableColumn_row (tableView: NSTableView; tableColumn: NSTableColumn; row: NSInteger): NSView; message 'tableView:viewForTableColumn:row:'; { available in macos  }
-    function tableView_rowViewForRow (tableView: NSTableView; row: NSInteger): NSTableRowView; message 'tableView:rowViewForRow:'; { available in macos  }
-    procedure tableView_didAddRowView_forRow (tableView: NSTableView; rowView: NSTableRowView; row: NSInteger); message 'tableView:didAddRowView:forRow:'; { available in macos  }
-    procedure tableView_didRemoveRowView_forRow (tableView: NSTableView; rowView: NSTableRowView; row: NSInteger); message 'tableView:didRemoveRowView:forRow:'; { available in macos  }
+    function tableView_viewForTableColumn_row (tableView: NSTableView; tableColumn: NSTableColumn; row: NSInteger): NSView; message 'tableView:viewForTableColumn:row:'; { available in macos 10.7 }
+    function tableView_rowViewForRow (tableView: NSTableView; row: NSInteger): NSTableRowView; message 'tableView:rowViewForRow:'; { available in macos 10.7 }
+    procedure tableView_didAddRowView_forRow (tableView: NSTableView; rowView: NSTableRowView; row: NSInteger); message 'tableView:didAddRowView:forRow:'; { available in macos 10.7 }
+    procedure tableView_didRemoveRowView_forRow (tableView: NSTableView; rowView: NSTableRowView; row: NSInteger); message 'tableView:didRemoveRowView:forRow:'; { available in macos 10.7 }
     procedure tableView_willDisplayCell_forTableColumn_row (tableView: NSTableView; cell: id; tableColumn: NSTableColumn; row: NSInteger); message 'tableView:willDisplayCell:forTableColumn:row:';
     function tableView_shouldEditTableColumn_row (tableView: NSTableView; tableColumn: NSTableColumn; row: NSInteger): objcbool; message 'tableView:shouldEditTableColumn:row:';
     function tableView_toolTipForCell_rect_tableColumn_row_mouseLocation (tableView: NSTableView; cell: NSCell; rect: NSRectPointer; tableColumn: NSTableColumn; row: NSInteger; mouseLocation: NSPoint): NSString; message 'tableView:toolTipForCell:rect:tableColumn:row:mouseLocation:';
-    function tableView_shouldShowCellExpansionForTableColumn_row (tableView: NSTableView; tableColumn: NSTableColumn; row: NSInteger): objcbool; message 'tableView:shouldShowCellExpansionForTableColumn:row:'; { available in macos  }
-    function tableView_shouldTrackCell_forTableColumn_row (tableView: NSTableView; cell: NSCell; tableColumn: NSTableColumn; row: NSInteger): objcbool; message 'tableView:shouldTrackCell:forTableColumn:row:'; { available in macos  }
-    function tableView_dataCellForTableColumn_row (tableView: NSTableView; tableColumn: NSTableColumn; row: NSInteger): NSCell; message 'tableView:dataCellForTableColumn:row:'; { available in macos  }
+    function tableView_shouldShowCellExpansionForTableColumn_row (tableView: NSTableView; tableColumn: NSTableColumn; row: NSInteger): objcbool; message 'tableView:shouldShowCellExpansionForTableColumn:row:'; { available in macos 10.5 }
+    function tableView_shouldTrackCell_forTableColumn_row (tableView: NSTableView; cell: NSCell; tableColumn: NSTableColumn; row: NSInteger): objcbool; message 'tableView:shouldTrackCell:forTableColumn:row:'; { available in macos 10.5 }
+    function tableView_dataCellForTableColumn_row (tableView: NSTableView; tableColumn: NSTableColumn; row: NSInteger): NSCell; message 'tableView:dataCellForTableColumn:row:'; { available in macos 10.5 }
     function selectionShouldChangeInTableView (tableView: NSTableView): objcbool; message 'selectionShouldChangeInTableView:';
     function tableView_shouldSelectRow (tableView: NSTableView; row: NSInteger): objcbool; message 'tableView:shouldSelectRow:';
-    function tableView_selectionIndexesForProposedSelection (tableView: NSTableView; proposedSelectionIndexes: NSIndexSet): NSIndexSet; message 'tableView:selectionIndexesForProposedSelection:'; { available in macos  }
+    function tableView_selectionIndexesForProposedSelection (tableView: NSTableView; proposedSelectionIndexes: NSIndexSet): NSIndexSet; message 'tableView:selectionIndexesForProposedSelection:'; { available in macos 10.5 }
     function tableView_shouldSelectTableColumn (tableView: NSTableView; tableColumn: NSTableColumn): objcbool; message 'tableView:shouldSelectTableColumn:';
     procedure tableView_mouseDownInHeaderOfTableColumn (tableView: NSTableView; tableColumn: NSTableColumn); message 'tableView:mouseDownInHeaderOfTableColumn:';
     procedure tableView_didClickTableColumn (tableView: NSTableView; tableColumn: NSTableColumn); message 'tableView:didClickTableColumn:';
     procedure tableView_didDragTableColumn (tableView: NSTableView; tableColumn: NSTableColumn); message 'tableView:didDragTableColumn:';
     function tableView_heightOfRow (tableView: NSTableView; row: NSInteger): CGFloat; message 'tableView:heightOfRow:';
-    function tableView_typeSelectStringForTableColumn_row (tableView: NSTableView; tableColumn: NSTableColumn; row: NSInteger): NSString; message 'tableView:typeSelectStringForTableColumn:row:'; { available in macos  }
-    function tableView_nextTypeSelectMatchFromRow_toRow_forString (tableView: NSTableView; startRow: NSInteger; endRow: NSInteger; searchString: NSString): NSInteger; message 'tableView:nextTypeSelectMatchFromRow:toRow:forString:'; { available in macos  }
-    function tableView_shouldTypeSelectForEvent_withCurrentSearchString (tableView: NSTableView; event: NSEvent; searchString: NSString): objcbool; message 'tableView:shouldTypeSelectForEvent:withCurrentSearchString:'; { available in macos  }
-    function tableView_isGroupRow (tableView: NSTableView; row: NSInteger): objcbool; message 'tableView:isGroupRow:'; { available in macos  }
-    function tableView_sizeToFitWidthOfColumn (tableView: NSTableView; column: NSInteger): CGFloat; message 'tableView:sizeToFitWidthOfColumn:'; { available in macos  }
-    function tableView_shouldReorderColumn_toColumn (tableView: NSTableView; columnIndex: NSInteger; newColumnIndex: NSInteger): objcbool; message 'tableView:shouldReorderColumn:toColumn:'; { available in macos  }
-    function tableView_rowActionsForRow_edge (tableView: NSTableView; row: NSInteger; edge: NSTableRowActionEdge): NSArray; message 'tableView:rowActionsForRow:edge:'; { available in macos  }
+    function tableView_typeSelectStringForTableColumn_row (tableView: NSTableView; tableColumn: NSTableColumn; row: NSInteger): NSString; message 'tableView:typeSelectStringForTableColumn:row:'; { available in macos 10.5 }
+    function tableView_nextTypeSelectMatchFromRow_toRow_forString (tableView: NSTableView; startRow: NSInteger; endRow: NSInteger; searchString: NSString): NSInteger; message 'tableView:nextTypeSelectMatchFromRow:toRow:forString:'; { available in macos 10.5 }
+    function tableView_shouldTypeSelectForEvent_withCurrentSearchString (tableView: NSTableView; event: NSEvent; searchString: NSString): objcbool; message 'tableView:shouldTypeSelectForEvent:withCurrentSearchString:'; { available in macos 10.5 }
+    function tableView_isGroupRow (tableView: NSTableView; row: NSInteger): objcbool; message 'tableView:isGroupRow:'; { available in macos 10.5 }
+    function tableView_sizeToFitWidthOfColumn (tableView: NSTableView; column: NSInteger): CGFloat; message 'tableView:sizeToFitWidthOfColumn:'; { available in macos 10.6 }
+    function tableView_shouldReorderColumn_toColumn (tableView: NSTableView; columnIndex: NSInteger; newColumnIndex: NSInteger): objcbool; message 'tableView:shouldReorderColumn:toColumn:'; { available in macos 10.6 }
+    function tableView_rowActionsForRow_edge (tableView: NSTableView; row: NSInteger; edge: NSTableRowActionEdge): NSArray; message 'tableView:rowActionsForRow:edge:'; { available in macos 10.11 }
     procedure tableViewSelectionDidChange (notification: NSNotification); message 'tableViewSelectionDidChange:';
     procedure tableViewColumnDidMove (notification: NSNotification); message 'tableViewColumnDidMove:';
     procedure tableViewColumnDidResize (notification: NSNotification); message 'tableViewColumnDidResize:';
@@ -343,7 +343,7 @@ var
   NSTableViewColumnDidMoveNotification: NSNotificationName; cvar; external;
   NSTableViewColumnDidResizeNotification: NSNotificationName; cvar; external;
   NSTableViewSelectionIsChangingNotification: NSNotificationName; cvar; external;
-  NSTableViewRowViewKey: NSUserInterfaceItemIdentifier { available in macos  }; cvar; external;
+  NSTableViewRowViewKey: NSUserInterfaceItemIdentifier { available in macos 10.7 }; cvar; external;
 {$endif}
 
 {$ifdef PROTOCOLS}
@@ -355,10 +355,10 @@ type
     function tableView_objectValueForTableColumn_row (tableView: NSTableView; tableColumn: NSTableColumn; row: NSInteger): id; message 'tableView:objectValueForTableColumn:row:';
     procedure tableView_setObjectValue_forTableColumn_row (tableView: NSTableView; object_: id; tableColumn: NSTableColumn; row: NSInteger); message 'tableView:setObjectValue:forTableColumn:row:';
     procedure tableView_sortDescriptorsDidChange (tableView: NSTableView; oldDescriptors: NSArray); message 'tableView:sortDescriptorsDidChange:';
-    function tableView_pasteboardWriterForRow (tableView: NSTableView; row: NSInteger): id; message 'tableView:pasteboardWriterForRow:'; { available in macos  }
-    procedure tableView_draggingSession_willBeginAtPoint_forRowIndexes (tableView: NSTableView; session: NSDraggingSession; screenPoint: NSPoint; rowIndexes: NSIndexSet); message 'tableView:draggingSession:willBeginAtPoint:forRowIndexes:'; { available in macos  }
-    procedure tableView_draggingSession_endedAtPoint_operation (tableView: NSTableView; session: NSDraggingSession; screenPoint: NSPoint; operation: NSDragOperation); message 'tableView:draggingSession:endedAtPoint:operation:'; { available in macos  }
-    procedure tableView_updateDraggingItemsForDrag (tableView: NSTableView; draggingInfo: NSDraggingInfoProtocol); message 'tableView:updateDraggingItemsForDrag:'; { available in macos  }
+    function tableView_pasteboardWriterForRow (tableView: NSTableView; row: NSInteger): id; message 'tableView:pasteboardWriterForRow:'; { available in macos 10.7 }
+    procedure tableView_draggingSession_willBeginAtPoint_forRowIndexes (tableView: NSTableView; session: NSDraggingSession; screenPoint: NSPoint; rowIndexes: NSIndexSet); message 'tableView:draggingSession:willBeginAtPoint:forRowIndexes:'; { available in macos 10.7 }
+    procedure tableView_draggingSession_endedAtPoint_operation (tableView: NSTableView; session: NSDraggingSession; screenPoint: NSPoint; operation: NSDragOperation); message 'tableView:draggingSession:endedAtPoint:operation:'; { available in macos 10.7 }
+    procedure tableView_updateDraggingItemsForDrag (tableView: NSTableView; draggingInfo: NSDraggingInfoProtocol); message 'tableView:updateDraggingItemsForDrag:'; { available in macos 10.7 }
     function tableView_writeRowsWithIndexes_toPasteboard (tableView: NSTableView; rowIndexes: NSIndexSet; pboard: NSPasteboard): objcbool; message 'tableView:writeRowsWithIndexes:toPasteboard:'; deprecated 'Use -tableView:pasteboardWriterForRow: instead';
     function tableView_validateDrop_proposedRow_proposedDropOperation (tableView: NSTableView; info: NSDraggingInfoProtocol; row: NSInteger; dropOperation: NSTableViewDropOperation): NSDragOperation; message 'tableView:validateDrop:proposedRow:proposedDropOperation:';
     function tableView_acceptDrop_row_dropOperation (tableView: NSTableView; info: NSDraggingInfoProtocol; row: NSInteger; dropOperation: NSTableViewDropOperation): objcbool; message 'tableView:acceptDrop:row:dropOperation:';

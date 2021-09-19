@@ -19,8 +19,8 @@ type
     function stride: NSUInteger; message 'stride';
     procedure setFormat(newValue: MDLVertexFormat); message 'setFormat:';
     function format: MDLVertexFormat; message 'format';
-    procedure setBufferSize(newValue: NSUInteger); message 'setBufferSize:'; { available in macos , ios , tvos  }
-    function bufferSize: NSUInteger; message 'bufferSize'; { available in macos , ios , tvos  }
+    procedure setBufferSize(newValue: NSUInteger); message 'setBufferSize:'; { available in macos 10.13, ios 11.0, tvos 11.0 }
+    function bufferSize: NSUInteger; message 'bufferSize'; { available in macos 10.13, ios 11.0, tvos 11.0 }
   end;
 
 type
@@ -52,11 +52,11 @@ type
     procedure addNormalsWithAttributeNamed_creaseThreshold (attributeName: NSString; creaseThreshold: single); message 'addNormalsWithAttributeNamed:creaseThreshold:';
     procedure addTangentBasisForTextureCoordinateAttributeNamed_tangentAttributeNamed_bitangentAttributeNamed (textureCoordinateAttributeName: NSString; tangentAttributeName: NSString; bitangentAttributeName: NSString); message 'addTangentBasisForTextureCoordinateAttributeNamed:tangentAttributeNamed:bitangentAttributeNamed:';
     procedure addTangentBasisForTextureCoordinateAttributeNamed_normalAttributeNamed_tangentAttributeNamed (textureCoordinateAttributeName: NSString; normalAttributeName: NSString; tangentAttributeName: NSString); message 'addTangentBasisForTextureCoordinateAttributeNamed:normalAttributeNamed:tangentAttributeNamed:';
-    procedure addOrthTanBasisForTextureCoordinateAttributeNamed_normalAttributeNamed_tangentAttributeNamed (textureCoordinateAttributeName: NSString; normalAttributeName: NSString; tangentAttributeName: NSString); message 'addOrthTanBasisForTextureCoordinateAttributeNamed:normalAttributeNamed:tangentAttributeNamed:'; { available in macos , ios , tvos  }
+    procedure addOrthTanBasisForTextureCoordinateAttributeNamed_normalAttributeNamed_tangentAttributeNamed (textureCoordinateAttributeName: NSString; normalAttributeName: NSString; tangentAttributeName: NSString); message 'addOrthTanBasisForTextureCoordinateAttributeNamed:normalAttributeNamed:tangentAttributeNamed:'; { available in macos 10.13, ios 11.0, tvos 11.0 }
     procedure addUnwrappedTextureCoordinatesForAttributeNamed (textureCoordinateAttributeName: NSString); message 'addUnwrappedTextureCoordinatesForAttributeNamed:';
-    procedure flipTextureCoordinatesInAttributeNamed (textureCoordinateAttributeName: NSString); message 'flipTextureCoordinatesInAttributeNamed:'; { available in macos , ios , tvos  }
+    procedure flipTextureCoordinatesInAttributeNamed (textureCoordinateAttributeName: NSString); message 'flipTextureCoordinatesInAttributeNamed:'; { available in macos 10.13, ios 11.0, tvos 11.0 }
     procedure makeVerticesUnique; message 'makeVerticesUnique'; deprecated 'in 10.11,10.13,9.0,11.0';
-    function makeVerticesUniqueAndReturnError (error: NSErrorPtr): objcbool; message 'makeVerticesUniqueAndReturnError:'; { available in macos , ios , tvos  }
+    function makeVerticesUniqueAndReturnError (error: NSErrorPtr): objcbool; message 'makeVerticesUniqueAndReturnError:'; { available in macos 10.13, ios 11.0, tvos 11.0 }
     procedure replaceAttributeNamed_withData (name: NSString; newData: MDLVertexAttributeData); message 'replaceAttributeNamed:withData:';
     procedure updateAttributeNamed_withData (name: NSString; newData: MDLVertexAttributeData); message 'updateAttributeNamed:withData:';
     procedure removeAttributeNamed (name: NSString); message 'removeAttributeNamed:';
@@ -76,10 +76,10 @@ type
     class function newBoxWithDimensions_segments_geometryType_inwardNormals_allocator (dimensions: vector_float3; segments: vector_uint3; geometryType: MDLGeometryType; inwardNormals: objcbool; allocator_: MDLMeshBufferAllocatorProtocol): id; message 'newBoxWithDimensions:segments:geometryType:inwardNormals:allocator:';
     class function newEllipsoidWithRadii_radialSegments_verticalSegments_geometryType_inwardNormals_hemisphere_allocator (radii: vector_float3; radialSegments: NSUInteger; verticalSegments: NSUInteger; geometryType: MDLGeometryType; inwardNormals: objcbool; hemisphere: objcbool; allocator_: MDLMeshBufferAllocatorProtocol): id; message 'newEllipsoidWithRadii:radialSegments:verticalSegments:geometryType:inwardNormals:hemisphere:allocator:';
     class function newCylinderWithHeight_radii_radialSegments_verticalSegments_geometryType_inwardNormals_allocator (height: single; radii: vector_float2; radialSegments: NSUInteger; verticalSegments: NSUInteger; geometryType: MDLGeometryType; inwardNormals: objcbool; allocator_: MDLMeshBufferAllocatorProtocol): id; message 'newCylinderWithHeight:radii:radialSegments:verticalSegments:geometryType:inwardNormals:allocator:';
-    class function newCapsuleWithHeight_radii_radialSegments_verticalSegments_hemisphereSegments_geometryType_inwardNormals_allocator (height: single; radii: vector_float2; radialSegments: NSUInteger; verticalSegments: NSUInteger; hemisphereSegments: NSUInteger; geometryType: MDLGeometryType; inwardNormals: objcbool; allocator_: MDLMeshBufferAllocatorProtocol): id; message 'newCapsuleWithHeight:radii:radialSegments:verticalSegments:hemisphereSegments:geometryType:inwardNormals:allocator:'; { available in macos , ios , tvos  }
+    class function newCapsuleWithHeight_radii_radialSegments_verticalSegments_hemisphereSegments_geometryType_inwardNormals_allocator (height: single; radii: vector_float2; radialSegments: NSUInteger; verticalSegments: NSUInteger; hemisphereSegments: NSUInteger; geometryType: MDLGeometryType; inwardNormals: objcbool; allocator_: MDLMeshBufferAllocatorProtocol): id; message 'newCapsuleWithHeight:radii:radialSegments:verticalSegments:hemisphereSegments:geometryType:inwardNormals:allocator:'; { available in macos 10.13, ios 11.0, tvos 11.0 }
     class function newEllipticalConeWithHeight_radii_radialSegments_verticalSegments_geometryType_inwardNormals_allocator (height: single; radii: vector_float2; radialSegments: NSUInteger; verticalSegments: NSUInteger; geometryType: MDLGeometryType; inwardNormals: objcbool; allocator_: MDLMeshBufferAllocatorProtocol): id; message 'newEllipticalConeWithHeight:radii:radialSegments:verticalSegments:geometryType:inwardNormals:allocator:';
     class function newPlaneWithDimensions_segments_geometryType_allocator (dimensions: vector_float2; segments: vector_uint2; geometryType: MDLGeometryType; allocator_: MDLMeshBufferAllocatorProtocol): id; message 'newPlaneWithDimensions:segments:geometryType:allocator:';
-    class function newIcosahedronWithRadius_inwardNormals_geometryType_allocator (radius: single; inwardNormals: objcbool; geometryType: MDLGeometryType; allocator_: MDLMeshBufferAllocatorProtocol): id; message 'newIcosahedronWithRadius:inwardNormals:geometryType:allocator:'; { available in macos , ios , tvos  }
+    class function newIcosahedronWithRadius_inwardNormals_geometryType_allocator (radius: single; inwardNormals: objcbool; geometryType: MDLGeometryType; allocator_: MDLMeshBufferAllocatorProtocol): id; message 'newIcosahedronWithRadius:inwardNormals:geometryType:allocator:'; { available in macos 10.13, ios 11.0, tvos 11.0 }
     class function newIcosahedronWithRadius_inwardNormals_allocator (radius: single; inwardNormals: objcbool; allocator_: MDLMeshBufferAllocatorProtocol): id; message 'newIcosahedronWithRadius:inwardNormals:allocator:';
     class function newSubdividedMesh_submeshIndex_subdivisionLevels (mesh: MDLMesh; submeshIndex: NSUInteger; subdivisionLevels: NSUInteger): id; message 'newSubdividedMesh:submeshIndex:subdivisionLevels:';
   end;

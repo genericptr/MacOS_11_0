@@ -141,8 +141,8 @@ function NSStringFromSelector(aSelector: SEL): NSString; cdecl; external;
 function NSSelectorFromString(aSelectorName: NSString): SEL; cdecl; external;
 function NSStringFromClass(aClass: pobjc_class): NSString; cdecl; external;
 function NSClassFromString(aClassName: NSString): pobjc_class; cdecl; external;
-function NSStringFromProtocol(proto: Protocol): NSString; cdecl; external; { available in macos , ios , watchos , tvos  }
-function NSProtocolFromString(namestr: NSString): Protocol; cdecl; external; { available in macos , ios , watchos , tvos  }
+function NSStringFromProtocol(proto: Protocol): NSString; cdecl; external; { available in macos 10.5, ios 2.0, watchos 2.0, tvos 9.0 }
+function NSProtocolFromString(namestr: NSString): Protocol; cdecl; external; { available in macos 10.5, ios 2.0, watchos 2.0, tvos 9.0 }
 function NSGetSizeAndAlignment(typePtr: PChar; sizep: NSUIntegerPtr; alignp: NSUIntegerPtr): PChar; cdecl; external;
 {$endif}
 

@@ -25,8 +25,8 @@ type
     function diskIOMetrics: MXDiskIOMetric; message 'diskIOMetrics';
     function memoryMetrics: MXMemoryMetric; message 'memoryMetrics';
     function displayMetrics: MXDisplayMetric; message 'displayMetrics';
-    function animationMetrics: MXAnimationMetric; message 'animationMetrics'; { unavailable in macos, tvos, watchos }
-    function applicationExitMetrics: MXAppExitMetric; message 'applicationExitMetrics'; { unavailable in macos, tvos, watchos }
+    function animationMetrics: MXAnimationMetric; message 'animationMetrics'; { unavailable in macos, tvos, watchos } { available in ios 14.0 }
+    function applicationExitMetrics: MXAppExitMetric; message 'applicationExitMetrics'; { unavailable in macos, tvos, watchos } { available in ios 14.0 }
     function signpostMetrics: NSArray; message 'signpostMetrics';
     function metaData: MXMetaData; message 'metaData';
     function JSONRepresentation: NSData; message 'JSONRepresentation';

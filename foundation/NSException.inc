@@ -40,8 +40,8 @@ type
     function name_: NSExceptionName; message 'name';
     function reason_: NSString; message 'reason';
     function userInfo_: NSDictionary; message 'userInfo';
-    function callStackReturnAddresses: NSArray; message 'callStackReturnAddresses'; { available in macos , ios , watchos , tvos  }
-    function callStackSymbols: NSArray; message 'callStackSymbols'; { available in macos , ios , watchos , tvos  }
+    function callStackReturnAddresses: NSArray; message 'callStackReturnAddresses'; { available in macos 10.5, ios 2.0, watchos 2.0, tvos 9.0 }
+    function callStackSymbols: NSArray; message 'callStackSymbols'; { available in macos 10.6, ios 4.0, watchos 2.0, tvos 9.0 }
     procedure raise_; message 'raise';
 
     { Adopted protocols }
@@ -71,7 +71,7 @@ function NSSetUncaughtExceptionHandler(param1: NSUncaughtExceptionHandler): poin
 
 {$ifdef EXTERNAL_SYMBOLS}
 var
-  NSAssertionHandlerKey: NSString { available in macos , ios , watchos , tvos  }; cvar; external;
+  NSAssertionHandlerKey: NSString { available in macos 10.6, ios 4.0, watchos 2.0, tvos 9.0 }; cvar; external;
 {$endif}
 
 {$ifdef CLASSES}

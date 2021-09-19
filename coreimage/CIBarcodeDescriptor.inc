@@ -123,7 +123,7 @@ type
 
 type
   NSUserActivity_CIBarcodeDescriptor = objccategory external name 'CIBarcodeDescriptor' (NSUserActivity)
-    function detectedBarcodeDescriptor: CIBarcodeDescriptor; message 'detectedBarcodeDescriptor'; { available in macos , ios , tvos  }
+    function detectedBarcodeDescriptor: CIBarcodeDescriptor; message 'detectedBarcodeDescriptor'; { available in macos 10.13.4, ios 11.3, tvos 11.3 }
   end;
 {$endif}
 

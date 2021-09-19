@@ -56,9 +56,9 @@ var
   NSPrintDetailedErrorReporting: NSPrintInfoAttributeKey; cvar; external;
   NSPrintFaxNumber: NSPrintInfoAttributeKey; cvar; external;
   NSPrintPrinterName: NSPrintInfoAttributeKey; cvar; external;
-  NSPrintSelectionOnly: NSPrintInfoAttributeKey { available in macos  }; cvar; external;
-  NSPrintJobSavingURL: NSPrintInfoAttributeKey { available in macos  }; cvar; external;
-  NSPrintJobSavingFileNameExtensionHidden: NSPrintInfoAttributeKey { available in macos  }; cvar; external;
+  NSPrintSelectionOnly: NSPrintInfoAttributeKey { available in macos 10.6 }; cvar; external;
+  NSPrintJobSavingURL: NSPrintInfoAttributeKey { available in macos 10.6 }; cvar; external;
+  NSPrintJobSavingFileNameExtensionHidden: NSPrintInfoAttributeKey { available in macos 10.6 }; cvar; external;
   NSPrintHeaderAndFooter: NSPrintInfoAttributeKey; cvar; external;
 {$endif}
 
@@ -99,8 +99,8 @@ type
     function paperSize: NSSize; message 'paperSize';
     procedure setOrientation(newValue: NSPaperOrientation); message 'setOrientation:';
     function orientation: NSPaperOrientation; message 'orientation';
-    procedure setScalingFactor(newValue: CGFloat); message 'setScalingFactor:'; { available in macos  }
-    function scalingFactor: CGFloat; message 'scalingFactor'; { available in macos  }
+    procedure setScalingFactor(newValue: CGFloat); message 'setScalingFactor:'; { available in macos 10.6 }
+    function scalingFactor: CGFloat; message 'scalingFactor'; { available in macos 10.6 }
     procedure setLeftMargin(newValue: CGFloat); message 'setLeftMargin:';
     function leftMargin: CGFloat; message 'leftMargin';
     procedure setRightMargin(newValue: CGFloat); message 'setRightMargin:';
@@ -125,15 +125,15 @@ type
     function imageablePageBounds: NSRect; message 'imageablePageBounds';
     function localizedPaperName: NSString; message 'localizedPaperName';
     class function defaultPrinter: NSPrinter; message 'defaultPrinter';
-    function printSettings: NSMutableDictionary; message 'printSettings'; { available in macos  }
-    function PMPrintSession: pointer; message 'PMPrintSession'; { available in macos  }
-    function PMPageFormat: pointer; message 'PMPageFormat'; { available in macos  }
-    function PMPrintSettings: pointer; message 'PMPrintSettings'; { available in macos  }
-    procedure updateFromPMPageFormat; message 'updateFromPMPageFormat'; { available in macos  }
-    procedure updateFromPMPrintSettings; message 'updateFromPMPrintSettings'; { available in macos  }
-    procedure setSelectionOnly(newValue: objcbool); message 'setSelectionOnly:'; { available in macos  }
-    function isSelectionOnly: objcbool; message 'isSelectionOnly'; { available in macos  }
-    procedure takeSettingsFromPDFInfo (inPDFInfo: NSPDFInfo); message 'takeSettingsFromPDFInfo:'; { available in macos  }
+    function printSettings: NSMutableDictionary; message 'printSettings'; { available in macos 10.5 }
+    function PMPrintSession: pointer; message 'PMPrintSession'; { available in macos 10.5 }
+    function PMPageFormat: pointer; message 'PMPageFormat'; { available in macos 10.5 }
+    function PMPrintSettings: pointer; message 'PMPrintSettings'; { available in macos 10.5 }
+    procedure updateFromPMPageFormat; message 'updateFromPMPageFormat'; { available in macos 10.5 }
+    procedure updateFromPMPrintSettings; message 'updateFromPMPrintSettings'; { available in macos 10.5 }
+    procedure setSelectionOnly(newValue: objcbool); message 'setSelectionOnly:'; { available in macos 10.6 }
+    function isSelectionOnly: objcbool; message 'isSelectionOnly'; { available in macos 10.6 }
+    procedure takeSettingsFromPDFInfo (inPDFInfo: NSPDFInfo); message 'takeSettingsFromPDFInfo:'; { available in macos 10.9 }
 
     { Adopted protocols }
     function copyWithZone (zone: NSZonePtr): id; message 'copyWithZone:';

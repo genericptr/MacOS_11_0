@@ -16,7 +16,7 @@ type
   public
     function tracks: NSArray; message 'tracks';
     function naturalSize: CGSize; message 'naturalSize';
-    function URLAssetInitializationOptions: NSDictionary; message 'URLAssetInitializationOptions'; { available in macos , ios , tvos , watchos  }
+    function URLAssetInitializationOptions: NSDictionary; message 'URLAssetInitializationOptions'; { available in macos 10.11, ios 9.0, tvos 9.0, watchos 2.0 }
 
     { Adopted protocols }
     function mutableCopyWithZone (zone: NSZonePtr): id; message 'mutableCopyWithZone:';
@@ -40,7 +40,7 @@ type
     procedure setNaturalSize(newValue: CGSize); message 'setNaturalSize:';
     function naturalSize: CGSize; message 'naturalSize';
     class function composition: id; message 'composition';
-    class function compositionWithURLAssetInitializationOptions (URLAssetInitializationOptions_: NSDictionary): id; message 'compositionWithURLAssetInitializationOptions:'; { available in macos , ios , tvos , watchos  }
+    class function compositionWithURLAssetInitializationOptions (URLAssetInitializationOptions_: NSDictionary): id; message 'compositionWithURLAssetInitializationOptions:'; { available in macos 10.11, ios 9.0, tvos 9.0, watchos 2.0 }
   end;
 
 

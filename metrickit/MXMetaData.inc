@@ -14,7 +14,7 @@ type
     function osVersion: NSString; message 'osVersion';
     function deviceType: NSString; message 'deviceType';
     function applicationBuildVersion: NSString; message 'applicationBuildVersion';
-    function platformArchitecture: NSString; message 'platformArchitecture'; { unavailable in macos, tvos, watchos }
+    function platformArchitecture: NSString; message 'platformArchitecture'; { unavailable in macos, tvos, watchos } { available in ios 14.0 }
     function JSONRepresentation: NSData; message 'JSONRepresentation';
     function dictionaryRepresentation: NSDictionary; message 'dictionaryRepresentation'; { unavailable in macos, tvos, watchos }
 

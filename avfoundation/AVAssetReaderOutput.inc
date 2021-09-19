@@ -19,18 +19,18 @@ type
     _internal: AVAssetReaderOutputInternal;
   public
     function mediaType: AVMediaType; message 'mediaType';
-    procedure setAlwaysCopiesSampleData(newValue: objcbool); message 'setAlwaysCopiesSampleData:'; { unavailable in watchos }
-    function alwaysCopiesSampleData: objcbool; message 'alwaysCopiesSampleData'; { unavailable in watchos }
+    procedure setAlwaysCopiesSampleData(newValue: objcbool); message 'setAlwaysCopiesSampleData:'; { unavailable in watchos } { available in macos 10.8, ios 5.0, tvos 9.0 }
+    function alwaysCopiesSampleData: objcbool; message 'alwaysCopiesSampleData'; { unavailable in watchos } { available in macos 10.8, ios 5.0, tvos 9.0 }
     function copyNextSampleBuffer: CMSampleBufferRef; message 'copyNextSampleBuffer'; { CF_RETURNS_RETAINED }
   end;
 
 
 type
   AVAssetReaderOutputRandomAccess = objccategory external (AVAssetReaderOutput)
-    procedure setSupportsRandomAccess(newValue: objcbool); message 'setSupportsRandomAccess:'; { unavailable in watchos }
-    function supportsRandomAccess: objcbool; message 'supportsRandomAccess'; { unavailable in watchos }
-    procedure resetForReadingTimeRanges (timeRanges: NSArray); message 'resetForReadingTimeRanges:'; { unavailable in watchos }
-    procedure markConfigurationAsFinal; message 'markConfigurationAsFinal'; { unavailable in watchos }
+    procedure setSupportsRandomAccess(newValue: objcbool); message 'setSupportsRandomAccess:'; { unavailable in watchos } { available in macos 10.10, ios 8.0, tvos 9.0 }
+    function supportsRandomAccess: objcbool; message 'supportsRandomAccess'; { unavailable in watchos } { available in macos 10.10, ios 8.0, tvos 9.0 }
+    procedure resetForReadingTimeRanges (timeRanges: NSArray); message 'resetForReadingTimeRanges:'; { unavailable in watchos } { available in macos 10.10, ios 8.0, tvos 9.0 }
+    procedure markConfigurationAsFinal; message 'markConfigurationAsFinal'; { unavailable in watchos } { available in macos 10.10, ios 8.0, tvos 9.0 }
   end;
 
 
@@ -43,8 +43,8 @@ type
     function initWithTrack_outputSettings (track: AVAssetTrack; outputSettings: NSDictionary): id; message 'initWithTrack:outputSettings:'; { NS_DESIGNATED_INITIALIZER }
     function track: AVAssetTrack; message 'track';
     function outputSettings: NSDictionary; message 'outputSettings';
-    procedure setAudioTimePitchAlgorithm(newValue: AVAudioTimePitchAlgorithm); message 'setAudioTimePitchAlgorithm:'; { unavailable in watchos }
-    function audioTimePitchAlgorithm: AVAudioTimePitchAlgorithm; message 'audioTimePitchAlgorithm'; { unavailable in watchos }
+    procedure setAudioTimePitchAlgorithm(newValue: AVAudioTimePitchAlgorithm); message 'setAudioTimePitchAlgorithm:'; { unavailable in watchos } { available in macos 10.9, ios 7.0, tvos 9.0 }
+    function audioTimePitchAlgorithm: AVAudioTimePitchAlgorithm; message 'audioTimePitchAlgorithm'; { unavailable in watchos } { available in macos 10.9, ios 7.0, tvos 9.0 }
   end;
 
 type
@@ -58,8 +58,8 @@ type
     function audioSettings: NSDictionary; message 'audioSettings';
     procedure setAudioMix(newValue: AVAudioMix); message 'setAudioMix:';
     function audioMix: AVAudioMix; message 'audioMix';
-    procedure setAudioTimePitchAlgorithm(newValue: AVAudioTimePitchAlgorithm); message 'setAudioTimePitchAlgorithm:'; { unavailable in watchos }
-    function audioTimePitchAlgorithm: AVAudioTimePitchAlgorithm; message 'audioTimePitchAlgorithm'; { unavailable in watchos }
+    procedure setAudioTimePitchAlgorithm(newValue: AVAudioTimePitchAlgorithm); message 'setAudioTimePitchAlgorithm:'; { unavailable in watchos } { available in macos 10.9, ios 7.0, tvos 9.0 }
+    function audioTimePitchAlgorithm: AVAudioTimePitchAlgorithm; message 'audioTimePitchAlgorithm'; { unavailable in watchos } { available in macos 10.9, ios 7.0, tvos 9.0 }
   end;
 
 type
@@ -73,7 +73,7 @@ type
     function videoSettings: NSDictionary; message 'videoSettings';
     procedure setVideoComposition(newValue: AVVideoComposition); message 'setVideoComposition:';
     function videoComposition: AVVideoComposition; message 'videoComposition';
-    function customVideoCompositor: AVVideoCompositingProtocol; message 'customVideoCompositor'; { unavailable in watchos }
+    function customVideoCompositor: AVVideoCompositingProtocol; message 'customVideoCompositor'; { unavailable in watchos } { available in macos 10.9, ios 7.0, tvos 9.0 }
   end;
 
 type

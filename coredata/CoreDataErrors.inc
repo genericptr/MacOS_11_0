@@ -1,15 +1,15 @@
 { Parsed from CoreData.framework CoreDataErrors.h }
 {$ifdef EXTERNAL_SYMBOLS}
 var
-  NSDetailedErrorsKey: NSString { available in macosx ,ios  }; cvar; external;
-  NSValidationObjectErrorKey: NSString { available in macosx ,ios  }; cvar; external;
-  NSValidationKeyErrorKey: NSString { available in macosx ,ios  }; cvar; external;
-  NSValidationPredicateErrorKey: NSString { available in macosx ,ios  }; cvar; external;
-  NSValidationValueErrorKey: NSString { available in macosx ,ios  }; cvar; external;
-  NSAffectedStoresErrorKey: NSString { available in macosx ,ios  }; cvar; external;
-  NSAffectedObjectsErrorKey: NSString { available in macosx ,ios  }; cvar; external;
-  NSPersistentStoreSaveConflictsErrorKey: NSString { available in macosx ,ios  }; cvar; external;
-  NSSQLiteErrorDomain: NSString { available in macosx ,ios  }; cvar; external;
+  NSDetailedErrorsKey: NSString { available in macosx 10.4,ios 3.0 }; cvar; external;
+  NSValidationObjectErrorKey: NSString { available in macosx 10.4,ios 3.0 }; cvar; external;
+  NSValidationKeyErrorKey: NSString { available in macosx 10.4,ios 3.0 }; cvar; external;
+  NSValidationPredicateErrorKey: NSString { available in macosx 10.4,ios 3.0 }; cvar; external;
+  NSValidationValueErrorKey: NSString { available in macosx 10.4,ios 3.0 }; cvar; external;
+  NSAffectedStoresErrorKey: NSString { available in macosx 10.4,ios 3.0 }; cvar; external;
+  NSAffectedObjectsErrorKey: NSString { available in macosx 10.4,ios 3.0 }; cvar; external;
+  NSPersistentStoreSaveConflictsErrorKey: NSString { available in macosx 10.7,ios 5.0 }; cvar; external;
+  NSSQLiteErrorDomain: NSString { available in macosx 10.5,ios 3.0 }; cvar; external;
 {$endif}
 
 {$ifdef TYPES}

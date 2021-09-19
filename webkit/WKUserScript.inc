@@ -24,7 +24,7 @@ type
     function injectionTime: WKUserScriptInjectionTime; message 'injectionTime';
     function isForMainFrameOnly: objcbool; message 'isForMainFrameOnly';
     function initWithSource_injectionTime_forMainFrameOnly (source_: NSString; injectionTime_: WKUserScriptInjectionTime; forMainFrameOnly: objcbool): id; message 'initWithSource:injectionTime:forMainFrameOnly:';
-    function initWithSource_injectionTime_forMainFrameOnly_inContentWorld (source_: NSString; injectionTime_: WKUserScriptInjectionTime; forMainFrameOnly: objcbool; contentWorld: WKContentWorld): id; message 'initWithSource:injectionTime:forMainFrameOnly:inContentWorld:'; { available in macos , ios  }
+    function initWithSource_injectionTime_forMainFrameOnly_inContentWorld (source_: NSString; injectionTime_: WKUserScriptInjectionTime; forMainFrameOnly: objcbool; contentWorld: WKContentWorld): id; message 'initWithSource:injectionTime:forMainFrameOnly:inContentWorld:'; { available in macos 11.0, ios 14.0 }
 
     { Adopted protocols }
     function copyWithZone (zone: NSZonePtr): id; message 'copyWithZone:';

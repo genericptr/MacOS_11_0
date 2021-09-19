@@ -15,7 +15,7 @@ type
     function lookupInfo: CKUserIdentityLookupInfo; message 'lookupInfo';
     function nameComponents: NSPersonNameComponents; message 'nameComponents';
     function userRecordID: CKRecordID; message 'userRecordID';
-    function contactIdentifiers: NSArray; message 'contactIdentifiers'; { unavailable in tvos }
+    function contactIdentifiers: NSArray; message 'contactIdentifiers'; { unavailable in tvos } { available in macos 10.13, ios 11.0, watchos 4.0 }
     function hasiCloudAccount: objcbool; message 'hasiCloudAccount';
 
     { Adopted protocols }

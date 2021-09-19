@@ -31,7 +31,7 @@ type
 
 {$ifdef EXTERNAL_SYMBOLS}
 var
-  CKQueryOperationMaximumResults: NSUInteger { available in macos , ios , watchos  }; cvar; external;
+  CKQueryOperationMaximumResults: NSUInteger { available in macos 10.10, ios 8.0, watchos 3.0 }; cvar; external;
 {$endif}
 
 {$ifdef CLASSES}

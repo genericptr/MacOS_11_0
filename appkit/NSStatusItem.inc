@@ -27,13 +27,13 @@ type
     function length: CGFloat; message 'length';
     procedure setMenu(newValue: NSMenu); message 'setMenu:';
     function menu: NSMenu; message 'menu';
-    function button: NSStatusBarButton; message 'button'; { available in macos  }
-    procedure setBehavior(newValue: NSStatusItemBehavior); message 'setBehavior:'; { available in macos  }
-    function behavior: NSStatusItemBehavior; message 'behavior'; { available in macos  }
-    procedure setVisible(newValue: objcbool); message 'setVisible:'; { available in macos  }
-    function isVisible: objcbool; message 'isVisible'; { available in macos  }
-    procedure setAutosaveName(newValue: NSStatusItemAutosaveName); message 'setAutosaveName:'; { available in macos  }
-    function autosaveName: NSStatusItemAutosaveName; message 'autosaveName'; { available in macos  }
+    function button: NSStatusBarButton; message 'button'; { available in macos 10.10 }
+    procedure setBehavior(newValue: NSStatusItemBehavior); message 'setBehavior:'; { available in macos 10.12 }
+    function behavior: NSStatusItemBehavior; message 'behavior'; { available in macos 10.12 }
+    procedure setVisible(newValue: objcbool); message 'setVisible:'; { available in macos 10.12 }
+    function isVisible: objcbool; message 'isVisible'; { available in macos 10.12 }
+    procedure setAutosaveName(newValue: NSStatusItemAutosaveName); message 'setAutosaveName:'; { available in macos 10.12 }
+    function autosaveName: NSStatusItemAutosaveName; message 'autosaveName'; { available in macos 10.12 }
   end;
 
 

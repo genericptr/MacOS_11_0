@@ -30,10 +30,10 @@ const
 type
   SKProductStorePromotionController = objcclass external (NSObject)
   public
-    class function defaultController: id; message 'defaultController'; { unavailable in watchos }
-    procedure fetchStorePromotionVisibilityForProduct_completionHandler (product: SKProduct; completionHandler: SKProductStorePromotionControllerFetchStorePromotionVisibilityForProductCallback); message 'fetchStorePromotionVisibilityForProduct:completionHandler:'; { unavailable in watchos }
+    class function defaultController: id; message 'defaultController'; { unavailable in watchos } { available in ios 11.0, macos 11.0, macCatalyst 14.0 }
+    procedure fetchStorePromotionVisibilityForProduct_completionHandler (product: SKProduct; completionHandler: SKProductStorePromotionControllerFetchStorePromotionVisibilityForProductCallback); message 'fetchStorePromotionVisibilityForProduct:completionHandler:'; { unavailable in watchos } { available in ios 11.0, macos 11.0, macCatalyst 14.0 }
     procedure updateStorePromotionVisibility_forProduct_completionHandler (promotionVisibility: SKProductStorePromotionVisibility; product: SKProduct; completionHandler: SKProductStorePromotionControllerUpdateStorePromotionVisibilityCallback); message 'updateStorePromotionVisibility:forProduct:completionHandler:';
-    procedure fetchStorePromotionOrderWithCompletionHandler (completionHandler: SKProductStorePromotionControllerFetchStorePromotionOrderWithCompletionHandlerCallback); message 'fetchStorePromotionOrderWithCompletionHandler:'; { unavailable in watchos }
+    procedure fetchStorePromotionOrderWithCompletionHandler (completionHandler: SKProductStorePromotionControllerFetchStorePromotionOrderWithCompletionHandlerCallback); message 'fetchStorePromotionOrderWithCompletionHandler:'; { unavailable in watchos } { available in ios 11.0, macos 11.0, macCatalyst 14.0 }
     procedure updateStorePromotionOrder_completionHandler (storePromotionOrder: NSArray; completionHandler: SKProductStorePromotionControllerUpdateStorePromotionOrderCallback); message 'updateStorePromotionOrder:completionHandler:';
   end;
 {$endif}

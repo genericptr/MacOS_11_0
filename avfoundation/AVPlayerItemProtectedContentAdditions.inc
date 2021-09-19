@@ -34,13 +34,13 @@ const
 
 type
   AVPlayerItemProtectedContent = objccategory external (AVPlayerItem)
-    function isAuthorizationRequiredForPlayback: objcbool; message 'isAuthorizationRequiredForPlayback'; { unavailable in watchos }
-    function isApplicationAuthorizedForPlayback: objcbool; message 'isApplicationAuthorizedForPlayback'; { unavailable in watchos }
-    function isContentAuthorizedForPlayback: objcbool; message 'isContentAuthorizedForPlayback'; { unavailable in watchos }
+    function isAuthorizationRequiredForPlayback: objcbool; message 'isAuthorizationRequiredForPlayback'; { unavailable in watchos } { available in macos 10.7, ios 4.2, tvos 9.0 }
+    function isApplicationAuthorizedForPlayback: objcbool; message 'isApplicationAuthorizedForPlayback'; { unavailable in watchos } { available in macos 10.7, ios 4.2, tvos 9.0 }
+    function isContentAuthorizedForPlayback: objcbool; message 'isContentAuthorizedForPlayback'; { unavailable in watchos } { available in macos 10.7, ios 4.2, tvos 9.0 }
     {$if (defined(TARGET_OS_MAC) and not (defined(TARGET_OS_EMBEDDED) or defined(TARGET_OS_IPHONE)))}
-    procedure requestContentAuthorizationAsynchronouslyWithTimeoutInterval_completionHandler (timeoutInterval: NSTimeInterval; handler: AVPlayerItemProtectedContentAdditionsRequestContentAuthorizationAsynchronouslyWithTimeoutIntervalCallback); message 'requestContentAuthorizationAsynchronouslyWithTimeoutInterval:completionHandler:'; { unavailable in ios, tvos, watchos }
-    procedure cancelContentAuthorizationRequest; message 'cancelContentAuthorizationRequest'; { unavailable in ios, tvos, watchos }
-    function contentAuthorizationRequestStatus: AVContentAuthorizationStatus; message 'contentAuthorizationRequestStatus'; { unavailable in ios, tvos, watchos }
+    procedure requestContentAuthorizationAsynchronouslyWithTimeoutInterval_completionHandler (timeoutInterval: NSTimeInterval; handler: AVPlayerItemProtectedContentAdditionsRequestContentAuthorizationAsynchronouslyWithTimeoutIntervalCallback); message 'requestContentAuthorizationAsynchronouslyWithTimeoutInterval:completionHandler:'; { unavailable in ios, tvos, watchos } { available in macos 10.7 }
+    procedure cancelContentAuthorizationRequest; message 'cancelContentAuthorizationRequest'; { unavailable in ios, tvos, watchos } { available in macos 10.7 }
+    function contentAuthorizationRequestStatus: AVContentAuthorizationStatus; message 'contentAuthorizationRequestStatus'; { unavailable in ios, tvos, watchos } { available in macos 10.7 }
     {$endif}
   end;
 {$endif}

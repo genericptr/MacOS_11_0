@@ -22,7 +22,7 @@ type
     function names_: NSArray; message 'names';
     function address: NSString; message 'address';
     function addresses_: NSArray; message 'addresses';
-    function localizedName: NSString; message 'localizedName'; { unavailable in ios, watchos, tvos }
+    function localizedName: NSString; message 'localizedName'; { unavailable in ios, watchos, tvos } { available in macos 10.6 }
     class procedure setHostCacheEnabled (flag: objcbool); message 'setHostCacheEnabled:'; { unavailable in ios, watchos, tvos }
     class function isHostCacheEnabled: objcbool; message 'isHostCacheEnabled'; { unavailable in ios, watchos, tvos }
     class procedure flushHostCache; message 'flushHostCache'; { unavailable in ios, watchos, tvos }

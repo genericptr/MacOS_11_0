@@ -21,7 +21,7 @@ type
     {$ifndef GL_SILENCE_DEPRECATION}
     {$else}
     {$endif}
-    class function rendererWithMTLTexture_options (tex: MTLTextureProtocol; dict: NSDictionary): CARenderer; message 'rendererWithMTLTexture:options:'; { unavailable in ios, watchos, tvos }
+    class function rendererWithMTLTexture_options (tex: MTLTextureProtocol; dict: NSDictionary): CARenderer; message 'rendererWithMTLTexture:options:'; { unavailable in ios, watchos, tvos } { available in macos 10.13 }
     procedure setLayer(newValue: CALayer); message 'setLayer:';
     function layer: CALayer; message 'layer';
     procedure setBounds(newValue: CGRect); message 'setBounds:';
@@ -38,7 +38,7 @@ type
 
 {$ifdef EXTERNAL_SYMBOLS}
 var
-  kCARendererColorSpace: NSString { unavailable in ios, watchos, tvos }; cvar; external;
-  kCARendererMetalCommandQueue: NSString { unavailable in ios, watchos, tvos }; cvar; external;
+  kCARendererColorSpace: NSString { unavailable in ios, watchos, tvos } { available in macos 10.6 }; cvar; external;
+  kCARendererMetalCommandQueue: NSString { unavailable in ios, watchos, tvos } { available in macos 10.14 }; cvar; external;
 {$endif}
 

@@ -33,7 +33,7 @@ type
     function isFinishedLaunching: objcbool; message 'isFinishedLaunching';
     function isHidden: objcbool; message 'isHidden';
     function isActive: objcbool; message 'isActive';
-    function ownsMenuBar: objcbool; message 'ownsMenuBar'; { available in macos  }
+    function ownsMenuBar: objcbool; message 'ownsMenuBar'; { available in macos 10.7 }
     function activationPolicy: NSApplicationActivationPolicy; message 'activationPolicy';
     function localizedName: NSString; message 'localizedName';
     function bundleIdentifier: NSString; message 'bundleIdentifier';
@@ -57,7 +57,7 @@ type
 
 type
   NSWorkspaceRunningApplications = objccategory external (NSWorkspace)
-    function runningApplications: NSArray; message 'runningApplications'; { available in macos  }
+    function runningApplications: NSArray; message 'runningApplications'; { available in macos 10.6 }
   end;
 {$endif}
 

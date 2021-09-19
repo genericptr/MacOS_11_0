@@ -12,7 +12,7 @@ type
   NSColorPanelModePtr = ^NSColorPanelMode;
 
 const
-  NSColorPanelModeNone = -1 { available in macos  };
+  NSColorPanelModeNone = -1 { available in macos 10.5 };
   NSColorPanelModeGray = 0;
   NSColorPanelModeRGB = 1;
   NSColorPanelModeCMYK = 2;

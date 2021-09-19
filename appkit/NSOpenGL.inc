@@ -83,7 +83,7 @@ const
 type
   NSOpenGLPixelFormat = objcclass external (NSObject, NSCodingProtocol)
   public
-    function initWithCGLPixelFormatObj (format: CGLPixelFormatObj): NSOpenGLPixelFormat; message 'initWithCGLPixelFormatObj:'; { available in macos  }
+    function initWithCGLPixelFormatObj (format: CGLPixelFormatObj): NSOpenGLPixelFormat; message 'initWithCGLPixelFormatObj:'; { available in macos 10.6 }
     function initWithAttributes (attribs: NSOpenGLPixelFormatAttributePtr): id; message 'initWithAttributes:';
     function initWithData (attribs: NSData): id; message 'initWithData:'; deprecated 'Use -initWithAttributes: instead';
     function attributes: NSData; message 'attributes'; deprecated;
@@ -102,7 +102,7 @@ type
   public
     function initWithTextureTarget_textureInternalFormat_textureMaxMipMapLevel_pixelsWide_pixelsHigh (target: GLenum; format: GLenum; maxLevel: GLint; pixelsWide: GLsizei; pixelsHigh: GLsizei): id; message 'initWithTextureTarget:textureInternalFormat:textureMaxMipMapLevel:pixelsWide:pixelsHigh:'; deprecated;
     function initWithCGLPBufferObj (pbuffer: CGLPBufferObj): NSOpenGLPixelBuffer; message 'initWithCGLPBufferObj:'; deprecated;
-    function CGLPBufferObj: CGLPBufferObj; message 'CGLPBufferObj'; { available in macos  }
+    function CGLPBufferObj: CGLPBufferObj; message 'CGLPBufferObj'; { available in macos 10.6 }
     function pixelsWide: GLsizei; message 'pixelsWide'; deprecated;
     function pixelsHigh: GLsizei; message 'pixelsHigh'; deprecated;
     function textureTarget: GLenum; message 'textureTarget'; deprecated;
@@ -140,8 +140,8 @@ type
   NSOpenGLContext = objcclass external (NSObject, NSLockingProtocol)
   public
     function initWithFormat_shareContext (format: NSOpenGLPixelFormat; share: NSOpenGLContext): id; message 'initWithFormat:shareContext:';
-    function initWithCGLContextObj (context: CGLContextObj): NSOpenGLContext; message 'initWithCGLContextObj:'; { available in macos  }
-    function pixelFormat: NSOpenGLPixelFormat; message 'pixelFormat'; { available in macos  }
+    function initWithCGLContextObj (context: CGLContextObj): NSOpenGLContext; message 'initWithCGLContextObj:'; { available in macos 10.6 }
+    function pixelFormat: NSOpenGLPixelFormat; message 'pixelFormat'; { available in macos 10.10 }
     procedure setView(newValue: NSView); message 'setView:'; deprecated;
     function view: NSView; message 'view'; deprecated;
     procedure setFullScreen; message 'setFullScreen'; deprecated 'Use a fullscreen NSOpenGLView instead';

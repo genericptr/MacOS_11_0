@@ -90,10 +90,10 @@ type
     function removeCollection (collectionName: NSString): objcbool; message 'removeCollection:'; deprecated 'Use +[NSFontCollection hideFontCollectionWithName:visibility:error:] instead';
     procedure addFontDescriptors_toCollection (descriptors: NSArray; collectionName: NSString); message 'addFontDescriptors:toCollection:'; deprecated 'Use -[NSMutableFontCollection addQueryForDescriptors:] instead';
     procedure removeFontDescriptor_fromCollection (descriptor: NSFontDescriptor; collection: NSString); message 'removeFontDescriptor:fromCollection:'; deprecated 'Use -[NSMutableFontCollection removeQueryForDescriptors:] instead';
-    function currentFontAction: NSFontAction; message 'currentFontAction'; { available in macos  }
-    function convertFontTraits (traits: NSFontTraitMask): NSFontTraitMask; message 'convertFontTraits:'; { available in macos  }
-    procedure setTarget(newValue: id); message 'setTarget:'; { available in macos  }
-    function target: id; message 'target'; { available in macos  }
+    function currentFontAction: NSFontAction; message 'currentFontAction'; { available in macos 10.5 }
+    function convertFontTraits (traits: NSFontTraitMask): NSFontTraitMask; message 'convertFontTraits:'; { available in macos 10.5 }
+    procedure setTarget(newValue: id); message 'setTarget:'; { available in macos 10.5 }
+    function target: id; message 'target'; { available in macos 10.5 }
 
     { Adopted protocols }
     function validateMenuItem (menuItem: NSMenuItem): objcbool; message 'validateMenuItem:';

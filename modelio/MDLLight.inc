@@ -77,7 +77,7 @@ type
     function initWithIESProfile (URL: NSURL): id; message 'initWithIESProfile:';
     procedure generateSphericalHarmonicsFromLight (sphericalHarmonicsLevel: NSUInteger); message 'generateSphericalHarmonicsFromLight:';
     procedure generateCubemapFromLight (textureSize: NSUInteger); message 'generateCubemapFromLight:';
-    function generateTexture (textureSize: NSUInteger): MDLTexture; message 'generateTexture:'; { available in macos , ios , tvos  }
+    function generateTexture (textureSize: NSUInteger): MDLTexture; message 'generateTexture:'; { available in macos 10.13, ios 11.0, tvos 11.0 }
     function lightCubeMap: MDLTexture; message 'lightCubeMap';
     function sphericalHarmonicsLevel: NSUInteger; message 'sphericalHarmonicsLevel';
     function sphericalHarmonicsCoefficients: NSData; message 'sphericalHarmonicsCoefficients';

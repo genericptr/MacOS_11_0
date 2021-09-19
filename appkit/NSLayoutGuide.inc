@@ -32,8 +32,8 @@ type
     function centerXAnchor: NSLayoutXAxisAnchor; message 'centerXAnchor';
     function centerYAnchor: NSLayoutYAxisAnchor; message 'centerYAnchor';
     {$if  not defined(TARGET_OS_IPHONE)}
-    function hasAmbiguousLayout: objcbool; message 'hasAmbiguousLayout'; { available in macos  }
-    function constraintsAffectingLayoutForOrientation (orientation: NSLayoutConstraintOrientation): NSArray; message 'constraintsAffectingLayoutForOrientation:'; { available in macos  }
+    function hasAmbiguousLayout: objcbool; message 'hasAmbiguousLayout'; { available in macos 10.12 }
+    function constraintsAffectingLayoutForOrientation (orientation: NSLayoutConstraintOrientation): NSArray; message 'constraintsAffectingLayoutForOrientation:'; { available in macos 10.12 }
     {$endif}
 
     { Adopted protocols }
@@ -46,9 +46,9 @@ type
 
 type
   NSLayoutGuideSupport = objccategory external (NSView)
-    procedure addLayoutGuide (guide: NSLayoutGuide); message 'addLayoutGuide:'; { available in macos  }
-    procedure removeLayoutGuide (guide: NSLayoutGuide); message 'removeLayoutGuide:'; { available in macos  }
-    function layoutGuides: NSArray; message 'layoutGuides'; { available in macos  }
+    procedure addLayoutGuide (guide: NSLayoutGuide); message 'addLayoutGuide:'; { available in macos 10.11 }
+    procedure removeLayoutGuide (guide: NSLayoutGuide); message 'removeLayoutGuide:'; { available in macos 10.11 }
+    function layoutGuides: NSArray; message 'layoutGuides'; { available in macos 10.11 }
   end;
 {$endif}
 

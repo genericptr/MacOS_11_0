@@ -36,31 +36,31 @@ type
     class function sharedWorkspace: NSWorkspace; message 'sharedWorkspace';
     function notificationCenter: NSNotificationCenter; message 'notificationCenter';
     function openURL (url: NSURL): objcbool; message 'openURL:';
-    procedure openURL_configuration_completionHandler (url: NSURL; configuration: NSWorkspaceOpenConfiguration; completionHandler: NSWorkspaceOpenURLCallback); message 'openURL:configuration:completionHandler:'; { available in macos  }
-    procedure openURLs_withApplicationAtURL_configuration_completionHandler (urls: NSArray; applicationURL: NSURL; configuration: NSWorkspaceOpenConfiguration; completionHandler: NSWorkspaceOpenURLsCallback); message 'openURLs:withApplicationAtURL:configuration:completionHandler:'; { available in macos  }
-    procedure openApplicationAtURL_configuration_completionHandler (applicationURL: NSURL; configuration: NSWorkspaceOpenConfiguration; completionHandler: NSWorkspaceOpenApplicationAtURLCallback); message 'openApplicationAtURL:configuration:completionHandler:'; { available in macos  }
+    procedure openURL_configuration_completionHandler (url: NSURL; configuration: NSWorkspaceOpenConfiguration; completionHandler: NSWorkspaceOpenURLCallback); message 'openURL:configuration:completionHandler:'; { available in macos 10.15 }
+    procedure openURLs_withApplicationAtURL_configuration_completionHandler (urls: NSArray; applicationURL: NSURL; configuration: NSWorkspaceOpenConfiguration; completionHandler: NSWorkspaceOpenURLsCallback); message 'openURLs:withApplicationAtURL:configuration:completionHandler:'; { available in macos 10.15 }
+    procedure openApplicationAtURL_configuration_completionHandler (applicationURL: NSURL; configuration: NSWorkspaceOpenConfiguration; completionHandler: NSWorkspaceOpenApplicationAtURLCallback); message 'openApplicationAtURL:configuration:completionHandler:'; { available in macos 10.15 }
     function selectFile_inFileViewerRootedAtPath (fullPath: NSString; rootFullPath: NSString): objcbool; message 'selectFile:inFileViewerRootedAtPath:';
-    procedure activateFileViewerSelectingURLs (fileURLs: NSArray); message 'activateFileViewerSelectingURLs:'; { available in macos  }
-    function showSearchResultsForQueryString (queryString: NSString): objcbool; message 'showSearchResultsForQueryString:'; { available in macos  }
+    procedure activateFileViewerSelectingURLs (fileURLs: NSArray); message 'activateFileViewerSelectingURLs:'; { available in macos 10.6 }
+    function showSearchResultsForQueryString (queryString: NSString): objcbool; message 'showSearchResultsForQueryString:'; { available in macos 10.6 }
     procedure noteFileSystemChanged (path: NSString); message 'noteFileSystemChanged:';
     function isFilePackageAtPath (fullPath: NSString): objcbool; message 'isFilePackageAtPath:';
     function iconForFile (fullPath: NSString): NSImage; message 'iconForFile:';
     function iconForFiles (fullPaths: NSArray): NSImage; message 'iconForFiles:';
-    function iconForContentType (contentType: UTType): NSImage; message 'iconForContentType:'; { available in macos  }
+    function iconForContentType (contentType: UTType): NSImage; message 'iconForContentType:'; { available in macos 11.0 }
     function setIcon_forFile_options (image: NSImage; fullPath: NSString; options: NSWorkspaceIconCreationOptions): objcbool; message 'setIcon:forFile:options:';
-    function fileLabels: NSArray; message 'fileLabels'; { available in macos  }
-    function fileLabelColors: NSArray; message 'fileLabelColors'; { available in macos  }
-    procedure recycleURLs_completionHandler (URLs: NSArray; handler: NSWorkspaceRecycleURLsCallback); message 'recycleURLs:completionHandler:'; { available in macos  }
-    procedure duplicateURLs_completionHandler (URLs: NSArray; handler: NSWorkspaceDuplicateURLsCallback); message 'duplicateURLs:completionHandler:'; { available in macos  }
+    function fileLabels: NSArray; message 'fileLabels'; { available in macos 10.6 }
+    function fileLabelColors: NSArray; message 'fileLabelColors'; { available in macos 10.6 }
+    procedure recycleURLs_completionHandler (URLs: NSArray; handler: NSWorkspaceRecycleURLsCallback); message 'recycleURLs:completionHandler:'; { available in macos 10.6 }
+    procedure duplicateURLs_completionHandler (URLs: NSArray; handler: NSWorkspaceDuplicateURLsCallback); message 'duplicateURLs:completionHandler:'; { available in macos 10.6 }
     function getFileSystemInfoForPath_isRemovable_isWritable_isUnmountable_description_type (fullPath: NSString; removableFlag: objcboolPtr; writableFlag: objcboolPtr; unmountableFlag: objcboolPtr; description: NSStringPtr; fileSystemType: NSStringPtr): objcbool; message 'getFileSystemInfoForPath:isRemovable:isWritable:isUnmountable:description:type:';
     function unmountAndEjectDeviceAtPath (path: NSString): objcbool; message 'unmountAndEjectDeviceAtPath:';
-    function unmountAndEjectDeviceAtURL_error (url: NSURL; error: NSErrorPtr): objcbool; message 'unmountAndEjectDeviceAtURL:error:'; { available in macos  }
+    function unmountAndEjectDeviceAtURL_error (url: NSURL; error: NSErrorPtr): objcbool; message 'unmountAndEjectDeviceAtURL:error:'; { available in macos 10.6 }
     function extendPowerOffBy (requested: NSInteger): NSInteger; message 'extendPowerOffBy:';
     procedure hideOtherApplications; message 'hideOtherApplications';
-    function URLForApplicationWithBundleIdentifier (bundleIdentifier: NSString): NSURL; message 'URLForApplicationWithBundleIdentifier:'; { available in macos  }
-    function URLForApplicationToOpenURL (url: NSURL): NSURL; message 'URLForApplicationToOpenURL:'; { available in macos  }
-    function frontmostApplication: NSRunningApplication; message 'frontmostApplication'; { available in macos  }
-    function menuBarOwningApplication: NSRunningApplication; message 'menuBarOwningApplication'; { available in macos  }
+    function URLForApplicationWithBundleIdentifier (bundleIdentifier: NSString): NSURL; message 'URLForApplicationWithBundleIdentifier:'; { available in macos 10.6 }
+    function URLForApplicationToOpenURL (url: NSURL): NSURL; message 'URLForApplicationToOpenURL:'; { available in macos 10.6 }
+    function frontmostApplication: NSRunningApplication; message 'frontmostApplication'; { available in macos 10.7 }
+    function menuBarOwningApplication: NSRunningApplication; message 'menuBarOwningApplication'; { available in macos 10.7 }
   end;
 
 type
@@ -107,18 +107,18 @@ type
 
 {$ifdef EXTERNAL_SYMBOLS}
 var
-  NSWorkspaceDesktopImageScalingKey: NSWorkspaceDesktopImageOptionKey { available in macos  }; cvar; external;
-  NSWorkspaceDesktopImageAllowClippingKey: NSWorkspaceDesktopImageOptionKey { available in macos  }; cvar; external;
-  NSWorkspaceDesktopImageFillColorKey: NSWorkspaceDesktopImageOptionKey { available in macos  }; cvar; external;
+  NSWorkspaceDesktopImageScalingKey: NSWorkspaceDesktopImageOptionKey { available in macos 10.6 }; cvar; external;
+  NSWorkspaceDesktopImageAllowClippingKey: NSWorkspaceDesktopImageOptionKey { available in macos 10.6 }; cvar; external;
+  NSWorkspaceDesktopImageFillColorKey: NSWorkspaceDesktopImageOptionKey { available in macos 10.6 }; cvar; external;
 {$endif}
 
 {$ifdef CLASSES}
 
 type
   NSDesktopImages = objccategory external (NSWorkspace)
-    function setDesktopImageURL_forScreen_options_error (url: NSURL; screen: NSScreen; options: NSDictionary; error: NSErrorPtr): objcbool; message 'setDesktopImageURL:forScreen:options:error:'; { available in macos  }
-    function desktopImageURLForScreen (screen: NSScreen): NSURL; message 'desktopImageURLForScreen:'; { available in macos  }
-    function desktopImageOptionsForScreen (screen: NSScreen): NSDictionary; message 'desktopImageOptionsForScreen:'; { available in macos  }
+    function setDesktopImageURL_forScreen_options_error (url: NSURL; screen: NSScreen; options: NSDictionary; error: NSErrorPtr): objcbool; message 'setDesktopImageURL:forScreen:options:error:'; { available in macos 10.6 }
+    function desktopImageURLForScreen (screen: NSScreen): NSURL; message 'desktopImageURLForScreen:'; { available in macos 10.6 }
+    function desktopImageOptionsForScreen (screen: NSScreen): NSDictionary; message 'desktopImageOptionsForScreen:'; { available in macos 10.6 }
   end;
 {$endif}
 
@@ -142,42 +142,42 @@ type
 
 type
   NSWorkspace_NSWorkspaceAuthorization = objccategory external name 'NSWorkspaceAuthorization' (NSWorkspace)
-    procedure requestAuthorizationOfType_completionHandler (type_: NSWorkspaceAuthorizationType; completionHandler: NSWorkspaceRequestAuthorizationOfTypeCallback); message 'requestAuthorizationOfType:completionHandler:'; { available in macos  }
+    procedure requestAuthorizationOfType_completionHandler (type_: NSWorkspaceAuthorizationType; completionHandler: NSWorkspaceRequestAuthorizationOfTypeCallback); message 'requestAuthorizationOfType:completionHandler:'; { available in macos 10.14 }
   end;
 
 type
   NSFileManager_NSWorkspaceAuthorization = objccategory external name 'NSWorkspaceAuthorization' (NSFileManager)
-    class function fileManagerWithAuthorization (authorization: NSWorkspaceAuthorization): id; message 'fileManagerWithAuthorization:'; { available in macos  }
+    class function fileManagerWithAuthorization (authorization: NSWorkspaceAuthorization): id; message 'fileManagerWithAuthorization:'; { available in macos 10.14 }
   end;
 {$endif}
 
 {$ifdef EXTERNAL_SYMBOLS}
 var
-  NSWorkspaceApplicationKey: NSString { available in macos  }; cvar; external;
+  NSWorkspaceApplicationKey: NSString { available in macos 10.6 }; cvar; external;
   NSWorkspaceWillLaunchApplicationNotification: NSNotificationName; cvar; external;
   NSWorkspaceDidLaunchApplicationNotification: NSNotificationName; cvar; external;
   NSWorkspaceDidTerminateApplicationNotification: NSNotificationName; cvar; external;
-  NSWorkspaceDidHideApplicationNotification: NSNotificationName { available in macos  }; cvar; external;
-  NSWorkspaceDidUnhideApplicationNotification: NSNotificationName { available in macos  }; cvar; external;
-  NSWorkspaceDidActivateApplicationNotification: NSNotificationName { available in macos  }; cvar; external;
-  NSWorkspaceDidDeactivateApplicationNotification: NSNotificationName { available in macos  }; cvar; external;
-  NSWorkspaceVolumeLocalizedNameKey: NSString { available in macos  }; cvar; external;
-  NSWorkspaceVolumeURLKey: NSString { available in macos  }; cvar; external;
-  NSWorkspaceVolumeOldLocalizedNameKey: NSString { available in macos  }; cvar; external;
-  NSWorkspaceVolumeOldURLKey: NSString { available in macos  }; cvar; external;
+  NSWorkspaceDidHideApplicationNotification: NSNotificationName { available in macos 10.6 }; cvar; external;
+  NSWorkspaceDidUnhideApplicationNotification: NSNotificationName { available in macos 10.6 }; cvar; external;
+  NSWorkspaceDidActivateApplicationNotification: NSNotificationName { available in macos 10.6 }; cvar; external;
+  NSWorkspaceDidDeactivateApplicationNotification: NSNotificationName { available in macos 10.6 }; cvar; external;
+  NSWorkspaceVolumeLocalizedNameKey: NSString { available in macos 10.6 }; cvar; external;
+  NSWorkspaceVolumeURLKey: NSString { available in macos 10.6 }; cvar; external;
+  NSWorkspaceVolumeOldLocalizedNameKey: NSString { available in macos 10.6 }; cvar; external;
+  NSWorkspaceVolumeOldURLKey: NSString { available in macos 10.6 }; cvar; external;
   NSWorkspaceDidMountNotification: NSNotificationName; cvar; external;
   NSWorkspaceDidUnmountNotification: NSNotificationName; cvar; external;
   NSWorkspaceWillUnmountNotification: NSNotificationName; cvar; external;
-  NSWorkspaceDidRenameVolumeNotification: NSNotificationName { available in macos  }; cvar; external;
+  NSWorkspaceDidRenameVolumeNotification: NSNotificationName { available in macos 10.6 }; cvar; external;
   NSWorkspaceWillPowerOffNotification: NSNotificationName; cvar; external;
   NSWorkspaceWillSleepNotification: NSNotificationName; cvar; external;
   NSWorkspaceDidWakeNotification: NSNotificationName; cvar; external;
-  NSWorkspaceScreensDidSleepNotification: NSNotificationName { available in macos  }; cvar; external;
-  NSWorkspaceScreensDidWakeNotification: NSNotificationName { available in macos  }; cvar; external;
+  NSWorkspaceScreensDidSleepNotification: NSNotificationName { available in macos 10.6 }; cvar; external;
+  NSWorkspaceScreensDidWakeNotification: NSNotificationName { available in macos 10.6 }; cvar; external;
   NSWorkspaceSessionDidBecomeActiveNotification: NSNotificationName; cvar; external;
   NSWorkspaceSessionDidResignActiveNotification: NSNotificationName; cvar; external;
-  NSWorkspaceDidChangeFileLabelsNotification: NSNotificationName { available in macos  }; cvar; external;
-  NSWorkspaceActiveSpaceDidChangeNotification: NSNotificationName { available in macos  }; cvar; external;
+  NSWorkspaceDidChangeFileLabelsNotification: NSNotificationName { available in macos 10.6 }; cvar; external;
+  NSWorkspaceActiveSpaceDidChangeNotification: NSNotificationName { available in macos 10.6 }; cvar; external;
 {$endif}
 
 {$ifdef TYPES}

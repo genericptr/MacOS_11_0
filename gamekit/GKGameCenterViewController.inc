@@ -37,10 +37,10 @@ type
   GKGameCenterViewControllerCategory = objccategory external (GKGameCenterViewController)
     procedure setGameCenterDelegate(newValue: GKGameCenterControllerDelegateProtocol); message 'setGameCenterDelegate:';
     function gameCenterDelegate: GKGameCenterControllerDelegateProtocol; message 'gameCenterDelegate';
-    function initWithState (state: GKGameCenterViewControllerState): id; message 'initWithState:'; { unavailable in watchos }
-    function initWithLeaderboardID_playerScope_timeScope (leaderboardID: NSString; playerScope: GKLeaderboardPlayerScope; timeScope: GKLeaderboardTimeScope): id; message 'initWithLeaderboardID:playerScope:timeScope:'; { unavailable in watchos }
-    function initWithLeaderboard_playerScope (leaderboard: GKLeaderboard; playerScope: GKLeaderboardPlayerScope): id; message 'initWithLeaderboard:playerScope:'; { unavailable in watchos }
-    function initWithAchievementID (achievementID: NSString): id; message 'initWithAchievementID:'; { unavailable in watchos }
+    function initWithState (state: GKGameCenterViewControllerState): id; message 'initWithState:'; { unavailable in watchos } { available in ios 14.0, macos 11.0, tvos 14.0 }
+    function initWithLeaderboardID_playerScope_timeScope (leaderboardID: NSString; playerScope: GKLeaderboardPlayerScope; timeScope: GKLeaderboardTimeScope): id; message 'initWithLeaderboardID:playerScope:timeScope:'; { unavailable in watchos } { available in ios 14.0, macos 11.0, tvos 14.0 }
+    function initWithLeaderboard_playerScope (leaderboard: GKLeaderboard; playerScope: GKLeaderboardPlayerScope): id; message 'initWithLeaderboard:playerScope:'; { unavailable in watchos } { available in ios 14.0, macos 11.0, tvos 14.0 }
+    function initWithAchievementID (achievementID: NSString): id; message 'initWithAchievementID:'; { unavailable in watchos } { available in ios 14.0, macos 11.0, tvos 14.0 }
   end;
 
 type

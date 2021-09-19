@@ -55,20 +55,20 @@ type
 
 {$ifdef EXTERNAL_SYMBOLS}
 var
-  kCAEmitterLayerPoint: CAEmitterLayerEmitterShape { available in macos , ios , watchos , tvos  }; cvar; external;
-  kCAEmitterLayerLine: CAEmitterLayerEmitterShape { available in macos , ios , watchos , tvos  }; cvar; external;
-  kCAEmitterLayerRectangle: CAEmitterLayerEmitterShape { available in macos , ios , watchos , tvos  }; cvar; external;
-  kCAEmitterLayerCuboid: CAEmitterLayerEmitterShape { available in macos , ios , watchos , tvos  }; cvar; external;
-  kCAEmitterLayerCircle: CAEmitterLayerEmitterShape { available in macos , ios , watchos , tvos  }; cvar; external;
-  kCAEmitterLayerSphere: CAEmitterLayerEmitterShape { available in macos , ios , watchos , tvos  }; cvar; external;
-  kCAEmitterLayerPoints: CAEmitterLayerEmitterMode { available in macos , ios , watchos , tvos  }; cvar; external;
-  kCAEmitterLayerOutline: CAEmitterLayerEmitterMode { available in macos , ios , watchos , tvos  }; cvar; external;
-  kCAEmitterLayerSurface: CAEmitterLayerEmitterMode { available in macos , ios , watchos , tvos  }; cvar; external;
-  kCAEmitterLayerVolume: CAEmitterLayerEmitterMode { available in macos , ios , watchos , tvos  }; cvar; external;
-  kCAEmitterLayerUnordered: CAEmitterLayerRenderMode { available in macos , ios , watchos , tvos  }; cvar; external;
-  kCAEmitterLayerOldestFirst: CAEmitterLayerRenderMode { available in macos , ios , watchos , tvos  }; cvar; external;
-  kCAEmitterLayerOldestLast: CAEmitterLayerRenderMode { available in macos , ios , watchos , tvos  }; cvar; external;
-  kCAEmitterLayerBackToFront: CAEmitterLayerRenderMode { available in macos , ios , watchos , tvos  }; cvar; external;
-  kCAEmitterLayerAdditive: CAEmitterLayerRenderMode { available in macos , ios , watchos , tvos  }; cvar; external;
+  kCAEmitterLayerPoint: CAEmitterLayerEmitterShape { available in macos 10.6, ios 5.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  kCAEmitterLayerLine: CAEmitterLayerEmitterShape { available in macos 10.6, ios 5.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  kCAEmitterLayerRectangle: CAEmitterLayerEmitterShape { available in macos 10.6, ios 5.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  kCAEmitterLayerCuboid: CAEmitterLayerEmitterShape { available in macos 10.6, ios 5.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  kCAEmitterLayerCircle: CAEmitterLayerEmitterShape { available in macos 10.6, ios 5.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  kCAEmitterLayerSphere: CAEmitterLayerEmitterShape { available in macos 10.6, ios 5.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  kCAEmitterLayerPoints: CAEmitterLayerEmitterMode { available in macos 10.6, ios 5.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  kCAEmitterLayerOutline: CAEmitterLayerEmitterMode { available in macos 10.6, ios 5.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  kCAEmitterLayerSurface: CAEmitterLayerEmitterMode { available in macos 10.6, ios 5.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  kCAEmitterLayerVolume: CAEmitterLayerEmitterMode { available in macos 10.6, ios 5.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  kCAEmitterLayerUnordered: CAEmitterLayerRenderMode { available in macos 10.6, ios 5.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  kCAEmitterLayerOldestFirst: CAEmitterLayerRenderMode { available in macos 10.6, ios 5.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  kCAEmitterLayerOldestLast: CAEmitterLayerRenderMode { available in macos 10.6, ios 5.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  kCAEmitterLayerBackToFront: CAEmitterLayerRenderMode { available in macos 10.6, ios 5.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  kCAEmitterLayerAdditive: CAEmitterLayerRenderMode { available in macos 10.6, ios 5.0, watchos 2.0, tvos 9.0 }; cvar; external;
 {$endif}
 

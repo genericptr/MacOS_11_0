@@ -29,11 +29,11 @@ var
   kCVPixelFormatOpenGLType: CFStringRef { available starting in __MAC_10_4,__IPHONE_4_0 }; cvar; external;
   kCVPixelFormatOpenGLInternalFormat: CFStringRef { available starting in __MAC_10_4,__IPHONE_4_0 }; cvar; external;
   kCVPixelFormatCGBitmapInfo: CFStringRef { available starting in __MAC_10_4,__IPHONE_4_0 }; cvar; external;
-  kCVPixelFormatQDCompatibility: CFStringRef { available in macosx , ios , tvos , watchos  }; cvar; external;
-  kCVPixelFormatCGBitmapContextCompatibility: CFStringRef { available in macosx , ios , tvos , watchos  }; cvar; external;
-  kCVPixelFormatCGImageCompatibility: CFStringRef { available in macosx , ios , tvos , watchos  }; cvar; external;
-  kCVPixelFormatOpenGLCompatibility: CFStringRef { available in macosx , ios , tvos , watchos  }; cvar; external;
-  kCVPixelFormatOpenGLESCompatibility: CFStringRef { unavailable in macosx }; cvar; external;
+  kCVPixelFormatQDCompatibility: CFStringRef { available in macosx 10.4, ios 4.0, tvos 9.0, watchos 4.0 }; cvar; external;
+  kCVPixelFormatCGBitmapContextCompatibility: CFStringRef { available in macosx 10.4, ios 4.0, tvos 9.0, watchos 4.0 }; cvar; external;
+  kCVPixelFormatCGImageCompatibility: CFStringRef { available in macosx 10.4, ios 4.0, tvos 9.0, watchos 4.0 }; cvar; external;
+  kCVPixelFormatOpenGLCompatibility: CFStringRef { available in macosx 10.4, ios 4.0, tvos 9.0, watchos 4.0 }; cvar; external;
+  kCVPixelFormatOpenGLESCompatibility: CFStringRef { unavailable in macosx } { unavailable in macCatalyst }; cvar; external;
 {$endif}
 
 {$ifdef TYPES}

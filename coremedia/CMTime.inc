@@ -4,17 +4,17 @@
 
 {$ifdef TYPES}
 type
-  CMTimeValue = cint64 { available in macos , ios , tvos , watchos  };
-  CMTimeValuePtr = ^CMTimeValue { available in macos , ios , tvos , watchos  };
-  CMTimeScale = cint32 { available in macos , ios , tvos , watchos  };
-  CMTimeScalePtr = ^CMTimeScale { available in macos , ios , tvos , watchos  };
+  CMTimeValue = cint64 { available in macos 10.7, ios 4.0, tvos 9.0, watchos 6.0 };
+  CMTimeValuePtr = ^CMTimeValue { available in macos 10.7, ios 4.0, tvos 9.0, watchos 6.0 };
+  CMTimeScale = cint32 { available in macos 10.7, ios 4.0, tvos 9.0, watchos 6.0 };
+  CMTimeScalePtr = ^CMTimeScale { available in macos 10.7, ios 4.0, tvos 9.0, watchos 6.0 };
 
 const
   kCMTimeMaxTimescale = $7fffffff;
 
 type
-  CMTimeEpoch = cint64 { available in macos , ios , tvos , watchos  };
-  CMTimeEpochPtr = ^CMTimeEpoch { available in macos , ios , tvos , watchos  };
+  CMTimeEpoch = cint64 { available in macos 10.7, ios 4.0, tvos 9.0, watchos 6.0 };
+  CMTimeEpochPtr = ^CMTimeEpoch { available in macos 10.7, ios 4.0, tvos 9.0, watchos 6.0 };
   CMTimeFlags = cuint32;
   CMTimeFlagsPtr = ^CMTimeFlags;
 
@@ -39,18 +39,18 @@ type
 
 {$ifdef EXTERNAL_SYMBOLS}
 var
-  kCMTimeInvalid: CMTime { available in macos , ios , tvos , watchos  }; cvar; external;
-  kCMTimeIndefinite: CMTime { available in macos , ios , tvos , watchos  }; cvar; external;
-  kCMTimePositiveInfinity: CMTime { available in macos , ios , tvos , watchos  }; cvar; external;
-  kCMTimeNegativeInfinity: CMTime { available in macos , ios , tvos , watchos  }; cvar; external;
-  kCMTimeZero: CMTime { available in macos , ios , tvos , watchos  }; cvar; external;
+  kCMTimeInvalid: CMTime { available in macos 10.7, ios 4.0, tvos 9.0, watchos 6.0 }; cvar; external;
+  kCMTimeIndefinite: CMTime { available in macos 10.7, ios 4.0, tvos 9.0, watchos 6.0 }; cvar; external;
+  kCMTimePositiveInfinity: CMTime { available in macos 10.7, ios 4.0, tvos 9.0, watchos 6.0 }; cvar; external;
+  kCMTimeNegativeInfinity: CMTime { available in macos 10.7, ios 4.0, tvos 9.0, watchos 6.0 }; cvar; external;
+  kCMTimeZero: CMTime { available in macos 10.7, ios 4.0, tvos 9.0, watchos 6.0 }; cvar; external;
 {$endif}
 
 {$ifdef FUNCTIONS}
-function CMTimeMake(value: cint64; timescale: cint32): CMTime; cdecl; external; { available in macos , ios , tvos , watchos  }
-function CMTimeMakeWithEpoch(value: cint64; timescale: cint32; epoch: cint64): CMTime; cdecl; external; { available in macos , ios , tvos , watchos  }
-function CMTimeMakeWithSeconds(seconds: Float64; preferredTimescale: cint32): CMTime; cdecl; external; { available in macos , ios , tvos , watchos  }
-function CMTimeGetSeconds(time: CMTime): Float64; cdecl; external; { available in macos , ios , tvos , watchos  }
+function CMTimeMake(value: cint64; timescale: cint32): CMTime; cdecl; external; { available in macos 10.7, ios 4.0, tvos 9.0, watchos 6.0 }
+function CMTimeMakeWithEpoch(value: cint64; timescale: cint32; epoch: cint64): CMTime; cdecl; external; { available in macos 10.7, ios 4.0, tvos 9.0, watchos 6.0 }
+function CMTimeMakeWithSeconds(seconds: Float64; preferredTimescale: cint32): CMTime; cdecl; external; { available in macos 10.7, ios 4.0, tvos 9.0, watchos 6.0 }
+function CMTimeGetSeconds(time: CMTime): Float64; cdecl; external; { available in macos 10.7, ios 4.0, tvos 9.0, watchos 6.0 }
 {$endif}
 
 {$ifdef TYPES}
@@ -69,31 +69,31 @@ const
 {$endif}
 
 {$ifdef FUNCTIONS}
-function CMTimeConvertScale(time: CMTime; newTimescale: cint32; method: CMTimeRoundingMethod): CMTime; cdecl; external; { available in macos , ios , tvos , watchos  }
-function CMTimeAdd(lhs: CMTime; rhs: CMTime): CMTime; cdecl; external; { available in macos , ios , tvos , watchos  }
-function CMTimeSubtract(lhs: CMTime; rhs: CMTime): CMTime; cdecl; external; { available in macos , ios , tvos , watchos  }
-function CMTimeMultiply(time: CMTime; multiplier: cint32): CMTime; cdecl; external; { available in macos , ios , tvos , watchos  }
-function CMTimeMultiplyByFloat64(time: CMTime; multiplier: Float64): CMTime; cdecl; external; { available in macos , ios , tvos , watchos  }
-function CMTimeMultiplyByRatio(time: CMTime; multiplier: cint32; divisor: cint32): CMTime; cdecl; external; { available in macos , ios , tvos , watchos  }
-function CMTimeCompare(time1: CMTime; time2: CMTime): cint32; cdecl; external; { available in macos , ios , tvos , watchos  }
-function CMTimeMinimum(time1: CMTime; time2: CMTime): CMTime; cdecl; external; { available in macos , ios , tvos , watchos  }
-function CMTimeMaximum(time1: CMTime; time2: CMTime): CMTime; cdecl; external; { available in macos , ios , tvos , watchos  }
-function CMTimeAbsoluteValue(time: CMTime): CMTime; cdecl; external; { available in macos , ios , tvos , watchos  }
-function CMTimeCopyAsDictionary(time: CMTime; allocator: CFAllocatorRef): CFDictionaryRef; cdecl; external; { available in macos , ios , tvos , watchos  }
-function CMTimeMakeFromDictionary(dictionaryRepresentation: CFDictionaryRef): CMTime; cdecl; external; { available in macos , ios , tvos , watchos  }
+function CMTimeConvertScale(time: CMTime; newTimescale: cint32; method: CMTimeRoundingMethod): CMTime; cdecl; external; { available in macos 10.7, ios 4.0, tvos 9.0, watchos 6.0 }
+function CMTimeAdd(lhs: CMTime; rhs: CMTime): CMTime; cdecl; external; { available in macos 10.7, ios 4.0, tvos 9.0, watchos 6.0 }
+function CMTimeSubtract(lhs: CMTime; rhs: CMTime): CMTime; cdecl; external; { available in macos 10.7, ios 4.0, tvos 9.0, watchos 6.0 }
+function CMTimeMultiply(time: CMTime; multiplier: cint32): CMTime; cdecl; external; { available in macos 10.7, ios 4.0, tvos 9.0, watchos 6.0 }
+function CMTimeMultiplyByFloat64(time: CMTime; multiplier: Float64): CMTime; cdecl; external; { available in macos 10.7, ios 4.0, tvos 9.0, watchos 6.0 }
+function CMTimeMultiplyByRatio(time: CMTime; multiplier: cint32; divisor: cint32): CMTime; cdecl; external; { available in macos 10.10, ios 7.1, tvos 9.0, watchos 6.0 }
+function CMTimeCompare(time1: CMTime; time2: CMTime): cint32; cdecl; external; { available in macos 10.7, ios 4.0, tvos 9.0, watchos 6.0 }
+function CMTimeMinimum(time1: CMTime; time2: CMTime): CMTime; cdecl; external; { available in macos 10.7, ios 4.0, tvos 9.0, watchos 6.0 }
+function CMTimeMaximum(time1: CMTime; time2: CMTime): CMTime; cdecl; external; { available in macos 10.7, ios 4.0, tvos 9.0, watchos 6.0 }
+function CMTimeAbsoluteValue(time: CMTime): CMTime; cdecl; external; { available in macos 10.7, ios 4.0, tvos 9.0, watchos 6.0 }
+function CMTimeCopyAsDictionary(time: CMTime; allocator: CFAllocatorRef): CFDictionaryRef; cdecl; external; { available in macos 10.7, ios 4.0, tvos 9.0, watchos 6.0 }
+function CMTimeMakeFromDictionary(dictionaryRepresentation: CFDictionaryRef): CMTime; cdecl; external; { available in macos 10.7, ios 4.0, tvos 9.0, watchos 6.0 }
 {$endif}
 
 {$ifdef EXTERNAL_SYMBOLS}
 var
-  kCMTimeValueKey: CFStringRef { available in macos , ios , tvos , watchos  }; cvar; external;
-  kCMTimeScaleKey: CFStringRef { available in macos , ios , tvos , watchos  }; cvar; external;
-  kCMTimeEpochKey: CFStringRef { available in macos , ios , tvos , watchos  }; cvar; external;
-  kCMTimeFlagsKey: CFStringRef { available in macos , ios , tvos , watchos  }; cvar; external;
+  kCMTimeValueKey: CFStringRef { available in macos 10.7, ios 4.0, tvos 9.0, watchos 6.0 }; cvar; external;
+  kCMTimeScaleKey: CFStringRef { available in macos 10.7, ios 4.0, tvos 9.0, watchos 6.0 }; cvar; external;
+  kCMTimeEpochKey: CFStringRef { available in macos 10.7, ios 4.0, tvos 9.0, watchos 6.0 }; cvar; external;
+  kCMTimeFlagsKey: CFStringRef { available in macos 10.7, ios 4.0, tvos 9.0, watchos 6.0 }; cvar; external;
 {$endif}
 
 {$ifdef FUNCTIONS}
-function CMTimeCopyDescription(allocator: CFAllocatorRef; time: CMTime): CFStringRef; cdecl; external; { available in macos , ios , tvos , watchos  }
-function CMTimeShow(time: CMTime): pointer; cdecl; external; { available in macos , ios , tvos , watchos  }
+function CMTimeCopyDescription(allocator: CFAllocatorRef; time: CMTime): CFStringRef; cdecl; external; { available in macos 10.7, ios 4.0, tvos 9.0, watchos 6.0 }
+function CMTimeShow(time: CMTime): pointer; cdecl; external; { available in macos 10.7, ios 4.0, tvos 9.0, watchos 6.0 }
 {$endif}
 
 {$endif}

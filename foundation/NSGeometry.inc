@@ -156,7 +156,7 @@ var
   NSZeroPoint: NSPoint; cvar; external;
   NSZeroSize: NSSize; cvar; external;
   NSZeroRect: NSRect; cvar; external;
-  NSEdgeInsetsZero: NSEdgeInsets { available in macos , ios , watchos , tvos  }; cvar; external;
+  NSEdgeInsetsZero: NSEdgeInsets { available in macos 10.10, ios 8.0, watchos 2.0, tvos 9.0 }; cvar; external;
 {$endif}
 
 {$ifdef FUNCTIONS}
@@ -164,10 +164,10 @@ function NSEqualPoints(aPoint: NSPoint; bPoint: NSPoint): objcbool; cdecl; exter
 function NSEqualSizes(aSize: NSSize; bSize: NSSize): objcbool; cdecl; external;
 function NSEqualRects(aRect: NSRect; bRect: NSRect): objcbool; cdecl; external;
 function NSIsEmptyRect(aRect: NSRect): objcbool; cdecl; external;
-function NSEdgeInsetsEqual(aInsets: NSEdgeInsets; bInsets: NSEdgeInsets): objcbool; cdecl; external; { available in macos , ios , watchos , tvos  }
+function NSEdgeInsetsEqual(aInsets: NSEdgeInsets; bInsets: NSEdgeInsets): objcbool; cdecl; external; { available in macos 10.10, ios 8.0, watchos 2.0, tvos 9.0 }
 function NSInsetRect(aRect: NSRect; dX: CGFloat; dY: CGFloat): NSRect; cdecl; external;
 function NSIntegralRect(aRect: NSRect): NSRect; cdecl; external;
-function NSIntegralRectWithOptions(aRect: NSRect; opts: NSAlignmentOptions): NSRect; cdecl; external; { available in macos , ios , watchos , tvos  }
+function NSIntegralRectWithOptions(aRect: NSRect; opts: NSAlignmentOptions): NSRect; cdecl; external; { available in macos 10.7, ios 5.0, watchos 2.0, tvos 9.0 }
 function NSUnionRect(aRect: NSRect; bRect: NSRect): NSRect; cdecl; external;
 function NSIntersectionRect(aRect: NSRect; bRect: NSRect): NSRect; cdecl; external;
 function NSOffsetRect(aRect: NSRect; dX: CGFloat; dY: CGFloat): NSRect; cdecl; external;
@@ -191,11 +191,11 @@ type
     class function valueWithPoint (point: NSPoint): NSValue; message 'valueWithPoint:';
     class function valueWithSize (size: NSSize): NSValue; message 'valueWithSize:';
     class function valueWithRect (rect: NSRect): NSValue; message 'valueWithRect:';
-    class function valueWithEdgeInsets (insets: NSEdgeInsets): NSValue; message 'valueWithEdgeInsets:'; { available in macos , ios , watchos , tvos  }
+    class function valueWithEdgeInsets (insets: NSEdgeInsets): NSValue; message 'valueWithEdgeInsets:'; { available in macos 10.10, ios 8.0, watchos 2.0, tvos 9.0 }
     function pointValue: NSPoint; message 'pointValue';
     function sizeValue: NSSize; message 'sizeValue';
     function rectValue: NSRect; message 'rectValue';
-    function edgeInsetsValue: NSEdgeInsets; message 'edgeInsetsValue'; { available in macos , ios , watchos , tvos  }
+    function edgeInsetsValue: NSEdgeInsets; message 'edgeInsetsValue'; { available in macos 10.10, ios 8.0, watchos 2.0, tvos 9.0 }
   end;
 
 type

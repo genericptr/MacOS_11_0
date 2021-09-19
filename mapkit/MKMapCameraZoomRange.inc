@@ -8,7 +8,7 @@ type
 {$if defined(MK_SUPPORTS_VIEW_CLASSES)}
 {$ifdef EXTERNAL_SYMBOLS}
 var
-  MKMapCameraZoomDefault: CLLocationDistance { unavailable in watchos }; cvar; external;
+  MKMapCameraZoomDefault: CLLocationDistance { unavailable in watchos } { available in ios 13.0, macos 10.15, tvos 13.0 }; cvar; external;
 {$endif}
 
 {$ifdef CLASSES}

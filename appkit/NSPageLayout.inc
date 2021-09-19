@@ -11,9 +11,9 @@ type
   NSPageLayout = objcclass external (NSObject)
   public
     class function pageLayout: NSPageLayout; message 'pageLayout';
-    procedure addAccessoryController (accessoryController: NSViewController); message 'addAccessoryController:'; { available in macos  }
-    procedure removeAccessoryController (accessoryController: NSViewController); message 'removeAccessoryController:'; { available in macos  }
-    function accessoryControllers: NSArray; message 'accessoryControllers'; { available in macos  }
+    procedure addAccessoryController (accessoryController: NSViewController); message 'addAccessoryController:'; { available in macos 10.5 }
+    procedure removeAccessoryController (accessoryController: NSViewController); message 'removeAccessoryController:'; { available in macos 10.5 }
+    function accessoryControllers: NSArray; message 'accessoryControllers'; { available in macos 10.5 }
     procedure beginSheetWithPrintInfo_modalForWindow_delegate_didEndSelector_contextInfo (printInfo: NSPrintInfo; docWindow: NSWindow; delegate: id; didEndSelector: SEL; contextInfo: pointer); message 'beginSheetWithPrintInfo:modalForWindow:delegate:didEndSelector:contextInfo:';
     function runModalWithPrintInfo (printInfo: NSPrintInfo): NSInteger; message 'runModalWithPrintInfo:';
     function runModal: NSInteger; message 'runModal';

@@ -74,7 +74,7 @@ type
     function indexOfObjectIdenticalTo (anObject: id): NSUInteger; message 'indexOfObjectIdenticalTo:';
     function indexOfObjectIdenticalTo_inRange (anObject: id; range: NSRange): NSUInteger; message 'indexOfObjectIdenticalTo:inRange:';
     function isEqualToArray (otherArray: NSArray): objcbool; message 'isEqualToArray:';
-    function firstObject: id; message 'firstObject'; { available in macos , ios , watchos , tvos  }
+    function firstObject: id; message 'firstObject'; { available in macos 10.6, ios 4.0, watchos 2.0, tvos 9.0 }
     function lastObject: id; message 'lastObject';
     function objectEnumerator: NSEnumerator; message 'objectEnumerator';
     function reverseObjectEnumerator: NSEnumerator; message 'reverseObjectEnumerator';
@@ -83,23 +83,23 @@ type
     function sortedArrayUsingFunction_context_hint (comparator: NSArraySortedArrayUsingFunctionComparatorCallback; context: pointer; hint: NSData): NSArray; message 'sortedArrayUsingFunction:context:hint:';
     function sortedArrayUsingSelector (comparator: SEL): NSArray; message 'sortedArrayUsingSelector:';
     function subarrayWithRange (range: NSRange): NSArray; message 'subarrayWithRange:';
-    function writeToURL_error (url: NSURL; error: NSErrorPtr): objcbool; message 'writeToURL:error:'; { available in macos , ios , watchos , tvos  }
+    function writeToURL_error (url: NSURL; error: NSErrorPtr): objcbool; message 'writeToURL:error:'; { available in macos 10.13, ios 11.0, watchos 4.0, tvos 11.0 }
     procedure makeObjectsPerformSelector (aSelector: SEL); message 'makeObjectsPerformSelector:';
     procedure makeObjectsPerformSelector_withObject (aSelector: SEL; argument: id); message 'makeObjectsPerformSelector:withObject:';
     function objectsAtIndexes (indexes: NSIndexSet): NSArray; message 'objectsAtIndexes:';
-    function objectAtIndexedSubscript (idx: NSUInteger): id; message 'objectAtIndexedSubscript:'; { available in macos , ios , watchos , tvos  }
-    procedure enumerateObjectsUsingBlock (block: NSArrayEnumerateObjectsUsingBlockCallback); message 'enumerateObjectsUsingBlock:'; { available in macos , ios , watchos , tvos  }
-    procedure enumerateObjectsWithOptions_usingBlock (opts: NSEnumerationOptions; block: NSArrayEnumerateObjectsWithOptionsCallback); message 'enumerateObjectsWithOptions:usingBlock:'; { available in macos , ios , watchos , tvos  }
-    procedure enumerateObjectsAtIndexes_options_usingBlock (s: NSIndexSet; opts: NSEnumerationOptions; block: NSArrayEnumerateObjectsAtIndexesCallback); message 'enumerateObjectsAtIndexes:options:usingBlock:'; { available in macos , ios , watchos , tvos  }
-    function indexOfObjectPassingTest (predicate: NSArrayIndexOfObjectPassingTestCallback): NSUInteger; message 'indexOfObjectPassingTest:'; { available in macos , ios , watchos , tvos  }
-    function indexOfObjectWithOptions_passingTest (opts: NSEnumerationOptions; predicate: NSArrayIndexOfObjectWithOptionsCallback): NSUInteger; message 'indexOfObjectWithOptions:passingTest:'; { available in macos , ios , watchos , tvos  }
-    function indexOfObjectAtIndexes_options_passingTest (s: NSIndexSet; opts: NSEnumerationOptions; predicate: NSArrayIndexOfObjectAtIndexesCallback): NSUInteger; message 'indexOfObjectAtIndexes:options:passingTest:'; { available in macos , ios , watchos , tvos  }
-    function indexesOfObjectsPassingTest (predicate: NSArrayIndexesOfObjectsPassingTestCallback): NSIndexSet; message 'indexesOfObjectsPassingTest:'; { available in macos , ios , watchos , tvos  }
-    function indexesOfObjectsWithOptions_passingTest (opts: NSEnumerationOptions; predicate: NSArrayIndexesOfObjectsWithOptionsCallback): NSIndexSet; message 'indexesOfObjectsWithOptions:passingTest:'; { available in macos , ios , watchos , tvos  }
-    function indexesOfObjectsAtIndexes_options_passingTest (s: NSIndexSet; opts: NSEnumerationOptions; predicate: NSArrayIndexesOfObjectsAtIndexesCallback): NSIndexSet; message 'indexesOfObjectsAtIndexes:options:passingTest:'; { available in macos , ios , watchos , tvos  }
-    function sortedArrayUsingComparator (cmptr: NSComparator): NSArray; message 'sortedArrayUsingComparator:'; { available in macos , ios , watchos , tvos  }
-    function sortedArrayWithOptions_usingComparator (opts: NSSortOptions; cmptr: NSComparator): NSArray; message 'sortedArrayWithOptions:usingComparator:'; { available in macos , ios , watchos , tvos  }
-    function indexOfObject_inSortedRange_options_usingComparator (obj: id; r: NSRange; opts: NSBinarySearchingOptions; cmp: NSComparator): NSUInteger; message 'indexOfObject:inSortedRange:options:usingComparator:'; { available in macos , ios , watchos , tvos  }
+    function objectAtIndexedSubscript (idx: NSUInteger): id; message 'objectAtIndexedSubscript:'; { available in macos 10.8, ios 6.0, watchos 2.0, tvos 9.0 }
+    procedure enumerateObjectsUsingBlock (block: NSArrayEnumerateObjectsUsingBlockCallback); message 'enumerateObjectsUsingBlock:'; { available in macos 10.6, ios 4.0, watchos 2.0, tvos 9.0 }
+    procedure enumerateObjectsWithOptions_usingBlock (opts: NSEnumerationOptions; block: NSArrayEnumerateObjectsWithOptionsCallback); message 'enumerateObjectsWithOptions:usingBlock:'; { available in macos 10.6, ios 4.0, watchos 2.0, tvos 9.0 }
+    procedure enumerateObjectsAtIndexes_options_usingBlock (s: NSIndexSet; opts: NSEnumerationOptions; block: NSArrayEnumerateObjectsAtIndexesCallback); message 'enumerateObjectsAtIndexes:options:usingBlock:'; { available in macos 10.6, ios 4.0, watchos 2.0, tvos 9.0 }
+    function indexOfObjectPassingTest (predicate: NSArrayIndexOfObjectPassingTestCallback): NSUInteger; message 'indexOfObjectPassingTest:'; { available in macos 10.6, ios 4.0, watchos 2.0, tvos 9.0 }
+    function indexOfObjectWithOptions_passingTest (opts: NSEnumerationOptions; predicate: NSArrayIndexOfObjectWithOptionsCallback): NSUInteger; message 'indexOfObjectWithOptions:passingTest:'; { available in macos 10.6, ios 4.0, watchos 2.0, tvos 9.0 }
+    function indexOfObjectAtIndexes_options_passingTest (s: NSIndexSet; opts: NSEnumerationOptions; predicate: NSArrayIndexOfObjectAtIndexesCallback): NSUInteger; message 'indexOfObjectAtIndexes:options:passingTest:'; { available in macos 10.6, ios 4.0, watchos 2.0, tvos 9.0 }
+    function indexesOfObjectsPassingTest (predicate: NSArrayIndexesOfObjectsPassingTestCallback): NSIndexSet; message 'indexesOfObjectsPassingTest:'; { available in macos 10.6, ios 4.0, watchos 2.0, tvos 9.0 }
+    function indexesOfObjectsWithOptions_passingTest (opts: NSEnumerationOptions; predicate: NSArrayIndexesOfObjectsWithOptionsCallback): NSIndexSet; message 'indexesOfObjectsWithOptions:passingTest:'; { available in macos 10.6, ios 4.0, watchos 2.0, tvos 9.0 }
+    function indexesOfObjectsAtIndexes_options_passingTest (s: NSIndexSet; opts: NSEnumerationOptions; predicate: NSArrayIndexesOfObjectsAtIndexesCallback): NSIndexSet; message 'indexesOfObjectsAtIndexes:options:passingTest:'; { available in macos 10.6, ios 4.0, watchos 2.0, tvos 9.0 }
+    function sortedArrayUsingComparator (cmptr: NSComparator): NSArray; message 'sortedArrayUsingComparator:'; { available in macos 10.6, ios 4.0, watchos 2.0, tvos 9.0 }
+    function sortedArrayWithOptions_usingComparator (opts: NSSortOptions; cmptr: NSComparator): NSArray; message 'sortedArrayWithOptions:usingComparator:'; { available in macos 10.6, ios 4.0, watchos 2.0, tvos 9.0 }
+    function indexOfObject_inSortedRange_options_usingComparator (obj: id; r: NSRange; opts: NSBinarySearchingOptions; cmp: NSComparator): NSUInteger; message 'indexOfObject:inSortedRange:options:usingComparator:'; { available in macos 10.6, ios 4.0, watchos 2.0, tvos 9.0 }
   end;
 
 type
@@ -112,8 +112,8 @@ type
     function initWithObjects (firstObj: id): id; varargs; message 'initWithObjects:';
     function initWithArray (array__: NSArray): id; message 'initWithArray:';
     function initWithArray_copyItems (array__: NSArray; flag: objcbool): id; message 'initWithArray:copyItems:';
-    function initWithContentsOfURL_error (url: NSURL; error: NSErrorPtr): NSArray; message 'initWithContentsOfURL:error:'; { available in macos , ios , watchos , tvos  }
-    class function arrayWithContentsOfURL_error (url: NSURL; error: NSErrorPtr): NSArray; message 'arrayWithContentsOfURL:error:'; { available in macos , ios , watchos , tvos  }
+    function initWithContentsOfURL_error (url: NSURL; error: NSErrorPtr): NSArray; message 'initWithContentsOfURL:error:'; { available in macos 10.13, ios 11.0, watchos 4.0, tvos 11.0 }
+    class function arrayWithContentsOfURL_error (url: NSURL; error: NSErrorPtr): NSArray; message 'arrayWithContentsOfURL:error:'; { available in macos 10.13, ios 11.0, watchos 4.0, tvos 11.0 }
   end;
 
 type
@@ -170,9 +170,9 @@ type
     procedure insertObjects_atIndexes (objects: NSArray; indexes: NSIndexSet); message 'insertObjects:atIndexes:';
     procedure removeObjectsAtIndexes (indexes: NSIndexSet); message 'removeObjectsAtIndexes:';
     procedure replaceObjectsAtIndexes_withObjects (indexes: NSIndexSet; objects: NSArray); message 'replaceObjectsAtIndexes:withObjects:';
-    procedure setObject_atIndexedSubscript (obj: id; idx: NSUInteger); message 'setObject:atIndexedSubscript:'; { available in macos , ios , watchos , tvos  }
-    procedure sortUsingComparator (cmptr: NSComparator); message 'sortUsingComparator:'; { available in macos , ios , watchos , tvos  }
-    procedure sortWithOptions_usingComparator (opts: NSSortOptions; cmptr: NSComparator); message 'sortWithOptions:usingComparator:'; { available in macos , ios , watchos , tvos  }
+    procedure setObject_atIndexedSubscript (obj: id; idx: NSUInteger); message 'setObject:atIndexedSubscript:'; { available in macos 10.8, ios 6.0, watchos 2.0, tvos 9.0 }
+    procedure sortUsingComparator (cmptr: NSComparator); message 'sortUsingComparator:'; { available in macos 10.6, ios 4.0, watchos 2.0, tvos 9.0 }
+    procedure sortWithOptions_usingComparator (opts: NSSortOptions; cmptr: NSComparator); message 'sortWithOptions:usingComparator:'; { available in macos 10.6, ios 4.0, watchos 2.0, tvos 9.0 }
   end;
 
 type

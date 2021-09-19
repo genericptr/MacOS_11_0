@@ -7,7 +7,7 @@ type
 
 {$ifdef EXTERNAL_SYMBOLS}
 var
-  MKPointsOfInterestRequestMaxRadius: CLLocationDistance { unavailable in watchos }; cvar; external;
+  MKPointsOfInterestRequestMaxRadius: CLLocationDistance { unavailable in watchos } { available in ios 14.0, macos 11.0, tvos 14.0 }; cvar; external;
 {$endif}
 
 {$ifdef CLASSES}

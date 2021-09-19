@@ -36,39 +36,39 @@ type
     class function uniformWithName (name: NSString): id; message 'uniformWithName:';
     class function uniformWithName_texture (name: NSString; texture: SKTexture): id; message 'uniformWithName:texture:';
     class function uniformWithName_float (name: NSString; value: single): id; message 'uniformWithName:float:';
-    class function uniformWithName_vectorFloat2 (name: NSString; value: vector_float2): id; message 'uniformWithName:vectorFloat2:'; { available in ios , tvos , watchos , macos  }
-    class function uniformWithName_vectorFloat3 (name: NSString; value: vector_float3): id; message 'uniformWithName:vectorFloat3:'; { available in ios , tvos , watchos , macos  }
-    class function uniformWithName_vectorFloat4 (name: NSString; value: vector_float4): id; message 'uniformWithName:vectorFloat4:'; { available in ios , tvos , watchos , macos  }
-    class function uniformWithName_matrixFloat2x2 (name: NSString; value: matrix_float2x2): id; message 'uniformWithName:matrixFloat2x2:'; { available in ios , tvos , watchos , macos  }
-    class function uniformWithName_matrixFloat3x3 (name: NSString; value: matrix_float3x3): id; message 'uniformWithName:matrixFloat3x3:'; { available in ios , tvos , watchos , macos  }
-    class function uniformWithName_matrixFloat4x4 (name: NSString; value: matrix_float4x4): id; message 'uniformWithName:matrixFloat4x4:'; { available in ios , tvos , watchos , macos  }
+    class function uniformWithName_vectorFloat2 (name: NSString; value: vector_float2): id; message 'uniformWithName:vectorFloat2:'; { available in ios 10.0, tvos 10.0, watchos 3.0, macos 10.12 }
+    class function uniformWithName_vectorFloat3 (name: NSString; value: vector_float3): id; message 'uniformWithName:vectorFloat3:'; { available in ios 10.0, tvos 10.0, watchos 3.0, macos 10.12 }
+    class function uniformWithName_vectorFloat4 (name: NSString; value: vector_float4): id; message 'uniformWithName:vectorFloat4:'; { available in ios 10.0, tvos 10.0, watchos 3.0, macos 10.12 }
+    class function uniformWithName_matrixFloat2x2 (name: NSString; value: matrix_float2x2): id; message 'uniformWithName:matrixFloat2x2:'; { available in ios 10.0, tvos 10.0, watchos 3.0, macos 10.12 }
+    class function uniformWithName_matrixFloat3x3 (name: NSString; value: matrix_float3x3): id; message 'uniformWithName:matrixFloat3x3:'; { available in ios 10.0, tvos 10.0, watchos 3.0, macos 10.12 }
+    class function uniformWithName_matrixFloat4x4 (name: NSString; value: matrix_float4x4): id; message 'uniformWithName:matrixFloat4x4:'; { available in ios 10.0, tvos 10.0, watchos 3.0, macos 10.12 }
     function name: NSString; message 'name';
     function uniformType: SKUniformType; message 'uniformType';
     procedure setTextureValue(newValue: SKTexture); message 'setTextureValue:';
     function textureValue: SKTexture; message 'textureValue';
     procedure setFloatValue(newValue: single); message 'setFloatValue:';
     function floatValue: single; message 'floatValue';
-    procedure setVectorFloat2Value(newValue: vector_float2); message 'setVectorFloat2Value:'; { available in ios , tvos , watchos , macos  }
-    function vectorFloat2Value: vector_float2; message 'vectorFloat2Value'; { available in ios , tvos , watchos , macos  }
-    procedure setVectorFloat3Value(newValue: vector_float3); message 'setVectorFloat3Value:'; { available in ios , tvos , watchos , macos  }
-    function vectorFloat3Value: vector_float3; message 'vectorFloat3Value'; { available in ios , tvos , watchos , macos  }
-    procedure setVectorFloat4Value(newValue: vector_float4); message 'setVectorFloat4Value:'; { available in ios , tvos , watchos , macos  }
-    function vectorFloat4Value: vector_float4; message 'vectorFloat4Value'; { available in ios , tvos , watchos , macos  }
-    procedure setMatrixFloat2x2Value(newValue: matrix_float2x2); message 'setMatrixFloat2x2Value:'; { available in ios , tvos , watchos , macos  }
-    function matrixFloat2x2Value: matrix_float2x2; message 'matrixFloat2x2Value'; { available in ios , tvos , watchos , macos  }
-    procedure setMatrixFloat3x3Value(newValue: matrix_float3x3); message 'setMatrixFloat3x3Value:'; { available in ios , tvos , watchos , macos  }
-    function matrixFloat3x3Value: matrix_float3x3; message 'matrixFloat3x3Value'; { available in ios , tvos , watchos , macos  }
-    procedure setMatrixFloat4x4Value(newValue: matrix_float4x4); message 'setMatrixFloat4x4Value:'; { available in ios , tvos , watchos , macos  }
-    function matrixFloat4x4Value: matrix_float4x4; message 'matrixFloat4x4Value'; { available in ios , tvos , watchos , macos  }
+    procedure setVectorFloat2Value(newValue: vector_float2); message 'setVectorFloat2Value:'; { available in ios 10.0, tvos 10.0, watchos 3.0, macos 10.12 }
+    function vectorFloat2Value: vector_float2; message 'vectorFloat2Value'; { available in ios 10.0, tvos 10.0, watchos 3.0, macos 10.12 }
+    procedure setVectorFloat3Value(newValue: vector_float3); message 'setVectorFloat3Value:'; { available in ios 10.0, tvos 10.0, watchos 3.0, macos 10.12 }
+    function vectorFloat3Value: vector_float3; message 'vectorFloat3Value'; { available in ios 10.0, tvos 10.0, watchos 3.0, macos 10.12 }
+    procedure setVectorFloat4Value(newValue: vector_float4); message 'setVectorFloat4Value:'; { available in ios 10.0, tvos 10.0, watchos 3.0, macos 10.12 }
+    function vectorFloat4Value: vector_float4; message 'vectorFloat4Value'; { available in ios 10.0, tvos 10.0, watchos 3.0, macos 10.12 }
+    procedure setMatrixFloat2x2Value(newValue: matrix_float2x2); message 'setMatrixFloat2x2Value:'; { available in ios 10.0, tvos 10.0, watchos 3.0, macos 10.12 }
+    function matrixFloat2x2Value: matrix_float2x2; message 'matrixFloat2x2Value'; { available in ios 10.0, tvos 10.0, watchos 3.0, macos 10.12 }
+    procedure setMatrixFloat3x3Value(newValue: matrix_float3x3); message 'setMatrixFloat3x3Value:'; { available in ios 10.0, tvos 10.0, watchos 3.0, macos 10.12 }
+    function matrixFloat3x3Value: matrix_float3x3; message 'matrixFloat3x3Value'; { available in ios 10.0, tvos 10.0, watchos 3.0, macos 10.12 }
+    procedure setMatrixFloat4x4Value(newValue: matrix_float4x4); message 'setMatrixFloat4x4Value:'; { available in ios 10.0, tvos 10.0, watchos 3.0, macos 10.12 }
+    function matrixFloat4x4Value: matrix_float4x4; message 'matrixFloat4x4Value'; { available in ios 10.0, tvos 10.0, watchos 3.0, macos 10.12 }
     function initWithName (name_: NSString): id; message 'initWithName:';
     function initWithName_texture (name_: NSString; texture: SKTexture): id; message 'initWithName:texture:';
     function initWithName_float (name_: NSString; value: single): id; message 'initWithName:float:';
-    function initWithName_vectorFloat2 (name_: NSString; value: vector_float2): id; message 'initWithName:vectorFloat2:'; { available in ios , tvos , watchos , macos  }
-    function initWithName_vectorFloat3 (name_: NSString; value: vector_float3): id; message 'initWithName:vectorFloat3:'; { available in ios , tvos , watchos , macos  }
-    function initWithName_vectorFloat4 (name_: NSString; value: vector_float4): id; message 'initWithName:vectorFloat4:'; { available in ios , tvos , watchos , macos  }
-    function initWithName_matrixFloat2x2 (name_: NSString; value: matrix_float2x2): id; message 'initWithName:matrixFloat2x2:'; { available in ios , tvos , watchos , macos  }
-    function initWithName_matrixFloat3x3 (name_: NSString; value: matrix_float3x3): id; message 'initWithName:matrixFloat3x3:'; { available in ios , tvos , watchos , macos  }
-    function initWithName_matrixFloat4x4 (name_: NSString; value: matrix_float4x4): id; message 'initWithName:matrixFloat4x4:'; { available in ios , tvos , watchos , macos  }
+    function initWithName_vectorFloat2 (name_: NSString; value: vector_float2): id; message 'initWithName:vectorFloat2:'; { available in ios 10.0, tvos 10.0, watchos 3.0, macos 10.12 }
+    function initWithName_vectorFloat3 (name_: NSString; value: vector_float3): id; message 'initWithName:vectorFloat3:'; { available in ios 10.0, tvos 10.0, watchos 3.0, macos 10.12 }
+    function initWithName_vectorFloat4 (name_: NSString; value: vector_float4): id; message 'initWithName:vectorFloat4:'; { available in ios 10.0, tvos 10.0, watchos 3.0, macos 10.12 }
+    function initWithName_matrixFloat2x2 (name_: NSString; value: matrix_float2x2): id; message 'initWithName:matrixFloat2x2:'; { available in ios 10.0, tvos 10.0, watchos 3.0, macos 10.12 }
+    function initWithName_matrixFloat3x3 (name_: NSString; value: matrix_float3x3): id; message 'initWithName:matrixFloat3x3:'; { available in ios 10.0, tvos 10.0, watchos 3.0, macos 10.12 }
+    function initWithName_matrixFloat4x4 (name_: NSString; value: matrix_float4x4): id; message 'initWithName:matrixFloat4x4:'; { available in ios 10.0, tvos 10.0, watchos 3.0, macos 10.12 }
     {$if defined(FRAMEWORK_LOADED_GAMEKIT)}
     procedure setFloatVector2Value(newValue: GLKVector2); message 'setFloatVector2Value:'; deprecated 'in 10_8, 10_12, 7_0, 10_0';
     function floatVector2Value: GLKVector2; message 'floatVector2Value'; deprecated 'in 10_8, 10_12, 7_0, 10_0';

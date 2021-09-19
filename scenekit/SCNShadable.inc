@@ -41,10 +41,10 @@ type
   SCNShadableProtocol = objcprotocol external name 'SCNShadable' (NSObjectProtocol)
   optional
     procedure setProgram(newValue: SCNProgram); message 'setProgram:'; { unavailable in watchos }
-    function program_: SCNProgram; message 'program'; { unavailable in watchos }
-    procedure handleBindingOfSymbol_usingBlock (symbol: NSString; block: SCNBindingBlock); message 'handleBindingOfSymbol:usingBlock:'; { unavailable in watchos }
+    function program_: SCNProgram; message 'program'; { unavailable in watchos } { available in macos 10.9 }
+    procedure handleBindingOfSymbol_usingBlock (symbol: NSString; block: SCNBindingBlock); message 'handleBindingOfSymbol:usingBlock:'; { unavailable in watchos } { available in macos 10.9 }
     procedure handleUnbindingOfSymbol_usingBlock (symbol: NSString; block: SCNBindingBlock); message 'handleUnbindingOfSymbol:usingBlock:'; { unavailable in watchos }
-    procedure setShaderModifiers(newValue: NSDictionary); message 'setShaderModifiers:'; { available in macos  }
+    procedure setShaderModifiers(newValue: NSDictionary); message 'setShaderModifiers:'; { available in macos 10.9 }
     function shaderModifiers: NSDictionary; message 'shaderModifiers'; { available in macos  }
   end;
 {$endif}
@@ -65,24 +65,24 @@ type
     procedure setFragmentShader(newValue: NSString); message 'setFragmentShader:';
     function fragmentShader: NSString; message 'fragmentShader';
     procedure setTessellationControlShader(newValue: NSString); message 'setTessellationControlShader:'; { unavailable in ios, tvos, watchos, macCatalyst }
-    function tessellationControlShader: NSString; message 'tessellationControlShader'; { unavailable in ios, tvos, watchos, macCatalyst }
-    procedure setTessellationEvaluationShader(newValue: NSString); message 'setTessellationEvaluationShader:'; { unavailable in ios, tvos, watchos, macCatalyst }
-    function tessellationEvaluationShader: NSString; message 'tessellationEvaluationShader'; { unavailable in ios, tvos, watchos, macCatalyst }
-    procedure setGeometryShader(newValue: NSString); message 'setGeometryShader:'; { unavailable in ios, tvos, watchos, macCatalyst }
-    function geometryShader: NSString; message 'geometryShader'; { unavailable in ios, tvos, watchos, macCatalyst }
-    procedure setVertexFunctionName(newValue: NSString); message 'setVertexFunctionName:'; { available in macos , ios  }
-    function vertexFunctionName: NSString; message 'vertexFunctionName'; { available in macos , ios  }
-    procedure setFragmentFunctionName(newValue: NSString); message 'setFragmentFunctionName:'; { available in macos , ios  }
-    function fragmentFunctionName: NSString; message 'fragmentFunctionName'; { available in macos , ios  }
-    procedure handleBindingOfBufferNamed_frequency_usingBlock (name: NSString; frequency: SCNBufferFrequency; block: SCNBufferBindingBlock); message 'handleBindingOfBufferNamed:frequency:usingBlock:'; { available in macos , ios  }
-    procedure setOpaque(newValue: objcbool); message 'setOpaque:'; { available in macos  }
-    function isOpaque: objcbool; message 'isOpaque'; { available in macos  }
+    function tessellationControlShader: NSString; message 'tessellationControlShader'; { unavailable in ios, tvos, watchos, macCatalyst } { available in macos 10.10 }
+    procedure setTessellationEvaluationShader(newValue: NSString); message 'setTessellationEvaluationShader:'; { unavailable in ios, tvos, watchos, macCatalyst } { available in macos 10.10 }
+    function tessellationEvaluationShader: NSString; message 'tessellationEvaluationShader'; { unavailable in ios, tvos, watchos, macCatalyst } { available in macos 10.10 }
+    procedure setGeometryShader(newValue: NSString); message 'setGeometryShader:'; { unavailable in ios, tvos, watchos, macCatalyst } { available in macos 10.10 }
+    function geometryShader: NSString; message 'geometryShader'; { unavailable in ios, tvos, watchos, macCatalyst } { available in macos 10.10 }
+    procedure setVertexFunctionName(newValue: NSString); message 'setVertexFunctionName:'; { available in macos 10.10 }
+    function vertexFunctionName: NSString; message 'vertexFunctionName'; { available in macos 10.11, ios 9.0 }
+    procedure setFragmentFunctionName(newValue: NSString); message 'setFragmentFunctionName:'; { available in macos 10.11, ios 9.0 }
+    function fragmentFunctionName: NSString; message 'fragmentFunctionName'; { available in macos 10.11, ios 9.0 }
+    procedure handleBindingOfBufferNamed_frequency_usingBlock (name: NSString; frequency: SCNBufferFrequency; block: SCNBufferBindingBlock); message 'handleBindingOfBufferNamed:frequency:usingBlock:'; { available in macos 10.11, ios 9.0 }
+    procedure setOpaque(newValue: objcbool); message 'setOpaque:'; { available in macos 10.11, ios 9.0 }
+    function isOpaque: objcbool; message 'isOpaque'; { available in macos 10.10 }
     procedure setSemantic_forSymbol_options (semantic: NSString; symbol: NSString; options: NSDictionary); message 'setSemantic:forSymbol:options:';
     function semanticForSymbol (symbol: NSString): NSString; message 'semanticForSymbol:';
     procedure setDelegate(newValue: id); message 'setDelegate:';
     function delegate: id; message 'delegate';
     procedure setLibrary(newValue: id); message 'setLibrary:'; { available in macos , ios  }
-    function library_: id; message 'library'; { available in macos , ios  }
+    function library_: id; message 'library'; { available in macos 10.11, ios 9.0 }
 
     { Adopted protocols }
     function copyWithZone (zone: NSZonePtr): id; message 'copyWithZone:';
@@ -107,8 +107,8 @@ type
 {$ifdef EXTERNAL_SYMBOLS}
 var
   SCNShaderModifierEntryPointGeometry: SCNShaderModifierEntryPoint { available in macos  }; cvar; external;
-  SCNShaderModifierEntryPointSurface: SCNShaderModifierEntryPoint { available in macos  }; cvar; external;
-  SCNShaderModifierEntryPointLightingModel: SCNShaderModifierEntryPoint { available in macos  }; cvar; external;
-  SCNShaderModifierEntryPointFragment: SCNShaderModifierEntryPoint { available in macos  }; cvar; external;
+  SCNShaderModifierEntryPointSurface: SCNShaderModifierEntryPoint { available in macos 10.9 }; cvar; external;
+  SCNShaderModifierEntryPointLightingModel: SCNShaderModifierEntryPoint { available in macos 10.9 }; cvar; external;
+  SCNShaderModifierEntryPointFragment: SCNShaderModifierEntryPoint { available in macos 10.9 }; cvar; external;
 {$endif}
 

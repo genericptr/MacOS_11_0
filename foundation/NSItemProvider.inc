@@ -75,19 +75,19 @@ type
     procedure registerDataRepresentationForTypeIdentifier_visibility_loadHandler (typeIdentifier: NSString; visibility: NSItemProviderRepresentationVisibility; loadHandler: NSItemProviderRegisterDataRepresentationForTypeIdentifierCallback); message 'registerDataRepresentationForTypeIdentifier:visibility:loadHandler:'; { available in macos , ios , watchos , tvos  }
     procedure registerFileRepresentationForTypeIdentifier_fileOptions_visibility_loadHandler (typeIdentifier: NSString; fileOptions: NSItemProviderFileOptions; visibility: NSItemProviderRepresentationVisibility; loadHandler: NSItemProviderRegisterFileRepresentationForTypeIdentifierCallback); message 'registerFileRepresentationForTypeIdentifier:fileOptions:visibility:loadHandler:'; { available in macos , ios , watchos , tvos  }
     function registeredTypeIdentifiers: NSArray; message 'registeredTypeIdentifiers';
-    function registeredTypeIdentifiersWithFileOptions (fileOptions: NSItemProviderFileOptions): NSArray; message 'registeredTypeIdentifiersWithFileOptions:'; { available in macos , ios , watchos , tvos  }
+    function registeredTypeIdentifiersWithFileOptions (fileOptions: NSItemProviderFileOptions): NSArray; message 'registeredTypeIdentifiersWithFileOptions:'; { available in macos 10.13, ios 11.0, watchos 4.0, tvos 11.0 }
     function hasItemConformingToTypeIdentifier (typeIdentifier: NSString): objcbool; message 'hasItemConformingToTypeIdentifier:';
-    function hasRepresentationConformingToTypeIdentifier_fileOptions (typeIdentifier: NSString; fileOptions: NSItemProviderFileOptions): objcbool; message 'hasRepresentationConformingToTypeIdentifier:fileOptions:'; { available in macos , ios , watchos , tvos  }
+    function hasRepresentationConformingToTypeIdentifier_fileOptions (typeIdentifier: NSString; fileOptions: NSItemProviderFileOptions): objcbool; message 'hasRepresentationConformingToTypeIdentifier:fileOptions:'; { available in macos 10.13, ios 11.0, watchos 4.0, tvos 11.0 }
     function loadDataRepresentationForTypeIdentifier_completionHandler (typeIdentifier: NSString; completionHandler: NSItemProviderLoadDataRepresentationForTypeIdentifierCallback): NSProgress; message 'loadDataRepresentationForTypeIdentifier:completionHandler:'; { available in macos , ios , watchos , tvos  }
-    function loadFileRepresentationForTypeIdentifier_completionHandler (typeIdentifier: NSString; completionHandler: NSItemProviderLoadFileRepresentationForTypeIdentifierCallback): NSProgress; message 'loadFileRepresentationForTypeIdentifier:completionHandler:'; { available in macos , ios , watchos , tvos  }
-    function loadInPlaceFileRepresentationForTypeIdentifier_completionHandler (typeIdentifier: NSString; completionHandler: NSItemProviderLoadInPlaceFileRepresentationForTypeIdentifierCallback): NSProgress; message 'loadInPlaceFileRepresentationForTypeIdentifier:completionHandler:'; { available in macos , ios , watchos , tvos  }
+    function loadFileRepresentationForTypeIdentifier_completionHandler (typeIdentifier: NSString; completionHandler: NSItemProviderLoadFileRepresentationForTypeIdentifierCallback): NSProgress; message 'loadFileRepresentationForTypeIdentifier:completionHandler:'; { available in macos 10.13, ios 11.0, watchos 4.0, tvos 11.0 }
+    function loadInPlaceFileRepresentationForTypeIdentifier_completionHandler (typeIdentifier: NSString; completionHandler: NSItemProviderLoadInPlaceFileRepresentationForTypeIdentifierCallback): NSProgress; message 'loadInPlaceFileRepresentationForTypeIdentifier:completionHandler:'; { available in macos 10.13, ios 11.0, watchos 4.0, tvos 11.0 }
     procedure setSuggestedName(newValue: NSString); message 'setSuggestedName:'; { unavailable in watchos, tvos }
     function suggestedName: NSString; message 'suggestedName'; { unavailable in watchos, tvos }
-    function initWithObject (object_: id): id; message 'initWithObject:'; { available in macos , ios , watchos , tvos  }
-    procedure registerObject_visibility (object_: id; visibility: NSItemProviderRepresentationVisibility); message 'registerObject:visibility:'; { available in macos , ios , watchos , tvos  }
-    procedure registerObjectOfClass_visibility_loadHandler (aClass: pobjc_class; visibility: NSItemProviderRepresentationVisibility; loadHandler: NSItemProviderRegisterObjectOfClassCallback); message 'registerObjectOfClass:visibility:loadHandler:'; { available in macos , ios , watchos , tvos  }
-    function canLoadObjectOfClass (aClass: pobjc_class): objcbool; message 'canLoadObjectOfClass:'; { available in macos , ios , watchos , tvos  }
-    function loadObjectOfClass_completionHandler (aClass: pobjc_class; completionHandler: NSItemProviderLoadObjectOfClassCallback): NSProgress; message 'loadObjectOfClass:completionHandler:'; { available in macos , ios , watchos , tvos  }
+    function initWithObject (object_: id): id; message 'initWithObject:'; { available in macos 10.14, ios 11.0 }
+    procedure registerObject_visibility (object_: id; visibility: NSItemProviderRepresentationVisibility); message 'registerObject:visibility:'; { available in macos 10.14, ios 11.0 }
+    procedure registerObjectOfClass_visibility_loadHandler (aClass: pobjc_class; visibility: NSItemProviderRepresentationVisibility; loadHandler: NSItemProviderRegisterObjectOfClassCallback); message 'registerObjectOfClass:visibility:loadHandler:'; { available in macos 10.13, ios 11.0, watchos 4.0, tvos 11.0 }
+    function canLoadObjectOfClass (aClass: pobjc_class): objcbool; message 'canLoadObjectOfClass:'; { available in macos 10.13, ios 11.0, watchos 4.0, tvos 11.0 }
+    function loadObjectOfClass_completionHandler (aClass: pobjc_class; completionHandler: NSItemProviderLoadObjectOfClassCallback): NSProgress; message 'loadObjectOfClass:completionHandler:'; { available in macos 10.13, ios 11.0, watchos 4.0, tvos 11.0 }
     function initWithItem_typeIdentifier (item: id; typeIdentifier: NSString): id; message 'initWithItem:typeIdentifier:'; { NS_DESIGNATED_INITIALIZER }
     function initWithContentsOfURL (fileURL: NSURL): id; message 'initWithContentsOfURL:';
     procedure registerItemForTypeIdentifier_loadHandler (typeIdentifier: NSString; loadHandler: NSItemProviderLoadHandler); message 'registerItemForTypeIdentifier:loadHandler:';
@@ -109,7 +109,7 @@ type
   NSPreviewSupport = objccategory external (NSItemProvider)
     procedure setPreviewImageHandler(newValue: NSItemProviderLoadHandler); message 'setPreviewImageHandler:'; { available in macos , ios , watchos , tvos  }
     function previewImageHandler: NSItemProviderLoadHandler; message 'previewImageHandler'; { available in macos , ios , watchos , tvos  }
-    procedure loadPreviewImageWithOptions_completionHandler (options: NSDictionary; completionHandler: NSItemProviderCompletionHandler); message 'loadPreviewImageWithOptions:completionHandler:'; { available in macos , ios , watchos , tvos  }
+    procedure loadPreviewImageWithOptions_completionHandler (options: NSDictionary; completionHandler: NSItemProviderCompletionHandler); message 'loadPreviewImageWithOptions:completionHandler:'; { available in macos 10.10, ios 8.0, watchos 2.0, tvos 9.0 }
   end;
 {$endif}
 
@@ -117,7 +117,7 @@ type
 var
   NSExtensionJavaScriptPreprocessingResultsKey: NSString { available in macos , ios , watchos , tvos  }; cvar; external;
   NSExtensionJavaScriptFinalizeArgumentKey: NSString { unavailable in macos }; cvar; external;
-  NSItemProviderErrorDomain: NSString { available in macos , ios , watchos , tvos  }; cvar; external;
+  NSItemProviderErrorDomain: NSString { available in macos 10.10, ios 8.0, watchos 2.0, tvos 9.0 }; cvar; external;
 {$endif}
 
 {$ifdef TYPES}

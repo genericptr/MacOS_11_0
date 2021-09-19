@@ -12,7 +12,7 @@ type
   public
     function dominantScript: NSString; message 'dominantScript';
     function languageMap: NSDictionary; message 'languageMap';
-    function initWithDominantScript_languageMap (script: NSString; map: NSDictionary): id; message 'initWithDominantScript:languageMap:'; { available in macos , ios , watchos , tvos  }
+    function initWithDominantScript_languageMap (script: NSString; map: NSDictionary): id; message 'initWithDominantScript:languageMap:'; { available in macos 10.6, ios 4.0, watchos 2.0, tvos 9.0 }
     function initWithCoder (coder: NSCoder): id; message 'initWithCoder:'; { NS_DESIGNATED_INITIALIZER }
 
     { Adopted protocols }
@@ -24,17 +24,17 @@ type
 
 type
   NSOrthographyExtended = objccategory external (NSOrthography)
-    function languagesForScript (script: NSString): NSArray; message 'languagesForScript:'; { available in macos , ios , watchos , tvos  }
-    function dominantLanguageForScript (script: NSString): NSString; message 'dominantLanguageForScript:'; { available in macos , ios , watchos , tvos  }
-    function dominantLanguage: NSString; message 'dominantLanguage'; { available in macos , ios , watchos , tvos  }
-    function allScripts: NSArray; message 'allScripts'; { available in macos , ios , watchos , tvos  }
-    function allLanguages: NSArray; message 'allLanguages'; { available in macos , ios , watchos , tvos  }
-    class function defaultOrthographyForLanguage (language: NSString): id; message 'defaultOrthographyForLanguage:'; { available in macosx , ios , watchos , tvos  }
+    function languagesForScript (script: NSString): NSArray; message 'languagesForScript:'; { available in macos 10.6, ios 4.0, watchos 2.0, tvos 9.0 }
+    function dominantLanguageForScript (script: NSString): NSString; message 'dominantLanguageForScript:'; { available in macos 10.6, ios 4.0, watchos 2.0, tvos 9.0 }
+    function dominantLanguage: NSString; message 'dominantLanguage'; { available in macos 10.6, ios 4.0, watchos 2.0, tvos 9.0 }
+    function allScripts: NSArray; message 'allScripts'; { available in macos 10.6, ios 4.0, watchos 2.0, tvos 9.0 }
+    function allLanguages: NSArray; message 'allLanguages'; { available in macos 10.6, ios 4.0, watchos 2.0, tvos 9.0 }
+    class function defaultOrthographyForLanguage (language: NSString): id; message 'defaultOrthographyForLanguage:'; { available in macosx 10.13, ios 11.0, watchos 4.0, tvos 11.0 }
   end;
 
 type
   NSOrthographyCreation = objccategory external (NSOrthography)
-    class function orthographyWithDominantScript_languageMap (script: NSString; map: NSDictionary): id; message 'orthographyWithDominantScript:languageMap:'; { available in macos , ios , watchos , tvos  }
+    class function orthographyWithDominantScript_languageMap (script: NSString; map: NSDictionary): id; message 'orthographyWithDominantScript:languageMap:'; { available in macos 10.6, ios 4.0, watchos 2.0, tvos 9.0 }
   end;
 {$endif}
 

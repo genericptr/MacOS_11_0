@@ -13,7 +13,7 @@ type
     procedure setManagedObjectContext(newValue: NSManagedObjectContext); message 'setManagedObjectContext:';
     function managedObjectContext: NSManagedObjectContext; message 'managedObjectContext';
     function managedObjectModel: NSManagedObjectModel; message 'managedObjectModel';
-    function configurePersistentStoreCoordinatorForURL_ofType_modelConfiguration_storeOptions_error (url: NSURL; fileType_: NSString; configuration: NSString; storeOptions: NSDictionary; error: NSErrorPtr): objcbool; message 'configurePersistentStoreCoordinatorForURL:ofType:modelConfiguration:storeOptions:error:'; { available in macos  }
+    function configurePersistentStoreCoordinatorForURL_ofType_modelConfiguration_storeOptions_error (url: NSURL; fileType_: NSString; configuration: NSString; storeOptions: NSDictionary; error: NSErrorPtr): objcbool; message 'configurePersistentStoreCoordinatorForURL:ofType:modelConfiguration:storeOptions:error:'; { available in macos 10.5 }
     function persistentStoreTypeForFileType (fileType_: NSString): NSString; message 'persistentStoreTypeForFileType:';
     function writeToURL_ofType_forSaveOperation_originalContentsURL_error (absoluteURL: NSURL; typeName: NSString; saveOperation: NSSaveOperationType; absoluteOriginalContentsURL: NSURL; error: NSErrorPtr): objcbool; message 'writeToURL:ofType:forSaveOperation:originalContentsURL:error:';
     function readFromURL_ofType_error (absoluteURL: NSURL; typeName: NSString; error: NSErrorPtr): objcbool; message 'readFromURL:ofType:error:';

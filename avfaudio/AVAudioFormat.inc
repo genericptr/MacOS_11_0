@@ -50,7 +50,7 @@ type
     function initWithCommonFormat_sampleRate_interleaved_channelLayout (format: AVAudioCommonFormat; sampleRate: double; interleaved: objcbool; layout: AVAudioChannelLayout): id; message 'initWithCommonFormat:sampleRate:interleaved:channelLayout:';
     function initWithSettings (settings: NSDictionary): id; message 'initWithSettings:';
     {$if defined(AVAUDIOFORMAT_HAVE_CMFORMATDESCRIPTION)}
-    function initWithCMAudioFormatDescription (formatDescription: CMAudioFormatDescriptionRef): id; message 'initWithCMAudioFormatDescription:'; { available in macos , ios , watchos , tvos  }
+    function initWithCMAudioFormatDescription (formatDescription: CMAudioFormatDescriptionRef): id; message 'initWithCMAudioFormatDescription:'; { available in macos 10.11, ios 9.0, watchos 2.0, tvos 9.0 }
     {$endif}
     function isEqual (object_: id): objcbool; message 'isEqual:';
     function isStandard: objcbool; message 'isStandard';
@@ -60,11 +60,11 @@ type
     function isInterleaved: objcbool; message 'isInterleaved';
     function streamDescription: AudioStreamBasicDescriptionPtr; message 'streamDescription';
     function channelLayout: AVAudioChannelLayout; message 'channelLayout';
-    procedure setMagicCookie(newValue: NSData); message 'setMagicCookie:'; { available in macos , ios , watchos , tvos  }
-    function magicCookie: NSData; message 'magicCookie'; { available in macos , ios , watchos , tvos  }
+    procedure setMagicCookie(newValue: NSData); message 'setMagicCookie:'; { available in macos 10.12, ios 10.0, watchos 3.0, tvos 10.0 }
+    function magicCookie: NSData; message 'magicCookie'; { available in macos 10.12, ios 10.0, watchos 3.0, tvos 10.0 }
     function settings: NSDictionary; message 'settings';
     {$if defined(AVAUDIOFORMAT_HAVE_CMFORMATDESCRIPTION)}
-    function formatDescription: CMAudioFormatDescriptionRef; message 'formatDescription'; { available in macos , ios , watchos , tvos  }
+    function formatDescription: CMAudioFormatDescriptionRef; message 'formatDescription'; { available in macos 10.11, ios 9.0, watchos 2.0, tvos 9.0 }
     {$endif}
 
     { Adopted protocols }

@@ -20,12 +20,12 @@ type
     function allowsMultipleSelection: objcbool; message 'allowsMultipleSelection';
     procedure setCanChooseFiles(newValue: objcbool); message 'setCanChooseFiles:';
     function canChooseFiles: objcbool; message 'canChooseFiles';
-    procedure setCanResolveUbiquitousConflicts(newValue: objcbool); message 'setCanResolveUbiquitousConflicts:'; { available in macos  }
-    function canResolveUbiquitousConflicts: objcbool; message 'canResolveUbiquitousConflicts'; { available in macos  }
-    procedure setCanDownloadUbiquitousContents(newValue: objcbool); message 'setCanDownloadUbiquitousContents:'; { available in macos  }
-    function canDownloadUbiquitousContents: objcbool; message 'canDownloadUbiquitousContents'; { available in macos  }
-    procedure setAccessoryViewDisclosed(newValue: objcbool); message 'setAccessoryViewDisclosed:'; { available in macos  }
-    function isAccessoryViewDisclosed: objcbool; message 'isAccessoryViewDisclosed'; { available in macos  }
+    procedure setCanResolveUbiquitousConflicts(newValue: objcbool); message 'setCanResolveUbiquitousConflicts:'; { available in macos 10.10 }
+    function canResolveUbiquitousConflicts: objcbool; message 'canResolveUbiquitousConflicts'; { available in macos 10.10 }
+    procedure setCanDownloadUbiquitousContents(newValue: objcbool); message 'setCanDownloadUbiquitousContents:'; { available in macos 10.10 }
+    function canDownloadUbiquitousContents: objcbool; message 'canDownloadUbiquitousContents'; { available in macos 10.10 }
+    procedure setAccessoryViewDisclosed(newValue: objcbool); message 'setAccessoryViewDisclosed:'; { available in macos 10.11 }
+    function isAccessoryViewDisclosed: objcbool; message 'isAccessoryViewDisclosed'; { available in macos 10.11 }
   end;
 
 

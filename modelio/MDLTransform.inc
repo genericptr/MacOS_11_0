@@ -42,7 +42,7 @@ type
     function rotationAtTime (time: NSTimeInterval): vector_float3; message 'rotationAtTime:';
     function shearAtTime (time: NSTimeInterval): vector_float3; message 'shearAtTime:';
     function scaleAtTime (time: NSTimeInterval): vector_float3; message 'scaleAtTime:';
-    procedure setMatrix_forTime (matrix: matrix_float4x4; time: NSTimeInterval); message 'setMatrix:forTime:'; { available in macos , ios , tvos  }
+    procedure setMatrix_forTime (matrix: matrix_float4x4; time: NSTimeInterval); message 'setMatrix:forTime:'; { available in macos 10.13, ios 11.0, tvos 11.0 }
     procedure setTranslation_forTime (translation: vector_float3; time: NSTimeInterval); message 'setTranslation:forTime:';
     procedure setRotation_forTime (rotation: vector_float3; time: NSTimeInterval); message 'setRotation:forTime:';
     procedure setShear_forTime (shear: vector_float3; time: NSTimeInterval); message 'setShear:forTime:';

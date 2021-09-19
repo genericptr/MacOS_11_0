@@ -1,7 +1,7 @@
 { Parsed from UserNotifications.framework UNError.h }
 {$ifdef EXTERNAL_SYMBOLS}
 var
-  UNErrorDomain: NSString { available in macos , ios , watchos , tvos  }; cvar; external;
+  UNErrorDomain: NSString { available in macos 10.14, ios 10.0, watchos 3.0, tvos 10.0 }; cvar; external;
 {$endif}
 
 {$ifdef TYPES}

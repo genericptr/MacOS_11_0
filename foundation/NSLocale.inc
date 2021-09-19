@@ -48,40 +48,40 @@ type
 type
   NSExtendedLocale = objccategory external (NSLocale)
     function localeIdentifier: NSString; message 'localeIdentifier';
-    function localizedStringForLocaleIdentifier (localeIdentifier_: NSString): NSString; message 'localizedStringForLocaleIdentifier:'; { available in macosx , ios , watchos , tvos  }
-    function languageCode: NSString; message 'languageCode'; { available in macosx , ios , watchos , tvos  }
-    function localizedStringForLanguageCode (languageCode_: NSString): NSString; message 'localizedStringForLanguageCode:'; { available in macosx , ios , watchos , tvos  }
-    function countryCode: NSString; message 'countryCode'; { available in macosx , ios , watchos , tvos  }
-    function localizedStringForCountryCode (countryCode_: NSString): NSString; message 'localizedStringForCountryCode:'; { available in macosx , ios , watchos , tvos  }
-    function scriptCode: NSString; message 'scriptCode'; { available in macosx , ios , watchos , tvos  }
-    function localizedStringForScriptCode (scriptCode_: NSString): NSString; message 'localizedStringForScriptCode:'; { available in macosx , ios , watchos , tvos  }
-    function variantCode: NSString; message 'variantCode'; { available in macosx , ios , watchos , tvos  }
-    function localizedStringForVariantCode (variantCode_: NSString): NSString; message 'localizedStringForVariantCode:'; { available in macosx , ios , watchos , tvos  }
-    function exemplarCharacterSet: NSCharacterSet; message 'exemplarCharacterSet'; { available in macosx , ios , watchos , tvos  }
-    function calendarIdentifier: NSString; message 'calendarIdentifier'; { available in macosx , ios , watchos , tvos  }
-    function localizedStringForCalendarIdentifier (calendarIdentifier_: NSString): NSString; message 'localizedStringForCalendarIdentifier:'; { available in macosx , ios , watchos , tvos  }
-    function collationIdentifier: NSString; message 'collationIdentifier'; { available in macosx , ios , watchos , tvos  }
-    function localizedStringForCollationIdentifier (collationIdentifier_: NSString): NSString; message 'localizedStringForCollationIdentifier:'; { available in macosx , ios , watchos , tvos  }
-    function usesMetricSystem: objcbool; message 'usesMetricSystem'; { available in macosx , ios , watchos , tvos  }
-    function decimalSeparator: NSString; message 'decimalSeparator'; { available in macosx , ios , watchos , tvos  }
-    function groupingSeparator: NSString; message 'groupingSeparator'; { available in macosx , ios , watchos , tvos  }
-    function currencySymbol: NSString; message 'currencySymbol'; { available in macosx , ios , watchos , tvos  }
-    function currencyCode: NSString; message 'currencyCode'; { available in macosx , ios , watchos , tvos  }
-    function localizedStringForCurrencyCode (currencyCode_: NSString): NSString; message 'localizedStringForCurrencyCode:'; { available in macosx , ios , watchos , tvos  }
-    function collatorIdentifier: NSString; message 'collatorIdentifier'; { available in macosx , ios , watchos , tvos  }
-    function localizedStringForCollatorIdentifier (collatorIdentifier_: NSString): NSString; message 'localizedStringForCollatorIdentifier:'; { available in macosx , ios , watchos , tvos  }
-    function quotationBeginDelimiter: NSString; message 'quotationBeginDelimiter'; { available in macosx , ios , watchos , tvos  }
-    function quotationEndDelimiter: NSString; message 'quotationEndDelimiter'; { available in macosx , ios , watchos , tvos  }
-    function alternateQuotationBeginDelimiter: NSString; message 'alternateQuotationBeginDelimiter'; { available in macosx , ios , watchos , tvos  }
-    function alternateQuotationEndDelimiter: NSString; message 'alternateQuotationEndDelimiter'; { available in macosx , ios , watchos , tvos  }
+    function localizedStringForLocaleIdentifier (localeIdentifier_: NSString): NSString; message 'localizedStringForLocaleIdentifier:'; { available in macosx 10.12, ios 10.0, watchos 3.0, tvos 10.0 }
+    function languageCode: NSString; message 'languageCode'; { available in macosx 10.12, ios 10.0, watchos 3.0, tvos 10.0 }
+    function localizedStringForLanguageCode (languageCode_: NSString): NSString; message 'localizedStringForLanguageCode:'; { available in macosx 10.12, ios 10.0, watchos 3.0, tvos 10.0 }
+    function countryCode: NSString; message 'countryCode'; { available in macosx 10.12, ios 10.0, watchos 3.0, tvos 10.0 }
+    function localizedStringForCountryCode (countryCode_: NSString): NSString; message 'localizedStringForCountryCode:'; { available in macosx 10.12, ios 10.0, watchos 3.0, tvos 10.0 }
+    function scriptCode: NSString; message 'scriptCode'; { available in macosx 10.12, ios 10.0, watchos 3.0, tvos 10.0 }
+    function localizedStringForScriptCode (scriptCode_: NSString): NSString; message 'localizedStringForScriptCode:'; { available in macosx 10.12, ios 10.0, watchos 3.0, tvos 10.0 }
+    function variantCode: NSString; message 'variantCode'; { available in macosx 10.12, ios 10.0, watchos 3.0, tvos 10.0 }
+    function localizedStringForVariantCode (variantCode_: NSString): NSString; message 'localizedStringForVariantCode:'; { available in macosx 10.12, ios 10.0, watchos 3.0, tvos 10.0 }
+    function exemplarCharacterSet: NSCharacterSet; message 'exemplarCharacterSet'; { available in macosx 10.12, ios 10.0, watchos 3.0, tvos 10.0 }
+    function calendarIdentifier: NSString; message 'calendarIdentifier'; { available in macosx 10.12, ios 10.0, watchos 3.0, tvos 10.0 }
+    function localizedStringForCalendarIdentifier (calendarIdentifier_: NSString): NSString; message 'localizedStringForCalendarIdentifier:'; { available in macosx 10.12, ios 10.0, watchos 3.0, tvos 10.0 }
+    function collationIdentifier: NSString; message 'collationIdentifier'; { available in macosx 10.12, ios 10.0, watchos 3.0, tvos 10.0 }
+    function localizedStringForCollationIdentifier (collationIdentifier_: NSString): NSString; message 'localizedStringForCollationIdentifier:'; { available in macosx 10.12, ios 10.0, watchos 3.0, tvos 10.0 }
+    function usesMetricSystem: objcbool; message 'usesMetricSystem'; { available in macosx 10.12, ios 10.0, watchos 3.0, tvos 10.0 }
+    function decimalSeparator: NSString; message 'decimalSeparator'; { available in macosx 10.12, ios 10.0, watchos 3.0, tvos 10.0 }
+    function groupingSeparator: NSString; message 'groupingSeparator'; { available in macosx 10.12, ios 10.0, watchos 3.0, tvos 10.0 }
+    function currencySymbol: NSString; message 'currencySymbol'; { available in macosx 10.12, ios 10.0, watchos 3.0, tvos 10.0 }
+    function currencyCode: NSString; message 'currencyCode'; { available in macosx 10.12, ios 10.0, watchos 3.0, tvos 10.0 }
+    function localizedStringForCurrencyCode (currencyCode_: NSString): NSString; message 'localizedStringForCurrencyCode:'; { available in macosx 10.12, ios 10.0, watchos 3.0, tvos 10.0 }
+    function collatorIdentifier: NSString; message 'collatorIdentifier'; { available in macosx 10.12, ios 10.0, watchos 3.0, tvos 10.0 }
+    function localizedStringForCollatorIdentifier (collatorIdentifier_: NSString): NSString; message 'localizedStringForCollatorIdentifier:'; { available in macosx 10.12, ios 10.0, watchos 3.0, tvos 10.0 }
+    function quotationBeginDelimiter: NSString; message 'quotationBeginDelimiter'; { available in macosx 10.12, ios 10.0, watchos 3.0, tvos 10.0 }
+    function quotationEndDelimiter: NSString; message 'quotationEndDelimiter'; { available in macosx 10.12, ios 10.0, watchos 3.0, tvos 10.0 }
+    function alternateQuotationBeginDelimiter: NSString; message 'alternateQuotationBeginDelimiter'; { available in macosx 10.12, ios 10.0, watchos 3.0, tvos 10.0 }
+    function alternateQuotationEndDelimiter: NSString; message 'alternateQuotationEndDelimiter'; { available in macosx 10.12, ios 10.0, watchos 3.0, tvos 10.0 }
   end;
 
 type
   NSLocaleCreation = objccategory external (NSLocale)
-    class function autoupdatingCurrentLocale: NSLocale; message 'autoupdatingCurrentLocale'; { available in macos , ios , watchos , tvos  }
+    class function autoupdatingCurrentLocale: NSLocale; message 'autoupdatingCurrentLocale'; { available in macos 10.5, ios 2.0, watchos 2.0, tvos 9.0 }
     class function currentLocale: NSLocale; message 'currentLocale';
     class function systemLocale: NSLocale; message 'systemLocale';
-    class function localeWithLocaleIdentifier (ident: NSString): id; message 'localeWithLocaleIdentifier:'; { available in macos , ios , watchos , tvos  }
+    class function localeWithLocaleIdentifier (ident: NSString): id; message 'localeWithLocaleIdentifier:'; { available in macos 10.6, ios 4.0, watchos 2.0, tvos 9.0 }
     function init: id; message 'init'; { unavailable in macos, ios, watchos, tvos }
   end;
 
@@ -91,22 +91,22 @@ type
     class function ISOLanguageCodes: NSArray; message 'ISOLanguageCodes';
     class function ISOCountryCodes: NSArray; message 'ISOCountryCodes';
     class function ISOCurrencyCodes: NSArray; message 'ISOCurrencyCodes';
-    class function commonISOCurrencyCodes: NSArray; message 'commonISOCurrencyCodes'; { available in macos , ios , watchos , tvos  }
-    class function preferredLanguages: NSArray; message 'preferredLanguages'; { available in macos , ios , watchos , tvos  }
+    class function commonISOCurrencyCodes: NSArray; message 'commonISOCurrencyCodes'; { available in macos 10.5, ios 2.0, watchos 2.0, tvos 9.0 }
+    class function preferredLanguages: NSArray; message 'preferredLanguages'; { available in macos 10.5, ios 2.0, watchos 2.0, tvos 9.0 }
     class function componentsFromLocaleIdentifier (string_: NSString): NSDictionary; message 'componentsFromLocaleIdentifier:';
     class function localeIdentifierFromComponents (dict: NSDictionary): NSString; message 'localeIdentifierFromComponents:';
     class function canonicalLocaleIdentifierFromString (string_: NSString): NSString; message 'canonicalLocaleIdentifierFromString:';
     class function canonicalLanguageIdentifierFromString (string_: NSString): NSString; message 'canonicalLanguageIdentifierFromString:';
-    class function localeIdentifierFromWindowsLocaleCode (lcid: cuint32): NSString; message 'localeIdentifierFromWindowsLocaleCode:'; { available in macos , ios , watchos , tvos  }
-    class function windowsLocaleCodeFromLocaleIdentifier (localeIdentifier: NSString): cuint32; message 'windowsLocaleCodeFromLocaleIdentifier:'; { available in macos , ios , watchos , tvos  }
-    class function characterDirectionForLanguage (isoLangCode: NSString): NSLocaleLanguageDirection; message 'characterDirectionForLanguage:'; { available in macos , ios , watchos , tvos  }
-    class function lineDirectionForLanguage (isoLangCode: NSString): NSLocaleLanguageDirection; message 'lineDirectionForLanguage:'; { available in macos , ios , watchos , tvos  }
+    class function localeIdentifierFromWindowsLocaleCode (lcid: cuint32): NSString; message 'localeIdentifierFromWindowsLocaleCode:'; { available in macos 10.6, ios 4.0, watchos 2.0, tvos 9.0 }
+    class function windowsLocaleCodeFromLocaleIdentifier (localeIdentifier: NSString): cuint32; message 'windowsLocaleCodeFromLocaleIdentifier:'; { available in macos 10.6, ios 4.0, watchos 2.0, tvos 9.0 }
+    class function characterDirectionForLanguage (isoLangCode: NSString): NSLocaleLanguageDirection; message 'characterDirectionForLanguage:'; { available in macos 10.6, ios 4.0, watchos 2.0, tvos 9.0 }
+    class function lineDirectionForLanguage (isoLangCode: NSString): NSLocaleLanguageDirection; message 'lineDirectionForLanguage:'; { available in macos 10.6, ios 4.0, watchos 2.0, tvos 9.0 }
   end;
 {$endif}
 
 {$ifdef EXTERNAL_SYMBOLS}
 var
-  NSCurrentLocaleDidChangeNotification: NSNotificationName { available in macos , ios , watchos , tvos  }; cvar; external;
+  NSCurrentLocaleDidChangeNotification: NSNotificationName { available in macos 10.5, ios 2.0, watchos 2.0, tvos 9.0 }; cvar; external;
   NSLocaleIdentifier: NSLocaleKey; cvar; external;
   NSLocaleLanguageCode: NSLocaleKey; cvar; external;
   NSLocaleCountryCode: NSLocaleKey; cvar; external;
@@ -121,11 +121,11 @@ var
   NSLocaleGroupingSeparator: NSLocaleKey; cvar; external;
   NSLocaleCurrencySymbol: NSLocaleKey; cvar; external;
   NSLocaleCurrencyCode: NSLocaleKey; cvar; external;
-  NSLocaleCollatorIdentifier: NSLocaleKey { available in macos , ios , watchos , tvos  }; cvar; external;
-  NSLocaleQuotationBeginDelimiterKey: NSLocaleKey { available in macos , ios , watchos , tvos  }; cvar; external;
-  NSLocaleQuotationEndDelimiterKey: NSLocaleKey { available in macos , ios , watchos , tvos  }; cvar; external;
-  NSLocaleAlternateQuotationBeginDelimiterKey: NSLocaleKey { available in macos , ios , watchos , tvos  }; cvar; external;
-  NSLocaleAlternateQuotationEndDelimiterKey: NSLocaleKey { available in macos , ios , watchos , tvos  }; cvar; external;
+  NSLocaleCollatorIdentifier: NSLocaleKey { available in macos 10.6, ios 4.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  NSLocaleQuotationBeginDelimiterKey: NSLocaleKey { available in macos 10.6, ios 4.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  NSLocaleQuotationEndDelimiterKey: NSLocaleKey { available in macos 10.6, ios 4.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  NSLocaleAlternateQuotationBeginDelimiterKey: NSLocaleKey { available in macos 10.6, ios 4.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  NSLocaleAlternateQuotationEndDelimiterKey: NSLocaleKey { available in macos 10.6, ios 4.0, watchos 2.0, tvos 9.0 }; cvar; external;
 {$endif}
 
 {$ifdef EXTERNAL_SYMBOLS}

@@ -39,8 +39,8 @@ type
     function lineDashPhase: CGFloat; message 'lineDashPhase';
     procedure setLineDashPattern(newValue: NSArray); message 'setLineDashPattern:';
     function lineDashPattern: NSArray; message 'lineDashPattern';
-    procedure setShouldRasterize(newValue: objcbool); message 'setShouldRasterize:'; { unavailable in watchos }
-    function shouldRasterize: objcbool; message 'shouldRasterize'; { unavailable in watchos }
+    procedure setShouldRasterize(newValue: objcbool); message 'setShouldRasterize:'; { unavailable in watchos } { available in ios 13.0, tvos 13.0, macos 10.15 }
+    function shouldRasterize: objcbool; message 'shouldRasterize'; { unavailable in watchos } { available in ios 13.0, tvos 13.0, macos 10.15 }
     procedure createPath; message 'createPath';
     procedure setPath(newValue: CGPathRef); message 'setPath:';
     function path: CGPathRef; message 'path';

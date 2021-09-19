@@ -14,9 +14,9 @@ type
 
 {$ifdef EXTERNAL_SYMBOLS}
 var
-  SCNPhysicsTestCollisionBitMaskKey: SCNPhysicsTestOption { available in macos  }; cvar; external;
-  SCNPhysicsTestSearchModeKey: SCNPhysicsTestOption { available in macos  }; cvar; external;
-  SCNPhysicsTestBackfaceCullingKey: SCNPhysicsTestOption { available in macos  }; cvar; external;
+  SCNPhysicsTestCollisionBitMaskKey: SCNPhysicsTestOption { available in macos 10.10 }; cvar; external;
+  SCNPhysicsTestSearchModeKey: SCNPhysicsTestOption { available in macos 10.10 }; cvar; external;
+  SCNPhysicsTestBackfaceCullingKey: SCNPhysicsTestOption { available in macos 10.10 }; cvar; external;
 {$endif}
 
 {$ifdef TYPES}
@@ -27,9 +27,9 @@ type
 
 {$ifdef EXTERNAL_SYMBOLS}
 var
-  SCNPhysicsTestSearchModeAny: SCNPhysicsTestSearchMode { available in macos  }; cvar; external;
-  SCNPhysicsTestSearchModeClosest: SCNPhysicsTestSearchMode { available in macos  }; cvar; external;
-  SCNPhysicsTestSearchModeAll: SCNPhysicsTestSearchMode { available in macos  }; cvar; external;
+  SCNPhysicsTestSearchModeAny: SCNPhysicsTestSearchMode { available in macos 10.10 }; cvar; external;
+  SCNPhysicsTestSearchModeClosest: SCNPhysicsTestSearchMode { available in macos 10.10 }; cvar; external;
+  SCNPhysicsTestSearchModeAll: SCNPhysicsTestSearchMode { available in macos 10.10 }; cvar; external;
 {$endif}
 
 {$ifdef PROTOCOLS}

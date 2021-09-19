@@ -40,7 +40,7 @@ type
     function remoteObjectProxy: id; message 'remoteObjectProxy';
     function remoteObjectProxyWithErrorHandler (handler: NSXPCConnectionRemoteObjectProxyWithErrorHandlerCallback): id; message 'remoteObjectProxyWithErrorHandler:';
   optional
-    function synchronousRemoteObjectProxyWithErrorHandler (handler: NSXPCConnectionSynchronousRemoteObjectProxyWithErrorHandlerCallback): id; message 'synchronousRemoteObjectProxyWithErrorHandler:'; { available in macos , ios , watchos , tvos  }
+    function synchronousRemoteObjectProxyWithErrorHandler (handler: NSXPCConnectionSynchronousRemoteObjectProxyWithErrorHandlerCallback): id; message 'synchronousRemoteObjectProxyWithErrorHandler:'; { available in macos 10.11, ios 9.0, watchos 2.0, tvos 9.0 }
   end;
 {$endif}
 
@@ -71,7 +71,7 @@ type
     function remoteObjectInterface: NSXPCInterface; message 'remoteObjectInterface';
     function remoteObjectProxy: id; message 'remoteObjectProxy';
     function remoteObjectProxyWithErrorHandler (handler: NSXPCConnectionRemoteObjectProxyWithErrorHandlerCallback): id; message 'remoteObjectProxyWithErrorHandler:';
-    function synchronousRemoteObjectProxyWithErrorHandler (handler: NSXPCConnectionSynchronousRemoteObjectProxyWithErrorHandlerCallback): id; message 'synchronousRemoteObjectProxyWithErrorHandler:'; { available in macos , ios , watchos , tvos  }
+    function synchronousRemoteObjectProxyWithErrorHandler (handler: NSXPCConnectionSynchronousRemoteObjectProxyWithErrorHandlerCallback): id; message 'synchronousRemoteObjectProxyWithErrorHandler:'; { available in macos 10.11, ios 9.0, watchos 2.0, tvos 9.0 }
     procedure setInterruptionHandler(newValue: NSXPCConnectionInterruptionHandlerCallback); message 'setInterruptionHandler:';
     function interruptionHandler: NSXPCConnectionInterruptionHandlerCallback; message 'interruptionHandler';
     procedure setInvalidationHandler(newValue: NSXPCConnectionInvalidationHandlerCallback); message 'setInvalidationHandler:';
@@ -83,8 +83,8 @@ type
     function processIdentifier: pid_t; message 'processIdentifier';
     function effectiveUserIdentifier: uid_t; message 'effectiveUserIdentifier';
     function effectiveGroupIdentifier: gid_t; message 'effectiveGroupIdentifier';
-    class function currentConnection: NSXPCConnection; message 'currentConnection'; { available in macos , ios , watchos , tvos  }
-    procedure scheduleSendBarrierBlock (block: NSXPCConnectionScheduleSendBarrierBlockCallback); message 'scheduleSendBarrierBlock:'; { available in macos , ios , watchos , tvos  }
+    class function currentConnection: NSXPCConnection; message 'currentConnection'; { available in macos 10.8, ios 6.0, watchos 2.0, tvos 9.0 }
+    procedure scheduleSendBarrierBlock (block: NSXPCConnectionScheduleSendBarrierBlockCallback); message 'scheduleSendBarrierBlock:'; { available in macos 10.15, ios 13.0, watchos 6.0, tvos 13.0 }
   end;
 
 type
@@ -128,8 +128,8 @@ type
     procedure setInterface_forSelector_argumentIndex_ofReply (ifc: NSXPCInterface; sel_: SEL; arg: NSUInteger; ofReply: objcbool); message 'setInterface:forSelector:argumentIndex:ofReply:';
     function interfaceForSelector_argumentIndex_ofReply (sel_: SEL; arg: NSUInteger; ofReply: objcbool): NSXPCInterface; message 'interfaceForSelector:argumentIndex:ofReply:';
     {$if defined(__NULL_MACRO__)}
-    procedure setXPCType_forSelector_argumentIndex_ofReply (type_: xpc_type_t; sel_: SEL; arg: NSUInteger; ofReply: objcbool); message 'setXPCType:forSelector:argumentIndex:ofReply:'; { available in macos , ios , watchos , tvos  }
-    function XPCTypeForSelector_argumentIndex_ofReply (sel_: SEL; arg: NSUInteger; ofReply: objcbool): xpc_type_t; message 'XPCTypeForSelector:argumentIndex:ofReply:'; { available in macos , ios , watchos , tvos  }
+    procedure setXPCType_forSelector_argumentIndex_ofReply (type_: xpc_type_t; sel_: SEL; arg: NSUInteger; ofReply: objcbool); message 'setXPCType:forSelector:argumentIndex:ofReply:'; { available in macos 10.15, ios 13.0, watchos 6.0, tvos 13.0 }
+    function XPCTypeForSelector_argumentIndex_ofReply (sel_: SEL; arg: NSUInteger; ofReply: objcbool): xpc_type_t; message 'XPCTypeForSelector:argumentIndex:ofReply:'; { available in macos 10.15, ios 13.0, watchos 6.0, tvos 13.0 }
     {$endif}
   end;
 
@@ -152,11 +152,11 @@ type
   public
     {$if defined(__NULL_MACRO__)}
     procedure encodeXPCObject_forKey (xpcObject: xpc_object_t; key: NSString); message 'encodeXPCObject:forKey:';
-    function decodeXPCObjectOfType_forKey (type_: xpc_type_t; key: NSString): xpc_object_t; message 'decodeXPCObjectOfType:forKey:'; { available in macos , ios , watchos , tvos  }
+    function decodeXPCObjectOfType_forKey (type_: xpc_type_t; key: NSString): xpc_object_t; message 'decodeXPCObjectOfType:forKey:'; { available in macos 10.9, ios 7.0, watchos 2.0, tvos 9.0 }
     {$endif}
     procedure setUserInfo(newValue: NSObjectProtocol); message 'setUserInfo:';
     function userInfo: NSObjectProtocol; message 'userInfo';
-    function connection: NSXPCConnection; message 'connection'; { available in macosx , ios , watchos , tvos  }
+    function connection: NSXPCConnection; message 'connection'; { available in macosx 10.12, ios 10.0, watchos 3.0, tvos 10.0 }
   end;
 {$endif}
 

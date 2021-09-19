@@ -14,22 +14,22 @@ type
 
 {$ifdef EXTERNAL_SYMBOLS}
 var
-  SCNParticlePropertyPosition: SCNParticleProperty { available in macos  }; cvar; external;
-  SCNParticlePropertyAngle: SCNParticleProperty { available in macos  }; cvar; external;
-  SCNParticlePropertyRotationAxis: SCNParticleProperty { available in macos  }; cvar; external;
-  SCNParticlePropertyVelocity: SCNParticleProperty { available in macos  }; cvar; external;
-  SCNParticlePropertyAngularVelocity: SCNParticleProperty { available in macos  }; cvar; external;
-  SCNParticlePropertyLife: SCNParticleProperty { available in macos  }; cvar; external;
-  SCNParticlePropertyColor: SCNParticleProperty { available in macos  }; cvar; external;
-  SCNParticlePropertyOpacity: SCNParticleProperty { available in macos  }; cvar; external;
-  SCNParticlePropertySize: SCNParticleProperty { available in macos  }; cvar; external;
-  SCNParticlePropertyFrame: SCNParticleProperty { available in macos  }; cvar; external;
-  SCNParticlePropertyFrameRate: SCNParticleProperty { available in macos  }; cvar; external;
-  SCNParticlePropertyBounce: SCNParticleProperty { available in macos  }; cvar; external;
-  SCNParticlePropertyCharge: SCNParticleProperty { available in macos  }; cvar; external;
-  SCNParticlePropertyFriction: SCNParticleProperty { available in macos  }; cvar; external;
-  SCNParticlePropertyContactPoint: SCNParticleProperty { available in macos  }; cvar; external;
-  SCNParticlePropertyContactNormal: SCNParticleProperty { available in macos  }; cvar; external;
+  SCNParticlePropertyPosition: SCNParticleProperty { available in macos 10.10 }; cvar; external;
+  SCNParticlePropertyAngle: SCNParticleProperty { available in macos 10.10 }; cvar; external;
+  SCNParticlePropertyRotationAxis: SCNParticleProperty { available in macos 10.10 }; cvar; external;
+  SCNParticlePropertyVelocity: SCNParticleProperty { available in macos 10.10 }; cvar; external;
+  SCNParticlePropertyAngularVelocity: SCNParticleProperty { available in macos 10.10 }; cvar; external;
+  SCNParticlePropertyLife: SCNParticleProperty { available in macos 10.10 }; cvar; external;
+  SCNParticlePropertyColor: SCNParticleProperty { available in macos 10.10 }; cvar; external;
+  SCNParticlePropertyOpacity: SCNParticleProperty { available in macos 10.10 }; cvar; external;
+  SCNParticlePropertySize: SCNParticleProperty { available in macos 10.10 }; cvar; external;
+  SCNParticlePropertyFrame: SCNParticleProperty { available in macos 10.10 }; cvar; external;
+  SCNParticlePropertyFrameRate: SCNParticleProperty { available in macos 10.10 }; cvar; external;
+  SCNParticlePropertyBounce: SCNParticleProperty { available in macos 10.10 }; cvar; external;
+  SCNParticlePropertyCharge: SCNParticleProperty { available in macos 10.10 }; cvar; external;
+  SCNParticlePropertyFriction: SCNParticleProperty { available in macos 10.10 }; cvar; external;
+  SCNParticlePropertyContactPoint: SCNParticleProperty { available in macos 10.10 }; cvar; external;
+  SCNParticlePropertyContactNormal: SCNParticleProperty { available in macos 10.10 }; cvar; external;
 {$endif}
 
 {$ifdef TYPES}
@@ -181,8 +181,8 @@ type
     function spreadingAngle: CGFloat; message 'spreadingAngle';
     procedure setEmittingDirection(newValue: SCNVector3); message 'setEmittingDirection:';
     function emittingDirection: SCNVector3; message 'emittingDirection';
-    procedure setOrientationDirection(newValue: SCNVector3); message 'setOrientationDirection:'; { available in macos , ios , tvos , watchos  }
-    function orientationDirection: SCNVector3; message 'orientationDirection'; { available in macos , ios , tvos , watchos  }
+    procedure setOrientationDirection(newValue: SCNVector3); message 'setOrientationDirection:'; { available in macos 10.13, ios 11.0, tvos 11.0, watchos 4.0 }
+    function orientationDirection: SCNVector3; message 'orientationDirection'; { available in macos 10.13, ios 11.0, tvos 11.0, watchos 4.0 }
     procedure setAcceleration(newValue: SCNVector3); message 'setAcceleration:';
     function acceleration: SCNVector3; message 'acceleration';
     procedure setLocal(newValue: objcbool); message 'setLocal:';
@@ -233,10 +233,10 @@ type
     function particleSize: CGFloat; message 'particleSize';
     procedure setParticleSizeVariation(newValue: CGFloat); message 'setParticleSizeVariation:';
     function particleSizeVariation: CGFloat; message 'particleSizeVariation';
-    procedure setParticleIntensity(newValue: CGFloat); message 'setParticleIntensity:'; { available in macos , ios , tvos , watchos  }
-    function particleIntensity: CGFloat; message 'particleIntensity'; { available in macos , ios , tvos , watchos  }
-    procedure setParticleIntensityVariation(newValue: CGFloat); message 'setParticleIntensityVariation:'; { available in macos , ios , tvos , watchos  }
-    function particleIntensityVariation: CGFloat; message 'particleIntensityVariation'; { available in macos , ios , tvos , watchos  }
+    procedure setParticleIntensity(newValue: CGFloat); message 'setParticleIntensity:'; { available in macos 10.13, ios 11.0, tvos 11.0, watchos 4.0 }
+    function particleIntensity: CGFloat; message 'particleIntensity'; { available in macos 10.13, ios 11.0, tvos 11.0, watchos 4.0 }
+    procedure setParticleIntensityVariation(newValue: CGFloat); message 'setParticleIntensityVariation:'; { available in macos 10.13, ios 11.0, tvos 11.0, watchos 4.0 }
+    function particleIntensityVariation: CGFloat; message 'particleIntensityVariation'; { available in macos 10.13, ios 11.0, tvos 11.0, watchos 4.0 }
     procedure setBlendMode(newValue: SCNParticleBlendMode); message 'setBlendMode:';
     function blendMode: SCNParticleBlendMode; message 'blendMode';
     procedure setBlackPassEnabled(newValue: objcbool); message 'setBlackPassEnabled:';
@@ -289,10 +289,10 @@ type
 
     { Adopted protocols }
     procedure addAnimation_forKey (animation: SCNAnimationProtocol; key: NSString); message 'addAnimation:forKey:';
-    procedure addAnimationPlayer_forKey (player: SCNAnimationPlayer; key: NSString); message 'addAnimationPlayer:forKey:'; { available in macos , ios , tvos , watchos  }
+    procedure addAnimationPlayer_forKey (player: SCNAnimationPlayer; key: NSString); message 'addAnimationPlayer:forKey:'; { available in macos 10.13, ios 11.0, tvos 11.0, watchos 4.0 }
     function animationForKey (key: NSString): CAAnimationPtr; message 'animationForKey:'; deprecated 'replace with -animationPlayerForKey:';
     function animationKeys: NSArray; message 'animationKeys';
-    function animationPlayerForKey (key: NSString): SCNAnimationPlayer; message 'animationPlayerForKey:'; { available in macos , ios , tvos , watchos  }
+    function animationPlayerForKey (key: NSString): SCNAnimationPlayer; message 'animationPlayerForKey:'; { available in macos 10.13, ios 11.0, tvos 11.0, watchos 4.0 }
     function copyWithZone (zone: NSZonePtr): id; message 'copyWithZone:';
     procedure encodeWithCoder (coder: NSCoder); message 'encodeWithCoder:';
     function initWithCoder (coder: NSCoder): id; message 'initWithCoder:';
@@ -300,7 +300,7 @@ type
     procedure pauseAnimationForKey (key: NSString); message 'pauseAnimationForKey:'; deprecated 'Use -[SCNAnimationPlayer setPaused:] instead';
     procedure removeAllAnimations; message 'removeAllAnimations';
     procedure removeAnimationForKey (key: NSString); message 'removeAnimationForKey:';
-    procedure removeAnimationForKey_blendOutDuration (key: NSString; duration: CGFloat); message 'removeAnimationForKey:blendOutDuration:'; { available in macos , ios , tvos , watchos  }
+    procedure removeAnimationForKey_blendOutDuration (key: NSString; duration: CGFloat); message 'removeAnimationForKey:blendOutDuration:'; { available in macos 10.13, ios 11.0, tvos 11.0, watchos 4.0 }
     procedure removeAnimationForKey_fadeOutDuration (key: NSString; duration: CGFloat); message 'removeAnimationForKey:fadeOutDuration:'; deprecated 'replace with -removeAnimationForKey:blendOutDuration:';
     procedure resumeAnimationForKey (key: NSString); message 'resumeAnimationForKey:'; deprecated 'Use -[SCNAnimationPlayer setPaused:] instead';
     procedure setSpeed_forAnimationKey (speed: CGFloat; key: NSString); message 'setSpeed:forAnimationKey:'; deprecated 'Use -[SCNAnimationPlayer setSpeed:] instead';
@@ -310,18 +310,18 @@ type
 
 type
   SCNNode_SCNParticleSystemSupport = objccategory external name 'SCNParticleSystemSupport' (SCNNode)
-    procedure addParticleSystem (system: SCNParticleSystem); message 'addParticleSystem:'; { available in macos  }
-    procedure removeAllParticleSystems; message 'removeAllParticleSystems'; { available in macos  }
-    procedure removeParticleSystem (system: SCNParticleSystem); message 'removeParticleSystem:'; { available in macos  }
-    function particleSystems: NSArray; message 'particleSystems'; { available in macos  }
+    procedure addParticleSystem (system: SCNParticleSystem); message 'addParticleSystem:'; { available in macos 10.10 }
+    procedure removeAllParticleSystems; message 'removeAllParticleSystems'; { available in macos 10.10 }
+    procedure removeParticleSystem (system: SCNParticleSystem); message 'removeParticleSystem:'; { available in macos 10.10 }
+    function particleSystems: NSArray; message 'particleSystems'; { available in macos 10.10 }
   end;
 
 type
   SCNParticleSystemSupport = objccategory external (SCNScene)
-    procedure addParticleSystem_withTransform (system: SCNParticleSystem; transform: SCNMatrix4); message 'addParticleSystem:withTransform:'; { available in macos  }
-    procedure removeAllParticleSystems; message 'removeAllParticleSystems'; { available in macos  }
-    procedure removeParticleSystem (system: SCNParticleSystem); message 'removeParticleSystem:'; { available in macos  }
-    function particleSystems: NSArray; message 'particleSystems'; { available in macos  }
+    procedure addParticleSystem_withTransform (system: SCNParticleSystem; transform: SCNMatrix4); message 'addParticleSystem:withTransform:'; { available in macos 10.10 }
+    procedure removeAllParticleSystems; message 'removeAllParticleSystems'; { available in macos 10.10 }
+    procedure removeParticleSystem (system: SCNParticleSystem); message 'removeParticleSystem:'; { available in macos 10.10 }
+    function particleSystems: NSArray; message 'particleSystems'; { available in macos 10.10 }
   end;
 {$endif}
 

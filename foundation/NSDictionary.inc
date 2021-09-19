@@ -48,16 +48,16 @@ type
     function isEqualToDictionary (otherDictionary: NSDictionary): objcbool; message 'isEqualToDictionary:';
     function objectEnumerator: NSEnumerator; message 'objectEnumerator';
     function objectsForKeys_notFoundMarker (keys: NSArray; marker: id): NSArray; message 'objectsForKeys:notFoundMarker:';
-    function writeToURL_error (url: NSURL; error: NSErrorPtr): objcbool; message 'writeToURL:error:'; { available in macos , ios , watchos , tvos  }
+    function writeToURL_error (url: NSURL; error: NSErrorPtr): objcbool; message 'writeToURL:error:'; { available in macos 10.13, ios 11.0, watchos 4.0, tvos 11.0 }
     function keysSortedByValueUsingSelector (comparator: SEL): NSArray; message 'keysSortedByValueUsingSelector:';
-    procedure getObjects_andKeys_count (objects: id { variable size array of id }; keys: id { variable size array of id }; count_: NSUInteger); message 'getObjects:andKeys:count:'; { available in macos , ios , watchos , tvos  }
-    function objectForKeyedSubscript (key: id): id; message 'objectForKeyedSubscript:'; { available in macos , ios , watchos , tvos  }
-    procedure enumerateKeysAndObjectsUsingBlock (block: NSDictionaryEnumerateKeysAndObjectsUsingBlockCallback); message 'enumerateKeysAndObjectsUsingBlock:'; { available in macos , ios , watchos , tvos  }
-    procedure enumerateKeysAndObjectsWithOptions_usingBlock (opts: NSEnumerationOptions; block: NSDictionaryEnumerateKeysAndObjectsWithOptionsCallback); message 'enumerateKeysAndObjectsWithOptions:usingBlock:'; { available in macos , ios , watchos , tvos  }
-    function keysSortedByValueUsingComparator (cmptr: NSComparator): NSArray; message 'keysSortedByValueUsingComparator:'; { available in macos , ios , watchos , tvos  }
-    function keysSortedByValueWithOptions_usingComparator (opts: NSSortOptions; cmptr: NSComparator): NSArray; message 'keysSortedByValueWithOptions:usingComparator:'; { available in macos , ios , watchos , tvos  }
-    function keysOfEntriesPassingTest (predicate: NSDictionaryKeysOfEntriesPassingTestCallback): NSSet; message 'keysOfEntriesPassingTest:'; { available in macos , ios , watchos , tvos  }
-    function keysOfEntriesWithOptions_passingTest (opts: NSEnumerationOptions; predicate: NSDictionaryKeysOfEntriesWithOptionsCallback): NSSet; message 'keysOfEntriesWithOptions:passingTest:'; { available in macos , ios , watchos , tvos  }
+    procedure getObjects_andKeys_count (objects: id { variable size array of id }; keys: id { variable size array of id }; count_: NSUInteger); message 'getObjects:andKeys:count:'; { available in macos 10.7, ios 5.0, watchos 2.0, tvos 9.0 }
+    function objectForKeyedSubscript (key: id): id; message 'objectForKeyedSubscript:'; { available in macos 10.8, ios 6.0, watchos 2.0, tvos 9.0 }
+    procedure enumerateKeysAndObjectsUsingBlock (block: NSDictionaryEnumerateKeysAndObjectsUsingBlockCallback); message 'enumerateKeysAndObjectsUsingBlock:'; { available in macos 10.6, ios 4.0, watchos 2.0, tvos 9.0 }
+    procedure enumerateKeysAndObjectsWithOptions_usingBlock (opts: NSEnumerationOptions; block: NSDictionaryEnumerateKeysAndObjectsWithOptionsCallback); message 'enumerateKeysAndObjectsWithOptions:usingBlock:'; { available in macos 10.6, ios 4.0, watchos 2.0, tvos 9.0 }
+    function keysSortedByValueUsingComparator (cmptr: NSComparator): NSArray; message 'keysSortedByValueUsingComparator:'; { available in macos 10.6, ios 4.0, watchos 2.0, tvos 9.0 }
+    function keysSortedByValueWithOptions_usingComparator (opts: NSSortOptions; cmptr: NSComparator): NSArray; message 'keysSortedByValueWithOptions:usingComparator:'; { available in macos 10.6, ios 4.0, watchos 2.0, tvos 9.0 }
+    function keysOfEntriesPassingTest (predicate: NSDictionaryKeysOfEntriesPassingTestCallback): NSSet; message 'keysOfEntriesPassingTest:'; { available in macos 10.6, ios 4.0, watchos 2.0, tvos 9.0 }
+    function keysOfEntriesWithOptions_passingTest (opts: NSEnumerationOptions; predicate: NSDictionaryKeysOfEntriesWithOptionsCallback): NSSet; message 'keysOfEntriesWithOptions:passingTest:'; { available in macos 10.6, ios 4.0, watchos 2.0, tvos 9.0 }
   end;
 
 type
@@ -83,8 +83,8 @@ type
     function initWithDictionary (otherDictionary: NSDictionary): id; message 'initWithDictionary:';
     function initWithDictionary_copyItems (otherDictionary: NSDictionary; flag: objcbool): id; message 'initWithDictionary:copyItems:';
     function initWithObjects_forKeys (objects: NSArray; keys: NSArray): id; message 'initWithObjects:forKeys:';
-    function initWithContentsOfURL_error (url: NSURL; error: NSErrorPtr): NSDictionary; message 'initWithContentsOfURL:error:'; { available in macos , ios , watchos , tvos  }
-    class function dictionaryWithContentsOfURL_error (url: NSURL; error: NSErrorPtr): NSDictionary; message 'dictionaryWithContentsOfURL:error:'; { available in macos , ios , watchos , tvos  }
+    function initWithContentsOfURL_error (url: NSURL; error: NSErrorPtr): NSDictionary; message 'initWithContentsOfURL:error:'; { available in macos 10.13, ios 11.0, watchos 4.0, tvos 11.0 }
+    class function dictionaryWithContentsOfURL_error (url: NSURL; error: NSErrorPtr): NSDictionary; message 'dictionaryWithContentsOfURL:error:'; { available in macos 10.13, ios 11.0, watchos 4.0, tvos 11.0 }
   end;
 
 
@@ -105,7 +105,7 @@ type
     procedure removeAllObjects; message 'removeAllObjects';
     procedure removeObjectsForKeys (keyArray: NSArray); message 'removeObjectsForKeys:';
     procedure setDictionary (otherDictionary: NSDictionary); message 'setDictionary:';
-    procedure setObject_forKeyedSubscript (obj: id; key: id); message 'setObject:forKeyedSubscript:'; { available in macos , ios , watchos , tvos  }
+    procedure setObject_forKeyedSubscript (obj: id; key: id); message 'setObject:forKeyedSubscript:'; { available in macos 10.8, ios 6.0, watchos 2.0, tvos 9.0 }
   end;
 
 type
@@ -119,12 +119,12 @@ type
 
 type
   NSDictionary_NSSharedKeySetDictionary = objccategory external name 'NSSharedKeySetDictionary' (NSDictionary)
-    class function sharedKeySetForKeys (keys: NSArray): id; message 'sharedKeySetForKeys:'; { available in macos , ios , watchos , tvos  }
+    class function sharedKeySetForKeys (keys: NSArray): id; message 'sharedKeySetForKeys:'; { available in macos 10.8, ios 6.0, watchos 2.0, tvos 9.0 }
   end;
 
 type
   NSSharedKeySetDictionary = objccategory external (NSMutableDictionary)
-    class function dictionaryWithSharedKeySet (keyset: id): NSMutableDictionary; message 'dictionaryWithSharedKeySet:'; { available in macos , ios , watchos , tvos  }
+    class function dictionaryWithSharedKeySet (keyset: id): NSMutableDictionary; message 'dictionaryWithSharedKeySet:'; { available in macos 10.8, ios 6.0, watchos 2.0, tvos 9.0 }
   end;
 
 type

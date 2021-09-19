@@ -29,9 +29,9 @@ type
 
 const
   NSLineBreakStrategyNone = 0;
-  NSLineBreakStrategyPushOut = 1 shl 0 { available in macos , ios  };
-  NSLineBreakStrategyHangulWordPriority = 1 shl 1 { available in macos , ios  };
-  NSLineBreakStrategyStandard = $FFFF { available in macos , ios  };
+  NSLineBreakStrategyPushOut = 1 shl 0 { available in macos 10.11, ios 9.0 };
+  NSLineBreakStrategyHangulWordPriority = 1 shl 1 { available in macos 11.0, ios 14.0 };
+  NSLineBreakStrategyStandard = $FFFF { available in macos 11.0, ios 14.0 };
 
 type
   NSTextTabOptionKey = NSString;
@@ -40,7 +40,7 @@ type
 
 {$ifdef EXTERNAL_SYMBOLS}
 var
-  NSTabColumnTerminatorsAttributeName: NSTextTabOptionKey { available in macos , ios , watchos , tvos  }; cvar; external;
+  NSTabColumnTerminatorsAttributeName: NSTextTabOptionKey { available in macos 10.0, ios 7.0, watchos 2.0, tvos 9.0 }; cvar; external;
 {$endif}
 
 {$ifdef CLASSES}
@@ -48,7 +48,7 @@ var
 type
   NSTextTab = objcclass external (NSObject, NSCopyingProtocol, NSCodingProtocol, NSSecureCodingProtocol)
   public
-    class function columnTerminatorsForLocale (aLocale: NSLocale): NSCharacterSet; message 'columnTerminatorsForLocale:'; { available in macos , ios , watchos , tvos  }
+    class function columnTerminatorsForLocale (aLocale: NSLocale): NSCharacterSet; message 'columnTerminatorsForLocale:'; { available in macos 10.11, ios 7.0, watchos 2.0, tvos 9.0 }
     function initWithTextAlignment_location_options (alignment: NSTextAlignment; loc: CGFloat; options: NSDictionary): id; message 'initWithTextAlignment:location:options:'; { NS_DESIGNATED_INITIALIZER }
     function alignment: NSTextAlignment; message 'alignment';
     function location: CGFloat; message 'location';
@@ -79,14 +79,14 @@ type
     function lineHeightMultiple: CGFloat; message 'lineHeightMultiple';
     function paragraphSpacingBefore: CGFloat; message 'paragraphSpacingBefore';
     function hyphenationFactor: single; message 'hyphenationFactor';
-    function tabStops: NSArray; message 'tabStops'; { available in macos , ios , watchos , tvos  }
-    function defaultTabInterval: CGFloat; message 'defaultTabInterval'; { available in macos , ios , watchos , tvos  }
-    function allowsDefaultTighteningForTruncation: objcbool; message 'allowsDefaultTighteningForTruncation'; { available in macos , ios , watchos , tvos  }
+    function tabStops: NSArray; message 'tabStops'; { available in macos 10.0, ios 7.0, watchos 2.0, tvos 9.0 }
+    function defaultTabInterval: CGFloat; message 'defaultTabInterval'; { available in macos 10.0, ios 7.0, watchos 2.0, tvos 9.0 }
+    function allowsDefaultTighteningForTruncation: objcbool; message 'allowsDefaultTighteningForTruncation'; { available in macos 10.11, ios 9.0, watchos 2.0, tvos 9.0 }
     function tighteningFactorForTruncation: single; message 'tighteningFactorForTruncation';
     function textBlocks: NSArray; message 'textBlocks';
     function textLists: NSArray; message 'textLists';
     function headerLevel: NSInteger; message 'headerLevel';
-    function lineBreakStrategy: NSLineBreakStrategy; message 'lineBreakStrategy'; { available in macos , ios  }
+    function lineBreakStrategy: NSLineBreakStrategy; message 'lineBreakStrategy'; { available in macos 10.11, ios 9.0 }
 
     { Adopted protocols }
     function copyWithZone (zone: NSZonePtr): id; message 'copyWithZone:';
@@ -125,15 +125,15 @@ type
     function paragraphSpacingBefore: CGFloat; message 'paragraphSpacingBefore';
     procedure setHyphenationFactor(newValue: single); message 'setHyphenationFactor:';
     function hyphenationFactor: single; message 'hyphenationFactor';
-    procedure setTabStops(newValue: NSArray); message 'setTabStops:'; { available in macos , ios , watchos , tvos  }
-    function tabStops: NSArray; message 'tabStops'; { available in macos , ios , watchos , tvos  }
-    procedure setDefaultTabInterval(newValue: CGFloat); message 'setDefaultTabInterval:'; { available in macos , ios , watchos , tvos  }
-    function defaultTabInterval: CGFloat; message 'defaultTabInterval'; { available in macos , ios , watchos , tvos  }
-    procedure setAllowsDefaultTighteningForTruncation(newValue: objcbool); message 'setAllowsDefaultTighteningForTruncation:'; { available in macos , ios , watchos , tvos  }
-    function allowsDefaultTighteningForTruncation: objcbool; message 'allowsDefaultTighteningForTruncation'; { available in macos , ios , watchos , tvos  }
-    procedure addTabStop (anObject: NSTextTab); message 'addTabStop:'; { available in macos , ios , watchos , tvos  }
-    procedure removeTabStop (anObject: NSTextTab); message 'removeTabStop:'; { available in macos , ios , watchos , tvos  }
-    procedure setParagraphStyle (obj: NSParagraphStyle); message 'setParagraphStyle:'; { available in macos , ios , watchos , tvos  }
+    procedure setTabStops(newValue: NSArray); message 'setTabStops:'; { available in macos 10.0, ios 7.0, watchos 2.0, tvos 9.0 }
+    function tabStops: NSArray; message 'tabStops'; { available in macos 10.0, ios 7.0, watchos 2.0, tvos 9.0 }
+    procedure setDefaultTabInterval(newValue: CGFloat); message 'setDefaultTabInterval:'; { available in macos 10.0, ios 7.0, watchos 2.0, tvos 9.0 }
+    function defaultTabInterval: CGFloat; message 'defaultTabInterval'; { available in macos 10.0, ios 7.0, watchos 2.0, tvos 9.0 }
+    procedure setAllowsDefaultTighteningForTruncation(newValue: objcbool); message 'setAllowsDefaultTighteningForTruncation:'; { available in macos 10.11, ios 9.0, watchos 2.0, tvos 9.0 }
+    function allowsDefaultTighteningForTruncation: objcbool; message 'allowsDefaultTighteningForTruncation'; { available in macos 10.11, ios 9.0, watchos 2.0, tvos 9.0 }
+    procedure addTabStop (anObject: NSTextTab); message 'addTabStop:'; { available in macos 10.0, ios 9.0, watchos 2.0, tvos 9.0 }
+    procedure removeTabStop (anObject: NSTextTab); message 'removeTabStop:'; { available in macos 10.0, ios 9.0, watchos 2.0, tvos 9.0 }
+    procedure setParagraphStyle (obj: NSParagraphStyle); message 'setParagraphStyle:'; { available in macos 10.0, ios 9.0, watchos 2.0, tvos 9.0 }
     procedure setTighteningFactorForTruncation(newValue: single); message 'setTighteningFactorForTruncation:';
     function tighteningFactorForTruncation: single; message 'tighteningFactorForTruncation';
     procedure setTextBlocks(newValue: NSArray); message 'setTextBlocks:';
@@ -142,8 +142,8 @@ type
     function textLists: NSArray; message 'textLists';
     procedure setHeaderLevel(newValue: NSInteger); message 'setHeaderLevel:';
     function headerLevel: NSInteger; message 'headerLevel';
-    procedure setLineBreakStrategy(newValue: NSLineBreakStrategy); message 'setLineBreakStrategy:'; { available in macos , ios  }
-    function lineBreakStrategy: NSLineBreakStrategy; message 'lineBreakStrategy'; { available in macos , ios  }
+    procedure setLineBreakStrategy(newValue: NSLineBreakStrategy); message 'setLineBreakStrategy:'; { available in macos 10.11, ios 9.0 }
+    function lineBreakStrategy: NSLineBreakStrategy; message 'lineBreakStrategy'; { available in macos 10.11, ios 9.0 }
   end;
 {$endif}
 

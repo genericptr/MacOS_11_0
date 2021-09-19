@@ -44,17 +44,17 @@ type
     function init: id; message 'init'; { NS_DESIGNATED_INITIALIZER }
     function initWithCoder (coder: NSCoder): id; message 'initWithCoder:'; { NS_DESIGNATED_INITIALIZER }
     class function colorWithColorSpace_components_count (space: NSColorSpace; components: CGFloatPtr; numberOfComponents: NSInteger): NSColor; message 'colorWithColorSpace:components:count:';
-    class function colorWithSRGBRed_green_blue_alpha (red: CGFloat; green: CGFloat; blue: CGFloat; alpha: CGFloat): NSColor; message 'colorWithSRGBRed:green:blue:alpha:'; { available in macos  }
-    class function colorWithGenericGamma22White_alpha (white: CGFloat; alpha: CGFloat): NSColor; message 'colorWithGenericGamma22White:alpha:'; { available in macos  }
-    class function colorWithDisplayP3Red_green_blue_alpha (red: CGFloat; green: CGFloat; blue: CGFloat; alpha: CGFloat): NSColor; message 'colorWithDisplayP3Red:green:blue:alpha:'; { available in macos  }
-    class function colorWithWhite_alpha (white: CGFloat; alpha: CGFloat): NSColor; message 'colorWithWhite:alpha:'; { available in macos  }
-    class function colorWithRed_green_blue_alpha (red: CGFloat; green: CGFloat; blue: CGFloat; alpha: CGFloat): NSColor; message 'colorWithRed:green:blue:alpha:'; { available in macos  }
-    class function colorWithHue_saturation_brightness_alpha (hue: CGFloat; saturation: CGFloat; brightness: CGFloat; alpha: CGFloat): NSColor; message 'colorWithHue:saturation:brightness:alpha:'; { available in macos  }
-    class function colorWithColorSpace_hue_saturation_brightness_alpha (space: NSColorSpace; hue: CGFloat; saturation: CGFloat; brightness: CGFloat; alpha: CGFloat): NSColor; message 'colorWithColorSpace:hue:saturation:brightness:alpha:'; { available in macos  }
+    class function colorWithSRGBRed_green_blue_alpha (red: CGFloat; green: CGFloat; blue: CGFloat; alpha: CGFloat): NSColor; message 'colorWithSRGBRed:green:blue:alpha:'; { available in macos 10.7 }
+    class function colorWithGenericGamma22White_alpha (white: CGFloat; alpha: CGFloat): NSColor; message 'colorWithGenericGamma22White:alpha:'; { available in macos 10.7 }
+    class function colorWithDisplayP3Red_green_blue_alpha (red: CGFloat; green: CGFloat; blue: CGFloat; alpha: CGFloat): NSColor; message 'colorWithDisplayP3Red:green:blue:alpha:'; { available in macos 10.12 }
+    class function colorWithWhite_alpha (white: CGFloat; alpha: CGFloat): NSColor; message 'colorWithWhite:alpha:'; { available in macos 10.9 }
+    class function colorWithRed_green_blue_alpha (red: CGFloat; green: CGFloat; blue: CGFloat; alpha: CGFloat): NSColor; message 'colorWithRed:green:blue:alpha:'; { available in macos 10.9 }
+    class function colorWithHue_saturation_brightness_alpha (hue: CGFloat; saturation: CGFloat; brightness: CGFloat; alpha: CGFloat): NSColor; message 'colorWithHue:saturation:brightness:alpha:'; { available in macos 10.9 }
+    class function colorWithColorSpace_hue_saturation_brightness_alpha (space: NSColorSpace; hue: CGFloat; saturation: CGFloat; brightness: CGFloat; alpha: CGFloat): NSColor; message 'colorWithColorSpace:hue:saturation:brightness:alpha:'; { available in macos 10.12 }
     class function colorWithCatalogName_colorName (listName: NSColorListName; colorName: NSColorName): NSColor; message 'colorWithCatalogName:colorName:';
-    class function colorNamed_bundle (name: NSColorName; bundle: NSBundle): NSColor; message 'colorNamed:bundle:'; { available in macos  }
-    class function colorNamed (name: NSColorName): NSColor; message 'colorNamed:'; { available in macos  }
-    class function colorWithName_dynamicProvider (colorName: NSColorName; dynamicProvider: NSColorColorWithNameCallback): NSColor; message 'colorWithName:dynamicProvider:'; { available in macos  }
+    class function colorNamed_bundle (name: NSColorName; bundle: NSBundle): NSColor; message 'colorNamed:bundle:'; { available in macos 10.13 }
+    class function colorNamed (name: NSColorName): NSColor; message 'colorNamed:'; { available in macos 10.13 }
+    class function colorWithName_dynamicProvider (colorName: NSColorName; dynamicProvider: NSColorColorWithNameCallback): NSColor; message 'colorWithName:dynamicProvider:'; { available in macos 10.15 }
     class function colorWithDeviceWhite_alpha (white: CGFloat; alpha: CGFloat): NSColor; message 'colorWithDeviceWhite:alpha:';
     class function colorWithDeviceRed_green_blue_alpha (red: CGFloat; green: CGFloat; blue: CGFloat; alpha: CGFloat): NSColor; message 'colorWithDeviceRed:green:blue:alpha:';
     class function colorWithDeviceHue_saturation_brightness_alpha (hue: CGFloat; saturation: CGFloat; brightness: CGFloat; alpha: CGFloat): NSColor; message 'colorWithDeviceHue:saturation:brightness:alpha:';
@@ -63,8 +63,8 @@ type
     class function colorWithCalibratedRed_green_blue_alpha (red: CGFloat; green: CGFloat; blue: CGFloat; alpha: CGFloat): NSColor; message 'colorWithCalibratedRed:green:blue:alpha:';
     class function colorWithCalibratedHue_saturation_brightness_alpha (hue: CGFloat; saturation: CGFloat; brightness: CGFloat; alpha: CGFloat): NSColor; message 'colorWithCalibratedHue:saturation:brightness:alpha:';
     class function colorWithPatternImage (image: NSImage): NSColor; message 'colorWithPatternImage:';
-    function type_: NSColorType; message 'type'; { available in macos  }
-    function colorUsingType (type_: NSColorType): NSColor; message 'colorUsingType:'; { available in macos  }
+    function type_: NSColorType; message 'type'; { available in macos 10.13 }
+    function colorUsingType (type_: NSColorType): NSColor; message 'colorUsingType:'; { available in macos 10.13 }
     function colorUsingColorSpace (space: NSColorSpace): NSColor; message 'colorUsingColorSpace:';
     class function blackColor: NSColor; message 'blackColor';
     class function darkGrayColor: NSColor; message 'darkGrayColor';
@@ -81,57 +81,57 @@ type
     class function purpleColor: NSColor; message 'purpleColor';
     class function brownColor: NSColor; message 'brownColor';
     class function clearColor: NSColor; message 'clearColor';
-    class function labelColor: NSColor; message 'labelColor'; { available in macos  }
-    class function secondaryLabelColor: NSColor; message 'secondaryLabelColor'; { available in macos  }
-    class function tertiaryLabelColor: NSColor; message 'tertiaryLabelColor'; { available in macos  }
-    class function quaternaryLabelColor: NSColor; message 'quaternaryLabelColor'; { available in macos  }
-    class function linkColor: NSColor; message 'linkColor'; { available in macos  }
-    class function placeholderTextColor: NSColor; message 'placeholderTextColor'; { available in macos  }
+    class function labelColor: NSColor; message 'labelColor'; { available in macos 10.10 }
+    class function secondaryLabelColor: NSColor; message 'secondaryLabelColor'; { available in macos 10.10 }
+    class function tertiaryLabelColor: NSColor; message 'tertiaryLabelColor'; { available in macos 10.10 }
+    class function quaternaryLabelColor: NSColor; message 'quaternaryLabelColor'; { available in macos 10.10 }
+    class function linkColor: NSColor; message 'linkColor'; { available in macos 10.10 }
+    class function placeholderTextColor: NSColor; message 'placeholderTextColor'; { available in macos 10.10 }
     class function windowFrameTextColor: NSColor; message 'windowFrameTextColor';
     class function selectedMenuItemTextColor: NSColor; message 'selectedMenuItemTextColor';
     class function alternateSelectedControlTextColor: NSColor; message 'alternateSelectedControlTextColor';
     class function headerTextColor: NSColor; message 'headerTextColor';
-    class function separatorColor: NSColor; message 'separatorColor'; { available in macos  }
+    class function separatorColor: NSColor; message 'separatorColor'; { available in macos 10.14 }
     class function gridColor: NSColor; message 'gridColor';
     class function windowBackgroundColor: NSColor; message 'windowBackgroundColor';
-    class function underPageBackgroundColor: NSColor; message 'underPageBackgroundColor'; { available in macos  }
+    class function underPageBackgroundColor: NSColor; message 'underPageBackgroundColor'; { available in macos 10.8 }
     class function controlBackgroundColor: NSColor; message 'controlBackgroundColor';
-    class function selectedContentBackgroundColor: NSColor; message 'selectedContentBackgroundColor'; { available in macos  }
-    class function unemphasizedSelectedContentBackgroundColor: NSColor; message 'unemphasizedSelectedContentBackgroundColor'; { available in macos  }
-    class function alternatingContentBackgroundColors: NSArray; message 'alternatingContentBackgroundColors'; { available in macos  }
-    class function findHighlightColor: NSColor; message 'findHighlightColor'; { available in macos  }
+    class function selectedContentBackgroundColor: NSColor; message 'selectedContentBackgroundColor'; { available in macos 10.14 }
+    class function unemphasizedSelectedContentBackgroundColor: NSColor; message 'unemphasizedSelectedContentBackgroundColor'; { available in macos 10.14 }
+    class function alternatingContentBackgroundColors: NSArray; message 'alternatingContentBackgroundColors'; { available in macos 10.14 }
+    class function findHighlightColor: NSColor; message 'findHighlightColor'; { available in macos 10.13 }
     class function textColor: NSColor; message 'textColor';
     class function textBackgroundColor: NSColor; message 'textBackgroundColor';
     class function selectedTextColor: NSColor; message 'selectedTextColor';
     class function selectedTextBackgroundColor: NSColor; message 'selectedTextBackgroundColor';
-    class function unemphasizedSelectedTextBackgroundColor: NSColor; message 'unemphasizedSelectedTextBackgroundColor'; { available in macos  }
-    class function unemphasizedSelectedTextColor: NSColor; message 'unemphasizedSelectedTextColor'; { available in macos  }
+    class function unemphasizedSelectedTextBackgroundColor: NSColor; message 'unemphasizedSelectedTextBackgroundColor'; { available in macos 10.14 }
+    class function unemphasizedSelectedTextColor: NSColor; message 'unemphasizedSelectedTextColor'; { available in macos 10.14 }
     class function controlColor: NSColor; message 'controlColor';
     class function controlTextColor: NSColor; message 'controlTextColor';
     class function selectedControlColor: NSColor; message 'selectedControlColor';
     class function selectedControlTextColor: NSColor; message 'selectedControlTextColor';
     class function disabledControlTextColor: NSColor; message 'disabledControlTextColor';
     class function keyboardFocusIndicatorColor: NSColor; message 'keyboardFocusIndicatorColor';
-    class function scrubberTexturedBackgroundColor: NSColor; message 'scrubberTexturedBackgroundColor'; { available in macos  }
-    class function systemRedColor: NSColor; message 'systemRedColor'; { available in macos  }
-    class function systemGreenColor: NSColor; message 'systemGreenColor'; { available in macos  }
-    class function systemBlueColor: NSColor; message 'systemBlueColor'; { available in macos  }
-    class function systemOrangeColor: NSColor; message 'systemOrangeColor'; { available in macos  }
-    class function systemYellowColor: NSColor; message 'systemYellowColor'; { available in macos  }
-    class function systemBrownColor: NSColor; message 'systemBrownColor'; { available in macos  }
-    class function systemPinkColor: NSColor; message 'systemPinkColor'; { available in macos  }
-    class function systemPurpleColor: NSColor; message 'systemPurpleColor'; { available in macos  }
-    class function systemGrayColor: NSColor; message 'systemGrayColor'; { available in macos  }
-    class function systemTealColor: NSColor; message 'systemTealColor'; { available in macos  }
-    class function systemIndigoColor: NSColor; message 'systemIndigoColor'; { available in macos  }
-    class function controlAccentColor: NSColor; message 'controlAccentColor'; { available in macos  }
+    class function scrubberTexturedBackgroundColor: NSColor; message 'scrubberTexturedBackgroundColor'; { available in macos 10.12.2 }
+    class function systemRedColor: NSColor; message 'systemRedColor'; { available in macos 10.10 }
+    class function systemGreenColor: NSColor; message 'systemGreenColor'; { available in macos 10.10 }
+    class function systemBlueColor: NSColor; message 'systemBlueColor'; { available in macos 10.10 }
+    class function systemOrangeColor: NSColor; message 'systemOrangeColor'; { available in macos 10.10 }
+    class function systemYellowColor: NSColor; message 'systemYellowColor'; { available in macos 10.10 }
+    class function systemBrownColor: NSColor; message 'systemBrownColor'; { available in macos 10.10 }
+    class function systemPinkColor: NSColor; message 'systemPinkColor'; { available in macos 10.10 }
+    class function systemPurpleColor: NSColor; message 'systemPurpleColor'; { available in macos 10.10 }
+    class function systemGrayColor: NSColor; message 'systemGrayColor'; { available in macos 10.10 }
+    class function systemTealColor: NSColor; message 'systemTealColor'; { available in macos 10.12 }
+    class function systemIndigoColor: NSColor; message 'systemIndigoColor'; { available in macos 10.15 }
+    class function controlAccentColor: NSColor; message 'controlAccentColor'; { available in macos 10.14 }
     class function currentControlTint: NSControlTint; message 'currentControlTint';
     class function colorForControlTint (controlTint: NSControlTint): NSColor; message 'colorForControlTint:'; deprecated 'NSControlTint does not describe the full range of available control accent colors. Use +[NSColor controlAccentColor] instead.';
     class function highlightColor: NSColor; message 'highlightColor';
     class function shadowColor: NSColor; message 'shadowColor';
     function highlightWithLevel (val: CGFloat): NSColor; message 'highlightWithLevel:';
     function shadowWithLevel (val: CGFloat): NSColor; message 'shadowWithLevel:';
-    function colorWithSystemEffect (systemEffect: NSColorSystemEffect): NSColor; message 'colorWithSystemEffect:'; { available in macos  }
+    function colorWithSystemEffect (systemEffect: NSColorSystemEffect): NSColor; message 'colorWithSystemEffect:'; { available in macos 10.14 }
     procedure set_; message 'set';
     procedure setFill; message 'setFill';
     procedure setStroke; message 'setStroke';
@@ -164,8 +164,8 @@ type
     class function colorFromPasteboard (pasteBoard: NSPasteboard): NSColor; message 'colorFromPasteboard:';
     procedure writeToPasteboard (pasteBoard: NSPasteboard); message 'writeToPasteboard:';
     procedure drawSwatchInRect (rect: NSRect); message 'drawSwatchInRect:';
-    class function colorWithCGColor (cgColor: CGColorRef): NSColor; message 'colorWithCGColor:'; { available in macos  }
-    function CGColor: CGColorRef; message 'CGColor'; { available in macos  }
+    class function colorWithCGColor (cgColor: CGColorRef): NSColor; message 'colorWithCGColor:'; { available in macos 10.8 }
+    function CGColor: CGColorRef; message 'CGColor'; { available in macos 10.8 }
     class procedure setIgnoresAlpha(newValue: objcbool); message 'setIgnoresAlpha:';
     class function ignoresAlpha: objcbool; message 'ignoresAlpha';
 

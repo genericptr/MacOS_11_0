@@ -49,13 +49,13 @@ type
     function isSubsetOfSet (otherSet: NSSet): objcbool; message 'isSubsetOfSet:';
     procedure makeObjectsPerformSelector (aSelector: SEL); message 'makeObjectsPerformSelector:';
     procedure makeObjectsPerformSelector_withObject (aSelector: SEL; argument: id); message 'makeObjectsPerformSelector:withObject:';
-    function setByAddingObject (anObject: id): NSSet; message 'setByAddingObject:'; { available in macos , ios , watchos , tvos  }
-    function setByAddingObjectsFromSet (other: NSSet): NSSet; message 'setByAddingObjectsFromSet:'; { available in macos , ios , watchos , tvos  }
-    function setByAddingObjectsFromArray (other: NSArray): NSSet; message 'setByAddingObjectsFromArray:'; { available in macos , ios , watchos , tvos  }
-    procedure enumerateObjectsUsingBlock (block: NSSetEnumerateObjectsUsingBlockCallback); message 'enumerateObjectsUsingBlock:'; { available in macos , ios , watchos , tvos  }
-    procedure enumerateObjectsWithOptions_usingBlock (opts: NSEnumerationOptions; block: NSSetEnumerateObjectsWithOptionsCallback); message 'enumerateObjectsWithOptions:usingBlock:'; { available in macos , ios , watchos , tvos  }
-    function objectsPassingTest (predicate: NSSetObjectsPassingTestCallback): NSSet; message 'objectsPassingTest:'; { available in macos , ios , watchos , tvos  }
-    function objectsWithOptions_passingTest (opts: NSEnumerationOptions; predicate: NSSetObjectsWithOptionsCallback): NSSet; message 'objectsWithOptions:passingTest:'; { available in macos , ios , watchos , tvos  }
+    function setByAddingObject (anObject: id): NSSet; message 'setByAddingObject:'; { available in macos 10.5, ios 2.0, watchos 2.0, tvos 9.0 }
+    function setByAddingObjectsFromSet (other: NSSet): NSSet; message 'setByAddingObjectsFromSet:'; { available in macos 10.5, ios 2.0, watchos 2.0, tvos 9.0 }
+    function setByAddingObjectsFromArray (other: NSArray): NSSet; message 'setByAddingObjectsFromArray:'; { available in macos 10.5, ios 2.0, watchos 2.0, tvos 9.0 }
+    procedure enumerateObjectsUsingBlock (block: NSSetEnumerateObjectsUsingBlockCallback); message 'enumerateObjectsUsingBlock:'; { available in macos 10.6, ios 4.0, watchos 2.0, tvos 9.0 }
+    procedure enumerateObjectsWithOptions_usingBlock (opts: NSEnumerationOptions; block: NSSetEnumerateObjectsWithOptionsCallback); message 'enumerateObjectsWithOptions:usingBlock:'; { available in macos 10.6, ios 4.0, watchos 2.0, tvos 9.0 }
+    function objectsPassingTest (predicate: NSSetObjectsPassingTestCallback): NSSet; message 'objectsPassingTest:'; { available in macos 10.6, ios 4.0, watchos 2.0, tvos 9.0 }
+    function objectsWithOptions_passingTest (opts: NSEnumerationOptions; predicate: NSSetObjectsWithOptionsCallback): NSSet; message 'objectsWithOptions:passingTest:'; { available in macos 10.6, ios 4.0, watchos 2.0, tvos 9.0 }
   end;
 
 type

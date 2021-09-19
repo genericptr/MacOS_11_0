@@ -59,8 +59,8 @@ const
 type
   NSFetchedResultsControllerDelegateProtocol = objcprotocol external name 'NSFetchedResultsControllerDelegate' (NSObjectProtocol)
   optional
-    procedure controller_didChangeContentWithSnapshot (controller: NSFetchedResultsController; snapshot: NSDiffableDataSourceSnapshot); message 'controller:didChangeContentWithSnapshot:'; { available in macos , ios , tvos , watchos  }
-    procedure controller_didChangeContentWithDifference (controller: NSFetchedResultsController; diff: NSOrderedCollectionDifference); message 'controller:didChangeContentWithDifference:'; { available in macos , ios , tvos , watchos  }
+    procedure controller_didChangeContentWithSnapshot (controller: NSFetchedResultsController; snapshot: NSDiffableDataSourceSnapshot); message 'controller:didChangeContentWithSnapshot:'; { available in macos 10.15, ios 13.0, tvos 13.0, watchos 6.0 }
+    procedure controller_didChangeContentWithDifference (controller: NSFetchedResultsController; diff: NSOrderedCollectionDifference); message 'controller:didChangeContentWithDifference:'; { available in macos 10.15, ios 13.0, tvos 13.0, watchos 6.0 }
   optional
     procedure controller_didChangeObject_atIndexPath_forChangeType_newIndexPath (controller: NSFetchedResultsController; anObject: id; indexPath: NSIndexPath; type_: NSFetchedResultsChangeType; newIndexPath: NSIndexPath); message 'controller:didChangeObject:atIndexPath:forChangeType:newIndexPath:';
   optional
@@ -70,7 +70,7 @@ type
   optional
     procedure controllerDidChangeContent (controller: NSFetchedResultsController); message 'controllerDidChangeContent:';
   optional
-    function controller_sectionIndexTitleForSectionName (controller: NSFetchedResultsController; sectionName: NSString): NSString; message 'controller:sectionIndexTitleForSectionName:'; { available in macosx ,ios  }
+    function controller_sectionIndexTitleForSectionName (controller: NSFetchedResultsController; sectionName: NSString): NSString; message 'controller:sectionIndexTitleForSectionName:'; { available in macosx 10.12,ios 4.0 }
   end;
 {$endif}
 

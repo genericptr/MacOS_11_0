@@ -40,8 +40,8 @@ const
   MTLCommandBufferErrorNotPermitted = 7;
   MTLCommandBufferErrorOutOfMemory = 8;
   MTLCommandBufferErrorInvalidResource = 9;
-  MTLCommandBufferErrorMemoryless = 10 { available in macos , macCatalyst , ios  };
-  MTLCommandBufferErrorDeviceRemoved = 11 { unavailable in ios };
+  MTLCommandBufferErrorMemoryless = 10 { available in macos 11.0, macCatalyst 14.0, ios 10.0 };
+  MTLCommandBufferErrorDeviceRemoved = 11 { unavailable in ios } { available in macos 10.13 };
 {$endif}
 
 {$ifdef EXTERNAL_SYMBOLS}
@@ -116,10 +116,10 @@ type
     function errorOptions: MTLCommandBufferErrorOption; message 'errorOptions'; { available in macos , ios  }
     procedure setLabel(newValue: NSString); message 'setLabel:';
     function label_: NSString; message 'label';
-    function kernelStartTime: CFTimeInterval; message 'kernelStartTime'; { available in macos , macCatalyst , ios  }
-    function kernelEndTime: CFTimeInterval; message 'kernelEndTime'; { available in macos , macCatalyst , ios  }
-    function logs: id; message 'logs'; { available in macos , ios  }
-    function GPUStartTime: CFTimeInterval; message 'GPUStartTime'; { available in macos , macCatalyst , ios  }
+    function kernelStartTime: CFTimeInterval; message 'kernelStartTime'; { available in macos 10.15, macCatalyst 13.0, ios 10.3 }
+    function kernelEndTime: CFTimeInterval; message 'kernelEndTime'; { available in macos 11.0, ios 14.0 }
+    function logs: id; message 'logs'; { available in macos 10.15, macCatalyst 13.0, ios 10.3 }
+    function GPUStartTime: CFTimeInterval; message 'GPUStartTime'; { available in macos 10.15, macCatalyst 13.0, ios 10.3 }
     function GPUEndTime: CFTimeInterval; message 'GPUEndTime'; { available in macos , macCatalyst , ios  }
     procedure enqueue; message 'enqueue';
     procedure commit; message 'commit';
@@ -134,17 +134,17 @@ type
     function error: NSError; message 'error';
     function blitCommandEncoder: id; message 'blitCommandEncoder';
     function renderCommandEncoderWithDescriptor (renderPassDescriptor: MTLRenderPassDescriptor): id; message 'renderCommandEncoderWithDescriptor:';
-    function computeCommandEncoderWithDescriptor (computePassDescriptor: MTLComputePassDescriptor): id; message 'computeCommandEncoderWithDescriptor:'; { available in macos , ios  }
+    function computeCommandEncoderWithDescriptor (computePassDescriptor: MTLComputePassDescriptor): id; message 'computeCommandEncoderWithDescriptor:'; { available in macos 11.0, ios 14.0 }
     function blitCommandEncoderWithDescriptor (blitPassDescriptor: MTLBlitPassDescriptor): id; message 'blitCommandEncoderWithDescriptor:'; { available in macos , ios  }
     function computeCommandEncoder: id; message 'computeCommandEncoder';
-    function computeCommandEncoderWithDispatchType (dispatchType: MTLDispatchType): id; message 'computeCommandEncoderWithDispatchType:'; { available in macos , ios  }
-    procedure encodeWaitForEvent_value (event: id; value: cuint64); message 'encodeWaitForEvent:value:'; { available in macos , ios  }
+    function computeCommandEncoderWithDispatchType (dispatchType: MTLDispatchType): id; message 'computeCommandEncoderWithDispatchType:'; { available in macos 10.14, ios 12.0 }
+    procedure encodeWaitForEvent_value (event: id; value: cuint64); message 'encodeWaitForEvent:value:'; { available in macos 10.14, ios 12.0 }
     procedure encodeSignalEvent_value (event: id; value: cuint64); message 'encodeSignalEvent:value:'; { available in macos , ios  }
     function parallelRenderCommandEncoderWithDescriptor (renderPassDescriptor: MTLRenderPassDescriptor): id; message 'parallelRenderCommandEncoderWithDescriptor:';
-    function resourceStateCommandEncoder: id; message 'resourceStateCommandEncoder'; { available in macos , macCatalyst , ios  }
-    function resourceStateCommandEncoderWithDescriptor (resourceStatePassDescriptor: MTLResourceStatePassDescriptor): id; message 'resourceStateCommandEncoderWithDescriptor:'; { available in macos , ios  }
-    function accelerationStructureCommandEncoder: id; message 'accelerationStructureCommandEncoder'; { available in macos , ios  }
-    procedure pushDebugGroup (string_: NSString); message 'pushDebugGroup:'; { available in macos , ios  }
+    function resourceStateCommandEncoder: id; message 'resourceStateCommandEncoder'; { available in macos 11.0, ios 14.0 }
+    function resourceStateCommandEncoderWithDescriptor (resourceStatePassDescriptor: MTLResourceStatePassDescriptor): id; message 'resourceStateCommandEncoderWithDescriptor:'; { available in macos 11.0, ios 14.0 }
+    function accelerationStructureCommandEncoder: id; message 'accelerationStructureCommandEncoder'; { available in macos 10.13, ios 11.0 }
+    procedure pushDebugGroup (string_: NSString); message 'pushDebugGroup:'; { available in macos 10.13, ios 11.0 }
     procedure popDebugGroup; message 'popDebugGroup'; { available in macos , ios  }
   end;
 {$endif}

@@ -13,8 +13,8 @@ type
   public
     function initWithSourceModel_destinationModel (sourceModel: NSManagedObjectModel; destinationModel: NSManagedObjectModel): id; message 'initWithSourceModel:destinationModel:';
     function migrateStoreFromURL_type_options_withMappingModel_toDestinationURL_destinationType_destinationOptions_error (sourceURL: NSURL; sStoreType: NSString; sOptions: NSDictionary; mappings: NSMappingModel; dURL: NSURL; dStoreType: NSString; dOptions: NSDictionary; error: NSErrorPtr): objcbool; message 'migrateStoreFromURL:type:options:withMappingModel:toDestinationURL:destinationType:destinationOptions:error:';
-    procedure setUsesStoreSpecificMigrationManager(newValue: objcbool); message 'setUsesStoreSpecificMigrationManager:'; { available in macosx ,ios  }
-    function usesStoreSpecificMigrationManager: objcbool; message 'usesStoreSpecificMigrationManager'; { available in macosx ,ios  }
+    procedure setUsesStoreSpecificMigrationManager(newValue: objcbool); message 'setUsesStoreSpecificMigrationManager:'; { available in macosx 10.7,ios 5.0 }
+    function usesStoreSpecificMigrationManager: objcbool; message 'usesStoreSpecificMigrationManager'; { available in macosx 10.7,ios 5.0 }
     procedure reset; message 'reset';
     function mappingModel: NSMappingModel; message 'mappingModel';
     function sourceModel: NSManagedObjectModel; message 'sourceModel';

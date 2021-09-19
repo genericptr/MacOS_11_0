@@ -39,8 +39,8 @@ type
     class function shared: GKAccessPoint; message 'shared';
     procedure setActive(newValue: objcbool); message 'setActive:';
     function isActive: objcbool; message 'isActive';
-    procedure setFocused(newValue: objcbool); message 'setFocused:'; { unavailable in macos, ios }
-    function isFocused: objcbool; message 'isFocused'; { unavailable in macos, ios }
+    procedure setFocused(newValue: objcbool); message 'setFocused:'; { unavailable in macos, ios } { available in tvos 14.0 }
+    function isFocused: objcbool; message 'isFocused'; { unavailable in macos, ios } { available in tvos 14.0 }
     function isVisible: objcbool; message 'isVisible';
     function isPresentingGameCenter: objcbool; message 'isPresentingGameCenter';
     procedure setShowHighlights(newValue: objcbool); message 'setShowHighlights:';

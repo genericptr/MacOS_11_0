@@ -7,10 +7,10 @@ type
 
 {$ifdef EXTERNAL_SYMBOLS}
 var
-  CKRecordTypeShare: CKRecordType { available in macos , ios , tvos , watchos  }; cvar; external;
-  CKShareTitleKey: CKRecordFieldKey { available in macos , ios , tvos , watchos  }; cvar; external;
-  CKShareThumbnailImageDataKey: CKRecordFieldKey { available in macos , ios , tvos , watchos  }; cvar; external;
-  CKShareTypeKey: CKRecordFieldKey { available in macos , ios , tvos , watchos  }; cvar; external;
+  CKRecordTypeShare: CKRecordType { available in macos 10.12, ios 10.0, tvos 10.0, watchos 3.0 }; cvar; external;
+  CKShareTitleKey: CKRecordFieldKey { available in macos 10.12, ios 10.0, tvos 10.0, watchos 3.0 }; cvar; external;
+  CKShareThumbnailImageDataKey: CKRecordFieldKey { available in macos 10.12, ios 10.0, tvos 10.0, watchos 3.0 }; cvar; external;
+  CKShareTypeKey: CKRecordFieldKey { available in macos 10.12, ios 10.0, tvos 10.0, watchos 3.0 }; cvar; external;
 {$endif}
 
 {$ifdef CLASSES}

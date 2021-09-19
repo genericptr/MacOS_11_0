@@ -29,9 +29,9 @@ type
 type
   NSExtendedScanner = objccategory external (NSScanner)
     function scanInt (result_: pcint): objcbool; message 'scanInt:';
-    function scanInteger (result_: NSIntegerPtr): objcbool; message 'scanInteger:'; { available in macos , ios , watchos , tvos  }
+    function scanInteger (result_: NSIntegerPtr): objcbool; message 'scanInteger:'; { available in macos 10.5, ios 2.0, watchos 2.0, tvos 9.0 }
     function scanLongLong (result_: pclonglong): objcbool; message 'scanLongLong:';
-    function scanUnsignedLongLong (result_: pculonglong): objcbool; message 'scanUnsignedLongLong:'; { available in macos , ios , watchos , tvos  }
+    function scanUnsignedLongLong (result_: pculonglong): objcbool; message 'scanUnsignedLongLong:'; { available in macos 10.9, ios 7.0, watchos 2.0, tvos 9.0 }
     function scanFloat (result_: psingle): objcbool; message 'scanFloat:';
     function scanDouble (result_: pdouble): objcbool; message 'scanDouble:';
     function scanHexInt (result_: pcuint): objcbool; message 'scanHexInt:';

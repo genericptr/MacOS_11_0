@@ -45,7 +45,7 @@ type
     function writeToURL_type (nsurl_: NSURL; type_: CFStringRef): objcbool; message 'writeToURL:type:';
     function writeToURL_type_level (nsurl_: NSURL; type_: CFStringRef; level: NSUInteger): objcbool; message 'writeToURL:type:level:'; { available in macos , ios , tvos  }
     function imageFromTexture: CGImageRef; message 'imageFromTexture';
-    function imageFromTextureAtLevel (level: NSUInteger): CGImageRef; message 'imageFromTextureAtLevel:'; { available in macos , ios , tvos  }
+    function imageFromTextureAtLevel (level: NSUInteger): CGImageRef; message 'imageFromTextureAtLevel:'; { available in macos 10.13, ios 11.0, tvos 11.0 }
     function texelDataWithTopLeftOrigin: NSData; message 'texelDataWithTopLeftOrigin';
     function texelDataWithBottomLeftOrigin: NSData; message 'texelDataWithBottomLeftOrigin';
     function texelDataWithTopLeftOriginAtMipLevel_create (level: NSInteger; create_: objcbool): NSData; message 'texelDataWithTopLeftOriginAtMipLevel:create:';

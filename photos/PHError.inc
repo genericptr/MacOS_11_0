@@ -15,7 +15,7 @@ const
   PHPhotosErrorLibraryVolumeOffline = 3114;
   PHPhotosErrorRelinquishingLibraryBundleToWriter = 3142;
   PHPhotosErrorSwitchingSystemPhotoLibrary = 3143;
-  PHPhotosErrorNetworkAccessRequired = 3164 { available in macos , ios , tvos  };
+  PHPhotosErrorNetworkAccessRequired = 3164 { available in macos 11.0, ios 14, tvos 14 };
 {$endif}
 
 {$ifdef __swift__}

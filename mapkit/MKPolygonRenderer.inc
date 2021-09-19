@@ -12,10 +12,10 @@ type
   public
     function initWithPolygon (polygon: MKPolygon): id; message 'initWithPolygon:';
     function polygon: MKPolygon; message 'polygon';
-    procedure setStrokeStart(newValue: CGFloat); message 'setStrokeStart:'; { unavailable in watchos }
-    function strokeStart: CGFloat; message 'strokeStart'; { unavailable in watchos }
-    procedure setStrokeEnd(newValue: CGFloat); message 'setStrokeEnd:'; { unavailable in watchos }
-    function strokeEnd: CGFloat; message 'strokeEnd'; { unavailable in watchos }
+    procedure setStrokeStart(newValue: CGFloat); message 'setStrokeStart:'; { unavailable in watchos } { available in ios 14.0, tvos 14.0, macos 11.0 }
+    function strokeStart: CGFloat; message 'strokeStart'; { unavailable in watchos } { available in ios 14.0, tvos 14.0, macos 11.0 }
+    procedure setStrokeEnd(newValue: CGFloat); message 'setStrokeEnd:'; { unavailable in watchos } { available in ios 14.0, tvos 14.0, macos 11.0 }
+    function strokeEnd: CGFloat; message 'strokeEnd'; { unavailable in watchos } { available in ios 14.0, tvos 14.0, macos 11.0 }
   end;
 {$endif}
 

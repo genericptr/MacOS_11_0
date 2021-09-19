@@ -7,8 +7,8 @@ type
 const
   NSKeyValueObservingOptionNew = $01;
   NSKeyValueObservingOptionOld = $02;
-  NSKeyValueObservingOptionInitial = $04 { available in macos , ios , watchos , tvos  };
-  NSKeyValueObservingOptionPrior = $08 { available in macos , ios , watchos , tvos  };
+  NSKeyValueObservingOptionInitial = $04 { available in macos 10.5, ios 2.0, watchos 2.0, tvos 9.0 };
+  NSKeyValueObservingOptionPrior = $08 { available in macos 10.5, ios 2.0, watchos 2.0, tvos 9.0 };
 
 type
   NSKeyValueChange = NSUInteger;
@@ -41,7 +41,7 @@ var
   NSKeyValueChangeNewKey: NSKeyValueChangeKey; cvar; external;
   NSKeyValueChangeOldKey: NSKeyValueChangeKey; cvar; external;
   NSKeyValueChangeIndexesKey: NSKeyValueChangeKey; cvar; external;
-  NSKeyValueChangeNotificationIsPriorKey: NSKeyValueChangeKey { available in macos , ios , watchos , tvos  }; cvar; external;
+  NSKeyValueChangeNotificationIsPriorKey: NSKeyValueChangeKey { available in macos 10.5, ios 2.0, watchos 2.0, tvos 9.0 }; cvar; external;
 {$endif}
 
 {$ifdef CLASSES}
@@ -54,31 +54,31 @@ type
 type
   NSObject_NSKeyValueObserverRegistration = objccategory external name 'NSKeyValueObserverRegistration' (NSObject)
     procedure addObserver_forKeyPath_options_context (observer: NSObjectPtr; keyPath: NSString; options: NSKeyValueObservingOptions; context: pointer); message 'addObserver:forKeyPath:options:context:';
-    procedure removeObserver_forKeyPath_context (observer: NSObjectPtr; keyPath: NSString; context: pointer); message 'removeObserver:forKeyPath:context:'; { available in macos , ios , watchos , tvos  }
+    procedure removeObserver_forKeyPath_context (observer: NSObjectPtr; keyPath: NSString; context: pointer); message 'removeObserver:forKeyPath:context:'; { available in macos 10.7, ios 5.0, watchos 2.0, tvos 9.0 }
     procedure removeObserver_forKeyPath (observer: NSObjectPtr; keyPath: NSString); message 'removeObserver:forKeyPath:';
   end;
 
 type
   NSArray_NSKeyValueObserverRegistration = objccategory external name 'NSKeyValueObserverRegistration' (NSArray)
     procedure addObserver_toObjectsAtIndexes_forKeyPath_options_context (observer: NSObjectPtr; indexes: NSIndexSet; keyPath: NSString; options: NSKeyValueObservingOptions; context: pointer); message 'addObserver:toObjectsAtIndexes:forKeyPath:options:context:';
-    procedure removeObserver_fromObjectsAtIndexes_forKeyPath_context (observer: NSObjectPtr; indexes: NSIndexSet; keyPath: NSString; context: pointer); message 'removeObserver:fromObjectsAtIndexes:forKeyPath:context:'; { available in macos , ios , watchos , tvos  }
+    procedure removeObserver_fromObjectsAtIndexes_forKeyPath_context (observer: NSObjectPtr; indexes: NSIndexSet; keyPath: NSString; context: pointer); message 'removeObserver:fromObjectsAtIndexes:forKeyPath:context:'; { available in macos 10.7, ios 5.0, watchos 2.0, tvos 9.0 }
     procedure removeObserver_fromObjectsAtIndexes_forKeyPath (observer: NSObjectPtr; indexes: NSIndexSet; keyPath: NSString); message 'removeObserver:fromObjectsAtIndexes:forKeyPath:';
     procedure addObserver_forKeyPath_options_context (observer: NSObjectPtr; keyPath: NSString; options: NSKeyValueObservingOptions; context: pointer); message 'addObserver:forKeyPath:options:context:';
-    procedure removeObserver_forKeyPath_context (observer: NSObjectPtr; keyPath: NSString; context: pointer); message 'removeObserver:forKeyPath:context:'; { available in macos , ios , watchos , tvos  }
+    procedure removeObserver_forKeyPath_context (observer: NSObjectPtr; keyPath: NSString; context: pointer); message 'removeObserver:forKeyPath:context:'; { available in macos 10.7, ios 5.0, watchos 2.0, tvos 9.0 }
     procedure removeObserver_forKeyPath (observer: NSObjectPtr; keyPath: NSString); message 'removeObserver:forKeyPath:';
   end;
 
 type
   NSOrderedSet_NSKeyValueObserverRegistration = objccategory external name 'NSKeyValueObserverRegistration' (NSOrderedSet)
     procedure addObserver_forKeyPath_options_context (observer: NSObjectPtr; keyPath: NSString; options: NSKeyValueObservingOptions; context: pointer); message 'addObserver:forKeyPath:options:context:';
-    procedure removeObserver_forKeyPath_context (observer: NSObjectPtr; keyPath: NSString; context: pointer); message 'removeObserver:forKeyPath:context:'; { available in macos , ios , watchos , tvos  }
+    procedure removeObserver_forKeyPath_context (observer: NSObjectPtr; keyPath: NSString; context: pointer); message 'removeObserver:forKeyPath:context:'; { available in macos 10.7, ios 5.0, watchos 2.0, tvos 9.0 }
     procedure removeObserver_forKeyPath (observer: NSObjectPtr; keyPath: NSString); message 'removeObserver:forKeyPath:';
   end;
 
 type
   NSKeyValueObserverRegistration = objccategory external (NSSet)
     procedure addObserver_forKeyPath_options_context (observer: NSObjectPtr; keyPath: NSString; options: NSKeyValueObservingOptions; context: pointer); message 'addObserver:forKeyPath:options:context:';
-    procedure removeObserver_forKeyPath_context (observer: NSObjectPtr; keyPath: NSString; context: pointer); message 'removeObserver:forKeyPath:context:'; { available in macos , ios , watchos , tvos  }
+    procedure removeObserver_forKeyPath_context (observer: NSObjectPtr; keyPath: NSString; context: pointer); message 'removeObserver:forKeyPath:context:'; { available in macos 10.7, ios 5.0, watchos 2.0, tvos 9.0 }
     procedure removeObserver_forKeyPath (observer: NSObjectPtr; keyPath: NSString); message 'removeObserver:forKeyPath:';
   end;
 
@@ -94,7 +94,7 @@ type
 
 type
   NSKeyValueObservingCustomization = objccategory external (NSObject)
-    class function keyPathsForValuesAffectingValueForKey (key: NSString): NSSet; message 'keyPathsForValuesAffectingValueForKey:'; { available in macos , ios , watchos , tvos  }
+    class function keyPathsForValuesAffectingValueForKey (key: NSString): NSSet; message 'keyPathsForValuesAffectingValueForKey:'; { available in macos 10.5, ios 2.0, watchos 2.0, tvos 9.0 }
     class function automaticallyNotifiesObserversForKey (key: NSString): objcbool; message 'automaticallyNotifiesObserversForKey:';
     procedure setObservationInfo(newValue: pointer); message 'setObservationInfo:';
     function observationInfo: pointer; message 'observationInfo';

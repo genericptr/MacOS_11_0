@@ -31,14 +31,14 @@ type
     class function predicateWithFormat_argumentArray (predicateFormat: NSString; arguments: NSArray): NSPredicate; message 'predicateWithFormat:argumentArray:';
     class function predicateWithFormat (predicateFormat: NSString): NSPredicate; varargs; message 'predicateWithFormat:';
     class function predicateWithFormat_arguments (predicateFormat: NSString; argList: va_list): NSPredicate; message 'predicateWithFormat:arguments:';
-    class function predicateFromMetadataQueryString (queryString: NSString): NSPredicate; message 'predicateFromMetadataQueryString:'; { unavailable in ios, watchos, tvos }
+    class function predicateFromMetadataQueryString (queryString: NSString): NSPredicate; message 'predicateFromMetadataQueryString:'; { unavailable in ios, watchos, tvos } { available in macos 10.9 }
     class function predicateWithValue (value: objcbool): NSPredicate; message 'predicateWithValue:';
-    class function predicateWithBlock (block: NSPredicatePredicateWithBlockCallback): NSPredicate; message 'predicateWithBlock:'; { available in macos , ios , watchos , tvos  }
+    class function predicateWithBlock (block: NSPredicatePredicateWithBlockCallback): NSPredicate; message 'predicateWithBlock:'; { available in macos 10.6, ios 4.0, watchos 2.0, tvos 9.0 }
     function predicateFormat: NSString; message 'predicateFormat';
     function predicateWithSubstitutionVariables (variables: NSDictionary): id; message 'predicateWithSubstitutionVariables:';
     function evaluateWithObject (object_: id): objcbool; message 'evaluateWithObject:';
-    function evaluateWithObject_substitutionVariables (object_: id; bindings: NSDictionary): objcbool; message 'evaluateWithObject:substitutionVariables:'; { available in macos , ios , watchos , tvos  }
-    procedure allowEvaluation; message 'allowEvaluation'; { available in macos , ios , watchos , tvos  }
+    function evaluateWithObject_substitutionVariables (object_: id; bindings: NSDictionary): objcbool; message 'evaluateWithObject:substitutionVariables:'; { available in macos 10.5, ios 3.0, watchos 2.0, tvos 9.0 }
+    procedure allowEvaluation; message 'allowEvaluation'; { available in macos 10.9, ios 7.0, watchos 2.0, tvos 9.0 }
 
     { Adopted protocols }
     function copyWithZone (zone: NSZonePtr): id; message 'copyWithZone:';
@@ -60,22 +60,22 @@ type
 
 type
   NSSet_NSPredicateSupport = objccategory external name 'NSPredicateSupport' (NSSet)
-    function filteredSetUsingPredicate (predicate: NSPredicate): NSSet; message 'filteredSetUsingPredicate:'; { available in macos , ios , watchos , tvos  }
+    function filteredSetUsingPredicate (predicate: NSPredicate): NSSet; message 'filteredSetUsingPredicate:'; { available in macos 10.5, ios 3.0, watchos 2.0, tvos 9.0 }
   end;
 
 type
   NSMutableSet_NSPredicateSupport = objccategory external name 'NSPredicateSupport' (NSMutableSet)
-    procedure filterUsingPredicate (predicate: NSPredicate); message 'filterUsingPredicate:'; { available in macos , ios , watchos , tvos  }
+    procedure filterUsingPredicate (predicate: NSPredicate); message 'filterUsingPredicate:'; { available in macos 10.5, ios 3.0, watchos 2.0, tvos 9.0 }
   end;
 
 type
   NSOrderedSet_NSPredicateSupport = objccategory external name 'NSPredicateSupport' (NSOrderedSet)
-    function filteredOrderedSetUsingPredicate (p: NSPredicate): NSOrderedSet; message 'filteredOrderedSetUsingPredicate:'; { available in macos , ios , watchos , tvos  }
+    function filteredOrderedSetUsingPredicate (p: NSPredicate): NSOrderedSet; message 'filteredOrderedSetUsingPredicate:'; { available in macos 10.7, ios 5.0, watchos 2.0, tvos 9.0 }
   end;
 
 type
   NSPredicateSupport = objccategory external (NSMutableOrderedSet)
-    procedure filterUsingPredicate (p: NSPredicate); message 'filterUsingPredicate:'; { available in macos , ios , watchos , tvos  }
+    procedure filterUsingPredicate (p: NSPredicate); message 'filterUsingPredicate:'; { available in macos 10.7, ios 5.0, watchos 2.0, tvos 9.0 }
   end;
 {$endif}
 

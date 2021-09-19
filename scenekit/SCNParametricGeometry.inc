@@ -30,10 +30,10 @@ type
     function widthSegmentCount: NSInteger; message 'widthSegmentCount';
     procedure setHeightSegmentCount(newValue: NSInteger); message 'setHeightSegmentCount:';
     function heightSegmentCount: NSInteger; message 'heightSegmentCount';
-    procedure setCornerRadius(newValue: CGFloat); message 'setCornerRadius:'; { available in macos  }
-    function cornerRadius: CGFloat; message 'cornerRadius'; { available in macos  }
-    procedure setCornerSegmentCount(newValue: NSInteger); message 'setCornerSegmentCount:'; { available in macos  }
-    function cornerSegmentCount: NSInteger; message 'cornerSegmentCount'; { available in macos  }
+    procedure setCornerRadius(newValue: CGFloat); message 'setCornerRadius:'; { available in macos 10.9 }
+    function cornerRadius: CGFloat; message 'cornerRadius'; { available in macos 10.9 }
+    procedure setCornerSegmentCount(newValue: NSInteger); message 'setCornerSegmentCount:'; { available in macos 10.9 }
+    function cornerSegmentCount: NSInteger; message 'cornerSegmentCount'; { available in macos 10.9 }
   end;
 
 type
@@ -174,14 +174,14 @@ type
     function reflectionFalloffStart: CGFloat; message 'reflectionFalloffStart';
     procedure setReflectionFalloffEnd(newValue: CGFloat); message 'setReflectionFalloffEnd:';
     function reflectionFalloffEnd: CGFloat; message 'reflectionFalloffEnd';
-    procedure setReflectionCategoryBitMask(newValue: NSUInteger); message 'setReflectionCategoryBitMask:'; { available in macos , ios , tvos  }
-    function reflectionCategoryBitMask: NSUInteger; message 'reflectionCategoryBitMask'; { available in macos , ios , tvos  }
-    procedure setWidth(newValue: CGFloat); message 'setWidth:'; { available in macos , ios , tvos  }
-    function width: CGFloat; message 'width'; { available in macos , ios , tvos  }
-    procedure setLength(newValue: CGFloat); message 'setLength:'; { available in macos , ios , tvos  }
-    function length: CGFloat; message 'length'; { available in macos , ios , tvos  }
-    procedure setReflectionResolutionScaleFactor(newValue: CGFloat); message 'setReflectionResolutionScaleFactor:'; { available in macos  }
-    function reflectionResolutionScaleFactor: CGFloat; message 'reflectionResolutionScaleFactor'; { available in macos  }
+    procedure setReflectionCategoryBitMask(newValue: NSUInteger); message 'setReflectionCategoryBitMask:'; { available in macos 10.12, ios 10.0, tvos 10.0 }
+    function reflectionCategoryBitMask: NSUInteger; message 'reflectionCategoryBitMask'; { available in macos 10.12, ios 10.0, tvos 10.0 }
+    procedure setWidth(newValue: CGFloat); message 'setWidth:'; { available in macos 10.12, ios 10.0, tvos 10.0 }
+    function width: CGFloat; message 'width'; { available in macos 10.12, ios 10.0, tvos 10.0 }
+    procedure setLength(newValue: CGFloat); message 'setLength:'; { available in macos 10.12, ios 10.0, tvos 10.0 }
+    function length: CGFloat; message 'length'; { available in macos 10.12, ios 10.0, tvos 10.0 }
+    procedure setReflectionResolutionScaleFactor(newValue: CGFloat); message 'setReflectionResolutionScaleFactor:'; { available in macos 10.10 }
+    function reflectionResolutionScaleFactor: CGFloat; message 'reflectionResolutionScaleFactor'; { available in macos 10.10 }
   end;
 
 type
@@ -207,10 +207,10 @@ type
     function chamferRadius: CGFloat; message 'chamferRadius';
     procedure setChamferSegmentCount(newValue: NSInteger); message 'setChamferSegmentCount:'; { unavailable in ios, tvos, watchos, macCatalyst }
     function chamferSegmentCount: NSInteger; message 'chamferSegmentCount'; { unavailable in ios, tvos, watchos, macCatalyst }
-    procedure setChamferProfile(newValue: NSBezierPath); message 'setChamferProfile:'; { available in macos  }
-    function chamferProfile: NSBezierPath; message 'chamferProfile'; { available in macos  }
-    procedure setFlatness(newValue: CGFloat); message 'setFlatness:'; { available in macos  }
-    function flatness: CGFloat; message 'flatness'; { available in macos  }
+    procedure setChamferProfile(newValue: NSBezierPath); message 'setChamferProfile:'; { available in macos 10.9 }
+    function chamferProfile: NSBezierPath; message 'chamferProfile'; { available in macos 10.9 }
+    procedure setFlatness(newValue: CGFloat); message 'setFlatness:'; { available in macos 10.9 }
+    function flatness: CGFloat; message 'flatness'; { available in macos 10.9 }
   end;
 {$endif}
 

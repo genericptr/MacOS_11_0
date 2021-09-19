@@ -36,10 +36,10 @@ type
     function keyWithAppleEventCode (appleEventCode_: FourCharCode): NSString; message 'keyWithAppleEventCode:';
     function defaultSubcontainerAttributeKey: NSString; message 'defaultSubcontainerAttributeKey';
     function isLocationRequiredToCreateForKey (toManyRelationshipKey: NSString): objcbool; message 'isLocationRequiredToCreateForKey:';
-    function hasPropertyForKey (key: NSString): objcbool; message 'hasPropertyForKey:'; { unavailable in ios, watchos, tvos }
-    function hasOrderedToManyRelationshipForKey (key: NSString): objcbool; message 'hasOrderedToManyRelationshipForKey:'; { unavailable in ios, watchos, tvos }
-    function hasReadablePropertyForKey (key: NSString): objcbool; message 'hasReadablePropertyForKey:'; { unavailable in ios, watchos, tvos }
-    function hasWritablePropertyForKey (key: NSString): objcbool; message 'hasWritablePropertyForKey:'; { unavailable in ios, watchos, tvos }
+    function hasPropertyForKey (key: NSString): objcbool; message 'hasPropertyForKey:'; { unavailable in ios, watchos, tvos } { available in macos 10.5 }
+    function hasOrderedToManyRelationshipForKey (key: NSString): objcbool; message 'hasOrderedToManyRelationshipForKey:'; { unavailable in ios, watchos, tvos } { available in macos 10.5 }
+    function hasReadablePropertyForKey (key: NSString): objcbool; message 'hasReadablePropertyForKey:'; { unavailable in ios, watchos, tvos } { available in macos 10.5 }
+    function hasWritablePropertyForKey (key: NSString): objcbool; message 'hasWritablePropertyForKey:'; { unavailable in ios, watchos, tvos } { available in macos 10.5 }
   end;
 
 

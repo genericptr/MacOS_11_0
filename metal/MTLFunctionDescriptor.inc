@@ -13,7 +13,7 @@ type
 
 const
   MTLFunctionOptionNone = 0;
-  MTLFunctionOptionCompileToBinary = 1 shl 0 { available in macos , ios  };
+  MTLFunctionOptionCompileToBinary = 1 shl 0 { available in macos 11.0, ios 14.0 };
 {$endif}
 
 {$ifdef CLASSES}

@@ -27,11 +27,11 @@ type
 
 {$ifdef EXTERNAL_SYMBOLS}
 var
-  NSExtensionItemsAndErrorsKey: NSString { available in macos , ios , watchos , tvos  }; cvar; external;
-  NSExtensionHostWillEnterForegroundNotification: NSString { unavailable in macos }; cvar; external;
-  NSExtensionHostDidEnterBackgroundNotification: NSString { unavailable in macos }; cvar; external;
-  NSExtensionHostWillResignActiveNotification: NSString { unavailable in macos }; cvar; external;
-  NSExtensionHostDidBecomeActiveNotification: NSString { unavailable in macos }; cvar; external;
+  NSExtensionItemsAndErrorsKey: NSString { available in macos 10.10, ios 8.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  NSExtensionHostWillEnterForegroundNotification: NSString { unavailable in macos } { available in ios 8.2, watchos 2.0, tvos 9.0 }; cvar; external;
+  NSExtensionHostDidEnterBackgroundNotification: NSString { unavailable in macos } { available in ios 8.2, watchos 2.0, tvos 9.0 }; cvar; external;
+  NSExtensionHostWillResignActiveNotification: NSString { unavailable in macos } { available in ios 8.2, watchos 2.0, tvos 9.0 }; cvar; external;
+  NSExtensionHostDidBecomeActiveNotification: NSString { unavailable in macos } { available in ios 8.2, watchos 2.0, tvos 9.0 }; cvar; external;
 {$endif}
 
 {$endif}

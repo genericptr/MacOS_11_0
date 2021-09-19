@@ -23,15 +23,15 @@ type
     function presentedItemURL: NSURL; message 'presentedItemURL';
     function presentedItemOperationQueue: NSOperationQueue; message 'presentedItemOperationQueue';
   optional
-    function primaryPresentedItemURL: NSURL; message 'primaryPresentedItemURL'; { unavailable in ios, watchos, tvos }
+    function primaryPresentedItemURL: NSURL; message 'primaryPresentedItemURL'; { unavailable in ios, watchos, tvos } { available in macos 10.8 }
     procedure relinquishPresentedItemToReader (reader: NSFilePresenterRelinquishPresentedItemToReaderCallback); message 'relinquishPresentedItemToReader:';
     procedure relinquishPresentedItemToWriter (writer: NSFilePresenterRelinquishPresentedItemToWriterCallback); message 'relinquishPresentedItemToWriter:';
     procedure savePresentedItemChangesWithCompletionHandler (completionHandler: NSFilePresenterSavePresentedItemChangesWithCompletionHandlerCallback); message 'savePresentedItemChangesWithCompletionHandler:';
     procedure accommodatePresentedItemDeletionWithCompletionHandler (completionHandler: NSFilePresenterAccommodatePresentedItemDeletionWithCompletionHandlerCallback); message 'accommodatePresentedItemDeletionWithCompletionHandler:';
     procedure presentedItemDidMoveToURL (newURL: NSURL); message 'presentedItemDidMoveToURL:';
     procedure presentedItemDidChange; message 'presentedItemDidChange';
-    procedure presentedItemDidChangeUbiquityAttributes (attributes: NSSet); message 'presentedItemDidChangeUbiquityAttributes:'; { unavailable in watchos, tvos }
-    function observedPresentedItemUbiquityAttributes: NSSet; message 'observedPresentedItemUbiquityAttributes'; { unavailable in watchos, tvos }
+    procedure presentedItemDidChangeUbiquityAttributes (attributes: NSSet); message 'presentedItemDidChangeUbiquityAttributes:'; { unavailable in watchos, tvos } { available in macos 10.13, ios 11.0 }
+    function observedPresentedItemUbiquityAttributes: NSSet; message 'observedPresentedItemUbiquityAttributes'; { unavailable in watchos, tvos } { available in macos 10.13, ios 11.0 }
     procedure presentedItemDidGainVersion (version: NSFileVersion); message 'presentedItemDidGainVersion:';
     procedure presentedItemDidLoseVersion (version: NSFileVersion); message 'presentedItemDidLoseVersion:';
     procedure presentedItemDidResolveConflictVersion (version: NSFileVersion); message 'presentedItemDidResolveConflictVersion:';

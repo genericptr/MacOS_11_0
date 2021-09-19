@@ -35,15 +35,15 @@ type
 {$ifdef EXTERNAL_SYMBOLS}
 var
   NSUnderlyingErrorKey: NSErrorUserInfoKey; cvar; external;
-  NSMultipleUnderlyingErrorsKey: NSErrorUserInfoKey { available in macos , ios , watchos , tvos  }; cvar; external;
+  NSMultipleUnderlyingErrorsKey: NSErrorUserInfoKey { available in macos 11.3, ios 14.5, watchos 7.4, tvos 14.5 }; cvar; external;
   NSLocalizedDescriptionKey: NSErrorUserInfoKey; cvar; external;
   NSLocalizedFailureReasonErrorKey: NSErrorUserInfoKey; cvar; external;
   NSLocalizedRecoverySuggestionErrorKey: NSErrorUserInfoKey; cvar; external;
   NSLocalizedRecoveryOptionsErrorKey: NSErrorUserInfoKey; cvar; external;
   NSRecoveryAttempterErrorKey: NSErrorUserInfoKey; cvar; external;
   NSHelpAnchorErrorKey: NSErrorUserInfoKey; cvar; external;
-  NSDebugDescriptionErrorKey: NSErrorUserInfoKey { available in macos , ios , watchos , tvos  }; cvar; external;
-  NSLocalizedFailureErrorKey: NSErrorUserInfoKey { available in macos , ios , watchos , tvos  }; cvar; external;
+  NSDebugDescriptionErrorKey: NSErrorUserInfoKey { available in macos 10.5, ios 2.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  NSLocalizedFailureErrorKey: NSErrorUserInfoKey { available in macos 10.13, ios 11.0, watchos 4.0, tvos 11.0 }; cvar; external;
   NSStringEncodingErrorKey: NSErrorUserInfoKey; cvar; external;
   NSURLErrorKey: NSErrorUserInfoKey; cvar; external;
   NSFilePathErrorKey: NSErrorUserInfoKey; cvar; external;
@@ -70,9 +70,9 @@ type
     function localizedRecoveryOptions: NSArray; message 'localizedRecoveryOptions';
     function recoveryAttempter: id; message 'recoveryAttempter';
     function helpAnchor: NSString; message 'helpAnchor';
-    function underlyingErrors: NSArray; message 'underlyingErrors'; { available in macos , ios , watchos , tvos  }
-    class procedure setUserInfoValueProviderForDomain_provider (errorDomain: NSErrorDomain; provider: NSErrorSetUserInfoValueProviderForDomainCallback); message 'setUserInfoValueProviderForDomain:provider:'; { available in macos , ios , watchos , tvos  }
-    class function userInfoValueProviderForDomain (errorDomain: NSErrorDomain): NSErrorUserInfoValueProviderForDomainCallback; message 'userInfoValueProviderForDomain:'; { available in macos , ios , watchos , tvos  }
+    function underlyingErrors: NSArray; message 'underlyingErrors'; { available in macos 11.3, ios 14.5, watchos 7.4, tvos 14.5 }
+    class procedure setUserInfoValueProviderForDomain_provider (errorDomain: NSErrorDomain; provider: NSErrorSetUserInfoValueProviderForDomainCallback); message 'setUserInfoValueProviderForDomain:provider:'; { available in macos 10.11, ios 9.0, watchos 2.0, tvos 9.0 }
+    class function userInfoValueProviderForDomain (errorDomain: NSErrorDomain): NSErrorUserInfoValueProviderForDomainCallback; message 'userInfoValueProviderForDomain:'; { available in macos 10.11, ios 9.0, watchos 2.0, tvos 9.0 }
 
     { Adopted protocols }
     function copyWithZone (zone: NSZonePtr): id; message 'copyWithZone:';

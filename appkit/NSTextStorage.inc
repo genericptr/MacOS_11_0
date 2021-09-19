@@ -15,8 +15,8 @@ type
   NSTextStorageEditActionsPtr = ^NSTextStorageEditActions;
 
 const
-  NSTextStorageEditedAttributes = 1 shl 0 { available in macos , ios , tvos  };
-  NSTextStorageEditedCharacters = 1 shl 1 { available in macos , ios , tvos  };
+  NSTextStorageEditedAttributes = 1 shl 0 { available in macos 10.0, ios 7.0, tvos 9.0 };
+  NSTextStorageEditedCharacters = 1 shl 1 { available in macos 10.0, ios 7.0, tvos 9.0 };
 {$endif}
 
 {$ifdef CLASSES}
@@ -45,15 +45,15 @@ type
 type
   NSTextStorageDelegateProtocol = objcprotocol external name 'NSTextStorageDelegate' (NSObjectProtocol)
   optional
-    procedure textStorage_willProcessEditing_range_changeInLength (textStorage: NSTextStorage; editedMask: NSTextStorageEditActions; editedRange: NSRange; delta: NSInteger); message 'textStorage:willProcessEditing:range:changeInLength:'; { available in macos , ios , tvos  }
-    procedure textStorage_didProcessEditing_range_changeInLength (textStorage: NSTextStorage; editedMask: NSTextStorageEditActions; editedRange: NSRange; delta: NSInteger); message 'textStorage:didProcessEditing:range:changeInLength:'; { available in macos , ios , tvos  }
+    procedure textStorage_willProcessEditing_range_changeInLength (textStorage: NSTextStorage; editedMask: NSTextStorageEditActions; editedRange: NSRange; delta: NSInteger); message 'textStorage:willProcessEditing:range:changeInLength:'; { available in macos 10.11, ios 7.0, tvos 9.0 }
+    procedure textStorage_didProcessEditing_range_changeInLength (textStorage: NSTextStorage; editedMask: NSTextStorageEditActions; editedRange: NSRange; delta: NSInteger); message 'textStorage:didProcessEditing:range:changeInLength:'; { available in macos 10.11, ios 7.0, tvos 9.0 }
   end;
 {$endif}
 
 {$ifdef EXTERNAL_SYMBOLS}
 var
-  NSTextStorageWillProcessEditingNotification: NSNotificationName { available in macos , ios , tvos  }; cvar; external;
-  NSTextStorageDidProcessEditingNotification: NSNotificationName { available in macos , ios , tvos  }; cvar; external;
+  NSTextStorageWillProcessEditingNotification: NSNotificationName { available in macos 10.0, ios 7.0, tvos 9.0 }; cvar; external;
+  NSTextStorageDidProcessEditingNotification: NSNotificationName { available in macos 10.0, ios 7.0, tvos 9.0 }; cvar; external;
 {$endif}
 
 {$ifdef TYPES}

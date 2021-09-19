@@ -32,10 +32,10 @@ type
 
 {$ifdef EXTERNAL_SYMBOLS}
 var
-  kCAMediaTimingFunctionLinear: CAMediaTimingFunctionName { available in macos , ios , watchos , tvos  }; cvar; external;
-  kCAMediaTimingFunctionEaseIn: CAMediaTimingFunctionName { available in macos , ios , watchos , tvos  }; cvar; external;
-  kCAMediaTimingFunctionEaseOut: CAMediaTimingFunctionName { available in macos , ios , watchos , tvos  }; cvar; external;
-  kCAMediaTimingFunctionEaseInEaseOut: CAMediaTimingFunctionName { available in macos , ios , watchos , tvos  }; cvar; external;
-  kCAMediaTimingFunctionDefault: CAMediaTimingFunctionName { available in macos , ios , watchos , tvos  }; cvar; external;
+  kCAMediaTimingFunctionLinear: CAMediaTimingFunctionName { available in macos 10.5, ios 2.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  kCAMediaTimingFunctionEaseIn: CAMediaTimingFunctionName { available in macos 10.5, ios 2.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  kCAMediaTimingFunctionEaseOut: CAMediaTimingFunctionName { available in macos 10.5, ios 2.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  kCAMediaTimingFunctionEaseInEaseOut: CAMediaTimingFunctionName { available in macos 10.5, ios 2.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  kCAMediaTimingFunctionDefault: CAMediaTimingFunctionName { available in macos 10.6, ios 3.0, watchos 2.0, tvos 9.0 }; cvar; external;
 {$endif}
 

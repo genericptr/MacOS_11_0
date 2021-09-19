@@ -34,7 +34,7 @@ type
 const
   SKCloudServiceCapabilityNone = 0;
   SKCloudServiceCapabilityMusicCatalogPlayback = 1 shl 0;
-  SKCloudServiceCapabilityMusicCatalogSubscriptionEligible = 1 shl 1 { available in ios , tvos , watchos , macos , macCatalyst  };
+  SKCloudServiceCapabilityMusicCatalogSubscriptionEligible = 1 shl 1 { available in ios 10.1, tvos 10.1, watchos 7.0, macos 11.0, macCatalyst 13.0 };
   SKCloudServiceCapabilityAddToCloudMusicLibrary = 1 shl 8;
 {$endif}
 
@@ -43,20 +43,20 @@ const
 type
   SKCloudServiceController = objcclass external (NSObject)
   public
-    class function authorizationStatus: SKCloudServiceAuthorizationStatus; message 'authorizationStatus'; { available in ios , tvos , watchos , macos , macCatalyst  }
-    class procedure requestAuthorization (handler: SKCloudServiceControllerRequestAuthorizationCallback); message 'requestAuthorization:'; { available in ios , tvos , watchos , macos , macCatalyst  }
-    procedure requestCapabilitiesWithCompletionHandler (completionHandler: SKCloudServiceControllerRequestCapabilitiesWithCompletionHandlerCallback); message 'requestCapabilitiesWithCompletionHandler:'; { available in ios , tvos , watchos , macos , macCatalyst  }
-    procedure requestStorefrontCountryCodeWithCompletionHandler (completionHandler: SKCloudServiceControllerRequestStorefrontCountryCodeWithCompletionHandlerCallback); message 'requestStorefrontCountryCodeWithCompletionHandler:'; { available in ios  }
-    procedure requestStorefrontIdentifierWithCompletionHandler (completionHandler: SKCloudServiceControllerRequestStorefrontIdentifierWithCompletionHandlerCallback); message 'requestStorefrontIdentifierWithCompletionHandler:'; { available in ios , tvos , watchos , macos , macCatalyst  }
-    procedure requestUserTokenForDeveloperToken_completionHandler (developerToken: NSString; completionHandler: SKCloudServiceControllerRequestUserTokenForDeveloperTokenCallback); message 'requestUserTokenForDeveloperToken:completionHandler:'; { available in ios , tvos , watchos , macos , macCatalyst  }
+    class function authorizationStatus: SKCloudServiceAuthorizationStatus; message 'authorizationStatus'; { available in ios 9.3, tvos 9.3, watchos 7.0, macos 11.0, macCatalyst 13.0 }
+    class procedure requestAuthorization (handler: SKCloudServiceControllerRequestAuthorizationCallback); message 'requestAuthorization:'; { available in ios 9.3, tvos 9.3, watchos 7.0, macos 11.0, macCatalyst 13.0 }
+    procedure requestCapabilitiesWithCompletionHandler (completionHandler: SKCloudServiceControllerRequestCapabilitiesWithCompletionHandlerCallback); message 'requestCapabilitiesWithCompletionHandler:'; { available in ios 9.3, tvos 9.3, watchos 7.0, macos 11.0, macCatalyst 13.0 }
+    procedure requestStorefrontCountryCodeWithCompletionHandler (completionHandler: SKCloudServiceControllerRequestStorefrontCountryCodeWithCompletionHandlerCallback); message 'requestStorefrontCountryCodeWithCompletionHandler:'; { available in ios 11.0 }
+    procedure requestStorefrontIdentifierWithCompletionHandler (completionHandler: SKCloudServiceControllerRequestStorefrontIdentifierWithCompletionHandlerCallback); message 'requestStorefrontIdentifierWithCompletionHandler:'; { available in ios 9.3, tvos 9.3, watchos 7.0, macos 11.0, macCatalyst 13.0 }
+    procedure requestUserTokenForDeveloperToken_completionHandler (developerToken: NSString; completionHandler: SKCloudServiceControllerRequestUserTokenForDeveloperTokenCallback); message 'requestUserTokenForDeveloperToken:completionHandler:'; { available in ios 11.0, tvos 11.0, watchos 7.0, macos 11.0, macCatalyst 13.0 }
     procedure requestPersonalizationTokenForClientToken_withCompletionHandler (clientToken: NSString; completionHandler: SKCloudServiceControllerRequestPersonalizationTokenForClientTokenCallback); message 'requestPersonalizationTokenForClientToken:withCompletionHandler:'; { unavailable in watchos, macos, macCatalyst }
   end;
 {$endif}
 
 {$ifdef EXTERNAL_SYMBOLS}
 var
-  SKCloudServiceCapabilitiesDidChangeNotification: NSNotificationName { available in ios , tvos , watchos , macos , macCatalyst  }; cvar; external;
-  SKStorefrontCountryCodeDidChangeNotification: NSNotificationName { available in ios , tvos , watchos , macos , macCatalyst  }; cvar; external;
-  SKStorefrontIdentifierDidChangeNotification: NSNotificationName { available in ios , tvos , watchos , macos , macCatalyst  }; cvar; external;
+  SKCloudServiceCapabilitiesDidChangeNotification: NSNotificationName { available in ios 9.3, tvos 9.3, watchos 7.0, macos 11.0, macCatalyst 13.0 }; cvar; external;
+  SKStorefrontCountryCodeDidChangeNotification: NSNotificationName { available in ios 11.0, tvos 11.0, watchos 7.0, macos 11.0, macCatalyst 13.0 }; cvar; external;
+  SKStorefrontIdentifierDidChangeNotification: NSNotificationName { available in ios 9.3, tvos 9.3, watchos 7.0, macos 11.0, macCatalyst 13.0 }; cvar; external;
 {$endif}
 

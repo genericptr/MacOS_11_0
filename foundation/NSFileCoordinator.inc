@@ -23,8 +23,8 @@ type
 const
   NSFileCoordinatorReadingWithoutChanges = 1 shl 0;
   NSFileCoordinatorReadingResolvesSymbolicLink = 1 shl 1;
-  NSFileCoordinatorReadingImmediatelyAvailableMetadataOnly = 1 shl 2 { available in macos , ios , watchos , tvos  };
-  NSFileCoordinatorReadingForUploading = 1 shl 3 { available in macos , ios , watchos , tvos  };
+  NSFileCoordinatorReadingImmediatelyAvailableMetadataOnly = 1 shl 2 { available in macos 10.10, ios 8.0, watchos 2.0, tvos 9.0 };
+  NSFileCoordinatorReadingForUploading = 1 shl 3 { available in macos 10.10, ios 8.0, watchos 2.0, tvos 9.0 };
 
 type
   NSFileCoordinatorWritingOptions = NSUInteger;
@@ -35,7 +35,7 @@ const
   NSFileCoordinatorWritingForMoving = 1 shl 1;
   NSFileCoordinatorWritingForMerging = 1 shl 2;
   NSFileCoordinatorWritingForReplacing = 1 shl 3;
-  NSFileCoordinatorWritingContentIndependentMetadataOnly = 1 shl 4 { available in macos , ios , watchos , tvos  };
+  NSFileCoordinatorWritingContentIndependentMetadataOnly = 1 shl 4 { available in macos 10.10, ios 8.0, watchos 2.0, tvos 9.0 };
 {$endif}
 
 {$ifdef CLASSES}
@@ -67,17 +67,17 @@ type
     class procedure removeFilePresenter (filePresenter: NSFilePresenterProtocol); message 'removeFilePresenter:';
     class function filePresenters: NSArray; message 'filePresenters';
     function initWithFilePresenter (filePresenterOrNil: NSFilePresenterProtocol): id; message 'initWithFilePresenter:'; { NS_DESIGNATED_INITIALIZER }
-    procedure setPurposeIdentifier(newValue: NSString); message 'setPurposeIdentifier:'; { available in macos , ios , watchos , tvos  }
-    function purposeIdentifier: NSString; message 'purposeIdentifier'; { available in macos , ios , watchos , tvos  }
-    procedure coordinateAccessWithIntents_queue_byAccessor (intents: NSArray; queue: NSOperationQueue; accessor: NSFileCoordinatorCoordinateAccessWithIntentsCallback); message 'coordinateAccessWithIntents:queue:byAccessor:'; { available in macos , ios , watchos , tvos  }
+    procedure setPurposeIdentifier(newValue: NSString); message 'setPurposeIdentifier:'; { available in macos 10.7, ios 5.0, watchos 2.0, tvos 9.0 }
+    function purposeIdentifier: NSString; message 'purposeIdentifier'; { available in macos 10.7, ios 5.0, watchos 2.0, tvos 9.0 }
+    procedure coordinateAccessWithIntents_queue_byAccessor (intents: NSArray; queue: NSOperationQueue; accessor: NSFileCoordinatorCoordinateAccessWithIntentsCallback); message 'coordinateAccessWithIntents:queue:byAccessor:'; { available in macos 10.10, ios 8.0, watchos 2.0, tvos 9.0 }
     procedure coordinateReadingItemAtURL_options_error_byAccessor (url: NSURL; options: NSFileCoordinatorReadingOptions; outError: NSErrorPtr; reader: NSFileCoordinatorCoordinateReadingItemAtURLCallback); message 'coordinateReadingItemAtURL:options:error:byAccessor:';
     procedure coordinateWritingItemAtURL_options_error_byAccessor (url: NSURL; options: NSFileCoordinatorWritingOptions; outError: NSErrorPtr; writer: NSFileCoordinatorCoordinateWritingItemAtURLCallback); message 'coordinateWritingItemAtURL:options:error:byAccessor:';
     procedure coordinateReadingItemAtURL_options_writingItemAtURL_options_error_byAccessor (readingURL: NSURL; readingOptions: NSFileCoordinatorReadingOptions; writingURL: NSURL; writingOptions: NSFileCoordinatorWritingOptions; outError: NSErrorPtr; readerWriter: NSFileCoordinatorCoordinateReadingItemAtURLCallback); message 'coordinateReadingItemAtURL:options:writingItemAtURL:options:error:byAccessor:';
     procedure coordinateWritingItemAtURL_options_writingItemAtURL_options_error_byAccessor (url1: NSURL; options1: NSFileCoordinatorWritingOptions; url2: NSURL; options2: NSFileCoordinatorWritingOptions; outError: NSErrorPtr; writer: NSFileCoordinatorCoordinateWritingItemAtURLCallback); message 'coordinateWritingItemAtURL:options:writingItemAtURL:options:error:byAccessor:';
     procedure prepareForReadingItemsAtURLs_options_writingItemsAtURLs_options_error_byAccessor (readingURLs: NSArray; readingOptions: NSFileCoordinatorReadingOptions; writingURLs: NSArray; writingOptions: NSFileCoordinatorWritingOptions; outError: NSErrorPtr; batchAccessor: NSFileCoordinatorPrepareForReadingItemsAtURLsCallback); message 'prepareForReadingItemsAtURLs:options:writingItemsAtURLs:options:error:byAccessor:';
-    procedure itemAtURL_willMoveToURL (oldURL: NSURL; newURL: NSURL); message 'itemAtURL:willMoveToURL:'; { available in macos , ios , watchos , tvos  }
+    procedure itemAtURL_willMoveToURL (oldURL: NSURL; newURL: NSURL); message 'itemAtURL:willMoveToURL:'; { available in macos 10.8, ios 6.0, watchos 2.0, tvos 9.0 }
     procedure itemAtURL_didMoveToURL (oldURL: NSURL; newURL: NSURL); message 'itemAtURL:didMoveToURL:';
-    procedure itemAtURL_didChangeUbiquityAttributes (url: NSURL; attributes: NSSet); message 'itemAtURL:didChangeUbiquityAttributes:'; { unavailable in watchos, tvos }
+    procedure itemAtURL_didChangeUbiquityAttributes (url: NSURL; attributes: NSSet); message 'itemAtURL:didChangeUbiquityAttributes:'; { unavailable in watchos, tvos } { available in macos 10.13, ios 11.0 }
     procedure cancel; message 'cancel';
   end;
 {$endif}

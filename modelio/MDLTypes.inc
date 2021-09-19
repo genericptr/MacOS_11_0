@@ -9,11 +9,11 @@ type
 
 {$ifdef EXTERNAL_SYMBOLS}
 var
-  kUTTypeAlembic: NSString { available in macos , ios , tvos  }; cvar; external;
-  kUTType3dObject: NSString { available in macos , ios , tvos  }; cvar; external;
-  kUTTypePolygon: NSString { available in macos , ios , tvos  }; cvar; external;
-  kUTTypeStereolithography: NSString { available in macos , ios , tvos  }; cvar; external;
-  kUTTypeUniversalSceneDescription: NSString { available in macos , ios , tvos  }; cvar; external;
+  kUTTypeAlembic: NSString { available in macos 10.11, ios 9.0, tvos 9.0 }; cvar; external;
+  kUTType3dObject: NSString { available in macos 10.11, ios 9.0, tvos 9.0 }; cvar; external;
+  kUTTypePolygon: NSString { available in macos 10.11, ios 9.0, tvos 9.0 }; cvar; external;
+  kUTTypeStereolithography: NSString { available in macos 10.11, ios 9.0, tvos 9.0 }; cvar; external;
+  kUTTypeUniversalSceneDescription: NSString { available in macos 10.12, ios 10.0, tvos 9.0 }; cvar; external;
 {$endif}
 
 {$ifdef TYPES}

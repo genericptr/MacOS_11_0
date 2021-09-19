@@ -15,7 +15,7 @@ type
     function predictedFeatureName: NSString; message 'predictedFeatureName';
     function predictedProbabilitiesName: NSString; message 'predictedProbabilitiesName';
     function metadata: NSDictionary; message 'metadata';
-    function classLabels: NSArray; message 'classLabels'; { available in macos , ios , watchos , tvos  }
+    function classLabels: NSArray; message 'classLabels'; { available in macos 11.0, ios 14.0, watchos 7.0, tvos 14.0 }
 
     { Adopted protocols }
     procedure encodeWithCoder (coder: NSCoder); message 'encodeWithCoder:';

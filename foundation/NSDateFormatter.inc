@@ -43,16 +43,16 @@ type
     _formatter: CFDateFormatterRef;
     _counter: NSUInteger;
   public
-    procedure setFormattingContext(newValue: NSFormattingContext); message 'setFormattingContext:'; { available in macos , ios , watchos , tvos  }
-    function formattingContext: NSFormattingContext; message 'formattingContext'; { available in macos , ios , watchos , tvos  }
+    procedure setFormattingContext(newValue: NSFormattingContext); message 'setFormattingContext:'; { available in macos 10.10, ios 8.0, watchos 2.0, tvos 9.0 }
+    function formattingContext: NSFormattingContext; message 'formattingContext'; { available in macos 10.10, ios 8.0, watchos 2.0, tvos 9.0 }
     function getObjectValue_forString_range_error (obj: idPtr; string_: NSString; rangep: NSRangePtr; error: NSErrorPtr): objcbool; message 'getObjectValue:forString:range:error:';
     function stringFromDate (date: NSDate): NSString; message 'stringFromDate:';
     function dateFromString (string_: NSString): NSDate; message 'dateFromString:';
-    class function localizedStringFromDate_dateStyle_timeStyle (date: NSDate; dstyle: NSDateFormatterStyle; tstyle: NSDateFormatterStyle): NSString; message 'localizedStringFromDate:dateStyle:timeStyle:'; { available in macos , ios , watchos , tvos  }
-    class function dateFormatFromTemplate_options_locale (tmplate: NSString; opts: NSUInteger; locale: NSLocale): NSString; message 'dateFormatFromTemplate:options:locale:'; { available in macos , ios , watchos , tvos  }
+    class function localizedStringFromDate_dateStyle_timeStyle (date: NSDate; dstyle: NSDateFormatterStyle; tstyle: NSDateFormatterStyle): NSString; message 'localizedStringFromDate:dateStyle:timeStyle:'; { available in macos 10.6, ios 4.0, watchos 2.0, tvos 9.0 }
+    class function dateFormatFromTemplate_options_locale (tmplate: NSString; opts: NSUInteger; locale: NSLocale): NSString; message 'dateFormatFromTemplate:options:locale:'; { available in macos 10.6, ios 4.0, watchos 2.0, tvos 9.0 }
     class procedure setDefaultFormatterBehavior(newValue: NSDateFormatterBehavior); message 'setDefaultFormatterBehavior:';
     class function defaultFormatterBehavior: NSDateFormatterBehavior; message 'defaultFormatterBehavior';
-    procedure setLocalizedDateFormatFromTemplate (dateFormatTemplate: NSString); message 'setLocalizedDateFormatFromTemplate:'; { available in macos , ios , watchos , tvos  }
+    procedure setLocalizedDateFormatFromTemplate (dateFormatTemplate: NSString); message 'setLocalizedDateFormatFromTemplate:'; { available in macos 10.10, ios 8.0, watchos 2.0, tvos 9.0 }
     procedure setDateFormat(newValue: NSString); message 'setDateFormat:';
     function dateFormat: NSString; message 'dateFormat';
     procedure setDateStyle(newValue: NSDateFormatterStyle); message 'setDateStyle:';
@@ -89,36 +89,36 @@ type
     function AMSymbol: NSString; message 'AMSymbol';
     procedure setPMSymbol(newValue: NSString); message 'setPMSymbol:';
     function PMSymbol: NSString; message 'PMSymbol';
-    procedure setLongEraSymbols(newValue: NSArray); message 'setLongEraSymbols:'; { available in macos , ios , watchos , tvos  }
-    function longEraSymbols: NSArray; message 'longEraSymbols'; { available in macos , ios , watchos , tvos  }
-    procedure setVeryShortMonthSymbols(newValue: NSArray); message 'setVeryShortMonthSymbols:'; { available in macos , ios , watchos , tvos  }
-    function veryShortMonthSymbols: NSArray; message 'veryShortMonthSymbols'; { available in macos , ios , watchos , tvos  }
-    procedure setStandaloneMonthSymbols(newValue: NSArray); message 'setStandaloneMonthSymbols:'; { available in macos , ios , watchos , tvos  }
-    function standaloneMonthSymbols: NSArray; message 'standaloneMonthSymbols'; { available in macos , ios , watchos , tvos  }
-    procedure setShortStandaloneMonthSymbols(newValue: NSArray); message 'setShortStandaloneMonthSymbols:'; { available in macos , ios , watchos , tvos  }
-    function shortStandaloneMonthSymbols: NSArray; message 'shortStandaloneMonthSymbols'; { available in macos , ios , watchos , tvos  }
-    procedure setVeryShortStandaloneMonthSymbols(newValue: NSArray); message 'setVeryShortStandaloneMonthSymbols:'; { available in macos , ios , watchos , tvos  }
-    function veryShortStandaloneMonthSymbols: NSArray; message 'veryShortStandaloneMonthSymbols'; { available in macos , ios , watchos , tvos  }
-    procedure setVeryShortWeekdaySymbols(newValue: NSArray); message 'setVeryShortWeekdaySymbols:'; { available in macos , ios , watchos , tvos  }
-    function veryShortWeekdaySymbols: NSArray; message 'veryShortWeekdaySymbols'; { available in macos , ios , watchos , tvos  }
-    procedure setStandaloneWeekdaySymbols(newValue: NSArray); message 'setStandaloneWeekdaySymbols:'; { available in macos , ios , watchos , tvos  }
-    function standaloneWeekdaySymbols: NSArray; message 'standaloneWeekdaySymbols'; { available in macos , ios , watchos , tvos  }
-    procedure setShortStandaloneWeekdaySymbols(newValue: NSArray); message 'setShortStandaloneWeekdaySymbols:'; { available in macos , ios , watchos , tvos  }
-    function shortStandaloneWeekdaySymbols: NSArray; message 'shortStandaloneWeekdaySymbols'; { available in macos , ios , watchos , tvos  }
-    procedure setVeryShortStandaloneWeekdaySymbols(newValue: NSArray); message 'setVeryShortStandaloneWeekdaySymbols:'; { available in macos , ios , watchos , tvos  }
-    function veryShortStandaloneWeekdaySymbols: NSArray; message 'veryShortStandaloneWeekdaySymbols'; { available in macos , ios , watchos , tvos  }
-    procedure setQuarterSymbols(newValue: NSArray); message 'setQuarterSymbols:'; { available in macos , ios , watchos , tvos  }
-    function quarterSymbols: NSArray; message 'quarterSymbols'; { available in macos , ios , watchos , tvos  }
-    procedure setShortQuarterSymbols(newValue: NSArray); message 'setShortQuarterSymbols:'; { available in macos , ios , watchos , tvos  }
-    function shortQuarterSymbols: NSArray; message 'shortQuarterSymbols'; { available in macos , ios , watchos , tvos  }
-    procedure setStandaloneQuarterSymbols(newValue: NSArray); message 'setStandaloneQuarterSymbols:'; { available in macos , ios , watchos , tvos  }
-    function standaloneQuarterSymbols: NSArray; message 'standaloneQuarterSymbols'; { available in macos , ios , watchos , tvos  }
-    procedure setShortStandaloneQuarterSymbols(newValue: NSArray); message 'setShortStandaloneQuarterSymbols:'; { available in macos , ios , watchos , tvos  }
-    function shortStandaloneQuarterSymbols: NSArray; message 'shortStandaloneQuarterSymbols'; { available in macos , ios , watchos , tvos  }
-    procedure setGregorianStartDate(newValue: NSDate); message 'setGregorianStartDate:'; { available in macos , ios , watchos , tvos  }
-    function gregorianStartDate: NSDate; message 'gregorianStartDate'; { available in macos , ios , watchos , tvos  }
-    procedure setDoesRelativeDateFormatting(newValue: objcbool); message 'setDoesRelativeDateFormatting:'; { available in macos , ios , watchos , tvos  }
-    function doesRelativeDateFormatting: objcbool; message 'doesRelativeDateFormatting'; { available in macos , ios , watchos , tvos  }
+    procedure setLongEraSymbols(newValue: NSArray); message 'setLongEraSymbols:'; { available in macos 10.5, ios 2.0, watchos 2.0, tvos 9.0 }
+    function longEraSymbols: NSArray; message 'longEraSymbols'; { available in macos 10.5, ios 2.0, watchos 2.0, tvos 9.0 }
+    procedure setVeryShortMonthSymbols(newValue: NSArray); message 'setVeryShortMonthSymbols:'; { available in macos 10.5, ios 2.0, watchos 2.0, tvos 9.0 }
+    function veryShortMonthSymbols: NSArray; message 'veryShortMonthSymbols'; { available in macos 10.5, ios 2.0, watchos 2.0, tvos 9.0 }
+    procedure setStandaloneMonthSymbols(newValue: NSArray); message 'setStandaloneMonthSymbols:'; { available in macos 10.5, ios 2.0, watchos 2.0, tvos 9.0 }
+    function standaloneMonthSymbols: NSArray; message 'standaloneMonthSymbols'; { available in macos 10.5, ios 2.0, watchos 2.0, tvos 9.0 }
+    procedure setShortStandaloneMonthSymbols(newValue: NSArray); message 'setShortStandaloneMonthSymbols:'; { available in macos 10.5, ios 2.0, watchos 2.0, tvos 9.0 }
+    function shortStandaloneMonthSymbols: NSArray; message 'shortStandaloneMonthSymbols'; { available in macos 10.5, ios 2.0, watchos 2.0, tvos 9.0 }
+    procedure setVeryShortStandaloneMonthSymbols(newValue: NSArray); message 'setVeryShortStandaloneMonthSymbols:'; { available in macos 10.5, ios 2.0, watchos 2.0, tvos 9.0 }
+    function veryShortStandaloneMonthSymbols: NSArray; message 'veryShortStandaloneMonthSymbols'; { available in macos 10.5, ios 2.0, watchos 2.0, tvos 9.0 }
+    procedure setVeryShortWeekdaySymbols(newValue: NSArray); message 'setVeryShortWeekdaySymbols:'; { available in macos 10.5, ios 2.0, watchos 2.0, tvos 9.0 }
+    function veryShortWeekdaySymbols: NSArray; message 'veryShortWeekdaySymbols'; { available in macos 10.5, ios 2.0, watchos 2.0, tvos 9.0 }
+    procedure setStandaloneWeekdaySymbols(newValue: NSArray); message 'setStandaloneWeekdaySymbols:'; { available in macos 10.5, ios 2.0, watchos 2.0, tvos 9.0 }
+    function standaloneWeekdaySymbols: NSArray; message 'standaloneWeekdaySymbols'; { available in macos 10.5, ios 2.0, watchos 2.0, tvos 9.0 }
+    procedure setShortStandaloneWeekdaySymbols(newValue: NSArray); message 'setShortStandaloneWeekdaySymbols:'; { available in macos 10.5, ios 2.0, watchos 2.0, tvos 9.0 }
+    function shortStandaloneWeekdaySymbols: NSArray; message 'shortStandaloneWeekdaySymbols'; { available in macos 10.5, ios 2.0, watchos 2.0, tvos 9.0 }
+    procedure setVeryShortStandaloneWeekdaySymbols(newValue: NSArray); message 'setVeryShortStandaloneWeekdaySymbols:'; { available in macos 10.5, ios 2.0, watchos 2.0, tvos 9.0 }
+    function veryShortStandaloneWeekdaySymbols: NSArray; message 'veryShortStandaloneWeekdaySymbols'; { available in macos 10.5, ios 2.0, watchos 2.0, tvos 9.0 }
+    procedure setQuarterSymbols(newValue: NSArray); message 'setQuarterSymbols:'; { available in macos 10.5, ios 2.0, watchos 2.0, tvos 9.0 }
+    function quarterSymbols: NSArray; message 'quarterSymbols'; { available in macos 10.5, ios 2.0, watchos 2.0, tvos 9.0 }
+    procedure setShortQuarterSymbols(newValue: NSArray); message 'setShortQuarterSymbols:'; { available in macos 10.5, ios 2.0, watchos 2.0, tvos 9.0 }
+    function shortQuarterSymbols: NSArray; message 'shortQuarterSymbols'; { available in macos 10.5, ios 2.0, watchos 2.0, tvos 9.0 }
+    procedure setStandaloneQuarterSymbols(newValue: NSArray); message 'setStandaloneQuarterSymbols:'; { available in macos 10.5, ios 2.0, watchos 2.0, tvos 9.0 }
+    function standaloneQuarterSymbols: NSArray; message 'standaloneQuarterSymbols'; { available in macos 10.5, ios 2.0, watchos 2.0, tvos 9.0 }
+    procedure setShortStandaloneQuarterSymbols(newValue: NSArray); message 'setShortStandaloneQuarterSymbols:'; { available in macos 10.5, ios 2.0, watchos 2.0, tvos 9.0 }
+    function shortStandaloneQuarterSymbols: NSArray; message 'shortStandaloneQuarterSymbols'; { available in macos 10.5, ios 2.0, watchos 2.0, tvos 9.0 }
+    procedure setGregorianStartDate(newValue: NSDate); message 'setGregorianStartDate:'; { available in macos 10.5, ios 2.0, watchos 2.0, tvos 9.0 }
+    function gregorianStartDate: NSDate; message 'gregorianStartDate'; { available in macos 10.5, ios 2.0, watchos 2.0, tvos 9.0 }
+    procedure setDoesRelativeDateFormatting(newValue: objcbool); message 'setDoesRelativeDateFormatting:'; { available in macos 10.6, ios 4.0, watchos 2.0, tvos 9.0 }
+    function doesRelativeDateFormatting: objcbool; message 'doesRelativeDateFormatting'; { available in macos 10.6, ios 4.0, watchos 2.0, tvos 9.0 }
   end;
 {$endif}
 

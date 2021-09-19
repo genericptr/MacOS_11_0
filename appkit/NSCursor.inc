@@ -18,7 +18,7 @@ type
   NSCursor = objcclass external (NSObject, NSCodingProtocol)
   public
     class function currentCursor: NSCursor; message 'currentCursor';
-    class function currentSystemCursor: NSCursor; message 'currentSystemCursor'; { available in macos  }
+    class function currentSystemCursor: NSCursor; message 'currentSystemCursor'; { available in macos 10.6 }
     class function arrowCursor: NSCursor; message 'arrowCursor';
     class function IBeamCursor: NSCursor; message 'IBeamCursor';
     class function pointingHandCursor: NSCursor; message 'pointingHandCursor';
@@ -32,11 +32,11 @@ type
     class function resizeUpDownCursor: NSCursor; message 'resizeUpDownCursor';
     class function crosshairCursor: NSCursor; message 'crosshairCursor';
     class function disappearingItemCursor: NSCursor; message 'disappearingItemCursor';
-    class function operationNotAllowedCursor: NSCursor; message 'operationNotAllowedCursor'; { available in macos  }
-    class function dragLinkCursor: NSCursor; message 'dragLinkCursor'; { available in macos  }
-    class function dragCopyCursor: NSCursor; message 'dragCopyCursor'; { available in macos  }
-    class function contextualMenuCursor: NSCursor; message 'contextualMenuCursor'; { available in macos  }
-    class function IBeamCursorForVerticalLayout: NSCursor; message 'IBeamCursorForVerticalLayout'; { available in macos  }
+    class function operationNotAllowedCursor: NSCursor; message 'operationNotAllowedCursor'; { available in macos 10.5 }
+    class function dragLinkCursor: NSCursor; message 'dragLinkCursor'; { available in macos 10.6 }
+    class function dragCopyCursor: NSCursor; message 'dragCopyCursor'; { available in macos 10.6 }
+    class function contextualMenuCursor: NSCursor; message 'contextualMenuCursor'; { available in macos 10.6 }
+    class function IBeamCursorForVerticalLayout: NSCursor; message 'IBeamCursorForVerticalLayout'; { available in macos 10.7 }
     {$if  not defined(TARGET_OS_IPHONE)}
     function initWithImage_hotSpot (newImage: NSImage; point: NSPoint): id; message 'initWithImage:hotSpot:'; { NS_DESIGNATED_INITIALIZER }
     {$else}

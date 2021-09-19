@@ -7,11 +7,11 @@ type
 
 {$ifdef EXTERNAL_SYMBOLS}
 var
-  NSAppleScriptErrorMessage: NSString { unavailable in ios, watchos, tvos }; cvar; external;
-  NSAppleScriptErrorNumber: NSString { unavailable in ios, watchos, tvos }; cvar; external;
-  NSAppleScriptErrorAppName: NSString { unavailable in ios, watchos, tvos }; cvar; external;
-  NSAppleScriptErrorBriefMessage: NSString { unavailable in ios, watchos, tvos }; cvar; external;
-  NSAppleScriptErrorRange: NSString { unavailable in ios, watchos, tvos }; cvar; external;
+  NSAppleScriptErrorMessage: NSString { unavailable in ios, watchos, tvos } { available in macos 10.2 }; cvar; external;
+  NSAppleScriptErrorNumber: NSString { unavailable in ios, watchos, tvos } { available in macos 10.2 }; cvar; external;
+  NSAppleScriptErrorAppName: NSString { unavailable in ios, watchos, tvos } { available in macos 10.2 }; cvar; external;
+  NSAppleScriptErrorBriefMessage: NSString { unavailable in ios, watchos, tvos } { available in macos 10.2 }; cvar; external;
+  NSAppleScriptErrorRange: NSString { unavailable in ios, watchos, tvos } { available in macos 10.2 }; cvar; external;
 {$endif}
 
 {$ifdef CLASSES}

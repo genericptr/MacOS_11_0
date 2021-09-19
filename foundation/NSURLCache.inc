@@ -52,12 +52,12 @@ type
     class procedure setSharedURLCache(newValue: NSURLCache); message 'setSharedURLCache:';
     class function sharedURLCache: NSURLCache; message 'sharedURLCache';
     function initWithMemoryCapacity_diskCapacity_diskPath (memoryCapacity: NSUInteger; diskCapacity: NSUInteger; path: NSString): id; message 'initWithMemoryCapacity:diskCapacity:diskPath:'; deprecated 'replace with initWithMemoryCapacity:diskCapacity:directoryURL:';
-    function initWithMemoryCapacity_diskCapacity_directoryURL (memoryCapacity: NSUInteger; diskCapacity: NSUInteger; directoryURL: NSURL): id; message 'initWithMemoryCapacity:diskCapacity:directoryURL:'; { available in macos , ios , watchos , tvos  }
+    function initWithMemoryCapacity_diskCapacity_directoryURL (memoryCapacity: NSUInteger; diskCapacity: NSUInteger; directoryURL: NSURL): id; message 'initWithMemoryCapacity:diskCapacity:directoryURL:'; { available in macos 10.15, ios 13.0, watchos 6.0, tvos 13.0 }
     function cachedResponseForRequest (request: NSURLRequest): NSCachedURLResponse; message 'cachedResponseForRequest:';
     procedure storeCachedResponse_forRequest (cachedResponse: NSCachedURLResponse; request: NSURLRequest); message 'storeCachedResponse:forRequest:';
     procedure removeCachedResponseForRequest (request: NSURLRequest); message 'removeCachedResponseForRequest:';
     procedure removeAllCachedResponses; message 'removeAllCachedResponses';
-    procedure removeCachedResponsesSinceDate (date: NSDate); message 'removeCachedResponsesSinceDate:'; { available in macos , ios , watchos , tvos  }
+    procedure removeCachedResponsesSinceDate (date: NSDate); message 'removeCachedResponsesSinceDate:'; { available in macos 10.10, ios 8.0, watchos 2.0, tvos 9.0 }
     procedure setMemoryCapacity(newValue: NSUInteger); message 'setMemoryCapacity:';
     function memoryCapacity: NSUInteger; message 'memoryCapacity';
     procedure setDiskCapacity(newValue: NSUInteger); message 'setDiskCapacity:';
@@ -69,9 +69,9 @@ type
 
 type
   NSURLCache_NSURLSessionTaskAdditions = objccategory external name 'NSURLSessionTaskAdditions' (NSURLCache)
-    procedure storeCachedResponse_forDataTask (cachedResponse: NSCachedURLResponse; dataTask: NSURLSessionDataTask); message 'storeCachedResponse:forDataTask:'; { available in macos , ios , watchos , tvos  }
-    procedure getCachedResponseForDataTask_completionHandler (dataTask: NSURLSessionDataTask; completionHandler: NSURLCacheGetCachedResponseForDataTaskCallback); message 'getCachedResponseForDataTask:completionHandler:'; { available in macos , ios , watchos , tvos  }
-    procedure removeCachedResponseForDataTask (dataTask: NSURLSessionDataTask); message 'removeCachedResponseForDataTask:'; { available in macos , ios , watchos , tvos  }
+    procedure storeCachedResponse_forDataTask (cachedResponse: NSCachedURLResponse; dataTask: NSURLSessionDataTask); message 'storeCachedResponse:forDataTask:'; { available in macos 10.10, ios 8.0, watchos 2.0, tvos 9.0 }
+    procedure getCachedResponseForDataTask_completionHandler (dataTask: NSURLSessionDataTask; completionHandler: NSURLCacheGetCachedResponseForDataTaskCallback); message 'getCachedResponseForDataTask:completionHandler:'; { available in macos 10.10, ios 8.0, watchos 2.0, tvos 9.0 }
+    procedure removeCachedResponseForDataTask (dataTask: NSURLSessionDataTask); message 'removeCachedResponseForDataTask:'; { available in macos 10.10, ios 8.0, watchos 2.0, tvos 9.0 }
   end;
 {$endif}
 

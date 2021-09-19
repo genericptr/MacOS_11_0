@@ -4,9 +4,9 @@
 {$ifdef TYPES}
 
 type
-  AVAssetWriterInputMediaDataLocation = NSString { unavailable in watchos };
+  AVAssetWriterInputMediaDataLocation = NSString { unavailable in watchos } { available in macos 10.13, ios 11.0, tvos 11.0 };
 type
-  AVAssetWriterInputMediaDataLocationPtr = ^AVAssetWriterInputMediaDataLocation { unavailable in watchos };
+  AVAssetWriterInputMediaDataLocationPtr = ^AVAssetWriterInputMediaDataLocation { unavailable in watchos } { available in macos 10.13, ios 11.0, tvos 11.0 };
 {$endif}
 
 
@@ -33,12 +33,12 @@ type
     _internal: AVAssetWriterInputInternal;
   public
     class function assetWriterInputWithMediaType_outputSettings (mediaType: AVMediaType; outputSettings: NSDictionary): id; message 'assetWriterInputWithMediaType:outputSettings:';
-    class function assetWriterInputWithMediaType_outputSettings_sourceFormatHint (mediaType: AVMediaType; outputSettings: NSDictionary; sourceFormatHint: CMFormatDescriptionRef): id; message 'assetWriterInputWithMediaType:outputSettings:sourceFormatHint:'; { unavailable in watchos }
+    class function assetWriterInputWithMediaType_outputSettings_sourceFormatHint (mediaType: AVMediaType; outputSettings: NSDictionary; sourceFormatHint: CMFormatDescriptionRef): id; message 'assetWriterInputWithMediaType:outputSettings:sourceFormatHint:'; { unavailable in watchos } { available in macos 10.8, ios 6.0, tvos 9.0 }
     function initWithMediaType_outputSettings (mediaType: AVMediaType; outputSettings: NSDictionary): id; message 'initWithMediaType:outputSettings:';
-    function initWithMediaType_outputSettings_sourceFormatHint (mediaType: AVMediaType; outputSettings: NSDictionary; sourceFormatHint: CMFormatDescriptionRef): id; message 'initWithMediaType:outputSettings:sourceFormatHint:'; { unavailable in watchos }
+    function initWithMediaType_outputSettings_sourceFormatHint (mediaType: AVMediaType; outputSettings: NSDictionary; sourceFormatHint: CMFormatDescriptionRef): id; message 'initWithMediaType:outputSettings:sourceFormatHint:'; { unavailable in watchos } { available in macos 10.8, ios 6.0, tvos 9.0 }
     function mediaType: AVMediaType; message 'mediaType';
     function outputSettings: NSDictionary; message 'outputSettings';
-    function sourceFormatHint: CMFormatDescriptionRef; message 'sourceFormatHint'; { unavailable in watchos }
+    function sourceFormatHint: CMFormatDescriptionRef; message 'sourceFormatHint'; { unavailable in watchos } { available in macos 10.8, ios 6.0, tvos 9.0 }
     procedure setMetadata(newValue: NSArray); message 'setMetadata:';
     function metadata: NSArray; message 'metadata';
     function isReadyForMoreMediaData: objcbool; message 'isReadyForMoreMediaData';
@@ -52,56 +52,56 @@ type
 
 type
   AVAssetWriterInputLanguageProperties = objccategory external (AVAssetWriterInput)
-    procedure setLanguageCode(newValue: NSString); message 'setLanguageCode:'; { unavailable in watchos }
-    function languageCode: NSString; message 'languageCode'; { unavailable in watchos }
-    procedure setExtendedLanguageTag(newValue: NSString); message 'setExtendedLanguageTag:'; { unavailable in watchos }
-    function extendedLanguageTag: NSString; message 'extendedLanguageTag'; { unavailable in watchos }
+    procedure setLanguageCode(newValue: NSString); message 'setLanguageCode:'; { unavailable in watchos } { available in macos 10.9, ios 7.0, tvos 9.0 }
+    function languageCode: NSString; message 'languageCode'; { unavailable in watchos } { available in macos 10.9, ios 7.0, tvos 9.0 }
+    procedure setExtendedLanguageTag(newValue: NSString); message 'setExtendedLanguageTag:'; { unavailable in watchos } { available in macos 10.9, ios 7.0, tvos 9.0 }
+    function extendedLanguageTag: NSString; message 'extendedLanguageTag'; { unavailable in watchos } { available in macos 10.9, ios 7.0, tvos 9.0 }
   end;
 
 type
   AVAssetWriterInputPropertiesForVisualCharacteristic = objccategory external (AVAssetWriterInput)
-    procedure setNaturalSize(newValue: CGSize); message 'setNaturalSize:'; { unavailable in watchos }
-    function naturalSize: CGSize; message 'naturalSize'; { unavailable in watchos }
+    procedure setNaturalSize(newValue: CGSize); message 'setNaturalSize:'; { unavailable in watchos } { available in macos 10.9, ios 7.0, tvos 9.0 }
+    function naturalSize: CGSize; message 'naturalSize'; { unavailable in watchos } { available in macos 10.9, ios 7.0, tvos 9.0 }
     procedure setTransform(newValue: CGAffineTransform); message 'setTransform:';
     function transform: CGAffineTransform; message 'transform';
   end;
 
 type
   AVAssetWriterInputPropertiesForAudibleCharacteristic = objccategory external (AVAssetWriterInput)
-    procedure setPreferredVolume(newValue: single); message 'setPreferredVolume:'; { unavailable in watchos }
-    function preferredVolume: single; message 'preferredVolume'; { unavailable in watchos }
+    procedure setPreferredVolume(newValue: single); message 'setPreferredVolume:'; { unavailable in watchos } { available in macos 10.9, ios 7.0, tvos 9.0 }
+    function preferredVolume: single; message 'preferredVolume'; { unavailable in watchos } { available in macos 10.9, ios 7.0, tvos 9.0 }
   end;
 
 type
   AVAssetWriterInputFileTypeSpecificProperties = objccategory external (AVAssetWriterInput)
-    procedure setMarksOutputTrackAsEnabled(newValue: objcbool); message 'setMarksOutputTrackAsEnabled:'; { unavailable in watchos }
-    function marksOutputTrackAsEnabled: objcbool; message 'marksOutputTrackAsEnabled'; { unavailable in watchos }
-    procedure setMediaTimeScale(newValue: CMTimeScale); message 'setMediaTimeScale:'; { unavailable in watchos }
-    function mediaTimeScale: CMTimeScale; message 'mediaTimeScale'; { unavailable in watchos }
-    procedure setPreferredMediaChunkDuration(newValue: CMTime); message 'setPreferredMediaChunkDuration:'; { unavailable in watchos }
-    function preferredMediaChunkDuration: CMTime; message 'preferredMediaChunkDuration'; { unavailable in watchos }
-    procedure setPreferredMediaChunkAlignment(newValue: NSInteger); message 'setPreferredMediaChunkAlignment:'; { unavailable in watchos }
-    function preferredMediaChunkAlignment: NSInteger; message 'preferredMediaChunkAlignment'; { unavailable in watchos }
-    procedure setSampleReferenceBaseURL(newValue: NSURL); message 'setSampleReferenceBaseURL:'; { unavailable in watchos }
-    function sampleReferenceBaseURL: NSURL; message 'sampleReferenceBaseURL'; { unavailable in watchos }
-    procedure setMediaDataLocation(newValue: AVAssetWriterInputMediaDataLocation); message 'setMediaDataLocation:'; { unavailable in watchos }
-    function mediaDataLocation: AVAssetWriterInputMediaDataLocation; message 'mediaDataLocation'; { unavailable in watchos }
+    procedure setMarksOutputTrackAsEnabled(newValue: objcbool); message 'setMarksOutputTrackAsEnabled:'; { unavailable in watchos } { available in macos 10.9, ios 7.0, tvos 9.0 }
+    function marksOutputTrackAsEnabled: objcbool; message 'marksOutputTrackAsEnabled'; { unavailable in watchos } { available in macos 10.9, ios 7.0, tvos 9.0 }
+    procedure setMediaTimeScale(newValue: CMTimeScale); message 'setMediaTimeScale:'; { unavailable in watchos } { available in macos 10.7, ios 4.3, tvos 9.0 }
+    function mediaTimeScale: CMTimeScale; message 'mediaTimeScale'; { unavailable in watchos } { available in macos 10.7, ios 4.3, tvos 9.0 }
+    procedure setPreferredMediaChunkDuration(newValue: CMTime); message 'setPreferredMediaChunkDuration:'; { unavailable in watchos } { available in macos 10.10, ios 8.0, tvos 9.0 }
+    function preferredMediaChunkDuration: CMTime; message 'preferredMediaChunkDuration'; { unavailable in watchos } { available in macos 10.10, ios 8.0, tvos 9.0 }
+    procedure setPreferredMediaChunkAlignment(newValue: NSInteger); message 'setPreferredMediaChunkAlignment:'; { unavailable in watchos } { available in macos 10.10, ios 8.0, tvos 9.0 }
+    function preferredMediaChunkAlignment: NSInteger; message 'preferredMediaChunkAlignment'; { unavailable in watchos } { available in macos 10.10, ios 8.0, tvos 9.0 }
+    procedure setSampleReferenceBaseURL(newValue: NSURL); message 'setSampleReferenceBaseURL:'; { unavailable in watchos } { available in macos 10.10, ios 8.0, tvos 9.0 }
+    function sampleReferenceBaseURL: NSURL; message 'sampleReferenceBaseURL'; { unavailable in watchos } { available in macos 10.10, ios 8.0, tvos 9.0 }
+    procedure setMediaDataLocation(newValue: AVAssetWriterInputMediaDataLocation); message 'setMediaDataLocation:'; { unavailable in watchos } { available in macos 10.13, ios 11.0, tvos 11.0 }
+    function mediaDataLocation: AVAssetWriterInputMediaDataLocation; message 'mediaDataLocation'; { unavailable in watchos } { available in macos 10.13, ios 11.0, tvos 11.0 }
   end;
 
 type
   AVAssetWriterInputTrackAssociations = objccategory external (AVAssetWriterInput)
-    function canAddTrackAssociationWithTrackOfInput_type (input: AVAssetWriterInput; trackAssociationType: NSString): objcbool; message 'canAddTrackAssociationWithTrackOfInput:type:'; { unavailable in watchos }
-    procedure addTrackAssociationWithTrackOfInput_type (input: AVAssetWriterInput; trackAssociationType: NSString); message 'addTrackAssociationWithTrackOfInput:type:'; { unavailable in watchos }
+    function canAddTrackAssociationWithTrackOfInput_type (input: AVAssetWriterInput; trackAssociationType: NSString): objcbool; message 'canAddTrackAssociationWithTrackOfInput:type:'; { unavailable in watchos } { available in macos 10.9, ios 7.0, tvos 9.0 }
+    procedure addTrackAssociationWithTrackOfInput_type (input: AVAssetWriterInput; trackAssociationType: NSString); message 'addTrackAssociationWithTrackOfInput:type:'; { unavailable in watchos } { available in macos 10.9, ios 7.0, tvos 9.0 }
   end;
 
 type
   AVAssetWriterInputMultiPass = objccategory external (AVAssetWriterInput)
-    procedure setPerformsMultiPassEncodingIfSupported(newValue: objcbool); message 'setPerformsMultiPassEncodingIfSupported:'; { unavailable in watchos }
-    function performsMultiPassEncodingIfSupported: objcbool; message 'performsMultiPassEncodingIfSupported'; { unavailable in watchos }
-    function canPerformMultiplePasses: objcbool; message 'canPerformMultiplePasses'; { unavailable in watchos }
-    function currentPassDescription: AVAssetWriterInputPassDescription; message 'currentPassDescription'; { unavailable in watchos }
-    procedure respondToEachPassDescriptionOnQueue_usingBlock (queue: dispatch_queue_t; block: dispatch_block_t); message 'respondToEachPassDescriptionOnQueue:usingBlock:'; { unavailable in watchos }
-    procedure markCurrentPassAsFinished; message 'markCurrentPassAsFinished'; { unavailable in watchos }
+    procedure setPerformsMultiPassEncodingIfSupported(newValue: objcbool); message 'setPerformsMultiPassEncodingIfSupported:'; { unavailable in watchos } { available in macos 10.10, ios 8.0, tvos 9.0 }
+    function performsMultiPassEncodingIfSupported: objcbool; message 'performsMultiPassEncodingIfSupported'; { unavailable in watchos } { available in macos 10.10, ios 8.0, tvos 9.0 }
+    function canPerformMultiplePasses: objcbool; message 'canPerformMultiplePasses'; { unavailable in watchos } { available in macos 10.10, ios 8.0, tvos 9.0 }
+    function currentPassDescription: AVAssetWriterInputPassDescription; message 'currentPassDescription'; { unavailable in watchos } { available in macos 10.10, ios 8.0, tvos 9.0 }
+    procedure respondToEachPassDescriptionOnQueue_usingBlock (queue: dispatch_queue_t; block: dispatch_block_t); message 'respondToEachPassDescriptionOnQueue:usingBlock:'; { unavailable in watchos } { available in macos 10.10, ios 8.0, tvos 9.0 }
+    procedure markCurrentPassAsFinished; message 'markCurrentPassAsFinished'; { unavailable in watchos } { available in macos 10.10, ios 8.0, tvos 9.0 }
   end;
 
 

@@ -60,12 +60,12 @@ type
 
 type
   UNNotificationContentExtension = objccategory external (NSExtensionContext)
-    procedure setNotificationActions(newValue: NSArray); message 'setNotificationActions:'; { unavailable in tvos, watchos }
-    function notificationActions: NSArray; message 'notificationActions'; { unavailable in tvos, watchos }
-    procedure performNotificationDefaultAction; message 'performNotificationDefaultAction'; { unavailable in tvos, watchos }
-    procedure dismissNotificationContentExtension; message 'dismissNotificationContentExtension'; { unavailable in tvos, watchos }
-    procedure mediaPlayingStarted; message 'mediaPlayingStarted'; { unavailable in tvos, watchos }
-    procedure mediaPlayingPaused; message 'mediaPlayingPaused'; { unavailable in tvos, watchos }
+    procedure setNotificationActions(newValue: NSArray); message 'setNotificationActions:'; { unavailable in tvos, watchos } { available in ios 12.0, macCatalyst 14.0, macos 11.0 }
+    function notificationActions: NSArray; message 'notificationActions'; { unavailable in tvos, watchos } { available in ios 12.0, macCatalyst 14.0, macos 11.0 }
+    procedure performNotificationDefaultAction; message 'performNotificationDefaultAction'; { unavailable in tvos, watchos } { available in ios 12.0, macCatalyst 14.0, macos 11.0 }
+    procedure dismissNotificationContentExtension; message 'dismissNotificationContentExtension'; { unavailable in tvos, watchos } { available in ios 12.0, macCatalyst 14.0, macos 11.0 }
+    procedure mediaPlayingStarted; message 'mediaPlayingStarted'; { unavailable in tvos, watchos } { available in ios 10.0, macCatalyst 14.0, macos 11.0 }
+    procedure mediaPlayingPaused; message 'mediaPlayingPaused'; { unavailable in tvos, watchos } { available in ios 10.0, macCatalyst 14.0, macos 11.0 }
   end;
 {$endif}
 

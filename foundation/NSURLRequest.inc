@@ -31,9 +31,9 @@ const
   NSURLNetworkServiceTypeBackground = 3;
   NSURLNetworkServiceTypeVoice = 4;
   NSURLNetworkServiceTypeResponsiveData = 6;
-  NSURLNetworkServiceTypeAVStreaming = 8 { available in macosx , ios , watchos , tvos  };
-  NSURLNetworkServiceTypeResponsiveAV = 9 { available in macosx , ios , watchos , tvos  };
-  NSURLNetworkServiceTypeCallSignaling = 11 { available in macosx , ios , watchos , tvos  };
+  NSURLNetworkServiceTypeAVStreaming = 8 { available in macosx 10.9, ios 7.0, watchos 2.0, tvos 9.0 };
+  NSURLNetworkServiceTypeResponsiveAV = 9 { available in macosx 10.9, ios 7.0, watchos 2.0, tvos 9.0 };
+  NSURLNetworkServiceTypeCallSignaling = 11 { available in macosx 10.12, ios 10.0, watchos 3.0, tvos 10.0 };
 {$endif}
 
 {$ifdef CLASSES}
@@ -52,11 +52,11 @@ type
     function cachePolicy: NSURLRequestCachePolicy; message 'cachePolicy';
     function timeoutInterval: NSTimeInterval; message 'timeoutInterval';
     function mainDocumentURL: NSURL; message 'mainDocumentURL';
-    function networkServiceType: NSURLRequestNetworkServiceType; message 'networkServiceType'; { available in macos , ios , watchos , tvos  }
-    function allowsCellularAccess: objcbool; message 'allowsCellularAccess'; { available in macos , ios , watchos , tvos  }
-    function allowsExpensiveNetworkAccess: objcbool; message 'allowsExpensiveNetworkAccess'; { available in macos , ios , watchos , tvos  }
-    function allowsConstrainedNetworkAccess: objcbool; message 'allowsConstrainedNetworkAccess'; { available in macos , ios , watchos , tvos  }
-    function assumesHTTP3Capable: objcbool; message 'assumesHTTP3Capable'; { available in macos , ios , watchos , tvos  }
+    function networkServiceType: NSURLRequestNetworkServiceType; message 'networkServiceType'; { available in macos 10.7, ios 4.0, watchos 2.0, tvos 9.0 }
+    function allowsCellularAccess: objcbool; message 'allowsCellularAccess'; { available in macos 10.8, ios 6.0, watchos 2.0, tvos 9.0 }
+    function allowsExpensiveNetworkAccess: objcbool; message 'allowsExpensiveNetworkAccess'; { available in macos 10.15, ios 13.0, watchos 6.0, tvos 13.0 }
+    function allowsConstrainedNetworkAccess: objcbool; message 'allowsConstrainedNetworkAccess'; { available in macos 10.15, ios 13.0, watchos 6.0, tvos 13.0 }
+    function assumesHTTP3Capable: objcbool; message 'assumesHTTP3Capable'; { available in macos 11.3, ios 14.5, watchos 7.4, tvos 14.5 }
 
     { Adopted protocols }
     function copyWithZone (zone: NSZonePtr): id; message 'copyWithZone:';
@@ -77,16 +77,16 @@ type
     function timeoutInterval: NSTimeInterval; message 'timeoutInterval';
     procedure setMainDocumentURL(newValue: NSURL); message 'setMainDocumentURL:';
     function mainDocumentURL: NSURL; message 'mainDocumentURL';
-    procedure setNetworkServiceType(newValue: NSURLRequestNetworkServiceType); message 'setNetworkServiceType:'; { available in macos , ios , watchos , tvos  }
-    function networkServiceType: NSURLRequestNetworkServiceType; message 'networkServiceType'; { available in macos , ios , watchos , tvos  }
-    procedure setAllowsCellularAccess(newValue: objcbool); message 'setAllowsCellularAccess:'; { available in macos , ios , watchos , tvos  }
-    function allowsCellularAccess: objcbool; message 'allowsCellularAccess'; { available in macos , ios , watchos , tvos  }
-    procedure setAllowsExpensiveNetworkAccess(newValue: objcbool); message 'setAllowsExpensiveNetworkAccess:'; { available in macos , ios , watchos , tvos  }
-    function allowsExpensiveNetworkAccess: objcbool; message 'allowsExpensiveNetworkAccess'; { available in macos , ios , watchos , tvos  }
-    procedure setAllowsConstrainedNetworkAccess(newValue: objcbool); message 'setAllowsConstrainedNetworkAccess:'; { available in macos , ios , watchos , tvos  }
-    function allowsConstrainedNetworkAccess: objcbool; message 'allowsConstrainedNetworkAccess'; { available in macos , ios , watchos , tvos  }
-    procedure setAssumesHTTP3Capable(newValue: objcbool); message 'setAssumesHTTP3Capable:'; { available in macos , ios , watchos , tvos  }
-    function assumesHTTP3Capable: objcbool; message 'assumesHTTP3Capable'; { available in macos , ios , watchos , tvos  }
+    procedure setNetworkServiceType(newValue: NSURLRequestNetworkServiceType); message 'setNetworkServiceType:'; { available in macos 10.7, ios 4.0, watchos 2.0, tvos 9.0 }
+    function networkServiceType: NSURLRequestNetworkServiceType; message 'networkServiceType'; { available in macos 10.7, ios 4.0, watchos 2.0, tvos 9.0 }
+    procedure setAllowsCellularAccess(newValue: objcbool); message 'setAllowsCellularAccess:'; { available in macos 10.8, ios 6.0, watchos 2.0, tvos 9.0 }
+    function allowsCellularAccess: objcbool; message 'allowsCellularAccess'; { available in macos 10.8, ios 6.0, watchos 2.0, tvos 9.0 }
+    procedure setAllowsExpensiveNetworkAccess(newValue: objcbool); message 'setAllowsExpensiveNetworkAccess:'; { available in macos 10.15, ios 13.0, watchos 6.0, tvos 13.0 }
+    function allowsExpensiveNetworkAccess: objcbool; message 'allowsExpensiveNetworkAccess'; { available in macos 10.15, ios 13.0, watchos 6.0, tvos 13.0 }
+    procedure setAllowsConstrainedNetworkAccess(newValue: objcbool); message 'setAllowsConstrainedNetworkAccess:'; { available in macos 10.15, ios 13.0, watchos 6.0, tvos 13.0 }
+    function allowsConstrainedNetworkAccess: objcbool; message 'allowsConstrainedNetworkAccess'; { available in macos 10.15, ios 13.0, watchos 6.0, tvos 13.0 }
+    procedure setAssumesHTTP3Capable(newValue: objcbool); message 'setAssumesHTTP3Capable:'; { available in macos 11.3, ios 14.5, watchos 7.4, tvos 14.5 }
+    function assumesHTTP3Capable: objcbool; message 'assumesHTTP3Capable'; { available in macos 11.3, ios 14.5, watchos 7.4, tvos 14.5 }
   end;
 
 
@@ -98,7 +98,7 @@ type
     function HTTPBody: NSData; message 'HTTPBody';
     function HTTPBodyStream: NSInputStream; message 'HTTPBodyStream';
     function HTTPShouldHandleCookies: objcbool; message 'HTTPShouldHandleCookies';
-    function HTTPShouldUsePipelining: objcbool; message 'HTTPShouldUsePipelining'; { available in macos , ios , watchos , tvos  }
+    function HTTPShouldUsePipelining: objcbool; message 'HTTPShouldUsePipelining'; { available in macos 10.7, ios 4.0, watchos 2.0, tvos 9.0 }
   end;
 
 type
@@ -115,8 +115,8 @@ type
     function HTTPBodyStream: NSInputStream; message 'HTTPBodyStream';
     procedure setHTTPShouldHandleCookies(newValue: objcbool); message 'setHTTPShouldHandleCookies:';
     function HTTPShouldHandleCookies: objcbool; message 'HTTPShouldHandleCookies';
-    procedure setHTTPShouldUsePipelining(newValue: objcbool); message 'setHTTPShouldUsePipelining:'; { available in macos , ios , watchos , tvos  }
-    function HTTPShouldUsePipelining: objcbool; message 'HTTPShouldUsePipelining'; { available in macos , ios , watchos , tvos  }
+    procedure setHTTPShouldUsePipelining(newValue: objcbool); message 'setHTTPShouldUsePipelining:'; { available in macos 10.7, ios 4.0, watchos 2.0, tvos 9.0 }
+    function HTTPShouldUsePipelining: objcbool; message 'HTTPShouldUsePipelining'; { available in macos 10.7, ios 4.0, watchos 2.0, tvos 9.0 }
   end;
 {$endif}
 

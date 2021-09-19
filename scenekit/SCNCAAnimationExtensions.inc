@@ -7,15 +7,15 @@ type
 
 type
   SceneKitAdditions = objccategory external (CAAnimation)
-    class function animationWithSCNAnimation (animation: SCNAnimationPtr): CAAnimationPtr; message 'animationWithSCNAnimation:'; { available in macos , ios , tvos  }
+    class function animationWithSCNAnimation (animation: SCNAnimationPtr): CAAnimationPtr; message 'animationWithSCNAnimation:'; { available in macos 10.13, ios 11.0, tvos 11.0 }
     procedure setUsesSceneTimeBase(newValue: objcbool); message 'setUsesSceneTimeBase:';
     function usesSceneTimeBase: objcbool; message 'usesSceneTimeBase';
-    procedure setFadeInDuration(newValue: CGFloat); message 'setFadeInDuration:'; { available in macos  }
-    function fadeInDuration: CGFloat; message 'fadeInDuration'; { available in macos  }
-    procedure setFadeOutDuration(newValue: CGFloat); message 'setFadeOutDuration:'; { available in macos  }
-    function fadeOutDuration: CGFloat; message 'fadeOutDuration'; { available in macos  }
-    procedure setAnimationEvents(newValue: NSArray); message 'setAnimationEvents:'; { available in macos  }
-    function animationEvents: NSArray; message 'animationEvents'; { available in macos  }
+    procedure setFadeInDuration(newValue: CGFloat); message 'setFadeInDuration:'; { available in macos 10.9 }
+    function fadeInDuration: CGFloat; message 'fadeInDuration'; { available in macos 10.9 }
+    procedure setFadeOutDuration(newValue: CGFloat); message 'setFadeOutDuration:'; { available in macos 10.9 }
+    function fadeOutDuration: CGFloat; message 'fadeOutDuration'; { available in macos 10.9 }
+    procedure setAnimationEvents(newValue: NSArray); message 'setAnimationEvents:'; { available in macos 10.9 }
+    function animationEvents: NSArray; message 'animationEvents'; { available in macos 10.9 }
   end;
 {$endif}
 

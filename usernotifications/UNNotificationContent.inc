@@ -21,9 +21,9 @@ type
     function threadIdentifier: NSString; message 'threadIdentifier'; { unavailable in tvos }
     function title: NSString; message 'title'; { unavailable in tvos }
     function userInfo: NSDictionary; message 'userInfo'; { unavailable in tvos }
-    function summaryArgument: NSString; message 'summaryArgument'; { unavailable in watchos, tvos }
-    function summaryArgumentCount: NSUInteger; message 'summaryArgumentCount'; { unavailable in watchos, tvos }
-    function targetContentIdentifier: NSString; message 'targetContentIdentifier'; { available in ios  }
+    function summaryArgument: NSString; message 'summaryArgument'; { unavailable in watchos, tvos } { available in ios 12.0 }
+    function summaryArgumentCount: NSUInteger; message 'summaryArgumentCount'; { unavailable in watchos, tvos } { available in ios 12.0 }
+    function targetContentIdentifier: NSString; message 'targetContentIdentifier'; { available in ios 13.0 }
 
     { Adopted protocols }
     function copyWithZone (zone: NSZonePtr): id; message 'copyWithZone:';
@@ -56,12 +56,12 @@ type
     function title: NSString; message 'title'; { unavailable in tvos }
     procedure setUserInfo(newValue: NSDictionary); message 'setUserInfo:'; { unavailable in tvos }
     function userInfo: NSDictionary; message 'userInfo'; { unavailable in tvos }
-    procedure setSummaryArgument(newValue: NSString); message 'setSummaryArgument:'; { unavailable in watchos, tvos }
-    function summaryArgument: NSString; message 'summaryArgument'; { unavailable in watchos, tvos }
-    procedure setSummaryArgumentCount(newValue: NSUInteger); message 'setSummaryArgumentCount:'; { unavailable in watchos, tvos }
-    function summaryArgumentCount: NSUInteger; message 'summaryArgumentCount'; { unavailable in watchos, tvos }
-    procedure setTargetContentIdentifier(newValue: NSString); message 'setTargetContentIdentifier:'; { available in ios  }
-    function targetContentIdentifier: NSString; message 'targetContentIdentifier'; { available in ios  }
+    procedure setSummaryArgument(newValue: NSString); message 'setSummaryArgument:'; { unavailable in watchos, tvos } { available in ios 12.0 }
+    function summaryArgument: NSString; message 'summaryArgument'; { unavailable in watchos, tvos } { available in ios 12.0 }
+    procedure setSummaryArgumentCount(newValue: NSUInteger); message 'setSummaryArgumentCount:'; { unavailable in watchos, tvos } { available in ios 12.0 }
+    function summaryArgumentCount: NSUInteger; message 'summaryArgumentCount'; { unavailable in watchos, tvos } { available in ios 12.0 }
+    procedure setTargetContentIdentifier(newValue: NSString); message 'setTargetContentIdentifier:'; { available in ios 13.0 }
+    function targetContentIdentifier: NSString; message 'targetContentIdentifier'; { available in ios 13.0 }
   end;
 {$endif}
 

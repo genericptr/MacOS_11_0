@@ -36,9 +36,9 @@ type
 
 {$ifdef EXTERNAL_SYMBOLS}
 var
-  kCAFillModeForwards: CAMediaTimingFillMode { available in macos , ios , watchos , tvos  }; cvar; external;
-  kCAFillModeBackwards: CAMediaTimingFillMode { available in macos , ios , watchos , tvos  }; cvar; external;
-  kCAFillModeBoth: CAMediaTimingFillMode { available in macos , ios , watchos , tvos  }; cvar; external;
-  kCAFillModeRemoved: CAMediaTimingFillMode { available in macos , ios , watchos , tvos  }; cvar; external;
+  kCAFillModeForwards: CAMediaTimingFillMode { available in macos 10.5, ios 2.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  kCAFillModeBackwards: CAMediaTimingFillMode { available in macos 10.5, ios 2.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  kCAFillModeBoth: CAMediaTimingFillMode { available in macos 10.5, ios 2.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  kCAFillModeRemoved: CAMediaTimingFillMode { available in macos 10.5, ios 2.0, watchos 2.0, tvos 9.0 }; cvar; external;
 {$endif}
 

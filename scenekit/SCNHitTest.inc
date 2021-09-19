@@ -27,10 +27,10 @@ var
   SCNHitTestBoundingBoxOnlyKey: SCNHitTestOption; cvar; external;
   SCNHitTestIgnoreChildNodesKey: SCNHitTestOption; cvar; external;
   SCNHitTestRootNodeKey: SCNHitTestOption; cvar; external;
-  SCNHitTestIgnoreHiddenNodesKey: SCNHitTestOption { available in macos  }; cvar; external;
-  SCNHitTestOptionCategoryBitMask: SCNHitTestOption { available in macos , ios , tvos  }; cvar; external;
-  SCNHitTestOptionSearchMode: SCNHitTestOption { available in macos , ios , tvos , watchos  }; cvar; external;
-  SCNHitTestOptionIgnoreLightArea: SCNHitTestOption { available in macos , ios , tvos , watchos  }; cvar; external;
+  SCNHitTestIgnoreHiddenNodesKey: SCNHitTestOption { available in macos 10.9 }; cvar; external;
+  SCNHitTestOptionCategoryBitMask: SCNHitTestOption { available in macos 10.12, ios 10.0, tvos 10.0 }; cvar; external;
+  SCNHitTestOptionSearchMode: SCNHitTestOption { available in macos 10.13, ios 11.0, tvos 11.0, watchos 4.0 }; cvar; external;
+  SCNHitTestOptionIgnoreLightArea: SCNHitTestOption { available in macos 10.15, ios 13.0, tvos 13.0, watchos 6.0 }; cvar; external;
   SCNHitTestFirstFoundOnlyKey: SCNHitTestOption; cvar; external;
   SCNHitTestSortResultsKey: SCNHitTestOption; cvar; external;
 {$endif}
@@ -48,18 +48,18 @@ type
     function localNormal: SCNVector3; message 'localNormal';
     function worldNormal: SCNVector3; message 'worldNormal';
     function modelTransform: SCNMatrix4; message 'modelTransform';
-    function boneNode: SCNNode; message 'boneNode'; { available in macos , ios , tvos  }
+    function boneNode: SCNNode; message 'boneNode'; { available in macos 10.12, ios 10.0, tvos 10.0 }
     function textureCoordinatesWithMappingChannel (channel: NSInteger): CGPoint; message 'textureCoordinatesWithMappingChannel:';
   end;
 
 
 type
   SCNHitTestResult_SIMD = objccategory external name 'SIMD' (SCNHitTestResult)
-    function simdLocalCoordinates: simd_float3; message 'simdLocalCoordinates'; { available in macos , ios , tvos , watchos  }
-    function simdWorldCoordinates: simd_float3; message 'simdWorldCoordinates'; { available in macos , ios , tvos , watchos  }
-    function simdLocalNormal: simd_float3; message 'simdLocalNormal'; { available in macos , ios , tvos , watchos  }
-    function simdWorldNormal: simd_float3; message 'simdWorldNormal'; { available in macos , ios , tvos , watchos  }
-    function simdModelTransform: simd_float4x4; message 'simdModelTransform'; { available in macos , ios , tvos , watchos  }
+    function simdLocalCoordinates: simd_float3; message 'simdLocalCoordinates'; { available in macos 10.15, ios 13.0, tvos 13.0, watchos 6.0 }
+    function simdWorldCoordinates: simd_float3; message 'simdWorldCoordinates'; { available in macos 10.15, ios 13.0, tvos 13.0, watchos 6.0 }
+    function simdLocalNormal: simd_float3; message 'simdLocalNormal'; { available in macos 10.15, ios 13.0, tvos 13.0, watchos 6.0 }
+    function simdWorldNormal: simd_float3; message 'simdWorldNormal'; { available in macos 10.15, ios 13.0, tvos 13.0, watchos 6.0 }
+    function simdModelTransform: simd_float4x4; message 'simdModelTransform'; { available in macos 10.15, ios 13.0, tvos 13.0, watchos 6.0 }
   end;
 {$endif}
 

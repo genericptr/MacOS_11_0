@@ -122,12 +122,12 @@ type
     function contentsRect: CGRect; message 'contentsRect';
     procedure setContentsGravity(newValue: CALayerContentsGravity); message 'setContentsGravity:';
     function contentsGravity: CALayerContentsGravity; message 'contentsGravity';
-    procedure setContentsScale(newValue: CGFloat); message 'setContentsScale:'; { available in macos , ios , watchos , tvos  }
-    function contentsScale: CGFloat; message 'contentsScale'; { available in macos , ios , watchos , tvos  }
+    procedure setContentsScale(newValue: CGFloat); message 'setContentsScale:'; { available in macos 10.7, ios 4.0, watchos 2.0, tvos 9.0 }
+    function contentsScale: CGFloat; message 'contentsScale'; { available in macos 10.7, ios 4.0, watchos 2.0, tvos 9.0 }
     procedure setContentsCenter(newValue: CGRect); message 'setContentsCenter:';
     function contentsCenter: CGRect; message 'contentsCenter';
-    procedure setContentsFormat(newValue: CALayerContentsFormat); message 'setContentsFormat:'; { available in macos , ios , watchos , tvos  }
-    function contentsFormat: CALayerContentsFormat; message 'contentsFormat'; { available in macos , ios , watchos , tvos  }
+    procedure setContentsFormat(newValue: CALayerContentsFormat); message 'setContentsFormat:'; { available in macos 10.12, ios 10.0, watchos 3.0, tvos 10.0 }
+    function contentsFormat: CALayerContentsFormat; message 'contentsFormat'; { available in macos 10.12, ios 10.0, watchos 3.0, tvos 10.0 }
     procedure setMinificationFilter(newValue: CALayerContentsFilter); message 'setMinificationFilter:';
     function minificationFilter: CALayerContentsFilter; message 'minificationFilter';
     procedure setMagnificationFilter(newValue: CALayerContentsFilter); message 'setMagnificationFilter:';
@@ -143,31 +143,31 @@ type
     procedure displayIfNeeded; message 'displayIfNeeded';
     procedure setNeedsDisplayOnBoundsChange(newValue: objcbool); message 'setNeedsDisplayOnBoundsChange:';
     function needsDisplayOnBoundsChange: objcbool; message 'needsDisplayOnBoundsChange';
-    procedure setDrawsAsynchronously(newValue: objcbool); message 'setDrawsAsynchronously:'; { available in macos , ios , watchos , tvos  }
-    function drawsAsynchronously: objcbool; message 'drawsAsynchronously'; { available in macos , ios , watchos , tvos  }
+    procedure setDrawsAsynchronously(newValue: objcbool); message 'setDrawsAsynchronously:'; { available in macos 10.8, ios 6.0, watchos 2.0, tvos 9.0 }
+    function drawsAsynchronously: objcbool; message 'drawsAsynchronously'; { available in macos 10.8, ios 6.0, watchos 2.0, tvos 9.0 }
     procedure drawInContext (ctx: CGContextRef); message 'drawInContext:';
     procedure renderInContext (ctx: CGContextRef); message 'renderInContext:';
     procedure setEdgeAntialiasingMask(newValue: CAEdgeAntialiasingMask); message 'setEdgeAntialiasingMask:';
     function edgeAntialiasingMask: CAEdgeAntialiasingMask; message 'edgeAntialiasingMask';
-    procedure setAllowsEdgeAntialiasing(newValue: objcbool); message 'setAllowsEdgeAntialiasing:'; { available in macos , ios , watchos , tvos  }
-    function allowsEdgeAntialiasing: objcbool; message 'allowsEdgeAntialiasing'; { available in macos , ios , watchos , tvos  }
+    procedure setAllowsEdgeAntialiasing(newValue: objcbool); message 'setAllowsEdgeAntialiasing:'; { available in macos 10.10, ios 2.0, watchos 2.0, tvos 9.0 }
+    function allowsEdgeAntialiasing: objcbool; message 'allowsEdgeAntialiasing'; { available in macos 10.10, ios 2.0, watchos 2.0, tvos 9.0 }
     procedure setBackgroundColor(newValue: CGColorRef); message 'setBackgroundColor:';
     function backgroundColor: CGColorRef; message 'backgroundColor';
     procedure setCornerRadius(newValue: CGFloat); message 'setCornerRadius:';
     function cornerRadius: CGFloat; message 'cornerRadius';
-    procedure setMaskedCorners(newValue: CACornerMask); message 'setMaskedCorners:'; { available in macos , ios , watchos , tvos  }
-    function maskedCorners: CACornerMask; message 'maskedCorners'; { available in macos , ios , watchos , tvos  }
-    procedure setCornerCurve(newValue: CALayerCornerCurve); message 'setCornerCurve:'; { available in macos , ios , watchos , tvos  }
-    function cornerCurve: CALayerCornerCurve; message 'cornerCurve'; { available in macos , ios , watchos , tvos  }
-    class function cornerCurveExpansionFactor (curve: CALayerCornerCurve): CGFloat; message 'cornerCurveExpansionFactor:'; { available in macos , ios , watchos , tvos  }
+    procedure setMaskedCorners(newValue: CACornerMask); message 'setMaskedCorners:'; { available in macos 10.13, ios 11.0, watchos 4.0, tvos 11.0 }
+    function maskedCorners: CACornerMask; message 'maskedCorners'; { available in macos 10.13, ios 11.0, watchos 4.0, tvos 11.0 }
+    procedure setCornerCurve(newValue: CALayerCornerCurve); message 'setCornerCurve:'; { available in macos 10.15, ios 13.0, watchos 6.0, tvos 13.0 }
+    function cornerCurve: CALayerCornerCurve; message 'cornerCurve'; { available in macos 10.15, ios 13.0, watchos 6.0, tvos 13.0 }
+    class function cornerCurveExpansionFactor (curve: CALayerCornerCurve): CGFloat; message 'cornerCurveExpansionFactor:'; { available in macos 10.15, ios 13.0, watchos 6.0, tvos 13.0 }
     procedure setBorderWidth(newValue: CGFloat); message 'setBorderWidth:';
     function borderWidth: CGFloat; message 'borderWidth';
     procedure setBorderColor(newValue: CGColorRef); message 'setBorderColor:';
     function borderColor: CGColorRef; message 'borderColor';
     procedure setOpacity(newValue: single); message 'setOpacity:';
     function opacity: single; message 'opacity';
-    procedure setAllowsGroupOpacity(newValue: objcbool); message 'setAllowsGroupOpacity:'; { available in macos , ios , watchos , tvos  }
-    function allowsGroupOpacity: objcbool; message 'allowsGroupOpacity'; { available in macos , ios , watchos , tvos  }
+    procedure setAllowsGroupOpacity(newValue: objcbool); message 'setAllowsGroupOpacity:'; { available in macos 10.10, ios 2.0, watchos 2.0, tvos 9.0 }
+    function allowsGroupOpacity: objcbool; message 'allowsGroupOpacity'; { available in macos 10.10, ios 2.0, watchos 2.0, tvos 9.0 }
     procedure setCompositingFilter(newValue: id); message 'setCompositingFilter:';
     function compositingFilter: id; message 'compositingFilter';
     procedure setFilters(newValue: NSArray); message 'setFilters:';
@@ -268,7 +268,7 @@ type
   optional
     procedure displayLayer (layer: CALayer); message 'displayLayer:';
     procedure drawLayer_inContext (layer: CALayer; ctx: CGContextRef); message 'drawLayer:inContext:';
-    procedure layerWillDraw (layer: CALayer); message 'layerWillDraw:'; { available in macos , ios , watchos , tvos  }
+    procedure layerWillDraw (layer: CALayer); message 'layerWillDraw:'; { available in macos 10.12, ios 10.0, watchos 3.0, tvos 10.0 }
     procedure layoutSublayersOfLayer (layer: CALayer); message 'layoutSublayersOfLayer:';
     function actionForLayer_forKey (layer: CALayer; event: NSString): id; message 'actionForLayer:forKey:';
   end;
@@ -276,28 +276,28 @@ type
 
 {$ifdef EXTERNAL_SYMBOLS}
 var
-  kCAGravityCenter: CALayerContentsGravity { available in macos , ios , watchos , tvos  }; cvar; external;
-  kCAGravityTop: CALayerContentsGravity { available in macos , ios , watchos , tvos  }; cvar; external;
-  kCAGravityBottom: CALayerContentsGravity { available in macos , ios , watchos , tvos  }; cvar; external;
-  kCAGravityLeft: CALayerContentsGravity { available in macos , ios , watchos , tvos  }; cvar; external;
-  kCAGravityRight: CALayerContentsGravity { available in macos , ios , watchos , tvos  }; cvar; external;
-  kCAGravityTopLeft: CALayerContentsGravity { available in macos , ios , watchos , tvos  }; cvar; external;
-  kCAGravityTopRight: CALayerContentsGravity { available in macos , ios , watchos , tvos  }; cvar; external;
-  kCAGravityBottomLeft: CALayerContentsGravity { available in macos , ios , watchos , tvos  }; cvar; external;
-  kCAGravityBottomRight: CALayerContentsGravity { available in macos , ios , watchos , tvos  }; cvar; external;
-  kCAGravityResize: CALayerContentsGravity { available in macos , ios , watchos , tvos  }; cvar; external;
-  kCAGravityResizeAspect: CALayerContentsGravity { available in macos , ios , watchos , tvos  }; cvar; external;
-  kCAGravityResizeAspectFill: CALayerContentsGravity { available in macos , ios , watchos , tvos  }; cvar; external;
-  kCAContentsFormatRGBA8Uint: CALayerContentsFormat { available in macos , ios , watchos , tvos  }; cvar; external;
-  kCAContentsFormatRGBA16Float: CALayerContentsFormat { available in macos , ios , watchos , tvos  }; cvar; external;
-  kCAContentsFormatGray8Uint: CALayerContentsFormat { available in macos , ios , watchos , tvos  }; cvar; external;
-  kCAFilterNearest: CALayerContentsFilter { available in macos , ios , watchos , tvos  }; cvar; external;
-  kCAFilterLinear: CALayerContentsFilter { available in macos , ios , watchos , tvos  }; cvar; external;
-  kCAFilterTrilinear: CALayerContentsFilter { available in macos , ios , watchos , tvos  }; cvar; external;
-  kCACornerCurveCircular: CALayerCornerCurve { available in macos , ios , watchos , tvos  }; cvar; external;
-  kCACornerCurveContinuous: CALayerCornerCurve { available in macos , ios , watchos , tvos  }; cvar; external;
-  kCAOnOrderIn: NSString { available in macos , ios , watchos , tvos  }; cvar; external;
-  kCAOnOrderOut: NSString { available in macos , ios , watchos , tvos  }; cvar; external;
-  kCATransition: NSString { available in macos , ios , watchos , tvos  }; cvar; external;
+  kCAGravityCenter: CALayerContentsGravity { available in macos 10.5, ios 2.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  kCAGravityTop: CALayerContentsGravity { available in macos 10.5, ios 2.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  kCAGravityBottom: CALayerContentsGravity { available in macos 10.5, ios 2.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  kCAGravityLeft: CALayerContentsGravity { available in macos 10.5, ios 2.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  kCAGravityRight: CALayerContentsGravity { available in macos 10.5, ios 2.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  kCAGravityTopLeft: CALayerContentsGravity { available in macos 10.5, ios 2.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  kCAGravityTopRight: CALayerContentsGravity { available in macos 10.5, ios 2.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  kCAGravityBottomLeft: CALayerContentsGravity { available in macos 10.5, ios 2.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  kCAGravityBottomRight: CALayerContentsGravity { available in macos 10.5, ios 2.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  kCAGravityResize: CALayerContentsGravity { available in macos 10.5, ios 2.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  kCAGravityResizeAspect: CALayerContentsGravity { available in macos 10.5, ios 2.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  kCAGravityResizeAspectFill: CALayerContentsGravity { available in macos 10.5, ios 2.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  kCAContentsFormatRGBA8Uint: CALayerContentsFormat { available in macos 10.12, ios 10.0, watchos 3.0, tvos 10.0 }; cvar; external;
+  kCAContentsFormatRGBA16Float: CALayerContentsFormat { available in macos 10.12, ios 10.0, watchos 3.0, tvos 10.0 }; cvar; external;
+  kCAContentsFormatGray8Uint: CALayerContentsFormat { available in macos 10.12, ios 10.0, watchos 3.0, tvos 10.0 }; cvar; external;
+  kCAFilterNearest: CALayerContentsFilter { available in macos 10.5, ios 2.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  kCAFilterLinear: CALayerContentsFilter { available in macos 10.5, ios 2.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  kCAFilterTrilinear: CALayerContentsFilter { available in macos 10.6, ios 3.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  kCACornerCurveCircular: CALayerCornerCurve { available in macos 10.15, ios 13.0, watchos 6.0, tvos 13.0 }; cvar; external;
+  kCACornerCurveContinuous: CALayerCornerCurve { available in macos 10.15, ios 13.0, watchos 6.0, tvos 13.0 }; cvar; external;
+  kCAOnOrderIn: NSString { available in macos 10.5, ios 2.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  kCAOnOrderOut: NSString { available in macos 10.5, ios 2.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  kCATransition: NSString { available in macos 10.5, ios 2.0, watchos 2.0, tvos 9.0 }; cvar; external;
 {$endif}
 

@@ -56,8 +56,8 @@ type
     class function connectionWithRegisteredName_host_usingNameServer (name: NSString; hostName: NSString; server: NSPortNameServer): id; message 'connectionWithRegisteredName:host:usingNameServer:';
     class function rootProxyForConnectionWithRegisteredName_host (name: NSString; hostName: NSString): NSDistantObject; message 'rootProxyForConnectionWithRegisteredName:host:';
     class function rootProxyForConnectionWithRegisteredName_host_usingNameServer (name: NSString; hostName: NSString; server: NSPortNameServer): NSDistantObject; message 'rootProxyForConnectionWithRegisteredName:host:usingNameServer:';
-    class function serviceConnectionWithName_rootObject_usingNameServer (name: NSString; root: id; server: NSPortNameServer): id; message 'serviceConnectionWithName:rootObject:usingNameServer:'; { available in macos , ios , watchos , tvos  }
-    class function serviceConnectionWithName_rootObject (name: NSString; root: id): id; message 'serviceConnectionWithName:rootObject:'; { available in macos , ios , watchos , tvos  }
+    class function serviceConnectionWithName_rootObject_usingNameServer (name: NSString; root: id; server: NSPortNameServer): id; message 'serviceConnectionWithName:rootObject:usingNameServer:'; { available in macos 10.5, ios 2.0, watchos 2.0, tvos 9.0 }
+    class function serviceConnectionWithName_rootObject (name: NSString; root: id): id; message 'serviceConnectionWithName:rootObject:'; { available in macos 10.5, ios 2.0, watchos 2.0, tvos 9.0 }
     procedure setRequestTimeout(newValue: NSTimeInterval); message 'setRequestTimeout:';
     function requestTimeout: NSTimeInterval; message 'requestTimeout';
     procedure setReplyTimeout(newValue: NSTimeInterval); message 'setReplyTimeout:';
@@ -88,7 +88,7 @@ type
     procedure runInNewThread; message 'runInNewThread';
     function remoteObjects: NSArray; message 'remoteObjects';
     function localObjects: NSArray; message 'localObjects';
-    procedure dispatchWithComponents (components: NSArray); message 'dispatchWithComponents:'; { available in macos , ios , watchos , tvos  }
+    procedure dispatchWithComponents (components: NSArray); message 'dispatchWithComponents:'; { available in macos 10.7, ios 5.0, watchos 2.0, tvos 9.0 }
   end;
 {$endif}
 

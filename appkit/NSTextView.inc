@@ -34,7 +34,7 @@ const
 
 {$ifdef EXTERNAL_SYMBOLS}
 var
-  NSAllRomanInputSourcesLocaleIdentifier: NSString { available in macos  }; cvar; external;
+  NSAllRomanInputSourcesLocaleIdentifier: NSString { available in macos 10.5 }; cvar; external;
 {$endif}
 
 {$ifdef CLASSES}
@@ -101,14 +101,14 @@ type
     procedure startSpeaking (sender: id); message 'startSpeaking:';
     procedure stopSpeaking (sender: id); message 'stopSpeaking:';
     {$if  not defined(TARGET_OS_IPHONE)}
-    procedure setLayoutOrientation (orientation: NSTextLayoutOrientation); message 'setLayoutOrientation:'; { available in macos  }
+    procedure setLayoutOrientation (orientation: NSTextLayoutOrientation); message 'setLayoutOrientation:'; { available in macos 10.7 }
     {$endif}
-    procedure changeLayoutOrientation (sender: id); message 'changeLayoutOrientation:'; { available in macos  }
-    function characterIndexForInsertionAtPoint (point: NSPoint): NSUInteger; message 'characterIndexForInsertionAtPoint:'; { available in macos  }
-    class function stronglyReferencesTextStorage: objcbool; message 'stronglyReferencesTextStorage'; { available in macos  }
-    function performValidatedReplacementInRange_withAttributedString (range: NSRange; attributedString: NSAttributedString): objcbool; message 'performValidatedReplacementInRange:withAttributedString:'; { available in macos  }
-    procedure setUsesAdaptiveColorMappingForDarkAppearance(newValue: objcbool); message 'setUsesAdaptiveColorMappingForDarkAppearance:'; { available in macos  }
-    function usesAdaptiveColorMappingForDarkAppearance: objcbool; message 'usesAdaptiveColorMappingForDarkAppearance'; { available in macos  }
+    procedure changeLayoutOrientation (sender: id); message 'changeLayoutOrientation:'; { available in macos 10.7 }
+    function characterIndexForInsertionAtPoint (point: NSPoint): NSUInteger; message 'characterIndexForInsertionAtPoint:'; { available in macos 10.5 }
+    class function stronglyReferencesTextStorage: objcbool; message 'stronglyReferencesTextStorage'; { available in macos 10.12 }
+    function performValidatedReplacementInRange_withAttributedString (range: NSRange; attributedString: NSAttributedString): objcbool; message 'performValidatedReplacementInRange:withAttributedString:'; { available in macos 10.14 }
+    procedure setUsesAdaptiveColorMappingForDarkAppearance(newValue: objcbool); message 'setUsesAdaptiveColorMappingForDarkAppearance:'; { available in macos 10.14 }
+    function usesAdaptiveColorMappingForDarkAppearance: objcbool; message 'usesAdaptiveColorMappingForDarkAppearance'; { available in macos 10.14 }
 
     { Adopted protocols }
     function attributedString: NSAttributedString; message 'attributedString';
@@ -121,7 +121,7 @@ type
     procedure changeCaseOfLetter (sender: id); message 'changeCaseOfLetter:';
     function characterIndexForPoint (point: NSPoint): NSUInteger; message 'characterIndexForPoint:';
     procedure complete (sender: id); message 'complete:';
-    function contentType: NSTextContentType; message 'contentType'; { available in macos  }
+    function contentType: NSTextContentType; message 'contentType'; { available in macos 11.0 }
     function conversationIdentifier: NSInteger; message 'conversationIdentifier'; deprecated;
     procedure deleteBackward (sender: id); message 'deleteBackward:';
     procedure deleteBackwardByDecomposingPreviousCharacter (sender: id); message 'deleteBackwardByDecomposingPreviousCharacter:';
@@ -138,7 +138,7 @@ type
     procedure draggingSession_movedToPoint (session: NSDraggingSession; screenPoint: NSPoint); message 'draggingSession:movedToPoint:';
     function draggingSession_sourceOperationMaskForDraggingContext (session: NSDraggingSession; context: NSDraggingContext): NSDragOperation; message 'draggingSession:sourceOperationMaskForDraggingContext:';
     procedure draggingSession_willBeginAtPoint (session: NSDraggingSession; screenPoint: NSPoint); message 'draggingSession:willBeginAtPoint:';
-    function drawsVerticallyForCharacterAtIndex (charIndex: NSUInteger): objcbool; message 'drawsVerticallyForCharacterAtIndex:'; { available in macos  }
+    function drawsVerticallyForCharacterAtIndex (charIndex: NSUInteger): objcbool; message 'drawsVerticallyForCharacterAtIndex:'; { available in macos 10.6 }
     function firstRectForCharacterRange (range: NSRange): NSRect; message 'firstRectForCharacterRange:'; deprecated;
     function firstRectForCharacterRange_actualRange (range: NSRange; actualRange: NSRangePointer): NSRect; message 'firstRectForCharacterRange:actualRange:';
     function fractionOfDistanceThroughGlyphForPoint (point: NSPoint): CGFloat; message 'fractionOfDistanceThroughGlyphForPoint:';
@@ -147,23 +147,23 @@ type
     procedure indent (sender: id); message 'indent:';
     procedure insertBacktab (sender: id); message 'insertBacktab:';
     procedure insertContainerBreak (sender: id); message 'insertContainerBreak:';
-    procedure insertDoubleQuoteIgnoringSubstitution (sender: id); message 'insertDoubleQuoteIgnoringSubstitution:'; { available in macos  }
+    procedure insertDoubleQuoteIgnoringSubstitution (sender: id); message 'insertDoubleQuoteIgnoringSubstitution:'; { available in macos 10.5 }
     procedure insertLineBreak (sender: id); message 'insertLineBreak:';
     procedure insertNewline (sender: id); message 'insertNewline:';
     procedure insertNewlineIgnoringFieldEditor (sender: id); message 'insertNewlineIgnoringFieldEditor:';
     procedure insertParagraphSeparator (sender: id); message 'insertParagraphSeparator:';
-    procedure insertSingleQuoteIgnoringSubstitution (sender: id); message 'insertSingleQuoteIgnoringSubstitution:'; { available in macos  }
+    procedure insertSingleQuoteIgnoringSubstitution (sender: id); message 'insertSingleQuoteIgnoringSubstitution:'; { available in macos 10.5 }
     procedure insertTab (sender: id); message 'insertTab:';
     procedure insertTabIgnoringFieldEditor (sender: id); message 'insertTabIgnoringFieldEditor:';
     procedure insertText_replacementRange (string_: id; replacementRange: NSRange); message 'insertText:replacementRange:';
-    function layoutOrientation: NSTextLayoutOrientation; message 'layoutOrientation'; { available in macos , ios , tvos  }
+    function layoutOrientation: NSTextLayoutOrientation; message 'layoutOrientation'; { available in macos 10.7, ios 7.0, tvos 9.0 }
     procedure lowercaseWord (sender: id); message 'lowercaseWord:';
-    procedure makeBaseWritingDirectionLeftToRight (sender: id); message 'makeBaseWritingDirectionLeftToRight:'; { available in macos  }
-    procedure makeBaseWritingDirectionNatural (sender: id); message 'makeBaseWritingDirectionNatural:'; { available in macos  }
-    procedure makeBaseWritingDirectionRightToLeft (sender: id); message 'makeBaseWritingDirectionRightToLeft:'; { available in macos  }
-    procedure makeTextWritingDirectionLeftToRight (sender: id); message 'makeTextWritingDirectionLeftToRight:'; { available in macos  }
-    procedure makeTextWritingDirectionNatural (sender: id); message 'makeTextWritingDirectionNatural:'; { available in macos  }
-    procedure makeTextWritingDirectionRightToLeft (sender: id); message 'makeTextWritingDirectionRightToLeft:'; { available in macos  }
+    procedure makeBaseWritingDirectionLeftToRight (sender: id); message 'makeBaseWritingDirectionLeftToRight:'; { available in macos 10.6 }
+    procedure makeBaseWritingDirectionNatural (sender: id); message 'makeBaseWritingDirectionNatural:'; { available in macos 10.6 }
+    procedure makeBaseWritingDirectionRightToLeft (sender: id); message 'makeBaseWritingDirectionRightToLeft:'; { available in macos 10.6 }
+    procedure makeTextWritingDirectionLeftToRight (sender: id); message 'makeTextWritingDirectionLeftToRight:'; { available in macos 10.6 }
+    procedure makeTextWritingDirectionNatural (sender: id); message 'makeTextWritingDirectionNatural:'; { available in macos 10.6 }
+    procedure makeTextWritingDirectionRightToLeft (sender: id); message 'makeTextWritingDirectionRightToLeft:'; { available in macos 10.6 }
     function markedRange: NSRange; message 'markedRange';
     procedure moveBackward (sender: id); message 'moveBackward:';
     procedure moveBackwardAndModifySelection (sender: id); message 'moveBackwardAndModifySelection:';
@@ -189,10 +189,10 @@ type
     procedure moveToEndOfLineAndModifySelection (sender: id); message 'moveToEndOfLineAndModifySelection:';
     procedure moveToEndOfParagraph (sender: id); message 'moveToEndOfParagraph:';
     procedure moveToEndOfParagraphAndModifySelection (sender: id); message 'moveToEndOfParagraphAndModifySelection:';
-    procedure moveToLeftEndOfLine (sender: id); message 'moveToLeftEndOfLine:'; { available in macos  }
-    procedure moveToLeftEndOfLineAndModifySelection (sender: id); message 'moveToLeftEndOfLineAndModifySelection:'; { available in macos  }
-    procedure moveToRightEndOfLine (sender: id); message 'moveToRightEndOfLine:'; { available in macos  }
-    procedure moveToRightEndOfLineAndModifySelection (sender: id); message 'moveToRightEndOfLineAndModifySelection:'; { available in macos  }
+    procedure moveToLeftEndOfLine (sender: id); message 'moveToLeftEndOfLine:'; { available in macos 10.6 }
+    procedure moveToLeftEndOfLineAndModifySelection (sender: id); message 'moveToLeftEndOfLineAndModifySelection:'; { available in macos 10.6 }
+    procedure moveToRightEndOfLine (sender: id); message 'moveToRightEndOfLine:'; { available in macos 10.6 }
+    procedure moveToRightEndOfLineAndModifySelection (sender: id); message 'moveToRightEndOfLineAndModifySelection:'; { available in macos 10.6 }
     procedure moveUp (sender: id); message 'moveUp:';
     procedure moveUpAndModifySelection (sender: id); message 'moveUpAndModifySelection:';
     procedure moveWordBackward (sender: id); message 'moveWordBackward:';
@@ -207,7 +207,7 @@ type
     procedure pageDownAndModifySelection (sender: id); message 'pageDownAndModifySelection:';
     procedure pageUp (sender: id); message 'pageUp:';
     procedure pageUpAndModifySelection (sender: id); message 'pageUpAndModifySelection:';
-    procedure quickLookPreviewItems (sender: id); message 'quickLookPreviewItems:'; { available in macos  }
+    procedure quickLookPreviewItems (sender: id); message 'quickLookPreviewItems:'; { available in macos 10.8 }
     procedure scrollLineDown (sender: id); message 'scrollLineDown:';
     procedure scrollLineUp (sender: id); message 'scrollLineUp:';
     procedure scrollPageDown (sender: id); message 'scrollPageDown:';
@@ -218,7 +218,7 @@ type
     procedure selectParagraph (sender: id); message 'selectParagraph:';
     procedure selectToMark (sender: id); message 'selectToMark:';
     procedure selectWord (sender: id); message 'selectWord:';
-    procedure setContentType (newValue: NSTextContentType); message 'setContentType:'; { available in macos  }
+    procedure setContentType (newValue: NSTextContentType); message 'setContentType:'; { available in macos 11.0 }
     procedure setMark (sender: id); message 'setMark:';
     procedure setMarkedText_selectedRange (string_: id; selRange: NSRange); message 'setMarkedText:selectedRange:'; deprecated;
     procedure setMarkedText_selectedRange_replacementRange (string_: id; selectedRange: NSRange; replacementRange: NSRange); message 'setMarkedText:selectedRange:replacementRange:';
@@ -286,21 +286,21 @@ type
     function markedTextAttributes: NSDictionary; message 'markedTextAttributes';
     procedure setLinkTextAttributes(newValue: NSDictionary); message 'setLinkTextAttributes:';
     function linkTextAttributes: NSDictionary; message 'linkTextAttributes';
-    procedure setDisplaysLinkToolTips(newValue: objcbool); message 'setDisplaysLinkToolTips:'; { available in macos  }
+    procedure setDisplaysLinkToolTips(newValue: objcbool); message 'setDisplaysLinkToolTips:'; { available in macos 10.5 }
     function displaysLinkToolTips: objcbool; message 'displaysLinkToolTips'; { available in macos  }
     procedure setAcceptsGlyphInfo(newValue: objcbool); message 'setAcceptsGlyphInfo:';
     function acceptsGlyphInfo: objcbool; message 'acceptsGlyphInfo';
     procedure setUsesRuler(newValue: objcbool); message 'setUsesRuler:';
     function usesRuler: objcbool; message 'usesRuler';
-    procedure setUsesInspectorBar(newValue: objcbool); message 'setUsesInspectorBar:'; { available in macos  }
+    procedure setUsesInspectorBar(newValue: objcbool); message 'setUsesInspectorBar:'; { available in macos 10.7 }
     function usesInspectorBar: objcbool; message 'usesInspectorBar'; { available in macos  }
     procedure setContinuousSpellCheckingEnabled(newValue: objcbool); message 'setContinuousSpellCheckingEnabled:';
     function isContinuousSpellCheckingEnabled: objcbool; message 'isContinuousSpellCheckingEnabled';
     procedure toggleContinuousSpellChecking (sender: id); message 'toggleContinuousSpellChecking:';
     function spellCheckerDocumentTag: NSInteger; message 'spellCheckerDocumentTag';
-    procedure setGrammarCheckingEnabled(newValue: objcbool); message 'setGrammarCheckingEnabled:'; { available in macos  }
-    function isGrammarCheckingEnabled: objcbool; message 'isGrammarCheckingEnabled'; { available in macos  }
-    procedure toggleGrammarChecking (sender: id); message 'toggleGrammarChecking:'; { available in macos  }
+    procedure setGrammarCheckingEnabled(newValue: objcbool); message 'setGrammarCheckingEnabled:'; { available in macos 10.5 }
+    function isGrammarCheckingEnabled: objcbool; message 'isGrammarCheckingEnabled'; { available in macos 10.5 }
+    procedure toggleGrammarChecking (sender: id); message 'toggleGrammarChecking:'; { available in macos 10.5 }
     procedure setSpellingState_range (value: NSInteger; charRange: NSRange); message 'setSpellingState:range:'; { available in macos  }
     procedure setTypingAttributes(newValue: NSDictionary); message 'setTypingAttributes:';
     function typingAttributes: NSDictionary; message 'typingAttributes';
@@ -320,11 +320,11 @@ type
     procedure setAllowsUndo(newValue: objcbool); message 'setAllowsUndo:';
     function allowsUndo: objcbool; message 'allowsUndo';
     procedure breakUndoCoalescing; message 'breakUndoCoalescing';
-    function isCoalescingUndo: objcbool; message 'isCoalescingUndo'; { available in macos  }
-    procedure setAllowsImageEditing(newValue: objcbool); message 'setAllowsImageEditing:'; { available in macos  }
-    function allowsImageEditing: objcbool; message 'allowsImageEditing'; { available in macos  }
-    procedure showFindIndicatorForRange (charRange: NSRange); message 'showFindIndicatorForRange:'; { available in macos  }
-    procedure setUsesRolloverButtonForSelection(newValue: objcbool); message 'setUsesRolloverButtonForSelection:'; { available in macos  }
+    function isCoalescingUndo: objcbool; message 'isCoalescingUndo'; { available in macos 10.5 }
+    procedure setAllowsImageEditing(newValue: objcbool); message 'setAllowsImageEditing:'; { available in macos 10.5 }
+    function allowsImageEditing: objcbool; message 'allowsImageEditing'; { available in macos 10.5 }
+    procedure showFindIndicatorForRange (charRange: NSRange); message 'showFindIndicatorForRange:'; { available in macos 10.10 }
+    procedure setUsesRolloverButtonForSelection(newValue: objcbool); message 'setUsesRolloverButtonForSelection:'; { available in macos 10.10 }
     function usesRolloverButtonForSelection: objcbool; message 'usesRolloverButtonForSelection'; { available in macos  }
     procedure setDelegate(newValue: id); message 'setDelegate:';
     function delegate: id; message 'delegate';
@@ -347,7 +347,7 @@ type
     procedure setRulerVisible(newValue: objcbool); message 'setRulerVisible:';
     function isRulerVisible: objcbool; message 'isRulerVisible';
     procedure setSelectedRange (charRange: NSRange); message 'setSelectedRange:';
-    procedure setAllowedInputSourceLocales(newValue: NSArray); message 'setAllowedInputSourceLocales:'; { available in macos  }
+    procedure setAllowedInputSourceLocales(newValue: NSArray); message 'setAllowedInputSourceLocales:'; { available in macos 10.5 }
     function allowedInputSourceLocales: NSArray; message 'allowedInputSourceLocales'; { available in macos  }
   end;
 
@@ -360,43 +360,43 @@ type
     procedure smartInsertForString_replacingRange_beforeString_afterString (pasteString: NSString; charRangeToReplace: NSRange; beforeString: NSStringPtr; afterString: NSStringPtr); message 'smartInsertForString:replacingRange:beforeString:afterString:';
     function smartInsertBeforeStringForString_replacingRange (pasteString: NSString; charRangeToReplace: NSRange): NSString; message 'smartInsertBeforeStringForString:replacingRange:';
     function smartInsertAfterStringForString_replacingRange (pasteString: NSString; charRangeToReplace: NSRange): NSString; message 'smartInsertAfterStringForString:replacingRange:';
-    procedure setAutomaticQuoteSubstitutionEnabled(newValue: objcbool); message 'setAutomaticQuoteSubstitutionEnabled:'; { available in macos  }
-    function isAutomaticQuoteSubstitutionEnabled: objcbool; message 'isAutomaticQuoteSubstitutionEnabled'; { available in macos  }
-    procedure toggleAutomaticQuoteSubstitution (sender: id); message 'toggleAutomaticQuoteSubstitution:'; { available in macos  }
-    procedure setAutomaticLinkDetectionEnabled(newValue: objcbool); message 'setAutomaticLinkDetectionEnabled:'; { available in macos  }
-    function isAutomaticLinkDetectionEnabled: objcbool; message 'isAutomaticLinkDetectionEnabled'; { available in macos  }
-    procedure toggleAutomaticLinkDetection (sender: id); message 'toggleAutomaticLinkDetection:'; { available in macos  }
-    procedure setAutomaticDataDetectionEnabled(newValue: objcbool); message 'setAutomaticDataDetectionEnabled:'; { available in macos  }
-    function isAutomaticDataDetectionEnabled: objcbool; message 'isAutomaticDataDetectionEnabled'; { available in macos  }
-    procedure toggleAutomaticDataDetection (sender: id); message 'toggleAutomaticDataDetection:'; { available in macos  }
-    procedure setAutomaticDashSubstitutionEnabled(newValue: objcbool); message 'setAutomaticDashSubstitutionEnabled:'; { available in macos  }
-    function isAutomaticDashSubstitutionEnabled: objcbool; message 'isAutomaticDashSubstitutionEnabled'; { available in macos  }
-    procedure toggleAutomaticDashSubstitution (sender: id); message 'toggleAutomaticDashSubstitution:'; { available in macos  }
-    procedure setAutomaticTextReplacementEnabled(newValue: objcbool); message 'setAutomaticTextReplacementEnabled:'; { available in macos  }
-    function isAutomaticTextReplacementEnabled: objcbool; message 'isAutomaticTextReplacementEnabled'; { available in macos  }
-    procedure toggleAutomaticTextReplacement (sender: id); message 'toggleAutomaticTextReplacement:'; { available in macos  }
-    procedure setAutomaticSpellingCorrectionEnabled(newValue: objcbool); message 'setAutomaticSpellingCorrectionEnabled:'; { available in macos  }
-    function isAutomaticSpellingCorrectionEnabled: objcbool; message 'isAutomaticSpellingCorrectionEnabled'; { available in macos  }
-    procedure toggleAutomaticSpellingCorrection (sender: id); message 'toggleAutomaticSpellingCorrection:'; { available in macos  }
-    procedure setEnabledTextCheckingTypes(newValue: NSTextCheckingTypes); message 'setEnabledTextCheckingTypes:'; { available in macos  }
-    function enabledTextCheckingTypes: NSTextCheckingTypes; message 'enabledTextCheckingTypes'; { available in macos  }
-    procedure checkTextInRange_types_options (range: NSRange; checkingTypes: NSTextCheckingTypes; options: NSDictionary); message 'checkTextInRange:types:options:'; { available in macos  }
-    procedure handleTextCheckingResults_forRange_types_options_orthography_wordCount (results: NSArray; range: NSRange; checkingTypes: NSTextCheckingTypes; options: NSDictionary; orthography: NSOrthography; wordCount: NSInteger); message 'handleTextCheckingResults:forRange:types:options:orthography:wordCount:'; { available in macos  }
-    procedure orderFrontSubstitutionsPanel (sender: id); message 'orderFrontSubstitutionsPanel:'; { available in macos  }
-    procedure checkTextInSelection (sender: id); message 'checkTextInSelection:'; { available in macos  }
+    procedure setAutomaticQuoteSubstitutionEnabled(newValue: objcbool); message 'setAutomaticQuoteSubstitutionEnabled:'; { available in macos 10.5 }
+    function isAutomaticQuoteSubstitutionEnabled: objcbool; message 'isAutomaticQuoteSubstitutionEnabled'; { available in macos 10.5 }
+    procedure toggleAutomaticQuoteSubstitution (sender: id); message 'toggleAutomaticQuoteSubstitution:'; { available in macos 10.5 }
+    procedure setAutomaticLinkDetectionEnabled(newValue: objcbool); message 'setAutomaticLinkDetectionEnabled:'; { available in macos 10.5 }
+    function isAutomaticLinkDetectionEnabled: objcbool; message 'isAutomaticLinkDetectionEnabled'; { available in macos 10.5 }
+    procedure toggleAutomaticLinkDetection (sender: id); message 'toggleAutomaticLinkDetection:'; { available in macos 10.6 }
+    procedure setAutomaticDataDetectionEnabled(newValue: objcbool); message 'setAutomaticDataDetectionEnabled:'; { available in macos 10.6 }
+    function isAutomaticDataDetectionEnabled: objcbool; message 'isAutomaticDataDetectionEnabled'; { available in macos 10.6 }
+    procedure toggleAutomaticDataDetection (sender: id); message 'toggleAutomaticDataDetection:'; { available in macos 10.6 }
+    procedure setAutomaticDashSubstitutionEnabled(newValue: objcbool); message 'setAutomaticDashSubstitutionEnabled:'; { available in macos 10.6 }
+    function isAutomaticDashSubstitutionEnabled: objcbool; message 'isAutomaticDashSubstitutionEnabled'; { available in macos 10.6 }
+    procedure toggleAutomaticDashSubstitution (sender: id); message 'toggleAutomaticDashSubstitution:'; { available in macos 10.6 }
+    procedure setAutomaticTextReplacementEnabled(newValue: objcbool); message 'setAutomaticTextReplacementEnabled:'; { available in macos 10.6 }
+    function isAutomaticTextReplacementEnabled: objcbool; message 'isAutomaticTextReplacementEnabled'; { available in macos 10.6 }
+    procedure toggleAutomaticTextReplacement (sender: id); message 'toggleAutomaticTextReplacement:'; { available in macos 10.6 }
+    procedure setAutomaticSpellingCorrectionEnabled(newValue: objcbool); message 'setAutomaticSpellingCorrectionEnabled:'; { available in macos 10.6 }
+    function isAutomaticSpellingCorrectionEnabled: objcbool; message 'isAutomaticSpellingCorrectionEnabled'; { available in macos 10.6 }
+    procedure toggleAutomaticSpellingCorrection (sender: id); message 'toggleAutomaticSpellingCorrection:'; { available in macos 10.6 }
+    procedure setEnabledTextCheckingTypes(newValue: NSTextCheckingTypes); message 'setEnabledTextCheckingTypes:'; { available in macos 10.6 }
+    function enabledTextCheckingTypes: NSTextCheckingTypes; message 'enabledTextCheckingTypes'; { available in macos 10.6 }
+    procedure checkTextInRange_types_options (range: NSRange; checkingTypes: NSTextCheckingTypes; options: NSDictionary); message 'checkTextInRange:types:options:'; { available in macos 10.6 }
+    procedure handleTextCheckingResults_forRange_types_options_orthography_wordCount (results: NSArray; range: NSRange; checkingTypes: NSTextCheckingTypes; options: NSDictionary; orthography: NSOrthography; wordCount: NSInteger); message 'handleTextCheckingResults:forRange:types:options:orthography:wordCount:'; { available in macos 10.6 }
+    procedure orderFrontSubstitutionsPanel (sender: id); message 'orderFrontSubstitutionsPanel:'; { available in macos 10.6 }
+    procedure checkTextInSelection (sender: id); message 'checkTextInSelection:'; { available in macos 10.6 }
     procedure checkTextInDocument (sender: id); message 'checkTextInDocument:'; { available in macos  }
     procedure setUsesFindPanel(newValue: objcbool); message 'setUsesFindPanel:';
     function usesFindPanel: objcbool; message 'usesFindPanel';
-    procedure setUsesFindBar(newValue: objcbool); message 'setUsesFindBar:'; { available in macos  }
-    function usesFindBar: objcbool; message 'usesFindBar'; { available in macos  }
-    procedure setIncrementalSearchingEnabled(newValue: objcbool); message 'setIncrementalSearchingEnabled:'; { available in macos  }
+    procedure setUsesFindBar(newValue: objcbool); message 'setUsesFindBar:'; { available in macos 10.7 }
+    function usesFindBar: objcbool; message 'usesFindBar'; { available in macos 10.7 }
+    procedure setIncrementalSearchingEnabled(newValue: objcbool); message 'setIncrementalSearchingEnabled:'; { available in macos 10.7 }
     function isIncrementalSearchingEnabled: objcbool; message 'isIncrementalSearchingEnabled'; { available in macos  }
   end;
 
 type
   NSQuickLookPreview = objccategory external (NSTextView)
-    procedure toggleQuickLookPreviewPanel (sender: id); message 'toggleQuickLookPreviewPanel:'; { available in macos  }
-    function quickLookPreviewableItemsInRanges (ranges: NSArray): NSArray; message 'quickLookPreviewableItemsInRanges:'; { available in macos  }
+    procedure toggleQuickLookPreviewPanel (sender: id); message 'toggleQuickLookPreviewPanel:'; { available in macos 10.7 }
+    function quickLookPreviewableItemsInRanges (ranges: NSArray): NSArray; message 'quickLookPreviewableItemsInRanges:'; { available in macos 10.7 }
     procedure updateQuickLookPreviewPanel; message 'updateQuickLookPreviewPanel'; { available in macos  }
   end;
 
@@ -407,22 +407,22 @@ type
 
 type
   NSTextView_TouchBar = objccategory external (NSTextView)
-    procedure setAutomaticTextCompletionEnabled(newValue: objcbool); message 'setAutomaticTextCompletionEnabled:'; { available in macos  }
-    function isAutomaticTextCompletionEnabled: objcbool; message 'isAutomaticTextCompletionEnabled'; { available in macos  }
-    procedure toggleAutomaticTextCompletion (sender: id); message 'toggleAutomaticTextCompletion:'; { available in macos  }
-    procedure setAllowsCharacterPickerTouchBarItem(newValue: objcbool); message 'setAllowsCharacterPickerTouchBarItem:'; { available in macos  }
-    function allowsCharacterPickerTouchBarItem: objcbool; message 'allowsCharacterPickerTouchBarItem'; { available in macos  }
-    procedure updateTouchBarItemIdentifiers; message 'updateTouchBarItemIdentifiers'; { available in macos  }
-    procedure updateTextTouchBarItems; message 'updateTextTouchBarItems'; { available in macos  }
-    procedure updateCandidates; message 'updateCandidates'; { available in macos  }
+    procedure setAutomaticTextCompletionEnabled(newValue: objcbool); message 'setAutomaticTextCompletionEnabled:'; { available in macos 10.12.2 }
+    function isAutomaticTextCompletionEnabled: objcbool; message 'isAutomaticTextCompletionEnabled'; { available in macos 10.12.2 }
+    procedure toggleAutomaticTextCompletion (sender: id); message 'toggleAutomaticTextCompletion:'; { available in macos 10.12.2 }
+    procedure setAllowsCharacterPickerTouchBarItem(newValue: objcbool); message 'setAllowsCharacterPickerTouchBarItem:'; { available in macos 10.12.2 }
+    function allowsCharacterPickerTouchBarItem: objcbool; message 'allowsCharacterPickerTouchBarItem'; { available in macos 10.12.2 }
+    procedure updateTouchBarItemIdentifiers; message 'updateTouchBarItemIdentifiers'; { available in macos 10.12.2 }
+    procedure updateTextTouchBarItems; message 'updateTextTouchBarItems'; { available in macos 10.12.2 }
+    procedure updateCandidates; message 'updateCandidates'; { available in macos 10.12.2 }
     function candidateListTouchBarItem: NSCandidateListTouchBarItem; message 'candidateListTouchBarItem'; { available in macos  }
   end;
 
 type
   NSTextView_Factory = objccategory external (NSTextView)
-    class function scrollableTextView: NSScrollView; message 'scrollableTextView'; { available in macos  }
-    class function fieldEditor_: id; message 'fieldEditor'; { available in macos  }
-    class function scrollableDocumentContentTextView: NSScrollView; message 'scrollableDocumentContentTextView'; { available in macos  }
+    class function scrollableTextView: NSScrollView; message 'scrollableTextView'; { available in macos 10.14 }
+    class function fieldEditor_: id; message 'fieldEditor'; { available in macos 10.14 }
+    class function scrollableDocumentContentTextView: NSScrollView; message 'scrollableDocumentContentTextView'; { available in macos 10.14 }
     class function scrollablePlainDocumentContentTextView: NSScrollView; message 'scrollablePlainDocumentContentTextView'; { available in macos  }
   end;
 
@@ -453,16 +453,16 @@ type
     function textView_completions_forPartialWordRange_indexOfSelectedItem (textView: NSTextView; words: NSArray; charRange: NSRange; index: NSIntegerPtr): NSArray; message 'textView:completions:forPartialWordRange:indexOfSelectedItem:';
     function textView_shouldChangeTextInRange_replacementString (textView: NSTextView; affectedCharRange: NSRange; replacementString: NSString): objcbool; message 'textView:shouldChangeTextInRange:replacementString:';
     function textView_doCommandBySelector (textView: NSTextView; commandSelector: SEL): objcbool; message 'textView:doCommandBySelector:';
-    function textView_shouldSetSpellingState_range (textView: NSTextView; value: NSInteger; affectedCharRange: NSRange): NSInteger; message 'textView:shouldSetSpellingState:range:'; { available in macos  }
-    function textView_menu_forEvent_atIndex (view: NSTextView; menu: NSMenu; event: NSEvent; charIndex: NSUInteger): NSMenu; message 'textView:menu:forEvent:atIndex:'; { available in macos  }
-    function textView_willCheckTextInRange_options_types (view: NSTextView; range: NSRange; options: NSDictionary; checkingTypes: NSTextCheckingTypesPtr): NSDictionary; message 'textView:willCheckTextInRange:options:types:'; { available in macos  }
-    function textView_didCheckTextInRange_types_options_results_orthography_wordCount (view: NSTextView; range: NSRange; checkingTypes: NSTextCheckingTypes; options: NSDictionary; results: NSArray; orthography: NSOrthography; wordCount: NSInteger): NSArray; message 'textView:didCheckTextInRange:types:options:results:orthography:wordCount:'; { available in macos  }
-    function textView_URLForContentsOfTextAttachment_atIndex (textView: NSTextView; textAttachment: NSTextAttachment; charIndex: NSUInteger): NSURL; message 'textView:URLForContentsOfTextAttachment:atIndex:'; { available in macos  }
+    function textView_shouldSetSpellingState_range (textView: NSTextView; value: NSInteger; affectedCharRange: NSRange): NSInteger; message 'textView:shouldSetSpellingState:range:'; { available in macos 10.5 }
+    function textView_menu_forEvent_atIndex (view: NSTextView; menu: NSMenu; event: NSEvent; charIndex: NSUInteger): NSMenu; message 'textView:menu:forEvent:atIndex:'; { available in macos 10.6 }
+    function textView_willCheckTextInRange_options_types (view: NSTextView; range: NSRange; options: NSDictionary; checkingTypes: NSTextCheckingTypesPtr): NSDictionary; message 'textView:willCheckTextInRange:options:types:'; { available in macos 10.6 }
+    function textView_didCheckTextInRange_types_options_results_orthography_wordCount (view: NSTextView; range: NSRange; checkingTypes: NSTextCheckingTypes; options: NSDictionary; results: NSArray; orthography: NSOrthography; wordCount: NSInteger): NSArray; message 'textView:didCheckTextInRange:types:options:results:orthography:wordCount:'; { available in macos 10.7 }
+    function textView_URLForContentsOfTextAttachment_atIndex (textView: NSTextView; textAttachment: NSTextAttachment; charIndex: NSUInteger): NSURL; message 'textView:URLForContentsOfTextAttachment:atIndex:'; { available in macos 10.8 }
     function textView_willShowSharingServicePicker_forItems (textView: NSTextView; servicePicker: NSSharingServicePicker; items: NSArray): NSSharingServicePicker; message 'textView:willShowSharingServicePicker:forItems:'; { available in macos  }
     function undoManagerForTextView (view: NSTextView): NSUndoManager; message 'undoManagerForTextView:';
-    function textView_shouldUpdateTouchBarItemIdentifiers (textView: NSTextView; identifiers: NSArray): NSArray; message 'textView:shouldUpdateTouchBarItemIdentifiers:'; { available in macos  }
-    function textView_candidatesForSelectedRange (textView: NSTextView; selectedRange: NSRange): NSArray; message 'textView:candidatesForSelectedRange:'; { available in macos  }
-    function textView_candidates_forSelectedRange (textView: NSTextView; candidates: NSArray; selectedRange: NSRange): NSArray; message 'textView:candidates:forSelectedRange:'; { available in macos  }
+    function textView_shouldUpdateTouchBarItemIdentifiers (textView: NSTextView; identifiers: NSArray): NSArray; message 'textView:shouldUpdateTouchBarItemIdentifiers:'; { available in macos 10.12.2 }
+    function textView_candidatesForSelectedRange (textView: NSTextView; selectedRange: NSRange): NSArray; message 'textView:candidatesForSelectedRange:'; { available in macos 10.12.2 }
+    function textView_candidates_forSelectedRange (textView: NSTextView; candidates: NSArray; selectedRange: NSRange): NSArray; message 'textView:candidates:forSelectedRange:'; { available in macos 10.12.2 }
     function textView_shouldSelectCandidateAtIndex (textView: NSTextView; index: NSUInteger): objcbool; message 'textView:shouldSelectCandidateAtIndex:'; { available in macos  }
     function textView_clickedOnLink (textView: NSTextView; link: id): objcbool; message 'textView:clickedOnLink:'; deprecated 'Use -textView:clickedOnLink:atIndex: instead';
     procedure textView_clickedOnCell_inRect (textView: NSTextView; cell: NSTextAttachmentCellProtocol; cellFrame: NSRect); message 'textView:clickedOnCell:inRect:'; deprecated 'Use -textView:clickedOnCell:inRect:atIndex: instead';
@@ -473,11 +473,11 @@ type
 
 {$ifdef EXTERNAL_SYMBOLS}
 var
-  NSTouchBarItemIdentifierCharacterPicker: NSTouchBarItemIdentifier { available in macos  }; cvar; external;
-  NSTouchBarItemIdentifierTextColorPicker: NSTouchBarItemIdentifier { available in macos  }; cvar; external;
-  NSTouchBarItemIdentifierTextStyle: NSTouchBarItemIdentifier { available in macos  }; cvar; external;
-  NSTouchBarItemIdentifierTextAlignment: NSTouchBarItemIdentifier { available in macos  }; cvar; external;
-  NSTouchBarItemIdentifierTextList: NSTouchBarItemIdentifier { available in macos  }; cvar; external;
+  NSTouchBarItemIdentifierCharacterPicker: NSTouchBarItemIdentifier { available in macos 10.12.2 }; cvar; external;
+  NSTouchBarItemIdentifierTextColorPicker: NSTouchBarItemIdentifier { available in macos 10.12.2 }; cvar; external;
+  NSTouchBarItemIdentifierTextStyle: NSTouchBarItemIdentifier { available in macos 10.12.2 }; cvar; external;
+  NSTouchBarItemIdentifierTextAlignment: NSTouchBarItemIdentifier { available in macos 10.12.2 }; cvar; external;
+  NSTouchBarItemIdentifierTextList: NSTouchBarItemIdentifier { available in macos 10.12.2 }; cvar; external;
   NSTouchBarItemIdentifierTextFormat: NSTouchBarItemIdentifier { available in macos  }; cvar; external;
   NSTextViewWillChangeNotifyingTextViewNotification: NSNotificationName; cvar; external;
   NSTextViewDidChangeSelectionNotification: NSNotificationName; cvar; external;
@@ -515,7 +515,7 @@ type
 
 {$ifdef EXTERNAL_SYMBOLS}
 var
-  NSFindPanelCaseInsensitiveSearch: NSPasteboardTypeFindPanelSearchOptionKey { available in macos  }; cvar; external;
+  NSFindPanelCaseInsensitiveSearch: NSPasteboardTypeFindPanelSearchOptionKey { available in macos 10.5 }; cvar; external;
   NSFindPanelSubstringMatch: NSPasteboardTypeFindPanelSearchOptionKey { available in macos  }; cvar; external;
 {$endif}
 

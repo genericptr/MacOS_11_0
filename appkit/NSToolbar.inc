@@ -8,10 +8,10 @@ type
 
 {$ifdef TYPES}
 type
-  NSToolbarIdentifier = NSString { available in ios  };
-  NSToolbarIdentifierPtr = ^NSToolbarIdentifier { available in ios  };
-  NSToolbarItemIdentifier = NSString { available in ios  };
-  NSToolbarItemIdentifierPtr = ^NSToolbarItemIdentifier { available in ios  };
+  NSToolbarIdentifier = NSString { available in ios 13.0 };
+  NSToolbarIdentifierPtr = ^NSToolbarIdentifier { available in ios 13.0 };
+  NSToolbarItemIdentifier = NSString { available in ios 13.0 };
+  NSToolbarItemIdentifierPtr = ^NSToolbarItemIdentifier { available in ios 13.0 };
   NSToolbarDisplayMode = NSUInteger;
   NSToolbarDisplayModePtr = ^NSToolbarDisplayMode;
 
@@ -37,7 +37,7 @@ type
   NSToolbar = objcclass external (NSObject)
   public
     function initWithIdentifier (identifier: NSToolbarIdentifier): id; message 'initWithIdentifier:'; { NS_DESIGNATED_INITIALIZER }
-    function init: id; message 'init'; { available in macos  }
+    function init: id; message 'init'; { available in macos 10.13 }
     procedure insertItemWithItemIdentifier_atIndex (itemIdentifier: NSToolbarItemIdentifier; index: NSInteger); message 'insertItemWithItemIdentifier:atIndex:';
     procedure removeItemAtIndex (index: NSInteger); message 'removeItemAtIndex:';
     procedure setDelegate(newValue: NSToolbarDelegateProtocol); message 'setDelegate:';
@@ -59,15 +59,15 @@ type
     function identifier: NSToolbarIdentifier; message 'identifier';
     function items: NSArray; message 'items';
     function visibleItems: NSArray; message 'visibleItems';
-    procedure setCenteredItemIdentifier(newValue: NSToolbarItemIdentifier); message 'setCenteredItemIdentifier:'; { available in macos  }
-    function centeredItemIdentifier: NSToolbarItemIdentifier; message 'centeredItemIdentifier'; { available in macos  }
+    procedure setCenteredItemIdentifier(newValue: NSToolbarItemIdentifier); message 'setCenteredItemIdentifier:'; { available in macos 10.14 }
+    function centeredItemIdentifier: NSToolbarItemIdentifier; message 'centeredItemIdentifier'; { available in macos 10.14 }
     procedure setAutosavesConfiguration(newValue: objcbool); message 'setAutosavesConfiguration:';
     function autosavesConfiguration: objcbool; message 'autosavesConfiguration';
     procedure setConfigurationFromDictionary (configDict: NSDictionary); message 'setConfigurationFromDictionary:'; { unavailable in ios }
     function configurationDictionary: NSDictionary; message 'configurationDictionary'; { unavailable in ios }
     procedure validateVisibleItems; message 'validateVisibleItems'; { unavailable in ios }
-    procedure setAllowsExtensionItems(newValue: objcbool); message 'setAllowsExtensionItems:'; { unavailable in ios }
-    function allowsExtensionItems: objcbool; message 'allowsExtensionItems'; { unavailable in ios }
+    procedure setAllowsExtensionItems(newValue: objcbool); message 'setAllowsExtensionItems:'; { unavailable in ios } { available in macos 10.10 }
+    function allowsExtensionItems: objcbool; message 'allowsExtensionItems'; { unavailable in ios } { available in macos 10.10 }
   end;
 {$endif}
 
@@ -88,8 +88,8 @@ type
 
 {$ifdef EXTERNAL_SYMBOLS}
 var
-  NSToolbarWillAddItemNotification: NSNotificationName { available in ios  }; cvar; external;
-  NSToolbarDidRemoveItemNotification: NSNotificationName { available in ios  }; cvar; external;
+  NSToolbarWillAddItemNotification: NSNotificationName { available in ios 13.0 }; cvar; external;
+  NSToolbarDidRemoveItemNotification: NSNotificationName { available in ios 13.0 }; cvar; external;
 {$endif}
 
 {$ifdef CLASSES}

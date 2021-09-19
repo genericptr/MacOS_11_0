@@ -50,14 +50,14 @@ type
     function isMultiplayerGamingRestricted: objcbool; message 'isMultiplayerGamingRestricted'; { unavailable in watchos }
     function isPersonalizedCommunicationRestricted: objcbool; message 'isPersonalizedCommunicationRestricted'; { unavailable in watchos }
     {$if defined(TARGET_OS_WATCH)}
-    procedure setAuthenticateHandler(newValue: GKLocalPlayerAuthenticateHandlerCallback); message 'setAuthenticateHandler:'; { available in 3_0 }
+    procedure setAuthenticateHandler(newValue: GKLocalPlayerAuthenticateHandlerCallback); message 'setAuthenticateHandler:'; { available in ios 14.0, macos 11.0, tvos 14.0 }
     function authenticateHandler: GKLocalPlayerAuthenticateHandlerCallback; message 'authenticateHandler'; { available in 3_0 }
     {$endif}
-    procedure loadRecentPlayersWithCompletionHandler (completionHandler: GKLocalPlayerLoadRecentPlayersWithCompletionHandlerCallback); message 'loadRecentPlayersWithCompletionHandler:'; { available in 10_11, 10_0 }
+    procedure loadRecentPlayersWithCompletionHandler (completionHandler: GKLocalPlayerLoadRecentPlayersWithCompletionHandlerCallback); message 'loadRecentPlayersWithCompletionHandler:'; { available in 3_0 }
     procedure loadChallengableFriendsWithCompletionHandler (completionHandler: GKLocalPlayerLoadChallengableFriendsWithCompletionHandlerCallback); message 'loadChallengableFriendsWithCompletionHandler:';
-    procedure setDefaultLeaderboardIdentifier_completionHandler (leaderboardIdentifier: NSString; completionHandler: GKLocalPlayerSetDefaultLeaderboardIdentifierCallback); message 'setDefaultLeaderboardIdentifier:completionHandler:'; { available in 10_10, 7_0 }
+    procedure setDefaultLeaderboardIdentifier_completionHandler (leaderboardIdentifier: NSString; completionHandler: GKLocalPlayerSetDefaultLeaderboardIdentifierCallback); message 'setDefaultLeaderboardIdentifier:completionHandler:'; { available in 10_11, 10_0 } { available in 3_0 }
     procedure loadDefaultLeaderboardIdentifierWithCompletionHandler (completionHandler: GKLocalPlayerLoadDefaultLeaderboardIdentifierWithCompletionHandlerCallback); message 'loadDefaultLeaderboardIdentifierWithCompletionHandler:'; { available in 10_10, 7_0 }
-    procedure fetchItemsForIdentityVerificationSignature (completionHandler: GKLocalPlayerFetchItemsForIdentityVerificationSignatureCallback); message 'fetchItemsForIdentityVerificationSignature:'; { available in ios , macos , tvos , watchos  }
+    procedure fetchItemsForIdentityVerificationSignature (completionHandler: GKLocalPlayerFetchItemsForIdentityVerificationSignatureCallback); message 'fetchItemsForIdentityVerificationSignature:'; { available in 10_10, 7_0 } { available in 3_0 }
   end;
 {$endif}
 
@@ -92,7 +92,7 @@ type
   GKLocalPlayerEvents = objccategory external (GKLocalPlayer)
     procedure registerListener (listener: id); message 'registerListener:'; { available in 10_10, 7_0 }
     procedure unregisterListener (listener: id); message 'unregisterListener:'; { available in 10_10, 7_0 }
-    procedure unregisterAllListeners; message 'unregisterAllListeners'; { available in 10_10, 7_0 }
+    procedure unregisterAllListeners; message 'unregisterAllListeners'; { available in 10_10, 7_0 } { available in 3_0 }
   end;
 {$endif}
 
@@ -137,7 +137,7 @@ type
   FriendsList = objccategory external (GKLocalPlayer)
     procedure loadFriendsAuthorizationStatus (completionHandler: GKLocalPlayerLoadFriendsAuthorizationStatusCallback); message 'loadFriendsAuthorizationStatus:'; { available in ios , macos , tvos , watchos  }
     procedure loadFriends (completionHandler: GKLocalPlayerLoadFriendsCallback); message 'loadFriends:'; { available in ios , macos , tvos , watchos  }
-    procedure loadFriendsWithIdentifiers_completionHandler (identifiers: NSArray; completionHandler: GKLocalPlayerLoadFriendsWithIdentifiersCallback); message 'loadFriendsWithIdentifiers:completionHandler:'; { available in ios , macos , tvos , watchos  }
+    procedure loadFriendsWithIdentifiers_completionHandler (identifiers: NSArray; completionHandler: GKLocalPlayerLoadFriendsWithIdentifiersCallback); message 'loadFriendsWithIdentifiers:completionHandler:'; { available in ios 14.5, macos 11.3, tvos 14.5, watchos 7.3 }
   end;
 
 type
@@ -147,7 +147,7 @@ type
     procedure setAuthenticateHandler(newValue: GKLocalPlayerAuthenticateHandlerCallback); message 'setAuthenticateHandler:'; { available in 6_0 }
     function authenticateHandler: GKLocalPlayerAuthenticateHandlerCallback; message 'authenticateHandler'; { available in 6_0 }
     {$else}
-    procedure setAuthenticateHandler_(newValue: GKLocalPlayerAuthenticateHandlerCallback); message 'setAuthenticateHandler:'; { available in 10_9 }
+    procedure setAuthenticateHandler_(newValue: GKLocalPlayerAuthenticateHandlerCallback); message 'setAuthenticateHandler:'; { available in 6_0 }
     function authenticateHandler_: GKLocalPlayerAuthenticateHandlerCallback; message 'authenticateHandler'; { available in 10_9 }
     {$endif}
   end;

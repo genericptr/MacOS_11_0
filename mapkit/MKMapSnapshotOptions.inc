@@ -26,8 +26,8 @@ type
     function region: MKCoordinateRegion; message 'region';
     procedure setMapType(newValue: MKMapType); message 'setMapType:';
     function mapType: MKMapType; message 'mapType';
-    procedure setPointOfInterestFilter(newValue: MKPointOfInterestFilter); message 'setPointOfInterestFilter:'; { unavailable in watchos }
-    function pointOfInterestFilter: MKPointOfInterestFilter; message 'pointOfInterestFilter'; { unavailable in watchos }
+    procedure setPointOfInterestFilter(newValue: MKPointOfInterestFilter); message 'setPointOfInterestFilter:'; { unavailable in watchos } { available in ios 13.0, macos 10.15, tvos 13.0 }
+    function pointOfInterestFilter: MKPointOfInterestFilter; message 'pointOfInterestFilter'; { unavailable in watchos } { available in ios 13.0, macos 10.15, tvos 13.0 }
     procedure setShowsPointsOfInterest(newValue: objcbool); message 'setShowsPointsOfInterest:'; { unavailable in watchos }
     function showsPointsOfInterest: objcbool; message 'showsPointsOfInterest'; { unavailable in watchos }
     procedure setShowsBuildings(newValue: objcbool); message 'setShowsBuildings:';
@@ -38,14 +38,14 @@ type
     {$else}
     procedure setSize_(newValue: NSSize); message 'setSize:';
     function size_: NSSize; message 'size';
-    procedure setAppearance(newValue: NSAppearancePtr); message 'setAppearance:'; { unavailable in ios, tvos, watchos }
-    function appearance: NSAppearancePtr; message 'appearance'; { unavailable in ios, tvos, watchos }
+    procedure setAppearance(newValue: NSAppearancePtr); message 'setAppearance:'; { unavailable in ios, tvos, watchos } { available in macos 10.14 }
+    function appearance: NSAppearancePtr; message 'appearance'; { unavailable in ios, tvos, watchos } { available in macos 10.14 }
     {$endif}
     {$if defined(TARGET_OS_IPHONE)}
     procedure setScale(newValue: CGFloat); message 'setScale:'; deprecated 'Use traitCollection.displayScale';
     function scale: CGFloat; message 'scale'; deprecated 'Use traitCollection.displayScale';
-    procedure setTraitCollection(newValue: UITraitCollectionPtr); message 'setTraitCollection:'; { unavailable in watchos }
-    function traitCollection: UITraitCollectionPtr; message 'traitCollection'; { unavailable in watchos }
+    procedure setTraitCollection(newValue: UITraitCollectionPtr); message 'setTraitCollection:'; { unavailable in watchos } { unavailable in macos }
+    function traitCollection: UITraitCollectionPtr; message 'traitCollection'; { unavailable in watchos } { unavailable in macos }
     {$endif}
 
     { Adopted protocols }

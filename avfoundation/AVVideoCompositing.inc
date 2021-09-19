@@ -68,10 +68,10 @@ type
     procedure startVideoCompositionRequest (asyncVideoCompositionRequest: AVAsynchronousVideoCompositionRequest); message 'startVideoCompositionRequest:';
   optional
     procedure cancelAllPendingVideoCompositionRequests; message 'cancelAllPendingVideoCompositionRequests';
-    function supportsWideColorSourceFrames: objcbool; message 'supportsWideColorSourceFrames'; { unavailable in watchos }
-    function supportsHDRSourceFrames: objcbool; message 'supportsHDRSourceFrames'; { unavailable in watchos }
-    procedure anticipateRenderingUsingHint (renderHint: AVVideoCompositionRenderHint); message 'anticipateRenderingUsingHint:'; { unavailable in watchos }
-    procedure prerollForRenderingUsingHint (renderHint: AVVideoCompositionRenderHint); message 'prerollForRenderingUsingHint:'; { unavailable in watchos }
+    function supportsWideColorSourceFrames: objcbool; message 'supportsWideColorSourceFrames'; { unavailable in watchos } { available in macos 10.12, ios 10.0, tvos 10.0 }
+    function supportsHDRSourceFrames: objcbool; message 'supportsHDRSourceFrames'; { unavailable in watchos } { available in macos 11.0, ios 14.0, tvos 14.0 }
+    procedure anticipateRenderingUsingHint (renderHint: AVVideoCompositionRenderHint); message 'anticipateRenderingUsingHint:'; { unavailable in watchos } { available in macos 10.15, ios 13.0, tvos 13.0 }
+    procedure prerollForRenderingUsingHint (renderHint: AVVideoCompositionRenderHint); message 'prerollForRenderingUsingHint:'; { unavailable in watchos } { available in macos 10.15, ios 13.0, tvos 13.0 }
   end;
 {$endif}
 

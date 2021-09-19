@@ -36,20 +36,20 @@ type
     procedure flagsChanged (event: NSEvent); message 'flagsChanged:';
     procedure tabletPoint (event: NSEvent); message 'tabletPoint:';
     procedure tabletProximity (event: NSEvent); message 'tabletProximity:';
-    procedure cursorUpdate (event: NSEvent); message 'cursorUpdate:'; { available in macos  }
-    procedure magnifyWithEvent (event: NSEvent); message 'magnifyWithEvent:'; { available in macos  }
-    procedure rotateWithEvent (event: NSEvent); message 'rotateWithEvent:'; { available in macos  }
-    procedure swipeWithEvent (event: NSEvent); message 'swipeWithEvent:'; { available in macos  }
-    procedure beginGestureWithEvent (event: NSEvent); message 'beginGestureWithEvent:'; { available in macos  }
-    procedure endGestureWithEvent (event: NSEvent); message 'endGestureWithEvent:'; { available in macos  }
-    procedure smartMagnifyWithEvent (event: NSEvent); message 'smartMagnifyWithEvent:'; { available in macos  }
-    procedure changeModeWithEvent (event: NSEvent); message 'changeModeWithEvent:'; { available in macos  }
-    procedure touchesBeganWithEvent (event: NSEvent); message 'touchesBeganWithEvent:'; { available in macos  }
-    procedure touchesMovedWithEvent (event: NSEvent); message 'touchesMovedWithEvent:'; { available in macos  }
-    procedure touchesEndedWithEvent (event: NSEvent); message 'touchesEndedWithEvent:'; { available in macos  }
-    procedure touchesCancelledWithEvent (event: NSEvent); message 'touchesCancelledWithEvent:'; { available in macos  }
-    procedure quickLookWithEvent (event: NSEvent); message 'quickLookWithEvent:'; { available in macos  }
-    procedure pressureChangeWithEvent (event: NSEvent); message 'pressureChangeWithEvent:'; { available in macos  }
+    procedure cursorUpdate (event: NSEvent); message 'cursorUpdate:'; { available in macos 10.5 }
+    procedure magnifyWithEvent (event: NSEvent); message 'magnifyWithEvent:'; { available in macos 10.5 }
+    procedure rotateWithEvent (event: NSEvent); message 'rotateWithEvent:'; { available in macos 10.5 }
+    procedure swipeWithEvent (event: NSEvent); message 'swipeWithEvent:'; { available in macos 10.5 }
+    procedure beginGestureWithEvent (event: NSEvent); message 'beginGestureWithEvent:'; { available in macos 10.5 }
+    procedure endGestureWithEvent (event: NSEvent); message 'endGestureWithEvent:'; { available in macos 10.5 }
+    procedure smartMagnifyWithEvent (event: NSEvent); message 'smartMagnifyWithEvent:'; { available in macos 10.8 }
+    procedure changeModeWithEvent (event: NSEvent); message 'changeModeWithEvent:'; { available in macos 10.15 }
+    procedure touchesBeganWithEvent (event: NSEvent); message 'touchesBeganWithEvent:'; { available in macos 10.6 }
+    procedure touchesMovedWithEvent (event: NSEvent); message 'touchesMovedWithEvent:'; { available in macos 10.6 }
+    procedure touchesEndedWithEvent (event: NSEvent); message 'touchesEndedWithEvent:'; { available in macos 10.6 }
+    procedure touchesCancelledWithEvent (event: NSEvent); message 'touchesCancelledWithEvent:'; { available in macos 10.6 }
+    procedure quickLookWithEvent (event: NSEvent); message 'quickLookWithEvent:'; { available in macos 10.8 }
+    procedure pressureChangeWithEvent (event: NSEvent); message 'pressureChangeWithEvent:'; { available in macos 10.10.3 }
     procedure noResponderFor (eventSelector: SEL); message 'noResponderFor:';
     function acceptsFirstResponder: objcbool; message 'acceptsFirstResponder';
     function becomeFirstResponder: objcbool; message 'becomeFirstResponder';
@@ -61,9 +61,9 @@ type
     procedure showContextHelp (sender: id); message 'showContextHelp:';
     procedure helpRequested (eventPtr: NSEvent); message 'helpRequested:';
     function shouldBeTreatedAsInkEvent (event: NSEvent): objcbool; message 'shouldBeTreatedAsInkEvent:';
-    function wantsScrollEventsForSwipeTrackingOnAxis (axis: NSEventGestureAxis): objcbool; message 'wantsScrollEventsForSwipeTrackingOnAxis:'; { available in macos  }
-    function wantsForwardedScrollEventsForAxis (axis: NSEventGestureAxis): objcbool; message 'wantsForwardedScrollEventsForAxis:'; { available in macos  }
-    function supplementalTargetForAction_sender (action: SEL; sender: id): id; message 'supplementalTargetForAction:sender:'; { available in macos  }
+    function wantsScrollEventsForSwipeTrackingOnAxis (axis: NSEventGestureAxis): objcbool; message 'wantsScrollEventsForSwipeTrackingOnAxis:'; { available in macos 10.7 }
+    function wantsForwardedScrollEventsForAxis (axis: NSEventGestureAxis): objcbool; message 'wantsForwardedScrollEventsForAxis:'; { available in macos 10.7 }
+    function supplementalTargetForAction_sender (action: SEL; sender: id): id; message 'supplementalTargetForAction:sender:'; { available in macos 10.7 }
 
     { Adopted protocols }
     procedure encodeWithCoder (coder: NSCoder); message 'encodeWithCoder:';
@@ -116,10 +116,10 @@ type
     procedure moveLeftAndModifySelection (sender: id); message 'moveLeftAndModifySelection:';
     procedure moveWordRightAndModifySelection (sender: id); message 'moveWordRightAndModifySelection:';
     procedure moveWordLeftAndModifySelection (sender: id); message 'moveWordLeftAndModifySelection:';
-    procedure moveToLeftEndOfLine (sender: id); message 'moveToLeftEndOfLine:'; { available in macos  }
-    procedure moveToRightEndOfLine (sender: id); message 'moveToRightEndOfLine:'; { available in macos  }
-    procedure moveToLeftEndOfLineAndModifySelection (sender: id); message 'moveToLeftEndOfLineAndModifySelection:'; { available in macos  }
-    procedure moveToRightEndOfLineAndModifySelection (sender: id); message 'moveToRightEndOfLineAndModifySelection:'; { available in macos  }
+    procedure moveToLeftEndOfLine (sender: id); message 'moveToLeftEndOfLine:'; { available in macos 10.6 }
+    procedure moveToRightEndOfLine (sender: id); message 'moveToRightEndOfLine:'; { available in macos 10.6 }
+    procedure moveToLeftEndOfLineAndModifySelection (sender: id); message 'moveToLeftEndOfLineAndModifySelection:'; { available in macos 10.6 }
+    procedure moveToRightEndOfLineAndModifySelection (sender: id); message 'moveToRightEndOfLineAndModifySelection:'; { available in macos 10.6 }
     procedure scrollPageUp (sender: id); message 'scrollPageUp:';
     procedure scrollPageDown (sender: id); message 'scrollPageDown:';
     procedure scrollLineUp (sender: id); message 'scrollLineUp:';
@@ -141,8 +141,8 @@ type
     procedure insertTabIgnoringFieldEditor (sender: id); message 'insertTabIgnoringFieldEditor:';
     procedure insertLineBreak (sender: id); message 'insertLineBreak:';
     procedure insertContainerBreak (sender: id); message 'insertContainerBreak:';
-    procedure insertSingleQuoteIgnoringSubstitution (sender: id); message 'insertSingleQuoteIgnoringSubstitution:'; { available in macos  }
-    procedure insertDoubleQuoteIgnoringSubstitution (sender: id); message 'insertDoubleQuoteIgnoringSubstitution:'; { available in macos  }
+    procedure insertSingleQuoteIgnoringSubstitution (sender: id); message 'insertSingleQuoteIgnoringSubstitution:'; { available in macos 10.5 }
+    procedure insertDoubleQuoteIgnoringSubstitution (sender: id); message 'insertDoubleQuoteIgnoringSubstitution:'; { available in macos 10.5 }
     procedure changeCaseOfLetter (sender: id); message 'changeCaseOfLetter:';
     procedure uppercaseWord (sender: id); message 'uppercaseWord:';
     procedure lowercaseWord (sender: id); message 'lowercaseWord:';
@@ -163,13 +163,13 @@ type
     procedure selectToMark (sender: id); message 'selectToMark:';
     procedure swapWithMark (sender: id); message 'swapWithMark:';
     procedure cancelOperation (sender: id); message 'cancelOperation:';
-    procedure makeBaseWritingDirectionNatural (sender: id); message 'makeBaseWritingDirectionNatural:'; { available in macos  }
-    procedure makeBaseWritingDirectionLeftToRight (sender: id); message 'makeBaseWritingDirectionLeftToRight:'; { available in macos  }
-    procedure makeBaseWritingDirectionRightToLeft (sender: id); message 'makeBaseWritingDirectionRightToLeft:'; { available in macos  }
-    procedure makeTextWritingDirectionNatural (sender: id); message 'makeTextWritingDirectionNatural:'; { available in macos  }
-    procedure makeTextWritingDirectionLeftToRight (sender: id); message 'makeTextWritingDirectionLeftToRight:'; { available in macos  }
-    procedure makeTextWritingDirectionRightToLeft (sender: id); message 'makeTextWritingDirectionRightToLeft:'; { available in macos  }
-    procedure quickLookPreviewItems (sender: id); message 'quickLookPreviewItems:'; { available in macos  }
+    procedure makeBaseWritingDirectionNatural (sender: id); message 'makeBaseWritingDirectionNatural:'; { available in macos 10.6 }
+    procedure makeBaseWritingDirectionLeftToRight (sender: id); message 'makeBaseWritingDirectionLeftToRight:'; { available in macos 10.6 }
+    procedure makeBaseWritingDirectionRightToLeft (sender: id); message 'makeBaseWritingDirectionRightToLeft:'; { available in macos 10.6 }
+    procedure makeTextWritingDirectionNatural (sender: id); message 'makeTextWritingDirectionNatural:'; { available in macos 10.6 }
+    procedure makeTextWritingDirectionLeftToRight (sender: id); message 'makeTextWritingDirectionLeftToRight:'; { available in macos 10.6 }
+    procedure makeTextWritingDirectionRightToLeft (sender: id); message 'makeTextWritingDirectionRightToLeft:'; { available in macos 10.6 }
+    procedure quickLookPreviewItems (sender: id); message 'quickLookPreviewItems:'; { available in macos 10.8 }
   end;
 {$endif}
 
@@ -186,7 +186,7 @@ type
 
 type
   NSControlEditingSupport = objccategory external (NSResponder)
-    function validateProposedFirstResponder_forEvent (responder: NSResponder; event: NSEvent): objcbool; message 'validateProposedFirstResponder:forEvent:'; { available in macos  }
+    function validateProposedFirstResponder_forEvent (responder: NSResponder; event: NSEvent): objcbool; message 'validateProposedFirstResponder:forEvent:'; { available in macos 10.7 }
   end;
 
 type
@@ -198,12 +198,12 @@ type
 
 type
   NSTextFinderSupport = objccategory external (NSResponder)
-    procedure performTextFinderAction (sender: id); message 'performTextFinderAction:'; { available in macos  }
+    procedure performTextFinderAction (sender: id); message 'performTextFinderAction:'; { available in macos 10.7 }
   end;
 
 type
   NSWindowTabbing = objccategory external (NSResponder)
-    procedure newWindowForTab (sender: id); message 'newWindowForTab:'; { available in macos  }
+    procedure newWindowForTab (sender: id); message 'newWindowForTab:'; { available in macos 10.12 }
   end;
 
 type

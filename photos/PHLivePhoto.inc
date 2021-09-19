@@ -39,7 +39,7 @@ type
   PHLivePhoto = objcclass external (NSObject, NSCopyingProtocol, NSSecureCodingProtocol)
   public
     function init: id; message 'init';
-    function size: CGSize; message 'size'; { available in macos  }
+    function size: CGSize; message 'size'; { available in macos 10.12 }
     {$if defined(TARGET_OS_IPHONE) or defined(TARGET_OS_MACCATALYST)}
     class function requestLivePhotoWithResourceFileURLs_placeholderImage_targetSize_contentMode_resultHandler (fileURLs: NSArray; image: UIImage; targetSize: CGSize; contentMode: PHImageContentMode; resultHandler: PHLivePhotoRequestLivePhotoWithResourceFileURLsCallback): PHLivePhotoRequestID; message 'requestLivePhotoWithResourceFileURLs:placeholderImage:targetSize:contentMode:resultHandler:';
     {$else}

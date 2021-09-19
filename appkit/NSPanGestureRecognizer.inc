@@ -15,8 +15,8 @@ type
     function translationInView (view_: NSView): NSPoint; message 'translationInView:';
     procedure setTranslation_inView (translation: NSPoint; view_: NSView); message 'setTranslation:inView:';
     function velocityInView (view_: NSView): NSPoint; message 'velocityInView:';
-    procedure setNumberOfTouchesRequired(newValue: NSInteger); message 'setNumberOfTouchesRequired:'; { available in macos  }
-    function numberOfTouchesRequired: NSInteger; message 'numberOfTouchesRequired'; { available in macos  }
+    procedure setNumberOfTouchesRequired(newValue: NSInteger); message 'setNumberOfTouchesRequired:'; { available in macos 10.12.2 }
+    function numberOfTouchesRequired: NSInteger; message 'numberOfTouchesRequired'; { available in macos 10.12.2 }
   end;
 {$endif}
 

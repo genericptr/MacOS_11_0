@@ -32,18 +32,18 @@ const
 
 {$ifdef EXTERNAL_SYMBOLS}
 var
-  kCVPixelBufferIOSurfaceOpenGLTextureCompatibilityKey: CFStringRef { available in macosx  }; cvar; external;
-  kCVPixelBufferIOSurfaceOpenGLFBOCompatibilityKey: CFStringRef { available in macosx  }; cvar; external;
+  kCVPixelBufferIOSurfaceOpenGLTextureCompatibilityKey: CFStringRef { available in macosx 10.6 }; cvar; external;
+  kCVPixelBufferIOSurfaceOpenGLFBOCompatibilityKey: CFStringRef { available in macosx 10.6 }; cvar; external;
   kCVPixelBufferIOSurfaceCoreAnimationCompatibilityKey: CFStringRef; cvar; external;
-  kCVPixelBufferIOSurfaceOpenGLESTextureCompatibilityKey: CFStringRef { unavailable in macosx }; cvar; external;
-  kCVPixelBufferIOSurfaceOpenGLESFBOCompatibilityKey: CFStringRef { unavailable in macosx }; cvar; external;
+  kCVPixelBufferIOSurfaceOpenGLESTextureCompatibilityKey: CFStringRef { unavailable in macosx } { unavailable in macCatalyst }; cvar; external;
+  kCVPixelBufferIOSurfaceOpenGLESFBOCompatibilityKey: CFStringRef { unavailable in macosx } { unavailable in macCatalyst }; cvar; external;
 {$endif}
 
 {$if defined(COREVIDEO_SUPPORTS_IOSURFACE)}
 
 {$if defined(COREVIDEO_INCLUDED_IOSURFACE_HEADER_FILE)}
 {$ifdef FUNCTIONS}
-function CVPixelBufferGetIOSurface(pixelBuffer: CVPixelBufferRef): IOSurfaceRef; cdecl; external; { available in macosx , ios , tvos , watchos  }
+function CVPixelBufferGetIOSurface(pixelBuffer: CVPixelBufferRef): IOSurfaceRef; cdecl; external; { available in macosx 10.6, ios 4.0, tvos 9.0, watchos 4.0 }
 function CVPixelBufferCreateWithIOSurface(allocator: CFAllocatorRef; surface: IOSurfaceRef; pixelBufferAttributes: CFDictionaryRef; var pixelBufferOut: CVPixelBufferRef): CVReturn; cdecl; external; { available starting in __MAC_10_6,__IPHONE_4_0 }
 {$endif}
 

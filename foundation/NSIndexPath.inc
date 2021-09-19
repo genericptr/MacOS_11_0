@@ -25,7 +25,7 @@ type
     function indexPathByRemovingLastIndex: NSIndexPath; message 'indexPathByRemovingLastIndex';
     function indexAtPosition (position: NSUInteger): NSUInteger; message 'indexAtPosition:';
     function length: NSUInteger; message 'length';
-    procedure getIndexes_range (indexes: NSUIntegerPtr; positionRange: NSRange); message 'getIndexes:range:'; { available in macos , ios , watchos , tvos  }
+    procedure getIndexes_range (indexes: NSUIntegerPtr; positionRange: NSRange); message 'getIndexes:range:'; { available in macos 10.9, ios 7.0, watchos 2.0, tvos 9.0 }
     function compare (otherObject: NSIndexPath): NSComparisonResult; message 'compare:';
 
     { Adopted protocols }

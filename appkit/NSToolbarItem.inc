@@ -15,14 +15,14 @@ type
 
 {$ifdef TYPES}
 type
-  NSToolbarItemVisibilityPriority = NSInteger { available in ios  };
-  NSToolbarItemVisibilityPriorityPtr = ^NSToolbarItemVisibilityPriority { available in ios  };
+  NSToolbarItemVisibilityPriority = NSInteger { available in ios 13.0 };
+  NSToolbarItemVisibilityPriorityPtr = ^NSToolbarItemVisibilityPriority { available in ios 13.0 };
 
 const
-  NSToolbarItemVisibilityPriorityStandard = 0 { available in ios  };
-  NSToolbarItemVisibilityPriorityLow = -1000 { available in ios  };
-  NSToolbarItemVisibilityPriorityHigh = 1000 { available in ios  };
-  NSToolbarItemVisibilityPriorityUser = 2000 { available in ios  };
+  NSToolbarItemVisibilityPriorityStandard = 0 { available in ios 13.0 };
+  NSToolbarItemVisibilityPriorityLow = -1000 { available in ios 13.0 };
+  NSToolbarItemVisibilityPriorityHigh = 1000 { available in ios 13.0 };
+  NSToolbarItemVisibilityPriorityUser = 2000 { available in ios 13.0 };
 {$endif}
 
 {$ifdef CLASSES}
@@ -53,15 +53,15 @@ type
     procedure setImage(newValue: NSImage); message 'setImage:';
     function image: NSImage; message 'image';
     {$else}
-    procedure setImage_(newValue: UIImage); message 'setImage:'; { available in ios  }
-    function image_: UIImage; message 'image'; { available in ios  }
+    procedure setImage_(newValue: UIImage); message 'setImage:'; { available in ios 13.0 }
+    function image_: UIImage; message 'image'; { available in ios 13.0 }
     {$endif}
-    procedure setTitle(newValue: NSString); message 'setTitle:'; { available in macos , ios  }
-    function title: NSString; message 'title'; { available in macos , ios  }
-    procedure setBordered(newValue: objcbool); message 'setBordered:'; { available in macos , ios  }
-    function isBordered: objcbool; message 'isBordered'; { available in macos , ios  }
-    procedure setNavigational(newValue: objcbool); message 'setNavigational:'; { available in macos , ios  }
-    function isNavigational: objcbool; message 'isNavigational'; { available in macos , ios  }
+    procedure setTitle(newValue: NSString); message 'setTitle:'; { available in macos 10.15, ios 13.0 }
+    function title: NSString; message 'title'; { available in macos 10.15, ios 13.0 }
+    procedure setBordered(newValue: objcbool); message 'setBordered:'; { available in macos 10.15, ios 13.0 }
+    function isBordered: objcbool; message 'isBordered'; { available in macos 10.15, ios 13.0 }
+    procedure setNavigational(newValue: objcbool); message 'setNavigational:'; { available in macos 11.0, ios 14.0 }
+    function isNavigational: objcbool; message 'isNavigational'; { available in macos 11.0, ios 14.0 }
     procedure setView(newValue: NSView); message 'setView:'; { unavailable in ios }
     function view: NSView; message 'view'; { unavailable in ios }
     procedure setMinSize(newValue: NSSize); message 'setMinSize:'; { unavailable in ios }
@@ -70,9 +70,9 @@ type
     function maxSize: NSSize; message 'maxSize'; { unavailable in ios }
     procedure setVisibilityPriority(newValue: NSToolbarItemVisibilityPriority); message 'setVisibilityPriority:';
     function visibilityPriority: NSToolbarItemVisibilityPriority; message 'visibilityPriority';
-    procedure validate; message 'validate'; { available in ios  }
-    procedure setAutovalidates(newValue: objcbool); message 'setAutovalidates:'; { available in ios  }
-    function autovalidates: objcbool; message 'autovalidates'; { available in ios  }
+    procedure validate; message 'validate'; { available in ios 13.0 }
+    procedure setAutovalidates(newValue: objcbool); message 'setAutovalidates:'; { available in ios 13.0 }
+    function autovalidates: objcbool; message 'autovalidates'; { available in ios 13.0 }
     function allowsDuplicatesInToolbar: objcbool; message 'allowsDuplicatesInToolbar'; { unavailable in ios }
 
     { Adopted protocols }
@@ -121,14 +121,14 @@ type
 {$ifdef EXTERNAL_SYMBOLS}
 var
   NSToolbarSeparatorItemIdentifier: NSToolbarItemIdentifier { unavailable in ios }; cvar; external;
-  NSToolbarSpaceItemIdentifier: NSToolbarItemIdentifier { available in ios  }; cvar; external;
-  NSToolbarFlexibleSpaceItemIdentifier: NSToolbarItemIdentifier { available in ios  }; cvar; external;
-  NSToolbarShowColorsItemIdentifier: NSToolbarItemIdentifier { available in ios  }; cvar; external;
-  NSToolbarShowFontsItemIdentifier: NSToolbarItemIdentifier { available in ios  }; cvar; external;
+  NSToolbarSpaceItemIdentifier: NSToolbarItemIdentifier { available in ios 13.0 }; cvar; external;
+  NSToolbarFlexibleSpaceItemIdentifier: NSToolbarItemIdentifier { available in ios 13.0 }; cvar; external;
+  NSToolbarShowColorsItemIdentifier: NSToolbarItemIdentifier { available in ios 13.0 }; cvar; external;
+  NSToolbarShowFontsItemIdentifier: NSToolbarItemIdentifier { available in ios 13.0 }; cvar; external;
   NSToolbarCustomizeToolbarItemIdentifier: NSToolbarItemIdentifier { unavailable in ios }; cvar; external;
-  NSToolbarPrintItemIdentifier: NSToolbarItemIdentifier { available in ios  }; cvar; external;
-  NSToolbarToggleSidebarItemIdentifier: NSToolbarItemIdentifier { available in macos , ios  }; cvar; external;
-  NSToolbarCloudSharingItemIdentifier: NSToolbarItemIdentifier { available in macos  }; cvar; external;
-  NSToolbarSidebarTrackingSeparatorItemIdentifier: NSToolbarItemIdentifier { unavailable in ios }; cvar; external;
+  NSToolbarPrintItemIdentifier: NSToolbarItemIdentifier { available in ios 13.0 }; cvar; external;
+  NSToolbarToggleSidebarItemIdentifier: NSToolbarItemIdentifier { available in macos 10.11, ios 13.0 }; cvar; external;
+  NSToolbarCloudSharingItemIdentifier: NSToolbarItemIdentifier { available in macos 10.12 }; cvar; external;
+  NSToolbarSidebarTrackingSeparatorItemIdentifier: NSToolbarItemIdentifier { unavailable in ios } { available in macos 11.0 }; cvar; external;
 {$endif}
 

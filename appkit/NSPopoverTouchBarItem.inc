@@ -26,8 +26,8 @@ type
     procedure setCollapsedRepresentationImage(newValue: NSImage); message 'setCollapsedRepresentationImage:';
     function collapsedRepresentationImage: NSImage; message 'collapsedRepresentationImage';
     {$else}
-    procedure setCollapsedRepresentationImage_(newValue: UIImage); message 'setCollapsedRepresentationImage:'; { available in ios  }
-    function collapsedRepresentationImage_: UIImage; message 'collapsedRepresentationImage'; { available in ios  }
+    procedure setCollapsedRepresentationImage_(newValue: UIImage); message 'setCollapsedRepresentationImage:'; { available in ios 13.0 }
+    function collapsedRepresentationImage_: UIImage; message 'collapsedRepresentationImage'; { available in ios 13.0 }
     {$endif}
     procedure setCollapsedRepresentationLabel(newValue: NSString); message 'setCollapsedRepresentationLabel:';
     function collapsedRepresentationLabel: NSString; message 'collapsedRepresentationLabel';

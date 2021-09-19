@@ -25,7 +25,7 @@ type
 
 {$ifdef EXTERNAL_SYMBOLS}
 var
-  CKCurrentUserDefaultName: NSString { available in macos , ios , tvos , watchos  }; cvar; external;
+  CKCurrentUserDefaultName: NSString { available in macos 10.12, ios 10.0, tvos 10.0, watchos 3.0 }; cvar; external;
   CKOwnerDefaultName: NSString deprecated 'replace with CKCurrentUserDefaultName'; cvar; external;
 {$endif}
 
@@ -47,8 +47,8 @@ type
   Database = objccategory external (CKContainer)
     function privateCloudDatabase: CKDatabase; message 'privateCloudDatabase';
     function publicCloudDatabase: CKDatabase; message 'publicCloudDatabase';
-    function sharedCloudDatabase: CKDatabase; message 'sharedCloudDatabase'; { available in macos , ios , tvos , watchos  }
-    function databaseWithDatabaseScope (databaseScope: CKDatabaseScope): CKDatabase; message 'databaseWithDatabaseScope:'; { available in macos , ios , tvos , watchos  }
+    function sharedCloudDatabase: CKDatabase; message 'sharedCloudDatabase'; { available in macos 10.12, ios 10.0, tvos 10.0, watchos 3.0 }
+    function databaseWithDatabaseScope (databaseScope: CKDatabaseScope): CKDatabase; message 'databaseWithDatabaseScope:'; { available in macos 10.12, ios 10.0, tvos 10.0, watchos 3.0 }
   end;
 {$endif}
 
@@ -66,7 +66,7 @@ const
 
 {$ifdef EXTERNAL_SYMBOLS}
 var
-  CKAccountChangedNotification: NSString { available in macos , ios , watchos  }; cvar; external;
+  CKAccountChangedNotification: NSString { available in macos 10.11, ios 9.0, watchos 3.0 }; cvar; external;
 {$endif}
 
 {$ifdef CLASSES}
@@ -110,25 +110,25 @@ type
 type
   UserRecords = objccategory external (CKContainer)
     procedure fetchUserRecordIDWithCompletionHandler (completionHandler: CKContainerFetchUserRecordIDWithCompletionHandlerCallback); message 'fetchUserRecordIDWithCompletionHandler:';
-    procedure discoverAllIdentitiesWithCompletionHandler (completionHandler: CKContainerDiscoverAllIdentitiesWithCompletionHandlerCallback); message 'discoverAllIdentitiesWithCompletionHandler:'; { unavailable in tvos }
-    procedure discoverUserIdentityWithEmailAddress_completionHandler (email: NSString; completionHandler: CKContainerDiscoverUserIdentityWithEmailAddressCallback); message 'discoverUserIdentityWithEmailAddress:completionHandler:'; { available in macos , ios , tvos , watchos  }
-    procedure discoverUserIdentityWithPhoneNumber_completionHandler (phoneNumber: NSString; completionHandler: CKContainerDiscoverUserIdentityWithPhoneNumberCallback); message 'discoverUserIdentityWithPhoneNumber:completionHandler:'; { available in macos , ios , tvos , watchos  }
-    procedure discoverUserIdentityWithUserRecordID_completionHandler (userRecordID: CKRecordID; completionHandler: CKContainerDiscoverUserIdentityWithUserRecordIDCallback); message 'discoverUserIdentityWithUserRecordID:completionHandler:'; { available in macos , ios , tvos , watchos  }
+    procedure discoverAllIdentitiesWithCompletionHandler (completionHandler: CKContainerDiscoverAllIdentitiesWithCompletionHandlerCallback); message 'discoverAllIdentitiesWithCompletionHandler:'; { unavailable in tvos } { available in macos 10.12, ios 10.0, watchos 3.0 }
+    procedure discoverUserIdentityWithEmailAddress_completionHandler (email: NSString; completionHandler: CKContainerDiscoverUserIdentityWithEmailAddressCallback); message 'discoverUserIdentityWithEmailAddress:completionHandler:'; { available in macos 10.12, ios 10.0, tvos 10.0, watchos 3.0 }
+    procedure discoverUserIdentityWithPhoneNumber_completionHandler (phoneNumber: NSString; completionHandler: CKContainerDiscoverUserIdentityWithPhoneNumberCallback); message 'discoverUserIdentityWithPhoneNumber:completionHandler:'; { available in macos 10.12, ios 10.0, tvos 10.0, watchos 3.0 }
+    procedure discoverUserIdentityWithUserRecordID_completionHandler (userRecordID: CKRecordID; completionHandler: CKContainerDiscoverUserIdentityWithUserRecordIDCallback); message 'discoverUserIdentityWithUserRecordID:completionHandler:'; { available in macos 10.12, ios 10.0, tvos 10.0, watchos 3.0 }
   end;
 
 type
   Sharing = objccategory external (CKContainer)
-    procedure fetchShareParticipantWithEmailAddress_completionHandler (emailAddress: NSString; completionHandler: CKContainerFetchShareParticipantWithEmailAddressCallback); message 'fetchShareParticipantWithEmailAddress:completionHandler:'; { available in macos , ios , tvos , watchos  }
-    procedure fetchShareParticipantWithPhoneNumber_completionHandler (phoneNumber: NSString; completionHandler: CKContainerFetchShareParticipantWithPhoneNumberCallback); message 'fetchShareParticipantWithPhoneNumber:completionHandler:'; { available in macos , ios , tvos , watchos  }
-    procedure fetchShareParticipantWithUserRecordID_completionHandler (userRecordID: CKRecordID; completionHandler: CKContainerFetchShareParticipantWithUserRecordIDCallback); message 'fetchShareParticipantWithUserRecordID:completionHandler:'; { available in macos , ios , tvos , watchos  }
-    procedure fetchShareMetadataWithURL_completionHandler (url: NSURL; completionHandler: CKContainerFetchShareMetadataWithURLCallback); message 'fetchShareMetadataWithURL:completionHandler:'; { available in macos , ios , tvos , watchos  }
-    procedure acceptShareMetadata_completionHandler (metadata: CKShareMetadata; completionHandler: CKContainerAcceptShareMetadataCallback); message 'acceptShareMetadata:completionHandler:'; { available in macos , ios , tvos , watchos  }
+    procedure fetchShareParticipantWithEmailAddress_completionHandler (emailAddress: NSString; completionHandler: CKContainerFetchShareParticipantWithEmailAddressCallback); message 'fetchShareParticipantWithEmailAddress:completionHandler:'; { available in macos 10.12, ios 10.0, tvos 10.0, watchos 3.0 }
+    procedure fetchShareParticipantWithPhoneNumber_completionHandler (phoneNumber: NSString; completionHandler: CKContainerFetchShareParticipantWithPhoneNumberCallback); message 'fetchShareParticipantWithPhoneNumber:completionHandler:'; { available in macos 10.12, ios 10.0, tvos 10.0, watchos 3.0 }
+    procedure fetchShareParticipantWithUserRecordID_completionHandler (userRecordID: CKRecordID; completionHandler: CKContainerFetchShareParticipantWithUserRecordIDCallback); message 'fetchShareParticipantWithUserRecordID:completionHandler:'; { available in macos 10.12, ios 10.0, tvos 10.0, watchos 3.0 }
+    procedure fetchShareMetadataWithURL_completionHandler (url: NSURL; completionHandler: CKContainerFetchShareMetadataWithURLCallback); message 'fetchShareMetadataWithURL:completionHandler:'; { available in macos 10.12, ios 10.0, tvos 10.0, watchos 3.0 }
+    procedure acceptShareMetadata_completionHandler (metadata: CKShareMetadata; completionHandler: CKContainerAcceptShareMetadataCallback); message 'acceptShareMetadata:completionHandler:'; { available in macos 10.12, ios 10.0, tvos 10.0, watchos 3.0 }
   end;
 
 type
   CKLongLivedOperations = objccategory external (CKContainer)
-    procedure fetchAllLongLivedOperationIDsWithCompletionHandler (completionHandler: CKContainerFetchAllLongLivedOperationIDsWithCompletionHandlerCallback); message 'fetchAllLongLivedOperationIDsWithCompletionHandler:'; { available in macos , ios , tvos , watchos  }
-    procedure fetchLongLivedOperationWithID_completionHandler (operationID: CKOperationID; completionHandler: CKContainerFetchLongLivedOperationWithIDCallback); message 'fetchLongLivedOperationWithID:completionHandler:'; { available in macos , ios , tvos , watchos  }
+    procedure fetchAllLongLivedOperationIDsWithCompletionHandler (completionHandler: CKContainerFetchAllLongLivedOperationIDsWithCompletionHandlerCallback); message 'fetchAllLongLivedOperationIDsWithCompletionHandler:'; { available in macos 10.12, ios 9.3, tvos 9.2, watchos 3.0 }
+    procedure fetchLongLivedOperationWithID_completionHandler (operationID: CKOperationID; completionHandler: CKContainerFetchLongLivedOperationWithIDCallback); message 'fetchLongLivedOperationWithID:completionHandler:'; { available in macos 10.12, ios 9.3, tvos 9.2, watchos 3.0 }
   end;
 {$endif}
 

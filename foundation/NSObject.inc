@@ -77,7 +77,7 @@ type
 
 type
   NSDiscardableContentProxy = objccategory external (NSObject)
-    function autoContentAccessingProxy: id; message 'autoContentAccessingProxy'; { available in macos , ios , watchos , tvos  }
+    function autoContentAccessingProxy: id; message 'autoContentAccessingProxy'; { available in macos 10.6, ios 4.0, watchos 2.0, tvos 9.0 }
   end;
 {$endif}
 

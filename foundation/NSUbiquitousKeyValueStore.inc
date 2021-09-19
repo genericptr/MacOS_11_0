@@ -45,8 +45,8 @@ type
 
 {$ifdef EXTERNAL_SYMBOLS}
 var
-  NSUbiquitousKeyValueStoreDidChangeExternallyNotification: NSNotificationName { available in macos , ios , watchos , tvos  }; cvar; external;
-  NSUbiquitousKeyValueStoreChangeReasonKey: NSString { available in macos , ios , watchos , tvos  }; cvar; external;
-  NSUbiquitousKeyValueStoreChangedKeysKey: NSString { available in macos , ios , watchos , tvos  }; cvar; external;
+  NSUbiquitousKeyValueStoreDidChangeExternallyNotification: NSNotificationName { available in macos 10.7, ios 5.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  NSUbiquitousKeyValueStoreChangeReasonKey: NSString { available in macos 10.7, ios 5.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  NSUbiquitousKeyValueStoreChangedKeysKey: NSString { available in macos 10.7, ios 5.0, watchos 2.0, tvos 9.0 }; cvar; external;
 {$endif}
 

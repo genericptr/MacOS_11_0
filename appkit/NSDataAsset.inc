@@ -8,8 +8,8 @@ type
 {$if  not defined(TARGET_OS_IPHONE)}
 {$ifdef TYPES}
 type
-  NSDataAssetName = NSString { available in ios , macos , tvos , watchos  };
-  NSDataAssetNamePtr = ^NSDataAssetName { available in ios , macos , tvos , watchos  };
+  NSDataAssetName = NSString { available in ios 9.0, macos 10.11, tvos 9.0, watchos 2.0 };
+  NSDataAssetNamePtr = ^NSDataAssetName { available in ios 9.0, macos 10.11, tvos 9.0, watchos 2.0 };
 {$endif}
 
 {$ifdef CLASSES}

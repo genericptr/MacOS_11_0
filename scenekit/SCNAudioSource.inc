@@ -61,10 +61,10 @@ type
 
 type
   SCNAudioSupport = objccategory external (SCNNode)
-    procedure addAudioPlayer (player: SCNAudioPlayer); message 'addAudioPlayer:'; { available in macos , ios  }
-    procedure removeAllAudioPlayers; message 'removeAllAudioPlayers'; { available in macos , ios  }
-    procedure removeAudioPlayer (player: SCNAudioPlayer); message 'removeAudioPlayer:'; { available in macos , ios  }
-    function audioPlayers: NSArray; message 'audioPlayers'; { available in macos , ios  }
+    procedure addAudioPlayer (player: SCNAudioPlayer); message 'addAudioPlayer:'; { available in macos 10.11, ios 9.0 }
+    procedure removeAllAudioPlayers; message 'removeAllAudioPlayers'; { available in macos 10.11, ios 9.0 }
+    procedure removeAudioPlayer (player: SCNAudioPlayer); message 'removeAudioPlayer:'; { available in macos 10.11, ios 9.0 }
+    function audioPlayers: NSArray; message 'audioPlayers'; { available in macos 10.11, ios 9.0 }
   end;
 {$endif}
 

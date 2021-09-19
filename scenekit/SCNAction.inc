@@ -23,15 +23,15 @@ type
 
 type
   SCNActionableProtocol = objcprotocol external name 'SCNActionable' (NSObjectProtocol)
-    procedure runAction (action: SCNAction); message 'runAction:'; { available in macos  }
-    procedure runAction_completionHandler (action: SCNAction; block: SCNActionRunActionCallback); message 'runAction:completionHandler:'; { available in macos  }
-    procedure runAction_forKey (action: SCNAction; key: NSString); message 'runAction:forKey:'; { available in macos  }
-    procedure runAction_forKey_completionHandler (action: SCNAction; key: NSString; block: SCNActionRunActionCallback); message 'runAction:forKey:completionHandler:'; { available in macos  }
-    function hasActions: objcbool; message 'hasActions'; { available in macos  }
-    function actionForKey (key: NSString): SCNAction; message 'actionForKey:'; { available in macos  }
-    procedure removeActionForKey (key: NSString); message 'removeActionForKey:'; { available in macos  }
-    procedure removeAllActions; message 'removeAllActions'; { available in macos  }
-    function actionKeys: NSArray; message 'actionKeys'; { available in macos  }
+    procedure runAction (action: SCNAction); message 'runAction:'; { available in macos 10.10 }
+    procedure runAction_completionHandler (action: SCNAction; block: SCNActionRunActionCallback); message 'runAction:completionHandler:'; { available in macos 10.10 }
+    procedure runAction_forKey (action: SCNAction; key: NSString); message 'runAction:forKey:'; { available in macos 10.10 }
+    procedure runAction_forKey_completionHandler (action: SCNAction; key: NSString; block: SCNActionRunActionCallback); message 'runAction:forKey:completionHandler:'; { available in macos 10.10 }
+    function hasActions: objcbool; message 'hasActions'; { available in macos 10.10 }
+    function actionForKey (key: NSString): SCNAction; message 'actionForKey:'; { available in macos 10.10 }
+    procedure removeActionForKey (key: NSString); message 'removeActionForKey:'; { available in macos 10.10 }
+    procedure removeAllActions; message 'removeAllActions'; { available in macos 10.10 }
+    function actionKeys: NSArray; message 'actionKeys'; { available in macos 10.10 }
   end;
 {$endif}
 
@@ -67,8 +67,8 @@ type
     class function fadeOutWithDuration (sec: NSTimeInterval): SCNAction; message 'fadeOutWithDuration:';
     class function fadeOpacityBy_duration (factor: CGFloat; sec: NSTimeInterval): SCNAction; message 'fadeOpacityBy:duration:';
     class function fadeOpacityTo_duration (opacity: CGFloat; sec: NSTimeInterval): SCNAction; message 'fadeOpacityTo:duration:';
-    class function hide: SCNAction; message 'hide'; { available in macos , ios  }
-    class function unhide: SCNAction; message 'unhide'; { available in macos , ios  }
+    class function hide: SCNAction; message 'hide'; { available in macos 10.11, ios 9.0 }
+    class function unhide: SCNAction; message 'unhide'; { available in macos 10.11, ios 9.0 }
     class function waitForDuration (sec: NSTimeInterval): SCNAction; message 'waitForDuration:';
     class function waitForDuration_withRange (sec: NSTimeInterval; durationRange: NSTimeInterval): SCNAction; message 'waitForDuration:withRange:';
     class function removeFromParentNode: SCNAction; message 'removeFromParentNode';
@@ -76,7 +76,7 @@ type
     class function runBlock_queue (block: SCNActionRunBlockCallback; queue: dispatch_queue_t): SCNAction; message 'runBlock:queue:';
     class function javaScriptActionWithScript_duration (script: NSString; seconds: NSTimeInterval): SCNAction; message 'javaScriptActionWithScript:duration:';
     class function customActionWithDuration_actionBlock (seconds: NSTimeInterval; block: SCNActionCustomActionWithDurationCallback): SCNAction; message 'customActionWithDuration:actionBlock:';
-    class function playAudioSource_waitForCompletion (source: SCNAudioSource; wait: objcbool): SCNAction; message 'playAudioSource:waitForCompletion:'; { available in macos , ios  }
+    class function playAudioSource_waitForCompletion (source: SCNAudioSource; wait: objcbool): SCNAction; message 'playAudioSource:waitForCompletion:'; { available in macos 10.11, ios 9.0 }
 
     { Adopted protocols }
     function copyWithZone (zone: NSZonePtr): id; message 'copyWithZone:';

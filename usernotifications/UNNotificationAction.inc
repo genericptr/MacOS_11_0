@@ -17,7 +17,7 @@ const
   UNNotificationActionOptionForeground = 1 shl 2;
 
 const
-  UNNotificationActionOptionNone = 0 { unavailable in "Use [] instead.") __API_AVAILABLE(macos , ios , watchos ) __API_UNAVAILABLE(tvos };
+  UNNotificationActionOptionNone = 0 { unavailable in "Use [] instead." } { unavailable in tvos };
 {$endif}
 
 {$ifdef CLASSES}

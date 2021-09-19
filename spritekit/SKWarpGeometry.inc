@@ -67,9 +67,9 @@ type
 
 type
   SKWarpable = objccategory external (SKAction)
-    class function warpTo_duration (warp: SKWarpGeometry; duration_: NSTimeInterval): SKAction; message 'warpTo:duration:'; { available in ios , tvos , watchos , macos  }
-    class function animateWithWarps_times (warps: NSArray; times: NSArray): SKAction; message 'animateWithWarps:times:'; { available in ios , tvos , watchos , macos  }
-    class function animateWithWarps_times_restore (warps: NSArray; times: NSArray; restore: objcbool): SKAction; message 'animateWithWarps:times:restore:'; { available in ios , tvos , watchos , macos  }
+    class function warpTo_duration (warp: SKWarpGeometry; duration_: NSTimeInterval): SKAction; message 'warpTo:duration:'; { available in ios 10.0, tvos 10.0, watchos 3.0, macos 10.12 }
+    class function animateWithWarps_times (warps: NSArray; times: NSArray): SKAction; message 'animateWithWarps:times:'; { available in ios 10.0, tvos 10.0, watchos 3.0, macos 10.12 }
+    class function animateWithWarps_times_restore (warps: NSArray; times: NSArray; restore: objcbool): SKAction; message 'animateWithWarps:times:restore:'; { available in ios 10.0, tvos 10.0, watchos 3.0, macos 10.12 }
   end;
 {$endif}
 

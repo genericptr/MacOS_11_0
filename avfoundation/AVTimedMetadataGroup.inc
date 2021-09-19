@@ -21,8 +21,8 @@ type
 
 type
   AVMetadataGroupIdentification = objccategory external (AVMetadataGroup)
-    function classifyingLabel: NSString; message 'classifyingLabel'; { available in macos , ios , tvos , watchos  }
-    function uniqueID: NSString; message 'uniqueID'; { available in macos , ios , tvos , watchos  }
+    function classifyingLabel: NSString; message 'classifyingLabel'; { available in macos 10.11.3, ios 9.3, tvos 9.3, watchos 2.3 }
+    function uniqueID: NSString; message 'uniqueID'; { available in macos 10.11.3, ios 9.3, tvos 9.3, watchos 2.3 }
   end;
 
 
@@ -32,7 +32,7 @@ type
     _priv: AVTimedMetadataGroupInternal;
   public
     function initWithItems_timeRange (items_: NSArray; timeRange: CMTimeRange): id; message 'initWithItems:timeRange:';
-    function initWithSampleBuffer (sampleBuffer: CMSampleBufferRef): id; message 'initWithSampleBuffer:'; { available in macos , ios , tvos , watchos  }
+    function initWithSampleBuffer (sampleBuffer: CMSampleBufferRef): id; message 'initWithSampleBuffer:'; { available in macos 10.10, ios 8.0, tvos 9.0, watchos 1.0 }
     function timeRange: CMTimeRange; message 'timeRange';
     function items: NSArray; message 'items';
 
@@ -44,7 +44,7 @@ type
 
 type
   AVTimedMetadataGroupSerializationSupport = objccategory external (AVTimedMetadataGroup)
-    function copyFormatDescription: CMMetadataFormatDescriptionRef; message 'copyFormatDescription'; { available in macos , ios , tvos , watchos  }
+    function copyFormatDescription: CMMetadataFormatDescriptionRef; message 'copyFormatDescription'; { available in macos 10.10, ios 8.0, tvos 9.0, watchos 1.0 }
   end;
 
 

@@ -21,10 +21,10 @@ type
 
 {$ifdef EXTERNAL_SYMBOLS}
 var
-  NSRulerViewUnitInches: NSRulerViewUnitName { available in macos  }; cvar; external;
-  NSRulerViewUnitCentimeters: NSRulerViewUnitName { available in macos  }; cvar; external;
-  NSRulerViewUnitPoints: NSRulerViewUnitName { available in macos  }; cvar; external;
-  NSRulerViewUnitPicas: NSRulerViewUnitName { available in macos  }; cvar; external;
+  NSRulerViewUnitInches: NSRulerViewUnitName { available in macos 10.13 }; cvar; external;
+  NSRulerViewUnitCentimeters: NSRulerViewUnitName { available in macos 10.13 }; cvar; external;
+  NSRulerViewUnitPoints: NSRulerViewUnitName { available in macos 10.13 }; cvar; external;
+  NSRulerViewUnitPicas: NSRulerViewUnitName { available in macos 10.13 }; cvar; external;
 {$endif}
 
 {$ifdef CLASSES}
@@ -80,8 +80,8 @@ type
     procedure rulerView_didAddMarker (ruler: NSRulerView; marker: NSRulerMarker); message 'rulerView:didAddMarker:';
     procedure rulerView_handleMouseDown (ruler: NSRulerView; event: NSEvent); message 'rulerView:handleMouseDown:';
     procedure rulerView_willSetClientView (ruler: NSRulerView; newClient: NSView); message 'rulerView:willSetClientView:';
-    function rulerView_locationForPoint (ruler: NSRulerView; point: NSPoint): CGFloat; message 'rulerView:locationForPoint:'; { available in macos  }
-    function rulerView_pointForLocation (ruler: NSRulerView; point: CGFloat): NSPoint; message 'rulerView:pointForLocation:'; { available in macos  }
+    function rulerView_locationForPoint (ruler: NSRulerView; point: NSPoint): CGFloat; message 'rulerView:locationForPoint:'; { available in macos 10.7 }
+    function rulerView_pointForLocation (ruler: NSRulerView; point: CGFloat): NSPoint; message 'rulerView:pointForLocation:'; { available in macos 10.7 }
   end;
 {$endif}
 

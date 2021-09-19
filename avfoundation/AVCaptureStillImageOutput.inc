@@ -30,13 +30,13 @@ type
     function outputSettings: NSDictionary; message 'outputSettings';
     function availableImageDataCVPixelFormatTypes: NSArray; message 'availableImageDataCVPixelFormatTypes';
     function availableImageDataCodecTypes: NSArray; message 'availableImageDataCodecTypes';
-    function isStillImageStabilizationSupported: objcbool; message 'isStillImageStabilizationSupported'; { unavailable in macos }
-    procedure setAutomaticallyEnablesStillImageStabilizationWhenAvailable(newValue: objcbool); message 'setAutomaticallyEnablesStillImageStabilizationWhenAvailable:'; { unavailable in macos }
-    function automaticallyEnablesStillImageStabilizationWhenAvailable: objcbool; message 'automaticallyEnablesStillImageStabilizationWhenAvailable'; { unavailable in macos }
-    function isStillImageStabilizationActive: objcbool; message 'isStillImageStabilizationActive'; { unavailable in macos }
-    procedure setHighResolutionStillImageOutputEnabled(newValue: objcbool); message 'setHighResolutionStillImageOutputEnabled:'; { available in macos , ios , macCatalyst  }
-    function isHighResolutionStillImageOutputEnabled: objcbool; message 'isHighResolutionStillImageOutputEnabled'; { available in macos , ios , macCatalyst  }
-    function isCapturingStillImage: objcbool; message 'isCapturingStillImage'; { available in macos , ios , macCatalyst  }
+    function isStillImageStabilizationSupported: objcbool; message 'isStillImageStabilizationSupported'; { unavailable in macos } { available in ios 7.0, macCatalyst 14.0 }
+    procedure setAutomaticallyEnablesStillImageStabilizationWhenAvailable(newValue: objcbool); message 'setAutomaticallyEnablesStillImageStabilizationWhenAvailable:'; { unavailable in macos } { available in ios 7.0, macCatalyst 14.0 }
+    function automaticallyEnablesStillImageStabilizationWhenAvailable: objcbool; message 'automaticallyEnablesStillImageStabilizationWhenAvailable'; { unavailable in macos } { available in ios 7.0, macCatalyst 14.0 }
+    function isStillImageStabilizationActive: objcbool; message 'isStillImageStabilizationActive'; { unavailable in macos } { available in ios 7.0, macCatalyst 14.0 }
+    procedure setHighResolutionStillImageOutputEnabled(newValue: objcbool); message 'setHighResolutionStillImageOutputEnabled:'; { available in macos 10.14, ios 8.0, macCatalyst 14.0 }
+    function isHighResolutionStillImageOutputEnabled: objcbool; message 'isHighResolutionStillImageOutputEnabled'; { available in macos 10.14, ios 8.0, macCatalyst 14.0 }
+    function isCapturingStillImage: objcbool; message 'isCapturingStillImage'; { available in macos 10.8, ios 5.0, macCatalyst 14.0 }
     procedure captureStillImageAsynchronouslyFromConnection_completionHandler (connection: AVCaptureConnection; handler: AVCaptureStillImageOutputCaptureStillImageAsynchronouslyFromConnectionCallback); message 'captureStillImageAsynchronouslyFromConnection:completionHandler:';
     class function jpegStillImageNSDataRepresentation (jpegSampleBuffer: CMSampleBufferRef): NSData; message 'jpegStillImageNSDataRepresentation:';
   end;

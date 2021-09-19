@@ -22,9 +22,9 @@ type
 
 const
   NSJSONWritingPrettyPrinted = 1 shl 0;
-  NSJSONWritingSortedKeys = 1 shl 1 { available in macos , ios , watchos , tvos  };
+  NSJSONWritingSortedKeys = 1 shl 1 { available in macos 10.13, ios 11.0, watchos 4.0, tvos 11.0 };
   NSJSONWritingFragmentsAllowed = 1 shl 2;
-  NSJSONWritingWithoutEscapingSlashes = 1 shl 3 { available in macos , ios , watchos , tvos  };
+  NSJSONWritingWithoutEscapingSlashes = 1 shl 3 { available in macos 10.15, ios 13.0, watchos 6.0, tvos 13.0 };
 {$endif}
 
 {$ifdef CLASSES}

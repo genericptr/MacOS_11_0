@@ -33,11 +33,11 @@ type
 const
   NSChangeDone = 0;
   NSChangeUndone = 1;
-  NSChangeRedone = 5 { available in macos  };
+  NSChangeRedone = 5 { available in macos 10.5 };
   NSChangeCleared = 2;
   NSChangeReadOtherContents = 3;
   NSChangeAutosaved = 4;
-  NSChangeDiscardable = 256 { available in macos  };
+  NSChangeDiscardable = 256 { available in macos 10.7 };
 
 type
   NSSaveOperationType = NSUInteger;
@@ -47,9 +47,9 @@ const
   NSSaveOperation = 0;
   NSSaveAsOperation = 1;
   NSSaveToOperation = 2;
-  NSAutosaveInPlaceOperation = 4 { available in macos  };
-  NSAutosaveElsewhereOperation = 3 { available in macos  };
-  NSAutosaveAsOperation = 5 { available in macos  };
+  NSAutosaveInPlaceOperation = 4 { available in macos 10.7 };
+  NSAutosaveElsewhereOperation = 3 { available in macos 10.7 };
+  NSAutosaveAsOperation = 5 { available in macos 10.8 };
   NSAutosaveOperation = 3 deprecated 'Use NSAutosaveElsewhereOperation instead';
 {$endif}
 
@@ -60,7 +60,7 @@ type
   public
     function init: id; message 'init'; { NS_DESIGNATED_INITIALIZER }
     function initWithType_error (typeName: NSString; outError: NSErrorPtr): id; message 'initWithType:error:';
-    class function canConcurrentlyReadDocumentsOfType (typeName: NSString): objcbool; message 'canConcurrentlyReadDocumentsOfType:'; { available in macos  }
+    class function canConcurrentlyReadDocumentsOfType (typeName: NSString): objcbool; message 'canConcurrentlyReadDocumentsOfType:'; { available in macos 10.6 }
     function initWithContentsOfURL_ofType_error (url: NSURL; typeName: NSString; outError: NSErrorPtr): id; message 'initWithContentsOfURL:ofType:error:';
     function initForURL_withContentsOfURL_ofType_error (urlOrNil: NSURL; contentsURL: NSURL; typeName: NSString; outError: NSErrorPtr): id; message 'initForURL:withContentsOfURL:ofType:error:';
     procedure setFileType(newValue: NSString); message 'setFileType:';
@@ -69,29 +69,29 @@ type
     function fileURL: NSURL; message 'fileURL';
     procedure setFileModificationDate(newValue: NSDate); message 'setFileModificationDate:';
     function fileModificationDate: NSDate; message 'fileModificationDate';
-    procedure setDraft(newValue: objcbool); message 'setDraft:'; { available in macos  }
-    function isDraft: objcbool; message 'isDraft'; { available in macos  }
-    procedure performActivityWithSynchronousWaiting_usingBlock (waitSynchronously: objcbool; block: NSDocumentPerformActivityWithSynchronousWaitingCallback); message 'performActivityWithSynchronousWaiting:usingBlock:'; { available in macos  }
-    procedure continueActivityUsingBlock (block: NSDocumentContinueActivityUsingBlockCallback); message 'continueActivityUsingBlock:'; { available in macos  }
-    procedure continueAsynchronousWorkOnMainThreadUsingBlock (block: NSDocumentContinueAsynchronousWorkOnMainThreadUsingBlockCallback); message 'continueAsynchronousWorkOnMainThreadUsingBlock:'; { available in macos  }
-    procedure performSynchronousFileAccessUsingBlock (block: NSDocumentPerformSynchronousFileAccessUsingBlockCallback); message 'performSynchronousFileAccessUsingBlock:'; { available in macos  }
-    procedure performAsynchronousFileAccessUsingBlock (block: NSDocumentPerformAsynchronousFileAccessUsingBlockCallback); message 'performAsynchronousFileAccessUsingBlock:'; { available in macos  }
+    procedure setDraft(newValue: objcbool); message 'setDraft:'; { available in macos 10.8 }
+    function isDraft: objcbool; message 'isDraft'; { available in macos 10.8 }
+    procedure performActivityWithSynchronousWaiting_usingBlock (waitSynchronously: objcbool; block: NSDocumentPerformActivityWithSynchronousWaitingCallback); message 'performActivityWithSynchronousWaiting:usingBlock:'; { available in macos 10.7 }
+    procedure continueActivityUsingBlock (block: NSDocumentContinueActivityUsingBlockCallback); message 'continueActivityUsingBlock:'; { available in macos 10.7 }
+    procedure continueAsynchronousWorkOnMainThreadUsingBlock (block: NSDocumentContinueAsynchronousWorkOnMainThreadUsingBlockCallback); message 'continueAsynchronousWorkOnMainThreadUsingBlock:'; { available in macos 10.7 }
+    procedure performSynchronousFileAccessUsingBlock (block: NSDocumentPerformSynchronousFileAccessUsingBlockCallback); message 'performSynchronousFileAccessUsingBlock:'; { available in macos 10.7 }
+    procedure performAsynchronousFileAccessUsingBlock (block: NSDocumentPerformAsynchronousFileAccessUsingBlockCallback); message 'performAsynchronousFileAccessUsingBlock:'; { available in macos 10.7 }
     procedure revertDocumentToSaved (sender: id); message 'revertDocumentToSaved:';
     function revertToContentsOfURL_ofType_error (url: NSURL; typeName: NSString; outError: NSErrorPtr): objcbool; message 'revertToContentsOfURL:ofType:error:';
     function readFromURL_ofType_error (url: NSURL; typeName: NSString; outError: NSErrorPtr): objcbool; message 'readFromURL:ofType:error:';
     function readFromFileWrapper_ofType_error (fileWrapper: NSFileWrapper; typeName: NSString; outError: NSErrorPtr): objcbool; message 'readFromFileWrapper:ofType:error:';
     function readFromData_ofType_error (data: NSData; typeName: NSString; outError: NSErrorPtr): objcbool; message 'readFromData:ofType:error:';
-    function isEntireFileLoaded: objcbool; message 'isEntireFileLoaded'; { available in macos  }
+    function isEntireFileLoaded: objcbool; message 'isEntireFileLoaded'; { available in macos 10.7 }
     function writeToURL_ofType_error (url: NSURL; typeName: NSString; outError: NSErrorPtr): objcbool; message 'writeToURL:ofType:error:';
     function fileWrapperOfType_error (typeName: NSString; outError: NSErrorPtr): NSFileWrapper; message 'fileWrapperOfType:error:';
     function dataOfType_error (typeName: NSString; outError: NSErrorPtr): NSData; message 'dataOfType:error:';
-    procedure unblockUserInteraction; message 'unblockUserInteraction'; { available in macos  }
-    function autosavingIsImplicitlyCancellable: objcbool; message 'autosavingIsImplicitlyCancellable'; { available in macos  }
+    procedure unblockUserInteraction; message 'unblockUserInteraction'; { available in macos 10.7 }
+    function autosavingIsImplicitlyCancellable: objcbool; message 'autosavingIsImplicitlyCancellable'; { available in macos 10.7 }
     function writeSafelyToURL_ofType_forSaveOperation_error (url: NSURL; typeName: NSString; saveOperation: NSSaveOperationType; outError: NSErrorPtr): objcbool; message 'writeSafelyToURL:ofType:forSaveOperation:error:';
     function writeToURL_ofType_forSaveOperation_originalContentsURL_error (url: NSURL; typeName: NSString; saveOperation: NSSaveOperationType; absoluteOriginalContentsURL: NSURL; outError: NSErrorPtr): objcbool; message 'writeToURL:ofType:forSaveOperation:originalContentsURL:error:';
     function fileAttributesToWriteToURL_ofType_forSaveOperation_originalContentsURL_error (url: NSURL; typeName: NSString; saveOperation: NSSaveOperationType; absoluteOriginalContentsURL: NSURL; outError: NSErrorPtr): NSDictionary; message 'fileAttributesToWriteToURL:ofType:forSaveOperation:originalContentsURL:error:';
     function keepBackupFile: objcbool; message 'keepBackupFile';
-    function backupFileURL: NSURL; message 'backupFileURL'; { available in macos  }
+    function backupFileURL: NSURL; message 'backupFileURL'; { available in macos 10.8 }
     procedure saveDocument (sender: id); message 'saveDocument:';
     procedure saveDocumentAs (sender: id); message 'saveDocumentAs:';
     procedure saveDocumentTo (sender: id); message 'saveDocumentTo:';
@@ -102,39 +102,39 @@ type
     function fileNameExtensionWasHiddenInLastRunSavePanel: objcbool; message 'fileNameExtensionWasHiddenInLastRunSavePanel';
     function fileTypeFromLastRunSavePanel: NSString; message 'fileTypeFromLastRunSavePanel';
     procedure saveToURL_ofType_forSaveOperation_delegate_didSaveSelector_contextInfo (url: NSURL; typeName: NSString; saveOperation: NSSaveOperationType; delegate: id; didSaveSelector: SEL; contextInfo: pointer); message 'saveToURL:ofType:forSaveOperation:delegate:didSaveSelector:contextInfo:';
-    procedure saveToURL_ofType_forSaveOperation_completionHandler (url: NSURL; typeName: NSString; saveOperation: NSSaveOperationType; completionHandler: NSDocumentSaveToURLCallback); message 'saveToURL:ofType:forSaveOperation:completionHandler:'; { available in macos  }
-    function canAsynchronouslyWriteToURL_ofType_forSaveOperation (url: NSURL; typeName: NSString; saveOperation: NSSaveOperationType): objcbool; message 'canAsynchronouslyWriteToURL:ofType:forSaveOperation:'; { available in macos  }
-    function checkAutosavingSafetyAndReturnError (outError: NSErrorPtr): objcbool; message 'checkAutosavingSafetyAndReturnError:'; { available in macos  }
-    procedure scheduleAutosaving; message 'scheduleAutosaving'; { available in macos  }
+    procedure saveToURL_ofType_forSaveOperation_completionHandler (url: NSURL; typeName: NSString; saveOperation: NSSaveOperationType; completionHandler: NSDocumentSaveToURLCallback); message 'saveToURL:ofType:forSaveOperation:completionHandler:'; { available in macos 10.7 }
+    function canAsynchronouslyWriteToURL_ofType_forSaveOperation (url: NSURL; typeName: NSString; saveOperation: NSSaveOperationType): objcbool; message 'canAsynchronouslyWriteToURL:ofType:forSaveOperation:'; { available in macos 10.7 }
+    function checkAutosavingSafetyAndReturnError (outError: NSErrorPtr): objcbool; message 'checkAutosavingSafetyAndReturnError:'; { available in macos 10.7 }
+    procedure scheduleAutosaving; message 'scheduleAutosaving'; { available in macos 10.7 }
     function hasUnautosavedChanges: objcbool; message 'hasUnautosavedChanges';
     procedure autosaveDocumentWithDelegate_didAutosaveSelector_contextInfo (delegate: id; didAutosaveSelector: SEL; contextInfo: pointer); message 'autosaveDocumentWithDelegate:didAutosaveSelector:contextInfo:';
-    procedure autosaveWithImplicitCancellability_completionHandler (autosavingIsImplicitlyCancellable_: objcbool; completionHandler: NSDocumentAutosaveWithImplicitCancellabilityCallback); message 'autosaveWithImplicitCancellability:completionHandler:'; { available in macos  }
-    class function autosavesInPlace: objcbool; message 'autosavesInPlace'; { available in macos  }
-    class function preservesVersions: objcbool; message 'preservesVersions'; { available in macos  }
-    procedure browseDocumentVersions (sender: id); message 'browseDocumentVersions:'; { available in macos  }
-    function isBrowsingVersions: objcbool; message 'isBrowsingVersions'; { available in macos  }
-    procedure stopBrowsingVersionsWithCompletionHandler (completionHandler: NSDocumentStopBrowsingVersionsWithCompletionHandlerCallback); message 'stopBrowsingVersionsWithCompletionHandler:'; { available in macos  }
-    class function autosavesDrafts: objcbool; message 'autosavesDrafts'; { available in macos  }
+    procedure autosaveWithImplicitCancellability_completionHandler (autosavingIsImplicitlyCancellable_: objcbool; completionHandler: NSDocumentAutosaveWithImplicitCancellabilityCallback); message 'autosaveWithImplicitCancellability:completionHandler:'; { available in macos 10.7 }
+    class function autosavesInPlace: objcbool; message 'autosavesInPlace'; { available in macos 10.7 }
+    class function preservesVersions: objcbool; message 'preservesVersions'; { available in macos 10.7 }
+    procedure browseDocumentVersions (sender: id); message 'browseDocumentVersions:'; { available in macos 10.8 }
+    function isBrowsingVersions: objcbool; message 'isBrowsingVersions'; { available in macos 10.12 }
+    procedure stopBrowsingVersionsWithCompletionHandler (completionHandler: NSDocumentStopBrowsingVersionsWithCompletionHandlerCallback); message 'stopBrowsingVersionsWithCompletionHandler:'; { available in macos 10.12 }
+    class function autosavesDrafts: objcbool; message 'autosavesDrafts'; { available in macos 10.8 }
     function autosavingFileType: NSString; message 'autosavingFileType';
     procedure setAutosavedContentsFileURL(newValue: NSURL); message 'setAutosavedContentsFileURL:';
     function autosavedContentsFileURL: NSURL; message 'autosavedContentsFileURL';
     procedure canCloseDocumentWithDelegate_shouldCloseSelector_contextInfo (delegate: id; shouldCloseSelector: SEL; contextInfo: pointer); message 'canCloseDocumentWithDelegate:shouldCloseSelector:contextInfo:';
     procedure close; message 'close';
-    procedure duplicateDocument (sender: id); message 'duplicateDocument:'; { available in macos  }
-    procedure duplicateDocumentWithDelegate_didDuplicateSelector_contextInfo (delegate: id; didDuplicateSelector: SEL; contextInfo: pointer); message 'duplicateDocumentWithDelegate:didDuplicateSelector:contextInfo:'; { available in macos  }
-    function duplicateAndReturnError (outError: NSErrorPtr): NSDocument; message 'duplicateAndReturnError:'; { available in macos  }
-    procedure renameDocument (sender: id); message 'renameDocument:'; { available in macos  }
-    procedure moveDocumentToUbiquityContainer (sender: id); message 'moveDocumentToUbiquityContainer:'; { available in macos  }
-    procedure moveDocument (sender: id); message 'moveDocument:'; { available in macos  }
-    procedure moveDocumentWithCompletionHandler (completionHandler: NSDocumentMoveDocumentWithCompletionHandlerCallback); message 'moveDocumentWithCompletionHandler:'; { available in macos  }
-    procedure moveToURL_completionHandler (url: NSURL; completionHandler: NSDocumentMoveToURLCallback); message 'moveToURL:completionHandler:'; { available in macos  }
-    procedure lockDocument (sender: id); message 'lockDocument:'; { available in macos  }
-    procedure unlockDocument (sender: id); message 'unlockDocument:'; { available in macos  }
-    procedure lockDocumentWithCompletionHandler (completionHandler: NSDocumentLockDocumentWithCompletionHandlerCallback); message 'lockDocumentWithCompletionHandler:'; { available in macos  }
-    procedure lockWithCompletionHandler (completionHandler: NSDocumentLockWithCompletionHandlerCallback); message 'lockWithCompletionHandler:'; { available in macos  }
-    procedure unlockDocumentWithCompletionHandler (completionHandler: NSDocumentUnlockDocumentWithCompletionHandlerCallback); message 'unlockDocumentWithCompletionHandler:'; { available in macos  }
-    procedure unlockWithCompletionHandler (completionHandler: NSDocumentUnlockWithCompletionHandlerCallback); message 'unlockWithCompletionHandler:'; { available in macos  }
-    function isLocked: objcbool; message 'isLocked'; { available in macos  }
+    procedure duplicateDocument (sender: id); message 'duplicateDocument:'; { available in macos 10.7 }
+    procedure duplicateDocumentWithDelegate_didDuplicateSelector_contextInfo (delegate: id; didDuplicateSelector: SEL; contextInfo: pointer); message 'duplicateDocumentWithDelegate:didDuplicateSelector:contextInfo:'; { available in macos 10.7 }
+    function duplicateAndReturnError (outError: NSErrorPtr): NSDocument; message 'duplicateAndReturnError:'; { available in macos 10.7 }
+    procedure renameDocument (sender: id); message 'renameDocument:'; { available in macos 10.8 }
+    procedure moveDocumentToUbiquityContainer (sender: id); message 'moveDocumentToUbiquityContainer:'; { available in macos 10.8 }
+    procedure moveDocument (sender: id); message 'moveDocument:'; { available in macos 10.8 }
+    procedure moveDocumentWithCompletionHandler (completionHandler: NSDocumentMoveDocumentWithCompletionHandlerCallback); message 'moveDocumentWithCompletionHandler:'; { available in macos 10.8 }
+    procedure moveToURL_completionHandler (url: NSURL; completionHandler: NSDocumentMoveToURLCallback); message 'moveToURL:completionHandler:'; { available in macos 10.8 }
+    procedure lockDocument (sender: id); message 'lockDocument:'; { available in macos 10.8 }
+    procedure unlockDocument (sender: id); message 'unlockDocument:'; { available in macos 10.8 }
+    procedure lockDocumentWithCompletionHandler (completionHandler: NSDocumentLockDocumentWithCompletionHandlerCallback); message 'lockDocumentWithCompletionHandler:'; { available in macos 10.8 }
+    procedure lockWithCompletionHandler (completionHandler: NSDocumentLockWithCompletionHandlerCallback); message 'lockWithCompletionHandler:'; { available in macos 10.8 }
+    procedure unlockDocumentWithCompletionHandler (completionHandler: NSDocumentUnlockDocumentWithCompletionHandlerCallback); message 'unlockDocumentWithCompletionHandler:'; { available in macos 10.8 }
+    procedure unlockWithCompletionHandler (completionHandler: NSDocumentUnlockWithCompletionHandlerCallback); message 'unlockWithCompletionHandler:'; { available in macos 10.8 }
+    function isLocked: objcbool; message 'isLocked'; { available in macos 10.8 }
     procedure runPageLayout (sender: id); message 'runPageLayout:';
     procedure runModalPageLayoutWithPrintInfo_delegate_didRunSelector_contextInfo (printInfo: NSPrintInfo; delegate: id; didRunSelector: SEL; contextInfo: pointer); message 'runModalPageLayoutWithPrintInfo:delegate:didRunSelector:contextInfo:';
     function preparePageLayout (pageLayout: NSPageLayout): objcbool; message 'preparePageLayout:';
@@ -145,16 +145,16 @@ type
     procedure printDocumentWithSettings_showPrintPanel_delegate_didPrintSelector_contextInfo (printSettings: NSDictionary; showPrintPanel: objcbool; delegate: id; didPrintSelector: SEL; contextInfo: pointer); message 'printDocumentWithSettings:showPrintPanel:delegate:didPrintSelector:contextInfo:';
     function printOperationWithSettings_error (printSettings: NSDictionary; outError: NSErrorPtr): NSPrintOperation; message 'printOperationWithSettings:error:';
     procedure runModalPrintOperation_delegate_didRunSelector_contextInfo (printOperation: NSPrintOperation; delegate: id; didRunSelector: SEL; contextInfo: pointer); message 'runModalPrintOperation:delegate:didRunSelector:contextInfo:';
-    procedure saveDocumentToPDF (sender: id); message 'saveDocumentToPDF:'; { available in macos  }
-    function PDFPrintOperation: NSPrintOperation; message 'PDFPrintOperation'; { available in macos  }
-    function allowsDocumentSharing: objcbool; message 'allowsDocumentSharing'; { available in macos  }
-    procedure shareDocumentWithSharingService_completionHandler (sharingService: NSSharingService; completionHandler: NSDocumentShareDocumentWithSharingServiceCallback); message 'shareDocumentWithSharingService:completionHandler:'; { available in macos  }
-    procedure prepareSharingServicePicker (sharingServicePicker: NSSharingServicePicker); message 'prepareSharingServicePicker:'; { available in macos  }
+    procedure saveDocumentToPDF (sender: id); message 'saveDocumentToPDF:'; { available in macos 10.9 }
+    function PDFPrintOperation: NSPrintOperation; message 'PDFPrintOperation'; { available in macos 10.9 }
+    function allowsDocumentSharing: objcbool; message 'allowsDocumentSharing'; { available in macos 10.13 }
+    procedure shareDocumentWithSharingService_completionHandler (sharingService: NSSharingService; completionHandler: NSDocumentShareDocumentWithSharingServiceCallback); message 'shareDocumentWithSharingService:completionHandler:'; { available in macos 10.13 }
+    procedure prepareSharingServicePicker (sharingServicePicker: NSSharingServicePicker); message 'prepareSharingServicePicker:'; { available in macos 10.13 }
     function isDocumentEdited: objcbool; message 'isDocumentEdited';
-    function isInViewingMode: objcbool; message 'isInViewingMode'; { available in macos  }
+    function isInViewingMode: objcbool; message 'isInViewingMode'; { available in macos 10.7 }
     procedure updateChangeCount (change: NSDocumentChangeType); message 'updateChangeCount:';
-    function changeCountTokenForSaveOperation (saveOperation: NSSaveOperationType): id; message 'changeCountTokenForSaveOperation:'; { available in macos  }
-    procedure updateChangeCountWithToken_forSaveOperation (changeCountToken: id; saveOperation: NSSaveOperationType); message 'updateChangeCountWithToken:forSaveOperation:'; { available in macos  }
+    function changeCountTokenForSaveOperation (saveOperation: NSSaveOperationType): id; message 'changeCountTokenForSaveOperation:'; { available in macos 10.7 }
+    procedure updateChangeCountWithToken_forSaveOperation (changeCountToken: id; saveOperation: NSSaveOperationType); message 'updateChangeCountWithToken:forSaveOperation:'; { available in macos 10.7 }
     procedure setUndoManager(newValue: NSUndoManager); message 'setUndoManager:';
     function undoManager: NSUndoManager; message 'undoManager';
     procedure setHasUndoManager(newValue: objcbool); message 'setHasUndoManager:';
@@ -162,7 +162,7 @@ type
     procedure presentError_modalForWindow_delegate_didPresentSelector_contextInfo (error: NSError; window: NSWindow; delegate: id; didPresentSelector: SEL; contextInfo: pointer); message 'presentError:modalForWindow:delegate:didPresentSelector:contextInfo:';
     function presentError (error: NSError): objcbool; message 'presentError:';
     function willPresentError (error: NSError): NSError; message 'willPresentError:';
-    procedure willNotPresentError (error: NSError); message 'willNotPresentError:'; { available in macos  }
+    procedure willNotPresentError (error: NSError); message 'willNotPresentError:'; { available in macos 10.7 }
     procedure makeWindowControllers; message 'makeWindowControllers';
     function windowNibName: NSNibName; message 'windowNibName';
     procedure windowControllerWillLoadNib (windowController: NSWindowController); message 'windowControllerWillLoadNib:';
@@ -173,27 +173,27 @@ type
     procedure showWindows; message 'showWindows';
     function windowControllers: NSArray; message 'windowControllers';
     procedure shouldCloseWindowController_delegate_shouldCloseSelector_contextInfo (windowController: NSWindowController; delegate: id; shouldCloseSelector: SEL; contextInfo: pointer); message 'shouldCloseWindowController:delegate:shouldCloseSelector:contextInfo:';
-    procedure setDisplayName (displayNameOrNil: NSString); message 'setDisplayName:'; { available in macos  }
+    procedure setDisplayName (displayNameOrNil: NSString); message 'setDisplayName:'; { available in macos 10.7 }
     procedure setDisplayName_(newValue: NSString); message 'setDisplayName:';
     function displayName: NSString; message 'displayName';
-    function defaultDraftName: NSString; message 'defaultDraftName'; { available in macos  }
+    function defaultDraftName: NSString; message 'defaultDraftName'; { available in macos 10.8 }
     function windowForSheet: NSWindow; message 'windowForSheet';
     class function readableTypes: NSArray; message 'readableTypes';
     class function writableTypes: NSArray; message 'writableTypes';
     class function isNativeType (type_: NSString): objcbool; message 'isNativeType:';
     function writableTypesForSaveOperation (saveOperation: NSSaveOperationType): NSArray; message 'writableTypesForSaveOperation:';
-    function fileNameExtensionForType_saveOperation (typeName: NSString; saveOperation: NSSaveOperationType): NSString; message 'fileNameExtensionForType:saveOperation:'; { available in macos  }
+    function fileNameExtensionForType_saveOperation (typeName: NSString; saveOperation: NSSaveOperationType): NSString; message 'fileNameExtensionForType:saveOperation:'; { available in macos 10.5 }
     function validateUserInterfaceItem (item: NSValidatedUserInterfaceItemProtocol): objcbool; message 'validateUserInterfaceItem:';
-    class function usesUbiquitousStorage: objcbool; message 'usesUbiquitousStorage'; { available in macos  }
+    class function usesUbiquitousStorage: objcbool; message 'usesUbiquitousStorage'; { available in macos 10.8 }
 
     { Adopted protocols }
     procedure accommodatePresentedItemDeletionWithCompletionHandler (completionHandler: NSFilePresenterAccommodatePresentedItemDeletionWithCompletionHandlerCallback); message 'accommodatePresentedItemDeletionWithCompletionHandler:';
     procedure accommodatePresentedSubitemDeletionAtURL_completionHandler (url: NSURL; completionHandler: NSFilePresenterAccommodatePresentedSubitemDeletionAtURLCallback); message 'accommodatePresentedSubitemDeletionAtURL:completionHandler:';
     procedure objectDidBeginEditing (editor: NSEditorProtocol); message 'objectDidBeginEditing:';
     procedure objectDidEndEditing (editor: NSEditorProtocol); message 'objectDidEndEditing:';
-    function observedPresentedItemUbiquityAttributes: NSSet; message 'observedPresentedItemUbiquityAttributes'; { unavailable in watchos, tvos }
+    function observedPresentedItemUbiquityAttributes: NSSet; message 'observedPresentedItemUbiquityAttributes'; { unavailable in watchos, tvos } { available in macos 10.13, ios 11.0 }
     procedure presentedItemDidChange; message 'presentedItemDidChange';
-    procedure presentedItemDidChangeUbiquityAttributes (attributes: NSSet); message 'presentedItemDidChangeUbiquityAttributes:'; { unavailable in watchos, tvos }
+    procedure presentedItemDidChangeUbiquityAttributes (attributes: NSSet); message 'presentedItemDidChangeUbiquityAttributes:'; { unavailable in watchos, tvos } { available in macos 10.13, ios 11.0 }
     procedure presentedItemDidGainVersion (version: NSFileVersion); message 'presentedItemDidGainVersion:';
     procedure presentedItemDidLoseVersion (version: NSFileVersion); message 'presentedItemDidLoseVersion:';
     procedure presentedItemDidMoveToURL (newURL: NSURL); message 'presentedItemDidMoveToURL:';
@@ -206,7 +206,7 @@ type
     procedure presentedSubitemAtURL_didResolveConflictVersion (url: NSURL; version: NSFileVersion); message 'presentedSubitemAtURL:didResolveConflictVersion:';
     procedure presentedSubitemDidAppearAtURL (url: NSURL); message 'presentedSubitemDidAppearAtURL:';
     procedure presentedSubitemDidChangeAtURL (url: NSURL); message 'presentedSubitemDidChangeAtURL:';
-    function primaryPresentedItemURL: NSURL; message 'primaryPresentedItemURL'; { unavailable in ios, watchos, tvos }
+    function primaryPresentedItemURL: NSURL; message 'primaryPresentedItemURL'; { unavailable in ios, watchos, tvos } { available in macos 10.8 }
     procedure relinquishPresentedItemToReader (reader: NSFilePresenterRelinquishPresentedItemToReaderCallback); message 'relinquishPresentedItemToReader:';
     procedure relinquishPresentedItemToWriter (writer: NSFilePresenterRelinquishPresentedItemToWriterCallback); message 'relinquishPresentedItemToWriter:';
     procedure savePresentedItemChangesWithCompletionHandler (completionHandler: NSFilePresenterSavePresentedItemChangesWithCompletionHandlerCallback); message 'savePresentedItemChangesWithCompletionHandler:';

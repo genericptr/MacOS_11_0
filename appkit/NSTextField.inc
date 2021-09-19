@@ -17,10 +17,10 @@ type
 type
   NSTextField = objcclass external (NSControl, NSUserInterfaceValidationsProtocol, NSAccessibilityNavigableStaticTextProtocol, NSTextContentProtocol)
   public
-    procedure setPlaceholderString(newValue: NSString); message 'setPlaceholderString:'; { available in macos  }
-    function placeholderString: NSString; message 'placeholderString'; { available in macos  }
-    procedure setPlaceholderAttributedString(newValue: NSAttributedString); message 'setPlaceholderAttributedString:'; { available in macos  }
-    function placeholderAttributedString: NSAttributedString; message 'placeholderAttributedString'; { available in macos  }
+    procedure setPlaceholderString(newValue: NSString); message 'setPlaceholderString:'; { available in macos 10.10 }
+    function placeholderString: NSString; message 'placeholderString'; { available in macos 10.10 }
+    procedure setPlaceholderAttributedString(newValue: NSAttributedString); message 'setPlaceholderAttributedString:'; { available in macos 10.10 }
+    function placeholderAttributedString: NSAttributedString; message 'placeholderAttributedString'; { available in macos 10.10 }
     procedure setBackgroundColor(newValue: NSColor); message 'setBackgroundColor:';
     function backgroundColor: NSColor; message 'backgroundColor';
     procedure setDrawsBackground(newValue: objcbool); message 'setDrawsBackground:';
@@ -46,20 +46,20 @@ type
     function acceptsFirstResponder: objcbool; message 'acceptsFirstResponder';
     procedure setBezelStyle(newValue: NSTextFieldBezelStyle); message 'setBezelStyle:';
     function bezelStyle: NSTextFieldBezelStyle; message 'bezelStyle';
-    procedure setPreferredMaxLayoutWidth(newValue: CGFloat); message 'setPreferredMaxLayoutWidth:'; { available in macos  }
-    function preferredMaxLayoutWidth: CGFloat; message 'preferredMaxLayoutWidth'; { available in macos  }
-    procedure setMaximumNumberOfLines(newValue: NSInteger); message 'setMaximumNumberOfLines:'; { available in macos  }
-    function maximumNumberOfLines: NSInteger; message 'maximumNumberOfLines'; { available in macos  }
-    procedure setAllowsDefaultTighteningForTruncation(newValue: objcbool); message 'setAllowsDefaultTighteningForTruncation:'; { available in macos  }
-    function allowsDefaultTighteningForTruncation: objcbool; message 'allowsDefaultTighteningForTruncation'; { available in macos  }
+    procedure setPreferredMaxLayoutWidth(newValue: CGFloat); message 'setPreferredMaxLayoutWidth:'; { available in macos 10.8 }
+    function preferredMaxLayoutWidth: CGFloat; message 'preferredMaxLayoutWidth'; { available in macos 10.8 }
+    procedure setMaximumNumberOfLines(newValue: NSInteger); message 'setMaximumNumberOfLines:'; { available in macos 10.11 }
+    function maximumNumberOfLines: NSInteger; message 'maximumNumberOfLines'; { available in macos 10.11 }
+    procedure setAllowsDefaultTighteningForTruncation(newValue: objcbool); message 'setAllowsDefaultTighteningForTruncation:'; { available in macos 10.11 }
+    function allowsDefaultTighteningForTruncation: objcbool; message 'allowsDefaultTighteningForTruncation'; { available in macos 10.11 }
     {$if  not defined(TARGET_OS_IPHONE)}
-    procedure setLineBreakStrategy(newValue: NSLineBreakStrategy); message 'setLineBreakStrategy:'; { available in macos  }
-    function lineBreakStrategy: NSLineBreakStrategy; message 'lineBreakStrategy'; { available in macos  }
+    procedure setLineBreakStrategy(newValue: NSLineBreakStrategy); message 'setLineBreakStrategy:'; { available in macos 10.15 }
+    function lineBreakStrategy: NSLineBreakStrategy; message 'lineBreakStrategy'; { available in macos 10.15 }
     {$endif}
 
     { Adopted protocols }
-    function contentType: NSTextContentType; message 'contentType'; { available in macos  }
-    procedure setContentType (newValue: NSTextContentType); message 'setContentType:'; { available in macos  }
+    function contentType: NSTextContentType; message 'contentType'; { available in macos 11.0 }
+    procedure setContentType (newValue: NSTextContentType); message 'setContentType:'; { available in macos 11.0 }
     function validateUserInterfaceItem (item: NSValidatedUserInterfaceItemProtocol): objcbool; message 'validateUserInterfaceItem:';
     function accessibilityValue: NSString; message 'accessibilityValue';
   end;
@@ -67,17 +67,17 @@ type
 
 type
   NSTextField_NSTouchBar = objccategory external name 'NSTouchBar' (NSTextField)
-    procedure setAutomaticTextCompletionEnabled(newValue: objcbool); message 'setAutomaticTextCompletionEnabled:'; { available in macos  }
-    function isAutomaticTextCompletionEnabled: objcbool; message 'isAutomaticTextCompletionEnabled'; { available in macos  }
-    procedure setAllowsCharacterPickerTouchBarItem(newValue: objcbool); message 'setAllowsCharacterPickerTouchBarItem:'; { available in macos  }
+    procedure setAutomaticTextCompletionEnabled(newValue: objcbool); message 'setAutomaticTextCompletionEnabled:'; { available in macos 10.12.2 }
+    function isAutomaticTextCompletionEnabled: objcbool; message 'isAutomaticTextCompletionEnabled'; { available in macos 10.12.2 }
+    procedure setAllowsCharacterPickerTouchBarItem(newValue: objcbool); message 'setAllowsCharacterPickerTouchBarItem:'; { available in macos 10.12.2 }
     function allowsCharacterPickerTouchBarItem: objcbool; message 'allowsCharacterPickerTouchBarItem'; { available in macos  }
   end;
 
 type
   NSTextFieldConvenience = objccategory external (NSTextField)
-    class function labelWithString (stringValue_: NSString): id; message 'labelWithString:'; { available in macos  }
-    class function wrappingLabelWithString (stringValue_: NSString): id; message 'wrappingLabelWithString:'; { available in macos  }
-    class function labelWithAttributedString (attributedStringValue_: NSAttributedString): id; message 'labelWithAttributedString:'; { available in macos  }
+    class function labelWithString (stringValue_: NSString): id; message 'labelWithString:'; { available in macos 10.12 }
+    class function wrappingLabelWithString (stringValue_: NSString): id; message 'wrappingLabelWithString:'; { available in macos 10.12 }
+    class function labelWithAttributedString (attributedStringValue_: NSAttributedString): id; message 'labelWithAttributedString:'; { available in macos 10.12 }
     class function textFieldWithString (stringValue_: NSString): id; message 'textFieldWithString:'; { available in macos  }
   end;
 
@@ -95,8 +95,8 @@ type
 type
   NSTextFieldDelegateProtocol = objcprotocol external name 'NSTextFieldDelegate' (NSControlTextEditingDelegateProtocol)
   optional
-    function textField_textView_candidatesForSelectedRange (textField: NSTextField; textView: NSTextView; selectedRange: NSRange): NSArray; message 'textField:textView:candidatesForSelectedRange:'; { available in macos  }
-    function textField_textView_candidates_forSelectedRange (textField: NSTextField; textView: NSTextView; candidates: NSArray; selectedRange: NSRange): NSArray; message 'textField:textView:candidates:forSelectedRange:'; { available in macos  }
+    function textField_textView_candidatesForSelectedRange (textField: NSTextField; textView: NSTextView; selectedRange: NSRange): NSArray; message 'textField:textView:candidatesForSelectedRange:'; { available in macos 10.12.2 }
+    function textField_textView_candidates_forSelectedRange (textField: NSTextField; textView: NSTextView; candidates: NSArray; selectedRange: NSRange): NSArray; message 'textField:textView:candidates:forSelectedRange:'; { available in macos 10.12.2 }
     function textField_textView_shouldSelectCandidateAtIndex (textField: NSTextField; textView: NSTextView; index: NSUInteger): objcbool; message 'textField:textView:shouldSelectCandidateAtIndex:'; { available in macos  }
   end;
 {$endif}

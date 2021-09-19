@@ -15,7 +15,7 @@ type
     _mediaSelectionGroup: AVMediaSelectionGroupInternal;
   public
     function options: NSArray; message 'options';
-    function defaultOption: AVMediaSelectionOption; message 'defaultOption'; { available in macos , ios , tvos , watchos  }
+    function defaultOption: AVMediaSelectionOption; message 'defaultOption'; { available in macos 10.10, ios 8.0, tvos 9.0, watchos 1.0 }
     function allowsEmptySelection: objcbool; message 'allowsEmptySelection';
     function mediaSelectionOptionWithPropertyList (plist: id): AVMediaSelectionOption; message 'mediaSelectionOptionWithPropertyList:';
 
@@ -27,7 +27,7 @@ type
 type
   AVMediaSelectionOptionFiltering = objccategory external (AVMediaSelectionGroup)
     class function playableMediaSelectionOptionsFromArray (mediaSelectionOptions: NSArray): NSArray; message 'playableMediaSelectionOptionsFromArray:';
-    class function mediaSelectionOptionsFromArray_filteredAndSortedAccordingToPreferredLanguages (mediaSelectionOptions: NSArray; preferredLanguages: NSArray): NSArray; message 'mediaSelectionOptionsFromArray:filteredAndSortedAccordingToPreferredLanguages:'; { available in macos , ios , tvos , watchos  }
+    class function mediaSelectionOptionsFromArray_filteredAndSortedAccordingToPreferredLanguages (mediaSelectionOptions: NSArray; preferredLanguages: NSArray): NSArray; message 'mediaSelectionOptionsFromArray:filteredAndSortedAccordingToPreferredLanguages:'; { available in macos 10.8, ios 6.0, tvos 9.0, watchos 1.0 }
     class function mediaSelectionOptionsFromArray_withLocale (mediaSelectionOptions: NSArray; locale: NSLocale): NSArray; message 'mediaSelectionOptionsFromArray:withLocale:';
     class function mediaSelectionOptionsFromArray_withMediaCharacteristics (mediaSelectionOptions: NSArray; mediaCharacteristics: NSArray): NSArray; message 'mediaSelectionOptionsFromArray:withMediaCharacteristics:';
     class function mediaSelectionOptionsFromArray_withoutMediaCharacteristics (mediaSelectionOptions: NSArray; mediaCharacteristics: NSArray): NSArray; message 'mediaSelectionOptionsFromArray:withoutMediaCharacteristics:';
@@ -43,15 +43,15 @@ type
     function mediaSubTypes: NSArray; message 'mediaSubTypes';
     function hasMediaCharacteristic (mediaCharacteristic: AVMediaCharacteristic): objcbool; message 'hasMediaCharacteristic:';
     function isPlayable: objcbool; message 'isPlayable';
-    function extendedLanguageTag: NSString; message 'extendedLanguageTag'; { available in macos , ios , tvos , watchos  }
+    function extendedLanguageTag: NSString; message 'extendedLanguageTag'; { available in macos 10.9, ios 7.0, tvos 9.0, watchos 1.0 }
     function locale: NSLocale; message 'locale';
     function commonMetadata: NSArray; message 'commonMetadata';
     function availableMetadataFormats: NSArray; message 'availableMetadataFormats';
     function metadataForFormat (format: NSString): NSArray; message 'metadataForFormat:';
     function associatedMediaSelectionOptionInMediaSelectionGroup (mediaSelectionGroup: AVMediaSelectionGroup): AVMediaSelectionOption; message 'associatedMediaSelectionOptionInMediaSelectionGroup:';
     function propertyList: id; message 'propertyList';
-    function displayNameWithLocale (locale_: NSLocale): NSString; message 'displayNameWithLocale:'; { available in macos , ios , tvos , watchos  }
-    function displayName: NSString; message 'displayName'; { available in macos , ios , tvos , watchos  }
+    function displayNameWithLocale (locale_: NSLocale): NSString; message 'displayNameWithLocale:'; { available in macos 10.9, ios 7.0, tvos 9.0, watchos 1.0 }
+    function displayName: NSString; message 'displayName'; { available in macos 10.9, ios 7.0, tvos 9.0, watchos 1.0 }
 
     { Adopted protocols }
     function copyWithZone (zone: NSZonePtr): id; message 'copyWithZone:';

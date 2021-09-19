@@ -93,8 +93,8 @@ type
     function initWithMachPort (machPort: cuint32): id; message 'initWithMachPort:'; { NS_DESIGNATED_INITIALIZER }
     procedure setDelegate (anObject: NSMachPortDelegateProtocol); message 'setDelegate:';
     function delegate: NSMachPortDelegateProtocol; message 'delegate';
-    class function portWithMachPort_options (machPort: cuint32; f: NSMachPortOptions): NSPort; message 'portWithMachPort:options:'; { available in macos , ios , watchos , tvos  }
-    function initWithMachPort_options (machPort: cuint32; f: NSMachPortOptions): id; message 'initWithMachPort:options:'; { available in macos , ios , watchos , tvos  }
+    class function portWithMachPort_options (machPort: cuint32; f: NSMachPortOptions): NSPort; message 'portWithMachPort:options:'; { available in macos 10.5, ios 2.0, watchos 2.0, tvos 9.0 }
+    function initWithMachPort_options (machPort: cuint32; f: NSMachPortOptions): id; message 'initWithMachPort:options:'; { available in macos 10.5, ios 2.0, watchos 2.0, tvos 9.0 }
     function machPort: cuint32; message 'machPort';
     procedure scheduleInRunLoop_forMode (runLoop: NSRunLoop; mode: NSRunLoopMode); message 'scheduleInRunLoop:forMode:';
     procedure removeFromRunLoop_forMode (runLoop: NSRunLoop; mode: NSRunLoopMode); message 'removeFromRunLoop:forMode:';

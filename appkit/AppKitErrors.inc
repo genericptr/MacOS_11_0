@@ -5,9 +5,9 @@ const
   NSTextWriteInapplicableDocumentTypeError = 66062;
   NSTextReadWriteErrorMinimum = 65792;
   NSTextReadWriteErrorMaximum = 66303;
-  NSFontAssetDownloadError = 66304 { available in macos  };
-  NSFontErrorMinimum = 66304 { available in macos  };
-  NSFontErrorMaximum = 66335 { available in macos  };
+  NSFontAssetDownloadError = 66304 { available in macos 10.13 };
+  NSFontErrorMinimum = 66304 { available in macos 10.13 };
+  NSFontErrorMaximum = 66335 { available in macos 10.13 };
   NSServiceApplicationNotFoundError = 66560;
   NSServiceApplicationLaunchFailedError = 66561;
   NSServiceRequestTimedOutError = 66562;
@@ -19,8 +19,8 @@ const
   NSSharingServiceNotConfiguredError = 67072;
   NSSharingServiceErrorMinimum = 67072;
   NSSharingServiceErrorMaximum = 67327;
-  NSWorkspaceAuthorizationInvalidError = 67328 { available in macos  };
-  NSWorkspaceErrorMinimum = 67328 { available in macos  };
-  NSWorkspaceErrorMaximum = 67455 { available in macos  };
+  NSWorkspaceAuthorizationInvalidError = 67328 { available in macos 10.14 };
+  NSWorkspaceErrorMinimum = 67328 { available in macos 10.14 };
+  NSWorkspaceErrorMaximum = 67455 { available in macos 10.14 };
 {$endif}
 

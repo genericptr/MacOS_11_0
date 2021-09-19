@@ -12,14 +12,14 @@ type
   public
     class function videoNodeWithAVPlayer (player: AVPlayer): SKVideoNode; message 'videoNodeWithAVPlayer:';
     class function videoNodeWithVideoFileNamed (videoFile: NSString): SKVideoNode; message 'videoNodeWithVideoFileNamed:'; deprecated 'in 10_8, 10_11, 7_0, 9_0';
-    class function videoNodeWithFileNamed (videoFile: NSString): SKVideoNode; message 'videoNodeWithFileNamed:'; { available in ios , tvos , watchos , macos  }
+    class function videoNodeWithFileNamed (videoFile: NSString): SKVideoNode; message 'videoNodeWithFileNamed:'; { available in ios 9.0, tvos 9.0, watchos 2.0, macos 10.11 }
     class function videoNodeWithVideoURL (videoURL: NSURL): SKVideoNode; message 'videoNodeWithVideoURL:'; deprecated 'in 10_8, 10_11, 7_0, 9_0';
-    class function videoNodeWithURL (videoURL: NSURL): SKVideoNode; message 'videoNodeWithURL:'; { available in ios , tvos , watchos , macos  }
+    class function videoNodeWithURL (videoURL: NSURL): SKVideoNode; message 'videoNodeWithURL:'; { available in ios 9.0, tvos 9.0, watchos 2.0, macos 10.11 }
     function initWithAVPlayer (player: AVPlayer): id; message 'initWithAVPlayer:'; { NS_DESIGNATED_INITIALIZER }
     function initWithVideoFileNamed (videoFile: NSString): id; message 'initWithVideoFileNamed:'; deprecated 'in 10_8, 10_10, 7_0, 8_0';
-    function initWithFileNamed (videoFile: NSString): id; message 'initWithFileNamed:'; { available in ios , tvos , watchos , macos  }
+    function initWithFileNamed (videoFile: NSString): id; message 'initWithFileNamed:'; { available in ios 8.0, tvos 9.0, watchos 1.0, macos 10.10 }
     function initWithVideoURL (url: NSURL): id; message 'initWithVideoURL:'; deprecated 'in 10_8, 10_10, 7_0, 8_0';
-    function initWithURL (url: NSURL): id; message 'initWithURL:'; { available in ios , tvos , watchos , macos  }
+    function initWithURL (url: NSURL): id; message 'initWithURL:'; { available in ios 8.0, tvos 9.0, watchos 1.0, macos 10.10 }
     function initWithCoder (aDecoder: NSCoder): id; message 'initWithCoder:'; { NS_DESIGNATED_INITIALIZER }
     procedure play; message 'play';
     procedure pause; message 'pause';

@@ -114,7 +114,7 @@ type
     function matchesOnlyOnBestFittingAxis: objcbool; message 'matchesOnlyOnBestFittingAxis'; { available in macos  }
     procedure drawAtPoint_fromRect_operation_fraction (point: NSPoint; fromRect: NSRect; op: NSCompositingOperation; delta: CGFloat); message 'drawAtPoint:fromRect:operation:fraction:';
     procedure drawInRect_fromRect_operation_fraction (rect: NSRect; fromRect: NSRect; op: NSCompositingOperation; delta: CGFloat); message 'drawInRect:fromRect:operation:fraction:';
-    procedure drawInRect_fromRect_operation_fraction_respectFlipped_hints (dstSpacePortionRect: NSRect; srcSpacePortionRect: NSRect; op: NSCompositingOperation; requestedAlpha: CGFloat; respectContextIsFlipped: objcbool; hints: NSDictionary); message 'drawInRect:fromRect:operation:fraction:respectFlipped:hints:'; { available in macos  }
+    procedure drawInRect_fromRect_operation_fraction_respectFlipped_hints (dstSpacePortionRect: NSRect; srcSpacePortionRect: NSRect; op: NSCompositingOperation; requestedAlpha: CGFloat; respectContextIsFlipped: objcbool; hints: NSDictionary); message 'drawInRect:fromRect:operation:fraction:respectFlipped:hints:'; { available in macos 10.7 }
     function drawRepresentation_inRect (imageRep: NSImageRep; rect: NSRect): objcbool; message 'drawRepresentation:inRect:';
     procedure drawInRect (rect: NSRect); message 'drawInRect:'; { available in macos  }
     procedure recache; message 'recache';
@@ -139,20 +139,20 @@ type
     procedure setAlignmentRect(newValue: NSRect); message 'setAlignmentRect:'; { available in macos  }
     function alignmentRect: NSRect; message 'alignmentRect'; { available in macos  }
     function isTemplate: objcbool; message 'isTemplate'; { available in macos  }
-    procedure setTemplate (isTemplate_: objcbool); message 'setTemplate:'; { available in macos  }
-    procedure setAccessibilityDescription(newValue: NSString); message 'setAccessibilityDescription:'; { available in macos  }
+    procedure setTemplate (isTemplate_: objcbool); message 'setTemplate:'; { available in macos 10.5 }
+    procedure setAccessibilityDescription(newValue: NSString); message 'setAccessibilityDescription:'; { available in macos 10.5 }
     function accessibilityDescription: NSString; message 'accessibilityDescription'; { available in macos  }
-    function initWithCGImage_size (cgImage: CGImageRef; size_: NSSize): id; message 'initWithCGImage:size:'; { available in macos  }
-    function CGImageForProposedRect_context_hints (proposedDestRect: NSRectPtr; referenceContext: NSGraphicsContext; hints: NSDictionary): CGImageRef; message 'CGImageForProposedRect:context:hints:'; { available in macos  }
+    function initWithCGImage_size (cgImage: CGImageRef; size_: NSSize): id; message 'initWithCGImage:size:'; { available in macos 10.5 }
+    function CGImageForProposedRect_context_hints (proposedDestRect: NSRectPtr; referenceContext: NSGraphicsContext; hints: NSDictionary): CGImageRef; message 'CGImageForProposedRect:context:hints:'; { available in macos 10.5 }
     function bestRepresentationForRect_context_hints (rect: NSRect; referenceContext: NSGraphicsContext; hints: NSDictionary): NSImageRep; message 'bestRepresentationForRect:context:hints:'; { available in macos  }
-    function hitTestRect_withImageDestinationRect_context_hints_flipped (testRectDestSpace: NSRect; imageRectDestSpace: NSRect; context: NSGraphicsContext; hints: NSDictionary; flipped: objcbool): objcbool; message 'hitTestRect:withImageDestinationRect:context:hints:flipped:'; { available in macos  }
-    function recommendedLayerContentsScale (preferredContentsScale: CGFloat): CGFloat; message 'recommendedLayerContentsScale:'; { available in macos  }
+    function hitTestRect_withImageDestinationRect_context_hints_flipped (testRectDestSpace: NSRect; imageRectDestSpace: NSRect; context: NSGraphicsContext; hints: NSDictionary; flipped: objcbool): objcbool; message 'hitTestRect:withImageDestinationRect:context:hints:flipped:'; { available in macos 10.5 }
+    function recommendedLayerContentsScale (preferredContentsScale: CGFloat): CGFloat; message 'recommendedLayerContentsScale:'; { available in macos 10.5 }
     function layerContentsForContentsScale (layerContentsScale: CGFloat): id; message 'layerContentsForContentsScale:'; { available in macos  }
-    procedure setCapInsets(newValue: NSEdgeInsets); message 'setCapInsets:'; { available in macos  }
-    function capInsets: NSEdgeInsets; message 'capInsets'; { available in macos  }
-    procedure setResizingMode(newValue: NSImageResizingMode); message 'setResizingMode:'; { available in macos  }
-    function resizingMode: NSImageResizingMode; message 'resizingMode'; { available in macos  }
-    function imageWithSymbolConfiguration (configuration: NSImageSymbolConfiguration): NSImage; message 'imageWithSymbolConfiguration:'; { available in macos  }
+    procedure setCapInsets(newValue: NSEdgeInsets); message 'setCapInsets:'; { available in macos 10.6 }
+    function capInsets: NSEdgeInsets; message 'capInsets'; { available in macos 10.6 }
+    procedure setResizingMode(newValue: NSImageResizingMode); message 'setResizingMode:'; { available in macos 10.6 }
+    function resizingMode: NSImageResizingMode; message 'resizingMode'; { available in macos 10.6 }
+    function imageWithSymbolConfiguration (configuration: NSImageSymbolConfiguration): NSImage; message 'imageWithSymbolConfiguration:'; { available in macos 10.6 }
   end;
 {$endif}
 
@@ -227,137 +227,137 @@ var
   NSImageNameComputer: NSImageName { available in macos  }; cvar; external;
   NSImageNameEnterFullScreenTemplate: NSImageName { available in macos  }; cvar; external;
   NSImageNameExitFullScreenTemplate: NSImageName { available in macos  }; cvar; external;
-  NSImageNameFolder: NSImageName { available in macos  }; cvar; external;
-  NSImageNameFolderBurnable: NSImageName { available in macos  }; cvar; external;
-  NSImageNameFolderSmart: NSImageName { available in macos  }; cvar; external;
-  NSImageNameFollowLinkFreestandingTemplate: NSImageName { available in macos  }; cvar; external;
-  NSImageNameHomeTemplate: NSImageName { available in macos , ios  }; cvar; external;
-  NSImageNameIChatTheaterTemplate: NSImageName { available in macos  }; cvar; external;
-  NSImageNameLockLockedTemplate: NSImageName { available in macos , ios  }; cvar; external;
-  NSImageNameLockUnlockedTemplate: NSImageName { available in macos , ios  }; cvar; external;
-  NSImageNameNetwork: NSImageName { available in macos  }; cvar; external;
-  NSImageNamePathTemplate: NSImageName { available in macos , ios  }; cvar; external;
-  NSImageNameQuickLookTemplate: NSImageName { available in macos , ios  }; cvar; external;
-  NSImageNameRefreshFreestandingTemplate: NSImageName { available in macos  }; cvar; external;
-  NSImageNameRefreshTemplate: NSImageName { available in macos , ios  }; cvar; external;
-  NSImageNameRemoveTemplate: NSImageName { available in macos , ios  }; cvar; external;
-  NSImageNameRevealFreestandingTemplate: NSImageName { available in macos  }; cvar; external;
-  NSImageNameShareTemplate: NSImageName { available in macos , ios  }; cvar; external;
-  NSImageNameSlideshowTemplate: NSImageName { available in macos , ios  }; cvar; external;
-  NSImageNameStatusAvailable: NSImageName { available in macos  }; cvar; external;
-  NSImageNameStatusNone: NSImageName { available in macos  }; cvar; external;
-  NSImageNameStatusPartiallyAvailable: NSImageName { available in macos  }; cvar; external;
-  NSImageNameStatusUnavailable: NSImageName { available in macos  }; cvar; external;
-  NSImageNameStopProgressFreestandingTemplate: NSImageName { available in macos  }; cvar; external;
-  NSImageNameStopProgressTemplate: NSImageName { available in macos , ios  }; cvar; external;
-  NSImageNameTrashEmpty: NSImageName { available in macos  }; cvar; external;
-  NSImageNameTrashFull: NSImageName { available in macos  }; cvar; external;
-  NSImageNameActionTemplate: NSImageName { available in macos , ios  }; cvar; external;
-  NSImageNameSmartBadgeTemplate: NSImageName { available in macos  }; cvar; external;
-  NSImageNameIconViewTemplate: NSImageName { available in macos , ios  }; cvar; external;
-  NSImageNameListViewTemplate: NSImageName { available in macos , ios  }; cvar; external;
-  NSImageNameColumnViewTemplate: NSImageName { available in macos , ios  }; cvar; external;
-  NSImageNameFlowViewTemplate: NSImageName { available in macos  }; cvar; external;
-  NSImageNameInvalidDataFreestandingTemplate: NSImageName { available in macos  }; cvar; external;
-  NSImageNameGoForwardTemplate: NSImageName { available in macos , ios  }; cvar; external;
-  NSImageNameGoBackTemplate: NSImageName { available in macos , ios  }; cvar; external;
-  NSImageNameGoRightTemplate: NSImageName { available in macos , ios  }; cvar; external;
-  NSImageNameGoLeftTemplate: NSImageName { available in macos , ios  }; cvar; external;
-  NSImageNameRightFacingTriangleTemplate: NSImageName { available in macos  }; cvar; external;
-  NSImageNameLeftFacingTriangleTemplate: NSImageName { available in macos  }; cvar; external;
+  NSImageNameFolder: NSImageName { available in macos 10.5, ios 13.0 }; cvar; external;
+  NSImageNameFolderBurnable: NSImageName { available in macos 10.5, ios 13.0 }; cvar; external;
+  NSImageNameFolderSmart: NSImageName { available in macos 10.5 }; cvar; external;
+  NSImageNameFollowLinkFreestandingTemplate: NSImageName { available in macos 10.6, ios 13.0 }; cvar; external;
+  NSImageNameHomeTemplate: NSImageName { available in macos 10.6 }; cvar; external;
+  NSImageNameIChatTheaterTemplate: NSImageName { available in macos 10.5 }; cvar; external;
+  NSImageNameLockLockedTemplate: NSImageName { available in macos 10.5 }; cvar; external;
+  NSImageNameLockUnlockedTemplate: NSImageName { available in macos 10.5 }; cvar; external;
+  NSImageNameNetwork: NSImageName { available in macos 10.6 }; cvar; external;
+  NSImageNamePathTemplate: NSImageName { available in macos 10.5 }; cvar; external;
+  NSImageNameQuickLookTemplate: NSImageName { available in macos 10.5 }; cvar; external;
+  NSImageNameRefreshFreestandingTemplate: NSImageName { available in macos 10.5 }; cvar; external;
+  NSImageNameRefreshTemplate: NSImageName { available in macos 10.6, ios 13.0 }; cvar; external;
+  NSImageNameRemoveTemplate: NSImageName { available in macos 10.5 }; cvar; external;
+  NSImageNameRevealFreestandingTemplate: NSImageName { available in macos 10.5, ios 13.0 }; cvar; external;
+  NSImageNameShareTemplate: NSImageName { available in macos 10.5, ios 13.0 }; cvar; external;
+  NSImageNameSlideshowTemplate: NSImageName { available in macos 10.5 }; cvar; external;
+  NSImageNameStatusAvailable: NSImageName { available in macos 10.5, ios 13.0 }; cvar; external;
+  NSImageNameStatusNone: NSImageName { available in macos 10.5, ios 13.0 }; cvar; external;
+  NSImageNameStatusPartiallyAvailable: NSImageName { available in macos 10.5 }; cvar; external;
+  NSImageNameStatusUnavailable: NSImageName { available in macos 10.5, ios 13.0 }; cvar; external;
+  NSImageNameStopProgressFreestandingTemplate: NSImageName { available in macos 10.5, ios 13.0 }; cvar; external;
+  NSImageNameStopProgressTemplate: NSImageName { available in macos 10.5 }; cvar; external;
+  NSImageNameTrashEmpty: NSImageName { available in macos 10.8, ios 13.0 }; cvar; external;
+  NSImageNameTrashFull: NSImageName { available in macos 10.5, ios 13.0 }; cvar; external;
+  NSImageNameActionTemplate: NSImageName { available in macos 10.6 }; cvar; external;
+  NSImageNameSmartBadgeTemplate: NSImageName { available in macos 10.6 }; cvar; external;
+  NSImageNameIconViewTemplate: NSImageName { available in macos 10.6 }; cvar; external;
+  NSImageNameListViewTemplate: NSImageName { available in macos 10.6 }; cvar; external;
+  NSImageNameColumnViewTemplate: NSImageName { available in macos 10.5 }; cvar; external;
+  NSImageNameFlowViewTemplate: NSImageName { available in macos 10.5, ios 13.0 }; cvar; external;
+  NSImageNameInvalidDataFreestandingTemplate: NSImageName { available in macos 10.6 }; cvar; external;
+  NSImageNameGoForwardTemplate: NSImageName { available in macos 10.6 }; cvar; external;
+  NSImageNameGoBackTemplate: NSImageName { available in macos 10.5, ios 13.0 }; cvar; external;
+  NSImageNameGoRightTemplate: NSImageName { available in macos 10.5 }; cvar; external;
+  NSImageNameGoLeftTemplate: NSImageName { available in macos 10.5, ios 13.0 }; cvar; external;
+  NSImageNameRightFacingTriangleTemplate: NSImageName { available in macos 10.5, ios 13.0 }; cvar; external;
+  NSImageNameLeftFacingTriangleTemplate: NSImageName { available in macos 10.5, ios 13.0 }; cvar; external;
   NSImageNameDotMac: NSImageName deprecated 'replace with NSImageNameMobileMe'; cvar; external;
-  NSImageNameMobileMe: NSImageName { available in macos  }; cvar; external;
-  NSImageNameMultipleDocuments: NSImageName { available in macos  }; cvar; external;
-  NSImageNameUserAccounts: NSImageName { available in macos  }; cvar; external;
-  NSImageNamePreferencesGeneral: NSImageName { available in macos  }; cvar; external;
-  NSImageNameAdvanced: NSImageName { available in macos  }; cvar; external;
-  NSImageNameInfo: NSImageName { available in macos  }; cvar; external;
-  NSImageNameFontPanel: NSImageName { available in macos  }; cvar; external;
+  NSImageNameMobileMe: NSImageName { available in macos 10.5 }; cvar; external;
+  NSImageNameMultipleDocuments: NSImageName { available in macos 10.12, ios 13.0 }; cvar; external;
+  NSImageNameUserAccounts: NSImageName { available in macos 10.12, ios 13.0 }; cvar; external;
+  NSImageNamePreferencesGeneral: NSImageName { available in macos 10.5, ios 13.0 }; cvar; external;
+  NSImageNameAdvanced: NSImageName { available in macos 10.5, ios 13.0 }; cvar; external;
+  NSImageNameInfo: NSImageName { available in macos 10.5 }; cvar; external;
+  NSImageNameFontPanel: NSImageName { available in macos 10.5 }; cvar; external;
   NSImageNameColorPanel: NSImageName { available in macos  }; cvar; external;
-  NSImageNameUser: NSImageName { available in macos  }; cvar; external;
-  NSImageNameUserGroup: NSImageName { available in macos  }; cvar; external;
-  NSImageNameEveryone: NSImageName { available in macos  }; cvar; external;
-  NSImageNameUserGuest: NSImageName { available in macos  }; cvar; external;
-  NSImageNameMenuOnStateTemplate: NSImageName { available in macos  }; cvar; external;
-  NSImageNameMenuMixedStateTemplate: NSImageName { available in macos  }; cvar; external;
-  NSImageNameApplicationIcon: NSImageName { available in macos  }; cvar; external;
-  NSImageNameTouchBarAddDetailTemplate: NSImageName { available in macos , ios  }; cvar; external;
-  NSImageNameTouchBarAddTemplate: NSImageName { available in macos , ios  }; cvar; external;
-  NSImageNameTouchBarAlarmTemplate: NSImageName { available in macos , ios  }; cvar; external;
-  NSImageNameTouchBarAudioInputMuteTemplate: NSImageName { available in macos , ios  }; cvar; external;
-  NSImageNameTouchBarAudioInputTemplate: NSImageName { available in macos , ios  }; cvar; external;
-  NSImageNameTouchBarAudioOutputMuteTemplate: NSImageName { available in macos , ios  }; cvar; external;
-  NSImageNameTouchBarAudioOutputVolumeHighTemplate: NSImageName { available in macos , ios  }; cvar; external;
-  NSImageNameTouchBarAudioOutputVolumeLowTemplate: NSImageName { available in macos , ios  }; cvar; external;
-  NSImageNameTouchBarAudioOutputVolumeMediumTemplate: NSImageName { available in macos , ios  }; cvar; external;
-  NSImageNameTouchBarAudioOutputVolumeOffTemplate: NSImageName { available in macos , ios  }; cvar; external;
-  NSImageNameTouchBarBookmarksTemplate: NSImageName { available in macos , ios  }; cvar; external;
-  NSImageNameTouchBarColorPickerFill: NSImageName { available in macos , ios  }; cvar; external;
-  NSImageNameTouchBarColorPickerFont: NSImageName { available in macos , ios  }; cvar; external;
-  NSImageNameTouchBarColorPickerStroke: NSImageName { available in macos , ios  }; cvar; external;
-  NSImageNameTouchBarCommunicationAudioTemplate: NSImageName { available in macos , ios  }; cvar; external;
-  NSImageNameTouchBarCommunicationVideoTemplate: NSImageName { available in macos , ios  }; cvar; external;
-  NSImageNameTouchBarComposeTemplate: NSImageName { available in macos , ios  }; cvar; external;
-  NSImageNameTouchBarDeleteTemplate: NSImageName { available in macos , ios  }; cvar; external;
-  NSImageNameTouchBarDownloadTemplate: NSImageName { available in macos , ios  }; cvar; external;
-  NSImageNameTouchBarEnterFullScreenTemplate: NSImageName { available in macos , ios  }; cvar; external;
-  NSImageNameTouchBarExitFullScreenTemplate: NSImageName { available in macos , ios  }; cvar; external;
-  NSImageNameTouchBarFastForwardTemplate: NSImageName { available in macos , ios  }; cvar; external;
-  NSImageNameTouchBarFolderCopyToTemplate: NSImageName { available in macos , ios  }; cvar; external;
-  NSImageNameTouchBarFolderMoveToTemplate: NSImageName { available in macos , ios  }; cvar; external;
-  NSImageNameTouchBarFolderTemplate: NSImageName { available in macos , ios  }; cvar; external;
-  NSImageNameTouchBarGetInfoTemplate: NSImageName { available in macos , ios  }; cvar; external;
-  NSImageNameTouchBarGoBackTemplate: NSImageName { available in macos , ios  }; cvar; external;
-  NSImageNameTouchBarGoDownTemplate: NSImageName { available in macos , ios  }; cvar; external;
-  NSImageNameTouchBarGoForwardTemplate: NSImageName { available in macos , ios  }; cvar; external;
-  NSImageNameTouchBarGoUpTemplate: NSImageName { available in macos , ios  }; cvar; external;
-  NSImageNameTouchBarHistoryTemplate: NSImageName { available in macos , ios  }; cvar; external;
-  NSImageNameTouchBarIconViewTemplate: NSImageName { available in macos , ios  }; cvar; external;
-  NSImageNameTouchBarListViewTemplate: NSImageName { available in macos , ios  }; cvar; external;
-  NSImageNameTouchBarMailTemplate: NSImageName { available in macos , ios  }; cvar; external;
-  NSImageNameTouchBarNewFolderTemplate: NSImageName { available in macos , ios  }; cvar; external;
-  NSImageNameTouchBarNewMessageTemplate: NSImageName { available in macos , ios  }; cvar; external;
-  NSImageNameTouchBarOpenInBrowserTemplate: NSImageName { available in macos , ios  }; cvar; external;
-  NSImageNameTouchBarPauseTemplate: NSImageName { available in macos , ios  }; cvar; external;
-  NSImageNameTouchBarPlayPauseTemplate: NSImageName { available in macos , ios  }; cvar; external;
-  NSImageNameTouchBarPlayTemplate: NSImageName { available in macos , ios  }; cvar; external;
-  NSImageNameTouchBarQuickLookTemplate: NSImageName { available in macos , ios  }; cvar; external;
-  NSImageNameTouchBarRecordStartTemplate: NSImageName { available in macos , ios  }; cvar; external;
-  NSImageNameTouchBarRecordStopTemplate: NSImageName { available in macos , ios  }; cvar; external;
-  NSImageNameTouchBarRefreshTemplate: NSImageName { available in macos , ios  }; cvar; external;
-  NSImageNameTouchBarRemoveTemplate: NSImageName { available in macos , ios  }; cvar; external;
-  NSImageNameTouchBarRewindTemplate: NSImageName { available in macos , ios  }; cvar; external;
-  NSImageNameTouchBarRotateLeftTemplate: NSImageName { available in macos , ios  }; cvar; external;
-  NSImageNameTouchBarRotateRightTemplate: NSImageName { available in macos , ios  }; cvar; external;
-  NSImageNameTouchBarSearchTemplate: NSImageName { available in macos , ios  }; cvar; external;
-  NSImageNameTouchBarShareTemplate: NSImageName { available in macos , ios  }; cvar; external;
-  NSImageNameTouchBarSidebarTemplate: NSImageName { available in macos , ios  }; cvar; external;
-  NSImageNameTouchBarSkipAhead15SecondsTemplate: NSImageName { available in macos , ios  }; cvar; external;
-  NSImageNameTouchBarSkipAhead30SecondsTemplate: NSImageName { available in macos , ios  }; cvar; external;
-  NSImageNameTouchBarSkipAheadTemplate: NSImageName { available in macos , ios  }; cvar; external;
-  NSImageNameTouchBarSkipBack15SecondsTemplate: NSImageName { available in macos , ios  }; cvar; external;
-  NSImageNameTouchBarSkipBack30SecondsTemplate: NSImageName { available in macos , ios  }; cvar; external;
-  NSImageNameTouchBarSkipBackTemplate: NSImageName { available in macos , ios  }; cvar; external;
-  NSImageNameTouchBarSkipToEndTemplate: NSImageName { available in macos , ios  }; cvar; external;
-  NSImageNameTouchBarSkipToStartTemplate: NSImageName { available in macos , ios  }; cvar; external;
-  NSImageNameTouchBarSlideshowTemplate: NSImageName { available in macos , ios  }; cvar; external;
-  NSImageNameTouchBarTagIconTemplate: NSImageName { available in macos , ios  }; cvar; external;
-  NSImageNameTouchBarTextBoldTemplate: NSImageName { available in macos , ios  }; cvar; external;
-  NSImageNameTouchBarTextBoxTemplate: NSImageName { available in macos , ios  }; cvar; external;
-  NSImageNameTouchBarTextCenterAlignTemplate: NSImageName { available in macos , ios  }; cvar; external;
-  NSImageNameTouchBarTextItalicTemplate: NSImageName { available in macos , ios  }; cvar; external;
-  NSImageNameTouchBarTextJustifiedAlignTemplate: NSImageName { available in macos , ios  }; cvar; external;
-  NSImageNameTouchBarTextLeftAlignTemplate: NSImageName { available in macos , ios  }; cvar; external;
-  NSImageNameTouchBarTextListTemplate: NSImageName { available in macos , ios  }; cvar; external;
-  NSImageNameTouchBarTextRightAlignTemplate: NSImageName { available in macos , ios  }; cvar; external;
-  NSImageNameTouchBarTextStrikethroughTemplate: NSImageName { available in macos , ios  }; cvar; external;
-  NSImageNameTouchBarTextUnderlineTemplate: NSImageName { available in macos , ios  }; cvar; external;
-  NSImageNameTouchBarUserAddTemplate: NSImageName { available in macos , ios  }; cvar; external;
-  NSImageNameTouchBarUserGroupTemplate: NSImageName { available in macos , ios  }; cvar; external;
-  NSImageNameTouchBarUserTemplate: NSImageName { available in macos , ios  }; cvar; external;
-  NSImageNameTouchBarVolumeDownTemplate: NSImageName { available in macos , ios  }; cvar; external;
-  NSImageNameTouchBarVolumeUpTemplate: NSImageName { available in macos , ios  }; cvar; external;
-  NSImageNameTouchBarPlayheadTemplate: NSImageName { available in macos  }; cvar; external;
+  NSImageNameUser: NSImageName { available in macos 10.6 }; cvar; external;
+  NSImageNameUserGroup: NSImageName { available in macos 10.5 }; cvar; external;
+  NSImageNameEveryone: NSImageName { available in macos 10.5 }; cvar; external;
+  NSImageNameUserGuest: NSImageName { available in macos 10.5 }; cvar; external;
+  NSImageNameMenuOnStateTemplate: NSImageName { available in macos 10.5 }; cvar; external;
+  NSImageNameMenuMixedStateTemplate: NSImageName { available in macos 10.5 }; cvar; external;
+  NSImageNameApplicationIcon: NSImageName { available in macos 10.5 }; cvar; external;
+  NSImageNameTouchBarAddDetailTemplate: NSImageName { available in macos 10.5 }; cvar; external;
+  NSImageNameTouchBarAddTemplate: NSImageName { available in macos 10.5 }; cvar; external;
+  NSImageNameTouchBarAlarmTemplate: NSImageName { available in macos 10.5 }; cvar; external;
+  NSImageNameTouchBarAudioInputMuteTemplate: NSImageName { available in macos 10.5 }; cvar; external;
+  NSImageNameTouchBarAudioInputTemplate: NSImageName { available in macos 10.6 }; cvar; external;
+  NSImageNameTouchBarAudioOutputMuteTemplate: NSImageName { available in macos 10.6 }; cvar; external;
+  NSImageNameTouchBarAudioOutputVolumeHighTemplate: NSImageName { available in macos 10.6 }; cvar; external;
+  NSImageNameTouchBarAudioOutputVolumeLowTemplate: NSImageName { available in macos 10.6 }; cvar; external;
+  NSImageNameTouchBarAudioOutputVolumeMediumTemplate: NSImageName { available in macos 10.12.2, ios 13.0 }; cvar; external;
+  NSImageNameTouchBarAudioOutputVolumeOffTemplate: NSImageName { available in macos 10.12.2, ios 13.0 }; cvar; external;
+  NSImageNameTouchBarBookmarksTemplate: NSImageName { available in macos 10.12.2, ios 13.0 }; cvar; external;
+  NSImageNameTouchBarColorPickerFill: NSImageName { available in macos 10.12.2, ios 13.0 }; cvar; external;
+  NSImageNameTouchBarColorPickerFont: NSImageName { available in macos 10.12.2, ios 13.0 }; cvar; external;
+  NSImageNameTouchBarColorPickerStroke: NSImageName { available in macos 10.12.2, ios 13.0 }; cvar; external;
+  NSImageNameTouchBarCommunicationAudioTemplate: NSImageName { available in macos 10.12.2, ios 13.0 }; cvar; external;
+  NSImageNameTouchBarCommunicationVideoTemplate: NSImageName { available in macos 10.12.2, ios 13.0 }; cvar; external;
+  NSImageNameTouchBarComposeTemplate: NSImageName { available in macos 10.12.2, ios 13.0 }; cvar; external;
+  NSImageNameTouchBarDeleteTemplate: NSImageName { available in macos 10.12.2, ios 13.0 }; cvar; external;
+  NSImageNameTouchBarDownloadTemplate: NSImageName { available in macos 10.12.2, ios 13.0 }; cvar; external;
+  NSImageNameTouchBarEnterFullScreenTemplate: NSImageName { available in macos 10.12.2, ios 13.0 }; cvar; external;
+  NSImageNameTouchBarExitFullScreenTemplate: NSImageName { available in macos 10.12.2, ios 13.0 }; cvar; external;
+  NSImageNameTouchBarFastForwardTemplate: NSImageName { available in macos 10.12.2, ios 13.0 }; cvar; external;
+  NSImageNameTouchBarFolderCopyToTemplate: NSImageName { available in macos 10.12.2, ios 13.0 }; cvar; external;
+  NSImageNameTouchBarFolderMoveToTemplate: NSImageName { available in macos 10.12.2, ios 13.0 }; cvar; external;
+  NSImageNameTouchBarFolderTemplate: NSImageName { available in macos 10.12.2, ios 13.0 }; cvar; external;
+  NSImageNameTouchBarGetInfoTemplate: NSImageName { available in macos 10.12.2, ios 13.0 }; cvar; external;
+  NSImageNameTouchBarGoBackTemplate: NSImageName { available in macos 10.12.2, ios 13.0 }; cvar; external;
+  NSImageNameTouchBarGoDownTemplate: NSImageName { available in macos 10.12.2, ios 13.0 }; cvar; external;
+  NSImageNameTouchBarGoForwardTemplate: NSImageName { available in macos 10.12.2, ios 13.0 }; cvar; external;
+  NSImageNameTouchBarGoUpTemplate: NSImageName { available in macos 10.12.2, ios 13.0 }; cvar; external;
+  NSImageNameTouchBarHistoryTemplate: NSImageName { available in macos 10.12.2, ios 13.0 }; cvar; external;
+  NSImageNameTouchBarIconViewTemplate: NSImageName { available in macos 10.12.2, ios 13.0 }; cvar; external;
+  NSImageNameTouchBarListViewTemplate: NSImageName { available in macos 10.12.2, ios 13.0 }; cvar; external;
+  NSImageNameTouchBarMailTemplate: NSImageName { available in macos 10.12.2, ios 13.0 }; cvar; external;
+  NSImageNameTouchBarNewFolderTemplate: NSImageName { available in macos 10.12.2, ios 13.0 }; cvar; external;
+  NSImageNameTouchBarNewMessageTemplate: NSImageName { available in macos 10.12.2, ios 13.0 }; cvar; external;
+  NSImageNameTouchBarOpenInBrowserTemplate: NSImageName { available in macos 10.12.2, ios 13.0 }; cvar; external;
+  NSImageNameTouchBarPauseTemplate: NSImageName { available in macos 10.12.2, ios 13.0 }; cvar; external;
+  NSImageNameTouchBarPlayPauseTemplate: NSImageName { available in macos 10.12.2, ios 13.0 }; cvar; external;
+  NSImageNameTouchBarPlayTemplate: NSImageName { available in macos 10.12.2, ios 13.0 }; cvar; external;
+  NSImageNameTouchBarQuickLookTemplate: NSImageName { available in macos 10.12.2, ios 13.0 }; cvar; external;
+  NSImageNameTouchBarRecordStartTemplate: NSImageName { available in macos 10.12.2, ios 13.0 }; cvar; external;
+  NSImageNameTouchBarRecordStopTemplate: NSImageName { available in macos 10.12.2, ios 13.0 }; cvar; external;
+  NSImageNameTouchBarRefreshTemplate: NSImageName { available in macos 10.12.2, ios 13.0 }; cvar; external;
+  NSImageNameTouchBarRemoveTemplate: NSImageName { available in macos 10.12.2, ios 13.0 }; cvar; external;
+  NSImageNameTouchBarRewindTemplate: NSImageName { available in macos 10.12.2, ios 13.0 }; cvar; external;
+  NSImageNameTouchBarRotateLeftTemplate: NSImageName { available in macos 10.12.2, ios 13.0 }; cvar; external;
+  NSImageNameTouchBarRotateRightTemplate: NSImageName { available in macos 10.12.2, ios 13.0 }; cvar; external;
+  NSImageNameTouchBarSearchTemplate: NSImageName { available in macos 10.12.2, ios 13.0 }; cvar; external;
+  NSImageNameTouchBarShareTemplate: NSImageName { available in macos 10.12.2, ios 13.0 }; cvar; external;
+  NSImageNameTouchBarSidebarTemplate: NSImageName { available in macos 10.12.2, ios 13.0 }; cvar; external;
+  NSImageNameTouchBarSkipAhead15SecondsTemplate: NSImageName { available in macos 10.12.2, ios 13.0 }; cvar; external;
+  NSImageNameTouchBarSkipAhead30SecondsTemplate: NSImageName { available in macos 10.13, ios 13.0 }; cvar; external;
+  NSImageNameTouchBarSkipAheadTemplate: NSImageName { available in macos 10.12.2, ios 13.0 }; cvar; external;
+  NSImageNameTouchBarSkipBack15SecondsTemplate: NSImageName { available in macos 10.12.2, ios 13.0 }; cvar; external;
+  NSImageNameTouchBarSkipBack30SecondsTemplate: NSImageName { available in macos 10.12.2, ios 13.0 }; cvar; external;
+  NSImageNameTouchBarSkipBackTemplate: NSImageName { available in macos 10.12.2, ios 13.0 }; cvar; external;
+  NSImageNameTouchBarSkipToEndTemplate: NSImageName { available in macos 10.12.2, ios 13.0 }; cvar; external;
+  NSImageNameTouchBarSkipToStartTemplate: NSImageName { available in macos 10.12.2, ios 13.0 }; cvar; external;
+  NSImageNameTouchBarSlideshowTemplate: NSImageName { available in macos 10.12.2, ios 13.0 }; cvar; external;
+  NSImageNameTouchBarTagIconTemplate: NSImageName { available in macos 10.12.2, ios 13.0 }; cvar; external;
+  NSImageNameTouchBarTextBoldTemplate: NSImageName { available in macos 10.12.2, ios 13.0 }; cvar; external;
+  NSImageNameTouchBarTextBoxTemplate: NSImageName { available in macos 10.12.2, ios 13.0 }; cvar; external;
+  NSImageNameTouchBarTextCenterAlignTemplate: NSImageName { available in macos 10.12.2, ios 13.0 }; cvar; external;
+  NSImageNameTouchBarTextItalicTemplate: NSImageName { available in macos 10.12.2, ios 13.0 }; cvar; external;
+  NSImageNameTouchBarTextJustifiedAlignTemplate: NSImageName { available in macos 10.12.2, ios 13.0 }; cvar; external;
+  NSImageNameTouchBarTextLeftAlignTemplate: NSImageName { available in macos 10.12.2, ios 13.0 }; cvar; external;
+  NSImageNameTouchBarTextListTemplate: NSImageName { available in macos 10.12.2, ios 13.0 }; cvar; external;
+  NSImageNameTouchBarTextRightAlignTemplate: NSImageName { available in macos 10.12.2, ios 13.0 }; cvar; external;
+  NSImageNameTouchBarTextStrikethroughTemplate: NSImageName { available in macos 10.12.2, ios 13.0 }; cvar; external;
+  NSImageNameTouchBarTextUnderlineTemplate: NSImageName { available in macos 10.12.2, ios 13.0 }; cvar; external;
+  NSImageNameTouchBarUserAddTemplate: NSImageName { available in macos 10.12.2, ios 13.0 }; cvar; external;
+  NSImageNameTouchBarUserGroupTemplate: NSImageName { available in macos 10.12.2, ios 13.0 }; cvar; external;
+  NSImageNameTouchBarUserTemplate: NSImageName { available in macos 10.12.2, ios 13.0 }; cvar; external;
+  NSImageNameTouchBarVolumeDownTemplate: NSImageName { available in macos 10.12.2, ios 13.0 }; cvar; external;
+  NSImageNameTouchBarVolumeUpTemplate: NSImageName { available in macos 10.12.2, ios 13.0 }; cvar; external;
+  NSImageNameTouchBarPlayheadTemplate: NSImageName { available in macos 10.12.2, ios 13.0 }; cvar; external;
 {$endif}
 
 {$ifdef TYPES}

@@ -57,16 +57,16 @@ const
   MTLVertexFormatUInt4 = 39;
   MTLVertexFormatInt1010102Normalized = 40;
   MTLVertexFormatUInt1010102Normalized = 41;
-  MTLVertexFormatUChar4Normalized_BGRA = 42 { available in macos , ios  };
-  MTLVertexFormatUChar = 45 { available in macos , ios  };
-  MTLVertexFormatChar = 46 { available in macos , ios  };
-  MTLVertexFormatUCharNormalized = 47 { available in macos , ios  };
-  MTLVertexFormatCharNormalized = 48 { available in macos , ios  };
-  MTLVertexFormatUShort = 49 { available in macos , ios  };
-  MTLVertexFormatShort = 50 { available in macos , ios  };
-  MTLVertexFormatUShortNormalized = 51 { available in macos , ios  };
-  MTLVertexFormatShortNormalized = 52 { available in macos , ios  };
-  MTLVertexFormatHalf = 53 { available in macos , ios  };
+  MTLVertexFormatUChar4Normalized_BGRA = 42 { available in macos 10.13, ios 11.0 };
+  MTLVertexFormatUChar = 45 { available in macos 10.13, ios 11.0 };
+  MTLVertexFormatChar = 46 { available in macos 10.13, ios 11.0 };
+  MTLVertexFormatUCharNormalized = 47 { available in macos 10.13, ios 11.0 };
+  MTLVertexFormatCharNormalized = 48 { available in macos 10.13, ios 11.0 };
+  MTLVertexFormatUShort = 49 { available in macos 10.13, ios 11.0 };
+  MTLVertexFormatShort = 50 { available in macos 10.13, ios 11.0 };
+  MTLVertexFormatUShortNormalized = 51 { available in macos 10.13, ios 11.0 };
+  MTLVertexFormatShortNormalized = 52 { available in macos 10.13, ios 11.0 };
+  MTLVertexFormatHalf = 53 { available in macos 10.13, ios 11.0 };
 
 type
   MTLVertexStepFunction = NSUInteger;
@@ -76,8 +76,8 @@ const
   MTLVertexStepFunctionConstant = 0;
   MTLVertexStepFunctionPerVertex = 1;
   MTLVertexStepFunctionPerInstance = 2;
-  MTLVertexStepFunctionPerPatch = 3 { available in macos , ios  };
-  MTLVertexStepFunctionPerPatchControlPoint = 4 { available in macos , ios  };
+  MTLVertexStepFunctionPerPatch = 3 { available in macos 10.12, ios 10.0 };
+  MTLVertexStepFunctionPerPatchControlPoint = 4 { available in macos 10.12, ios 10.0 };
 {$endif}
 
 {$ifdef CLASSES}

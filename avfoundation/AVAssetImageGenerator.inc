@@ -54,8 +54,8 @@ type
     function customVideoCompositor: id; message 'customVideoCompositor'; { unavailable in watchos }
     procedure setRequestedTimeToleranceBefore(newValue: CMTime); message 'setRequestedTimeToleranceBefore:'; { unavailable in watchos }
     function requestedTimeToleranceBefore: CMTime; message 'requestedTimeToleranceBefore'; { unavailable in watchos }
-    procedure setRequestedTimeToleranceAfter(newValue: CMTime); message 'setRequestedTimeToleranceAfter:'; { unavailable in watchos }
-    function requestedTimeToleranceAfter: CMTime; message 'requestedTimeToleranceAfter'; { unavailable in watchos }
+    procedure setRequestedTimeToleranceAfter(newValue: CMTime); message 'setRequestedTimeToleranceAfter:'; { unavailable in watchos } { available in macos 10.9, ios 7.0, tvos 9.0 }
+    function requestedTimeToleranceAfter: CMTime; message 'requestedTimeToleranceAfter'; { unavailable in watchos } { available in macos 10.7, ios 5.0, tvos 9.0 }
     class function assetImageGeneratorWithAsset (asset_: AVAsset): id; message 'assetImageGeneratorWithAsset:';
     function initWithAsset (asset_: AVAsset): id; message 'initWithAsset:'; { NS_DESIGNATED_INITIALIZER }
     function copyCGImageAtTime_actualTime_error (requestedTime: CMTime; actualTime: CMTimePtr; outError: NSErrorPtr): CGImageRef; message 'copyCGImageAtTime:actualTime:error:'; { CF_RETURNS_RETAINED }

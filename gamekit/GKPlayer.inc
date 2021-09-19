@@ -29,7 +29,7 @@ type
 
 {$ifdef EXTERNAL_SYMBOLS}
 var
-  GKPlayerIDNoLongerAvailable: NSString { unavailable in watchos }; cvar; external;
+  GKPlayerIDNoLongerAvailable: NSString { unavailable in watchos } { available in ios 14.0, macos 11.0, tvos 14.0 }; cvar; external;
 {$endif}
 
 {$ifdef CLASSES}
@@ -37,14 +37,14 @@ var
 type
   GKPlayer = objcclass external (GKBasePlayer)
   public
-    function scopedIDsArePersistent: objcbool; message 'scopedIDsArePersistent'; { unavailable in watchos }
-    function gamePlayerID: NSString; message 'gamePlayerID'; { unavailable in watchos }
-    function teamPlayerID: NSString; message 'teamPlayerID'; { unavailable in watchos }
-    function displayName: NSString; message 'displayName'; { available in 10_8, 6_0 }
+    function scopedIDsArePersistent: objcbool; message 'scopedIDsArePersistent'; { unavailable in watchos } { available in ios 13.0, macos 10.15, tvos 13.0 }
+    function gamePlayerID: NSString; message 'gamePlayerID'; { unavailable in watchos } { available in ios 12.4, macos 10.14.6, tvos 12.4 }
+    function teamPlayerID: NSString; message 'teamPlayerID'; { unavailable in watchos } { available in ios 12.4, macos 10.14.6, tvos 12.4 }
+    function displayName: NSString; message 'displayName'; { available in 10_8, 6_0 } { available in 3_0 }
     function alias: NSString; message 'alias';
     class function anonymousGuestPlayerWithIdentifier (guestIdentifier: NSString): id; message 'anonymousGuestPlayerWithIdentifier:'; { available in 10_11, 9_0 }
     function guestIdentifier: NSString; message 'guestIdentifier'; { available in 10_11, 9_0 }
-    function isInvitable: objcbool; message 'isInvitable'; { available in ios , macos , tvos  }
+    function isInvitable: objcbool; message 'isInvitable'; { available in ios 14.0, macos 11.0, tvos 14.0 }
   end;
 
 

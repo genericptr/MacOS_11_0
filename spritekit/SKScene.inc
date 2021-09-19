@@ -46,22 +46,22 @@ type
   public
     function initWithSize (size: CGSize): id; message 'initWithSize:';
     class function sceneWithSize (size: CGSize): id; message 'sceneWithSize:';
-    procedure sceneDidLoad; message 'sceneDidLoad'; { available in ios , tvos , watchos , macos  }
+    procedure sceneDidLoad; message 'sceneDidLoad'; { available in ios 10.0, tvos 10.0, watchos 3.0, macos 10.12 }
     procedure setSize(newValue: CGSize); message 'setSize:';
     function size: CGSize; message 'size';
     procedure setScaleMode(newValue: SKSceneScaleMode); message 'setScaleMode:';
     function scaleMode: SKSceneScaleMode; message 'scaleMode';
-    procedure setCamera(newValue: SKCameraNode); message 'setCamera:'; { available in ios , tvos , watchos , macos  }
-    function camera: SKCameraNode; message 'camera'; { available in ios , tvos , watchos , macos  }
-    procedure setListener(newValue: SKNode); message 'setListener:'; { available in ios , tvos , watchos , macos  }
-    function listener: SKNode; message 'listener'; { available in ios , tvos , watchos , macos  }
+    procedure setCamera(newValue: SKCameraNode); message 'setCamera:'; { available in ios 9.0, tvos 9.0, watchos 2.0, macos 10.11 }
+    function camera: SKCameraNode; message 'camera'; { available in ios 9.0, tvos 9.0, watchos 2.0, macos 10.11 }
+    procedure setListener(newValue: SKNode); message 'setListener:'; { available in ios 9.0, tvos 9.0, watchos 2.0, macos 10.11 }
+    function listener: SKNode; message 'listener'; { available in ios 9.0, tvos 9.0, watchos 2.0, macos 10.11 }
     {$if defined(__NULL_MACRO__)}
-    function audioEngine: AVAudioEngine; message 'audioEngine'; { available in ios , tvos , watchos , macos  }
+    function audioEngine: AVAudioEngine; message 'audioEngine'; { available in ios 9.0, tvos 9.0, watchos 2.0, macos 10.11 }
     {$endif}
     procedure setBackgroundColor(newValue: SKColor); message 'setBackgroundColor:';
     function backgroundColor: SKColor; message 'backgroundColor';
-    procedure setDelegate(newValue: SKSceneDelegateProtocol); message 'setDelegate:'; { available in ios , tvos , watchos , macos  }
-    function delegate: SKSceneDelegateProtocol; message 'delegate'; { available in ios , tvos , watchos , macos  }
+    procedure setDelegate(newValue: SKSceneDelegateProtocol); message 'setDelegate:'; { available in ios 8.0, tvos 9.0, watchos 2.0, macos 10.10 }
+    function delegate: SKSceneDelegateProtocol; message 'delegate'; { available in ios 8.0, tvos 9.0, watchos 2.0, macos 10.10 }
     procedure setAnchorPoint(newValue: CGPoint); message 'setAnchorPoint:';
     function anchorPoint: CGPoint; message 'anchorPoint';
     function physicsWorld: SKPhysicsWorld; message 'physicsWorld';
@@ -73,8 +73,8 @@ type
     procedure update (currentTime: NSTimeInterval); message 'update:';
     procedure didEvaluateActions; message 'didEvaluateActions';
     procedure didSimulatePhysics; message 'didSimulatePhysics';
-    procedure didApplyConstraints; message 'didApplyConstraints'; { available in ios , tvos , watchos , macos  }
-    procedure didFinishUpdate; message 'didFinishUpdate'; { available in ios , tvos , watchos , macos  }
+    procedure didApplyConstraints; message 'didApplyConstraints'; { available in ios 8.0, tvos 9.0, watchos 1.0, macos 10.10 }
+    procedure didFinishUpdate; message 'didFinishUpdate'; { available in ios 8.0, tvos 9.0, watchos 1.0, macos 10.10 }
     {$if defined(SKVIEW_AVAILABLE)}
     procedure didMoveToView (view_: SKView); message 'didMoveToView:';
     procedure willMoveFromView (view_: SKView); message 'willMoveFromView:';

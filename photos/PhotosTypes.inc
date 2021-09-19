@@ -76,13 +76,13 @@ const
   PHAssetCollectionSubtypeSmartAlbumBursts = 207;
   PHAssetCollectionSubtypeSmartAlbumSlomoVideos = 208;
   PHAssetCollectionSubtypeSmartAlbumUserLibrary = 209;
-  PHAssetCollectionSubtypeSmartAlbumSelfPortraits = 210 { available in ios  };
-  PHAssetCollectionSubtypeSmartAlbumScreenshots = 211 { available in ios  };
-  PHAssetCollectionSubtypeSmartAlbumDepthEffect = 212 { available in macos , ios , tvos  };
-  PHAssetCollectionSubtypeSmartAlbumLivePhotos = 213 { available in macos , ios , tvos  };
-  PHAssetCollectionSubtypeSmartAlbumAnimated = 214 { available in macos , ios , tvos  };
-  PHAssetCollectionSubtypeSmartAlbumLongExposures = 215 { available in macos , ios , tvos  };
-  PHAssetCollectionSubtypeSmartAlbumUnableToUpload = 216 { available in macos , ios , tvos  };
+  PHAssetCollectionSubtypeSmartAlbumSelfPortraits = 210 { available in ios 9 };
+  PHAssetCollectionSubtypeSmartAlbumScreenshots = 211 { available in ios 9 };
+  PHAssetCollectionSubtypeSmartAlbumDepthEffect = 212 { available in macos 10.13, ios 10.2, tvos 10.1 };
+  PHAssetCollectionSubtypeSmartAlbumLivePhotos = 213 { available in macos 10.13, ios 10.3, tvos 10.2 };
+  PHAssetCollectionSubtypeSmartAlbumAnimated = 214 { available in macos 10.15, ios 11, tvos 11 };
+  PHAssetCollectionSubtypeSmartAlbumLongExposures = 215 { available in macos 10.15, ios 11, tvos 11 };
+  PHAssetCollectionSubtypeSmartAlbumUnableToUpload = 216 { available in macos 10.15, ios 13, tvos 13 };
   PHAssetCollectionSubtypeAny = NSIntegerMax;
 
 type
@@ -124,9 +124,9 @@ const
   PHAssetMediaSubtypeNone = 0;
   PHAssetMediaSubtypePhotoPanorama = 1 shl 0;
   PHAssetMediaSubtypePhotoHDR = 1 shl 1;
-  PHAssetMediaSubtypePhotoScreenshot = 1 shl 2 { available in ios  };
-  PHAssetMediaSubtypePhotoLive = 1 shl 3 { available in ios  };
-  PHAssetMediaSubtypePhotoDepthEffect = 1 shl 4 { available in macos , ios , tvos  };
+  PHAssetMediaSubtypePhotoScreenshot = 1 shl 2 { available in ios 9 };
+  PHAssetMediaSubtypePhotoLive = 1 shl 3 { available in ios 9.1 };
+  PHAssetMediaSubtypePhotoDepthEffect = 1 shl 4 { available in macos 10.12.2, ios 10.2, tvos 10.1 };
   PHAssetMediaSubtypeVideoStreamed = 1 shl 16;
   PHAssetMediaSubtypeVideoHighFrameRate = 1 shl 17;
   PHAssetMediaSubtypeVideoTimelapse = 1 shl 18;
@@ -163,10 +163,10 @@ const
   PHAssetResourceTypeFullSizeVideo = 6;
   PHAssetResourceTypeAdjustmentData = 7;
   PHAssetResourceTypeAdjustmentBasePhoto = 8;
-  PHAssetResourceTypePairedVideo = 9 { available in ios  };
-  PHAssetResourceTypeFullSizePairedVideo = 10 { available in macos , ios  };
-  PHAssetResourceTypeAdjustmentBasePairedVideo = 11 { available in macos , ios  };
-  PHAssetResourceTypeAdjustmentBaseVideo = 12 { available in macos , ios  };
+  PHAssetResourceTypePairedVideo = 9 { available in ios 9.1 };
+  PHAssetResourceTypeFullSizePairedVideo = 10 { available in macos 10.15, ios 10 };
+  PHAssetResourceTypeAdjustmentBasePairedVideo = 11 { available in macos 10.15, ios 10 };
+  PHAssetResourceTypeAdjustmentBaseVideo = 12 { available in macos 10.15, ios 13 };
 {$endif}
 
 {$endif}

@@ -33,10 +33,10 @@ const
   MTLBlendFactorOneMinusBlendColor = 12;
   MTLBlendFactorBlendAlpha = 13;
   MTLBlendFactorOneMinusBlendAlpha = 14;
-  MTLBlendFactorSource1Color = 15 { available in macos , ios  };
-  MTLBlendFactorOneMinusSource1Color = 16 { available in macos , ios  };
-  MTLBlendFactorSource1Alpha = 17 { available in macos , ios  };
-  MTLBlendFactorOneMinusSource1Alpha = 18 { available in macos , ios  };
+  MTLBlendFactorSource1Color = 15 { available in macos 10.12, ios 10.11 };
+  MTLBlendFactorOneMinusSource1Color = 16 { available in macos 10.12, ios 10.11 };
+  MTLBlendFactorSource1Alpha = 17 { available in macos 10.12, ios 10.11 };
+  MTLBlendFactorOneMinusSource1Alpha = 18 { available in macos 10.12, ios 10.11 };
 
 type
   MTLBlendOperation = NSUInteger;
@@ -141,7 +141,7 @@ type
   public
     function vertexArguments: NSArray; message 'vertexArguments';
     function fragmentArguments: NSArray; message 'fragmentArguments';
-    function tileArguments: NSArray; message 'tileArguments'; { unavailable in tvos }
+    function tileArguments: NSArray; message 'tileArguments'; { unavailable in tvos } { available in macos 11.0, macCatalyst 14.0, ios 11.0 }
   end;
 
 type
@@ -165,35 +165,35 @@ type
     function isAlphaToOneEnabled: objcbool; message 'isAlphaToOneEnabled';
     procedure setRasterizationEnabled(newValue: objcbool); message 'setRasterizationEnabled:';
     function isRasterizationEnabled: objcbool; message 'isRasterizationEnabled';
-    procedure setMaxVertexAmplificationCount(newValue: NSUInteger); message 'setMaxVertexAmplificationCount:'; { available in macos , ios , macCatalyst  }
-    function maxVertexAmplificationCount: NSUInteger; message 'maxVertexAmplificationCount'; { available in macos , ios , macCatalyst  }
+    procedure setMaxVertexAmplificationCount(newValue: NSUInteger); message 'setMaxVertexAmplificationCount:'; { available in macos 10.15.4, ios 13.0, macCatalyst 13.4 }
+    function maxVertexAmplificationCount: NSUInteger; message 'maxVertexAmplificationCount'; { available in macos 10.15.4, ios 13.0, macCatalyst 13.4 }
     function colorAttachments: MTLRenderPipelineColorAttachmentDescriptorArray; message 'colorAttachments';
     procedure setDepthAttachmentPixelFormat(newValue: MTLPixelFormat); message 'setDepthAttachmentPixelFormat:';
     function depthAttachmentPixelFormat: MTLPixelFormat; message 'depthAttachmentPixelFormat';
     procedure setStencilAttachmentPixelFormat(newValue: MTLPixelFormat); message 'setStencilAttachmentPixelFormat:';
     function stencilAttachmentPixelFormat: MTLPixelFormat; message 'stencilAttachmentPixelFormat';
-    procedure setInputPrimitiveTopology(newValue: MTLPrimitiveTopologyClass); message 'setInputPrimitiveTopology:'; { unavailable in tvos }
-    function inputPrimitiveTopology: MTLPrimitiveTopologyClass; message 'inputPrimitiveTopology'; { unavailable in tvos }
-    procedure setTessellationPartitionMode(newValue: MTLTessellationPartitionMode); message 'setTessellationPartitionMode:'; { available in macos , ios  }
-    function tessellationPartitionMode: MTLTessellationPartitionMode; message 'tessellationPartitionMode'; { available in macos , ios  }
-    procedure setMaxTessellationFactor(newValue: NSUInteger); message 'setMaxTessellationFactor:'; { available in macos , ios  }
-    function maxTessellationFactor: NSUInteger; message 'maxTessellationFactor'; { available in macos , ios  }
-    procedure setTessellationFactorScaleEnabled(newValue: objcbool); message 'setTessellationFactorScaleEnabled:'; { available in macos , ios  }
-    function isTessellationFactorScaleEnabled: objcbool; message 'isTessellationFactorScaleEnabled'; { available in macos , ios  }
-    procedure setTessellationFactorFormat(newValue: MTLTessellationFactorFormat); message 'setTessellationFactorFormat:'; { available in macos , ios  }
-    function tessellationFactorFormat: MTLTessellationFactorFormat; message 'tessellationFactorFormat'; { available in macos , ios  }
-    procedure setTessellationControlPointIndexType(newValue: MTLTessellationControlPointIndexType); message 'setTessellationControlPointIndexType:'; { available in macos , ios  }
-    function tessellationControlPointIndexType: MTLTessellationControlPointIndexType; message 'tessellationControlPointIndexType'; { available in macos , ios  }
-    procedure setTessellationFactorStepFunction(newValue: MTLTessellationFactorStepFunction); message 'setTessellationFactorStepFunction:'; { available in macos , ios  }
-    function tessellationFactorStepFunction: MTLTessellationFactorStepFunction; message 'tessellationFactorStepFunction'; { available in macos , ios  }
-    procedure setTessellationOutputWindingOrder(newValue: MTLWinding); message 'setTessellationOutputWindingOrder:'; { available in macos , ios  }
-    function tessellationOutputWindingOrder: MTLWinding; message 'tessellationOutputWindingOrder'; { available in macos , ios  }
-    function vertexBuffers: MTLPipelineBufferDescriptorArray; message 'vertexBuffers'; { available in macos , ios  }
-    function fragmentBuffers: MTLPipelineBufferDescriptorArray; message 'fragmentBuffers'; { available in macos , ios  }
-    procedure setSupportIndirectCommandBuffers(newValue: objcbool); message 'setSupportIndirectCommandBuffers:'; { available in macos , ios  }
-    function supportIndirectCommandBuffers: objcbool; message 'supportIndirectCommandBuffers'; { available in macos , ios  }
-    procedure setBinaryArchives(newValue: NSArray); message 'setBinaryArchives:'; { available in macos , ios  }
-    function binaryArchives: NSArray; message 'binaryArchives'; { available in macos , ios  }
+    procedure setInputPrimitiveTopology(newValue: MTLPrimitiveTopologyClass); message 'setInputPrimitiveTopology:'; { unavailable in tvos } { available in macos 10.11, ios 12.0 }
+    function inputPrimitiveTopology: MTLPrimitiveTopologyClass; message 'inputPrimitiveTopology'; { unavailable in tvos } { available in macos 10.11, ios 12.0 }
+    procedure setTessellationPartitionMode(newValue: MTLTessellationPartitionMode); message 'setTessellationPartitionMode:'; { available in macos 10.12, ios 10.0 }
+    function tessellationPartitionMode: MTLTessellationPartitionMode; message 'tessellationPartitionMode'; { available in macos 10.12, ios 10.0 }
+    procedure setMaxTessellationFactor(newValue: NSUInteger); message 'setMaxTessellationFactor:'; { available in macos 10.12, ios 10.0 }
+    function maxTessellationFactor: NSUInteger; message 'maxTessellationFactor'; { available in macos 10.12, ios 10.0 }
+    procedure setTessellationFactorScaleEnabled(newValue: objcbool); message 'setTessellationFactorScaleEnabled:'; { available in macos 10.12, ios 10.0 }
+    function isTessellationFactorScaleEnabled: objcbool; message 'isTessellationFactorScaleEnabled'; { available in macos 10.12, ios 10.0 }
+    procedure setTessellationFactorFormat(newValue: MTLTessellationFactorFormat); message 'setTessellationFactorFormat:'; { available in macos 10.12, ios 10.0 }
+    function tessellationFactorFormat: MTLTessellationFactorFormat; message 'tessellationFactorFormat'; { available in macos 10.12, ios 10.0 }
+    procedure setTessellationControlPointIndexType(newValue: MTLTessellationControlPointIndexType); message 'setTessellationControlPointIndexType:'; { available in macos 10.12, ios 10.0 }
+    function tessellationControlPointIndexType: MTLTessellationControlPointIndexType; message 'tessellationControlPointIndexType'; { available in macos 10.12, ios 10.0 }
+    procedure setTessellationFactorStepFunction(newValue: MTLTessellationFactorStepFunction); message 'setTessellationFactorStepFunction:'; { available in macos 10.12, ios 10.0 }
+    function tessellationFactorStepFunction: MTLTessellationFactorStepFunction; message 'tessellationFactorStepFunction'; { available in macos 10.12, ios 10.0 }
+    procedure setTessellationOutputWindingOrder(newValue: MTLWinding); message 'setTessellationOutputWindingOrder:'; { available in macos 10.12, ios 10.0 }
+    function tessellationOutputWindingOrder: MTLWinding; message 'tessellationOutputWindingOrder'; { available in macos 10.12, ios 10.0 }
+    function vertexBuffers: MTLPipelineBufferDescriptorArray; message 'vertexBuffers'; { available in macos 10.13, ios 11.0 }
+    function fragmentBuffers: MTLPipelineBufferDescriptorArray; message 'fragmentBuffers'; { available in macos 10.13, ios 11.0 }
+    procedure setSupportIndirectCommandBuffers(newValue: objcbool); message 'setSupportIndirectCommandBuffers:'; { available in macos 10.14, ios 12.0 }
+    function supportIndirectCommandBuffers: objcbool; message 'supportIndirectCommandBuffers'; { available in macos 10.14, ios 12.0 }
+    procedure setBinaryArchives(newValue: NSArray); message 'setBinaryArchives:'; { available in macos 11.0, ios 14.0 }
+    function binaryArchives: NSArray; message 'binaryArchives'; { available in macos 11.0, ios 14.0 }
     procedure reset; message 'reset';
 
     { Adopted protocols }
@@ -207,11 +207,11 @@ type
   MTLRenderPipelineStateProtocol = objcprotocol external name 'MTLRenderPipelineState' (NSObjectProtocol)
     function label_: NSString; message 'label';
     function device: id; message 'device';
-    function maxTotalThreadsPerThreadgroup: NSUInteger; message 'maxTotalThreadsPerThreadgroup'; { unavailable in tvos }
-    function threadgroupSizeMatchesTileSize: objcbool; message 'threadgroupSizeMatchesTileSize'; { unavailable in tvos }
-    function imageblockSampleLength: NSUInteger; message 'imageblockSampleLength'; { unavailable in tvos }
-    function imageblockMemoryLengthForDimensions (imageblockDimensions: MTLSize): NSUInteger; message 'imageblockMemoryLengthForDimensions:'; { unavailable in tvos }
-    function supportIndirectCommandBuffers: objcbool; message 'supportIndirectCommandBuffers'; { available in macos , ios  }
+    function maxTotalThreadsPerThreadgroup: NSUInteger; message 'maxTotalThreadsPerThreadgroup'; { unavailable in tvos } { available in macos 11.0, macCatalyst 14.0, ios 11.0 }
+    function threadgroupSizeMatchesTileSize: objcbool; message 'threadgroupSizeMatchesTileSize'; { unavailable in tvos } { available in macos 11.0, macCatalyst 14.0, ios 11.0 }
+    function imageblockSampleLength: NSUInteger; message 'imageblockSampleLength'; { unavailable in tvos } { available in macos 11.0, macCatalyst 14.0, ios 11.0 }
+    function imageblockMemoryLengthForDimensions (imageblockDimensions: MTLSize): NSUInteger; message 'imageblockMemoryLengthForDimensions:'; { unavailable in tvos } { available in macos 11.0, macCatalyst 14.0, ios 11.0 }
+    function supportIndirectCommandBuffers: objcbool; message 'supportIndirectCommandBuffers'; { available in macos 10.14, ios 12.0 }
   end;
 {$endif}
 
@@ -253,11 +253,11 @@ type
     function colorAttachments: MTLTileRenderPipelineColorAttachmentDescriptorArray; message 'colorAttachments';
     procedure setThreadgroupSizeMatchesTileSize(newValue: objcbool); message 'setThreadgroupSizeMatchesTileSize:';
     function threadgroupSizeMatchesTileSize: objcbool; message 'threadgroupSizeMatchesTileSize';
-    function tileBuffers: MTLPipelineBufferDescriptorArray; message 'tileBuffers'; { available in macos , macCatalyst , ios  }
-    procedure setMaxTotalThreadsPerThreadgroup(newValue: NSUInteger); message 'setMaxTotalThreadsPerThreadgroup:'; { available in macos , ios  }
-    function maxTotalThreadsPerThreadgroup: NSUInteger; message 'maxTotalThreadsPerThreadgroup'; { available in macos , ios  }
-    procedure setBinaryArchives(newValue: NSArray); message 'setBinaryArchives:'; { available in macos , ios  }
-    function binaryArchives: NSArray; message 'binaryArchives'; { available in macos , ios  }
+    function tileBuffers: MTLPipelineBufferDescriptorArray; message 'tileBuffers'; { available in macos 11.0, macCatalyst 14.0, ios 11.0 }
+    procedure setMaxTotalThreadsPerThreadgroup(newValue: NSUInteger); message 'setMaxTotalThreadsPerThreadgroup:'; { available in macos 10.15, ios 12.0 }
+    function maxTotalThreadsPerThreadgroup: NSUInteger; message 'maxTotalThreadsPerThreadgroup'; { available in macos 10.15, ios 12.0 }
+    procedure setBinaryArchives(newValue: NSArray); message 'setBinaryArchives:'; { available in macos 11.0, ios 14.0 }
+    function binaryArchives: NSArray; message 'binaryArchives'; { available in macos 11.0, ios 14.0 }
     procedure reset; message 'reset';
 
     { Adopted protocols }

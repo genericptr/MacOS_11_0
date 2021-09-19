@@ -7,8 +7,8 @@ type
 
 {$ifdef EXTERNAL_SYMBOLS}
 var
-  MLFeatureValueImageOptionCropRect: MLFeatureValueImageOption { available in macos , ios , tvos  }; cvar; external;
-  MLFeatureValueImageOptionCropAndScale: MLFeatureValueImageOption { available in macos , ios ,tvos  }; cvar; external;
+  MLFeatureValueImageOptionCropRect: MLFeatureValueImageOption { available in macos 10.15, ios 13.0, tvos 13.0 }; cvar; external;
+  MLFeatureValueImageOptionCropAndScale: MLFeatureValueImageOption { available in macos 10.15, ios 13.0,tvos 13.0 }; cvar; external;
 {$endif}
 
 {$ifdef CLASSES}

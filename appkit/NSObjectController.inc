@@ -44,9 +44,9 @@ type
     function fetchPredicate: NSPredicate; message 'fetchPredicate';
     function fetchWithRequest_merge_error (fetchRequest: NSFetchRequest; merge: objcbool; error: NSErrorPtr): objcbool; message 'fetchWithRequest:merge:error:';
     procedure fetch (sender: id); message 'fetch:';
-    procedure setUsesLazyFetching(newValue: objcbool); message 'setUsesLazyFetching:'; { available in macos  }
-    function usesLazyFetching: objcbool; message 'usesLazyFetching'; { available in macos  }
-    function defaultFetchRequest: NSFetchRequest; message 'defaultFetchRequest'; { available in macos  }
+    procedure setUsesLazyFetching(newValue: objcbool); message 'setUsesLazyFetching:'; { available in macos 10.5 }
+    function usesLazyFetching: objcbool; message 'usesLazyFetching'; { available in macos 10.5 }
+    function defaultFetchRequest: NSFetchRequest; message 'defaultFetchRequest'; { available in macos 10.5 }
   end;
 {$endif}
 

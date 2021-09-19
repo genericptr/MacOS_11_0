@@ -80,12 +80,12 @@ const
 type
   GKTurnBasedParticipant = objcclass external (NSObject)
   public
-    function player: GKPlayer; message 'player'; { available in 10_10, 8_0 }
+    function player: GKPlayer; message 'player'; { available in 10_10, 8_0 } { available in 3_0 }
     function lastTurnDate: NSDate; message 'lastTurnDate';
     function status: GKTurnBasedParticipantStatus; message 'status';
     procedure setMatchOutcome(newValue: GKTurnBasedMatchOutcome); message 'setMatchOutcome:';
     function matchOutcome: GKTurnBasedMatchOutcome; message 'matchOutcome';
-    function timeoutDate: NSDate; message 'timeoutDate'; { available in 10_8, 6_0 }
+    function timeoutDate: NSDate; message 'timeoutDate'; { available in 10_8, 6_0 } { available in 3_0 }
   end;
 
 
@@ -100,21 +100,21 @@ type
 type
   GKTurnBasedEventListenerProtocol = objcprotocol external name 'GKTurnBasedEventListener'
   optional
-    procedure player_didRequestMatchWithOtherPlayers (player: GKPlayer; playersToInvite: NSArray); message 'player:didRequestMatchWithOtherPlayers:'; { unavailable in watchos }
-    procedure player_receivedTurnEventForMatch_didBecomeActive (player: GKPlayer; match: GKTurnBasedMatch; didBecomeActive: objcbool); message 'player:receivedTurnEventForMatch:didBecomeActive:'; { available in 10_10, 7_0 }
+    procedure player_didRequestMatchWithOtherPlayers (player: GKPlayer; playersToInvite: NSArray); message 'player:didRequestMatchWithOtherPlayers:'; { unavailable in watchos } { available in 10_10, 8_0 }
+    procedure player_receivedTurnEventForMatch_didBecomeActive (player: GKPlayer; match: GKTurnBasedMatch; didBecomeActive: objcbool); message 'player:receivedTurnEventForMatch:didBecomeActive:'; { available in 10_10, 7_0 } { available in 3_0 }
     procedure player_matchEnded (player: GKPlayer; match: GKTurnBasedMatch); message 'player:matchEnded:';
-    procedure player_receivedExchangeRequest_forMatch (player: GKPlayer; exchange: GKTurnBasedExchange; match: GKTurnBasedMatch); message 'player:receivedExchangeRequest:forMatch:'; { available in 10_10, 7_0 }
-    procedure player_receivedExchangeCancellation_forMatch (player: GKPlayer; exchange: GKTurnBasedExchange; match: GKTurnBasedMatch); message 'player:receivedExchangeCancellation:forMatch:'; { available in 10_10, 7_0 }
-    procedure player_receivedExchangeReplies_forCompletedExchange_forMatch (player: GKPlayer; replies: NSArray; exchange: GKTurnBasedExchange; match: GKTurnBasedMatch); message 'player:receivedExchangeReplies:forCompletedExchange:forMatch:'; { available in 10_10, 7_0 }
-    procedure player_wantsToQuitMatch (player: GKPlayer; match: GKTurnBasedMatch); message 'player:wantsToQuitMatch:'; { available in 10_11, 9_0 }
+    procedure player_receivedExchangeRequest_forMatch (player: GKPlayer; exchange: GKTurnBasedExchange; match: GKTurnBasedMatch); message 'player:receivedExchangeRequest:forMatch:'; { available in 10_10, 7_0 } { available in 3_0 }
+    procedure player_receivedExchangeCancellation_forMatch (player: GKPlayer; exchange: GKTurnBasedExchange; match: GKTurnBasedMatch); message 'player:receivedExchangeCancellation:forMatch:'; { available in 10_10, 7_0 } { available in 3_0 }
+    procedure player_receivedExchangeReplies_forCompletedExchange_forMatch (player: GKPlayer; replies: NSArray; exchange: GKTurnBasedExchange; match: GKTurnBasedMatch); message 'player:receivedExchangeReplies:forCompletedExchange:forMatch:'; { available in 10_10, 7_0 } { available in 3_0 }
+    procedure player_wantsToQuitMatch (player: GKPlayer; match: GKTurnBasedMatch); message 'player:wantsToQuitMatch:'; { available in 10_11, 9_0 } { available in 3_0 }
     procedure player_didRequestMatchWithPlayers (player: GKPlayer; playerIDsToInvite: NSArray); message 'player:didRequestMatchWithPlayers:'; deprecated 'in 7_0, 8_0, "use didRequestMatchWithOtherPlayers"';
   end;
 {$endif}
 
 {$ifdef EXTERNAL_SYMBOLS}
 var
-  GKTurnTimeoutDefault: NSTimeInterval { available in 10_9, 6_0 }; cvar; external;
-  GKTurnTimeoutNone: NSTimeInterval { available in 10_9, 6_0 }; cvar; external;
+  GKTurnTimeoutDefault: NSTimeInterval { available in 10_9, 6_0 } { available in 3_0 }; cvar; external;
+  GKTurnTimeoutNone: NSTimeInterval { available in 10_9, 6_0 } { available in 3_0 }; cvar; external;
 {$endif}
 
 {$ifdef CLASSES}
@@ -128,33 +128,33 @@ type
     function status: GKTurnBasedMatchStatus; message 'status';
     function currentParticipant: GKTurnBasedParticipant; message 'currentParticipant';
     function matchData: NSData; message 'matchData';
-    procedure setLocalizableMessageWithKey_arguments (key: NSString; arguments: NSArray); message 'setLocalizableMessageWithKey:arguments:'; { available in 10_10, 7_0 }
+    procedure setLocalizableMessageWithKey_arguments (key: NSString; arguments: NSArray); message 'setLocalizableMessageWithKey:arguments:'; { available in 10_10, 7_0 } { available in 3_0 }
     procedure setMessage(newValue: NSString); message 'setMessage:';
     function message_: NSString; message 'message';
-    function matchDataMaximumSize: NSUInteger; message 'matchDataMaximumSize'; { available in 10_8, 6_0 }
-    function exchanges: NSArray; message 'exchanges'; { available in 10_10, 7_0 }
-    function activeExchanges: NSArray; message 'activeExchanges'; { available in 10_10, 7_0 }
-    function completedExchanges: NSArray; message 'completedExchanges'; { available in 10_10, 7_0 }
-    function exchangeDataMaximumSize: NSUInteger; message 'exchangeDataMaximumSize'; { available in 10_10, 7_0 }
-    function exchangeMaxInitiatedExchangesPerPlayer: NSUInteger; message 'exchangeMaxInitiatedExchangesPerPlayer'; { available in 10_10, 7_0 }
+    function matchDataMaximumSize: NSUInteger; message 'matchDataMaximumSize'; { available in 10_8, 6_0 } { available in 3_0 }
+    function exchanges: NSArray; message 'exchanges'; { available in 10_10, 7_0 } { available in 3_0 }
+    function activeExchanges: NSArray; message 'activeExchanges'; { available in 10_10, 7_0 } { available in 3_0 }
+    function completedExchanges: NSArray; message 'completedExchanges'; { available in 10_10, 7_0 } { available in 3_0 }
+    function exchangeDataMaximumSize: NSUInteger; message 'exchangeDataMaximumSize'; { available in 10_10, 7_0 } { available in 3_0 }
+    function exchangeMaxInitiatedExchangesPerPlayer: NSUInteger; message 'exchangeMaxInitiatedExchangesPerPlayer'; { available in 10_10, 7_0 } { available in 3_0 }
     class procedure findMatchForRequest_withCompletionHandler (request: GKMatchRequest; completionHandler: GKTurnBasedMatchFindMatchForRequestCallback); message 'findMatchForRequest:withCompletionHandler:';
     class procedure loadMatchesWithCompletionHandler (completionHandler: GKTurnBasedMatchLoadMatchesWithCompletionHandlerCallback); message 'loadMatchesWithCompletionHandler:';
-    class procedure loadMatchWithID_withCompletionHandler (matchID_: NSString; completionHandler: GKTurnBasedMatchLoadMatchWithIDCallback); message 'loadMatchWithID:withCompletionHandler:'; { available in 10_8, 5_0 }
-    procedure rematchWithCompletionHandler (completionHandler: GKTurnBasedMatchRematchWithCompletionHandlerCallback); message 'rematchWithCompletionHandler:'; { available in 10_9, 6_0 }
-    procedure acceptInviteWithCompletionHandler (completionHandler: GKTurnBasedMatchAcceptInviteWithCompletionHandlerCallback); message 'acceptInviteWithCompletionHandler:'; { available in 10_8, 5_0 }
-    procedure declineInviteWithCompletionHandler (completionHandler: GKTurnBasedMatchDeclineInviteWithCompletionHandlerCallback); message 'declineInviteWithCompletionHandler:'; { available in 10_8, 5_0 }
+    class procedure loadMatchWithID_withCompletionHandler (matchID_: NSString; completionHandler: GKTurnBasedMatchLoadMatchWithIDCallback); message 'loadMatchWithID:withCompletionHandler:'; { available in 10_8, 5_0 } { available in 3_0 }
+    procedure rematchWithCompletionHandler (completionHandler: GKTurnBasedMatchRematchWithCompletionHandlerCallback); message 'rematchWithCompletionHandler:'; { available in 10_9, 6_0 } { available in 3_0 }
+    procedure acceptInviteWithCompletionHandler (completionHandler: GKTurnBasedMatchAcceptInviteWithCompletionHandlerCallback); message 'acceptInviteWithCompletionHandler:'; { available in 10_8, 5_0 } { available in 3_0 }
+    procedure declineInviteWithCompletionHandler (completionHandler: GKTurnBasedMatchDeclineInviteWithCompletionHandlerCallback); message 'declineInviteWithCompletionHandler:'; { available in 10_8, 5_0 } { available in 3_0 }
     procedure removeWithCompletionHandler (completionHandler: GKTurnBasedMatchRemoveWithCompletionHandlerCallback); message 'removeWithCompletionHandler:';
     procedure loadMatchDataWithCompletionHandler (completionHandler: GKTurnBasedMatchLoadMatchDataWithCompletionHandlerCallback); message 'loadMatchDataWithCompletionHandler:';
-    procedure endTurnWithNextParticipants_turnTimeout_matchData_completionHandler (nextParticipants: NSArray; timeout: NSTimeInterval; matchData_: NSData; completionHandler: GKTurnBasedMatchEndTurnWithNextParticipantsCallback); message 'endTurnWithNextParticipants:turnTimeout:matchData:completionHandler:'; { available in 10_9, 6_0 }
-    procedure participantQuitInTurnWithOutcome_nextParticipants_turnTimeout_matchData_completionHandler (matchOutcome: GKTurnBasedMatchOutcome; nextParticipants: NSArray; timeout: NSTimeInterval; matchData_: NSData; completionHandler: GKTurnBasedMatchParticipantQuitInTurnWithOutcomeCallback); message 'participantQuitInTurnWithOutcome:nextParticipants:turnTimeout:matchData:completionHandler:'; { available in 10_9, 6_0 }
+    procedure endTurnWithNextParticipants_turnTimeout_matchData_completionHandler (nextParticipants: NSArray; timeout: NSTimeInterval; matchData_: NSData; completionHandler: GKTurnBasedMatchEndTurnWithNextParticipantsCallback); message 'endTurnWithNextParticipants:turnTimeout:matchData:completionHandler:'; { available in 10_9, 6_0 } { available in 3_0 }
+    procedure participantQuitInTurnWithOutcome_nextParticipants_turnTimeout_matchData_completionHandler (matchOutcome: GKTurnBasedMatchOutcome; nextParticipants: NSArray; timeout: NSTimeInterval; matchData_: NSData; completionHandler: GKTurnBasedMatchParticipantQuitInTurnWithOutcomeCallback); message 'participantQuitInTurnWithOutcome:nextParticipants:turnTimeout:matchData:completionHandler:'; { available in 10_9, 6_0 } { available in 3_0 }
     procedure participantQuitOutOfTurnWithOutcome_withCompletionHandler (matchOutcome: GKTurnBasedMatchOutcome; completionHandler: GKTurnBasedMatchParticipantQuitOutOfTurnWithOutcomeCallback); message 'participantQuitOutOfTurnWithOutcome:withCompletionHandler:';
     procedure endMatchInTurnWithMatchData_completionHandler (matchData_: NSData; completionHandler: GKTurnBasedMatchEndMatchInTurnWithMatchDataCallback); message 'endMatchInTurnWithMatchData:completionHandler:';
     procedure endMatchInTurnWithMatchData_scores_achievements_completionHandler (matchData_: NSData; scores: NSArray; achievements: NSArray; completionHandler: GKTurnBasedMatchEndMatchInTurnWithMatchDataCallback); message 'endMatchInTurnWithMatchData:scores:achievements:completionHandler:'; deprecated 'in 10_10, 11_0, 6_0, 14_0, "pass GKLeaderboardScore to endMatchInTurnWithMatchData:scores:completionHandler instead"';
     procedure endMatchInTurnWithMatchData_leaderboardScores_achievements_completionHandler (matchData_: NSData; scores: NSArray; achievements: NSArray; completionHandler: GKTurnBasedMatchEndMatchInTurnWithMatchDataCallback); message 'endMatchInTurnWithMatchData:leaderboardScores:achievements:completionHandler:'; { available in 11_0, 14_0 }
-    procedure saveCurrentTurnWithMatchData_completionHandler (matchData_: NSData; completionHandler: GKTurnBasedMatchSaveCurrentTurnWithMatchDataCallback); message 'saveCurrentTurnWithMatchData:completionHandler:'; { available in 10_8, 6_0 }
-    procedure saveMergedMatchData_withResolvedExchanges_completionHandler (matchData_: NSData; exchanges_: NSArray; completionHandler: GKTurnBasedMatchSaveMergedMatchDataCallback); message 'saveMergedMatchData:withResolvedExchanges:completionHandler:'; { available in 10_10, 7_0 }
-    procedure sendExchangeToParticipants_data_localizableMessageKey_arguments_timeout_completionHandler (participants_: NSArray; data: NSData; key: NSString; arguments: NSArray; timeout: NSTimeInterval; completionHandler: GKTurnBasedMatchSendExchangeToParticipantsCallback); message 'sendExchangeToParticipants:data:localizableMessageKey:arguments:timeout:completionHandler:'; { available in 10_10, 7_0 }
-    procedure sendReminderToParticipants_localizableMessageKey_arguments_completionHandler (participants_: NSArray; key: NSString; arguments: NSArray; completionHandler: GKTurnBasedMatchSendReminderToParticipantsCallback); message 'sendReminderToParticipants:localizableMessageKey:arguments:completionHandler:'; { available in 10_10, 7_0 }
+    procedure saveCurrentTurnWithMatchData_completionHandler (matchData_: NSData; completionHandler: GKTurnBasedMatchSaveCurrentTurnWithMatchDataCallback); message 'saveCurrentTurnWithMatchData:completionHandler:'; { available in 10_8, 6_0 } { available in 3_0 }
+    procedure saveMergedMatchData_withResolvedExchanges_completionHandler (matchData_: NSData; exchanges_: NSArray; completionHandler: GKTurnBasedMatchSaveMergedMatchDataCallback); message 'saveMergedMatchData:withResolvedExchanges:completionHandler:'; { available in 10_10, 7_0 } { available in 3_0 }
+    procedure sendExchangeToParticipants_data_localizableMessageKey_arguments_timeout_completionHandler (participants_: NSArray; data: NSData; key: NSString; arguments: NSArray; timeout: NSTimeInterval; completionHandler: GKTurnBasedMatchSendExchangeToParticipantsCallback); message 'sendExchangeToParticipants:data:localizableMessageKey:arguments:timeout:completionHandler:'; { available in 10_10, 7_0 } { available in 3_0 }
+    procedure sendReminderToParticipants_localizableMessageKey_arguments_completionHandler (participants_: NSArray; key: NSString; arguments: NSArray; completionHandler: GKTurnBasedMatchSendReminderToParticipantsCallback); message 'sendReminderToParticipants:localizableMessageKey:arguments:completionHandler:'; { available in 10_10, 7_0 } { available in 3_0 }
     procedure endTurnWithNextParticipant_matchData_completionHandler (nextParticipant: GKTurnBasedParticipant; matchData_: NSData; completionHandler: GKTurnBasedMatchEndTurnWithNextParticipantCallback); message 'endTurnWithNextParticipant:matchData:completionHandler:'; deprecated 'in 10_8, 10_9, 5_0, 6_0, "Use endTurnWithNextParticipants:... instead"';
     procedure participantQuitInTurnWithOutcome_nextParticipant_matchData_completionHandler (matchOutcome: GKTurnBasedMatchOutcome; nextParticipant: GKTurnBasedParticipant; matchData_: NSData; completionHandler: GKTurnBasedMatchParticipantQuitInTurnWithOutcomeCallback); message 'participantQuitInTurnWithOutcome:nextParticipant:matchData:completionHandler:'; deprecated 'in 10_8, 10_9, 5_0, 6_0, "Use participantQuitInTurnWithOutcome:nextParticipants:turnTimeout:... instead"';
   end;
@@ -175,8 +175,8 @@ const
 
 {$ifdef EXTERNAL_SYMBOLS}
 var
-  GKExchangeTimeoutDefault: NSTimeInterval { available in 10_10, 7_0 }; cvar; external;
-  GKExchangeTimeoutNone: NSTimeInterval { available in 10_10, 7_0 }; cvar; external;
+  GKExchangeTimeoutDefault: NSTimeInterval { available in 10_10, 7_0 } { available in 3_0 }; cvar; external;
+  GKExchangeTimeoutNone: NSTimeInterval { available in 10_10, 7_0 } { available in 3_0 }; cvar; external;
 {$endif}
 
 {$ifdef CLASSES}
@@ -194,8 +194,8 @@ type
     function timeoutDate: NSDate; message 'timeoutDate';
     function completionDate: NSDate; message 'completionDate';
     function replies: NSArray; message 'replies';
-    procedure cancelWithLocalizableMessageKey_arguments_completionHandler (key: NSString; arguments: NSArray; completionHandler: GKTurnBasedMatchCancelWithLocalizableMessageKeyCallback); message 'cancelWithLocalizableMessageKey:arguments:completionHandler:'; { available in 10_10, 7_0 }
-    procedure replyWithLocalizableMessageKey_arguments_data_completionHandler (key: NSString; arguments: NSArray; data_: NSData; completionHandler: GKTurnBasedMatchReplyWithLocalizableMessageKeyCallback); message 'replyWithLocalizableMessageKey:arguments:data:completionHandler:'; { available in 10_10, 7_0 }
+    procedure cancelWithLocalizableMessageKey_arguments_completionHandler (key: NSString; arguments: NSArray; completionHandler: GKTurnBasedMatchCancelWithLocalizableMessageKeyCallback); message 'cancelWithLocalizableMessageKey:arguments:completionHandler:'; { available in 10_10, 7_0 } { available in 3_0 }
+    procedure replyWithLocalizableMessageKey_arguments_data_completionHandler (key: NSString; arguments: NSArray; data_: NSData; completionHandler: GKTurnBasedMatchReplyWithLocalizableMessageKeyCallback); message 'replyWithLocalizableMessageKey:arguments:data:completionHandler:'; { available in 10_10, 7_0 } { available in 3_0 }
     function recipient: GKTurnBasedParticipant; message 'recipient';
     function replyDate: NSDate; message 'replyDate'; { available in 10_10, 8_0 }
   end;

@@ -68,23 +68,23 @@ type
     function indexGreaterThanOrEqualToIndex (value: NSUInteger): NSUInteger; message 'indexGreaterThanOrEqualToIndex:';
     function indexLessThanOrEqualToIndex (value: NSUInteger): NSUInteger; message 'indexLessThanOrEqualToIndex:';
     function getIndexes_maxCount_inIndexRange (indexBuffer: NSUIntegerPtr; bufferSize: NSUInteger; range: NSRangePointer): NSUInteger; message 'getIndexes:maxCount:inIndexRange:';
-    function countOfIndexesInRange (range: NSRange): NSUInteger; message 'countOfIndexesInRange:'; { available in macos , ios , watchos , tvos  }
+    function countOfIndexesInRange (range: NSRange): NSUInteger; message 'countOfIndexesInRange:'; { available in macos 10.5, ios 2.0, watchos 2.0, tvos 9.0 }
     function containsIndex (value: NSUInteger): objcbool; message 'containsIndex:';
     function containsIndexesInRange (range: NSRange): objcbool; message 'containsIndexesInRange:';
     function containsIndexes (indexSet_: NSIndexSet): objcbool; message 'containsIndexes:';
     function intersectsIndexesInRange (range: NSRange): objcbool; message 'intersectsIndexesInRange:';
-    procedure enumerateIndexesUsingBlock (block: NSIndexSetEnumerateIndexesUsingBlockCallback); message 'enumerateIndexesUsingBlock:'; { available in macos , ios , watchos , tvos  }
-    procedure enumerateIndexesWithOptions_usingBlock (opts: NSEnumerationOptions; block: NSIndexSetEnumerateIndexesWithOptionsCallback); message 'enumerateIndexesWithOptions:usingBlock:'; { available in macos , ios , watchos , tvos  }
-    procedure enumerateIndexesInRange_options_usingBlock (range: NSRange; opts: NSEnumerationOptions; block: NSIndexSetEnumerateIndexesInRangeCallback); message 'enumerateIndexesInRange:options:usingBlock:'; { available in macos , ios , watchos , tvos  }
-    function indexPassingTest (predicate: NSIndexSetIndexPassingTestCallback): NSUInteger; message 'indexPassingTest:'; { available in macos , ios , watchos , tvos  }
-    function indexWithOptions_passingTest (opts: NSEnumerationOptions; predicate: NSIndexSetIndexWithOptionsCallback): NSUInteger; message 'indexWithOptions:passingTest:'; { available in macos , ios , watchos , tvos  }
-    function indexInRange_options_passingTest (range: NSRange; opts: NSEnumerationOptions; predicate: NSIndexSetIndexInRangeCallback): NSUInteger; message 'indexInRange:options:passingTest:'; { available in macos , ios , watchos , tvos  }
-    function indexesPassingTest (predicate: NSIndexSetIndexesPassingTestCallback): NSIndexSet; message 'indexesPassingTest:'; { available in macos , ios , watchos , tvos  }
-    function indexesWithOptions_passingTest (opts: NSEnumerationOptions; predicate: NSIndexSetIndexesWithOptionsCallback): NSIndexSet; message 'indexesWithOptions:passingTest:'; { available in macos , ios , watchos , tvos  }
-    function indexesInRange_options_passingTest (range: NSRange; opts: NSEnumerationOptions; predicate: NSIndexSetIndexesInRangeCallback): NSIndexSet; message 'indexesInRange:options:passingTest:'; { available in macos , ios , watchos , tvos  }
-    procedure enumerateRangesUsingBlock (block: NSIndexSetEnumerateRangesUsingBlockCallback); message 'enumerateRangesUsingBlock:'; { available in macos , ios , watchos , tvos  }
-    procedure enumerateRangesWithOptions_usingBlock (opts: NSEnumerationOptions; block: NSIndexSetEnumerateRangesWithOptionsCallback); message 'enumerateRangesWithOptions:usingBlock:'; { available in macos , ios , watchos , tvos  }
-    procedure enumerateRangesInRange_options_usingBlock (range: NSRange; opts: NSEnumerationOptions; block: NSIndexSetEnumerateRangesInRangeCallback); message 'enumerateRangesInRange:options:usingBlock:'; { available in macos , ios , watchos , tvos  }
+    procedure enumerateIndexesUsingBlock (block: NSIndexSetEnumerateIndexesUsingBlockCallback); message 'enumerateIndexesUsingBlock:'; { available in macos 10.6, ios 4.0, watchos 2.0, tvos 9.0 }
+    procedure enumerateIndexesWithOptions_usingBlock (opts: NSEnumerationOptions; block: NSIndexSetEnumerateIndexesWithOptionsCallback); message 'enumerateIndexesWithOptions:usingBlock:'; { available in macos 10.6, ios 4.0, watchos 2.0, tvos 9.0 }
+    procedure enumerateIndexesInRange_options_usingBlock (range: NSRange; opts: NSEnumerationOptions; block: NSIndexSetEnumerateIndexesInRangeCallback); message 'enumerateIndexesInRange:options:usingBlock:'; { available in macos 10.6, ios 4.0, watchos 2.0, tvos 9.0 }
+    function indexPassingTest (predicate: NSIndexSetIndexPassingTestCallback): NSUInteger; message 'indexPassingTest:'; { available in macos 10.6, ios 4.0, watchos 2.0, tvos 9.0 }
+    function indexWithOptions_passingTest (opts: NSEnumerationOptions; predicate: NSIndexSetIndexWithOptionsCallback): NSUInteger; message 'indexWithOptions:passingTest:'; { available in macos 10.6, ios 4.0, watchos 2.0, tvos 9.0 }
+    function indexInRange_options_passingTest (range: NSRange; opts: NSEnumerationOptions; predicate: NSIndexSetIndexInRangeCallback): NSUInteger; message 'indexInRange:options:passingTest:'; { available in macos 10.6, ios 4.0, watchos 2.0, tvos 9.0 }
+    function indexesPassingTest (predicate: NSIndexSetIndexesPassingTestCallback): NSIndexSet; message 'indexesPassingTest:'; { available in macos 10.6, ios 4.0, watchos 2.0, tvos 9.0 }
+    function indexesWithOptions_passingTest (opts: NSEnumerationOptions; predicate: NSIndexSetIndexesWithOptionsCallback): NSIndexSet; message 'indexesWithOptions:passingTest:'; { available in macos 10.6, ios 4.0, watchos 2.0, tvos 9.0 }
+    function indexesInRange_options_passingTest (range: NSRange; opts: NSEnumerationOptions; predicate: NSIndexSetIndexesInRangeCallback): NSIndexSet; message 'indexesInRange:options:passingTest:'; { available in macos 10.6, ios 4.0, watchos 2.0, tvos 9.0 }
+    procedure enumerateRangesUsingBlock (block: NSIndexSetEnumerateRangesUsingBlockCallback); message 'enumerateRangesUsingBlock:'; { available in macos 10.7, ios 5.0, watchos 2.0, tvos 9.0 }
+    procedure enumerateRangesWithOptions_usingBlock (opts: NSEnumerationOptions; block: NSIndexSetEnumerateRangesWithOptionsCallback); message 'enumerateRangesWithOptions:usingBlock:'; { available in macos 10.7, ios 5.0, watchos 2.0, tvos 9.0 }
+    procedure enumerateRangesInRange_options_usingBlock (range: NSRange; opts: NSEnumerationOptions; block: NSIndexSetEnumerateRangesInRangeCallback); message 'enumerateRangesInRange:options:usingBlock:'; { available in macos 10.7, ios 5.0, watchos 2.0, tvos 9.0 }
 
     { Adopted protocols }
     function copyWithZone (zone: NSZonePtr): id; message 'copyWithZone:';

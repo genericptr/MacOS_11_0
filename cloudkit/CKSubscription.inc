@@ -17,7 +17,7 @@ type
 const
   CKSubscriptionTypeQuery = 1;
   CKSubscriptionTypeRecordZone = 2;
-  CKSubscriptionTypeDatabase = 3 { available in macos , ios , tvos , watchos  };
+  CKSubscriptionTypeDatabase = 3 { available in macos 10.12, ios 10.0, tvos 10.0, watchos 3.0 };
 
 type
   CKSubscriptionID = NSString;
@@ -31,10 +31,10 @@ type
   public
     function init: id; message 'init';
     class function new_: id; message 'new';
-    function subscriptionID: CKSubscriptionID; message 'subscriptionID'; { available in watchos  }
-    function subscriptionType: CKSubscriptionType; message 'subscriptionType'; { available in watchos  }
-    procedure setNotificationInfo(newValue: CKNotificationInfo); message 'setNotificationInfo:'; { available in watchos  }
-    function notificationInfo: CKNotificationInfo; message 'notificationInfo'; { available in watchos  }
+    function subscriptionID: CKSubscriptionID; message 'subscriptionID'; { available in watchos 6.0 }
+    function subscriptionType: CKSubscriptionType; message 'subscriptionType'; { available in watchos 6.0 }
+    procedure setNotificationInfo(newValue: CKNotificationInfo); message 'setNotificationInfo:'; { available in watchos 6.0 }
+    function notificationInfo: CKNotificationInfo; message 'notificationInfo'; { available in watchos 6.0 }
 
     { Adopted protocols }
     function copyWithZone (zone: NSZonePtr): id; message 'copyWithZone:';
@@ -102,18 +102,18 @@ type
     function alertLocalizationKey: NSString; message 'alertLocalizationKey';
     procedure setAlertLocalizationArgs(newValue: NSArray); message 'setAlertLocalizationArgs:';
     function alertLocalizationArgs: NSArray; message 'alertLocalizationArgs';
-    procedure setTitle(newValue: NSString); message 'setTitle:'; { available in macos , ios  }
-    function title: NSString; message 'title'; { available in macos , ios  }
-    procedure setTitleLocalizationKey(newValue: NSString); message 'setTitleLocalizationKey:'; { available in macos , ios  }
-    function titleLocalizationKey: NSString; message 'titleLocalizationKey'; { available in macos , ios  }
-    procedure setTitleLocalizationArgs(newValue: NSArray); message 'setTitleLocalizationArgs:'; { available in macos , ios  }
-    function titleLocalizationArgs: NSArray; message 'titleLocalizationArgs'; { available in macos , ios  }
-    procedure setSubtitle(newValue: NSString); message 'setSubtitle:'; { available in macos , ios  }
-    function subtitle: NSString; message 'subtitle'; { available in macos , ios  }
-    procedure setSubtitleLocalizationKey(newValue: NSString); message 'setSubtitleLocalizationKey:'; { available in macos , ios  }
-    function subtitleLocalizationKey: NSString; message 'subtitleLocalizationKey'; { available in macos , ios  }
-    procedure setSubtitleLocalizationArgs(newValue: NSArray); message 'setSubtitleLocalizationArgs:'; { available in macos , ios  }
-    function subtitleLocalizationArgs: NSArray; message 'subtitleLocalizationArgs'; { available in macos , ios  }
+    procedure setTitle(newValue: NSString); message 'setTitle:'; { available in macos 10.13, ios 11.0 }
+    function title: NSString; message 'title'; { available in macos 10.13, ios 11.0 }
+    procedure setTitleLocalizationKey(newValue: NSString); message 'setTitleLocalizationKey:'; { available in macos 10.13, ios 11.0 }
+    function titleLocalizationKey: NSString; message 'titleLocalizationKey'; { available in macos 10.13, ios 11.0 }
+    procedure setTitleLocalizationArgs(newValue: NSArray); message 'setTitleLocalizationArgs:'; { available in macos 10.13, ios 11.0 }
+    function titleLocalizationArgs: NSArray; message 'titleLocalizationArgs'; { available in macos 10.13, ios 11.0 }
+    procedure setSubtitle(newValue: NSString); message 'setSubtitle:'; { available in macos 10.13, ios 11.0 }
+    function subtitle: NSString; message 'subtitle'; { available in macos 10.13, ios 11.0 }
+    procedure setSubtitleLocalizationKey(newValue: NSString); message 'setSubtitleLocalizationKey:'; { available in macos 10.13, ios 11.0 }
+    function subtitleLocalizationKey: NSString; message 'subtitleLocalizationKey'; { available in macos 10.13, ios 11.0 }
+    procedure setSubtitleLocalizationArgs(newValue: NSArray); message 'setSubtitleLocalizationArgs:'; { available in macos 10.13, ios 11.0 }
+    function subtitleLocalizationArgs: NSArray; message 'subtitleLocalizationArgs'; { available in macos 10.13, ios 11.0 }
     procedure setAlertActionLocalizationKey(newValue: NSString); message 'setAlertActionLocalizationKey:';
     function alertActionLocalizationKey: NSString; message 'alertActionLocalizationKey';
     procedure setAlertLaunchImage(newValue: NSString); message 'setAlertLaunchImage:';
@@ -122,16 +122,16 @@ type
     function soundName: NSString; message 'soundName';
     procedure setDesiredKeys(newValue: NSArray); message 'setDesiredKeys:';
     function desiredKeys: NSArray; message 'desiredKeys';
-    procedure setShouldBadge(newValue: objcbool); message 'setShouldBadge:'; { available in tvos  }
-    function shouldBadge: objcbool; message 'shouldBadge'; { available in tvos  }
+    procedure setShouldBadge(newValue: objcbool); message 'setShouldBadge:'; { available in tvos 10.0 }
+    function shouldBadge: objcbool; message 'shouldBadge'; { available in tvos 10.0 }
     procedure setShouldSendContentAvailable(newValue: objcbool); message 'setShouldSendContentAvailable:';
     function shouldSendContentAvailable: objcbool; message 'shouldSendContentAvailable';
-    procedure setShouldSendMutableContent(newValue: objcbool); message 'setShouldSendMutableContent:'; { available in macos , ios , tvos  }
-    function shouldSendMutableContent: objcbool; message 'shouldSendMutableContent'; { available in macos , ios , tvos  }
-    procedure setCategory(newValue: NSString); message 'setCategory:'; { available in macos , ios  }
-    function category: NSString; message 'category'; { available in macos , ios  }
-    procedure setCollapseIDKey(newValue: NSString); message 'setCollapseIDKey:'; { available in macos , ios , tvos  }
-    function collapseIDKey: NSString; message 'collapseIDKey'; { available in macos , ios , tvos  }
+    procedure setShouldSendMutableContent(newValue: objcbool); message 'setShouldSendMutableContent:'; { available in macos 10.13, ios 11.0, tvos 11.0 }
+    function shouldSendMutableContent: objcbool; message 'shouldSendMutableContent'; { available in macos 10.13, ios 11.0, tvos 11.0 }
+    procedure setCategory(newValue: NSString); message 'setCategory:'; { available in macos 10.11, ios 9.0 }
+    function category: NSString; message 'category'; { available in macos 10.11, ios 9.0 }
+    procedure setCollapseIDKey(newValue: NSString); message 'setCollapseIDKey:'; { available in macos 10.13, ios 11.0, tvos 11.0 }
+    function collapseIDKey: NSString; message 'collapseIDKey'; { available in macos 10.13, ios 11.0, tvos 11.0 }
 
     { Adopted protocols }
     function copyWithZone (zone: NSZonePtr): id; message 'copyWithZone:';

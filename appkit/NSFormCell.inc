@@ -37,8 +37,8 @@ type
     procedure setTitleBaseWritingDirection(newValue: NSWritingDirection); message 'setTitleBaseWritingDirection:';
     function titleBaseWritingDirection: NSWritingDirection; message 'titleBaseWritingDirection';
     {$endif}
-    procedure setPreferredTextFieldWidth(newValue: CGFloat); message 'setPreferredTextFieldWidth:'; { available in macos  }
-    function preferredTextFieldWidth: CGFloat; message 'preferredTextFieldWidth'; { available in macos  }
+    procedure setPreferredTextFieldWidth(newValue: CGFloat); message 'setPreferredTextFieldWidth:'; { available in macos 10.8 }
+    function preferredTextFieldWidth: CGFloat; message 'preferredTextFieldWidth'; { available in macos 10.8 }
   end;
 
 

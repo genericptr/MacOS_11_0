@@ -73,8 +73,8 @@ type
     procedure setImage_atIndex (image: NSImage; index: NSInteger); message 'setImage:atIndex:';
     function imageAtIndex (index: NSInteger): NSImage; message 'imageAtIndex:';
     {$else}
-    procedure setImage_atIndex (image: UIImage; index: NSInteger); message 'setImage:atIndex:'; { available in ios  }
-    function imageAtIndex (index: NSInteger): UIImage; message 'imageAtIndex:'; { available in ios  }
+    procedure setImage_atIndex (image: UIImage; index: NSInteger); message 'setImage:atIndex:'; { available in ios 13.0 }
+    function imageAtIndex (index: NSInteger): UIImage; message 'imageAtIndex:'; { available in ios 13.0 }
     {$endif}
     procedure setLabel_atIndex (label_: NSString; index: NSInteger); message 'setLabel:atIndex:';
     function labelAtIndex (index: NSInteger): NSString; message 'labelAtIndex:';

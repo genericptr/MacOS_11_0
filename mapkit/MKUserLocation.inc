@@ -12,7 +12,7 @@ type
   public
     function isUpdating: objcbool; message 'isUpdating';
     function location: CLLocation; message 'location';
-    function heading: CLHeadingPtr; message 'heading'; { unavailable in tvos }
+    function heading: CLHeadingPtr; message 'heading'; { unavailable in tvos } { available in 10_9, 5_0 }
     procedure setTitle(newValue: NSString); message 'setTitle:';
     function title: NSString; message 'title';
     procedure setSubtitle(newValue: NSString); message 'setSubtitle:';

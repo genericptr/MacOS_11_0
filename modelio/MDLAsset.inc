@@ -17,11 +17,11 @@ type
     function initWithURL_vertexDescriptor_bufferAllocator_preserveTopology_error (URL: NSURL; vertexDescriptor: MDLVertexDescriptor; bufferAllocator: MDLMeshBufferAllocatorProtocol; preserveTopology: objcbool; error: NSErrorPtr): id; message 'initWithURL:vertexDescriptor:bufferAllocator:preserveTopology:error:';
     function exportAssetToURL (URL: NSURL): objcbool; message 'exportAssetToURL:';
     function exportAssetToURL_error (URL: NSURL; error: NSErrorPtr): objcbool; message 'exportAssetToURL:error:';
-    function objectAtPath (path: NSString): MDLObject; message 'objectAtPath:'; { available in macos , ios , tvos  }
+    function objectAtPath (path: NSString): MDLObject; message 'objectAtPath:'; { available in macos 10.13, ios 11.0, tvos 11.0 }
     class function canImportFileExtension (extension: NSString): objcbool; message 'canImportFileExtension:';
     class function canExportFileExtension (extension: NSString): objcbool; message 'canExportFileExtension:';
     function childObjectsOfClass (objectClass: pobjc_class): NSArray; message 'childObjectsOfClass:';
-    procedure loadTextures; message 'loadTextures'; { available in macos , ios , tvos  }
+    procedure loadTextures; message 'loadTextures'; { available in macos 10.13, ios 11.0, tvos 11.0 }
     function boundingBoxAtTime (time: NSTimeInterval): MDLAxisAlignedBoundingBox; message 'boundingBoxAtTime:';
     function boundingBox: MDLAxisAlignedBoundingBox; message 'boundingBox';
     procedure setFrameInterval(newValue: NSTimeInterval); message 'setFrameInterval:';
@@ -30,11 +30,11 @@ type
     function startTime: NSTimeInterval; message 'startTime';
     procedure setEndTime(newValue: NSTimeInterval); message 'setEndTime:';
     function endTime: NSTimeInterval; message 'endTime';
-    procedure setUpAxis(newValue: vector_float3); message 'setUpAxis:'; { available in macos , ios , tvos  }
-    function upAxis: vector_float3; message 'upAxis'; { available in macos , ios , tvos  }
+    procedure setUpAxis(newValue: vector_float3); message 'setUpAxis:'; { available in macos 10.13, ios 11.0, tvos 11.0 }
+    function upAxis: vector_float3; message 'upAxis'; { available in macos 10.13, ios 11.0, tvos 11.0 }
     function URL: NSURL; message 'URL';
-    procedure setResolver(newValue: MDLAssetResolverProtocol); message 'setResolver:'; { available in macos , ios , tvos  }
-    function resolver: MDLAssetResolverProtocol; message 'resolver'; { available in macos , ios , tvos  }
+    procedure setResolver(newValue: MDLAssetResolverProtocol); message 'setResolver:'; { available in macos 10.13, ios 11.0, tvos 11.0 }
+    function resolver: MDLAssetResolverProtocol; message 'resolver'; { available in macos 10.13, ios 11.0, tvos 11.0 }
     function bufferAllocator: MDLMeshBufferAllocatorProtocol; message 'bufferAllocator';
     function vertexDescriptor: MDLVertexDescriptor; message 'vertexDescriptor';
     procedure addObject (object_: MDLObject); message 'addObject:';
@@ -44,8 +44,8 @@ type
     function objectAtIndex (index: NSUInteger): MDLObject; message 'objectAtIndex:';
     procedure setMasters(newValue: MDLObjectContainerComponentProtocol); message 'setMasters:';
     function masters: MDLObjectContainerComponentProtocol; message 'masters';
-    procedure setAnimations(newValue: MDLObjectContainerComponentProtocol); message 'setAnimations:'; { available in macos , ios , tvos  }
-    function animations: MDLObjectContainerComponentProtocol; message 'animations'; { available in macos , ios , tvos  }
+    procedure setAnimations(newValue: MDLObjectContainerComponentProtocol); message 'setAnimations:'; { available in macos 10.13, ios 11.0, tvos 11.0 }
+    function animations: MDLObjectContainerComponentProtocol; message 'animations'; { available in macos 10.13, ios 11.0, tvos 11.0 }
 
     { Adopted protocols }
     function copyWithZone (zone: NSZonePtr): id; message 'copyWithZone:';

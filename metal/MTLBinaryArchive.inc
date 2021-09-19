@@ -8,7 +8,7 @@ type
 
 {$ifdef EXTERNAL_SYMBOLS}
 var
-  MTLBinaryArchiveDomain: NSErrorDomain { available in macos , ios  }; cvar; external;
+  MTLBinaryArchiveDomain: NSErrorDomain { available in macos 11.0, ios 14.0 }; cvar; external;
 {$endif}
 
 {$ifdef TYPES}

@@ -55,9 +55,9 @@ type
 
 type
   NSTouch_NSTouchBar = objccategory external name 'NSTouchBar' (NSTouch)
-    function type_: NSTouchType; message 'type'; { available in macos  }
-    function locationInView (view: NSView): NSPoint; message 'locationInView:'; { available in macos  }
-    function previousLocationInView (view: NSView): NSPoint; message 'previousLocationInView:'; { available in macos  }
+    function type_: NSTouchType; message 'type'; { available in macos 10.12.2 }
+    function locationInView (view: NSView): NSPoint; message 'locationInView:'; { available in macos 10.12.2 }
+    function previousLocationInView (view: NSView): NSPoint; message 'previousLocationInView:'; { available in macos 10.12.2 }
   end;
 {$endif}
 

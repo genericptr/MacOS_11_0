@@ -11,11 +11,11 @@ type
 {$if defined(__NULL_MACRO__)}
 {$ifdef EXTERNAL_SYMBOLS}
 var
-  AVCaptureSessionRuntimeErrorNotification: NSString { unavailable in tvos }; cvar; external;
-  AVCaptureSessionErrorKey: NSString { unavailable in tvos }; cvar; external;
-  AVCaptureSessionDidStartRunningNotification: NSString { unavailable in tvos }; cvar; external;
-  AVCaptureSessionDidStopRunningNotification: NSString { unavailable in tvos }; cvar; external;
-  AVCaptureSessionWasInterruptedNotification: NSString { unavailable in tvos }; cvar; external;
+  AVCaptureSessionRuntimeErrorNotification: NSString { unavailable in tvos } { available in macos 10.7, ios 4.0, macCatalyst 14.0 }; cvar; external;
+  AVCaptureSessionErrorKey: NSString { unavailable in tvos } { available in macos 10.7, ios 4.0, macCatalyst 14.0 }; cvar; external;
+  AVCaptureSessionDidStartRunningNotification: NSString { unavailable in tvos } { available in macos 10.7, ios 4.0, macCatalyst 14.0 }; cvar; external;
+  AVCaptureSessionDidStopRunningNotification: NSString { unavailable in tvos } { available in macos 10.7, ios 4.0, macCatalyst 14.0 }; cvar; external;
+  AVCaptureSessionWasInterruptedNotification: NSString { unavailable in tvos } { available in macos 10.14, ios 4.0, macCatalyst 14.0 }; cvar; external;
 {$endif}
 
 {$ifdef TYPES}
@@ -28,14 +28,14 @@ const
   AVCaptureSessionInterruptionReasonAudioDeviceInUseByAnotherClient = 2;
   AVCaptureSessionInterruptionReasonVideoDeviceInUseByAnotherClient = 3;
   AVCaptureSessionInterruptionReasonVideoDeviceNotAvailableWithMultipleForegroundApps = 4;
-  AVCaptureSessionInterruptionReasonVideoDeviceNotAvailableDueToSystemPressure = 5 { available in ios , macCatalyst  };
+  AVCaptureSessionInterruptionReasonVideoDeviceNotAvailableDueToSystemPressure = 5 { available in ios 11.1, macCatalyst 14.0 };
 {$endif}
 
 {$ifdef EXTERNAL_SYMBOLS}
 var
-  AVCaptureSessionInterruptionReasonKey: NSString { unavailable in macos, tvos }; cvar; external;
-  AVCaptureSessionInterruptionSystemPressureStateKey: NSString { unavailable in macos, tvos }; cvar; external;
-  AVCaptureSessionInterruptionEndedNotification: NSString { unavailable in tvos }; cvar; external;
+  AVCaptureSessionInterruptionReasonKey: NSString { unavailable in macos, tvos } { available in ios 9.0, macCatalyst 14.0 }; cvar; external;
+  AVCaptureSessionInterruptionSystemPressureStateKey: NSString { unavailable in macos, tvos } { available in ios 11.1, macCatalyst 14.0 }; cvar; external;
+  AVCaptureSessionInterruptionEndedNotification: NSString { unavailable in tvos } { available in macos 10.14, ios 4.0, macCatalyst 14.0 }; cvar; external;
 {$endif}
 
 {$ifdef TYPES}
@@ -68,25 +68,25 @@ type
     function canAddOutput (output: AVCaptureOutput): objcbool; message 'canAddOutput:';
     procedure addOutput (output: AVCaptureOutput); message 'addOutput:';
     procedure removeOutput (output: AVCaptureOutput); message 'removeOutput:';
-    procedure addInputWithNoConnections (input: AVCaptureInput); message 'addInputWithNoConnections:'; { unavailable in tvos }
-    procedure addOutputWithNoConnections (output: AVCaptureOutput); message 'addOutputWithNoConnections:'; { unavailable in tvos }
-    function connections: NSArray; message 'connections'; { unavailable in tvos }
-    function canAddConnection (connection: AVCaptureConnection): objcbool; message 'canAddConnection:'; { unavailable in tvos }
-    procedure addConnection (connection: AVCaptureConnection); message 'addConnection:'; { unavailable in tvos }
-    procedure removeConnection (connection: AVCaptureConnection); message 'removeConnection:'; { unavailable in tvos }
+    procedure addInputWithNoConnections (input: AVCaptureInput); message 'addInputWithNoConnections:'; { unavailable in tvos } { available in ios 8.0, macCatalyst 14.0 }
+    procedure addOutputWithNoConnections (output: AVCaptureOutput); message 'addOutputWithNoConnections:'; { unavailable in tvos } { available in ios 8.0, macCatalyst 14.0 }
+    function connections: NSArray; message 'connections'; { unavailable in tvos } { unavailable in watchos }
+    function canAddConnection (connection: AVCaptureConnection): objcbool; message 'canAddConnection:'; { unavailable in tvos } { available in ios 8.0, macCatalyst 14.0 }
+    procedure addConnection (connection: AVCaptureConnection); message 'addConnection:'; { unavailable in tvos } { available in ios 8.0, macCatalyst 14.0 }
+    procedure removeConnection (connection: AVCaptureConnection); message 'removeConnection:'; { unavailable in tvos } { available in ios 8.0, macCatalyst 14.0 }
     procedure beginConfiguration; message 'beginConfiguration';
     procedure commitConfiguration; message 'commitConfiguration';
     function isRunning: objcbool; message 'isRunning';
-    function isInterrupted: objcbool; message 'isInterrupted'; { unavailable in macos, tvos }
-    procedure setUsesApplicationAudioSession(newValue: objcbool); message 'setUsesApplicationAudioSession:'; { unavailable in macos, tvos }
-    function usesApplicationAudioSession: objcbool; message 'usesApplicationAudioSession'; { unavailable in macos, tvos }
-    procedure setAutomaticallyConfiguresApplicationAudioSession(newValue: objcbool); message 'setAutomaticallyConfiguresApplicationAudioSession:'; { unavailable in macos, tvos }
-    function automaticallyConfiguresApplicationAudioSession: objcbool; message 'automaticallyConfiguresApplicationAudioSession'; { unavailable in macos, tvos }
-    procedure setAutomaticallyConfiguresCaptureDeviceForWideColor(newValue: objcbool); message 'setAutomaticallyConfiguresCaptureDeviceForWideColor:'; { unavailable in macos, tvos }
-    function automaticallyConfiguresCaptureDeviceForWideColor: objcbool; message 'automaticallyConfiguresCaptureDeviceForWideColor'; { unavailable in macos, tvos }
+    function isInterrupted: objcbool; message 'isInterrupted'; { unavailable in macos, tvos } { available in ios 4.0, macCatalyst 14.0 }
+    procedure setUsesApplicationAudioSession(newValue: objcbool); message 'setUsesApplicationAudioSession:'; { unavailable in macos, tvos } { available in ios 7.0, macCatalyst 14.0 }
+    function usesApplicationAudioSession: objcbool; message 'usesApplicationAudioSession'; { unavailable in macos, tvos } { available in ios 7.0, macCatalyst 14.0 }
+    procedure setAutomaticallyConfiguresApplicationAudioSession(newValue: objcbool); message 'setAutomaticallyConfiguresApplicationAudioSession:'; { unavailable in macos, tvos } { available in ios 7.0, macCatalyst 14.0 }
+    function automaticallyConfiguresApplicationAudioSession: objcbool; message 'automaticallyConfiguresApplicationAudioSession'; { unavailable in macos, tvos } { available in ios 7.0, macCatalyst 14.0 }
+    procedure setAutomaticallyConfiguresCaptureDeviceForWideColor(newValue: objcbool); message 'setAutomaticallyConfiguresCaptureDeviceForWideColor:'; { unavailable in macos, tvos } { available in ios 10.0, macCatalyst 14.0 }
+    function automaticallyConfiguresCaptureDeviceForWideColor: objcbool; message 'automaticallyConfiguresCaptureDeviceForWideColor'; { unavailable in macos, tvos } { available in ios 10.0, macCatalyst 14.0 }
     procedure startRunning; message 'startRunning';
     procedure stopRunning; message 'stopRunning';
-    function masterClock: CMClockRef; message 'masterClock'; { unavailable in tvos }
+    function masterClock: CMClockRef; message 'masterClock'; { unavailable in tvos } { available in macos 10.9, ios 7.0, macCatalyst 14.0 }
   end;
 
 type
@@ -117,13 +117,13 @@ type
   private
     _internal: AVCaptureConnectionInternal;
   public
-    class function connectionWithInputPorts_output (ports: NSArray; output: AVCaptureOutput): id; message 'connectionWithInputPorts:output:'; { unavailable in tvos }
-    class function connectionWithInputPort_videoPreviewLayer (port: AVCaptureInputPort; layer: AVCaptureVideoPreviewLayer): id; message 'connectionWithInputPort:videoPreviewLayer:'; { unavailable in tvos }
-    function initWithInputPorts_output (ports: NSArray; output: AVCaptureOutput): id; message 'initWithInputPorts:output:'; { unavailable in tvos }
-    function initWithInputPort_videoPreviewLayer (port: AVCaptureInputPort; layer: AVCaptureVideoPreviewLayer): id; message 'initWithInputPort:videoPreviewLayer:'; { unavailable in tvos }
+    class function connectionWithInputPorts_output (ports: NSArray; output: AVCaptureOutput): id; message 'connectionWithInputPorts:output:'; { unavailable in tvos } { available in ios 8.0, macCatalyst 14.0 }
+    class function connectionWithInputPort_videoPreviewLayer (port: AVCaptureInputPort; layer: AVCaptureVideoPreviewLayer): id; message 'connectionWithInputPort:videoPreviewLayer:'; { unavailable in tvos } { available in ios 8.0, macCatalyst 14.0 }
+    function initWithInputPorts_output (ports: NSArray; output: AVCaptureOutput): id; message 'initWithInputPorts:output:'; { unavailable in tvos } { available in ios 8.0, macCatalyst 14.0 }
+    function initWithInputPort_videoPreviewLayer (port: AVCaptureInputPort; layer: AVCaptureVideoPreviewLayer): id; message 'initWithInputPort:videoPreviewLayer:'; { unavailable in tvos } { available in ios 8.0, macCatalyst 14.0 }
     function inputPorts: NSArray; message 'inputPorts';
     function output: AVCaptureOutput; message 'output';
-    function videoPreviewLayer: AVCaptureVideoPreviewLayer; message 'videoPreviewLayer'; { unavailable in tvos }
+    function videoPreviewLayer: AVCaptureVideoPreviewLayer; message 'videoPreviewLayer'; { unavailable in tvos } { available in ios 6.0, macCatalyst 14.0 }
     procedure setEnabled(newValue: objcbool); message 'setEnabled:';
     function isEnabled: objcbool; message 'isEnabled';
     function isActive: objcbool; message 'isActive';
@@ -131,8 +131,8 @@ type
     function isVideoMirroringSupported: objcbool; message 'isVideoMirroringSupported';
     procedure setVideoMirrored(newValue: objcbool); message 'setVideoMirrored:';
     function isVideoMirrored: objcbool; message 'isVideoMirrored';
-    procedure setAutomaticallyAdjustsVideoMirroring(newValue: objcbool); message 'setAutomaticallyAdjustsVideoMirroring:'; { unavailable in tvos }
-    function automaticallyAdjustsVideoMirroring: objcbool; message 'automaticallyAdjustsVideoMirroring'; { unavailable in tvos }
+    procedure setAutomaticallyAdjustsVideoMirroring(newValue: objcbool); message 'setAutomaticallyAdjustsVideoMirroring:'; { unavailable in tvos } { available in ios 6.0, macCatalyst 14.0 }
+    function automaticallyAdjustsVideoMirroring: objcbool; message 'automaticallyAdjustsVideoMirroring'; { unavailable in tvos } { available in ios 6.0, macCatalyst 14.0 }
     function isVideoOrientationSupported: objcbool; message 'isVideoOrientationSupported';
     procedure setVideoOrientation(newValue: AVCaptureVideoOrientation); message 'setVideoOrientation:';
     function videoOrientation: AVCaptureVideoOrientation; message 'videoOrientation';
@@ -142,22 +142,22 @@ type
     function isVideoMinFrameDurationSupported: objcbool; message 'isVideoMinFrameDurationSupported'; { unavailable in tvos }
     procedure setVideoMinFrameDuration(newValue: CMTime); message 'setVideoMinFrameDuration:'; { unavailable in tvos }
     function videoMinFrameDuration: CMTime; message 'videoMinFrameDuration'; { unavailable in tvos }
-    function isVideoMaxFrameDurationSupported: objcbool; message 'isVideoMaxFrameDurationSupported'; { unavailable in tvos }
-    procedure setVideoMaxFrameDuration(newValue: CMTime); message 'setVideoMaxFrameDuration:'; { unavailable in tvos }
-    function videoMaxFrameDuration: CMTime; message 'videoMaxFrameDuration'; { unavailable in tvos }
-    function videoMaxScaleAndCropFactor: CGFloat; message 'videoMaxScaleAndCropFactor'; { unavailable in macos, tvos }
-    procedure setVideoScaleAndCropFactor(newValue: CGFloat); message 'setVideoScaleAndCropFactor:'; { unavailable in macos, tvos }
-    function videoScaleAndCropFactor: CGFloat; message 'videoScaleAndCropFactor'; { unavailable in macos, tvos }
-    procedure setPreferredVideoStabilizationMode(newValue: AVCaptureVideoStabilizationMode); message 'setPreferredVideoStabilizationMode:'; { unavailable in macos, tvos }
-    function preferredVideoStabilizationMode: AVCaptureVideoStabilizationMode; message 'preferredVideoStabilizationMode'; { unavailable in macos, tvos }
-    function activeVideoStabilizationMode: AVCaptureVideoStabilizationMode; message 'activeVideoStabilizationMode'; { unavailable in macos, tvos }
-    function isVideoStabilizationSupported: objcbool; message 'isVideoStabilizationSupported'; { unavailable in macos, tvos }
-    function isVideoStabilizationEnabled: objcbool; message 'isVideoStabilizationEnabled'; { unavailable in macos }
-    procedure setEnablesVideoStabilizationWhenAvailable(newValue: objcbool); message 'setEnablesVideoStabilizationWhenAvailable:'; { unavailable in macos }
-    function enablesVideoStabilizationWhenAvailable: objcbool; message 'enablesVideoStabilizationWhenAvailable'; { unavailable in macos }
-    function isCameraIntrinsicMatrixDeliverySupported: objcbool; message 'isCameraIntrinsicMatrixDeliverySupported'; { unavailable in macos, tvos }
-    procedure setCameraIntrinsicMatrixDeliveryEnabled(newValue: objcbool); message 'setCameraIntrinsicMatrixDeliveryEnabled:'; { unavailable in macos, tvos }
-    function isCameraIntrinsicMatrixDeliveryEnabled: objcbool; message 'isCameraIntrinsicMatrixDeliveryEnabled'; { unavailable in macos, tvos }
+    function isVideoMaxFrameDurationSupported: objcbool; message 'isVideoMaxFrameDurationSupported'; { unavailable in tvos } { available in macos 10.9 }
+    procedure setVideoMaxFrameDuration(newValue: CMTime); message 'setVideoMaxFrameDuration:'; { unavailable in tvos } { available in macos 10.9 }
+    function videoMaxFrameDuration: CMTime; message 'videoMaxFrameDuration'; { unavailable in tvos } { available in macos 10.9 }
+    function videoMaxScaleAndCropFactor: CGFloat; message 'videoMaxScaleAndCropFactor'; { unavailable in macos, tvos } { available in ios 5.0, macCatalyst 14.0 }
+    procedure setVideoScaleAndCropFactor(newValue: CGFloat); message 'setVideoScaleAndCropFactor:'; { unavailable in macos, tvos } { available in ios 5.0, macCatalyst 14.0 }
+    function videoScaleAndCropFactor: CGFloat; message 'videoScaleAndCropFactor'; { unavailable in macos, tvos } { available in ios 5.0, macCatalyst 14.0 }
+    procedure setPreferredVideoStabilizationMode(newValue: AVCaptureVideoStabilizationMode); message 'setPreferredVideoStabilizationMode:'; { unavailable in macos, tvos } { available in ios 8.0, macCatalyst 14.0 }
+    function preferredVideoStabilizationMode: AVCaptureVideoStabilizationMode; message 'preferredVideoStabilizationMode'; { unavailable in macos, tvos } { available in ios 8.0, macCatalyst 14.0 }
+    function activeVideoStabilizationMode: AVCaptureVideoStabilizationMode; message 'activeVideoStabilizationMode'; { unavailable in macos, tvos } { available in ios 8.0, macCatalyst 14.0 }
+    function isVideoStabilizationSupported: objcbool; message 'isVideoStabilizationSupported'; { unavailable in macos, tvos } { available in ios 6.0, macCatalyst 14.0 }
+    function isVideoStabilizationEnabled: objcbool; message 'isVideoStabilizationEnabled'; { unavailable in macos } { unavailable in tvos }
+    procedure setEnablesVideoStabilizationWhenAvailable(newValue: objcbool); message 'setEnablesVideoStabilizationWhenAvailable:'; { unavailable in macos } { unavailable in tvos }
+    function enablesVideoStabilizationWhenAvailable: objcbool; message 'enablesVideoStabilizationWhenAvailable'; { unavailable in macos } { unavailable in tvos }
+    function isCameraIntrinsicMatrixDeliverySupported: objcbool; message 'isCameraIntrinsicMatrixDeliverySupported'; { unavailable in macos, tvos } { available in ios 11.0, macCatalyst 14.0 }
+    procedure setCameraIntrinsicMatrixDeliveryEnabled(newValue: objcbool); message 'setCameraIntrinsicMatrixDeliveryEnabled:'; { unavailable in macos, tvos } { available in ios 11.0, macCatalyst 14.0 }
+    function isCameraIntrinsicMatrixDeliveryEnabled: objcbool; message 'isCameraIntrinsicMatrixDeliveryEnabled'; { unavailable in macos, tvos } { available in ios 11.0, macCatalyst 14.0 }
   end;
 
 type

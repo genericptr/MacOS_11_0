@@ -44,10 +44,10 @@ type
     function executeCommand: id; message 'executeCommand';
     procedure setScriptErrorNumber(newValue: NSInteger); message 'setScriptErrorNumber:';
     function scriptErrorNumber: NSInteger; message 'scriptErrorNumber';
-    procedure setScriptErrorOffendingObjectDescriptor(newValue: NSAppleEventDescriptor); message 'setScriptErrorOffendingObjectDescriptor:'; { unavailable in ios, watchos, tvos }
-    function scriptErrorOffendingObjectDescriptor: NSAppleEventDescriptor; message 'scriptErrorOffendingObjectDescriptor'; { unavailable in ios, watchos, tvos }
-    procedure setScriptErrorExpectedTypeDescriptor(newValue: NSAppleEventDescriptor); message 'setScriptErrorExpectedTypeDescriptor:'; { unavailable in ios, watchos, tvos }
-    function scriptErrorExpectedTypeDescriptor: NSAppleEventDescriptor; message 'scriptErrorExpectedTypeDescriptor'; { unavailable in ios, watchos, tvos }
+    procedure setScriptErrorOffendingObjectDescriptor(newValue: NSAppleEventDescriptor); message 'setScriptErrorOffendingObjectDescriptor:'; { unavailable in ios, watchos, tvos } { available in macos 10.5 }
+    function scriptErrorOffendingObjectDescriptor: NSAppleEventDescriptor; message 'scriptErrorOffendingObjectDescriptor'; { unavailable in ios, watchos, tvos } { available in macos 10.5 }
+    procedure setScriptErrorExpectedTypeDescriptor(newValue: NSAppleEventDescriptor); message 'setScriptErrorExpectedTypeDescriptor:'; { unavailable in ios, watchos, tvos } { available in macos 10.5 }
+    function scriptErrorExpectedTypeDescriptor: NSAppleEventDescriptor; message 'scriptErrorExpectedTypeDescriptor'; { unavailable in ios, watchos, tvos } { available in macos 10.5 }
     procedure setScriptErrorString(newValue: NSString); message 'setScriptErrorString:';
     function scriptErrorString: NSString; message 'scriptErrorString';
     class function currentCommand: NSScriptCommand; message 'currentCommand';

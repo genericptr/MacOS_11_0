@@ -16,22 +16,22 @@ type
 
 {$ifdef EXTERNAL_SYMBOLS}
 var
-  NSPasteboardTypeString: NSPasteboardType { available in macos  }; cvar; external;
-  NSPasteboardTypePDF: NSPasteboardType { available in macos  }; cvar; external;
-  NSPasteboardTypeTIFF: NSPasteboardType { available in macos  }; cvar; external;
-  NSPasteboardTypePNG: NSPasteboardType { available in macos  }; cvar; external;
-  NSPasteboardTypeRTF: NSPasteboardType { available in macos  }; cvar; external;
-  NSPasteboardTypeRTFD: NSPasteboardType { available in macos  }; cvar; external;
-  NSPasteboardTypeHTML: NSPasteboardType { available in macos  }; cvar; external;
-  NSPasteboardTypeTabularText: NSPasteboardType { available in macos  }; cvar; external;
-  NSPasteboardTypeFont: NSPasteboardType { available in macos  }; cvar; external;
-  NSPasteboardTypeRuler: NSPasteboardType { available in macos  }; cvar; external;
-  NSPasteboardTypeColor: NSPasteboardType { available in macos  }; cvar; external;
-  NSPasteboardTypeSound: NSPasteboardType { available in macos  }; cvar; external;
-  NSPasteboardTypeMultipleTextSelection: NSPasteboardType { available in macos  }; cvar; external;
-  NSPasteboardTypeTextFinderOptions: NSPasteboardType { available in macos  }; cvar; external;
-  NSPasteboardTypeURL: NSPasteboardType { available in macos  }; cvar; external;
-  NSPasteboardTypeFileURL: NSPasteboardType { available in macos  }; cvar; external;
+  NSPasteboardTypeString: NSPasteboardType { available in macos 10.6 }; cvar; external;
+  NSPasteboardTypePDF: NSPasteboardType { available in macos 10.6 }; cvar; external;
+  NSPasteboardTypeTIFF: NSPasteboardType { available in macos 10.6 }; cvar; external;
+  NSPasteboardTypePNG: NSPasteboardType { available in macos 10.6 }; cvar; external;
+  NSPasteboardTypeRTF: NSPasteboardType { available in macos 10.6 }; cvar; external;
+  NSPasteboardTypeRTFD: NSPasteboardType { available in macos 10.6 }; cvar; external;
+  NSPasteboardTypeHTML: NSPasteboardType { available in macos 10.6 }; cvar; external;
+  NSPasteboardTypeTabularText: NSPasteboardType { available in macos 10.6 }; cvar; external;
+  NSPasteboardTypeFont: NSPasteboardType { available in macos 10.6 }; cvar; external;
+  NSPasteboardTypeRuler: NSPasteboardType { available in macos 10.6 }; cvar; external;
+  NSPasteboardTypeColor: NSPasteboardType { available in macos 10.6 }; cvar; external;
+  NSPasteboardTypeSound: NSPasteboardType { available in macos 10.6 }; cvar; external;
+  NSPasteboardTypeMultipleTextSelection: NSPasteboardType { available in macos 10.6 }; cvar; external;
+  NSPasteboardTypeTextFinderOptions: NSPasteboardType { available in macos 10.7 }; cvar; external;
+  NSPasteboardTypeURL: NSPasteboardType { available in macos 10.13 }; cvar; external;
+  NSPasteboardTypeFileURL: NSPasteboardType { available in macos 10.13 }; cvar; external;
 {$endif}
 
 {$ifdef TYPES}
@@ -42,11 +42,11 @@ type
 
 {$ifdef EXTERNAL_SYMBOLS}
 var
-  NSPasteboardNameGeneral: NSPasteboardName { available in macos  }; cvar; external;
-  NSPasteboardNameFont: NSPasteboardName { available in macos  }; cvar; external;
-  NSPasteboardNameRuler: NSPasteboardName { available in macos  }; cvar; external;
-  NSPasteboardNameFind: NSPasteboardName { available in macos  }; cvar; external;
-  NSPasteboardNameDrag: NSPasteboardName { available in macos  }; cvar; external;
+  NSPasteboardNameGeneral: NSPasteboardName { available in macos 10.13 }; cvar; external;
+  NSPasteboardNameFont: NSPasteboardName { available in macos 10.13 }; cvar; external;
+  NSPasteboardNameRuler: NSPasteboardName { available in macos 10.13 }; cvar; external;
+  NSPasteboardNameFind: NSPasteboardName { available in macos 10.13 }; cvar; external;
+  NSPasteboardNameDrag: NSPasteboardName { available in macos 10.13 }; cvar; external;
 {$endif}
 
 {$ifdef TYPES}
@@ -64,8 +64,8 @@ type
 
 {$ifdef EXTERNAL_SYMBOLS}
 var
-  NSPasteboardURLReadingFileURLsOnlyKey: NSPasteboardReadingOptionKey { available in macos  }; cvar; external;
-  NSPasteboardURLReadingContentsConformToTypesKey: NSPasteboardReadingOptionKey { available in macos  }; cvar; external;
+  NSPasteboardURLReadingFileURLsOnlyKey: NSPasteboardReadingOptionKey { available in macos 10.6 }; cvar; external;
+  NSPasteboardURLReadingContentsConformToTypesKey: NSPasteboardReadingOptionKey { available in macos 10.6 }; cvar; external;
 {$endif}
 
 {$ifdef CLASSES}
@@ -79,14 +79,14 @@ type
     function name: NSPasteboardName; message 'name';
     function changeCount: NSInteger; message 'changeCount';
     procedure releaseGlobally; message 'releaseGlobally';
-    function prepareForNewContentsWithOptions (options: NSPasteboardContentsOptions): NSInteger; message 'prepareForNewContentsWithOptions:'; { available in macos  }
-    function clearContents: NSInteger; message 'clearContents'; { available in macos  }
-    function writeObjects (objects: NSArray): objcbool; message 'writeObjects:'; { available in macos  }
-    function readObjectsForClasses_options (classArray: NSArray; options: NSDictionary): NSArray; message 'readObjectsForClasses:options:'; { available in macos  }
-    function pasteboardItems: NSArray; message 'pasteboardItems'; { available in macos  }
-    function indexOfPasteboardItem (pasteboardItem: NSPasteboardItem): NSUInteger; message 'indexOfPasteboardItem:'; { available in macos  }
-    function canReadItemWithDataConformingToTypes (types: NSArray): objcbool; message 'canReadItemWithDataConformingToTypes:'; { available in macos  }
-    function canReadObjectForClasses_options (classArray: NSArray; options: NSDictionary): objcbool; message 'canReadObjectForClasses:options:'; { available in macos  }
+    function prepareForNewContentsWithOptions (options: NSPasteboardContentsOptions): NSInteger; message 'prepareForNewContentsWithOptions:'; { available in macos 10.12 }
+    function clearContents: NSInteger; message 'clearContents'; { available in macos 10.6 }
+    function writeObjects (objects: NSArray): objcbool; message 'writeObjects:'; { available in macos 10.6 }
+    function readObjectsForClasses_options (classArray: NSArray; options: NSDictionary): NSArray; message 'readObjectsForClasses:options:'; { available in macos 10.6 }
+    function pasteboardItems: NSArray; message 'pasteboardItems'; { available in macos 10.6 }
+    function indexOfPasteboardItem (pasteboardItem: NSPasteboardItem): NSUInteger; message 'indexOfPasteboardItem:'; { available in macos 10.6 }
+    function canReadItemWithDataConformingToTypes (types: NSArray): objcbool; message 'canReadItemWithDataConformingToTypes:'; { available in macos 10.6 }
+    function canReadObjectForClasses_options (classArray: NSArray; options: NSDictionary): objcbool; message 'canReadObjectForClasses:options:'; { available in macos 10.6 }
     function declareTypes_owner (newTypes: NSArray; newOwner: id): NSInteger; message 'declareTypes:owner:';
     function addTypes_owner (newTypes: NSArray; newOwner: id): NSInteger; message 'addTypes:owner:';
     function types: NSArray; message 'types';

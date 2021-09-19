@@ -39,12 +39,12 @@ type
     function altIncrementValue: double; message 'altIncrementValue';
     procedure setSliderType(newValue: NSSliderType); message 'setSliderType:';
     function sliderType: NSSliderType; message 'sliderType';
-    procedure setVertical(newValue: objcbool); message 'setVertical:'; { available in macos  }
-    function isVertical: objcbool; message 'isVertical'; { available in macos  }
+    procedure setVertical(newValue: objcbool); message 'setVertical:'; { available in macos 10.11 }
+    function isVertical: objcbool; message 'isVertical'; { available in macos 10.11 }
     function trackRect: NSRect; message 'trackRect';
     function knobThickness: CGFloat; message 'knobThickness';
     function knobRectFlipped (flipped: objcbool): NSRect; message 'knobRectFlipped:';
-    function barRectFlipped (flipped: objcbool): NSRect; message 'barRectFlipped:'; { available in macos  }
+    function barRectFlipped (flipped: objcbool): NSRect; message 'barRectFlipped:'; { available in macos 10.9 }
     procedure drawKnob (knobRect: NSRect); message 'drawKnob:';
     procedure drawKnob_; message 'drawKnob';
     procedure drawBarInside_flipped (rect: NSRect; flipped: objcbool); message 'drawBarInside:flipped:';
@@ -53,7 +53,7 @@ type
 
 type
   NSSliderCellVerticalGetter = objccategory external (NSSliderCell)
-    function isVertical: objcbool; message 'isVertical'; { available in macos  }
+    function isVertical: objcbool; message 'isVertical'; { available in macos 10.0 }
   end;
 
 type
@@ -68,7 +68,7 @@ type
     function rectOfTickMarkAtIndex (index: NSInteger): NSRect; message 'rectOfTickMarkAtIndex:';
     function indexOfTickMarkAtPoint (point: NSPoint): NSInteger; message 'indexOfTickMarkAtPoint:';
     function closestTickMarkValueToValue (value: double): double; message 'closestTickMarkValueToValue:';
-    procedure drawTickMarks; message 'drawTickMarks'; { available in macos  }
+    procedure drawTickMarks; message 'drawTickMarks'; { available in macos 10.9 }
   end;
 
 type

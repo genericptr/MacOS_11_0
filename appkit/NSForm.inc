@@ -40,8 +40,8 @@ type
     procedure setTitleBaseWritingDirection (writingDirection: NSWritingDirection); message 'setTitleBaseWritingDirection:';
     procedure setTextBaseWritingDirection (writingDirection: NSWritingDirection); message 'setTextBaseWritingDirection:';
     {$endif}
-    procedure setPreferredTextFieldWidth (preferredWidth: CGFloat); message 'setPreferredTextFieldWidth:'; { available in macos  }
-    function preferredTextFieldWidth: CGFloat; message 'preferredTextFieldWidth'; { available in macos  }
+    procedure setPreferredTextFieldWidth (preferredWidth: CGFloat); message 'setPreferredTextFieldWidth:'; { available in macos 10.8 }
+    function preferredTextFieldWidth: CGFloat; message 'preferredTextFieldWidth'; { available in macos 10.8 }
   end;
 {$endif}
 

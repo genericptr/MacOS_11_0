@@ -57,16 +57,16 @@ const
   MTLAttributeFormatUInt4 = 39;
   MTLAttributeFormatInt1010102Normalized = 40;
   MTLAttributeFormatUInt1010102Normalized = 41;
-  MTLAttributeFormatUChar4Normalized_BGRA = 42 { available in macos , ios  };
-  MTLAttributeFormatUChar = 45 { available in macos , ios  };
-  MTLAttributeFormatChar = 46 { available in macos , ios  };
-  MTLAttributeFormatUCharNormalized = 47 { available in macos , ios  };
-  MTLAttributeFormatCharNormalized = 48 { available in macos , ios  };
-  MTLAttributeFormatUShort = 49 { available in macos , ios  };
-  MTLAttributeFormatShort = 50 { available in macos , ios  };
-  MTLAttributeFormatUShortNormalized = 51 { available in macos , ios  };
-  MTLAttributeFormatShortNormalized = 52 { available in macos , ios  };
-  MTLAttributeFormatHalf = 53 { available in macos , ios  };
+  MTLAttributeFormatUChar4Normalized_BGRA = 42 { available in macos 10.13, ios 11.0 };
+  MTLAttributeFormatUChar = 45 { available in macos 10.13, ios 11.0 };
+  MTLAttributeFormatChar = 46 { available in macos 10.13, ios 11.0 };
+  MTLAttributeFormatUCharNormalized = 47 { available in macos 10.13, ios 11.0 };
+  MTLAttributeFormatCharNormalized = 48 { available in macos 10.13, ios 11.0 };
+  MTLAttributeFormatUShort = 49 { available in macos 10.13, ios 11.0 };
+  MTLAttributeFormatShort = 50 { available in macos 10.13, ios 11.0 };
+  MTLAttributeFormatUShortNormalized = 51 { available in macos 10.13, ios 11.0 };
+  MTLAttributeFormatShortNormalized = 52 { available in macos 10.13, ios 11.0 };
+  MTLAttributeFormatHalf = 53 { available in macos 10.13, ios 11.0 };
 
 type
   MTLIndexType = NSUInteger;
@@ -84,8 +84,8 @@ const
   MTLStepFunctionConstant = 0;
   MTLStepFunctionPerVertex = 1;
   MTLStepFunctionPerInstance = 2;
-  MTLStepFunctionPerPatch = 3 { available in macos , ios  };
-  MTLStepFunctionPerPatchControlPoint = 4 { available in macos , ios  };
+  MTLStepFunctionPerPatch = 3 { available in macos 10.12, ios 10.0 };
+  MTLStepFunctionPerPatchControlPoint = 4 { available in macos 10.12, ios 10.0 };
   MTLStepFunctionThreadPositionInGridX = 5;
   MTLStepFunctionThreadPositionInGridY = 6;
   MTLStepFunctionThreadPositionInGridXIndexed = 7;

@@ -41,7 +41,7 @@ type
 
 type
   CLPlacemark_ContactsAdditions = objccategory external name 'ContactsAdditions' (CLPlacemark)
-    function postalAddress: CNPostalAddress; message 'postalAddress'; { unavailable in tvos }
+    function postalAddress: CNPostalAddress; message 'postalAddress'; { unavailable in tvos } { available in macos 10.13, ios 11.0, watchos 4.0 }
   end;
 {$endif}
 

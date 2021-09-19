@@ -18,28 +18,28 @@ type
     function accessibilityIndexOfChild (child: id): NSUInteger; message 'accessibilityIndexOfChild:';
     function accessibilityArrayAttributeCount (attribute: NSAccessibilityAttributeName): NSUInteger; message 'accessibilityArrayAttributeCount:';
     function accessibilityArrayAttributeValues_index_maxCount (attribute: NSAccessibilityAttributeName; index: NSUInteger; maxCount: NSUInteger): NSArray; message 'accessibilityArrayAttributeValues:index:maxCount:';
-    function accessibilityNotifiesWhenDestroyed: objcbool; message 'accessibilityNotifiesWhenDestroyed'; { available in macos  }
+    function accessibilityNotifiesWhenDestroyed: objcbool; message 'accessibilityNotifiesWhenDestroyed'; { available in macos 10.9 }
   end;
 
 type
   NSWorkspaceAccessibilityDisplay = objccategory external (NSWorkspace)
-    function accessibilityDisplayShouldIncreaseContrast: objcbool; message 'accessibilityDisplayShouldIncreaseContrast'; { available in macos  }
-    function accessibilityDisplayShouldDifferentiateWithoutColor: objcbool; message 'accessibilityDisplayShouldDifferentiateWithoutColor'; { available in macos  }
-    function accessibilityDisplayShouldReduceTransparency: objcbool; message 'accessibilityDisplayShouldReduceTransparency'; { available in macos  }
-    function accessibilityDisplayShouldReduceMotion: objcbool; message 'accessibilityDisplayShouldReduceMotion'; { available in macos  }
-    function accessibilityDisplayShouldInvertColors: objcbool; message 'accessibilityDisplayShouldInvertColors'; { available in macos  }
+    function accessibilityDisplayShouldIncreaseContrast: objcbool; message 'accessibilityDisplayShouldIncreaseContrast'; { available in macos 10.10 }
+    function accessibilityDisplayShouldDifferentiateWithoutColor: objcbool; message 'accessibilityDisplayShouldDifferentiateWithoutColor'; { available in macos 10.10 }
+    function accessibilityDisplayShouldReduceTransparency: objcbool; message 'accessibilityDisplayShouldReduceTransparency'; { available in macos 10.10 }
+    function accessibilityDisplayShouldReduceMotion: objcbool; message 'accessibilityDisplayShouldReduceMotion'; { available in macos 10.12 }
+    function accessibilityDisplayShouldInvertColors: objcbool; message 'accessibilityDisplayShouldInvertColors'; { available in macos 10.12 }
   end;
 
 type
   NSWorkspaceAccessibility = objccategory external (NSWorkspace)
-    function isVoiceOverEnabled: objcbool; message 'isVoiceOverEnabled'; { available in macos  }
-    function isSwitchControlEnabled: objcbool; message 'isSwitchControlEnabled'; { available in macos  }
+    function isVoiceOverEnabled: objcbool; message 'isVoiceOverEnabled'; { available in macos 10.13 }
+    function isSwitchControlEnabled: objcbool; message 'isSwitchControlEnabled'; { available in macos 10.13 }
   end;
 {$endif}
 
 {$ifdef EXTERNAL_SYMBOLS}
 var
-  NSWorkspaceAccessibilityDisplayOptionsDidChangeNotification: NSNotificationName { available in macos  }; cvar; external;
+  NSWorkspaceAccessibilityDisplayOptionsDidChangeNotification: NSNotificationName { available in macos 10.10 }; cvar; external;
 {$endif}
 
 {$ifdef CLASSES}
@@ -51,8 +51,8 @@ type
 {$endif}
 
 {$ifdef FUNCTIONS}
-function NSAccessibilityFrameInView(parentView: NSView; frame: NSRect): NSRect; cdecl; external; { available in macos  }
-function NSAccessibilityPointInView(parentView: NSView; point: NSPoint): NSPoint; cdecl; external; { available in macos  }
+function NSAccessibilityFrameInView(parentView: NSView; frame: NSRect): NSRect; cdecl; external; { available in macos 10.10 }
+function NSAccessibilityPointInView(parentView: NSView; point: NSPoint): NSPoint; cdecl; external; { available in macos 10.10 }
 function NSAccessibilitySetMayContainProtectedContent(flag: objcbool): objcbool; cdecl; external;
 function NSAccessibilityRoleDescription(role: NSAccessibilityRole; subrole: NSAccessibilitySubrole): NSString; cdecl; external;
 function NSAccessibilityRoleDescriptionForUIElement(element: id): NSString; cdecl; external;

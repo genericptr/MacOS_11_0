@@ -19,8 +19,8 @@ type
     class function bodyWithEdgeChainFromPath (path: CGPathRef): SKPhysicsBody; message 'bodyWithEdgeChainFromPath:';
     class function bodyWithEdgeLoopFromPath (path: CGPathRef): SKPhysicsBody; message 'bodyWithEdgeLoopFromPath:';
     class function bodyWithEdgeLoopFromRect (rect: CGRect): SKPhysicsBody; message 'bodyWithEdgeLoopFromRect:';
-    class function bodyWithTexture_size (texture: SKTexture; size: CGSize): SKPhysicsBody; message 'bodyWithTexture:size:'; { available in ios , tvos , watchos , macos  }
-    class function bodyWithTexture_alphaThreshold_size (texture: SKTexture; alphaThreshold: single; size: CGSize): SKPhysicsBody; message 'bodyWithTexture:alphaThreshold:size:'; { available in ios , tvos , watchos , macos  }
+    class function bodyWithTexture_size (texture: SKTexture; size: CGSize): SKPhysicsBody; message 'bodyWithTexture:size:'; { available in ios 8.0, tvos 9.0, watchos 1.0, macos 10.10 }
+    class function bodyWithTexture_alphaThreshold_size (texture: SKTexture; alphaThreshold: single; size: CGSize): SKPhysicsBody; message 'bodyWithTexture:alphaThreshold:size:'; { available in ios 8.0, tvos 9.0, watchos 1.0, macos 10.10 }
     class function bodyWithBodies (bodies: NSArray): SKPhysicsBody; message 'bodyWithBodies:';
     procedure setDynamic(newValue: objcbool); message 'setDynamic:';
     function isDynamic: objcbool; message 'isDynamic';
@@ -28,14 +28,14 @@ type
     function usesPreciseCollisionDetection: objcbool; message 'usesPreciseCollisionDetection';
     procedure setAllowsRotation(newValue: objcbool); message 'setAllowsRotation:';
     function allowsRotation: objcbool; message 'allowsRotation';
-    procedure setPinned(newValue: objcbool); message 'setPinned:'; { available in ios , tvos , watchos , macos  }
-    function pinned: objcbool; message 'pinned'; { available in ios , tvos , watchos , macos  }
+    procedure setPinned(newValue: objcbool); message 'setPinned:'; { available in ios 8.0, tvos 9.0, watchos 1.0, macos 10.10 }
+    function pinned: objcbool; message 'pinned'; { available in ios 8.0, tvos 9.0, watchos 1.0, macos 10.10 }
     procedure setResting(newValue: objcbool); message 'setResting:';
     function isResting: objcbool; message 'isResting';
     procedure setFriction(newValue: CGFloat); message 'setFriction:';
     function friction: CGFloat; message 'friction';
-    procedure setCharge(newValue: CGFloat); message 'setCharge:'; { available in ios , tvos , watchos , macos  }
-    function charge: CGFloat; message 'charge'; { available in ios , tvos , watchos , macos  }
+    procedure setCharge(newValue: CGFloat); message 'setCharge:'; { available in ios 8.0, tvos 9.0, watchos 1.0, macos 10.10 }
+    function charge: CGFloat; message 'charge'; { available in ios 8.0, tvos 9.0, watchos 1.0, macos 10.10 }
     procedure setRestitution(newValue: CGFloat); message 'setRestitution:';
     function restitution: CGFloat; message 'restitution';
     procedure setLinearDamping(newValue: CGFloat); message 'setLinearDamping:';
@@ -49,8 +49,8 @@ type
     function area: CGFloat; message 'area';
     procedure setAffectedByGravity(newValue: objcbool); message 'setAffectedByGravity:';
     function affectedByGravity: objcbool; message 'affectedByGravity';
-    procedure setFieldBitMask(newValue: cuint32); message 'setFieldBitMask:'; { available in ios , tvos , watchos , macos  }
-    function fieldBitMask: cuint32; message 'fieldBitMask'; { available in ios , tvos , watchos , macos  }
+    procedure setFieldBitMask(newValue: cuint32); message 'setFieldBitMask:'; { available in ios 8.0, tvos 9.0, watchos 1.0, macos 10.10 }
+    function fieldBitMask: cuint32; message 'fieldBitMask'; { available in ios 8.0, tvos 9.0, watchos 1.0, macos 10.10 }
     procedure setCategoryBitMask(newValue: cuint32); message 'setCategoryBitMask:';
     function categoryBitMask: cuint32; message 'categoryBitMask';
     procedure setCollisionBitMask(newValue: cuint32); message 'setCollisionBitMask:';

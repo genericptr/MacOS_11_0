@@ -17,8 +17,8 @@ const
   NSUserNotificationActivationTypeNone = 0;
   NSUserNotificationActivationTypeContentsClicked = 1;
   NSUserNotificationActivationTypeActionButtonClicked = 2;
-  NSUserNotificationActivationTypeReplied = 3 { unavailable in ios, watchos, tvos };
-  NSUserNotificationActivationTypeAdditionalActionClicked = 4 { unavailable in ios, watchos, tvos };
+  NSUserNotificationActivationTypeReplied = 3 { unavailable in ios, watchos, tvos } { available in macos 10.9 };
+  NSUserNotificationActivationTypeAdditionalActionClicked = 4 { unavailable in ios, watchos, tvos } { available in macos 10.10 };
 {$endif}
 
 {$ifdef CLASSES}
@@ -55,18 +55,18 @@ type
     function activationType: NSUserNotificationActivationType; message 'activationType';
     procedure setOtherButtonTitle(newValue: NSString); message 'setOtherButtonTitle:';
     function otherButtonTitle: NSString; message 'otherButtonTitle';
-    procedure setIdentifier(newValue: NSString); message 'setIdentifier:'; { unavailable in ios, watchos, tvos }
-    function identifier: NSString; message 'identifier'; { unavailable in ios, watchos, tvos }
-    procedure setContentImage(newValue: NSImage); message 'setContentImage:'; { unavailable in ios, watchos, tvos }
-    function contentImage: NSImage; message 'contentImage'; { unavailable in ios, watchos, tvos }
-    procedure setHasReplyButton(newValue: objcbool); message 'setHasReplyButton:'; { unavailable in ios, watchos, tvos }
-    function hasReplyButton: objcbool; message 'hasReplyButton'; { unavailable in ios, watchos, tvos }
-    procedure setResponsePlaceholder(newValue: NSString); message 'setResponsePlaceholder:'; { unavailable in ios, watchos, tvos }
-    function responsePlaceholder: NSString; message 'responsePlaceholder'; { unavailable in ios, watchos, tvos }
-    function response: NSAttributedString; message 'response'; { unavailable in ios, watchos, tvos }
-    procedure setAdditionalActions(newValue: NSArray); message 'setAdditionalActions:'; { unavailable in ios, watchos, tvos }
-    function additionalActions: NSArray; message 'additionalActions'; { unavailable in ios, watchos, tvos }
-    function additionalActivationAction: NSUserNotificationAction; message 'additionalActivationAction'; { unavailable in ios, watchos, tvos }
+    procedure setIdentifier(newValue: NSString); message 'setIdentifier:'; { unavailable in ios, watchos, tvos } { available in macos 10.9 }
+    function identifier: NSString; message 'identifier'; { unavailable in ios, watchos, tvos } { available in macos 10.9 }
+    procedure setContentImage(newValue: NSImage); message 'setContentImage:'; { unavailable in ios, watchos, tvos } { available in macos 10.9 }
+    function contentImage: NSImage; message 'contentImage'; { unavailable in ios, watchos, tvos } { available in macos 10.9 }
+    procedure setHasReplyButton(newValue: objcbool); message 'setHasReplyButton:'; { unavailable in ios, watchos, tvos } { available in macos 10.9 }
+    function hasReplyButton: objcbool; message 'hasReplyButton'; { unavailable in ios, watchos, tvos } { available in macos 10.9 }
+    procedure setResponsePlaceholder(newValue: NSString); message 'setResponsePlaceholder:'; { unavailable in ios, watchos, tvos } { available in macos 10.9 }
+    function responsePlaceholder: NSString; message 'responsePlaceholder'; { unavailable in ios, watchos, tvos } { available in macos 10.9 }
+    function response: NSAttributedString; message 'response'; { unavailable in ios, watchos, tvos } { available in macos 10.9 }
+    procedure setAdditionalActions(newValue: NSArray); message 'setAdditionalActions:'; { unavailable in ios, watchos, tvos } { available in macos 10.10 }
+    function additionalActions: NSArray; message 'additionalActions'; { unavailable in ios, watchos, tvos } { available in macos 10.10 }
+    function additionalActivationAction: NSUserNotificationAction; message 'additionalActivationAction'; { unavailable in ios, watchos, tvos } { available in macos 10.10 }
 
     { Adopted protocols }
     function copyWithZone (zone: NSZonePtr): id; message 'copyWithZone:';

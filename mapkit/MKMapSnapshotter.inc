@@ -7,7 +7,7 @@ type
 
 {$ifdef TYPES}
 type
-  MKMapSnapshotCompletionHandler = reference to procedure (snapshot: MKMapSnapshot; error: NSError); cblock; cdecl { unavailable in watchos };
+  MKMapSnapshotCompletionHandler = reference to procedure (snapshot: MKMapSnapshot; error: NSError); cblock; cdecl { unavailable in watchos } { available in 9_2 };
 {$endif}
 
 {$ifdef CLASSES}

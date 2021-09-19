@@ -95,7 +95,7 @@ type
     function position: AVAudio3DPoint; message 'position'; { unavailable in watchos }
     function rate: single; message 'rate'; { unavailable in watchos }
     function renderingAlgorithm: AVAudio3DMixingRenderingAlgorithm; message 'renderingAlgorithm'; { unavailable in watchos }
-    function reverbBlend: single; message 'reverbBlend'; { unavailable in watchos }
+    function reverbBlend: single; message 'reverbBlend'; { unavailable in watchos } { available in macos 10.15, ios 13.0, tvos 13.0 }
     procedure setObstruction (newValue: single); message 'setObstruction:'; { unavailable in watchos }
     procedure setOcclusion (newValue: single); message 'setOcclusion:'; { unavailable in watchos }
     procedure setPan (newValue: single); message 'setPan:';
@@ -103,7 +103,7 @@ type
     procedure setPosition (newValue: AVAudio3DPoint); message 'setPosition:'; { unavailable in watchos }
     procedure setRate (newValue: single); message 'setRate:'; { unavailable in watchos }
     procedure setRenderingAlgorithm (newValue: AVAudio3DMixingRenderingAlgorithm); message 'setRenderingAlgorithm:'; { unavailable in watchos }
-    procedure setReverbBlend (newValue: single); message 'setReverbBlend:'; { unavailable in watchos }
+    procedure setReverbBlend (newValue: single); message 'setReverbBlend:'; { unavailable in watchos } { available in macos 10.15, ios 13.0, tvos 13.0 }
     procedure setSourceMode (newValue: AVAudio3DMixingSourceMode); message 'setSourceMode:'; { unavailable in watchos }
     procedure setVolume (newValue: single); message 'setVolume:';
     function sourceMode: AVAudio3DMixingSourceMode; message 'sourceMode'; { unavailable in watchos }

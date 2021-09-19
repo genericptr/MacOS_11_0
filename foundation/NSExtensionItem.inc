@@ -30,9 +30,9 @@ type
 
 {$ifdef EXTERNAL_SYMBOLS}
 var
-  NSExtensionItemAttributedTitleKey: NSString { available in macos , ios , watchos , tvos  }; cvar; external;
-  NSExtensionItemAttributedContentTextKey: NSString { available in macos , ios , watchos , tvos  }; cvar; external;
-  NSExtensionItemAttachmentsKey: NSString { available in macos , ios , watchos , tvos  }; cvar; external;
+  NSExtensionItemAttributedTitleKey: NSString { available in macos 10.10, ios 8.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  NSExtensionItemAttributedContentTextKey: NSString { available in macos 10.10, ios 8.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  NSExtensionItemAttachmentsKey: NSString { available in macos 10.10, ios 8.0, watchos 2.0, tvos 9.0 }; cvar; external;
 {$endif}
 
 {$endif}

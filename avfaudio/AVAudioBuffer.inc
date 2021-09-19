@@ -46,9 +46,9 @@ type
     function packetCount: AVAudioPacketCount; message 'packetCount';
     function maximumPacketSize: NSInteger; message 'maximumPacketSize';
     function data: pointer; message 'data';
-    function byteCapacity: cuint32; message 'byteCapacity'; { available in macosx , ios , watchos , tvos  }
-    procedure setByteLength(newValue: cuint32); message 'setByteLength:'; { available in macosx , ios , watchos , tvos  }
-    function byteLength: cuint32; message 'byteLength'; { available in macosx , ios , watchos , tvos  }
+    function byteCapacity: cuint32; message 'byteCapacity'; { available in macosx 10.13, ios 11.0, watchos 4.0, tvos 11.0 }
+    procedure setByteLength(newValue: cuint32); message 'setByteLength:'; { available in macosx 10.13, ios 11.0, watchos 4.0, tvos 11.0 }
+    function byteLength: cuint32; message 'byteLength'; { available in macosx 10.13, ios 11.0, watchos 4.0, tvos 11.0 }
     function packetDescriptions: AudioStreamPacketDescriptionPtr; message 'packetDescriptions';
   end;
 {$endif}

@@ -31,7 +31,7 @@ type
     function portForName (name: NSString): NSPort; message 'portForName:';
     function portForName_host (name: NSString; host: NSString): NSPort; message 'portForName:host:';
     function registerPort_name (port: NSPort; name: NSString): objcbool; message 'registerPort:name:';
-    function servicePortWithName (name: NSString): NSPort; message 'servicePortWithName:'; { available in macos , ios , watchos , tvos  }
+    function servicePortWithName (name: NSString): NSPort; message 'servicePortWithName:'; { available in macos 10.5, ios 2.0, watchos 2.0, tvos 9.0 }
   end;
 {$endif}
 

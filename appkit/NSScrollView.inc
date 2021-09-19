@@ -23,8 +23,8 @@ type
   public
     function initWithFrame (frameRect: NSRect): id; message 'initWithFrame:'; { NS_DESIGNATED_INITIALIZER }
     function initWithCoder (coder: NSCoder): id; message 'initWithCoder:'; { NS_DESIGNATED_INITIALIZER }
-    class function frameSizeForContentSize_horizontalScrollerClass_verticalScrollerClass_borderType_controlSize_scrollerStyle (cSize: NSSize; horizontalScrollerClass: pobjc_class; verticalScrollerClass: pobjc_class; type_: NSBorderType; controlSize: NSControlSize; scrollerStyle: NSScrollerStyle): NSSize; message 'frameSizeForContentSize:horizontalScrollerClass:verticalScrollerClass:borderType:controlSize:scrollerStyle:'; { available in macos  }
-    class function contentSizeForFrameSize_horizontalScrollerClass_verticalScrollerClass_borderType_controlSize_scrollerStyle (fSize: NSSize; horizontalScrollerClass: pobjc_class; verticalScrollerClass: pobjc_class; type_: NSBorderType; controlSize: NSControlSize; scrollerStyle: NSScrollerStyle): NSSize; message 'contentSizeForFrameSize:horizontalScrollerClass:verticalScrollerClass:borderType:controlSize:scrollerStyle:'; { available in macos  }
+    class function frameSizeForContentSize_horizontalScrollerClass_verticalScrollerClass_borderType_controlSize_scrollerStyle (cSize: NSSize; horizontalScrollerClass: pobjc_class; verticalScrollerClass: pobjc_class; type_: NSBorderType; controlSize: NSControlSize; scrollerStyle: NSScrollerStyle): NSSize; message 'frameSizeForContentSize:horizontalScrollerClass:verticalScrollerClass:borderType:controlSize:scrollerStyle:'; { available in macos 10.7 }
+    class function contentSizeForFrameSize_horizontalScrollerClass_verticalScrollerClass_borderType_controlSize_scrollerStyle (fSize: NSSize; horizontalScrollerClass: pobjc_class; verticalScrollerClass: pobjc_class; type_: NSBorderType; controlSize: NSControlSize; scrollerStyle: NSScrollerStyle): NSSize; message 'contentSizeForFrameSize:horizontalScrollerClass:verticalScrollerClass:borderType:controlSize:scrollerStyle:'; { available in macos 10.7 }
     class function frameSizeForContentSize_hasHorizontalScroller_hasVerticalScroller_borderType (cSize: NSSize; hFlag: objcbool; vFlag: objcbool; type_: NSBorderType): NSSize; message 'frameSizeForContentSize:hasHorizontalScroller:hasVerticalScroller:borderType:'; deprecated 'Use +frameSizeForContentSize:horizontalScrollerClass:verticalScrollerClass:borderType:controlSize:scrollerStyle: instead';
     class function contentSizeForFrameSize_hasHorizontalScroller_hasVerticalScroller_borderType (fSize: NSSize; hFlag: objcbool; vFlag: objcbool; type_: NSBorderType): NSSize; message 'contentSizeForFrameSize:hasHorizontalScroller:hasVerticalScroller:borderType:'; deprecated '+contentSizeForFrameSize:horizontalScrollerClass:verticalScrollerClass:borderType:controlSize:scrollerStyle: instead';
     function documentVisibleRect: NSRect; message 'documentVisibleRect';
@@ -68,34 +68,34 @@ type
     procedure tile; message 'tile';
     procedure reflectScrolledClipView (cView: NSClipView); message 'reflectScrolledClipView:';
     procedure scrollWheel (event: NSEvent); message 'scrollWheel:';
-    procedure setScrollerStyle(newValue: NSScrollerStyle); message 'setScrollerStyle:'; { available in macos  }
-    function scrollerStyle: NSScrollerStyle; message 'scrollerStyle'; { available in macos  }
-    procedure setScrollerKnobStyle(newValue: NSScrollerKnobStyle); message 'setScrollerKnobStyle:'; { available in macos  }
-    function scrollerKnobStyle: NSScrollerKnobStyle; message 'scrollerKnobStyle'; { available in macos  }
-    procedure flashScrollers; message 'flashScrollers'; { available in macos  }
-    procedure setHorizontalScrollElasticity(newValue: NSScrollElasticity); message 'setHorizontalScrollElasticity:'; { available in macos  }
-    function horizontalScrollElasticity: NSScrollElasticity; message 'horizontalScrollElasticity'; { available in macos  }
-    procedure setVerticalScrollElasticity(newValue: NSScrollElasticity); message 'setVerticalScrollElasticity:'; { available in macos  }
-    function verticalScrollElasticity: NSScrollElasticity; message 'verticalScrollElasticity'; { available in macos  }
-    procedure setUsesPredominantAxisScrolling(newValue: objcbool); message 'setUsesPredominantAxisScrolling:'; { available in macos  }
-    function usesPredominantAxisScrolling: objcbool; message 'usesPredominantAxisScrolling'; { available in macos  }
-    procedure setAllowsMagnification(newValue: objcbool); message 'setAllowsMagnification:'; { available in macos  }
-    function allowsMagnification: objcbool; message 'allowsMagnification'; { available in macos  }
-    procedure setMagnification(newValue: CGFloat); message 'setMagnification:'; { available in macos  }
-    function magnification: CGFloat; message 'magnification'; { available in macos  }
-    procedure setMaxMagnification(newValue: CGFloat); message 'setMaxMagnification:'; { available in macos  }
-    function maxMagnification: CGFloat; message 'maxMagnification'; { available in macos  }
-    procedure setMinMagnification(newValue: CGFloat); message 'setMinMagnification:'; { available in macos  }
-    function minMagnification: CGFloat; message 'minMagnification'; { available in macos  }
-    procedure magnifyToFitRect (rect: NSRect); message 'magnifyToFitRect:'; { available in macos  }
-    procedure setMagnification_centeredAtPoint (magnification_: CGFloat; point: NSPoint); message 'setMagnification:centeredAtPoint:'; { available in macos  }
-    procedure addFloatingSubview_forAxis (view: NSView; axis: NSEventGestureAxis); message 'addFloatingSubview:forAxis:'; { available in macos  }
-    procedure setAutomaticallyAdjustsContentInsets(newValue: objcbool); message 'setAutomaticallyAdjustsContentInsets:'; { available in macos  }
-    function automaticallyAdjustsContentInsets: objcbool; message 'automaticallyAdjustsContentInsets'; { available in macos  }
-    procedure setContentInsets(newValue: NSEdgeInsets); message 'setContentInsets:'; { available in macos  }
-    function contentInsets: NSEdgeInsets; message 'contentInsets'; { available in macos  }
-    procedure setScrollerInsets(newValue: NSEdgeInsets); message 'setScrollerInsets:'; { available in macos  }
-    function scrollerInsets: NSEdgeInsets; message 'scrollerInsets'; { available in macos  }
+    procedure setScrollerStyle(newValue: NSScrollerStyle); message 'setScrollerStyle:'; { available in macos 10.7 }
+    function scrollerStyle: NSScrollerStyle; message 'scrollerStyle'; { available in macos 10.7 }
+    procedure setScrollerKnobStyle(newValue: NSScrollerKnobStyle); message 'setScrollerKnobStyle:'; { available in macos 10.7 }
+    function scrollerKnobStyle: NSScrollerKnobStyle; message 'scrollerKnobStyle'; { available in macos 10.7 }
+    procedure flashScrollers; message 'flashScrollers'; { available in macos 10.7 }
+    procedure setHorizontalScrollElasticity(newValue: NSScrollElasticity); message 'setHorizontalScrollElasticity:'; { available in macos 10.7 }
+    function horizontalScrollElasticity: NSScrollElasticity; message 'horizontalScrollElasticity'; { available in macos 10.7 }
+    procedure setVerticalScrollElasticity(newValue: NSScrollElasticity); message 'setVerticalScrollElasticity:'; { available in macos 10.7 }
+    function verticalScrollElasticity: NSScrollElasticity; message 'verticalScrollElasticity'; { available in macos 10.7 }
+    procedure setUsesPredominantAxisScrolling(newValue: objcbool); message 'setUsesPredominantAxisScrolling:'; { available in macos 10.7 }
+    function usesPredominantAxisScrolling: objcbool; message 'usesPredominantAxisScrolling'; { available in macos 10.7 }
+    procedure setAllowsMagnification(newValue: objcbool); message 'setAllowsMagnification:'; { available in macos 10.8 }
+    function allowsMagnification: objcbool; message 'allowsMagnification'; { available in macos 10.8 }
+    procedure setMagnification(newValue: CGFloat); message 'setMagnification:'; { available in macos 10.8 }
+    function magnification: CGFloat; message 'magnification'; { available in macos 10.8 }
+    procedure setMaxMagnification(newValue: CGFloat); message 'setMaxMagnification:'; { available in macos 10.8 }
+    function maxMagnification: CGFloat; message 'maxMagnification'; { available in macos 10.8 }
+    procedure setMinMagnification(newValue: CGFloat); message 'setMinMagnification:'; { available in macos 10.8 }
+    function minMagnification: CGFloat; message 'minMagnification'; { available in macos 10.8 }
+    procedure magnifyToFitRect (rect: NSRect); message 'magnifyToFitRect:'; { available in macos 10.8 }
+    procedure setMagnification_centeredAtPoint (magnification_: CGFloat; point: NSPoint); message 'setMagnification:centeredAtPoint:'; { available in macos 10.8 }
+    procedure addFloatingSubview_forAxis (view: NSView; axis: NSEventGestureAxis); message 'addFloatingSubview:forAxis:'; { available in macos 10.9 }
+    procedure setAutomaticallyAdjustsContentInsets(newValue: objcbool); message 'setAutomaticallyAdjustsContentInsets:'; { available in macos 10.10 }
+    function automaticallyAdjustsContentInsets: objcbool; message 'automaticallyAdjustsContentInsets'; { available in macos 10.10 }
+    procedure setContentInsets(newValue: NSEdgeInsets); message 'setContentInsets:'; { available in macos 10.10 }
+    function contentInsets: NSEdgeInsets; message 'contentInsets'; { available in macos 10.10 }
+    procedure setScrollerInsets(newValue: NSEdgeInsets); message 'setScrollerInsets:'; { available in macos 10.10 }
+    function scrollerInsets: NSEdgeInsets; message 'scrollerInsets'; { available in macos 10.10 }
 
     { Adopted protocols }
     function findBarView: NSView; message 'findBarView';
@@ -108,11 +108,11 @@ type
 
 {$ifdef EXTERNAL_SYMBOLS}
 var
-  NSScrollViewWillStartLiveMagnifyNotification: NSNotificationName { available in macos  }; cvar; external;
-  NSScrollViewDidEndLiveMagnifyNotification: NSNotificationName { available in macos  }; cvar; external;
-  NSScrollViewWillStartLiveScrollNotification: NSNotificationName { available in macos  }; cvar; external;
-  NSScrollViewDidLiveScrollNotification: NSNotificationName { available in macos  }; cvar; external;
-  NSScrollViewDidEndLiveScrollNotification: NSNotificationName { available in macos  }; cvar; external;
+  NSScrollViewWillStartLiveMagnifyNotification: NSNotificationName { available in macos 10.8 }; cvar; external;
+  NSScrollViewDidEndLiveMagnifyNotification: NSNotificationName { available in macos 10.8 }; cvar; external;
+  NSScrollViewWillStartLiveScrollNotification: NSNotificationName { available in macos 10.9 }; cvar; external;
+  NSScrollViewDidLiveScrollNotification: NSNotificationName { available in macos 10.9 }; cvar; external;
+  NSScrollViewDidEndLiveScrollNotification: NSNotificationName { available in macos 10.9 }; cvar; external;
 {$endif}
 
 {$ifdef CLASSES}
@@ -149,8 +149,8 @@ const
 
 type
   NSFindBarSupport = objccategory external (NSScrollView)
-    procedure setFindBarPosition(newValue: NSScrollViewFindBarPosition); message 'setFindBarPosition:'; { available in macos  }
-    function findBarPosition: NSScrollViewFindBarPosition; message 'findBarPosition'; { available in macos  }
+    procedure setFindBarPosition(newValue: NSScrollViewFindBarPosition); message 'setFindBarPosition:'; { available in macos 10.7 }
+    function findBarPosition: NSScrollViewFindBarPosition; message 'findBarPosition'; { available in macos 10.7 }
   end;
 {$endif}
 

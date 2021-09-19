@@ -22,8 +22,8 @@ type
     function availableMetadataObjectTypes: NSArray; message 'availableMetadataObjectTypes';
     procedure setMetadataObjectTypes(newValue: NSArray); message 'setMetadataObjectTypes:';
     function metadataObjectTypes: NSArray; message 'metadataObjectTypes';
-    procedure setRectOfInterest(newValue: CGRect); message 'setRectOfInterest:'; { unavailable in tvos }
-    function rectOfInterest: CGRect; message 'rectOfInterest'; { unavailable in tvos }
+    procedure setRectOfInterest(newValue: CGRect); message 'setRectOfInterest:'; { unavailable in tvos } { available in ios 7.0, macCatalyst 14.0 }
+    function rectOfInterest: CGRect; message 'rectOfInterest'; { unavailable in tvos } { available in ios 7.0, macCatalyst 14.0 }
   end;
 {$endif}
 

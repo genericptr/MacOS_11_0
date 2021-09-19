@@ -31,17 +31,17 @@ type
   public
     function initWithContentsOfURL (url: NSURL): id; message 'initWithContentsOfURL:';
     function initWithData (data: NSData): id; message 'initWithData:'; { NS_DESIGNATED_INITIALIZER }
-    function initWithStream (stream: NSInputStream): id; message 'initWithStream:'; { available in macos , ios , watchos , tvos  }
+    function initWithStream (stream: NSInputStream): id; message 'initWithStream:'; { available in macos 10.7, ios 5.0, watchos 2.0, tvos 9.0 }
     procedure setDelegate(newValue: NSXMLParserDelegateProtocol); message 'setDelegate:';
     function delegate: NSXMLParserDelegateProtocol; message 'delegate';
     procedure setShouldProcessNamespaces(newValue: objcbool); message 'setShouldProcessNamespaces:';
     function shouldProcessNamespaces: objcbool; message 'shouldProcessNamespaces';
     procedure setShouldReportNamespacePrefixes(newValue: objcbool); message 'setShouldReportNamespacePrefixes:';
     function shouldReportNamespacePrefixes: objcbool; message 'shouldReportNamespacePrefixes';
-    procedure setExternalEntityResolvingPolicy(newValue: NSXMLParserExternalEntityResolvingPolicy); message 'setExternalEntityResolvingPolicy:'; { available in macos , ios , watchos , tvos  }
-    function externalEntityResolvingPolicy: NSXMLParserExternalEntityResolvingPolicy; message 'externalEntityResolvingPolicy'; { available in macos , ios , watchos , tvos  }
-    procedure setAllowedExternalEntityURLs(newValue: NSSet); message 'setAllowedExternalEntityURLs:'; { available in macos , ios , watchos , tvos  }
-    function allowedExternalEntityURLs: NSSet; message 'allowedExternalEntityURLs'; { available in macos , ios , watchos , tvos  }
+    procedure setExternalEntityResolvingPolicy(newValue: NSXMLParserExternalEntityResolvingPolicy); message 'setExternalEntityResolvingPolicy:'; { available in macos 10.9, ios 8.0, watchos 2.0, tvos 9.0 }
+    function externalEntityResolvingPolicy: NSXMLParserExternalEntityResolvingPolicy; message 'externalEntityResolvingPolicy'; { available in macos 10.9, ios 8.0, watchos 2.0, tvos 9.0 }
+    procedure setAllowedExternalEntityURLs(newValue: NSSet); message 'setAllowedExternalEntityURLs:'; { available in macos 10.9, ios 8.0, watchos 2.0, tvos 9.0 }
+    function allowedExternalEntityURLs: NSSet; message 'allowedExternalEntityURLs'; { available in macos 10.9, ios 8.0, watchos 2.0, tvos 9.0 }
     function parse: objcbool; message 'parse';
     procedure abortParsing; message 'abortParsing';
     function parserError: NSError; message 'parserError';
@@ -89,7 +89,7 @@ type
 
 {$ifdef EXTERNAL_SYMBOLS}
 var
-  NSXMLParserErrorDomain: NSErrorDomain { available in macos , ios , watchos , tvos  }; cvar; external;
+  NSXMLParserErrorDomain: NSErrorDomain { available in macos 10.3, ios 2.0, watchos 2.0, tvos 9.0 }; cvar; external;
 {$endif}
 
 {$ifdef TYPES}

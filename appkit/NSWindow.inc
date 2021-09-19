@@ -46,12 +46,12 @@ const
   NSWindowStyleMaskResizable = 1 shl 3;
   NSWindowStyleMaskTexturedBackground = 1 shl 8 deprecated 'Textured window style should no longer be used';
   NSWindowStyleMaskUnifiedTitleAndToolbar = 1 shl 12;
-  NSWindowStyleMaskFullScreen = 1 shl 14 { available in macos  };
-  NSWindowStyleMaskFullSizeContentView = 1 shl 15 { available in macos  };
+  NSWindowStyleMaskFullScreen = 1 shl 14 { available in macos 10.7 };
+  NSWindowStyleMaskFullSizeContentView = 1 shl 15 { available in macos 10.10 };
   NSWindowStyleMaskUtilityWindow = 1 shl 4;
   NSWindowStyleMaskDocModalWindow = 1 shl 6;
   NSWindowStyleMaskNonactivatingPanel = 1 shl 7;
-  NSWindowStyleMaskHUDWindow = 1 shl 13 { available in macos  };
+  NSWindowStyleMaskHUDWindow = 1 shl 13 { available in macos 10.6 };
 
 const
   NSModalResponseOK = 1;
@@ -78,16 +78,16 @@ const
   NSWindowCollectionBehaviorDefault = 0;
   NSWindowCollectionBehaviorCanJoinAllSpaces = 1 shl 0;
   NSWindowCollectionBehaviorMoveToActiveSpace = 1 shl 1;
-  NSWindowCollectionBehaviorManaged = 1 shl 2 { available in macos  };
-  NSWindowCollectionBehaviorTransient = 1 shl 3 { available in macos  };
-  NSWindowCollectionBehaviorStationary = 1 shl 4 { available in macos  };
-  NSWindowCollectionBehaviorParticipatesInCycle = 1 shl 5 { available in macos  };
-  NSWindowCollectionBehaviorIgnoresCycle = 1 shl 6 { available in macos  };
-  NSWindowCollectionBehaviorFullScreenPrimary = 1 shl 7 { available in macos  };
-  NSWindowCollectionBehaviorFullScreenAuxiliary = 1 shl 8 { available in macos  };
-  NSWindowCollectionBehaviorFullScreenNone = 1 shl 9 { available in macos  };
-  NSWindowCollectionBehaviorFullScreenAllowsTiling = 1 shl 11 { available in macos  };
-  NSWindowCollectionBehaviorFullScreenDisallowsTiling = 1 shl 12 { available in macos  };
+  NSWindowCollectionBehaviorManaged = 1 shl 2 { available in macos 10.6 };
+  NSWindowCollectionBehaviorTransient = 1 shl 3 { available in macos 10.6 };
+  NSWindowCollectionBehaviorStationary = 1 shl 4 { available in macos 10.6 };
+  NSWindowCollectionBehaviorParticipatesInCycle = 1 shl 5 { available in macos 10.6 };
+  NSWindowCollectionBehaviorIgnoresCycle = 1 shl 6 { available in macos 10.6 };
+  NSWindowCollectionBehaviorFullScreenPrimary = 1 shl 7 { available in macos 10.7 };
+  NSWindowCollectionBehaviorFullScreenAuxiliary = 1 shl 8 { available in macos 10.7 };
+  NSWindowCollectionBehaviorFullScreenNone = 1 shl 9 { available in macos 10.7 };
+  NSWindowCollectionBehaviorFullScreenAllowsTiling = 1 shl 11 { available in macos 10.11 };
+  NSWindowCollectionBehaviorFullScreenDisallowsTiling = 1 shl 12 { available in macos 10.11 };
 
 type
   NSWindowAnimationBehavior = NSInteger;
@@ -149,7 +149,7 @@ const
   NSWindowZoomButton = 2;
   NSWindowToolbarButton = 3;
   NSWindowDocumentIconButton = 4;
-  NSWindowDocumentVersionsButton = 6 { available in macos  };
+  NSWindowDocumentVersionsButton = 6 { available in macos 10.7 };
 
 type
   NSWindowTitleVisibility = NSInteger;
@@ -226,23 +226,23 @@ type
     function initWithCoder (coder: NSCoder): id; message 'initWithCoder:';
     procedure setTitle(newValue: NSString); message 'setTitle:';
     function title: NSString; message 'title';
-    procedure setSubtitle(newValue: NSString); message 'setSubtitle:'; { available in macos  }
-    function subtitle: NSString; message 'subtitle'; { available in macos  }
-    procedure setTitleVisibility(newValue: NSWindowTitleVisibility); message 'setTitleVisibility:'; { available in macos  }
-    function titleVisibility: NSWindowTitleVisibility; message 'titleVisibility'; { available in macos  }
-    procedure setTitlebarAppearsTransparent(newValue: objcbool); message 'setTitlebarAppearsTransparent:'; { available in macos  }
-    function titlebarAppearsTransparent: objcbool; message 'titlebarAppearsTransparent'; { available in macos  }
-    procedure setToolbarStyle(newValue: NSWindowToolbarStyle); message 'setToolbarStyle:'; { available in macos  }
-    function toolbarStyle: NSWindowToolbarStyle; message 'toolbarStyle'; { available in macos  }
-    function contentLayoutRect: NSRect; message 'contentLayoutRect'; { available in macos  }
-    function contentLayoutGuide: id; message 'contentLayoutGuide'; { available in macos  }
-    procedure setTitlebarAccessoryViewControllers(newValue: NSArray); message 'setTitlebarAccessoryViewControllers:'; { available in macos  }
-    function titlebarAccessoryViewControllers: NSArray; message 'titlebarAccessoryViewControllers'; { available in macos  }
-    procedure addTitlebarAccessoryViewController (childViewController: NSTitlebarAccessoryViewController); message 'addTitlebarAccessoryViewController:'; { available in macos  }
-    procedure insertTitlebarAccessoryViewController_atIndex (childViewController: NSTitlebarAccessoryViewController; index: NSInteger); message 'insertTitlebarAccessoryViewController:atIndex:'; { available in macos  }
-    procedure removeTitlebarAccessoryViewControllerAtIndex (index: NSInteger); message 'removeTitlebarAccessoryViewControllerAtIndex:'; { available in macos  }
-    procedure setRepresentedURL(newValue: NSURL); message 'setRepresentedURL:'; { available in macos  }
-    function representedURL: NSURL; message 'representedURL'; { available in macos  }
+    procedure setSubtitle(newValue: NSString); message 'setSubtitle:'; { available in macos 11.0 }
+    function subtitle: NSString; message 'subtitle'; { available in macos 11.0 }
+    procedure setTitleVisibility(newValue: NSWindowTitleVisibility); message 'setTitleVisibility:'; { available in macos 10.10 }
+    function titleVisibility: NSWindowTitleVisibility; message 'titleVisibility'; { available in macos 10.10 }
+    procedure setTitlebarAppearsTransparent(newValue: objcbool); message 'setTitlebarAppearsTransparent:'; { available in macos 10.10 }
+    function titlebarAppearsTransparent: objcbool; message 'titlebarAppearsTransparent'; { available in macos 10.10 }
+    procedure setToolbarStyle(newValue: NSWindowToolbarStyle); message 'setToolbarStyle:'; { available in macos 11.0 }
+    function toolbarStyle: NSWindowToolbarStyle; message 'toolbarStyle'; { available in macos 11.0 }
+    function contentLayoutRect: NSRect; message 'contentLayoutRect'; { available in macos 10.10 }
+    function contentLayoutGuide: id; message 'contentLayoutGuide'; { available in macos 10.10 }
+    procedure setTitlebarAccessoryViewControllers(newValue: NSArray); message 'setTitlebarAccessoryViewControllers:'; { available in macos 10.10 }
+    function titlebarAccessoryViewControllers: NSArray; message 'titlebarAccessoryViewControllers'; { available in macos 10.10 }
+    procedure addTitlebarAccessoryViewController (childViewController: NSTitlebarAccessoryViewController); message 'addTitlebarAccessoryViewController:'; { available in macos 10.10 }
+    procedure insertTitlebarAccessoryViewController_atIndex (childViewController: NSTitlebarAccessoryViewController; index: NSInteger); message 'insertTitlebarAccessoryViewController:atIndex:'; { available in macos 10.10 }
+    procedure removeTitlebarAccessoryViewControllerAtIndex (index: NSInteger); message 'removeTitlebarAccessoryViewControllerAtIndex:'; { available in macos 10.10 }
+    procedure setRepresentedURL(newValue: NSURL); message 'setRepresentedURL:'; { available in macos 10.5 }
+    function representedURL: NSURL; message 'representedURL'; { available in macos 10.5 }
     procedure setRepresentedFilename(newValue: NSString); message 'setRepresentedFilename:';
     function representedFilename: NSString; message 'representedFilename';
     procedure setTitleWithRepresentedFilename (filename: NSString); message 'setTitleWithRepresentedFilename:';
@@ -266,7 +266,7 @@ type
     function frame: NSRect; message 'frame';
     function animationResizeTime (newFrame: NSRect): NSTimeInterval; message 'animationResizeTime:';
     procedure setFrame_display_animate (frameRect: NSRect; displayFlag: objcbool; animateFlag: objcbool); message 'setFrame:display:animate:';
-    function inLiveResize: objcbool; message 'inLiveResize'; { available in macos  }
+    function inLiveResize: objcbool; message 'inLiveResize'; { available in macos 10.6 }
     procedure setResizeIncrements(newValue: NSSize); message 'setResizeIncrements:';
     function resizeIncrements: NSSize; message 'resizeIncrements';
     procedure setAspectRatio(newValue: NSSize); message 'setAspectRatio:';
@@ -298,12 +298,12 @@ type
     function validRequestorForSendType_returnType (sendType: NSPasteboardType; returnType: NSPasteboardType): id; message 'validRequestorForSendType:returnType:';
     procedure setBackgroundColor(newValue: NSColor); message 'setBackgroundColor:';
     function backgroundColor: NSColor; message 'backgroundColor';
-    procedure setContentBorderThickness_forEdge (thickness: CGFloat; edge: NSRectEdge); message 'setContentBorderThickness:forEdge:'; { available in macos  }
-    function contentBorderThicknessForEdge (edge: NSRectEdge): CGFloat; message 'contentBorderThicknessForEdge:'; { available in macos  }
-    procedure setAutorecalculatesContentBorderThickness_forEdge (flag: objcbool; edge: NSRectEdge); message 'setAutorecalculatesContentBorderThickness:forEdge:'; { available in macos  }
-    function autorecalculatesContentBorderThicknessForEdge (edge: NSRectEdge): objcbool; message 'autorecalculatesContentBorderThicknessForEdge:'; { available in macos  }
-    procedure setMovable(newValue: objcbool); message 'setMovable:'; { available in macos  }
-    function isMovable: objcbool; message 'isMovable'; { available in macos  }
+    procedure setContentBorderThickness_forEdge (thickness: CGFloat; edge: NSRectEdge); message 'setContentBorderThickness:forEdge:'; { available in macos 10.5 }
+    function contentBorderThicknessForEdge (edge: NSRectEdge): CGFloat; message 'contentBorderThicknessForEdge:'; { available in macos 10.5 }
+    procedure setAutorecalculatesContentBorderThickness_forEdge (flag: objcbool; edge: NSRectEdge); message 'setAutorecalculatesContentBorderThickness:forEdge:'; { available in macos 10.5 }
+    function autorecalculatesContentBorderThicknessForEdge (edge: NSRectEdge): objcbool; message 'autorecalculatesContentBorderThicknessForEdge:'; { available in macos 10.5 }
+    procedure setMovable(newValue: objcbool); message 'setMovable:'; { available in macos 10.6 }
+    function isMovable: objcbool; message 'isMovable'; { available in macos 10.6 }
     procedure setMovableByWindowBackground(newValue: objcbool); message 'setMovableByWindowBackground:';
     function isMovableByWindowBackground: objcbool; message 'isMovableByWindowBackground';
     procedure setHidesOnDeactivate(newValue: objcbool); message 'setHidesOnDeactivate:';
@@ -321,7 +321,7 @@ type
     function miniwindowImage: NSImage; message 'miniwindowImage';
     procedure setMiniwindowTitle(newValue: NSString); message 'setMiniwindowTitle:';
     function miniwindowTitle: NSString; message 'miniwindowTitle';
-    function dockTile: NSDockTile; message 'dockTile'; { available in macos  }
+    function dockTile: NSDockTile; message 'dockTile'; { available in macos 10.5 }
     procedure setDocumentEdited(newValue: objcbool); message 'setDocumentEdited:';
     function isDocumentEdited: objcbool; message 'isDocumentEdited';
     function isVisible: objcbool; message 'isVisible';
@@ -336,18 +336,18 @@ type
     procedure becomeMainWindow; message 'becomeMainWindow';
     procedure resignMainWindow; message 'resignMainWindow';
     function worksWhenModal: objcbool; message 'worksWhenModal';
-    procedure setPreventsApplicationTerminationWhenModal(newValue: objcbool); message 'setPreventsApplicationTerminationWhenModal:'; { available in macos  }
-    function preventsApplicationTerminationWhenModal: objcbool; message 'preventsApplicationTerminationWhenModal'; { available in macos  }
-    function convertRectToScreen (rect: NSRect): NSRect; message 'convertRectToScreen:'; { available in macos  }
-    function convertRectFromScreen (rect: NSRect): NSRect; message 'convertRectFromScreen:'; { available in macos  }
-    function convertPointToScreen (point: NSPoint): NSPoint; message 'convertPointToScreen:'; { available in macos  }
-    function convertPointFromScreen (point: NSPoint): NSPoint; message 'convertPointFromScreen:'; { available in macos  }
-    function convertRectToBacking (rect: NSRect): NSRect; message 'convertRectToBacking:'; { available in macos  }
-    function convertRectFromBacking (rect: NSRect): NSRect; message 'convertRectFromBacking:'; { available in macos  }
-    function convertPointToBacking (point: NSPoint): NSPoint; message 'convertPointToBacking:'; { available in macos  }
-    function convertPointFromBacking (point: NSPoint): NSPoint; message 'convertPointFromBacking:'; { available in macos  }
-    function backingAlignedRect_options (rect: NSRect; options: NSAlignmentOptions): NSRect; message 'backingAlignedRect:options:'; { available in macos  }
-    function backingScaleFactor: CGFloat; message 'backingScaleFactor'; { available in macos  }
+    procedure setPreventsApplicationTerminationWhenModal(newValue: objcbool); message 'setPreventsApplicationTerminationWhenModal:'; { available in macos 10.6 }
+    function preventsApplicationTerminationWhenModal: objcbool; message 'preventsApplicationTerminationWhenModal'; { available in macos 10.6 }
+    function convertRectToScreen (rect: NSRect): NSRect; message 'convertRectToScreen:'; { available in macos 10.7 }
+    function convertRectFromScreen (rect: NSRect): NSRect; message 'convertRectFromScreen:'; { available in macos 10.7 }
+    function convertPointToScreen (point: NSPoint): NSPoint; message 'convertPointToScreen:'; { available in macos 10.12 }
+    function convertPointFromScreen (point: NSPoint): NSPoint; message 'convertPointFromScreen:'; { available in macos 10.12 }
+    function convertRectToBacking (rect: NSRect): NSRect; message 'convertRectToBacking:'; { available in macos 10.7 }
+    function convertRectFromBacking (rect: NSRect): NSRect; message 'convertRectFromBacking:'; { available in macos 10.7 }
+    function convertPointToBacking (point: NSPoint): NSPoint; message 'convertPointToBacking:'; { available in macos 10.14 }
+    function convertPointFromBacking (point: NSPoint): NSPoint; message 'convertPointFromBacking:'; { available in macos 10.14 }
+    function backingAlignedRect_options (rect: NSRect; options: NSAlignmentOptions): NSRect; message 'backingAlignedRect:options:'; { available in macos 10.7 }
+    function backingScaleFactor: CGFloat; message 'backingScaleFactor'; { available in macos 10.7 }
     procedure performClose (sender: id); message 'performClose:';
     procedure performMiniaturize (sender: id); message 'performMiniaturize:';
     procedure performZoom (sender: id); message 'performZoom:';
@@ -373,21 +373,21 @@ type
     function alphaValue: CGFloat; message 'alphaValue';
     procedure setOpaque(newValue: objcbool); message 'setOpaque:';
     function isOpaque: objcbool; message 'isOpaque';
-    procedure setSharingType(newValue: NSWindowSharingType); message 'setSharingType:'; { available in macos  }
-    function sharingType: NSWindowSharingType; message 'sharingType'; { available in macos  }
-    procedure setAllowsConcurrentViewDrawing(newValue: objcbool); message 'setAllowsConcurrentViewDrawing:'; { available in macos  }
-    function allowsConcurrentViewDrawing: objcbool; message 'allowsConcurrentViewDrawing'; { available in macos  }
+    procedure setSharingType(newValue: NSWindowSharingType); message 'setSharingType:'; { available in macos 10.5 }
+    function sharingType: NSWindowSharingType; message 'sharingType'; { available in macos 10.5 }
+    procedure setAllowsConcurrentViewDrawing(newValue: objcbool); message 'setAllowsConcurrentViewDrawing:'; { available in macos 10.6 }
+    function allowsConcurrentViewDrawing: objcbool; message 'allowsConcurrentViewDrawing'; { available in macos 10.6 }
     procedure setDisplaysWhenScreenProfileChanges(newValue: objcbool); message 'setDisplaysWhenScreenProfileChanges:';
     function displaysWhenScreenProfileChanges: objcbool; message 'displaysWhenScreenProfileChanges';
     procedure disableScreenUpdatesUntilFlush; message 'disableScreenUpdatesUntilFlush';
-    procedure setCanBecomeVisibleWithoutLogin(newValue: objcbool); message 'setCanBecomeVisibleWithoutLogin:'; { available in macos  }
-    function canBecomeVisibleWithoutLogin: objcbool; message 'canBecomeVisibleWithoutLogin'; { available in macos  }
-    procedure setCollectionBehavior(newValue: NSWindowCollectionBehavior); message 'setCollectionBehavior:'; { available in macos  }
-    function collectionBehavior: NSWindowCollectionBehavior; message 'collectionBehavior'; { available in macos  }
-    procedure setAnimationBehavior(newValue: NSWindowAnimationBehavior); message 'setAnimationBehavior:'; { available in macos  }
-    function animationBehavior: NSWindowAnimationBehavior; message 'animationBehavior'; { available in macos  }
-    function isOnActiveSpace: objcbool; message 'isOnActiveSpace'; { available in macos  }
-    procedure toggleFullScreen (sender: id); message 'toggleFullScreen:'; { available in macos  }
+    procedure setCanBecomeVisibleWithoutLogin(newValue: objcbool); message 'setCanBecomeVisibleWithoutLogin:'; { available in macos 10.5 }
+    function canBecomeVisibleWithoutLogin: objcbool; message 'canBecomeVisibleWithoutLogin'; { available in macos 10.5 }
+    procedure setCollectionBehavior(newValue: NSWindowCollectionBehavior); message 'setCollectionBehavior:'; { available in macos 10.5 }
+    function collectionBehavior: NSWindowCollectionBehavior; message 'collectionBehavior'; { available in macos 10.5 }
+    procedure setAnimationBehavior(newValue: NSWindowAnimationBehavior); message 'setAnimationBehavior:'; { available in macos 10.7 }
+    function animationBehavior: NSWindowAnimationBehavior; message 'animationBehavior'; { available in macos 10.7 }
+    function isOnActiveSpace: objcbool; message 'isOnActiveSpace'; { available in macos 10.6 }
+    procedure toggleFullScreen (sender: id); message 'toggleFullScreen:'; { available in macos 10.7 }
     function stringWithSavedFrame: NSWindowPersistableFrameDescriptor; message 'stringWithSavedFrame';
     procedure setFrameFromString (string_: NSWindowPersistableFrameDescriptor); message 'setFrameFromString:';
     procedure saveFrameUsingName (name: NSWindowFrameAutosaveName); message 'saveFrameUsingName:';
@@ -404,21 +404,21 @@ type
     function contentMinSize: NSSize; message 'contentMinSize';
     procedure setContentMaxSize(newValue: NSSize); message 'setContentMaxSize:';
     function contentMaxSize: NSSize; message 'contentMaxSize';
-    procedure setMinFullScreenContentSize(newValue: NSSize); message 'setMinFullScreenContentSize:'; { available in macos  }
-    function minFullScreenContentSize: NSSize; message 'minFullScreenContentSize'; { available in macos  }
-    procedure setMaxFullScreenContentSize(newValue: NSSize); message 'setMaxFullScreenContentSize:'; { available in macos  }
-    function maxFullScreenContentSize: NSSize; message 'maxFullScreenContentSize'; { available in macos  }
+    procedure setMinFullScreenContentSize(newValue: NSSize); message 'setMinFullScreenContentSize:'; { available in macos 10.11 }
+    function minFullScreenContentSize: NSSize; message 'minFullScreenContentSize'; { available in macos 10.11 }
+    procedure setMaxFullScreenContentSize(newValue: NSSize); message 'setMaxFullScreenContentSize:'; { available in macos 10.11 }
+    function maxFullScreenContentSize: NSSize; message 'maxFullScreenContentSize'; { available in macos 10.11 }
     function deviceDescription: NSDictionary; message 'deviceDescription';
     procedure setWindowController(newValue: NSWindowController); message 'setWindowController:';
     function windowController: NSWindowController; message 'windowController';
-    procedure beginSheet_completionHandler (sheetWindow: NSWindow; handler: NSWindowBeginSheetCallback); message 'beginSheet:completionHandler:'; { available in macos  }
-    procedure beginCriticalSheet_completionHandler (sheetWindow: NSWindow; handler: NSWindowBeginCriticalSheetCallback); message 'beginCriticalSheet:completionHandler:'; { available in macos  }
-    procedure endSheet (sheetWindow: NSWindow); message 'endSheet:'; { available in macos  }
-    procedure endSheet_returnCode (sheetWindow: NSWindow; returnCode: NSModalResponse); message 'endSheet:returnCode:'; { available in macos  }
-    function sheets: NSArray; message 'sheets'; { available in macos  }
+    procedure beginSheet_completionHandler (sheetWindow: NSWindow; handler: NSWindowBeginSheetCallback); message 'beginSheet:completionHandler:'; { available in macos 10.9 }
+    procedure beginCriticalSheet_completionHandler (sheetWindow: NSWindow; handler: NSWindowBeginCriticalSheetCallback); message 'beginCriticalSheet:completionHandler:'; { available in macos 10.9 }
+    procedure endSheet (sheetWindow: NSWindow); message 'endSheet:'; { available in macos 10.9 }
+    procedure endSheet_returnCode (sheetWindow: NSWindow; returnCode: NSModalResponse); message 'endSheet:returnCode:'; { available in macos 10.9 }
+    function sheets: NSArray; message 'sheets'; { available in macos 10.9 }
     function attachedSheet: NSWindow; message 'attachedSheet';
     function isSheet: objcbool; message 'isSheet';
-    function sheetParent: NSWindow; message 'sheetParent'; { available in macos  }
+    function sheetParent: NSWindow; message 'sheetParent'; { available in macos 10.9 }
     class function standardWindowButton_forStyleMask (b: NSWindowButton; styleMask_: NSWindowStyleMask): NSButton; message 'standardWindowButton:forStyleMask:';
     function standardWindowButton (b: NSWindowButton): NSButton; message 'standardWindowButton:';
     procedure addChildWindow_ordered (childWin: NSWindow; place: NSWindowOrderingMode); message 'addChildWindow:ordered:';
@@ -426,20 +426,20 @@ type
     function childWindows: NSArray; message 'childWindows';
     procedure setParentWindow(newValue: NSWindow); message 'setParentWindow:';
     function parentWindow: NSWindow; message 'parentWindow';
-    procedure setAppearanceSource(newValue: NSObjectPtr); message 'setAppearanceSource:'; { available in macos  }
-    function appearanceSource: NSObjectPtr; message 'appearanceSource'; { available in macos  }
-    procedure setColorSpace(newValue: NSColorSpace); message 'setColorSpace:'; { available in macos  }
-    function colorSpace: NSColorSpace; message 'colorSpace'; { available in macos  }
-    function canRepresentDisplayGamut (displayGamut: NSDisplayGamut): objcbool; message 'canRepresentDisplayGamut:'; { available in macos  }
-    class function windowNumbersWithOptions (options: NSWindowNumberListOptions): NSArray; message 'windowNumbersWithOptions:'; { available in macos  }
-    class function windowNumberAtPoint_belowWindowWithWindowNumber (point: NSPoint; windowNumber_: NSInteger): NSInteger; message 'windowNumberAtPoint:belowWindowWithWindowNumber:'; { available in macos  }
-    function occlusionState: NSWindowOcclusionState; message 'occlusionState'; { available in macos  }
-    procedure setTitlebarSeparatorStyle(newValue: NSTitlebarSeparatorStyle); message 'setTitlebarSeparatorStyle:'; { available in macos  }
-    function titlebarSeparatorStyle: NSTitlebarSeparatorStyle; message 'titlebarSeparatorStyle'; { available in macos  }
-    procedure setContentViewController(newValue: NSViewController); message 'setContentViewController:'; { available in macos  }
-    function contentViewController: NSViewController; message 'contentViewController'; { available in macos  }
-    class function windowWithContentViewController (contentViewController_: NSViewController): id; message 'windowWithContentViewController:'; { available in macos  }
-    procedure performWindowDragWithEvent (event: NSEvent); message 'performWindowDragWithEvent:'; { available in macos  }
+    procedure setAppearanceSource(newValue: NSObjectPtr); message 'setAppearanceSource:'; { available in macos 10.14 }
+    function appearanceSource: NSObjectPtr; message 'appearanceSource'; { available in macos 10.14 }
+    procedure setColorSpace(newValue: NSColorSpace); message 'setColorSpace:'; { available in macos 10.6 }
+    function colorSpace: NSColorSpace; message 'colorSpace'; { available in macos 10.6 }
+    function canRepresentDisplayGamut (displayGamut: NSDisplayGamut): objcbool; message 'canRepresentDisplayGamut:'; { available in macos 10.12 }
+    class function windowNumbersWithOptions (options: NSWindowNumberListOptions): NSArray; message 'windowNumbersWithOptions:'; { available in macos 10.6 }
+    class function windowNumberAtPoint_belowWindowWithWindowNumber (point: NSPoint; windowNumber_: NSInteger): NSInteger; message 'windowNumberAtPoint:belowWindowWithWindowNumber:'; { available in macos 10.6 }
+    function occlusionState: NSWindowOcclusionState; message 'occlusionState'; { available in macos 10.9 }
+    procedure setTitlebarSeparatorStyle(newValue: NSTitlebarSeparatorStyle); message 'setTitlebarSeparatorStyle:'; { available in macos 11.0 }
+    function titlebarSeparatorStyle: NSTitlebarSeparatorStyle; message 'titlebarSeparatorStyle'; { available in macos 11.0 }
+    procedure setContentViewController(newValue: NSViewController); message 'setContentViewController:'; { available in macos 10.10 }
+    function contentViewController: NSViewController; message 'contentViewController'; { available in macos 10.10 }
+    class function windowWithContentViewController (contentViewController_: NSViewController): id; message 'windowWithContentViewController:'; { available in macos 10.10 }
+    procedure performWindowDragWithEvent (event: NSEvent); message 'performWindowDragWithEvent:'; { available in macos 10.11 }
     procedure setInitialFirstResponder(newValue: NSView); message 'setInitialFirstResponder:';
     function initialFirstResponder: NSView; message 'initialFirstResponder';
     procedure selectNextKeyView (sender: id); message 'selectNextKeyView:';
@@ -460,305 +460,305 @@ type
     procedure runToolbarCustomizationPalette (sender: id); message 'runToolbarCustomizationPalette:';
     procedure setShowsToolbarButton(newValue: objcbool); message 'setShowsToolbarButton:';
     function showsToolbarButton: objcbool; message 'showsToolbarButton';
-    class procedure setAllowsAutomaticWindowTabbing(newValue: objcbool); message 'setAllowsAutomaticWindowTabbing:'; { available in macos  }
-    class function allowsAutomaticWindowTabbing: objcbool; message 'allowsAutomaticWindowTabbing'; { available in macos  }
-    class function userTabbingPreference: NSWindowUserTabbingPreference; message 'userTabbingPreference'; { available in macos  }
-    procedure setTabbingMode(newValue: NSWindowTabbingMode); message 'setTabbingMode:'; { available in macos  }
-    function tabbingMode: NSWindowTabbingMode; message 'tabbingMode'; { available in macos  }
-    procedure setTabbingIdentifier(newValue: NSWindowTabbingIdentifier); message 'setTabbingIdentifier:'; { available in macos  }
-    function tabbingIdentifier: NSWindowTabbingIdentifier; message 'tabbingIdentifier'; { available in macos  }
-    procedure selectNextTab (sender: id); message 'selectNextTab:'; { available in macos  }
-    procedure selectPreviousTab (sender: id); message 'selectPreviousTab:'; { available in macos  }
-    procedure moveTabToNewWindow (sender: id); message 'moveTabToNewWindow:'; { available in macos  }
-    procedure mergeAllWindows (sender: id); message 'mergeAllWindows:'; { available in macos  }
-    procedure toggleTabBar (sender: id); message 'toggleTabBar:'; { available in macos  }
-    procedure toggleTabOverview (sender: id); message 'toggleTabOverview:'; { available in macos  }
-    function tabbedWindows: NSArray; message 'tabbedWindows'; { available in macos  }
-    procedure addTabbedWindow_ordered (window: NSWindow; ordered: NSWindowOrderingMode); message 'addTabbedWindow:ordered:'; { available in macos  }
-    function tab: NSWindowTab; message 'tab'; { available in macos  }
-    function tabGroup: NSWindowTabGroup; message 'tabGroup'; { available in macos  }
-    function windowTitlebarLayoutDirection: NSUserInterfaceLayoutDirection; message 'windowTitlebarLayoutDirection'; { available in macos  }
+    class procedure setAllowsAutomaticWindowTabbing(newValue: objcbool); message 'setAllowsAutomaticWindowTabbing:'; { available in macos 10.12 }
+    class function allowsAutomaticWindowTabbing: objcbool; message 'allowsAutomaticWindowTabbing'; { available in macos 10.12 }
+    class function userTabbingPreference: NSWindowUserTabbingPreference; message 'userTabbingPreference'; { available in macos 10.12 }
+    procedure setTabbingMode(newValue: NSWindowTabbingMode); message 'setTabbingMode:'; { available in macos 10.12 }
+    function tabbingMode: NSWindowTabbingMode; message 'tabbingMode'; { available in macos 10.12 }
+    procedure setTabbingIdentifier(newValue: NSWindowTabbingIdentifier); message 'setTabbingIdentifier:'; { available in macos 10.12 }
+    function tabbingIdentifier: NSWindowTabbingIdentifier; message 'tabbingIdentifier'; { available in macos 10.12 }
+    procedure selectNextTab (sender: id); message 'selectNextTab:'; { available in macos 10.12 }
+    procedure selectPreviousTab (sender: id); message 'selectPreviousTab:'; { available in macos 10.12 }
+    procedure moveTabToNewWindow (sender: id); message 'moveTabToNewWindow:'; { available in macos 10.12 }
+    procedure mergeAllWindows (sender: id); message 'mergeAllWindows:'; { available in macos 10.12 }
+    procedure toggleTabBar (sender: id); message 'toggleTabBar:'; { available in macos 10.12 }
+    procedure toggleTabOverview (sender: id); message 'toggleTabOverview:'; { available in macos 10.13 }
+    function tabbedWindows: NSArray; message 'tabbedWindows'; { available in macos 10.12 }
+    procedure addTabbedWindow_ordered (window: NSWindow; ordered: NSWindowOrderingMode); message 'addTabbedWindow:ordered:'; { available in macos 10.12 }
+    function tab: NSWindowTab; message 'tab'; { available in macos 10.13 }
+    function tabGroup: NSWindowTabGroup; message 'tabGroup'; { available in macos 10.13 }
+    function windowTitlebarLayoutDirection: NSUserInterfaceLayoutDirection; message 'windowTitlebarLayoutDirection'; { available in macos 10.12 }
 
     { Adopted protocols }
-    function accessibilityActivationPoint: NSPoint; message 'accessibilityActivationPoint'; { available in macos  }
-    function accessibilityAllowedValues: NSArray; message 'accessibilityAllowedValues'; { available in macos  }
-    function accessibilityApplicationFocusedUIElement: id; message 'accessibilityApplicationFocusedUIElement'; { available in macos  }
-    function accessibilityAttributedStringForRange (range: NSRange): NSAttributedString; message 'accessibilityAttributedStringForRange:'; { available in macos  }
-    function accessibilityCancelButton: id; message 'accessibilityCancelButton'; { available in macos  }
-    function accessibilityCellForColumn_row (column: NSInteger; row: NSInteger): id; message 'accessibilityCellForColumn:row:'; { available in macos  }
-    function accessibilityChildren: NSArray; message 'accessibilityChildren'; { available in macos  }
-    function accessibilityChildrenInNavigationOrder: NSArray; message 'accessibilityChildrenInNavigationOrder'; { available in macos  }
-    function accessibilityClearButton: id; message 'accessibilityClearButton'; { available in macos  }
-    function accessibilityCloseButton: id; message 'accessibilityCloseButton'; { available in macos  }
-    function accessibilityColumnCount: NSInteger; message 'accessibilityColumnCount'; { available in macos  }
-    function accessibilityColumnHeaderUIElements: NSArray; message 'accessibilityColumnHeaderUIElements'; { available in macos  }
-    function accessibilityColumnIndexRange: NSRange; message 'accessibilityColumnIndexRange'; { available in macos  }
-    function accessibilityColumns: NSArray; message 'accessibilityColumns'; { available in macos  }
-    function accessibilityColumnTitles: NSArray; message 'accessibilityColumnTitles'; { available in macos  }
-    function accessibilityContents: NSArray; message 'accessibilityContents'; { available in macos  }
-    function accessibilityCriticalValue: id; message 'accessibilityCriticalValue'; { available in macos  }
-    function accessibilityCustomActions: NSArray; message 'accessibilityCustomActions'; { available in macos  }
-    function accessibilityCustomRotors: NSArray; message 'accessibilityCustomRotors'; { available in macos  }
-    function accessibilityDecrementButton: id; message 'accessibilityDecrementButton'; { available in macos  }
-    function accessibilityDefaultButton: id; message 'accessibilityDefaultButton'; { available in macos  }
-    function accessibilityDisclosedByRow: id; message 'accessibilityDisclosedByRow'; { available in macos  }
-    function accessibilityDisclosedRows: id; message 'accessibilityDisclosedRows'; { available in macos  }
-    function accessibilityDisclosureLevel: NSInteger; message 'accessibilityDisclosureLevel'; { available in macos  }
-    function accessibilityDocument: NSString; message 'accessibilityDocument'; { available in macos  }
-    function accessibilityExtrasMenuBar: id; message 'accessibilityExtrasMenuBar'; { available in macos  }
-    function accessibilityFilename: NSString; message 'accessibilityFilename'; { available in macos  }
-    function accessibilityFocusedWindow: id; message 'accessibilityFocusedWindow'; { available in macos  }
+    function accessibilityActivationPoint: NSPoint; message 'accessibilityActivationPoint'; { available in macos 10.10 }
+    function accessibilityAllowedValues: NSArray; message 'accessibilityAllowedValues'; { available in macos 10.10 }
+    function accessibilityApplicationFocusedUIElement: id; message 'accessibilityApplicationFocusedUIElement'; { available in macos 10.10 }
+    function accessibilityAttributedStringForRange (range: NSRange): NSAttributedString; message 'accessibilityAttributedStringForRange:'; { available in macos 10.10 }
+    function accessibilityCancelButton: id; message 'accessibilityCancelButton'; { available in macos 10.10 }
+    function accessibilityCellForColumn_row (column: NSInteger; row: NSInteger): id; message 'accessibilityCellForColumn:row:'; { available in macos 10.10 }
+    function accessibilityChildren: NSArray; message 'accessibilityChildren'; { available in macos 10.10 }
+    function accessibilityChildrenInNavigationOrder: NSArray; message 'accessibilityChildrenInNavigationOrder'; { available in macos 10.13 }
+    function accessibilityClearButton: id; message 'accessibilityClearButton'; { available in macos 10.10 }
+    function accessibilityCloseButton: id; message 'accessibilityCloseButton'; { available in macos 10.10 }
+    function accessibilityColumnCount: NSInteger; message 'accessibilityColumnCount'; { available in macos 10.10 }
+    function accessibilityColumnHeaderUIElements: NSArray; message 'accessibilityColumnHeaderUIElements'; { available in macos 10.10 }
+    function accessibilityColumnIndexRange: NSRange; message 'accessibilityColumnIndexRange'; { available in macos 10.10 }
+    function accessibilityColumns: NSArray; message 'accessibilityColumns'; { available in macos 10.10 }
+    function accessibilityColumnTitles: NSArray; message 'accessibilityColumnTitles'; { available in macos 10.10 }
+    function accessibilityContents: NSArray; message 'accessibilityContents'; { available in macos 10.10 }
+    function accessibilityCriticalValue: id; message 'accessibilityCriticalValue'; { available in macos 10.10 }
+    function accessibilityCustomActions: NSArray; message 'accessibilityCustomActions'; { available in macos 10.13 }
+    function accessibilityCustomRotors: NSArray; message 'accessibilityCustomRotors'; { available in macos 10.13 }
+    function accessibilityDecrementButton: id; message 'accessibilityDecrementButton'; { available in macos 10.10 }
+    function accessibilityDefaultButton: id; message 'accessibilityDefaultButton'; { available in macos 10.10 }
+    function accessibilityDisclosedByRow: id; message 'accessibilityDisclosedByRow'; { available in macos 10.10 }
+    function accessibilityDisclosedRows: id; message 'accessibilityDisclosedRows'; { available in macos 10.10 }
+    function accessibilityDisclosureLevel: NSInteger; message 'accessibilityDisclosureLevel'; { available in macos 10.10 }
+    function accessibilityDocument: NSString; message 'accessibilityDocument'; { available in macos 10.10 }
+    function accessibilityExtrasMenuBar: id; message 'accessibilityExtrasMenuBar'; { available in macos 10.10 }
+    function accessibilityFilename: NSString; message 'accessibilityFilename'; { available in macos 10.10 }
+    function accessibilityFocusedWindow: id; message 'accessibilityFocusedWindow'; { available in macos 10.10 }
     function accessibilityFrame: NSRect; message 'accessibilityFrame';
-    function accessibilityFrameForRange (range: NSRange): NSRect; message 'accessibilityFrameForRange:'; { available in macos  }
-    function accessibilityFullScreenButton: id; message 'accessibilityFullScreenButton'; { available in macos  }
-    function accessibilityGrowArea: id; message 'accessibilityGrowArea'; { available in macos  }
-    function accessibilityHandles: NSArray; message 'accessibilityHandles'; { available in macos  }
-    function accessibilityHeader: id; message 'accessibilityHeader'; { available in macos  }
-    function accessibilityHelp: NSString; message 'accessibilityHelp'; { available in macos  }
-    function accessibilityHorizontalScrollBar: id; message 'accessibilityHorizontalScrollBar'; { available in macos  }
-    function accessibilityHorizontalUnitDescription: NSString; message 'accessibilityHorizontalUnitDescription'; { available in macos  }
-    function accessibilityHorizontalUnits: NSAccessibilityUnits; message 'accessibilityHorizontalUnits'; { available in macos  }
+    function accessibilityFrameForRange (range: NSRange): NSRect; message 'accessibilityFrameForRange:'; { available in macos 10.10 }
+    function accessibilityFullScreenButton: id; message 'accessibilityFullScreenButton'; { available in macos 10.10 }
+    function accessibilityGrowArea: id; message 'accessibilityGrowArea'; { available in macos 10.10 }
+    function accessibilityHandles: NSArray; message 'accessibilityHandles'; { available in macos 10.10 }
+    function accessibilityHeader: id; message 'accessibilityHeader'; { available in macos 10.10 }
+    function accessibilityHelp: NSString; message 'accessibilityHelp'; { available in macos 10.10 }
+    function accessibilityHorizontalScrollBar: id; message 'accessibilityHorizontalScrollBar'; { available in macos 10.10 }
+    function accessibilityHorizontalUnitDescription: NSString; message 'accessibilityHorizontalUnitDescription'; { available in macos 10.10 }
+    function accessibilityHorizontalUnits: NSAccessibilityUnits; message 'accessibilityHorizontalUnits'; { available in macos 10.10 }
     function accessibilityIdentifier: NSString; message 'accessibilityIdentifier';
-    function accessibilityIncrementButton: id; message 'accessibilityIncrementButton'; { available in macos  }
-    function accessibilityIndex: NSInteger; message 'accessibilityIndex'; { available in macos  }
-    function accessibilityInsertionPointLineNumber: NSInteger; message 'accessibilityInsertionPointLineNumber'; { available in macos  }
-    function accessibilityLabel: NSString; message 'accessibilityLabel'; { available in macos  }
-    function accessibilityLabelUIElements: NSArray; message 'accessibilityLabelUIElements'; { available in macos  }
-    function accessibilityLabelValue: single; message 'accessibilityLabelValue'; { available in macos  }
-    function accessibilityLayoutPointForScreenPoint (point: NSPoint): NSPoint; message 'accessibilityLayoutPointForScreenPoint:'; { available in macos  }
-    function accessibilityLayoutSizeForScreenSize (size: NSSize): NSSize; message 'accessibilityLayoutSizeForScreenSize:'; { available in macos  }
-    function accessibilityLineForIndex (index: NSInteger): NSInteger; message 'accessibilityLineForIndex:'; { available in macos  }
-    function accessibilityLinkedUIElements: NSArray; message 'accessibilityLinkedUIElements'; { available in macos  }
-    function accessibilityMainWindow: id; message 'accessibilityMainWindow'; { available in macos  }
-    function accessibilityMarkerGroupUIElement: id; message 'accessibilityMarkerGroupUIElement'; { available in macos  }
-    function accessibilityMarkerTypeDescription: NSString; message 'accessibilityMarkerTypeDescription'; { available in macos  }
-    function accessibilityMarkerUIElements: NSArray; message 'accessibilityMarkerUIElements'; { available in macos  }
-    function accessibilityMarkerValues: id; message 'accessibilityMarkerValues'; { available in macos  }
-    function accessibilityMaxValue: id; message 'accessibilityMaxValue'; { available in macos  }
-    function accessibilityMenuBar: id; message 'accessibilityMenuBar'; { available in macos  }
-    function accessibilityMinimizeButton: id; message 'accessibilityMinimizeButton'; { available in macos  }
-    function accessibilityMinValue: id; message 'accessibilityMinValue'; { available in macos  }
-    function accessibilityNextContents: NSArray; message 'accessibilityNextContents'; { available in macos  }
-    function accessibilityNumberOfCharacters: NSInteger; message 'accessibilityNumberOfCharacters'; { available in macos  }
-    function accessibilityOrientation: NSAccessibilityOrientation; message 'accessibilityOrientation'; { available in macos  }
-    function accessibilityOverflowButton: id; message 'accessibilityOverflowButton'; { available in macos  }
+    function accessibilityIncrementButton: id; message 'accessibilityIncrementButton'; { available in macos 10.10 }
+    function accessibilityIndex: NSInteger; message 'accessibilityIndex'; { available in macos 10.10 }
+    function accessibilityInsertionPointLineNumber: NSInteger; message 'accessibilityInsertionPointLineNumber'; { available in macos 10.10 }
+    function accessibilityLabel: NSString; message 'accessibilityLabel'; { available in macos 10.10 }
+    function accessibilityLabelUIElements: NSArray; message 'accessibilityLabelUIElements'; { available in macos 10.10 }
+    function accessibilityLabelValue: single; message 'accessibilityLabelValue'; { available in macos 10.10 }
+    function accessibilityLayoutPointForScreenPoint (point: NSPoint): NSPoint; message 'accessibilityLayoutPointForScreenPoint:'; { available in macos 10.10 }
+    function accessibilityLayoutSizeForScreenSize (size: NSSize): NSSize; message 'accessibilityLayoutSizeForScreenSize:'; { available in macos 10.10 }
+    function accessibilityLineForIndex (index: NSInteger): NSInteger; message 'accessibilityLineForIndex:'; { available in macos 10.10 }
+    function accessibilityLinkedUIElements: NSArray; message 'accessibilityLinkedUIElements'; { available in macos 10.10 }
+    function accessibilityMainWindow: id; message 'accessibilityMainWindow'; { available in macos 10.10 }
+    function accessibilityMarkerGroupUIElement: id; message 'accessibilityMarkerGroupUIElement'; { available in macos 10.10 }
+    function accessibilityMarkerTypeDescription: NSString; message 'accessibilityMarkerTypeDescription'; { available in macos 10.10 }
+    function accessibilityMarkerUIElements: NSArray; message 'accessibilityMarkerUIElements'; { available in macos 10.10 }
+    function accessibilityMarkerValues: id; message 'accessibilityMarkerValues'; { available in macos 10.10 }
+    function accessibilityMaxValue: id; message 'accessibilityMaxValue'; { available in macos 10.10 }
+    function accessibilityMenuBar: id; message 'accessibilityMenuBar'; { available in macos 10.10 }
+    function accessibilityMinimizeButton: id; message 'accessibilityMinimizeButton'; { available in macos 10.10 }
+    function accessibilityMinValue: id; message 'accessibilityMinValue'; { available in macos 10.10 }
+    function accessibilityNextContents: NSArray; message 'accessibilityNextContents'; { available in macos 10.10 }
+    function accessibilityNumberOfCharacters: NSInteger; message 'accessibilityNumberOfCharacters'; { available in macos 10.10 }
+    function accessibilityOrientation: NSAccessibilityOrientation; message 'accessibilityOrientation'; { available in macos 10.10 }
+    function accessibilityOverflowButton: id; message 'accessibilityOverflowButton'; { available in macos 10.10 }
     function accessibilityParent: id; message 'accessibilityParent';
-    function accessibilityPerformCancel: objcbool; message 'accessibilityPerformCancel'; { available in macos  }
-    function accessibilityPerformConfirm: objcbool; message 'accessibilityPerformConfirm'; { available in macos  }
-    function accessibilityPerformDecrement: objcbool; message 'accessibilityPerformDecrement'; { available in macos  }
-    function accessibilityPerformDelete: objcbool; message 'accessibilityPerformDelete'; { available in macos  }
-    function accessibilityPerformIncrement: objcbool; message 'accessibilityPerformIncrement'; { available in macos  }
-    function accessibilityPerformPick: objcbool; message 'accessibilityPerformPick'; { available in macos  }
-    function accessibilityPerformPress: objcbool; message 'accessibilityPerformPress'; { available in macos  }
-    function accessibilityPerformRaise: objcbool; message 'accessibilityPerformRaise'; { available in macos  }
-    function accessibilityPerformShowAlternateUI: objcbool; message 'accessibilityPerformShowAlternateUI'; { available in macos  }
-    function accessibilityPerformShowDefaultUI: objcbool; message 'accessibilityPerformShowDefaultUI'; { available in macos  }
-    function accessibilityPerformShowMenu: objcbool; message 'accessibilityPerformShowMenu'; { available in macos  }
-    function accessibilityPlaceholderValue: NSString; message 'accessibilityPlaceholderValue'; { available in macos  }
-    function accessibilityPreviousContents: NSArray; message 'accessibilityPreviousContents'; { available in macos  }
-    function accessibilityProxy: id; message 'accessibilityProxy'; { available in macos  }
-    function accessibilityRangeForIndex (index: NSInteger): NSRange; message 'accessibilityRangeForIndex:'; { available in macos  }
-    function accessibilityRangeForLine (line: NSInteger): NSRange; message 'accessibilityRangeForLine:'; { available in macos  }
-    function accessibilityRangeForPosition (point: NSPoint): NSRange; message 'accessibilityRangeForPosition:'; { available in macos  }
-    function accessibilityRole: NSAccessibilityRole; message 'accessibilityRole'; { available in macos  }
-    function accessibilityRoleDescription: NSString; message 'accessibilityRoleDescription'; { available in macos  }
-    function accessibilityRowCount: NSInteger; message 'accessibilityRowCount'; { available in macos  }
-    function accessibilityRowHeaderUIElements: NSArray; message 'accessibilityRowHeaderUIElements'; { available in macos  }
-    function accessibilityRowIndexRange: NSRange; message 'accessibilityRowIndexRange'; { available in macos  }
-    function accessibilityRows: NSArray; message 'accessibilityRows'; { available in macos  }
-    function accessibilityRTFForRange (range: NSRange): NSData; message 'accessibilityRTFForRange:'; { available in macos  }
-    function accessibilityRulerMarkerType: NSAccessibilityRulerMarkerType; message 'accessibilityRulerMarkerType'; { available in macos  }
-    function accessibilityScreenPointForLayoutPoint (point: NSPoint): NSPoint; message 'accessibilityScreenPointForLayoutPoint:'; { available in macos  }
-    function accessibilityScreenSizeForLayoutSize (size: NSSize): NSSize; message 'accessibilityScreenSizeForLayoutSize:'; { available in macos  }
-    function accessibilitySearchButton: id; message 'accessibilitySearchButton'; { available in macos  }
-    function accessibilitySearchMenu: id; message 'accessibilitySearchMenu'; { available in macos  }
-    function accessibilitySelectedCells: NSArray; message 'accessibilitySelectedCells'; { available in macos  }
-    function accessibilitySelectedChildren: NSArray; message 'accessibilitySelectedChildren'; { available in macos  }
-    function accessibilitySelectedColumns: NSArray; message 'accessibilitySelectedColumns'; { available in macos  }
-    function accessibilitySelectedRows: NSArray; message 'accessibilitySelectedRows'; { available in macos  }
-    function accessibilitySelectedText: NSString; message 'accessibilitySelectedText'; { available in macos  }
-    function accessibilitySelectedTextRange: NSRange; message 'accessibilitySelectedTextRange'; { available in macos  }
-    function accessibilitySelectedTextRanges: NSArray; message 'accessibilitySelectedTextRanges'; { available in macos  }
-    function accessibilityServesAsTitleForUIElements: NSArray; message 'accessibilityServesAsTitleForUIElements'; { available in macos  }
-    function accessibilitySharedCharacterRange: NSRange; message 'accessibilitySharedCharacterRange'; { available in macos  }
-    function accessibilitySharedFocusElements: NSArray; message 'accessibilitySharedFocusElements'; { available in macos  }
-    function accessibilitySharedTextUIElements: NSArray; message 'accessibilitySharedTextUIElements'; { available in macos  }
-    function accessibilityShownMenu: id; message 'accessibilityShownMenu'; { available in macos  }
-    function accessibilitySortDirection: NSAccessibilitySortDirection; message 'accessibilitySortDirection'; { available in macos  }
-    function accessibilitySplitters: NSArray; message 'accessibilitySplitters'; { available in macos  }
-    function accessibilityStringForRange (range: NSRange): NSString; message 'accessibilityStringForRange:'; { available in macos  }
-    function accessibilityStyleRangeForIndex (index: NSInteger): NSRange; message 'accessibilityStyleRangeForIndex:'; { available in macos  }
-    function accessibilitySubrole: NSAccessibilitySubrole; message 'accessibilitySubrole'; { available in macos  }
-    function accessibilityTabs: NSArray; message 'accessibilityTabs'; { available in macos  }
-    function accessibilityTitle: NSString; message 'accessibilityTitle'; { available in macos  }
-    function accessibilityTitleUIElement: id; message 'accessibilityTitleUIElement'; { available in macos  }
-    function accessibilityToolbarButton: id; message 'accessibilityToolbarButton'; { available in macos  }
-    function accessibilityTopLevelUIElement: id; message 'accessibilityTopLevelUIElement'; { available in macos  }
-    function accessibilityUnitDescription: NSString; message 'accessibilityUnitDescription'; { available in macos  }
-    function accessibilityUnits: NSAccessibilityUnits; message 'accessibilityUnits'; { available in macos  }
-    function accessibilityURL: NSURL; message 'accessibilityURL'; { available in macos  }
-    function accessibilityValue: id; message 'accessibilityValue'; { available in macos  }
-    function accessibilityValueDescription: NSString; message 'accessibilityValueDescription'; { available in macos  }
-    function accessibilityVerticalScrollBar: id; message 'accessibilityVerticalScrollBar'; { available in macos  }
-    function accessibilityVerticalUnitDescription: NSString; message 'accessibilityVerticalUnitDescription'; { available in macos  }
-    function accessibilityVerticalUnits: NSAccessibilityUnits; message 'accessibilityVerticalUnits'; { available in macos  }
-    function accessibilityVisibleCells: NSArray; message 'accessibilityVisibleCells'; { available in macos  }
-    function accessibilityVisibleCharacterRange: NSRange; message 'accessibilityVisibleCharacterRange'; { available in macos  }
-    function accessibilityVisibleChildren: NSArray; message 'accessibilityVisibleChildren'; { available in macos  }
-    function accessibilityVisibleColumns: NSArray; message 'accessibilityVisibleColumns'; { available in macos  }
-    function accessibilityVisibleRows: NSArray; message 'accessibilityVisibleRows'; { available in macos  }
-    function accessibilityWarningValue: id; message 'accessibilityWarningValue'; { available in macos  }
-    function accessibilityWindow: id; message 'accessibilityWindow'; { available in macos  }
-    function accessibilityWindows: NSArray; message 'accessibilityWindows'; { available in macos  }
-    function accessibilityZoomButton: id; message 'accessibilityZoomButton'; { available in macos  }
-    function animationForKey (key: NSAnimatablePropertyKey): id; message 'animationForKey:'; { available in macos  }
-    function animations: NSDictionary; message 'animations'; { available in macos  }
-    function animator: id; message 'animator'; { available in macos  }
-    function appearance: NSAppearance; message 'appearance'; { available in macos  }
-    class function defaultAnimationForKey (key: NSAnimatablePropertyKey): id; message 'defaultAnimationForKey:'; { available in macos  }
-    function effectiveAppearance: NSAppearance; message 'effectiveAppearance'; { available in macos  }
+    function accessibilityPerformCancel: objcbool; message 'accessibilityPerformCancel'; { available in macos 10.10 }
+    function accessibilityPerformConfirm: objcbool; message 'accessibilityPerformConfirm'; { available in macos 10.10 }
+    function accessibilityPerformDecrement: objcbool; message 'accessibilityPerformDecrement'; { available in macos 10.10 }
+    function accessibilityPerformDelete: objcbool; message 'accessibilityPerformDelete'; { available in macos 10.10 }
+    function accessibilityPerformIncrement: objcbool; message 'accessibilityPerformIncrement'; { available in macos 10.10 }
+    function accessibilityPerformPick: objcbool; message 'accessibilityPerformPick'; { available in macos 10.10 }
+    function accessibilityPerformPress: objcbool; message 'accessibilityPerformPress'; { available in macos 10.10 }
+    function accessibilityPerformRaise: objcbool; message 'accessibilityPerformRaise'; { available in macos 10.10 }
+    function accessibilityPerformShowAlternateUI: objcbool; message 'accessibilityPerformShowAlternateUI'; { available in macos 10.10 }
+    function accessibilityPerformShowDefaultUI: objcbool; message 'accessibilityPerformShowDefaultUI'; { available in macos 10.10 }
+    function accessibilityPerformShowMenu: objcbool; message 'accessibilityPerformShowMenu'; { available in macos 10.10 }
+    function accessibilityPlaceholderValue: NSString; message 'accessibilityPlaceholderValue'; { available in macos 10.10 }
+    function accessibilityPreviousContents: NSArray; message 'accessibilityPreviousContents'; { available in macos 10.10 }
+    function accessibilityProxy: id; message 'accessibilityProxy'; { available in macos 10.10 }
+    function accessibilityRangeForIndex (index: NSInteger): NSRange; message 'accessibilityRangeForIndex:'; { available in macos 10.10 }
+    function accessibilityRangeForLine (line: NSInteger): NSRange; message 'accessibilityRangeForLine:'; { available in macos 10.10 }
+    function accessibilityRangeForPosition (point: NSPoint): NSRange; message 'accessibilityRangeForPosition:'; { available in macos 10.10 }
+    function accessibilityRole: NSAccessibilityRole; message 'accessibilityRole'; { available in macos 10.10 }
+    function accessibilityRoleDescription: NSString; message 'accessibilityRoleDescription'; { available in macos 10.10 }
+    function accessibilityRowCount: NSInteger; message 'accessibilityRowCount'; { available in macos 10.10 }
+    function accessibilityRowHeaderUIElements: NSArray; message 'accessibilityRowHeaderUIElements'; { available in macos 10.10 }
+    function accessibilityRowIndexRange: NSRange; message 'accessibilityRowIndexRange'; { available in macos 10.10 }
+    function accessibilityRows: NSArray; message 'accessibilityRows'; { available in macos 10.10 }
+    function accessibilityRTFForRange (range: NSRange): NSData; message 'accessibilityRTFForRange:'; { available in macos 10.10 }
+    function accessibilityRulerMarkerType: NSAccessibilityRulerMarkerType; message 'accessibilityRulerMarkerType'; { available in macos 10.10 }
+    function accessibilityScreenPointForLayoutPoint (point: NSPoint): NSPoint; message 'accessibilityScreenPointForLayoutPoint:'; { available in macos 10.10 }
+    function accessibilityScreenSizeForLayoutSize (size: NSSize): NSSize; message 'accessibilityScreenSizeForLayoutSize:'; { available in macos 10.10 }
+    function accessibilitySearchButton: id; message 'accessibilitySearchButton'; { available in macos 10.10 }
+    function accessibilitySearchMenu: id; message 'accessibilitySearchMenu'; { available in macos 10.10 }
+    function accessibilitySelectedCells: NSArray; message 'accessibilitySelectedCells'; { available in macos 10.10 }
+    function accessibilitySelectedChildren: NSArray; message 'accessibilitySelectedChildren'; { available in macos 10.10 }
+    function accessibilitySelectedColumns: NSArray; message 'accessibilitySelectedColumns'; { available in macos 10.10 }
+    function accessibilitySelectedRows: NSArray; message 'accessibilitySelectedRows'; { available in macos 10.10 }
+    function accessibilitySelectedText: NSString; message 'accessibilitySelectedText'; { available in macos 10.10 }
+    function accessibilitySelectedTextRange: NSRange; message 'accessibilitySelectedTextRange'; { available in macos 10.10 }
+    function accessibilitySelectedTextRanges: NSArray; message 'accessibilitySelectedTextRanges'; { available in macos 10.10 }
+    function accessibilityServesAsTitleForUIElements: NSArray; message 'accessibilityServesAsTitleForUIElements'; { available in macos 10.10 }
+    function accessibilitySharedCharacterRange: NSRange; message 'accessibilitySharedCharacterRange'; { available in macos 10.10 }
+    function accessibilitySharedFocusElements: NSArray; message 'accessibilitySharedFocusElements'; { available in macos 10.10 }
+    function accessibilitySharedTextUIElements: NSArray; message 'accessibilitySharedTextUIElements'; { available in macos 10.10 }
+    function accessibilityShownMenu: id; message 'accessibilityShownMenu'; { available in macos 10.10 }
+    function accessibilitySortDirection: NSAccessibilitySortDirection; message 'accessibilitySortDirection'; { available in macos 10.10 }
+    function accessibilitySplitters: NSArray; message 'accessibilitySplitters'; { available in macos 10.10 }
+    function accessibilityStringForRange (range: NSRange): NSString; message 'accessibilityStringForRange:'; { available in macos 10.10 }
+    function accessibilityStyleRangeForIndex (index: NSInteger): NSRange; message 'accessibilityStyleRangeForIndex:'; { available in macos 10.10 }
+    function accessibilitySubrole: NSAccessibilitySubrole; message 'accessibilitySubrole'; { available in macos 10.10 }
+    function accessibilityTabs: NSArray; message 'accessibilityTabs'; { available in macos 10.10 }
+    function accessibilityTitle: NSString; message 'accessibilityTitle'; { available in macos 10.10 }
+    function accessibilityTitleUIElement: id; message 'accessibilityTitleUIElement'; { available in macos 10.10 }
+    function accessibilityToolbarButton: id; message 'accessibilityToolbarButton'; { available in macos 10.10 }
+    function accessibilityTopLevelUIElement: id; message 'accessibilityTopLevelUIElement'; { available in macos 10.10 }
+    function accessibilityUnitDescription: NSString; message 'accessibilityUnitDescription'; { available in macos 10.10 }
+    function accessibilityUnits: NSAccessibilityUnits; message 'accessibilityUnits'; { available in macos 10.10 }
+    function accessibilityURL: NSURL; message 'accessibilityURL'; { available in macos 10.10 }
+    function accessibilityValue: id; message 'accessibilityValue'; { available in macos 10.10 }
+    function accessibilityValueDescription: NSString; message 'accessibilityValueDescription'; { available in macos 10.10 }
+    function accessibilityVerticalScrollBar: id; message 'accessibilityVerticalScrollBar'; { available in macos 10.10 }
+    function accessibilityVerticalUnitDescription: NSString; message 'accessibilityVerticalUnitDescription'; { available in macos 10.10 }
+    function accessibilityVerticalUnits: NSAccessibilityUnits; message 'accessibilityVerticalUnits'; { available in macos 10.10 }
+    function accessibilityVisibleCells: NSArray; message 'accessibilityVisibleCells'; { available in macos 10.10 }
+    function accessibilityVisibleCharacterRange: NSRange; message 'accessibilityVisibleCharacterRange'; { available in macos 10.10 }
+    function accessibilityVisibleChildren: NSArray; message 'accessibilityVisibleChildren'; { available in macos 10.10 }
+    function accessibilityVisibleColumns: NSArray; message 'accessibilityVisibleColumns'; { available in macos 10.10 }
+    function accessibilityVisibleRows: NSArray; message 'accessibilityVisibleRows'; { available in macos 10.10 }
+    function accessibilityWarningValue: id; message 'accessibilityWarningValue'; { available in macos 10.10 }
+    function accessibilityWindow: id; message 'accessibilityWindow'; { available in macos 10.10 }
+    function accessibilityWindows: NSArray; message 'accessibilityWindows'; { available in macos 10.10 }
+    function accessibilityZoomButton: id; message 'accessibilityZoomButton'; { available in macos 10.10 }
+    function animationForKey (key: NSAnimatablePropertyKey): id; message 'animationForKey:'; { available in macos 10.5 }
+    function animations: NSDictionary; message 'animations'; { available in macos 10.5 }
+    function animator: id; message 'animator'; { available in macos 10.5 }
+    function appearance: NSAppearance; message 'appearance'; { available in macos 10.9 }
+    class function defaultAnimationForKey (key: NSAnimatablePropertyKey): id; message 'defaultAnimationForKey:'; { available in macos 10.5 }
+    function effectiveAppearance: NSAppearance; message 'effectiveAppearance'; { available in macos 10.9 }
     function identifier: NSUserInterfaceItemIdentifier; message 'identifier';
-    function isAccessibilityAlternateUIVisible: objcbool; message 'isAccessibilityAlternateUIVisible'; { available in macos  }
-    function isAccessibilityDisclosed: objcbool; message 'isAccessibilityDisclosed'; { available in macos  }
-    function isAccessibilityEdited: objcbool; message 'isAccessibilityEdited'; { available in macos  }
-    function isAccessibilityElement: objcbool; message 'isAccessibilityElement'; { available in macos  }
-    function isAccessibilityEnabled: objcbool; message 'isAccessibilityEnabled'; { available in macos  }
-    function isAccessibilityExpanded: objcbool; message 'isAccessibilityExpanded'; { available in macos  }
+    function isAccessibilityAlternateUIVisible: objcbool; message 'isAccessibilityAlternateUIVisible'; { available in macos 10.10 }
+    function isAccessibilityDisclosed: objcbool; message 'isAccessibilityDisclosed'; { available in macos 10.10 }
+    function isAccessibilityEdited: objcbool; message 'isAccessibilityEdited'; { available in macos 10.10 }
+    function isAccessibilityElement: objcbool; message 'isAccessibilityElement'; { available in macos 10.10 }
+    function isAccessibilityEnabled: objcbool; message 'isAccessibilityEnabled'; { available in macos 10.10 }
+    function isAccessibilityExpanded: objcbool; message 'isAccessibilityExpanded'; { available in macos 10.10 }
     function isAccessibilityFocused: objcbool; message 'isAccessibilityFocused';
-    function isAccessibilityFrontmost: objcbool; message 'isAccessibilityFrontmost'; { available in macos  }
-    function isAccessibilityHidden: objcbool; message 'isAccessibilityHidden'; { available in macos  }
-    function isAccessibilityMain: objcbool; message 'isAccessibilityMain'; { available in macos  }
-    function isAccessibilityMinimized: objcbool; message 'isAccessibilityMinimized'; { available in macos  }
-    function isAccessibilityModal: objcbool; message 'isAccessibilityModal'; { available in macos  }
-    function isAccessibilityOrderedByRow: objcbool; message 'isAccessibilityOrderedByRow'; { available in macos  }
-    function isAccessibilityProtectedContent: objcbool; message 'isAccessibilityProtectedContent'; { available in macos  }
-    function isAccessibilityRequired: objcbool; message 'isAccessibilityRequired'; { available in macos  }
-    function isAccessibilitySelected: objcbool; message 'isAccessibilitySelected'; { available in macos  }
-    function isAccessibilitySelectorAllowed (selector: SEL): objcbool; message 'isAccessibilitySelectorAllowed:'; { available in macos  }
-    procedure setAccessibilityActivationPoint (newValue: NSPoint); message 'setAccessibilityActivationPoint:'; { available in macos  }
-    procedure setAccessibilityAllowedValues (newValue: NSArray); message 'setAccessibilityAllowedValues:'; { available in macos  }
-    procedure setAccessibilityAlternateUIVisible (newValue: objcbool); message 'setAccessibilityAlternateUIVisible:'; { available in macos  }
-    procedure setAccessibilityApplicationFocusedUIElement (newValue: id); message 'setAccessibilityApplicationFocusedUIElement:'; { available in macos  }
-    procedure setAccessibilityCancelButton (newValue: id); message 'setAccessibilityCancelButton:'; { available in macos  }
-    procedure setAccessibilityChildren (newValue: NSArray); message 'setAccessibilityChildren:'; { available in macos  }
-    procedure setAccessibilityChildrenInNavigationOrder (newValue: NSArray); message 'setAccessibilityChildrenInNavigationOrder:'; { available in macos  }
-    procedure setAccessibilityClearButton (newValue: id); message 'setAccessibilityClearButton:'; { available in macos  }
-    procedure setAccessibilityCloseButton (newValue: id); message 'setAccessibilityCloseButton:'; { available in macos  }
-    procedure setAccessibilityColumnCount (newValue: NSInteger); message 'setAccessibilityColumnCount:'; { available in macos  }
-    procedure setAccessibilityColumnHeaderUIElements (newValue: NSArray); message 'setAccessibilityColumnHeaderUIElements:'; { available in macos  }
-    procedure setAccessibilityColumnIndexRange (newValue: NSRange); message 'setAccessibilityColumnIndexRange:'; { available in macos  }
-    procedure setAccessibilityColumns (newValue: NSArray); message 'setAccessibilityColumns:'; { available in macos  }
-    procedure setAccessibilityColumnTitles (newValue: NSArray); message 'setAccessibilityColumnTitles:'; { available in macos  }
-    procedure setAccessibilityContents (newValue: NSArray); message 'setAccessibilityContents:'; { available in macos  }
-    procedure setAccessibilityCriticalValue (newValue: id); message 'setAccessibilityCriticalValue:'; { available in macos  }
-    procedure setAccessibilityCustomActions (newValue: NSArray); message 'setAccessibilityCustomActions:'; { available in macos  }
-    procedure setAccessibilityCustomRotors (newValue: NSArray); message 'setAccessibilityCustomRotors:'; { available in macos  }
-    procedure setAccessibilityDecrementButton (newValue: id); message 'setAccessibilityDecrementButton:'; { available in macos  }
-    procedure setAccessibilityDefaultButton (newValue: id); message 'setAccessibilityDefaultButton:'; { available in macos  }
-    procedure setAccessibilityDisclosed (newValue: objcbool); message 'setAccessibilityDisclosed:'; { available in macos  }
-    procedure setAccessibilityDisclosedByRow (newValue: id); message 'setAccessibilityDisclosedByRow:'; { available in macos  }
-    procedure setAccessibilityDisclosedRows (newValue: id); message 'setAccessibilityDisclosedRows:'; { available in macos  }
-    procedure setAccessibilityDisclosureLevel (newValue: NSInteger); message 'setAccessibilityDisclosureLevel:'; { available in macos  }
-    procedure setAccessibilityDocument (newValue: NSString); message 'setAccessibilityDocument:'; { available in macos  }
-    procedure setAccessibilityEdited (newValue: objcbool); message 'setAccessibilityEdited:'; { available in macos  }
-    procedure setAccessibilityElement (newValue: objcbool); message 'setAccessibilityElement:'; { available in macos  }
-    procedure setAccessibilityEnabled (newValue: objcbool); message 'setAccessibilityEnabled:'; { available in macos  }
-    procedure setAccessibilityExpanded (newValue: objcbool); message 'setAccessibilityExpanded:'; { available in macos  }
-    procedure setAccessibilityExtrasMenuBar (newValue: id); message 'setAccessibilityExtrasMenuBar:'; { available in macos  }
-    procedure setAccessibilityFilename (newValue: NSString); message 'setAccessibilityFilename:'; { available in macos  }
-    procedure setAccessibilityFocused (newValue: objcbool); message 'setAccessibilityFocused:'; { available in macos  }
-    procedure setAccessibilityFocusedWindow (newValue: id); message 'setAccessibilityFocusedWindow:'; { available in macos  }
-    procedure setAccessibilityFrame (newValue: NSRect); message 'setAccessibilityFrame:'; { available in macos  }
-    procedure setAccessibilityFrontmost (newValue: objcbool); message 'setAccessibilityFrontmost:'; { available in macos  }
-    procedure setAccessibilityFullScreenButton (newValue: id); message 'setAccessibilityFullScreenButton:'; { available in macos  }
-    procedure setAccessibilityGrowArea (newValue: id); message 'setAccessibilityGrowArea:'; { available in macos  }
-    procedure setAccessibilityHandles (newValue: NSArray); message 'setAccessibilityHandles:'; { available in macos  }
-    procedure setAccessibilityHeader (newValue: id); message 'setAccessibilityHeader:'; { available in macos  }
-    procedure setAccessibilityHelp (newValue: NSString); message 'setAccessibilityHelp:'; { available in macos  }
-    procedure setAccessibilityHidden (newValue: objcbool); message 'setAccessibilityHidden:'; { available in macos  }
-    procedure setAccessibilityHorizontalScrollBar (newValue: id); message 'setAccessibilityHorizontalScrollBar:'; { available in macos  }
-    procedure setAccessibilityHorizontalUnitDescription (newValue: NSString); message 'setAccessibilityHorizontalUnitDescription:'; { available in macos  }
-    procedure setAccessibilityHorizontalUnits (newValue: NSAccessibilityUnits); message 'setAccessibilityHorizontalUnits:'; { available in macos  }
-    procedure setAccessibilityIdentifier (newValue: NSString); message 'setAccessibilityIdentifier:'; { available in macos  }
-    procedure setAccessibilityIncrementButton (newValue: id); message 'setAccessibilityIncrementButton:'; { available in macos  }
-    procedure setAccessibilityIndex (newValue: NSInteger); message 'setAccessibilityIndex:'; { available in macos  }
-    procedure setAccessibilityInsertionPointLineNumber (newValue: NSInteger); message 'setAccessibilityInsertionPointLineNumber:'; { available in macos  }
-    procedure setAccessibilityLabel (newValue: NSString); message 'setAccessibilityLabel:'; { available in macos  }
-    procedure setAccessibilityLabelUIElements (newValue: NSArray); message 'setAccessibilityLabelUIElements:'; { available in macos  }
-    procedure setAccessibilityLabelValue (newValue: single); message 'setAccessibilityLabelValue:'; { available in macos  }
-    procedure setAccessibilityLinkedUIElements (newValue: NSArray); message 'setAccessibilityLinkedUIElements:'; { available in macos  }
-    procedure setAccessibilityMain (newValue: objcbool); message 'setAccessibilityMain:'; { available in macos  }
-    procedure setAccessibilityMainWindow (newValue: id); message 'setAccessibilityMainWindow:'; { available in macos  }
-    procedure setAccessibilityMarkerGroupUIElement (newValue: id); message 'setAccessibilityMarkerGroupUIElement:'; { available in macos  }
-    procedure setAccessibilityMarkerTypeDescription (newValue: NSString); message 'setAccessibilityMarkerTypeDescription:'; { available in macos  }
-    procedure setAccessibilityMarkerUIElements (newValue: NSArray); message 'setAccessibilityMarkerUIElements:'; { available in macos  }
-    procedure setAccessibilityMarkerValues (newValue: id); message 'setAccessibilityMarkerValues:'; { available in macos  }
-    procedure setAccessibilityMaxValue (newValue: id); message 'setAccessibilityMaxValue:'; { available in macos  }
-    procedure setAccessibilityMenuBar (newValue: id); message 'setAccessibilityMenuBar:'; { available in macos  }
-    procedure setAccessibilityMinimizeButton (newValue: id); message 'setAccessibilityMinimizeButton:'; { available in macos  }
-    procedure setAccessibilityMinimized (newValue: objcbool); message 'setAccessibilityMinimized:'; { available in macos  }
-    procedure setAccessibilityMinValue (newValue: id); message 'setAccessibilityMinValue:'; { available in macos  }
-    procedure setAccessibilityModal (newValue: objcbool); message 'setAccessibilityModal:'; { available in macos  }
-    procedure setAccessibilityNextContents (newValue: NSArray); message 'setAccessibilityNextContents:'; { available in macos  }
-    procedure setAccessibilityNumberOfCharacters (newValue: NSInteger); message 'setAccessibilityNumberOfCharacters:'; { available in macos  }
-    procedure setAccessibilityOrderedByRow (newValue: objcbool); message 'setAccessibilityOrderedByRow:'; { available in macos  }
-    procedure setAccessibilityOrientation (newValue: NSAccessibilityOrientation); message 'setAccessibilityOrientation:'; { available in macos  }
-    procedure setAccessibilityOverflowButton (newValue: id); message 'setAccessibilityOverflowButton:'; { available in macos  }
-    procedure setAccessibilityParent (newValue: id); message 'setAccessibilityParent:'; { available in macos  }
-    procedure setAccessibilityPlaceholderValue (newValue: NSString); message 'setAccessibilityPlaceholderValue:'; { available in macos  }
-    procedure setAccessibilityPreviousContents (newValue: NSArray); message 'setAccessibilityPreviousContents:'; { available in macos  }
-    procedure setAccessibilityProtectedContent (newValue: objcbool); message 'setAccessibilityProtectedContent:'; { available in macos  }
-    procedure setAccessibilityProxy (newValue: id); message 'setAccessibilityProxy:'; { available in macos  }
-    procedure setAccessibilityRequired (newValue: objcbool); message 'setAccessibilityRequired:'; { available in macos  }
-    procedure setAccessibilityRole (newValue: NSAccessibilityRole); message 'setAccessibilityRole:'; { available in macos  }
-    procedure setAccessibilityRoleDescription (newValue: NSString); message 'setAccessibilityRoleDescription:'; { available in macos  }
-    procedure setAccessibilityRowCount (newValue: NSInteger); message 'setAccessibilityRowCount:'; { available in macos  }
-    procedure setAccessibilityRowHeaderUIElements (newValue: NSArray); message 'setAccessibilityRowHeaderUIElements:'; { available in macos  }
-    procedure setAccessibilityRowIndexRange (newValue: NSRange); message 'setAccessibilityRowIndexRange:'; { available in macos  }
-    procedure setAccessibilityRows (newValue: NSArray); message 'setAccessibilityRows:'; { available in macos  }
-    procedure setAccessibilityRulerMarkerType (newValue: NSAccessibilityRulerMarkerType); message 'setAccessibilityRulerMarkerType:'; { available in macos  }
-    procedure setAccessibilitySearchButton (newValue: id); message 'setAccessibilitySearchButton:'; { available in macos  }
-    procedure setAccessibilitySearchMenu (newValue: id); message 'setAccessibilitySearchMenu:'; { available in macos  }
-    procedure setAccessibilitySelected (newValue: objcbool); message 'setAccessibilitySelected:'; { available in macos  }
-    procedure setAccessibilitySelectedCells (newValue: NSArray); message 'setAccessibilitySelectedCells:'; { available in macos  }
-    procedure setAccessibilitySelectedChildren (newValue: NSArray); message 'setAccessibilitySelectedChildren:'; { available in macos  }
-    procedure setAccessibilitySelectedColumns (newValue: NSArray); message 'setAccessibilitySelectedColumns:'; { available in macos  }
-    procedure setAccessibilitySelectedRows (newValue: NSArray); message 'setAccessibilitySelectedRows:'; { available in macos  }
-    procedure setAccessibilitySelectedText (newValue: NSString); message 'setAccessibilitySelectedText:'; { available in macos  }
-    procedure setAccessibilitySelectedTextRange (newValue: NSRange); message 'setAccessibilitySelectedTextRange:'; { available in macos  }
-    procedure setAccessibilitySelectedTextRanges (newValue: NSArray); message 'setAccessibilitySelectedTextRanges:'; { available in macos  }
-    procedure setAccessibilityServesAsTitleForUIElements (newValue: NSArray); message 'setAccessibilityServesAsTitleForUIElements:'; { available in macos  }
-    procedure setAccessibilitySharedCharacterRange (newValue: NSRange); message 'setAccessibilitySharedCharacterRange:'; { available in macos  }
-    procedure setAccessibilitySharedFocusElements (newValue: NSArray); message 'setAccessibilitySharedFocusElements:'; { available in macos  }
-    procedure setAccessibilitySharedTextUIElements (newValue: NSArray); message 'setAccessibilitySharedTextUIElements:'; { available in macos  }
-    procedure setAccessibilityShownMenu (newValue: id); message 'setAccessibilityShownMenu:'; { available in macos  }
-    procedure setAccessibilitySortDirection (newValue: NSAccessibilitySortDirection); message 'setAccessibilitySortDirection:'; { available in macos  }
-    procedure setAccessibilitySplitters (newValue: NSArray); message 'setAccessibilitySplitters:'; { available in macos  }
-    procedure setAccessibilitySubrole (newValue: NSAccessibilitySubrole); message 'setAccessibilitySubrole:'; { available in macos  }
-    procedure setAccessibilityTabs (newValue: NSArray); message 'setAccessibilityTabs:'; { available in macos  }
-    procedure setAccessibilityTitle (newValue: NSString); message 'setAccessibilityTitle:'; { available in macos  }
-    procedure setAccessibilityTitleUIElement (newValue: id); message 'setAccessibilityTitleUIElement:'; { available in macos  }
-    procedure setAccessibilityToolbarButton (newValue: id); message 'setAccessibilityToolbarButton:'; { available in macos  }
-    procedure setAccessibilityTopLevelUIElement (newValue: id); message 'setAccessibilityTopLevelUIElement:'; { available in macos  }
-    procedure setAccessibilityUnitDescription (newValue: NSString); message 'setAccessibilityUnitDescription:'; { available in macos  }
-    procedure setAccessibilityUnits (newValue: NSAccessibilityUnits); message 'setAccessibilityUnits:'; { available in macos  }
-    procedure setAccessibilityURL (newValue: NSURL); message 'setAccessibilityURL:'; { available in macos  }
-    procedure setAccessibilityValue (newValue: id); message 'setAccessibilityValue:'; { available in macos  }
-    procedure setAccessibilityValueDescription (newValue: NSString); message 'setAccessibilityValueDescription:'; { available in macos  }
-    procedure setAccessibilityVerticalScrollBar (newValue: id); message 'setAccessibilityVerticalScrollBar:'; { available in macos  }
-    procedure setAccessibilityVerticalUnitDescription (newValue: NSString); message 'setAccessibilityVerticalUnitDescription:'; { available in macos  }
-    procedure setAccessibilityVerticalUnits (newValue: NSAccessibilityUnits); message 'setAccessibilityVerticalUnits:'; { available in macos  }
-    procedure setAccessibilityVisibleCells (newValue: NSArray); message 'setAccessibilityVisibleCells:'; { available in macos  }
-    procedure setAccessibilityVisibleCharacterRange (newValue: NSRange); message 'setAccessibilityVisibleCharacterRange:'; { available in macos  }
-    procedure setAccessibilityVisibleChildren (newValue: NSArray); message 'setAccessibilityVisibleChildren:'; { available in macos  }
-    procedure setAccessibilityVisibleColumns (newValue: NSArray); message 'setAccessibilityVisibleColumns:'; { available in macos  }
-    procedure setAccessibilityVisibleRows (newValue: NSArray); message 'setAccessibilityVisibleRows:'; { available in macos  }
-    procedure setAccessibilityWarningValue (newValue: id); message 'setAccessibilityWarningValue:'; { available in macos  }
-    procedure setAccessibilityWindow (newValue: id); message 'setAccessibilityWindow:'; { available in macos  }
-    procedure setAccessibilityWindows (newValue: NSArray); message 'setAccessibilityWindows:'; { available in macos  }
-    procedure setAccessibilityZoomButton (newValue: id); message 'setAccessibilityZoomButton:'; { available in macos  }
-    procedure setAnimations (newValue: NSDictionary); message 'setAnimations:'; { available in macos  }
-    procedure setAppearance (newValue: NSAppearance); message 'setAppearance:'; { available in macos  }
+    function isAccessibilityFrontmost: objcbool; message 'isAccessibilityFrontmost'; { available in macos 10.10 }
+    function isAccessibilityHidden: objcbool; message 'isAccessibilityHidden'; { available in macos 10.10 }
+    function isAccessibilityMain: objcbool; message 'isAccessibilityMain'; { available in macos 10.10 }
+    function isAccessibilityMinimized: objcbool; message 'isAccessibilityMinimized'; { available in macos 10.10 }
+    function isAccessibilityModal: objcbool; message 'isAccessibilityModal'; { available in macos 10.10 }
+    function isAccessibilityOrderedByRow: objcbool; message 'isAccessibilityOrderedByRow'; { available in macos 10.10 }
+    function isAccessibilityProtectedContent: objcbool; message 'isAccessibilityProtectedContent'; { available in macos 10.10 }
+    function isAccessibilityRequired: objcbool; message 'isAccessibilityRequired'; { available in macos 10.12 }
+    function isAccessibilitySelected: objcbool; message 'isAccessibilitySelected'; { available in macos 10.10 }
+    function isAccessibilitySelectorAllowed (selector: SEL): objcbool; message 'isAccessibilitySelectorAllowed:'; { available in macos 10.10 }
+    procedure setAccessibilityActivationPoint (newValue: NSPoint); message 'setAccessibilityActivationPoint:'; { available in macos 10.10 }
+    procedure setAccessibilityAllowedValues (newValue: NSArray); message 'setAccessibilityAllowedValues:'; { available in macos 10.10 }
+    procedure setAccessibilityAlternateUIVisible (newValue: objcbool); message 'setAccessibilityAlternateUIVisible:'; { available in macos 10.10 }
+    procedure setAccessibilityApplicationFocusedUIElement (newValue: id); message 'setAccessibilityApplicationFocusedUIElement:'; { available in macos 10.10 }
+    procedure setAccessibilityCancelButton (newValue: id); message 'setAccessibilityCancelButton:'; { available in macos 10.10 }
+    procedure setAccessibilityChildren (newValue: NSArray); message 'setAccessibilityChildren:'; { available in macos 10.10 }
+    procedure setAccessibilityChildrenInNavigationOrder (newValue: NSArray); message 'setAccessibilityChildrenInNavigationOrder:'; { available in macos 10.13 }
+    procedure setAccessibilityClearButton (newValue: id); message 'setAccessibilityClearButton:'; { available in macos 10.10 }
+    procedure setAccessibilityCloseButton (newValue: id); message 'setAccessibilityCloseButton:'; { available in macos 10.10 }
+    procedure setAccessibilityColumnCount (newValue: NSInteger); message 'setAccessibilityColumnCount:'; { available in macos 10.10 }
+    procedure setAccessibilityColumnHeaderUIElements (newValue: NSArray); message 'setAccessibilityColumnHeaderUIElements:'; { available in macos 10.10 }
+    procedure setAccessibilityColumnIndexRange (newValue: NSRange); message 'setAccessibilityColumnIndexRange:'; { available in macos 10.10 }
+    procedure setAccessibilityColumns (newValue: NSArray); message 'setAccessibilityColumns:'; { available in macos 10.10 }
+    procedure setAccessibilityColumnTitles (newValue: NSArray); message 'setAccessibilityColumnTitles:'; { available in macos 10.10 }
+    procedure setAccessibilityContents (newValue: NSArray); message 'setAccessibilityContents:'; { available in macos 10.10 }
+    procedure setAccessibilityCriticalValue (newValue: id); message 'setAccessibilityCriticalValue:'; { available in macos 10.10 }
+    procedure setAccessibilityCustomActions (newValue: NSArray); message 'setAccessibilityCustomActions:'; { available in macos 10.13 }
+    procedure setAccessibilityCustomRotors (newValue: NSArray); message 'setAccessibilityCustomRotors:'; { available in macos 10.13 }
+    procedure setAccessibilityDecrementButton (newValue: id); message 'setAccessibilityDecrementButton:'; { available in macos 10.10 }
+    procedure setAccessibilityDefaultButton (newValue: id); message 'setAccessibilityDefaultButton:'; { available in macos 10.10 }
+    procedure setAccessibilityDisclosed (newValue: objcbool); message 'setAccessibilityDisclosed:'; { available in macos 10.10 }
+    procedure setAccessibilityDisclosedByRow (newValue: id); message 'setAccessibilityDisclosedByRow:'; { available in macos 10.10 }
+    procedure setAccessibilityDisclosedRows (newValue: id); message 'setAccessibilityDisclosedRows:'; { available in macos 10.10 }
+    procedure setAccessibilityDisclosureLevel (newValue: NSInteger); message 'setAccessibilityDisclosureLevel:'; { available in macos 10.10 }
+    procedure setAccessibilityDocument (newValue: NSString); message 'setAccessibilityDocument:'; { available in macos 10.10 }
+    procedure setAccessibilityEdited (newValue: objcbool); message 'setAccessibilityEdited:'; { available in macos 10.10 }
+    procedure setAccessibilityElement (newValue: objcbool); message 'setAccessibilityElement:'; { available in macos 10.10 }
+    procedure setAccessibilityEnabled (newValue: objcbool); message 'setAccessibilityEnabled:'; { available in macos 10.10 }
+    procedure setAccessibilityExpanded (newValue: objcbool); message 'setAccessibilityExpanded:'; { available in macos 10.10 }
+    procedure setAccessibilityExtrasMenuBar (newValue: id); message 'setAccessibilityExtrasMenuBar:'; { available in macos 10.10 }
+    procedure setAccessibilityFilename (newValue: NSString); message 'setAccessibilityFilename:'; { available in macos 10.10 }
+    procedure setAccessibilityFocused (newValue: objcbool); message 'setAccessibilityFocused:'; { available in macos 10.10 }
+    procedure setAccessibilityFocusedWindow (newValue: id); message 'setAccessibilityFocusedWindow:'; { available in macos 10.10 }
+    procedure setAccessibilityFrame (newValue: NSRect); message 'setAccessibilityFrame:'; { available in macos 10.10 }
+    procedure setAccessibilityFrontmost (newValue: objcbool); message 'setAccessibilityFrontmost:'; { available in macos 10.10 }
+    procedure setAccessibilityFullScreenButton (newValue: id); message 'setAccessibilityFullScreenButton:'; { available in macos 10.10 }
+    procedure setAccessibilityGrowArea (newValue: id); message 'setAccessibilityGrowArea:'; { available in macos 10.10 }
+    procedure setAccessibilityHandles (newValue: NSArray); message 'setAccessibilityHandles:'; { available in macos 10.10 }
+    procedure setAccessibilityHeader (newValue: id); message 'setAccessibilityHeader:'; { available in macos 10.10 }
+    procedure setAccessibilityHelp (newValue: NSString); message 'setAccessibilityHelp:'; { available in macos 10.10 }
+    procedure setAccessibilityHidden (newValue: objcbool); message 'setAccessibilityHidden:'; { available in macos 10.10 }
+    procedure setAccessibilityHorizontalScrollBar (newValue: id); message 'setAccessibilityHorizontalScrollBar:'; { available in macos 10.10 }
+    procedure setAccessibilityHorizontalUnitDescription (newValue: NSString); message 'setAccessibilityHorizontalUnitDescription:'; { available in macos 10.10 }
+    procedure setAccessibilityHorizontalUnits (newValue: NSAccessibilityUnits); message 'setAccessibilityHorizontalUnits:'; { available in macos 10.10 }
+    procedure setAccessibilityIdentifier (newValue: NSString); message 'setAccessibilityIdentifier:'; { available in macos 10.10 }
+    procedure setAccessibilityIncrementButton (newValue: id); message 'setAccessibilityIncrementButton:'; { available in macos 10.10 }
+    procedure setAccessibilityIndex (newValue: NSInteger); message 'setAccessibilityIndex:'; { available in macos 10.10 }
+    procedure setAccessibilityInsertionPointLineNumber (newValue: NSInteger); message 'setAccessibilityInsertionPointLineNumber:'; { available in macos 10.10 }
+    procedure setAccessibilityLabel (newValue: NSString); message 'setAccessibilityLabel:'; { available in macos 10.10 }
+    procedure setAccessibilityLabelUIElements (newValue: NSArray); message 'setAccessibilityLabelUIElements:'; { available in macos 10.10 }
+    procedure setAccessibilityLabelValue (newValue: single); message 'setAccessibilityLabelValue:'; { available in macos 10.10 }
+    procedure setAccessibilityLinkedUIElements (newValue: NSArray); message 'setAccessibilityLinkedUIElements:'; { available in macos 10.10 }
+    procedure setAccessibilityMain (newValue: objcbool); message 'setAccessibilityMain:'; { available in macos 10.10 }
+    procedure setAccessibilityMainWindow (newValue: id); message 'setAccessibilityMainWindow:'; { available in macos 10.10 }
+    procedure setAccessibilityMarkerGroupUIElement (newValue: id); message 'setAccessibilityMarkerGroupUIElement:'; { available in macos 10.10 }
+    procedure setAccessibilityMarkerTypeDescription (newValue: NSString); message 'setAccessibilityMarkerTypeDescription:'; { available in macos 10.10 }
+    procedure setAccessibilityMarkerUIElements (newValue: NSArray); message 'setAccessibilityMarkerUIElements:'; { available in macos 10.10 }
+    procedure setAccessibilityMarkerValues (newValue: id); message 'setAccessibilityMarkerValues:'; { available in macos 10.10 }
+    procedure setAccessibilityMaxValue (newValue: id); message 'setAccessibilityMaxValue:'; { available in macos 10.10 }
+    procedure setAccessibilityMenuBar (newValue: id); message 'setAccessibilityMenuBar:'; { available in macos 10.10 }
+    procedure setAccessibilityMinimizeButton (newValue: id); message 'setAccessibilityMinimizeButton:'; { available in macos 10.10 }
+    procedure setAccessibilityMinimized (newValue: objcbool); message 'setAccessibilityMinimized:'; { available in macos 10.10 }
+    procedure setAccessibilityMinValue (newValue: id); message 'setAccessibilityMinValue:'; { available in macos 10.10 }
+    procedure setAccessibilityModal (newValue: objcbool); message 'setAccessibilityModal:'; { available in macos 10.10 }
+    procedure setAccessibilityNextContents (newValue: NSArray); message 'setAccessibilityNextContents:'; { available in macos 10.10 }
+    procedure setAccessibilityNumberOfCharacters (newValue: NSInteger); message 'setAccessibilityNumberOfCharacters:'; { available in macos 10.10 }
+    procedure setAccessibilityOrderedByRow (newValue: objcbool); message 'setAccessibilityOrderedByRow:'; { available in macos 10.10 }
+    procedure setAccessibilityOrientation (newValue: NSAccessibilityOrientation); message 'setAccessibilityOrientation:'; { available in macos 10.10 }
+    procedure setAccessibilityOverflowButton (newValue: id); message 'setAccessibilityOverflowButton:'; { available in macos 10.10 }
+    procedure setAccessibilityParent (newValue: id); message 'setAccessibilityParent:'; { available in macos 10.10 }
+    procedure setAccessibilityPlaceholderValue (newValue: NSString); message 'setAccessibilityPlaceholderValue:'; { available in macos 10.10 }
+    procedure setAccessibilityPreviousContents (newValue: NSArray); message 'setAccessibilityPreviousContents:'; { available in macos 10.10 }
+    procedure setAccessibilityProtectedContent (newValue: objcbool); message 'setAccessibilityProtectedContent:'; { available in macos 10.10 }
+    procedure setAccessibilityProxy (newValue: id); message 'setAccessibilityProxy:'; { available in macos 10.10 }
+    procedure setAccessibilityRequired (newValue: objcbool); message 'setAccessibilityRequired:'; { available in macos 10.12 }
+    procedure setAccessibilityRole (newValue: NSAccessibilityRole); message 'setAccessibilityRole:'; { available in macos 10.10 }
+    procedure setAccessibilityRoleDescription (newValue: NSString); message 'setAccessibilityRoleDescription:'; { available in macos 10.10 }
+    procedure setAccessibilityRowCount (newValue: NSInteger); message 'setAccessibilityRowCount:'; { available in macos 10.10 }
+    procedure setAccessibilityRowHeaderUIElements (newValue: NSArray); message 'setAccessibilityRowHeaderUIElements:'; { available in macos 10.10 }
+    procedure setAccessibilityRowIndexRange (newValue: NSRange); message 'setAccessibilityRowIndexRange:'; { available in macos 10.10 }
+    procedure setAccessibilityRows (newValue: NSArray); message 'setAccessibilityRows:'; { available in macos 10.10 }
+    procedure setAccessibilityRulerMarkerType (newValue: NSAccessibilityRulerMarkerType); message 'setAccessibilityRulerMarkerType:'; { available in macos 10.10 }
+    procedure setAccessibilitySearchButton (newValue: id); message 'setAccessibilitySearchButton:'; { available in macos 10.10 }
+    procedure setAccessibilitySearchMenu (newValue: id); message 'setAccessibilitySearchMenu:'; { available in macos 10.10 }
+    procedure setAccessibilitySelected (newValue: objcbool); message 'setAccessibilitySelected:'; { available in macos 10.10 }
+    procedure setAccessibilitySelectedCells (newValue: NSArray); message 'setAccessibilitySelectedCells:'; { available in macos 10.10 }
+    procedure setAccessibilitySelectedChildren (newValue: NSArray); message 'setAccessibilitySelectedChildren:'; { available in macos 10.10 }
+    procedure setAccessibilitySelectedColumns (newValue: NSArray); message 'setAccessibilitySelectedColumns:'; { available in macos 10.10 }
+    procedure setAccessibilitySelectedRows (newValue: NSArray); message 'setAccessibilitySelectedRows:'; { available in macos 10.10 }
+    procedure setAccessibilitySelectedText (newValue: NSString); message 'setAccessibilitySelectedText:'; { available in macos 10.10 }
+    procedure setAccessibilitySelectedTextRange (newValue: NSRange); message 'setAccessibilitySelectedTextRange:'; { available in macos 10.10 }
+    procedure setAccessibilitySelectedTextRanges (newValue: NSArray); message 'setAccessibilitySelectedTextRanges:'; { available in macos 10.10 }
+    procedure setAccessibilityServesAsTitleForUIElements (newValue: NSArray); message 'setAccessibilityServesAsTitleForUIElements:'; { available in macos 10.10 }
+    procedure setAccessibilitySharedCharacterRange (newValue: NSRange); message 'setAccessibilitySharedCharacterRange:'; { available in macos 10.10 }
+    procedure setAccessibilitySharedFocusElements (newValue: NSArray); message 'setAccessibilitySharedFocusElements:'; { available in macos 10.10 }
+    procedure setAccessibilitySharedTextUIElements (newValue: NSArray); message 'setAccessibilitySharedTextUIElements:'; { available in macos 10.10 }
+    procedure setAccessibilityShownMenu (newValue: id); message 'setAccessibilityShownMenu:'; { available in macos 10.10 }
+    procedure setAccessibilitySortDirection (newValue: NSAccessibilitySortDirection); message 'setAccessibilitySortDirection:'; { available in macos 10.10 }
+    procedure setAccessibilitySplitters (newValue: NSArray); message 'setAccessibilitySplitters:'; { available in macos 10.10 }
+    procedure setAccessibilitySubrole (newValue: NSAccessibilitySubrole); message 'setAccessibilitySubrole:'; { available in macos 10.10 }
+    procedure setAccessibilityTabs (newValue: NSArray); message 'setAccessibilityTabs:'; { available in macos 10.10 }
+    procedure setAccessibilityTitle (newValue: NSString); message 'setAccessibilityTitle:'; { available in macos 10.10 }
+    procedure setAccessibilityTitleUIElement (newValue: id); message 'setAccessibilityTitleUIElement:'; { available in macos 10.10 }
+    procedure setAccessibilityToolbarButton (newValue: id); message 'setAccessibilityToolbarButton:'; { available in macos 10.10 }
+    procedure setAccessibilityTopLevelUIElement (newValue: id); message 'setAccessibilityTopLevelUIElement:'; { available in macos 10.10 }
+    procedure setAccessibilityUnitDescription (newValue: NSString); message 'setAccessibilityUnitDescription:'; { available in macos 10.10 }
+    procedure setAccessibilityUnits (newValue: NSAccessibilityUnits); message 'setAccessibilityUnits:'; { available in macos 10.10 }
+    procedure setAccessibilityURL (newValue: NSURL); message 'setAccessibilityURL:'; { available in macos 10.10 }
+    procedure setAccessibilityValue (newValue: id); message 'setAccessibilityValue:'; { available in macos 10.10 }
+    procedure setAccessibilityValueDescription (newValue: NSString); message 'setAccessibilityValueDescription:'; { available in macos 10.10 }
+    procedure setAccessibilityVerticalScrollBar (newValue: id); message 'setAccessibilityVerticalScrollBar:'; { available in macos 10.10 }
+    procedure setAccessibilityVerticalUnitDescription (newValue: NSString); message 'setAccessibilityVerticalUnitDescription:'; { available in macos 10.10 }
+    procedure setAccessibilityVerticalUnits (newValue: NSAccessibilityUnits); message 'setAccessibilityVerticalUnits:'; { available in macos 10.10 }
+    procedure setAccessibilityVisibleCells (newValue: NSArray); message 'setAccessibilityVisibleCells:'; { available in macos 10.10 }
+    procedure setAccessibilityVisibleCharacterRange (newValue: NSRange); message 'setAccessibilityVisibleCharacterRange:'; { available in macos 10.10 }
+    procedure setAccessibilityVisibleChildren (newValue: NSArray); message 'setAccessibilityVisibleChildren:'; { available in macos 10.10 }
+    procedure setAccessibilityVisibleColumns (newValue: NSArray); message 'setAccessibilityVisibleColumns:'; { available in macos 10.10 }
+    procedure setAccessibilityVisibleRows (newValue: NSArray); message 'setAccessibilityVisibleRows:'; { available in macos 10.10 }
+    procedure setAccessibilityWarningValue (newValue: id); message 'setAccessibilityWarningValue:'; { available in macos 10.10 }
+    procedure setAccessibilityWindow (newValue: id); message 'setAccessibilityWindow:'; { available in macos 10.10 }
+    procedure setAccessibilityWindows (newValue: NSArray); message 'setAccessibilityWindows:'; { available in macos 10.10 }
+    procedure setAccessibilityZoomButton (newValue: id); message 'setAccessibilityZoomButton:'; { available in macos 10.10 }
+    procedure setAnimations (newValue: NSDictionary); message 'setAnimations:'; { available in macos 10.5 }
+    procedure setAppearance (newValue: NSAppearance); message 'setAppearance:'; { available in macos 10.9 }
     procedure setIdentifier (newValue: NSUserInterfaceItemIdentifier); message 'setIdentifier:';
     function validateMenuItem (menuItem: NSMenuItem): objcbool; message 'validateMenuItem:';
     function validateUserInterfaceItem (item: NSValidatedUserInterfaceItemProtocol): objcbool; message 'validateUserInterfaceItem:';
@@ -767,7 +767,7 @@ type
 
 type
   NSWindow_NSEvent = objccategory external name 'NSEvent' (NSWindow)
-    procedure trackEventsMatchingMask_timeout_mode_handler (mask: NSEventMask; timeout: NSTimeInterval; mode: NSRunLoopMode; trackingHandler: NSWindowTrackEventsMatchingMaskCallback); message 'trackEventsMatchingMask:timeout:mode:handler:'; { available in macos  }
+    procedure trackEventsMatchingMask_timeout_mode_handler (mask: NSEventMask; timeout: NSTimeInterval; mode: NSRunLoopMode; trackingHandler: NSWindowTrackEventsMatchingMaskCallback); message 'trackEventsMatchingMask:timeout:mode:handler:'; { available in macos 10.10 }
     function nextEventMatchingMask (mask: NSEventMask): NSEvent; message 'nextEventMatchingMask:';
     function nextEventMatchingMask_untilDate_inMode_dequeue (mask: NSEventMask; expiration: NSDate; mode: NSRunLoopMode; deqFlag: objcbool): NSEvent; message 'nextEventMatchingMask:untilDate:inMode:dequeue:';
     procedure discardEventsMatchingMask_beforeEvent (mask: NSEventMask; lastEvent: NSEvent); message 'discardEventsMatchingMask:beforeEvent:';
@@ -817,21 +817,21 @@ type
     function windowShouldZoom_toFrame (window: NSWindow; newFrame: NSRect): objcbool; message 'windowShouldZoom:toFrame:';
     function windowWillReturnUndoManager (window: NSWindow): NSUndoManager; message 'windowWillReturnUndoManager:';
     function window_willPositionSheet_usingRect (window: NSWindow; sheet: NSWindow; rect: NSRect): NSRect; message 'window:willPositionSheet:usingRect:';
-    function window_shouldPopUpDocumentPathMenu (window: NSWindow; menu: NSMenu): objcbool; message 'window:shouldPopUpDocumentPathMenu:'; { available in macos  }
-    function window_shouldDragDocumentWithEvent_from_withPasteboard (window: NSWindow; event: NSEvent; dragImageLocation: NSPoint; pasteboard: NSPasteboard): objcbool; message 'window:shouldDragDocumentWithEvent:from:withPasteboard:'; { available in macos  }
-    function window_willUseFullScreenContentSize (window: NSWindow; proposedSize: NSSize): NSSize; message 'window:willUseFullScreenContentSize:'; { available in macos  }
-    function window_willUseFullScreenPresentationOptions (window: NSWindow; proposedOptions: NSApplicationPresentationOptions): NSApplicationPresentationOptions; message 'window:willUseFullScreenPresentationOptions:'; { available in macos  }
-    function customWindowsToEnterFullScreenForWindow (window: NSWindow): NSArray; message 'customWindowsToEnterFullScreenForWindow:'; { available in macos  }
-    procedure window_startCustomAnimationToEnterFullScreenWithDuration (window: NSWindow; duration: NSTimeInterval); message 'window:startCustomAnimationToEnterFullScreenWithDuration:'; { available in macos  }
-    procedure windowDidFailToEnterFullScreen (window: NSWindow); message 'windowDidFailToEnterFullScreen:'; { available in macos  }
-    function customWindowsToExitFullScreenForWindow (window: NSWindow): NSArray; message 'customWindowsToExitFullScreenForWindow:'; { available in macos  }
-    procedure window_startCustomAnimationToExitFullScreenWithDuration (window: NSWindow; duration: NSTimeInterval); message 'window:startCustomAnimationToExitFullScreenWithDuration:'; { available in macos  }
-    function customWindowsToEnterFullScreenForWindow_onScreen (window: NSWindow; screen: NSScreen): NSArray; message 'customWindowsToEnterFullScreenForWindow:onScreen:'; { available in macos  }
-    procedure window_startCustomAnimationToEnterFullScreenOnScreen_withDuration (window: NSWindow; screen: NSScreen; duration: NSTimeInterval); message 'window:startCustomAnimationToEnterFullScreenOnScreen:withDuration:'; { available in macos  }
-    procedure windowDidFailToExitFullScreen (window: NSWindow); message 'windowDidFailToExitFullScreen:'; { available in macos  }
-    function window_willResizeForVersionBrowserWithMaxPreferredSize_maxAllowedSize (window: NSWindow; maxPreferredFrameSize: NSSize; maxAllowedFrameSize: NSSize): NSSize; message 'window:willResizeForVersionBrowserWithMaxPreferredSize:maxAllowedSize:'; { available in macos  }
-    procedure window_willEncodeRestorableState (window: NSWindow; state: NSCoder); message 'window:willEncodeRestorableState:'; { available in macos  }
-    procedure window_didDecodeRestorableState (window: NSWindow; state: NSCoder); message 'window:didDecodeRestorableState:'; { available in macos  }
+    function window_shouldPopUpDocumentPathMenu (window: NSWindow; menu: NSMenu): objcbool; message 'window:shouldPopUpDocumentPathMenu:'; { available in macos 10.5 }
+    function window_shouldDragDocumentWithEvent_from_withPasteboard (window: NSWindow; event: NSEvent; dragImageLocation: NSPoint; pasteboard: NSPasteboard): objcbool; message 'window:shouldDragDocumentWithEvent:from:withPasteboard:'; { available in macos 10.5 }
+    function window_willUseFullScreenContentSize (window: NSWindow; proposedSize: NSSize): NSSize; message 'window:willUseFullScreenContentSize:'; { available in macos 10.7 }
+    function window_willUseFullScreenPresentationOptions (window: NSWindow; proposedOptions: NSApplicationPresentationOptions): NSApplicationPresentationOptions; message 'window:willUseFullScreenPresentationOptions:'; { available in macos 10.7 }
+    function customWindowsToEnterFullScreenForWindow (window: NSWindow): NSArray; message 'customWindowsToEnterFullScreenForWindow:'; { available in macos 10.7 }
+    procedure window_startCustomAnimationToEnterFullScreenWithDuration (window: NSWindow; duration: NSTimeInterval); message 'window:startCustomAnimationToEnterFullScreenWithDuration:'; { available in macos 10.7 }
+    procedure windowDidFailToEnterFullScreen (window: NSWindow); message 'windowDidFailToEnterFullScreen:'; { available in macos 10.7 }
+    function customWindowsToExitFullScreenForWindow (window: NSWindow): NSArray; message 'customWindowsToExitFullScreenForWindow:'; { available in macos 10.7 }
+    procedure window_startCustomAnimationToExitFullScreenWithDuration (window: NSWindow; duration: NSTimeInterval); message 'window:startCustomAnimationToExitFullScreenWithDuration:'; { available in macos 10.7 }
+    function customWindowsToEnterFullScreenForWindow_onScreen (window: NSWindow; screen: NSScreen): NSArray; message 'customWindowsToEnterFullScreenForWindow:onScreen:'; { available in macos 10.9 }
+    procedure window_startCustomAnimationToEnterFullScreenOnScreen_withDuration (window: NSWindow; screen: NSScreen; duration: NSTimeInterval); message 'window:startCustomAnimationToEnterFullScreenOnScreen:withDuration:'; { available in macos 10.9 }
+    procedure windowDidFailToExitFullScreen (window: NSWindow); message 'windowDidFailToExitFullScreen:'; { available in macos 10.7 }
+    function window_willResizeForVersionBrowserWithMaxPreferredSize_maxAllowedSize (window: NSWindow; maxPreferredFrameSize: NSSize; maxAllowedFrameSize: NSSize): NSSize; message 'window:willResizeForVersionBrowserWithMaxPreferredSize:maxAllowedSize:'; { available in macos 10.7 }
+    procedure window_willEncodeRestorableState (window: NSWindow; state: NSCoder); message 'window:willEncodeRestorableState:'; { available in macos 10.7 }
+    procedure window_didDecodeRestorableState (window: NSWindow; state: NSCoder); message 'window:didDecodeRestorableState:'; { available in macos 10.7 }
     procedure windowDidResize (notification: NSNotification); message 'windowDidResize:';
     procedure windowDidExpose (notification: NSNotification); message 'windowDidExpose:';
     procedure windowWillMove (notification: NSNotification); message 'windowWillMove:';
@@ -847,20 +847,20 @@ type
     procedure windowDidUpdate (notification: NSNotification); message 'windowDidUpdate:';
     procedure windowDidChangeScreen (notification: NSNotification); message 'windowDidChangeScreen:';
     procedure windowDidChangeScreenProfile (notification: NSNotification); message 'windowDidChangeScreenProfile:';
-    procedure windowDidChangeBackingProperties (notification: NSNotification); message 'windowDidChangeBackingProperties:'; { available in macos  }
+    procedure windowDidChangeBackingProperties (notification: NSNotification); message 'windowDidChangeBackingProperties:'; { available in macos 10.7 }
     procedure windowWillBeginSheet (notification: NSNotification); message 'windowWillBeginSheet:';
     procedure windowDidEndSheet (notification: NSNotification); message 'windowDidEndSheet:';
-    procedure windowWillStartLiveResize (notification: NSNotification); message 'windowWillStartLiveResize:'; { available in macos  }
-    procedure windowDidEndLiveResize (notification: NSNotification); message 'windowDidEndLiveResize:'; { available in macos  }
-    procedure windowWillEnterFullScreen (notification: NSNotification); message 'windowWillEnterFullScreen:'; { available in macos  }
-    procedure windowDidEnterFullScreen (notification: NSNotification); message 'windowDidEnterFullScreen:'; { available in macos  }
-    procedure windowWillExitFullScreen (notification: NSNotification); message 'windowWillExitFullScreen:'; { available in macos  }
-    procedure windowDidExitFullScreen (notification: NSNotification); message 'windowDidExitFullScreen:'; { available in macos  }
-    procedure windowWillEnterVersionBrowser (notification: NSNotification); message 'windowWillEnterVersionBrowser:'; { available in macos  }
-    procedure windowDidEnterVersionBrowser (notification: NSNotification); message 'windowDidEnterVersionBrowser:'; { available in macos  }
-    procedure windowWillExitVersionBrowser (notification: NSNotification); message 'windowWillExitVersionBrowser:'; { available in macos  }
-    procedure windowDidExitVersionBrowser (notification: NSNotification); message 'windowDidExitVersionBrowser:'; { available in macos  }
-    procedure windowDidChangeOcclusionState (notification: NSNotification); message 'windowDidChangeOcclusionState:'; { available in macos  }
+    procedure windowWillStartLiveResize (notification: NSNotification); message 'windowWillStartLiveResize:'; { available in macos 10.6 }
+    procedure windowDidEndLiveResize (notification: NSNotification); message 'windowDidEndLiveResize:'; { available in macos 10.6 }
+    procedure windowWillEnterFullScreen (notification: NSNotification); message 'windowWillEnterFullScreen:'; { available in macos 10.7 }
+    procedure windowDidEnterFullScreen (notification: NSNotification); message 'windowDidEnterFullScreen:'; { available in macos 10.7 }
+    procedure windowWillExitFullScreen (notification: NSNotification); message 'windowWillExitFullScreen:'; { available in macos 10.7 }
+    procedure windowDidExitFullScreen (notification: NSNotification); message 'windowDidExitFullScreen:'; { available in macos 10.7 }
+    procedure windowWillEnterVersionBrowser (notification: NSNotification); message 'windowWillEnterVersionBrowser:'; { available in macos 10.7 }
+    procedure windowDidEnterVersionBrowser (notification: NSNotification); message 'windowDidEnterVersionBrowser:'; { available in macos 10.7 }
+    procedure windowWillExitVersionBrowser (notification: NSNotification); message 'windowWillExitVersionBrowser:'; { available in macos 10.7 }
+    procedure windowDidExitVersionBrowser (notification: NSNotification); message 'windowDidExitVersionBrowser:'; { available in macos 10.7 }
+    procedure windowDidChangeOcclusionState (notification: NSNotification); message 'windowDidChangeOcclusionState:'; { available in macos 10.9 }
   end;
 {$endif}
 
@@ -882,21 +882,21 @@ var
   NSWindowWillMoveNotification: NSNotificationName; cvar; external;
   NSWindowWillBeginSheetNotification: NSNotificationName; cvar; external;
   NSWindowDidEndSheetNotification: NSNotificationName; cvar; external;
-  NSWindowDidChangeBackingPropertiesNotification: NSNotificationName { available in macos  }; cvar; external;
-  NSBackingPropertyOldScaleFactorKey: NSString { available in macos  }; cvar; external;
-  NSBackingPropertyOldColorSpaceKey: NSString { available in macos  }; cvar; external;
+  NSWindowDidChangeBackingPropertiesNotification: NSNotificationName { available in macos 10.7 }; cvar; external;
+  NSBackingPropertyOldScaleFactorKey: NSString { available in macos 10.7 }; cvar; external;
+  NSBackingPropertyOldColorSpaceKey: NSString { available in macos 10.7 }; cvar; external;
   NSWindowDidChangeScreenProfileNotification: NSNotificationName; cvar; external;
-  NSWindowWillStartLiveResizeNotification: NSNotificationName { available in macos  }; cvar; external;
-  NSWindowDidEndLiveResizeNotification: NSNotificationName { available in macos  }; cvar; external;
-  NSWindowWillEnterFullScreenNotification: NSNotificationName { available in macos  }; cvar; external;
-  NSWindowDidEnterFullScreenNotification: NSNotificationName { available in macos  }; cvar; external;
-  NSWindowWillExitFullScreenNotification: NSNotificationName { available in macos  }; cvar; external;
-  NSWindowDidExitFullScreenNotification: NSNotificationName { available in macos  }; cvar; external;
-  NSWindowWillEnterVersionBrowserNotification: NSNotificationName { available in macos  }; cvar; external;
-  NSWindowDidEnterVersionBrowserNotification: NSNotificationName { available in macos  }; cvar; external;
-  NSWindowWillExitVersionBrowserNotification: NSNotificationName { available in macos  }; cvar; external;
-  NSWindowDidExitVersionBrowserNotification: NSNotificationName { available in macos  }; cvar; external;
-  NSWindowDidChangeOcclusionStateNotification: NSNotificationName { available in macos  }; cvar; external;
+  NSWindowWillStartLiveResizeNotification: NSNotificationName { available in macos 10.6 }; cvar; external;
+  NSWindowDidEndLiveResizeNotification: NSNotificationName { available in macos 10.6 }; cvar; external;
+  NSWindowWillEnterFullScreenNotification: NSNotificationName { available in macos 10.7 }; cvar; external;
+  NSWindowDidEnterFullScreenNotification: NSNotificationName { available in macos 10.7 }; cvar; external;
+  NSWindowWillExitFullScreenNotification: NSNotificationName { available in macos 10.7 }; cvar; external;
+  NSWindowDidExitFullScreenNotification: NSNotificationName { available in macos 10.7 }; cvar; external;
+  NSWindowWillEnterVersionBrowserNotification: NSNotificationName { available in macos 10.7 }; cvar; external;
+  NSWindowDidEnterVersionBrowserNotification: NSNotificationName { available in macos 10.7 }; cvar; external;
+  NSWindowWillExitVersionBrowserNotification: NSNotificationName { available in macos 10.7 }; cvar; external;
+  NSWindowDidExitVersionBrowserNotification: NSNotificationName { available in macos 10.7 }; cvar; external;
+  NSWindowDidChangeOcclusionStateNotification: NSNotificationName { available in macos 10.9 }; cvar; external;
 {$endif}
 
 {$ifdef CLASSES}

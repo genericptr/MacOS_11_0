@@ -28,7 +28,7 @@ type
     function multiArrayConstraint: MLMultiArrayConstraint; message 'multiArrayConstraint';
     function imageConstraint: MLImageConstraint; message 'imageConstraint';
     function dictionaryConstraint: MLDictionaryConstraint; message 'dictionaryConstraint';
-    function sequenceConstraint: MLSequenceConstraint; message 'sequenceConstraint'; { available in macos , ios , watchos , tvos  }
+    function sequenceConstraint: MLSequenceConstraint; message 'sequenceConstraint'; { available in macos 10.14, ios 12.0, watchos 5.0, tvos 12.0 }
   end;
 {$endif}
 

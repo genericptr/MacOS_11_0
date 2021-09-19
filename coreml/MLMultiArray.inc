@@ -18,9 +18,9 @@ type
 
 const
   MLMultiArrayDataTypeDouble = $10000 + 64;
-  MLMultiArrayDataTypeFloat64 = $10000 + 64 { available in macos , ios , watchos , tvos  };
+  MLMultiArrayDataTypeFloat64 = $10000 + 64 { available in macos 11.0, ios 14.0, watchos 7.0, tvos 14.0 };
   MLMultiArrayDataTypeFloat32 = $10000 + 32;
-  MLMultiArrayDataTypeFloat = $10000 + 32 { available in macos , ios , watchos , tvos  };
+  MLMultiArrayDataTypeFloat = $10000 + 32 { available in macos 11.0, ios 14.0, watchos 7.0, tvos 14.0 };
   MLMultiArrayDataTypeInt32 = $20000 + 32;
 {$endif}
 
@@ -50,7 +50,7 @@ type
 
 type
   Concatenating = objccategory external (MLMultiArray)
-    class function multiArrayByConcatenatingMultiArrays_alongAxis_dataType (multiArrays: NSArray; axis: NSInteger; dataType_: MLMultiArrayDataType): id; message 'multiArrayByConcatenatingMultiArrays:alongAxis:dataType:'; { available in macos , ios , watchos , tvos  }
+    class function multiArrayByConcatenatingMultiArrays_alongAxis_dataType (multiArrays: NSArray; axis: NSInteger; dataType_: MLMultiArrayDataType): id; message 'multiArrayByConcatenatingMultiArrays:alongAxis:dataType:'; { available in macos 11.0, ios 14.0, watchos 7.0, tvos 14.0 }
   end;
 
 type

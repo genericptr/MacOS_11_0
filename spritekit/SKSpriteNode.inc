@@ -23,14 +23,14 @@ type
     function initWithCoder (aDecoder: NSCoder): id; message 'initWithCoder:'; { NS_DESIGNATED_INITIALIZER }
     procedure setTexture(newValue: SKTexture); message 'setTexture:';
     function texture: SKTexture; message 'texture';
-    procedure setNormalTexture(newValue: SKTexture); message 'setNormalTexture:'; { available in ios , tvos , watchos , macos  }
-    function normalTexture: SKTexture; message 'normalTexture'; { available in ios , tvos , watchos , macos  }
-    procedure setLightingBitMask(newValue: cuint32); message 'setLightingBitMask:'; { available in ios , tvos , watchos , macos  }
-    function lightingBitMask: cuint32; message 'lightingBitMask'; { available in ios , tvos , watchos , macos  }
-    procedure setShadowCastBitMask(newValue: cuint32); message 'setShadowCastBitMask:'; { available in ios , tvos , watchos , macos  }
-    function shadowCastBitMask: cuint32; message 'shadowCastBitMask'; { available in ios , tvos , watchos , macos  }
-    procedure setShadowedBitMask(newValue: cuint32); message 'setShadowedBitMask:'; { available in ios , tvos , watchos , macos  }
-    function shadowedBitMask: cuint32; message 'shadowedBitMask'; { available in ios , tvos , watchos , macos  }
+    procedure setNormalTexture(newValue: SKTexture); message 'setNormalTexture:'; { available in ios 8.0, tvos 9.0, watchos 1.0, macos 10.10 }
+    function normalTexture: SKTexture; message 'normalTexture'; { available in ios 8.0, tvos 9.0, watchos 1.0, macos 10.10 }
+    procedure setLightingBitMask(newValue: cuint32); message 'setLightingBitMask:'; { available in ios 8.0, tvos 9.0, watchos 1.0, macos 10.10 }
+    function lightingBitMask: cuint32; message 'lightingBitMask'; { available in ios 8.0, tvos 9.0, watchos 1.0, macos 10.10 }
+    procedure setShadowCastBitMask(newValue: cuint32); message 'setShadowCastBitMask:'; { available in ios 8.0, tvos 9.0, watchos 1.0, macos 10.10 }
+    function shadowCastBitMask: cuint32; message 'shadowCastBitMask'; { available in ios 8.0, tvos 9.0, watchos 1.0, macos 10.10 }
+    procedure setShadowedBitMask(newValue: cuint32); message 'setShadowedBitMask:'; { available in ios 8.0, tvos 9.0, watchos 1.0, macos 10.10 }
+    function shadowedBitMask: cuint32; message 'shadowedBitMask'; { available in ios 8.0, tvos 9.0, watchos 1.0, macos 10.10 }
     procedure setCenterRect(newValue: CGRect); message 'setCenterRect:';
     function centerRect: CGRect; message 'centerRect';
     procedure setColorBlendFactor(newValue: CGFloat); message 'setColorBlendFactor:';
@@ -43,12 +43,12 @@ type
     function anchorPoint: CGPoint; message 'anchorPoint';
     procedure setSize(newValue: CGSize); message 'setSize:';
     function size: CGSize; message 'size';
-    procedure scaleToSize (size_: CGSize); message 'scaleToSize:'; { available in ios , tvos , watchos , macos  }
-    procedure setShader(newValue: SKShader); message 'setShader:'; { available in ios , tvos , watchos , macos  }
-    function shader: SKShader; message 'shader'; { available in ios , tvos , watchos , macos  }
-    procedure setAttributeValues(newValue: NSDictionary); message 'setAttributeValues:'; { available in ios , tvos , watchos , macos  }
-    function attributeValues: NSDictionary; message 'attributeValues'; { available in ios , tvos , watchos , macos  }
-    function valueForAttributeNamed (key: NSString): SKAttributeValue; message 'valueForAttributeNamed:'; { available in ios , tvos , watchos , macos  }
+    procedure scaleToSize (size_: CGSize); message 'scaleToSize:'; { available in ios 10.0, tvos 10.0, watchos 3.0, macos 10.12 }
+    procedure setShader(newValue: SKShader); message 'setShader:'; { available in ios 8.0, tvos 9.0, watchos 1.0, macos 10.10 }
+    function shader: SKShader; message 'shader'; { available in ios 8.0, tvos 9.0, watchos 1.0, macos 10.10 }
+    procedure setAttributeValues(newValue: NSDictionary); message 'setAttributeValues:'; { available in ios 10.0, tvos 10.0, watchos 3.0, macos 10.12 }
+    function attributeValues: NSDictionary; message 'attributeValues'; { available in ios 10.0, tvos 10.0, watchos 3.0, macos 10.12 }
+    function valueForAttributeNamed (key: NSString): SKAttributeValue; message 'valueForAttributeNamed:'; { available in ios 10.0, tvos 10.0, watchos 3.0, macos 10.12 }
     procedure setValue_forAttributeNamed (value: SKAttributeValue; key: NSString); message 'setValue:forAttributeNamed:';
 
     { Adopted protocols }

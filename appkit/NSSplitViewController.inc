@@ -7,7 +7,7 @@ type
 
 {$ifdef EXTERNAL_SYMBOLS}
 var
-  NSSplitViewControllerAutomaticDimension: CGFloat { available in macos  }; cvar; external;
+  NSSplitViewControllerAutomaticDimension: CGFloat { available in macos 10.11 }; cvar; external;
 {$endif}
 
 {$ifdef CLASSES}
@@ -23,9 +23,9 @@ type
     procedure insertSplitViewItem_atIndex (splitViewItem: NSSplitViewItem; index: NSInteger); message 'insertSplitViewItem:atIndex:';
     procedure removeSplitViewItem (splitViewItem: NSSplitViewItem); message 'removeSplitViewItem:';
     function splitViewItemForViewController (viewController: NSViewController): NSSplitViewItem; message 'splitViewItemForViewController:';
-    procedure setMinimumThicknessForInlineSidebars(newValue: CGFloat); message 'setMinimumThicknessForInlineSidebars:'; { available in macos  }
-    function minimumThicknessForInlineSidebars: CGFloat; message 'minimumThicknessForInlineSidebars'; { available in macos  }
-    function validateUserInterfaceItem (item: NSValidatedUserInterfaceItemProtocol): objcbool; message 'validateUserInterfaceItem:'; { available in macos  }
+    procedure setMinimumThicknessForInlineSidebars(newValue: CGFloat); message 'setMinimumThicknessForInlineSidebars:'; { available in macos 10.11 }
+    function minimumThicknessForInlineSidebars: CGFloat; message 'minimumThicknessForInlineSidebars'; { available in macos 10.11 }
+    function validateUserInterfaceItem (item: NSValidatedUserInterfaceItemProtocol): objcbool; message 'validateUserInterfaceItem:'; { available in macos 10.11 }
     procedure viewDidLoad; message 'viewDidLoad'; { NS_REQUIRES_SUPER }
     function splitView_canCollapseSubview (splitView_: NSSplitView; subview: NSView): objcbool; message 'splitView:canCollapseSubview:'; { NS_REQUIRES_SUPER }
     function splitView_shouldCollapseSubview_forDoubleClickOnDividerAtIndex (splitView_: NSSplitView; subview: NSView; dividerIndex: NSInteger): objcbool; message 'splitView:shouldCollapseSubview:forDoubleClickOnDividerAtIndex:'; deprecated 'NSSplitView no longer supports collapsing sections via double-click. This delegate method is never called, and NSSplitViewController''s implementation always returns NO.';
@@ -38,7 +38,7 @@ type
     function splitView_constrainMinCoordinate_ofSubviewAt (splitView: NSSplitView; proposedMinimumPosition: CGFloat; dividerIndex: NSInteger): CGFloat; message 'splitView:constrainMinCoordinate:ofSubviewAt:';
     function splitView_constrainSplitPosition_ofSubviewAt (splitView: NSSplitView; proposedPosition: CGFloat; dividerIndex: NSInteger): CGFloat; message 'splitView:constrainSplitPosition:ofSubviewAt:';
     procedure splitView_resizeSubviewsWithOldSize (splitView: NSSplitView; oldSize: NSSize); message 'splitView:resizeSubviewsWithOldSize:';
-    function splitView_shouldAdjustSizeOfSubview (splitView: NSSplitView; view: NSView): objcbool; message 'splitView:shouldAdjustSizeOfSubview:'; { available in macos  }
+    function splitView_shouldAdjustSizeOfSubview (splitView: NSSplitView; view: NSView): objcbool; message 'splitView:shouldAdjustSizeOfSubview:'; { available in macos 10.6 }
     procedure splitViewDidResizeSubviews (notification: NSNotification); message 'splitViewDidResizeSubviews:';
     procedure splitViewWillResizeSubviews (notification: NSNotification); message 'splitViewWillResizeSubviews:';
   end;
@@ -46,7 +46,7 @@ type
 
 type
   NSSplitViewControllerToggleSidebarAction = objccategory external (NSSplitViewController)
-    procedure toggleSidebar (sender: id); message 'toggleSidebar:'; { available in macos  }
+    procedure toggleSidebar (sender: id); message 'toggleSidebar:'; { available in macos 10.11 }
   end;
 {$endif}
 

@@ -48,8 +48,8 @@ type
     function offset: SCNVector3; message 'offset';
     procedure setDirection(newValue: SCNVector3); message 'setDirection:';
     function direction: SCNVector3; message 'direction';
-    procedure setCategoryBitMask(newValue: NSUInteger); message 'setCategoryBitMask:'; { available in macos  }
-    function categoryBitMask: NSUInteger; message 'categoryBitMask'; { available in macos  }
+    procedure setCategoryBitMask(newValue: NSUInteger); message 'setCategoryBitMask:'; { available in macos 10.10 }
+    function categoryBitMask: NSUInteger; message 'categoryBitMask'; { available in macos 10.10 }
     class function dragField: SCNPhysicsField; message 'dragField';
     class function vortexField: SCNPhysicsField; message 'vortexField';
     class function radialGravityField: SCNPhysicsField; message 'radialGravityField';

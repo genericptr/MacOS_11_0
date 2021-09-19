@@ -7,12 +7,12 @@ type
 
 {$ifdef EXTERNAL_SYMBOLS}
 var
-  NSMigrationManagerKey: NSString { available in macosx ,ios  }; cvar; external;
-  NSMigrationSourceObjectKey: NSString { available in macosx ,ios  }; cvar; external;
-  NSMigrationDestinationObjectKey: NSString { available in macosx ,ios  }; cvar; external;
-  NSMigrationEntityMappingKey: NSString { available in macosx ,ios  }; cvar; external;
-  NSMigrationPropertyMappingKey: NSString { available in macosx ,ios  }; cvar; external;
-  NSMigrationEntityPolicyKey: NSString { available in macosx ,ios  }; cvar; external;
+  NSMigrationManagerKey: NSString { available in macosx 10.5,ios 3.0 }; cvar; external;
+  NSMigrationSourceObjectKey: NSString { available in macosx 10.5,ios 3.0 }; cvar; external;
+  NSMigrationDestinationObjectKey: NSString { available in macosx 10.5,ios 3.0 }; cvar; external;
+  NSMigrationEntityMappingKey: NSString { available in macosx 10.5,ios 3.0 }; cvar; external;
+  NSMigrationPropertyMappingKey: NSString { available in macosx 10.5,ios 3.0 }; cvar; external;
+  NSMigrationEntityPolicyKey: NSString { available in macosx 10.5,ios 3.0 }; cvar; external;
 {$endif}
 
 {$ifdef CLASSES}

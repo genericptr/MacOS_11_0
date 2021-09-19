@@ -7,7 +7,7 @@ type
 
 {$ifdef EXTERNAL_SYMBOLS}
 var
-  PHProjectTypeUndefined: PHProjectType { available in macos  }; cvar; external;
+  PHProjectTypeUndefined: PHProjectType { available in macos 10.13 }; cvar; external;
 {$endif}
 
 {$ifdef TYPES}
@@ -18,13 +18,13 @@ type
 
 {$ifdef EXTERNAL_SYMBOLS}
 var
-  PHProjectCategoryBook: PHProjectCategory { available in macos  }; cvar; external;
-  PHProjectCategoryCalendar: PHProjectCategory { available in macos  }; cvar; external;
-  PHProjectCategoryCard: PHProjectCategory { available in macos  }; cvar; external;
-  PHProjectCategoryPrints: PHProjectCategory { available in macos  }; cvar; external;
-  PHProjectCategorySlideshow: PHProjectCategory { available in macos  }; cvar; external;
-  PHProjectCategoryWallDecor: PHProjectCategory { available in macos  }; cvar; external;
-  PHProjectCategoryOther: PHProjectCategory { available in macos  }; cvar; external;
-  PHProjectCategoryUndefined: PHProjectCategory { available in macos  }; cvar; external;
+  PHProjectCategoryBook: PHProjectCategory { available in macos 10.14 }; cvar; external;
+  PHProjectCategoryCalendar: PHProjectCategory { available in macos 10.14 }; cvar; external;
+  PHProjectCategoryCard: PHProjectCategory { available in macos 10.14 }; cvar; external;
+  PHProjectCategoryPrints: PHProjectCategory { available in macos 10.14 }; cvar; external;
+  PHProjectCategorySlideshow: PHProjectCategory { available in macos 10.14 }; cvar; external;
+  PHProjectCategoryWallDecor: PHProjectCategory { available in macos 10.14 }; cvar; external;
+  PHProjectCategoryOther: PHProjectCategory { available in macos 10.14 }; cvar; external;
+  PHProjectCategoryUndefined: PHProjectCategory { available in macos 10.14.2 }; cvar; external;
 {$endif}
 

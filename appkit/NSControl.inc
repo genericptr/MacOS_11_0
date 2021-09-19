@@ -33,10 +33,10 @@ type
     function isEnabled: objcbool; message 'isEnabled';
     procedure setRefusesFirstResponder(newValue: objcbool); message 'setRefusesFirstResponder:';
     function refusesFirstResponder: objcbool; message 'refusesFirstResponder';
-    procedure setHighlighted(newValue: objcbool); message 'setHighlighted:'; { available in macos  }
-    function isHighlighted: objcbool; message 'isHighlighted'; { available in macos  }
-    procedure setControlSize(newValue: NSControlSize); message 'setControlSize:'; { available in macos  }
-    function controlSize: NSControlSize; message 'controlSize'; { available in macos  }
+    procedure setHighlighted(newValue: objcbool); message 'setHighlighted:'; { available in macos 10.10 }
+    function isHighlighted: objcbool; message 'isHighlighted'; { available in macos 10.10 }
+    procedure setControlSize(newValue: NSControlSize); message 'setControlSize:'; { available in macos 10.10 }
+    function controlSize: NSControlSize; message 'controlSize'; { available in macos 10.10 }
     procedure setFormatter(newValue: NSFormatter); message 'setFormatter:';
     function formatter: NSFormatter; message 'formatter';
     procedure setObjectValue(newValue: id); message 'setObjectValue:';
@@ -53,7 +53,7 @@ type
     function floatValue: single; message 'floatValue';
     procedure setDoubleValue(newValue: double); message 'setDoubleValue:';
     function doubleValue: double; message 'doubleValue';
-    function sizeThatFits (size: NSSize): NSSize; message 'sizeThatFits:'; { available in macos  }
+    function sizeThatFits (size: NSSize): NSSize; message 'sizeThatFits:'; { available in macos 10.10 }
     procedure sizeToFit; message 'sizeToFit';
     function sendActionOn (mask: NSEventMask): NSInteger; message 'sendActionOn:';
     function sendAction_to (action_: SEL; target_: id): objcbool; message 'sendAction:to:';
@@ -62,25 +62,25 @@ type
     procedure takeDoubleValueFrom (sender: id); message 'takeDoubleValueFrom:';
     procedure takeStringValueFrom (sender: id); message 'takeStringValueFrom:';
     procedure takeObjectValueFrom (sender: id); message 'takeObjectValueFrom:';
-    procedure takeIntegerValueFrom (sender: id); message 'takeIntegerValueFrom:'; { available in macos  }
+    procedure takeIntegerValueFrom (sender: id); message 'takeIntegerValueFrom:'; { available in macos 10.5 }
     procedure mouseDown (event: NSEvent); message 'mouseDown:';
     procedure performClick (sender: id); message 'performClick:';
     procedure setFont(newValue: NSFont); message 'setFont:';
     function font: NSFont; message 'font';
-    procedure setUsesSingleLineMode(newValue: objcbool); message 'setUsesSingleLineMode:'; { available in macos  }
-    function usesSingleLineMode: objcbool; message 'usesSingleLineMode'; { available in macos  }
+    procedure setUsesSingleLineMode(newValue: objcbool); message 'setUsesSingleLineMode:'; { available in macos 10.10 }
+    function usesSingleLineMode: objcbool; message 'usesSingleLineMode'; { available in macos 10.10 }
     {$if  not defined(TARGET_OS_IPHONE)}
-    procedure setLineBreakMode(newValue: NSLineBreakMode); message 'setLineBreakMode:'; { available in macos  }
-    function lineBreakMode: NSLineBreakMode; message 'lineBreakMode'; { available in macos  }
+    procedure setLineBreakMode(newValue: NSLineBreakMode); message 'setLineBreakMode:'; { available in macos 10.10 }
+    function lineBreakMode: NSLineBreakMode; message 'lineBreakMode'; { available in macos 10.10 }
     procedure setAlignment(newValue: NSTextAlignment); message 'setAlignment:';
     function alignment: NSTextAlignment; message 'alignment';
     procedure setBaseWritingDirection(newValue: NSWritingDirection); message 'setBaseWritingDirection:';
     function baseWritingDirection: NSWritingDirection; message 'baseWritingDirection';
     {$endif}
-    procedure setAllowsExpansionToolTips(newValue: objcbool); message 'setAllowsExpansionToolTips:'; { available in macos  }
-    function allowsExpansionToolTips: objcbool; message 'allowsExpansionToolTips'; { available in macos  }
-    function expansionFrameWithFrame (contentFrame: NSRect): NSRect; message 'expansionFrameWithFrame:'; { available in macos  }
-    procedure drawWithExpansionFrame_inView (contentFrame: NSRect; view: NSView); message 'drawWithExpansionFrame:inView:'; { available in macos  }
+    procedure setAllowsExpansionToolTips(newValue: objcbool); message 'setAllowsExpansionToolTips:'; { available in macos 10.8 }
+    function allowsExpansionToolTips: objcbool; message 'allowsExpansionToolTips'; { available in macos 10.8 }
+    function expansionFrameWithFrame (contentFrame: NSRect): NSRect; message 'expansionFrameWithFrame:'; { available in macos 10.10 }
+    procedure drawWithExpansionFrame_inView (contentFrame: NSRect; view: NSView); message 'drawWithExpansionFrame:inView:'; { available in macos 10.10 }
   end;
 
 
@@ -89,9 +89,9 @@ type
     function currentEditor: NSText; message 'currentEditor';
     function abortEditing: objcbool; message 'abortEditing';
     procedure validateEditing; message 'validateEditing';
-    procedure editWithFrame_editor_delegate_event (rect: NSRect; textObj: NSText; delegate: id; event: NSEvent); message 'editWithFrame:editor:delegate:event:'; { available in macos  }
-    procedure selectWithFrame_editor_delegate_start_length (rect: NSRect; textObj: NSText; delegate: id; selStart: NSInteger; selLength: NSInteger); message 'selectWithFrame:editor:delegate:start:length:'; { available in macos  }
-    procedure endEditing (textObj: NSText); message 'endEditing:'; { available in macos  }
+    procedure editWithFrame_editor_delegate_event (rect: NSRect; textObj: NSText; delegate: id; event: NSEvent); message 'editWithFrame:editor:delegate:event:'; { available in macos 10.10 }
+    procedure selectWithFrame_editor_delegate_start_length (rect: NSRect; textObj: NSText; delegate: id; selStart: NSInteger; selLength: NSInteger); message 'selectWithFrame:editor:delegate:start:length:'; { available in macos 10.10 }
+    procedure endEditing (textObj: NSText); message 'endEditing:'; { available in macos 10.10 }
   end;
 {$endif}
 

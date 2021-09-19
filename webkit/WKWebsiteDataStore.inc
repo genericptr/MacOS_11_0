@@ -26,7 +26,7 @@ type
     procedure fetchDataRecordsOfTypes_completionHandler (dataTypes: NSSet; completionHandler: WKWebsiteDataStoreFetchDataRecordsOfTypesCallback); message 'fetchDataRecordsOfTypes:completionHandler:';
     procedure removeDataOfTypes_forDataRecords_completionHandler (dataTypes: NSSet; dataRecords: NSArray; completionHandler: WKWebsiteDataStoreRemoveDataOfTypesCallback); message 'removeDataOfTypes:forDataRecords:completionHandler:';
     procedure removeDataOfTypes_modifiedSince_completionHandler (dataTypes: NSSet; date: NSDate; completionHandler: WKWebsiteDataStoreRemoveDataOfTypesCallback); message 'removeDataOfTypes:modifiedSince:completionHandler:';
-    function httpCookieStore: WKHTTPCookieStore; message 'httpCookieStore'; { available in macos , ios  }
+    function httpCookieStore: WKHTTPCookieStore; message 'httpCookieStore'; { available in macos 10.13, ios 11.0 }
 
     { Adopted protocols }
     procedure encodeWithCoder (coder: NSCoder); message 'encodeWithCoder:';

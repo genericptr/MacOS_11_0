@@ -29,8 +29,8 @@ type
     function shouldCloseDocument: objcbool; message 'shouldCloseDocument';
     procedure synchronizeWindowTitleWithDocumentName; message 'synchronizeWindowTitleWithDocumentName';
     function windowTitleForDocumentDisplayName (displayName: NSString): NSString; message 'windowTitleForDocumentDisplayName:';
-    procedure setContentViewController(newValue: NSViewController); message 'setContentViewController:'; { available in macos  }
-    function contentViewController: NSViewController; message 'contentViewController'; { available in macos  }
+    procedure setContentViewController(newValue: NSViewController); message 'setContentViewController:'; { available in macos 10.10 }
+    function contentViewController: NSViewController; message 'contentViewController'; { available in macos 10.10 }
     procedure setWindow(newValue: NSWindow); message 'setWindow:';
     function window: NSWindow; message 'window';
     function isWindowLoaded: objcbool; message 'isWindowLoaded';
@@ -41,20 +41,20 @@ type
     procedure showWindow (sender: id); message 'showWindow:';
 
     { Adopted protocols }
-    procedure performSegueWithIdentifier_sender (identifier: NSStoryboardSegueIdentifier; sender: id); message 'performSegueWithIdentifier:sender:'; { available in macos  }
-    procedure prepareForSegue_sender (segue: NSStoryboardSegue; sender: id); message 'prepareForSegue:sender:'; { available in macos  }
-    function shouldPerformSegueWithIdentifier_sender (identifier: NSStoryboardSegueIdentifier; sender: id): objcbool; message 'shouldPerformSegueWithIdentifier:sender:'; { available in macos  }
+    procedure performSegueWithIdentifier_sender (identifier: NSStoryboardSegueIdentifier; sender: id); message 'performSegueWithIdentifier:sender:'; { available in macos 10.10 }
+    procedure prepareForSegue_sender (segue: NSStoryboardSegue; sender: id); message 'prepareForSegue:sender:'; { available in macos 10.10 }
+    function shouldPerformSegueWithIdentifier_sender (identifier: NSStoryboardSegueIdentifier; sender: id): objcbool; message 'shouldPerformSegueWithIdentifier:sender:'; { available in macos 10.10 }
   end;
 
 
 type
   NSWindowControllerStoryboardingMethods = objccategory external (NSWindowController)
-    function storyboard: NSStoryboard; message 'storyboard'; { available in macos  }
+    function storyboard: NSStoryboard; message 'storyboard'; { available in macos 10.10 }
   end;
 
 type
   NSWindowControllerDismissing = objccategory external (NSWindowController)
-    procedure dismissController (sender: id); message 'dismissController:'; { available in macos  }
+    procedure dismissController (sender: id); message 'dismissController:'; { available in macos 10.10 }
   end;
 {$endif}
 

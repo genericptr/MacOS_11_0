@@ -49,10 +49,10 @@ type
     function placeholderAttributedString: NSAttributedString; message 'placeholderAttributedString';
 
     { Adopted protocols }
-    procedure panel_didChangeToDirectoryURL (sender: id; url: NSURL); message 'panel:didChangeToDirectoryURL:'; { available in macos  }
-    function panel_shouldEnableURL (sender: id; url: NSURL): objcbool; message 'panel:shouldEnableURL:'; { available in macos  }
+    procedure panel_didChangeToDirectoryURL (sender: id; url: NSURL); message 'panel:didChangeToDirectoryURL:'; { available in macos 10.6 }
+    function panel_shouldEnableURL (sender: id; url: NSURL): objcbool; message 'panel:shouldEnableURL:'; { available in macos 10.6 }
     function panel_userEnteredFilename_confirmed (sender: id; filename: NSString; okFlag: objcbool): NSString; message 'panel:userEnteredFilename:confirmed:';
-    function panel_validateURL_error (sender: id; url: NSURL; outError: NSErrorPtr): objcbool; message 'panel:validateURL:error:'; { available in macos  }
+    function panel_validateURL_error (sender: id; url: NSURL; outError: NSErrorPtr): objcbool; message 'panel:validateURL:error:'; { available in macos 10.6 }
     procedure panel_willExpand (sender: id; expanding: objcbool); message 'panel:willExpand:';
     procedure panelSelectionDidChange (sender: id); message 'panelSelectionDidChange:';
     function validateMenuItem (menuItem: NSMenuItem): objcbool; message 'validateMenuItem:';

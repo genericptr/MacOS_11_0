@@ -70,18 +70,18 @@ var
   kCVImageBufferChromaSubsampling_422: CFStringRef { available starting in __MAC_10_5,__IPHONE_4_0 }; cvar; external;
   kCVImageBufferChromaSubsampling_411: CFStringRef { available starting in __MAC_10_5,__IPHONE_4_0 }; cvar; external;
   kCVImageBufferAlphaChannelIsOpaque: CFStringRef { available starting in __MAC_10_10,__IPHONE_8_0 }; cvar; external;
-  kCVImageBufferAlphaChannelModeKey: CFStringRef { unavailable in watchos }; cvar; external;
-  kCVImageBufferAlphaChannelMode_StraightAlpha: CFStringRef { unavailable in watchos }; cvar; external;
-  kCVImageBufferAlphaChannelMode_PremultipliedAlpha: CFStringRef { unavailable in watchos }; cvar; external;
+  kCVImageBufferAlphaChannelModeKey: CFStringRef { unavailable in watchos } { available in macosx 10.15, ios 13.0, tvos 13.0 }; cvar; external;
+  kCVImageBufferAlphaChannelMode_StraightAlpha: CFStringRef { unavailable in watchos } { available in macosx 10.15, ios 13.0, tvos 13.0 }; cvar; external;
+  kCVImageBufferAlphaChannelMode_PremultipliedAlpha: CFStringRef { unavailable in watchos } { available in macosx 10.15, ios 13.0, tvos 13.0 }; cvar; external;
 {$endif}
 
 {$ifdef FUNCTIONS}
-function CVYCbCrMatrixGetIntegerCodePointForString(yCbCrMatrixString: CFStringRef): cint; cdecl; external; { available in macosx , ios , tvos , watchos  }
-function CVColorPrimariesGetIntegerCodePointForString(colorPrimariesString: CFStringRef): cint; cdecl; external; { available in macosx , ios , tvos , watchos  }
-function CVTransferFunctionGetIntegerCodePointForString(transferFunctionString: CFStringRef): cint; cdecl; external; { available in macosx , ios , tvos , watchos  }
-function CVYCbCrMatrixGetStringForIntegerCodePoint(yCbCrMatrixCodePoint: cint): CFStringRef; cdecl; external; { available in macosx , ios , tvos , watchos  }
-function CVColorPrimariesGetStringForIntegerCodePoint(colorPrimariesCodePoint: cint): CFStringRef; cdecl; external; { available in macosx , ios , tvos , watchos  }
-function CVTransferFunctionGetStringForIntegerCodePoint(transferFunctionCodePoint: cint): CFStringRef; cdecl; external; { available in macosx , ios , tvos , watchos  }
+function CVYCbCrMatrixGetIntegerCodePointForString(yCbCrMatrixString: CFStringRef): cint; cdecl; external; { available in macosx 10.13, ios 11.0, tvos 11.0, watchos 4.0 }
+function CVColorPrimariesGetIntegerCodePointForString(colorPrimariesString: CFStringRef): cint; cdecl; external; { available in macosx 10.13, ios 11.0, tvos 11.0, watchos 4.0 }
+function CVTransferFunctionGetIntegerCodePointForString(transferFunctionString: CFStringRef): cint; cdecl; external; { available in macosx 10.13, ios 11.0, tvos 11.0, watchos 4.0 }
+function CVYCbCrMatrixGetStringForIntegerCodePoint(yCbCrMatrixCodePoint: cint): CFStringRef; cdecl; external; { available in macosx 10.13, ios 11.0, tvos 11.0, watchos 4.0 }
+function CVColorPrimariesGetStringForIntegerCodePoint(colorPrimariesCodePoint: cint): CFStringRef; cdecl; external; { available in macosx 10.13, ios 11.0, tvos 11.0, watchos 4.0 }
+function CVTransferFunctionGetStringForIntegerCodePoint(transferFunctionCodePoint: cint): CFStringRef; cdecl; external; { available in macosx 10.13, ios 11.0, tvos 11.0, watchos 4.0 }
 {$endif}
 
 {$ifdef TYPES}

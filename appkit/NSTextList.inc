@@ -16,23 +16,23 @@ type
 
 {$ifdef EXTERNAL_SYMBOLS}
 var
-  NSTextListMarkerBox: NSTextListMarkerFormat { available in macos  }; cvar; external;
-  NSTextListMarkerCheck: NSTextListMarkerFormat { available in macos  }; cvar; external;
-  NSTextListMarkerCircle: NSTextListMarkerFormat { available in macos  }; cvar; external;
-  NSTextListMarkerDiamond: NSTextListMarkerFormat { available in macos  }; cvar; external;
-  NSTextListMarkerDisc: NSTextListMarkerFormat { available in macos  }; cvar; external;
-  NSTextListMarkerHyphen: NSTextListMarkerFormat { available in macos  }; cvar; external;
-  NSTextListMarkerSquare: NSTextListMarkerFormat { available in macos  }; cvar; external;
-  NSTextListMarkerLowercaseHexadecimal: NSTextListMarkerFormat { available in macos  }; cvar; external;
-  NSTextListMarkerUppercaseHexadecimal: NSTextListMarkerFormat { available in macos  }; cvar; external;
-  NSTextListMarkerOctal: NSTextListMarkerFormat { available in macos  }; cvar; external;
-  NSTextListMarkerLowercaseAlpha: NSTextListMarkerFormat { available in macos  }; cvar; external;
-  NSTextListMarkerUppercaseAlpha: NSTextListMarkerFormat { available in macos  }; cvar; external;
-  NSTextListMarkerLowercaseLatin: NSTextListMarkerFormat { available in macos  }; cvar; external;
-  NSTextListMarkerUppercaseLatin: NSTextListMarkerFormat { available in macos  }; cvar; external;
-  NSTextListMarkerLowercaseRoman: NSTextListMarkerFormat { available in macos  }; cvar; external;
-  NSTextListMarkerUppercaseRoman: NSTextListMarkerFormat { available in macos  }; cvar; external;
-  NSTextListMarkerDecimal: NSTextListMarkerFormat { available in macos  }; cvar; external;
+  NSTextListMarkerBox: NSTextListMarkerFormat { available in macos 10.13 }; cvar; external;
+  NSTextListMarkerCheck: NSTextListMarkerFormat { available in macos 10.13 }; cvar; external;
+  NSTextListMarkerCircle: NSTextListMarkerFormat { available in macos 10.13 }; cvar; external;
+  NSTextListMarkerDiamond: NSTextListMarkerFormat { available in macos 10.13 }; cvar; external;
+  NSTextListMarkerDisc: NSTextListMarkerFormat { available in macos 10.13 }; cvar; external;
+  NSTextListMarkerHyphen: NSTextListMarkerFormat { available in macos 10.13 }; cvar; external;
+  NSTextListMarkerSquare: NSTextListMarkerFormat { available in macos 10.13 }; cvar; external;
+  NSTextListMarkerLowercaseHexadecimal: NSTextListMarkerFormat { available in macos 10.13 }; cvar; external;
+  NSTextListMarkerUppercaseHexadecimal: NSTextListMarkerFormat { available in macos 10.13 }; cvar; external;
+  NSTextListMarkerOctal: NSTextListMarkerFormat { available in macos 10.13 }; cvar; external;
+  NSTextListMarkerLowercaseAlpha: NSTextListMarkerFormat { available in macos 10.13 }; cvar; external;
+  NSTextListMarkerUppercaseAlpha: NSTextListMarkerFormat { available in macos 10.13 }; cvar; external;
+  NSTextListMarkerLowercaseLatin: NSTextListMarkerFormat { available in macos 10.13 }; cvar; external;
+  NSTextListMarkerUppercaseLatin: NSTextListMarkerFormat { available in macos 10.13 }; cvar; external;
+  NSTextListMarkerLowercaseRoman: NSTextListMarkerFormat { available in macos 10.13 }; cvar; external;
+  NSTextListMarkerUppercaseRoman: NSTextListMarkerFormat { available in macos 10.13 }; cvar; external;
+  NSTextListMarkerDecimal: NSTextListMarkerFormat { available in macos 10.13 }; cvar; external;
 {$endif}
 
 {$ifdef TYPES}
@@ -53,8 +53,8 @@ type
     function markerFormat: NSTextListMarkerFormat; message 'markerFormat';
     function listOptions: NSTextListOptions; message 'listOptions';
     function markerForItemNumber (itemNum: NSInteger): NSString; message 'markerForItemNumber:';
-    procedure setStartingItemNumber(newValue: NSInteger); message 'setStartingItemNumber:'; { available in macos  }
-    function startingItemNumber: NSInteger; message 'startingItemNumber'; { available in macos  }
+    procedure setStartingItemNumber(newValue: NSInteger); message 'setStartingItemNumber:'; { available in macos 10.6 }
+    function startingItemNumber: NSInteger; message 'startingItemNumber'; { available in macos 10.6 }
 
     { Adopted protocols }
     function copyWithZone (zone: NSZonePtr): id; message 'copyWithZone:';

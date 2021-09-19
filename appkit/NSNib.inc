@@ -17,8 +17,8 @@ type
   NSNib = objcclass external (NSObject, NSCodingProtocol)
   public
     function initWithNibNamed_bundle (nibName: NSNibName; bundle: NSBundle): id; message 'initWithNibNamed:bundle:';
-    function initWithNibData_bundle (nibData: NSData; bundle: NSBundle): id; message 'initWithNibData:bundle:'; { available in macos  }
-    function instantiateWithOwner_topLevelObjects (owner: id; topLevelObjects: NSArrayPtr): objcbool; message 'instantiateWithOwner:topLevelObjects:'; { available in macos  }
+    function initWithNibData_bundle (nibData: NSData; bundle: NSBundle): id; message 'initWithNibData:bundle:'; { available in macos 10.8 }
+    function instantiateWithOwner_topLevelObjects (owner: id; topLevelObjects: NSArrayPtr): objcbool; message 'instantiateWithOwner:topLevelObjects:'; { available in macos 10.8 }
 
     { Adopted protocols }
     procedure encodeWithCoder (coder: NSCoder); message 'encodeWithCoder:';

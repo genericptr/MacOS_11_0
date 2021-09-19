@@ -14,40 +14,40 @@ const
   MTLCounterErrorValue = -1;
 
 type
-  MTLCommonCounter = NSString { available in macos , ios  };
-  MTLCommonCounterPtr = ^MTLCommonCounter { available in macos , ios  };
+  MTLCommonCounter = NSString { available in macos 10.15, ios 14.0 };
+  MTLCommonCounterPtr = ^MTLCommonCounter { available in macos 10.15, ios 14.0 };
 {$endif}
 
 {$ifdef EXTERNAL_SYMBOLS}
 var
-  MTLCommonCounterTimestamp: MTLCommonCounter { available in macos , ios  }; cvar; external;
-  MTLCommonCounterTessellationInputPatches: MTLCommonCounter { available in macos , ios  }; cvar; external;
-  MTLCommonCounterVertexInvocations: MTLCommonCounter { available in macos , ios  }; cvar; external;
-  MTLCommonCounterPostTessellationVertexInvocations: MTLCommonCounter { available in macos , ios  }; cvar; external;
-  MTLCommonCounterClipperInvocations: MTLCommonCounter { available in macos , ios  }; cvar; external;
-  MTLCommonCounterClipperPrimitivesOut: MTLCommonCounter { available in macos , ios  }; cvar; external;
-  MTLCommonCounterFragmentInvocations: MTLCommonCounter { available in macos , ios  }; cvar; external;
-  MTLCommonCounterFragmentsPassed: MTLCommonCounter { available in macos , ios  }; cvar; external;
-  MTLCommonCounterComputeKernelInvocations: MTLCommonCounter { available in macos , ios  }; cvar; external;
-  MTLCommonCounterTotalCycles: MTLCommonCounter { available in macos , ios  }; cvar; external;
-  MTLCommonCounterVertexCycles: MTLCommonCounter { available in macos , ios  }; cvar; external;
-  MTLCommonCounterTessellationCycles: MTLCommonCounter { available in macos , ios  }; cvar; external;
-  MTLCommonCounterPostTessellationVertexCycles: MTLCommonCounter { available in macos , ios  }; cvar; external;
-  MTLCommonCounterFragmentCycles: MTLCommonCounter { available in macos , ios  }; cvar; external;
-  MTLCommonCounterRenderTargetWriteCycles: MTLCommonCounter { available in macos , ios  }; cvar; external;
+  MTLCommonCounterTimestamp: MTLCommonCounter { available in macos 10.15, ios 14.0 }; cvar; external;
+  MTLCommonCounterTessellationInputPatches: MTLCommonCounter { available in macos 10.15, ios 14.0 }; cvar; external;
+  MTLCommonCounterVertexInvocations: MTLCommonCounter { available in macos 10.15, ios 14.0 }; cvar; external;
+  MTLCommonCounterPostTessellationVertexInvocations: MTLCommonCounter { available in macos 10.15, ios 14.0 }; cvar; external;
+  MTLCommonCounterClipperInvocations: MTLCommonCounter { available in macos 10.15, ios 14.0 }; cvar; external;
+  MTLCommonCounterClipperPrimitivesOut: MTLCommonCounter { available in macos 10.15, ios 14.0 }; cvar; external;
+  MTLCommonCounterFragmentInvocations: MTLCommonCounter { available in macos 10.15, ios 14.0 }; cvar; external;
+  MTLCommonCounterFragmentsPassed: MTLCommonCounter { available in macos 10.15, ios 14.0 }; cvar; external;
+  MTLCommonCounterComputeKernelInvocations: MTLCommonCounter { available in macos 10.15, ios 14.0 }; cvar; external;
+  MTLCommonCounterTotalCycles: MTLCommonCounter { available in macos 10.15, ios 14.0 }; cvar; external;
+  MTLCommonCounterVertexCycles: MTLCommonCounter { available in macos 10.15, ios 14.0 }; cvar; external;
+  MTLCommonCounterTessellationCycles: MTLCommonCounter { available in macos 10.15, ios 14.0 }; cvar; external;
+  MTLCommonCounterPostTessellationVertexCycles: MTLCommonCounter { available in macos 10.15, ios 14.0 }; cvar; external;
+  MTLCommonCounterFragmentCycles: MTLCommonCounter { available in macos 10.15, ios 14.0 }; cvar; external;
+  MTLCommonCounterRenderTargetWriteCycles: MTLCommonCounter { available in macos 10.15, ios 14.0 }; cvar; external;
 {$endif}
 
 {$ifdef TYPES}
 type
-  MTLCommonCounterSet = NSString { available in macos , ios  };
-  MTLCommonCounterSetPtr = ^MTLCommonCounterSet { available in macos , ios  };
+  MTLCommonCounterSet = NSString { available in macos 10.15, ios 14.0 };
+  MTLCommonCounterSetPtr = ^MTLCommonCounterSet { available in macos 10.15, ios 14.0 };
 {$endif}
 
 {$ifdef EXTERNAL_SYMBOLS}
 var
-  MTLCommonCounterSetTimestamp: MTLCommonCounterSet { available in macos , ios  }; cvar; external;
-  MTLCommonCounterSetStageUtilization: MTLCommonCounterSet { available in macos , ios  }; cvar; external;
-  MTLCommonCounterSetStatistic: MTLCommonCounterSet { available in macos , ios  }; cvar; external;
+  MTLCommonCounterSetTimestamp: MTLCommonCounterSet { available in macos 10.15, ios 14.0 }; cvar; external;
+  MTLCommonCounterSetStageUtilization: MTLCommonCounterSet { available in macos 10.15, ios 14.0 }; cvar; external;
+  MTLCommonCounterSetStatistic: MTLCommonCounterSet { available in macos 10.15, ios 14.0 }; cvar; external;
 {$endif}
 
 {$ifdef TYPES}
@@ -87,13 +87,13 @@ type
 
 type
   MTLCounterProtocol = objcprotocol external name 'MTLCounter' (NSObjectProtocol)
-    function name: NSString; message 'name'; { available in macos , ios  }
+    function name: NSString; message 'name'; { available in macos 10.15, ios 14.0 }
   end;
 
 type
   MTLCounterSetProtocol = objcprotocol external name 'MTLCounterSet' (NSObjectProtocol)
-    function name: NSString; message 'name'; { available in macos , ios  }
-    function counters: NSArray; message 'counters'; { available in macos , ios  }
+    function name: NSString; message 'name'; { available in macos 10.15, ios 14.0 }
+    function counters: NSArray; message 'counters'; { available in macos 10.15, ios 14.0 }
   end;
 {$endif}
 
@@ -102,14 +102,14 @@ type
 type
   MTLCounterSampleBufferDescriptor = objcclass external (NSObject, NSCopyingProtocol)
   public
-    procedure setCounterSet(newValue: MTLCounterSetProtocol); message 'setCounterSet:'; { available in macos , ios  }
-    function counterSet: MTLCounterSetProtocol; message 'counterSet'; { available in macos , ios  }
-    procedure setLabel(newValue: NSString); message 'setLabel:'; { available in macos , ios  }
-    function label_: NSString; message 'label'; { available in macos , ios  }
-    procedure setStorageMode(newValue: MTLStorageMode); message 'setStorageMode:'; { available in macos , ios  }
-    function storageMode: MTLStorageMode; message 'storageMode'; { available in macos , ios  }
-    procedure setSampleCount(newValue: NSUInteger); message 'setSampleCount:'; { available in macos , ios  }
-    function sampleCount: NSUInteger; message 'sampleCount'; { available in macos , ios  }
+    procedure setCounterSet(newValue: MTLCounterSetProtocol); message 'setCounterSet:'; { available in macos 10.15, ios 14.0 }
+    function counterSet: MTLCounterSetProtocol; message 'counterSet'; { available in macos 10.15, ios 14.0 }
+    procedure setLabel(newValue: NSString); message 'setLabel:'; { available in macos 10.15, ios 14.0 }
+    function label_: NSString; message 'label'; { available in macos 10.15, ios 14.0 }
+    procedure setStorageMode(newValue: MTLStorageMode); message 'setStorageMode:'; { available in macos 10.15, ios 14.0 }
+    function storageMode: MTLStorageMode; message 'storageMode'; { available in macos 10.15, ios 14.0 }
+    procedure setSampleCount(newValue: NSUInteger); message 'setSampleCount:'; { available in macos 10.15, ios 14.0 }
+    function sampleCount: NSUInteger; message 'sampleCount'; { available in macos 10.15, ios 14.0 }
 
     { Adopted protocols }
     function copyWithZone (zone: NSZonePtr): id; message 'copyWithZone:';
@@ -120,10 +120,10 @@ type
 
 type
   MTLCounterSampleBufferProtocol = objcprotocol external name 'MTLCounterSampleBuffer' (NSObjectProtocol)
-    function device: id; message 'device'; { available in macos , ios  }
-    function label_: NSString; message 'label'; { available in macos , ios  }
-    function sampleCount: NSUInteger; message 'sampleCount'; { available in macos , ios  }
-    function resolveCounterRange (range: NSRange): NSData; message 'resolveCounterRange:'; { available in macos , ios  }
+    function device: id; message 'device'; { available in macos 10.15, ios 14.0 }
+    function label_: NSString; message 'label'; { available in macos 10.15, ios 14.0 }
+    function sampleCount: NSUInteger; message 'sampleCount'; { available in macos 10.15, ios 14.0 }
+    function resolveCounterRange (range: NSRange): NSData; message 'resolveCounterRange:'; { available in macos 10.15, ios 14.0 }
   end;
 {$endif}
 

@@ -32,10 +32,10 @@ type
   private
     _httpInternal: NSHTTPURLResponseInternal;
   public
-    function initWithURL_statusCode_HTTPVersion_headerFields (url_: NSURL; statusCode: NSInteger; HTTPVersion: NSString; headerFields: NSDictionary): id; message 'initWithURL:statusCode:HTTPVersion:headerFields:'; { available in macos , ios , watchos , tvos  }
+    function initWithURL_statusCode_HTTPVersion_headerFields (url_: NSURL; statusCode: NSInteger; HTTPVersion: NSString; headerFields: NSDictionary): id; message 'initWithURL:statusCode:HTTPVersion:headerFields:'; { available in macos 10.7, ios 5.0, watchos 2.0, tvos 9.0 }
     function statusCode: NSInteger; message 'statusCode';
     function allHeaderFields: NSDictionary; message 'allHeaderFields';
-    function valueForHTTPHeaderField (field: NSString): NSString; message 'valueForHTTPHeaderField:'; { available in macos , ios , watchos , tvos  }
+    function valueForHTTPHeaderField (field: NSString): NSString; message 'valueForHTTPHeaderField:'; { available in macos 10.15, ios 13.0, watchos 6.0, tvos 13.0 }
     class function localizedStringForStatusCode (statusCode_: NSInteger): NSString; message 'localizedStringForStatusCode:';
   end;
 {$endif}

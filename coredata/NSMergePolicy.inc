@@ -62,8 +62,8 @@ type
     function initWithMergeType (ty: NSMergePolicyType): id; message 'initWithMergeType:'; { NS_DESIGNATED_INITIALIZER }
     function init: id; message 'init';
     function resolveConflicts_error (list: NSArray; error: NSErrorPtr): objcbool; message 'resolveConflicts:error:';
-    function resolveOptimisticLockingVersionConflicts_error (list: NSArray; error: NSErrorPtr): objcbool; message 'resolveOptimisticLockingVersionConflicts:error:'; { available in macosx ,ios  }
-    function resolveConstraintConflicts_error (list: NSArray; error: NSErrorPtr): objcbool; message 'resolveConstraintConflicts:error:'; { available in macosx ,ios  }
+    function resolveOptimisticLockingVersionConflicts_error (list: NSArray; error: NSErrorPtr): objcbool; message 'resolveOptimisticLockingVersionConflicts:error:'; { available in macosx 10.12,ios 10.0,tvos 10.0,watchos 3.0 }
+    function resolveConstraintConflicts_error (list: NSArray; error: NSErrorPtr): objcbool; message 'resolveConstraintConflicts:error:'; { available in macosx 10.12,ios 10.0,tvos 10.0,watchos 3.0 }
   end;
 {$endif}
 

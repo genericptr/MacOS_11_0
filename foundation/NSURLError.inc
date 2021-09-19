@@ -3,12 +3,12 @@
 {$ifdef EXTERNAL_SYMBOLS}
 var
   NSURLErrorDomain: NSErrorDomain; cvar; external;
-  NSURLErrorFailingURLErrorKey: NSString { available in macos , ios , watchos , tvos  }; cvar; external;
-  NSURLErrorFailingURLStringErrorKey: NSString { available in macos , ios , watchos , tvos  }; cvar; external;
+  NSURLErrorFailingURLErrorKey: NSString { available in macos 10.6, ios 4.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  NSURLErrorFailingURLStringErrorKey: NSString { available in macos 10.6, ios 4.0, watchos 2.0, tvos 9.0 }; cvar; external;
   NSErrorFailingURLStringKey: NSString deprecated 'Use NSURLErrorFailingURLStringErrorKey instead'; cvar; external;
-  NSURLErrorFailingURLPeerTrustErrorKey: NSString { available in macos , ios , watchos , tvos  }; cvar; external;
-  NSURLErrorBackgroundTaskCancelledReasonKey: NSString { available in macos , ios , watchos , tvos  }; cvar; external;
-  NSURLErrorNetworkUnavailableReasonKey: NSErrorUserInfoKey { available in macos , ios , watchos , tvos  }; cvar; external;
+  NSURLErrorFailingURLPeerTrustErrorKey: NSString { available in macos 10.6, ios 4.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  NSURLErrorBackgroundTaskCancelledReasonKey: NSString { available in macos 10.10, ios 8.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  NSURLErrorNetworkUnavailableReasonKey: NSErrorUserInfoKey { available in macos 10.15, ios 13.0, watchos 6.0, tvos 13.0 }; cvar; external;
 {$endif}
 
 {$ifdef TYPES}
@@ -41,12 +41,12 @@ const
   NSURLErrorCannotDecodeRawData = -1015;
   NSURLErrorCannotDecodeContentData = -1016;
   NSURLErrorCannotParseResponse = -1017;
-  NSURLErrorAppTransportSecurityRequiresSecureConnection = -1022 { available in macos , ios , watchos , tvos  };
+  NSURLErrorAppTransportSecurityRequiresSecureConnection = -1022 { available in macos 10.11, ios 9.0, watchos 2.0, tvos 9.0 };
   NSURLErrorFileDoesNotExist = -1100;
   NSURLErrorFileIsDirectory = -1101;
   NSURLErrorNoPermissionsToReadFile = -1102;
-  NSURLErrorDataLengthExceedsMaximum = -1103 { available in macos , ios , watchos , tvos  };
-  NSURLErrorFileOutsideSafeArea = -1104 { available in macos , ios , watchos , tvos  };
+  NSURLErrorDataLengthExceedsMaximum = -1103 { available in macos 10.5, ios 2.0, watchos 2.0, tvos 9.0 };
+  NSURLErrorFileOutsideSafeArea = -1104 { available in macos 10.12.4, ios 10.3, watchos 3.2, tvos 10.2 };
   NSURLErrorSecureConnectionFailed = -1200;
   NSURLErrorServerCertificateHasBadDate = -1201;
   NSURLErrorServerCertificateUntrusted = -1202;
@@ -63,12 +63,12 @@ const
   NSURLErrorCannotMoveFile = -3005;
   NSURLErrorDownloadDecodingFailedMidStream = -3006;
   NSURLErrorDownloadDecodingFailedToComplete = -3007;
-  NSURLErrorInternationalRoamingOff = -1018 { available in macos , ios , watchos , tvos  };
-  NSURLErrorCallIsActive = -1019 { available in macos , ios , watchos , tvos  };
-  NSURLErrorDataNotAllowed = -1020 { available in macos , ios , watchos , tvos  };
-  NSURLErrorRequestBodyStreamExhausted = -1021 { available in macos , ios , watchos , tvos  };
-  NSURLErrorBackgroundSessionRequiresSharedContainer = -995 { available in macos , ios , watchos , tvos  };
-  NSURLErrorBackgroundSessionInUseByAnotherProcess = -996 { available in macos , ios , watchos , tvos  };
-  NSURLErrorBackgroundSessionWasDisconnected = -997 { available in macos , ios , watchos , tvos  };
+  NSURLErrorInternationalRoamingOff = -1018 { available in macos 10.7, ios 3.0, watchos 2.0, tvos 9.0 };
+  NSURLErrorCallIsActive = -1019 { available in macos 10.7, ios 3.0, watchos 2.0, tvos 9.0 };
+  NSURLErrorDataNotAllowed = -1020 { available in macos 10.7, ios 3.0, watchos 2.0, tvos 9.0 };
+  NSURLErrorRequestBodyStreamExhausted = -1021 { available in macos 10.7, ios 3.0, watchos 2.0, tvos 9.0 };
+  NSURLErrorBackgroundSessionRequiresSharedContainer = -995 { available in macos 10.10, ios 8.0, watchos 2.0, tvos 9.0 };
+  NSURLErrorBackgroundSessionInUseByAnotherProcess = -996 { available in macos 10.10, ios 8.0, watchos 2.0, tvos 9.0 };
+  NSURLErrorBackgroundSessionWasDisconnected = -997 { available in macos 10.10, ios 8.0, watchos 2.0, tvos 9.0 };
 {$endif}
 

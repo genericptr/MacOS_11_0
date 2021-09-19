@@ -18,7 +18,7 @@ const
 
 type
   NSUserActivityRestoringProtocol = objcprotocol external name 'NSUserActivityRestoring' (NSObjectProtocol)
-    procedure restoreUserActivityState (userActivity: NSUserActivity); message 'restoreUserActivityState:'; { available in macos  }
+    procedure restoreUserActivityState (userActivity: NSUserActivity); message 'restoreUserActivityState:'; { available in macos 10.10 }
   end;
 {$endif}
 
@@ -26,23 +26,23 @@ type
 
 type
   NSResponder_NSUserActivity = objccategory external name 'NSUserActivity' (NSResponder)
-    procedure setUserActivity(newValue: NSUserActivity); message 'setUserActivity:'; { available in macos  }
-    function userActivity: NSUserActivity; message 'userActivity'; { available in macos  }
-    procedure updateUserActivityState (userActivity_: NSUserActivity); message 'updateUserActivityState:'; { available in macos  }
+    procedure setUserActivity(newValue: NSUserActivity); message 'setUserActivity:'; { available in macos 10.10 }
+    function userActivity: NSUserActivity; message 'userActivity'; { available in macos 10.10 }
+    procedure updateUserActivityState (userActivity_: NSUserActivity); message 'updateUserActivityState:'; { available in macos 10.10 }
   end;
 
 type
   NSDocument_NSUserActivity = objccategory external name 'NSUserActivity' (NSDocument)
-    procedure setUserActivity(newValue: NSUserActivity); message 'setUserActivity:'; { available in macos  }
-    function userActivity: NSUserActivity; message 'userActivity'; { available in macos  }
-    procedure updateUserActivityState (activity: NSUserActivity); message 'updateUserActivityState:'; { available in macos  }
+    procedure setUserActivity(newValue: NSUserActivity); message 'setUserActivity:'; { available in macos 10.10 }
+    function userActivity: NSUserActivity; message 'userActivity'; { available in macos 10.10 }
+    procedure updateUserActivityState (activity: NSUserActivity); message 'updateUserActivityState:'; { available in macos 10.10 }
   end;
 {$endif}
 
 {$if  not defined(TARGET_OS_IPHONE)}
 {$ifdef EXTERNAL_SYMBOLS}
 var
-  NSUserActivityDocumentURLKey: NSString { available in macos  }; cvar; external;
+  NSUserActivityDocumentURLKey: NSString { available in macos 10.10 }; cvar; external;
 {$endif}
 
 {$endif}

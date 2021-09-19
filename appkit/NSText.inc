@@ -164,7 +164,7 @@ var
   NSTextDidBeginEditingNotification: NSNotificationName; cvar; external;
   NSTextDidEndEditingNotification: NSNotificationName; cvar; external;
   NSTextDidChangeNotification: NSNotificationName; cvar; external;
-  NSTextMovementUserInfoKey: NSString { available in macos  }; cvar; external;
+  NSTextMovementUserInfoKey: NSString { available in macos 10.13 }; cvar; external;
 {$endif}
 
 {$ifdef TYPES}

@@ -48,7 +48,7 @@ type
     function currentParagraphStyle: NSParagraphStyle; message 'currentParagraphStyle';
     procedure setHardInvalidation_forGlyphRange (flag: objcbool; glyphRange: NSRange); message 'setHardInvalidation:forGlyphRange:';
     procedure layoutGlyphsInLayoutManager_startingAtGlyphIndex_maxNumberOfLineFragments_nextGlyphIndex (layoutManager_: NSLayoutManager; startGlyphIndex: NSUInteger; maxNumLines: NSUInteger; nextGlyph: NSUIntegerPtr); message 'layoutGlyphsInLayoutManager:startingAtGlyphIndex:maxNumberOfLineFragments:nextGlyphIndex:';
-    function layoutCharactersInRange_forLayoutManager_maximumNumberOfLineFragments (characterRange: NSRange; layoutManager_: NSLayoutManager; maxNumLines: NSUInteger): NSRange; message 'layoutCharactersInRange:forLayoutManager:maximumNumberOfLineFragments:'; { available in macos  }
+    function layoutCharactersInRange_forLayoutManager_maximumNumberOfLineFragments (characterRange: NSRange; layoutManager_: NSLayoutManager; maxNumLines: NSUInteger): NSRange; message 'layoutCharactersInRange:forLayoutManager:maximumNumberOfLineFragments:'; { available in macos 10.5 }
     class function printingAdjustmentInLayoutManager_forNominallySpacedGlyphRange_packedGlyphs_count (layoutMgr: NSLayoutManager; nominallySpacedGlyphsRange: NSRange; packedGlyphs: PChar; packedGlyphsCount: NSUInteger): NSSize; message 'printingAdjustmentInLayoutManager:forNominallySpacedGlyphRange:packedGlyphs:count:';
     function baselineOffsetInLayoutManager_glyphIndex (layoutMgr: NSLayoutManager; glyphIndex: NSUInteger): CGFloat; message 'baselineOffsetInLayoutManager:glyphIndex:';
     class function sharedSystemTypesetter: NSTypesetter; message 'sharedSystemTypesetter';

@@ -23,19 +23,19 @@ type
     {$if  not defined(TARGET_OS_IPHONE)}
     class function colorPickerWithIdentifier_buttonImage (identifier_: NSTouchBarItemIdentifier; image: NSImage): id; message 'colorPickerWithIdentifier:buttonImage:';
     {$else}
-    class function colorPickerWithIdentifier_buttonImage (identifier_: NSTouchBarItemIdentifier; image: UIImage): id; message 'colorPickerWithIdentifier:buttonImage:'; { available in ios  }
+    class function colorPickerWithIdentifier_buttonImage (identifier_: NSTouchBarItemIdentifier; image: UIImage): id; message 'colorPickerWithIdentifier:buttonImage:'; { available in ios 13.0 }
     {$endif}
     {$if  not defined(TARGET_OS_IPHONE)}
     procedure setColor(newValue: NSColor); message 'setColor:';
     function color: NSColor; message 'color';
     {$else}
-    procedure setColor_(newValue: UIColor); message 'setColor:'; { available in ios  }
-    function color_: UIColor; message 'color'; { available in ios  }
+    procedure setColor_(newValue: UIColor); message 'setColor:'; { available in ios 13.0 }
+    function color_: UIColor; message 'color'; { available in ios 13.0 }
     {$endif}
     procedure setShowsAlpha(newValue: objcbool); message 'setShowsAlpha:';
     function showsAlpha: objcbool; message 'showsAlpha';
-    procedure setAllowedColorSpaces(newValue: NSArray); message 'setAllowedColorSpaces:'; { unavailable in ios }
-    function allowedColorSpaces: NSArray; message 'allowedColorSpaces'; { unavailable in ios }
+    procedure setAllowedColorSpaces(newValue: NSArray); message 'setAllowedColorSpaces:'; { unavailable in ios } { available in macos 10.13 }
+    function allowedColorSpaces: NSArray; message 'allowedColorSpaces'; { unavailable in ios } { available in macos 10.13 }
     procedure setColorList(newValue: NSColorList); message 'setColorList:'; { unavailable in ios }
     function colorList: NSColorList; message 'colorList'; { unavailable in ios }
     procedure setCustomizationLabel(newValue: NSString); message 'setCustomizationLabel:';

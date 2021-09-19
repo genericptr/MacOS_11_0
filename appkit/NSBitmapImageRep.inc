@@ -52,10 +52,10 @@ const
   NSBitmapFormatAlphaFirst = 1 shl 0;
   NSBitmapFormatAlphaNonpremultiplied = 1 shl 1;
   NSBitmapFormatFloatingPointSamples = 1 shl 2;
-  NSBitmapFormatSixteenBitLittleEndian = 1 shl 8 { available in macos  };
-  NSBitmapFormatThirtyTwoBitLittleEndian = 1 shl 9 { available in macos  };
-  NSBitmapFormatSixteenBitBigEndian = 1 shl 10 { available in macos  };
-  NSBitmapFormatThirtyTwoBitBigEndian = 1 shl 11 { available in macos  };
+  NSBitmapFormatSixteenBitLittleEndian = 1 shl 8 { available in macos 10.10 };
+  NSBitmapFormatThirtyTwoBitLittleEndian = 1 shl 9 { available in macos 10.10 };
+  NSBitmapFormatSixteenBitBigEndian = 1 shl 10 { available in macos 10.10 };
+  NSBitmapFormatThirtyTwoBitBigEndian = 1 shl 11 { available in macos 10.10 };
 
 type
   NSBitmapImageRepPropertyKey = NSString;
@@ -77,7 +77,7 @@ var
   NSImageGamma: NSBitmapImageRepPropertyKey; cvar; external;
   NSImageProgressive: NSBitmapImageRepPropertyKey; cvar; external;
   NSImageEXIFData: NSBitmapImageRepPropertyKey; cvar; external;
-  NSImageFallbackBackgroundColor: NSBitmapImageRepPropertyKey { available in macos  }; cvar; external;
+  NSImageFallbackBackgroundColor: NSBitmapImageRepPropertyKey { available in macos 10.5 }; cvar; external;
 {$endif}
 
 {$ifdef CLASSES}
@@ -88,8 +88,8 @@ type
     function initWithFocusedViewRect (rect: NSRect): id; message 'initWithFocusedViewRect:'; deprecated 'Use -[NSView cacheDisplayInRect:toBitmapImageRep:] to snapshot a view.';
     function initWithBitmapDataPlanes_pixelsWide_pixelsHigh_bitsPerSample_samplesPerPixel_hasAlpha_isPlanar_colorSpaceName_bytesPerRow_bitsPerPixel (planes: PChar; width: NSInteger; height: NSInteger; bps: NSInteger; spp: NSInteger; alpha: objcbool; isPlanar: objcbool; colorSpaceName_: NSColorSpaceName; rBytes: NSInteger; pBits: NSInteger): id; message 'initWithBitmapDataPlanes:pixelsWide:pixelsHigh:bitsPerSample:samplesPerPixel:hasAlpha:isPlanar:colorSpaceName:bytesPerRow:bitsPerPixel:';
     function initWithBitmapDataPlanes_pixelsWide_pixelsHigh_bitsPerSample_samplesPerPixel_hasAlpha_isPlanar_colorSpaceName_bitmapFormat_bytesPerRow_bitsPerPixel (planes: PChar; width: NSInteger; height: NSInteger; bps: NSInteger; spp: NSInteger; alpha: objcbool; isPlanar: objcbool; colorSpaceName_: NSColorSpaceName; bitmapFormat: NSBitmapFormat; rBytes: NSInteger; pBits: NSInteger): id; message 'initWithBitmapDataPlanes:pixelsWide:pixelsHigh:bitsPerSample:samplesPerPixel:hasAlpha:isPlanar:colorSpaceName:bitmapFormat:bytesPerRow:bitsPerPixel:';
-    function initWithCGImage (cgImage: CGImageRef): id; message 'initWithCGImage:'; { available in macos  }
-    function initWithCIImage (ciImage_: CIImage): id; message 'initWithCIImage:'; { available in macos  }
+    function initWithCGImage (cgImage: CGImageRef): id; message 'initWithCGImage:'; { available in macos 10.5 }
+    function initWithCIImage (ciImage_: CIImage): id; message 'initWithCIImage:'; { available in macos 10.5 }
     class function imageRepsWithData (data: NSData): NSArray; message 'imageRepsWithData:';
     class function imageRepWithData (data: NSData): id; message 'imageRepWithData:';
     function initWithData (data: NSData): id; message 'initWithData:';
@@ -118,10 +118,10 @@ type
     function colorAtX_y (x: NSInteger; y: NSInteger): NSColor; message 'colorAtX:y:';
     procedure getPixel_atX_y (p: NSUIntegerPtr { variable size array of NSUInteger }; x: NSInteger; y: NSInteger); message 'getPixel:atX:y:';
     procedure setPixel_atX_y (p: NSUIntegerPtr { variable size array of NSUInteger }; x: NSInteger; y: NSInteger); message 'setPixel:atX:y:';
-    function CGImage: CGImageRef; message 'CGImage'; { available in macos  }
-    function colorSpace: NSColorSpace; message 'colorSpace'; { available in macos  }
-    function bitmapImageRepByConvertingToColorSpace_renderingIntent (targetSpace: NSColorSpace; renderingIntent: NSColorRenderingIntent): NSBitmapImageRep; message 'bitmapImageRepByConvertingToColorSpace:renderingIntent:'; { available in macos  }
-    function bitmapImageRepByRetaggingWithColorSpace (newSpace: NSColorSpace): NSBitmapImageRep; message 'bitmapImageRepByRetaggingWithColorSpace:'; { available in macos  }
+    function CGImage: CGImageRef; message 'CGImage'; { available in macos 10.5 }
+    function colorSpace: NSColorSpace; message 'colorSpace'; { available in macos 10.6 }
+    function bitmapImageRepByConvertingToColorSpace_renderingIntent (targetSpace: NSColorSpace; renderingIntent: NSColorRenderingIntent): NSBitmapImageRep; message 'bitmapImageRepByConvertingToColorSpace:renderingIntent:'; { available in macos 10.6 }
+    function bitmapImageRepByRetaggingWithColorSpace (newSpace: NSColorSpace): NSBitmapImageRep; message 'bitmapImageRepByRetaggingWithColorSpace:'; { available in macos 10.6 }
 
     { Adopted protocols }
     class function supportsSecureCoding: objcbool; message 'supportsSecureCoding';

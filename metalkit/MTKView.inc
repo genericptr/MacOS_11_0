@@ -20,10 +20,10 @@ type
     function currentDrawable: CAMetalDrawableProtocol; message 'currentDrawable';
     procedure setFramebufferOnly(newValue: objcbool); message 'setFramebufferOnly:';
     function framebufferOnly: objcbool; message 'framebufferOnly';
-    procedure setDepthStencilAttachmentTextureUsage(newValue: MTLTextureUsage); message 'setDepthStencilAttachmentTextureUsage:'; { available in macos , ios  }
-    function depthStencilAttachmentTextureUsage: MTLTextureUsage; message 'depthStencilAttachmentTextureUsage'; { available in macos , ios  }
-    procedure setMultisampleColorAttachmentTextureUsage(newValue: MTLTextureUsage); message 'setMultisampleColorAttachmentTextureUsage:'; { available in macos , ios  }
-    function multisampleColorAttachmentTextureUsage: MTLTextureUsage; message 'multisampleColorAttachmentTextureUsage'; { available in macos , ios  }
+    procedure setDepthStencilAttachmentTextureUsage(newValue: MTLTextureUsage); message 'setDepthStencilAttachmentTextureUsage:'; { available in macos 10.15, ios 13.0 }
+    function depthStencilAttachmentTextureUsage: MTLTextureUsage; message 'depthStencilAttachmentTextureUsage'; { available in macos 10.15, ios 13.0 }
+    procedure setMultisampleColorAttachmentTextureUsage(newValue: MTLTextureUsage); message 'setMultisampleColorAttachmentTextureUsage:'; { available in macos 10.15, ios 13.0 }
+    function multisampleColorAttachmentTextureUsage: MTLTextureUsage; message 'multisampleColorAttachmentTextureUsage'; { available in macos 10.15, ios 13.0 }
     procedure setPresentsWithTransaction(newValue: objcbool); message 'setPresentsWithTransaction:';
     function presentsWithTransaction: objcbool; message 'presentsWithTransaction';
     procedure setColorPixelFormat(newValue: MTLPixelFormat); message 'setColorPixelFormat:';
@@ -50,8 +50,8 @@ type
     function autoResizeDrawable: objcbool; message 'autoResizeDrawable';
     procedure setDrawableSize(newValue: CGSize); message 'setDrawableSize:';
     function drawableSize: CGSize; message 'drawableSize';
-    function preferredDrawableSize: CGSize; message 'preferredDrawableSize'; { available in macos  }
-    function preferredDevice: MTLDeviceProtocol; message 'preferredDevice'; { available in macos , ios  }
+    function preferredDrawableSize: CGSize; message 'preferredDrawableSize'; { available in macos 10.15 }
+    function preferredDevice: MTLDeviceProtocol; message 'preferredDevice'; { available in macos 10.15, ios 13.0 }
     procedure setPaused(newValue: objcbool); message 'setPaused:';
     function isPaused: objcbool; message 'isPaused';
     procedure setColorspace(newValue: CGColorSpaceRef); message 'setColorspace:'; { available in 10_12 }

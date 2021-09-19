@@ -13,9 +13,9 @@ type
 const
   NSFetchRequestType = 1;
   NSSaveRequestType = 2;
-  NSBatchInsertRequestType = 5 { available in macosx ,ios ,tvos ,watchos  };
-  NSBatchUpdateRequestType = 6 { available in macosx , ios  };
-  NSBatchDeleteRequestType = 7 { available in macosx , ios  };
+  NSBatchInsertRequestType = 5 { available in macosx 10.15,ios 13.0,tvos 13.0,watchos 6.0 };
+  NSBatchUpdateRequestType = 6 { available in macosx 10.10, ios 8.0 };
+  NSBatchDeleteRequestType = 7 { available in macosx 10.11, ios 9.0 };
 {$endif}
 
 {$ifdef CLASSES}

@@ -3,23 +3,23 @@
 {$if defined(__NULL_MACRO__)}
 {$ifdef EXTERNAL_SYMBOLS}
 var
-  AVFoundationErrorDomain: NSErrorDomain { available in macos , ios , tvos , watchos  }; cvar; external;
-  AVErrorDeviceKey: NSString { available in macos , ios , tvos , watchos  }; cvar; external;
-  AVErrorTimeKey: NSString { available in macos , ios , tvos , watchos  }; cvar; external;
-  AVErrorFileSizeKey: NSString { available in macos , ios , tvos , watchos  }; cvar; external;
-  AVErrorPIDKey: NSString { available in macos , ios , tvos , watchos  }; cvar; external;
-  AVErrorRecordingSuccessfullyFinishedKey: NSString { available in macos , ios , tvos , watchos  }; cvar; external;
-  AVErrorMediaTypeKey: NSString { available in macos , ios , tvos , watchos  }; cvar; external;
-  AVErrorMediaSubTypeKey: NSString { available in macos , ios , tvos , watchos  }; cvar; external;
-  AVErrorPresentationTimeStampKey: NSString { available in macos , ios , tvos , watchos  }; cvar; external;
-  AVErrorPersistentTrackIDKey: NSString { available in macos , ios , tvos , watchos  }; cvar; external;
-  AVErrorFileTypeKey: NSString { available in macos , ios , tvos , watchos  }; cvar; external;
+  AVFoundationErrorDomain: NSErrorDomain { available in macos 10.7, ios 4.0, tvos 9.0, watchos 1.0 }; cvar; external;
+  AVErrorDeviceKey: NSString { available in macos 10.7, ios 4.0, tvos 9.0, watchos 1.0 }; cvar; external;
+  AVErrorTimeKey: NSString { available in macos 10.7, ios 4.0, tvos 9.0, watchos 1.0 }; cvar; external;
+  AVErrorFileSizeKey: NSString { available in macos 10.7, ios 4.0, tvos 9.0, watchos 1.0 }; cvar; external;
+  AVErrorPIDKey: NSString { available in macos 10.7, ios 4.0, tvos 9.0, watchos 1.0 }; cvar; external;
+  AVErrorRecordingSuccessfullyFinishedKey: NSString { available in macos 10.7, ios 4.0, tvos 9.0, watchos 1.0 }; cvar; external;
+  AVErrorMediaTypeKey: NSString { available in macos 10.7, ios 4.3, tvos 9.0, watchos 1.0 }; cvar; external;
+  AVErrorMediaSubTypeKey: NSString { available in macos 10.7, ios 4.3, tvos 9.0, watchos 1.0 }; cvar; external;
+  AVErrorPresentationTimeStampKey: NSString { available in macos 10.10, ios 8.0, tvos 9.0, watchos 1.0 }; cvar; external;
+  AVErrorPersistentTrackIDKey: NSString { available in macos 10.10, ios 8.0, tvos 9.0, watchos 1.0 }; cvar; external;
+  AVErrorFileTypeKey: NSString { available in macos 10.10, ios 8.0, tvos 9.0, watchos 1.0 }; cvar; external;
 {$endif}
 
 {$if (defined(TARGET_OS_MAC) and not (defined(TARGET_OS_EMBEDDED) or defined(TARGET_OS_IPHONE)))}
 {$ifdef EXTERNAL_SYMBOLS}
 var
-  AVErrorDiscontinuityFlagsKey: NSString { unavailable in ios, tvos, watchos }; cvar; external;
+  AVErrorDiscontinuityFlagsKey: NSString { unavailable in ios, tvos, watchos } { available in macos 10.7 }; cvar; external;
 {$endif}
 
 {$endif}
@@ -67,7 +67,7 @@ const
   AVErrorContentIsNotAuthorized = -11835;
   AVErrorApplicationIsNotAuthorized = -11836;
   {$if defined(TARGET_OS_IPHONE)}
-  AVErrorDeviceIsNotAvailableInBackground = -11837 { unavailable in watchos };
+  AVErrorDeviceIsNotAvailableInBackground = -11837 { unavailable in watchos } { unavailable in macos };
   {$endif}
   AVErrorOperationNotSupportedForAsset = -11838;
   AVErrorDecoderTemporarilyUnavailable = -11839;
@@ -85,30 +85,30 @@ const
   AVErrorFailedToLoadMediaData = -11849;
   AVErrorServerIncorrectlyConfigured = -11850;
   AVErrorApplicationIsNotAuthorizedToUseDevice = -11852;
-  AVErrorFailedToParse = -11853 { available in macos , ios , tvos , watchos  };
-  AVErrorFileTypeDoesNotSupportSampleReferences = -11854 { available in macos , ios , tvos , watchos  };
-  AVErrorUndecodableMediaData = -11855 { available in macos , ios , tvos , watchos  };
-  AVErrorAirPlayControllerRequiresInternet = -11856 { available in macos , ios , tvos , watchos  };
-  AVErrorAirPlayReceiverRequiresInternet = -11857 { available in macos , ios , tvos , watchos  };
-  AVErrorVideoCompositorFailed = -11858 { available in macos , ios , tvos , watchos  };
-  AVErrorRecordingAlreadyInProgress = -11859 { unavailable in macos };
-  AVErrorCreateContentKeyRequestFailed = -11860 { unavailable in ios, tvos };
-  AVErrorUnsupportedOutputSettings = -11861 { available in macos , ios , tvos , watchos  };
-  AVErrorOperationNotAllowed = -11862 { available in macos , ios , tvos , watchos  };
-  AVErrorContentIsUnavailable = -11863 { available in macos , ios , tvos , watchos  };
-  AVErrorFormatUnsupported = -11864 { available in macos , ios , tvos , watchos  };
-  AVErrorMalformedDepth = -11865 { available in macos , ios , tvos , watchos  };
-  AVErrorContentNotUpdated = -11866 { available in macos , ios , tvos , watchos  };
-  AVErrorNoLongerPlayable = -11867 { available in macos , ios , tvos , watchos  };
-  AVErrorNoCompatibleAlternatesForExternalDisplay = -11868 { available in macos , ios , tvos , watchos  };
-  AVErrorNoSourceTrack = -11869 { available in macos , ios , tvos , watchos  };
-  AVErrorExternalPlaybackNotSupportedForAsset = -11870 { available in macos , ios , tvos , watchos  };
-  AVErrorOperationNotSupportedForPreset = -11871 { available in macos , ios , tvos , watchos  };
-  AVErrorSessionHardwareCostOverage = -11872 { unavailable in macos };
-  AVErrorUnsupportedDeviceActiveFormat = -11873 { unavailable in macos };
-  AVErrorIncorrectlyConfigured = -11875 { available in macos , ios , tvos , watchos  };
-  AVErrorSegmentStartedWithNonSyncSample = -11876 { available in macos , ios , tvos , watchos  };
-  AVErrorRosettaNotInstalled = -11877 { available in macos , ios , tvos , watchos  };
+  AVErrorFailedToParse = -11853 { available in macos 10.10, ios 8.0, tvos 9.0, watchos 1.0 };
+  AVErrorFileTypeDoesNotSupportSampleReferences = -11854 { available in macos 10.10, ios 8.0, tvos 9.0, watchos 1.0 };
+  AVErrorUndecodableMediaData = -11855 { available in macos 10.10, ios 8.0, tvos 9.0, watchos 1.0 };
+  AVErrorAirPlayControllerRequiresInternet = -11856 { available in macos 10.10, ios 8.3, tvos 9.0, watchos 1.3 };
+  AVErrorAirPlayReceiverRequiresInternet = -11857 { available in macos 10.10, ios 8.3, tvos 9.0, watchos 1.3 };
+  AVErrorVideoCompositorFailed = -11858 { available in macos 10.11, ios 9.0, tvos 9.0, watchos 2.0 };
+  AVErrorRecordingAlreadyInProgress = -11859 { unavailable in macos } { available in ios 9.0, tvos 9.0, watchos 2.0 };
+  AVErrorCreateContentKeyRequestFailed = -11860 { unavailable in ios, tvos } { unavailable in watchos };
+  AVErrorUnsupportedOutputSettings = -11861 { available in macos 10.12, ios 10.0, tvos 10.0, watchos 3.0 };
+  AVErrorOperationNotAllowed = -11862 { available in macos 10.12, ios 10.0, tvos 10.0, watchos 3.0 };
+  AVErrorContentIsUnavailable = -11863 { available in macos 10.13, ios 11.0, tvos 11.0, watchos 4.0 };
+  AVErrorFormatUnsupported = -11864 { available in macos 10.13, ios 11.0, tvos 11.0, watchos 4.0 };
+  AVErrorMalformedDepth = -11865 { available in macos 10.13, ios 11.0, tvos 11.0, watchos 4.0 };
+  AVErrorContentNotUpdated = -11866 { available in macos 10.13, ios 11.0, tvos 11.0, watchos 4.0 };
+  AVErrorNoLongerPlayable = -11867 { available in macos 10.13, ios 11.0, tvos 11.0, watchos 4.0 };
+  AVErrorNoCompatibleAlternatesForExternalDisplay = -11868 { available in macos 10.13, ios 11.0, tvos 11.0, watchos 4.0 };
+  AVErrorNoSourceTrack = -11869 { available in macos 10.13.2, ios 11.2, tvos 11.2, watchos 4.2 };
+  AVErrorExternalPlaybackNotSupportedForAsset = -11870 { available in macos 10.14, ios 12.0, tvos 12.0, watchos 5.0 };
+  AVErrorOperationNotSupportedForPreset = -11871 { available in macos 10.15, ios 13.0, tvos 13.0, watchos 6.0 };
+  AVErrorSessionHardwareCostOverage = -11872 { unavailable in macos } { unavailable in tvos, watchos };
+  AVErrorUnsupportedDeviceActiveFormat = -11873 { unavailable in macos } { unavailable in tvos, watchos };
+  AVErrorIncorrectlyConfigured = -11875 { available in macos 11.0, ios 14.0, tvos 14.0, watchos 7.0 };
+  AVErrorSegmentStartedWithNonSyncSample = -11876 { available in macos 11.0, ios 14.0, tvos 14.0, watchos 7.0 };
+  AVErrorRosettaNotInstalled = -11877 { available in macos 11.0, ios 14.0, tvos 14.0, watchos 7.0 };
 {$endif}
 
 {$else}

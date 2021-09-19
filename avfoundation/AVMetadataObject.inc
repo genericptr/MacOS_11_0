@@ -15,8 +15,8 @@ type
 {$if defined(__NULL_MACRO__)}
 {$ifdef TYPES}
 type
-  AVMetadataObjectType = NSString { unavailable in watchos };
-  AVMetadataObjectTypePtr = ^AVMetadataObjectType { unavailable in watchos };
+  AVMetadataObjectType = NSString { unavailable in watchos } { available in macos 10.10, ios 6.0, macCatalyst 14.0, tvos 9.0 };
+  AVMetadataObjectTypePtr = ^AVMetadataObjectType { unavailable in watchos } { available in macos 10.10, ios 6.0, macCatalyst 14.0, tvos 9.0 };
 {$endif}
 
 {$ifdef CLASSES}
@@ -44,7 +44,7 @@ type
 
 {$ifdef EXTERNAL_SYMBOLS}
 var
-  AVMetadataObjectTypeHumanBody: AVMetadataObjectType { unavailable in tvos }; cvar; external;
+  AVMetadataObjectTypeHumanBody: AVMetadataObjectType { unavailable in tvos } { unavailable in watchos }; cvar; external;
 {$endif}
 
 {$ifdef CLASSES}
@@ -56,7 +56,7 @@ type
 
 {$ifdef EXTERNAL_SYMBOLS}
 var
-  AVMetadataObjectTypeCatBody: AVMetadataObjectType { unavailable in tvos }; cvar; external;
+  AVMetadataObjectTypeCatBody: AVMetadataObjectType { unavailable in tvos } { unavailable in watchos }; cvar; external;
 {$endif}
 
 {$ifdef CLASSES}
@@ -68,7 +68,7 @@ type
 
 {$ifdef EXTERNAL_SYMBOLS}
 var
-  AVMetadataObjectTypeDogBody: AVMetadataObjectType { unavailable in tvos }; cvar; external;
+  AVMetadataObjectTypeDogBody: AVMetadataObjectType { unavailable in tvos } { unavailable in watchos }; cvar; external;
 {$endif}
 
 {$ifdef CLASSES}
@@ -80,7 +80,7 @@ type
 
 {$ifdef EXTERNAL_SYMBOLS}
 var
-  AVMetadataObjectTypeSalientObject: AVMetadataObjectType { unavailable in tvos }; cvar; external;
+  AVMetadataObjectTypeSalientObject: AVMetadataObjectType { unavailable in tvos } { unavailable in watchos }; cvar; external;
 {$endif}
 
 {$ifdef CLASSES}
@@ -97,7 +97,7 @@ type
 
 {$ifdef EXTERNAL_SYMBOLS}
 var
-  AVMetadataObjectTypeFace: AVMetadataObjectType { unavailable in watchos }; cvar; external;
+  AVMetadataObjectTypeFace: AVMetadataObjectType { unavailable in watchos } { available in macos 10.10, ios 6.0, macCatalyst 14.0, tvos 9.0 }; cvar; external;
 {$endif}
 
 {$ifdef CLASSES}
@@ -120,19 +120,19 @@ type
 
 {$ifdef EXTERNAL_SYMBOLS}
 var
-  AVMetadataObjectTypeUPCECode: AVMetadataObjectType { unavailable in watchos }; cvar; external;
-  AVMetadataObjectTypeCode39Code: AVMetadataObjectType { unavailable in watchos }; cvar; external;
-  AVMetadataObjectTypeCode39Mod43Code: AVMetadataObjectType { unavailable in watchos }; cvar; external;
-  AVMetadataObjectTypeEAN13Code: AVMetadataObjectType { unavailable in watchos }; cvar; external;
-  AVMetadataObjectTypeEAN8Code: AVMetadataObjectType { unavailable in watchos }; cvar; external;
-  AVMetadataObjectTypeCode93Code: AVMetadataObjectType { unavailable in watchos }; cvar; external;
-  AVMetadataObjectTypeCode128Code: AVMetadataObjectType { unavailable in watchos }; cvar; external;
-  AVMetadataObjectTypePDF417Code: AVMetadataObjectType { unavailable in watchos }; cvar; external;
-  AVMetadataObjectTypeQRCode: AVMetadataObjectType { unavailable in watchos }; cvar; external;
-  AVMetadataObjectTypeAztecCode: AVMetadataObjectType { unavailable in watchos }; cvar; external;
-  AVMetadataObjectTypeInterleaved2of5Code: AVMetadataObjectType { unavailable in watchos }; cvar; external;
-  AVMetadataObjectTypeITF14Code: AVMetadataObjectType { unavailable in watchos }; cvar; external;
-  AVMetadataObjectTypeDataMatrixCode: AVMetadataObjectType { unavailable in watchos }; cvar; external;
+  AVMetadataObjectTypeUPCECode: AVMetadataObjectType { unavailable in watchos } { available in macos 10.15, ios 7.0, macCatalyst 14.0, tvos 9.0 }; cvar; external;
+  AVMetadataObjectTypeCode39Code: AVMetadataObjectType { unavailable in watchos } { available in macos 10.15, ios 7.0, macCatalyst 14.0, tvos 9.0 }; cvar; external;
+  AVMetadataObjectTypeCode39Mod43Code: AVMetadataObjectType { unavailable in watchos } { available in macos 10.15, ios 7.0, macCatalyst 14.0, tvos 9.0 }; cvar; external;
+  AVMetadataObjectTypeEAN13Code: AVMetadataObjectType { unavailable in watchos } { available in macos 10.15, ios 7.0, macCatalyst 14.0, tvos 9.0 }; cvar; external;
+  AVMetadataObjectTypeEAN8Code: AVMetadataObjectType { unavailable in watchos } { available in macos 10.15, ios 7.0, macCatalyst 14.0, tvos 9.0 }; cvar; external;
+  AVMetadataObjectTypeCode93Code: AVMetadataObjectType { unavailable in watchos } { available in macos 10.15, ios 7.0, macCatalyst 14.0, tvos 9.0 }; cvar; external;
+  AVMetadataObjectTypeCode128Code: AVMetadataObjectType { unavailable in watchos } { available in macos 10.15, ios 7.0, macCatalyst 14.0, tvos 9.0 }; cvar; external;
+  AVMetadataObjectTypePDF417Code: AVMetadataObjectType { unavailable in watchos } { available in macos 10.15, ios 7.0, macCatalyst 14.0, tvos 9.0 }; cvar; external;
+  AVMetadataObjectTypeQRCode: AVMetadataObjectType { unavailable in watchos } { available in macos 10.15, ios 7.0, macCatalyst 14.0, tvos 9.0 }; cvar; external;
+  AVMetadataObjectTypeAztecCode: AVMetadataObjectType { unavailable in watchos } { available in macos 10.15, ios 7.0, macCatalyst 14.0, tvos 9.0 }; cvar; external;
+  AVMetadataObjectTypeInterleaved2of5Code: AVMetadataObjectType { unavailable in watchos } { available in macos 10.15, ios 8.0, macCatalyst 14.0, tvos 9.0 }; cvar; external;
+  AVMetadataObjectTypeITF14Code: AVMetadataObjectType { unavailable in watchos } { available in macos 10.15, ios 8.0, macCatalyst 14.0, tvos 9.0 }; cvar; external;
+  AVMetadataObjectTypeDataMatrixCode: AVMetadataObjectType { unavailable in watchos } { available in macos 10.15, ios 8.0, macCatalyst 14.0, tvos 9.0 }; cvar; external;
 {$endif}
 
 {$ifdef CLASSES}
@@ -149,7 +149,7 @@ type
 
 type
   AVMetadataMachineReadableCodeDescriptor = objccategory external (AVMetadataMachineReadableCodeObject)
-    function descriptor: CIBarcodeDescriptor; message 'descriptor'; { unavailable in watchos }
+    function descriptor: CIBarcodeDescriptor; message 'descriptor'; { unavailable in watchos } { available in macos 10.15, ios 11.0, macCatalyst 14.0, tvos 11.0 }
   end;
 {$endif}
 

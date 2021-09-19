@@ -13,7 +13,7 @@ type
     function pixelsHigh: NSInteger; message 'pixelsHigh';
     function pixelsWide: NSInteger; message 'pixelsWide';
     function pixelFormatType: OSType; message 'pixelFormatType';
-    function sizeConstraint: MLImageSizeConstraint; message 'sizeConstraint'; { available in macos , ios , watchos , tvos  }
+    function sizeConstraint: MLImageSizeConstraint; message 'sizeConstraint'; { available in macos 10.14, ios 12.0, watchos 5.0, tvos 12.0 }
     function init: id; message 'init'; { unavailable in "" }
 
     { Adopted protocols }

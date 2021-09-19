@@ -38,8 +38,8 @@ type
     procedure setEnabled(newValue: objcbool); message 'setEnabled:';
     function isEnabled: objcbool; message 'isEnabled';
     function view: NSView; message 'view';
-    procedure setPressureConfiguration(newValue: NSPressureConfiguration); message 'setPressureConfiguration:'; { available in macos  }
-    function pressureConfiguration: NSPressureConfiguration; message 'pressureConfiguration'; { available in macos  }
+    procedure setPressureConfiguration(newValue: NSPressureConfiguration); message 'setPressureConfiguration:'; { available in macos 10.11 }
+    function pressureConfiguration: NSPressureConfiguration; message 'pressureConfiguration'; { available in macos 10.11 }
     procedure setDelaysPrimaryMouseButtonEvents(newValue: objcbool); message 'setDelaysPrimaryMouseButtonEvents:';
     function delaysPrimaryMouseButtonEvents: objcbool; message 'delaysPrimaryMouseButtonEvents';
     procedure setDelaysSecondaryMouseButtonEvents(newValue: objcbool); message 'setDelaysSecondaryMouseButtonEvents:';
@@ -61,8 +61,8 @@ type
 
 type
   NSGestureRecognizer_NSTouchBar = objccategory external name 'NSTouchBar' (NSGestureRecognizer)
-    procedure setAllowedTouchTypes(newValue: NSTouchTypeMask); message 'setAllowedTouchTypes:'; { available in macos  }
-    function allowedTouchTypes: NSTouchTypeMask; message 'allowedTouchTypes'; { available in macos  }
+    procedure setAllowedTouchTypes(newValue: NSTouchTypeMask); message 'setAllowedTouchTypes:'; { available in macos 10.12.2 }
+    function allowedTouchTypes: NSTouchTypeMask; message 'allowedTouchTypes'; { available in macos 10.12.2 }
   end;
 {$endif}
 
@@ -71,12 +71,12 @@ type
 type
   NSGestureRecognizerDelegateProtocol = objcprotocol external name 'NSGestureRecognizerDelegate' (NSObjectProtocol)
   optional
-    function gestureRecognizer_shouldAttemptToRecognizeWithEvent (gestureRecognizer: NSGestureRecognizer; event: NSEvent): objcbool; message 'gestureRecognizer:shouldAttemptToRecognizeWithEvent:'; { available in macos  }
+    function gestureRecognizer_shouldAttemptToRecognizeWithEvent (gestureRecognizer: NSGestureRecognizer; event: NSEvent): objcbool; message 'gestureRecognizer:shouldAttemptToRecognizeWithEvent:'; { available in macos 10.11 }
     function gestureRecognizerShouldBegin (gestureRecognizer: NSGestureRecognizer): objcbool; message 'gestureRecognizerShouldBegin:';
     function gestureRecognizer_shouldRecognizeSimultaneouslyWithGestureRecognizer (gestureRecognizer: NSGestureRecognizer; otherGestureRecognizer: NSGestureRecognizer): objcbool; message 'gestureRecognizer:shouldRecognizeSimultaneouslyWithGestureRecognizer:';
     function gestureRecognizer_shouldRequireFailureOfGestureRecognizer (gestureRecognizer: NSGestureRecognizer; otherGestureRecognizer: NSGestureRecognizer): objcbool; message 'gestureRecognizer:shouldRequireFailureOfGestureRecognizer:';
     function gestureRecognizer_shouldBeRequiredToFailByGestureRecognizer (gestureRecognizer: NSGestureRecognizer; otherGestureRecognizer: NSGestureRecognizer): objcbool; message 'gestureRecognizer:shouldBeRequiredToFailByGestureRecognizer:';
-    function gestureRecognizer_shouldReceiveTouch (gestureRecognizer: NSGestureRecognizer; touch: NSTouch): objcbool; message 'gestureRecognizer:shouldReceiveTouch:'; { available in macos  }
+    function gestureRecognizer_shouldReceiveTouch (gestureRecognizer: NSGestureRecognizer; touch: NSTouch): objcbool; message 'gestureRecognizer:shouldReceiveTouch:'; { available in macos 10.12.2 }
   end;
 {$endif}
 
@@ -106,11 +106,11 @@ type
     procedure tabletPoint (event: NSEvent); message 'tabletPoint:';
     procedure magnifyWithEvent (event: NSEvent); message 'magnifyWithEvent:';
     procedure rotateWithEvent (event: NSEvent); message 'rotateWithEvent:';
-    procedure pressureChangeWithEvent (event: NSEvent); message 'pressureChangeWithEvent:'; { available in macos  }
-    procedure touchesBeganWithEvent (event: NSEvent); message 'touchesBeganWithEvent:'; { available in macos  }
-    procedure touchesMovedWithEvent (event: NSEvent); message 'touchesMovedWithEvent:'; { available in macos  }
-    procedure touchesEndedWithEvent (event: NSEvent); message 'touchesEndedWithEvent:'; { available in macos  }
-    procedure touchesCancelledWithEvent (event: NSEvent); message 'touchesCancelledWithEvent:'; { available in macos  }
+    procedure pressureChangeWithEvent (event: NSEvent); message 'pressureChangeWithEvent:'; { available in macos 10.10.3 }
+    procedure touchesBeganWithEvent (event: NSEvent); message 'touchesBeganWithEvent:'; { available in macos 10.12.2 }
+    procedure touchesMovedWithEvent (event: NSEvent); message 'touchesMovedWithEvent:'; { available in macos 10.12.2 }
+    procedure touchesEndedWithEvent (event: NSEvent); message 'touchesEndedWithEvent:'; { available in macos 10.12.2 }
+    procedure touchesCancelledWithEvent (event: NSEvent); message 'touchesCancelledWithEvent:'; { available in macos 10.12.2 }
   end;
 {$endif}
 

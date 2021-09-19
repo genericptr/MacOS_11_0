@@ -14,10 +14,10 @@ type
     _outputInternal: AVCaptureOutputInternal;
   public
     function connections: NSArray; message 'connections';
-    function connectionWithMediaType (mediaType: AVMediaType): AVCaptureConnection; message 'connectionWithMediaType:'; { unavailable in tvos }
-    function transformedMetadataObjectForMetadataObject_connection (metadataObject: AVMetadataObject; connection: AVCaptureConnection): AVMetadataObject; message 'transformedMetadataObjectForMetadataObject:connection:'; { unavailable in tvos }
-    function metadataOutputRectOfInterestForRect (rectInOutputCoordinates: CGRect): CGRect; message 'metadataOutputRectOfInterestForRect:'; { unavailable in tvos }
-    function rectForMetadataOutputRectOfInterest (rectInMetadataOutputCoordinates: CGRect): CGRect; message 'rectForMetadataOutputRectOfInterest:'; { unavailable in tvos }
+    function connectionWithMediaType (mediaType: AVMediaType): AVCaptureConnection; message 'connectionWithMediaType:'; { unavailable in tvos } { available in ios 5.0, macCatalyst 14.0 }
+    function transformedMetadataObjectForMetadataObject_connection (metadataObject: AVMetadataObject; connection: AVCaptureConnection): AVMetadataObject; message 'transformedMetadataObjectForMetadataObject:connection:'; { unavailable in tvos } { available in macos 10.15, ios 6.0, macCatalyst 14.0 }
+    function metadataOutputRectOfInterestForRect (rectInOutputCoordinates: CGRect): CGRect; message 'metadataOutputRectOfInterestForRect:'; { unavailable in tvos } { available in macos 10.15, ios 7.0, macCatalyst 14.0 }
+    function rectForMetadataOutputRectOfInterest (rectInMetadataOutputCoordinates: CGRect): CGRect; message 'rectForMetadataOutputRectOfInterest:'; { unavailable in tvos } { available in macos 10.15, ios 7.0, macCatalyst 14.0 }
   end;
 {$endif}
 

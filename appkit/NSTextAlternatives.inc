@@ -27,7 +27,7 @@ type
 
 {$ifdef EXTERNAL_SYMBOLS}
 var
-  NSTextAlternativesSelectedAlternativeStringNotification: NSNotificationName { available in macos  }; cvar; external;
+  NSTextAlternativesSelectedAlternativeStringNotification: NSNotificationName { available in macos 10.8 }; cvar; external;
 {$endif}
 
 {$endif}

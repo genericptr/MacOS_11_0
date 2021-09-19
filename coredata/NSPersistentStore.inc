@@ -13,7 +13,7 @@ type
   public
     class function metadataForPersistentStoreWithURL_error (url: NSURL; error: NSErrorPtr): NSDictionary; message 'metadataForPersistentStoreWithURL:error:';
     class function setMetadata_forPersistentStoreWithURL_error (metadata: NSDictionary; url: NSURL; error: NSErrorPtr): objcbool; message 'setMetadata:forPersistentStoreWithURL:error:';
-    class function migrationManagerClass: pobjc_class; message 'migrationManagerClass'; { available in macosx ,ios  }
+    class function migrationManagerClass: pobjc_class; message 'migrationManagerClass'; { available in macosx 10.6,ios 3.0 }
     function initWithPersistentStoreCoordinator_configurationName_URL_options (root: NSPersistentStoreCoordinator; name: NSString; url: NSURL; options: NSDictionary): id; message 'initWithPersistentStoreCoordinator:configurationName:URL:options:'; { NS_DESIGNATED_INITIALIZER }
     function init: id; message 'init';
     function loadMetadata (error: NSErrorPtr): objcbool; message 'loadMetadata:';
@@ -31,7 +31,7 @@ type
     function metadata: NSDictionary; message 'metadata';
     procedure didAddToPersistentStoreCoordinator (coordinator: NSPersistentStoreCoordinator); message 'didAddToPersistentStoreCoordinator:';
     procedure willRemoveFromPersistentStoreCoordinator (coordinator: NSPersistentStoreCoordinator); message 'willRemoveFromPersistentStoreCoordinator:';
-    function coreSpotlightExporter: NSCoreDataCoreSpotlightDelegate; message 'coreSpotlightExporter'; { unavailable in tvos,watchos }
+    function coreSpotlightExporter: NSCoreDataCoreSpotlightDelegate; message 'coreSpotlightExporter'; { unavailable in tvos,watchos } { available in macosx 10.13,ios 11.0 }
   end;
 {$endif}
 

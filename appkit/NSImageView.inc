@@ -10,7 +10,7 @@ type
 type
   NSImageView = objcclass external (NSControl, NSAccessibilityImageProtocol, NSMenuItemValidationProtocol)
   public
-    class function imageViewWithImage (image: NSImage): id; message 'imageViewWithImage:'; { available in macos  }
+    class function imageViewWithImage (image: NSImage): id; message 'imageViewWithImage:'; { available in macos 10.12 }
     procedure setImage(newValue: NSImage); message 'setImage:';
     function image: NSImage; message 'image';
     procedure setEditable(newValue: objcbool); message 'setEditable:';
@@ -21,10 +21,10 @@ type
     function imageScaling: NSImageScaling; message 'imageScaling';
     procedure setImageFrameStyle(newValue: NSImageFrameStyle); message 'setImageFrameStyle:';
     function imageFrameStyle: NSImageFrameStyle; message 'imageFrameStyle';
-    procedure setSymbolConfiguration(newValue: NSImageSymbolConfiguration); message 'setSymbolConfiguration:'; { available in macos  }
-    function symbolConfiguration: NSImageSymbolConfiguration; message 'symbolConfiguration'; { available in macos  }
-    procedure setContentTintColor(newValue: NSColor); message 'setContentTintColor:'; { available in macos  }
-    function contentTintColor: NSColor; message 'contentTintColor'; { available in macos  }
+    procedure setSymbolConfiguration(newValue: NSImageSymbolConfiguration); message 'setSymbolConfiguration:'; { available in macos 11 }
+    function symbolConfiguration: NSImageSymbolConfiguration; message 'symbolConfiguration'; { available in macos 11 }
+    procedure setContentTintColor(newValue: NSColor); message 'setContentTintColor:'; { available in macos 10.14 }
+    function contentTintColor: NSColor; message 'contentTintColor'; { available in macos 10.14 }
     procedure setAnimates(newValue: objcbool); message 'setAnimates:';
     function animates: objcbool; message 'animates';
     procedure setAllowsCutCopyPaste(newValue: objcbool); message 'setAllowsCutCopyPaste:';

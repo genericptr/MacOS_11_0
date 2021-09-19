@@ -21,15 +21,15 @@ type
   public
     function status: AVQueuedSampleBufferRenderingStatus; message 'status';
     function error: NSError; message 'error';
-    procedure setAudioOutputDeviceUniqueID(newValue: NSString); message 'setAudioOutputDeviceUniqueID:'; { unavailable in ios, tvos, watchos }
-    function audioOutputDeviceUniqueID: NSString; message 'audioOutputDeviceUniqueID'; { unavailable in ios, tvos, watchos }
+    procedure setAudioOutputDeviceUniqueID(newValue: NSString); message 'setAudioOutputDeviceUniqueID:'; { unavailable in ios, tvos, watchos } { available in macos 10.13 }
+    function audioOutputDeviceUniqueID: NSString; message 'audioOutputDeviceUniqueID'; { unavailable in ios, tvos, watchos } { available in macos 10.13 }
     procedure setAudioTimePitchAlgorithm(newValue: AVAudioTimePitchAlgorithm); message 'setAudioTimePitchAlgorithm:';
     function audioTimePitchAlgorithm: AVAudioTimePitchAlgorithm; message 'audioTimePitchAlgorithm';
 
     { Adopted protocols }
     procedure enqueueSampleBuffer (sampleBuffer: CMSampleBufferRef); message 'enqueueSampleBuffer:';
     procedure flush; message 'flush';
-    function hasSufficientMediaDataForReliablePlaybackStart: objcbool; message 'hasSufficientMediaDataForReliablePlaybackStart'; { available in macos , ios , tvos , watchos  }
+    function hasSufficientMediaDataForReliablePlaybackStart: objcbool; message 'hasSufficientMediaDataForReliablePlaybackStart'; { available in macos 11.3, ios 14.5, tvos 14.5, watchos 7.4 }
     function isReadyForMoreMediaData: objcbool; message 'isReadyForMoreMediaData';
     procedure requestMediaDataWhenReadyOnQueue_usingBlock (queue: dispatch_queue_t; block: AVQueuedSampleBufferRenderingRequestMediaDataWhenReadyOnQueueCallback); message 'requestMediaDataWhenReadyOnQueue:usingBlock:';
     procedure stopRequestingMediaData; message 'stopRequestingMediaData';

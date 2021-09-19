@@ -120,8 +120,8 @@ type
     procedure resetCursorRects; message 'resetCursorRects';
     procedure setToolTip_forCell (toolTipString: NSString; cell: NSCell); message 'setToolTip:forCell:';
     function toolTipForCell (cell: NSCell): NSString; message 'toolTipForCell:';
-    procedure setAutorecalculatesCellSize(newValue: objcbool); message 'setAutorecalculatesCellSize:'; { available in macos  }
-    function autorecalculatesCellSize: objcbool; message 'autorecalculatesCellSize'; { available in macos  }
+    procedure setAutorecalculatesCellSize(newValue: objcbool); message 'setAutorecalculatesCellSize:'; { available in macos 10.8 }
+    function autorecalculatesCellSize: objcbool; message 'autorecalculatesCellSize'; { available in macos 10.8 }
 
     { Adopted protocols }
     function validateUserInterfaceItem (item: NSValidatedUserInterfaceItemProtocol): objcbool; message 'validateUserInterfaceItem:';

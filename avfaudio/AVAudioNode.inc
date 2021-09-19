@@ -43,10 +43,10 @@ type
     function numberOfOutputs: NSUInteger; message 'numberOfOutputs';
     function lastRenderTime: AVAudioTime; message 'lastRenderTime';
     {$if defined(AVAUDIONODE_HAVE_AUAUDIOUNIT)}
-    function AUAudioUnit_: AUAudioUnit; message 'AUAudioUnit'; { available in macos , ios , watchos , tvos  }
+    function AUAudioUnit_: AUAudioUnit; message 'AUAudioUnit'; { available in macos 10.13, ios 11.0, watchos 4.0, tvos 11.0 }
     {$endif}
-    function latency: NSTimeInterval; message 'latency'; { available in macos , ios , watchos , tvos  }
-    function outputPresentationLatency: NSTimeInterval; message 'outputPresentationLatency'; { available in macos , ios , watchos , tvos  }
+    function latency: NSTimeInterval; message 'latency'; { available in macos 10.13, ios 11.0, watchos 4.0, tvos 11.0 }
+    function outputPresentationLatency: NSTimeInterval; message 'outputPresentationLatency'; { available in macos 10.13, ios 11.0, watchos 4.0, tvos 11.0 }
   end;
 {$endif}
 

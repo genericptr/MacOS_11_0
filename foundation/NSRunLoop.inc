@@ -21,7 +21,7 @@ type
 {$ifdef EXTERNAL_SYMBOLS}
 var
   NSDefaultRunLoopMode: NSRunLoopMode; cvar; external;
-  NSRunLoopCommonModes: NSRunLoopMode { available in macos , ios , watchos , tvos  }; cvar; external;
+  NSRunLoopCommonModes: NSRunLoopMode { available in macos 10.5, ios 2.0, watchos 2.0, tvos 9.0 }; cvar; external;
 {$endif}
 
 {$ifdef CLASSES}
@@ -37,7 +37,7 @@ type
     _reserved:array[0..5] of pointer;
   public
     class function currentRunLoop: NSRunLoop; message 'currentRunLoop';
-    class function mainRunLoop: NSRunLoop; message 'mainRunLoop'; { available in macos , ios , watchos , tvos  }
+    class function mainRunLoop: NSRunLoop; message 'mainRunLoop'; { available in macos 10.5, ios 2.0, watchos 2.0, tvos 9.0 }
     function currentMode: NSRunLoopMode; message 'currentMode';
     function getCFRunLoop: CFRunLoopRef; message 'getCFRunLoop'; { CF_RETURNS_NOT_RETAINED }
     procedure addTimer_forMode (timer: NSTimer; mode: NSRunLoopMode); message 'addTimer:forMode:';
@@ -56,8 +56,8 @@ type
     {$if defined(TARGET_OS_OSX)}
     procedure configureAsServer; message 'configureAsServer'; deprecated 'Not supported';
     {$endif}
-    procedure performInModes_block (modes: NSArray; block: NSRunLoopPerformInModesCallback); message 'performInModes:block:'; { available in macosx , ios , watchos , tvos  }
-    procedure performBlock (block: NSRunLoopPerformBlockCallback); message 'performBlock:'; { available in macosx , ios , watchos , tvos  }
+    procedure performInModes_block (modes: NSArray; block: NSRunLoopPerformInModesCallback); message 'performInModes:block:'; { available in macosx 10.12, ios 10.0, watchos 3.0, tvos 10.0 }
+    procedure performBlock (block: NSRunLoopPerformBlockCallback); message 'performBlock:'; { available in macosx 10.12, ios 10.0, watchos 3.0, tvos 10.0 }
   end;
 
 type

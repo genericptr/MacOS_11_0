@@ -10,14 +10,14 @@ type
 {$if defined(__NULL_MACRO__)}
 {$ifdef TYPES}
 type
-  AVAssetDownloadedAssetEvictionPriority = NSString { unavailable in tvos, watchos };
-  AVAssetDownloadedAssetEvictionPriorityPtr = ^AVAssetDownloadedAssetEvictionPriority { unavailable in tvos, watchos };
+  AVAssetDownloadedAssetEvictionPriority = NSString { unavailable in tvos, watchos } { available in macos 10.15, ios 11.0 };
+  AVAssetDownloadedAssetEvictionPriorityPtr = ^AVAssetDownloadedAssetEvictionPriority { unavailable in tvos, watchos } { available in macos 10.15, ios 11.0 };
 {$endif}
 
 {$ifdef EXTERNAL_SYMBOLS}
 var
-  AVAssetDownloadedAssetEvictionPriorityImportant: AVAssetDownloadedAssetEvictionPriority { unavailable in tvos, watchos }; cvar; external;
-  AVAssetDownloadedAssetEvictionPriorityDefault: AVAssetDownloadedAssetEvictionPriority { unavailable in tvos, watchos }; cvar; external;
+  AVAssetDownloadedAssetEvictionPriorityImportant: AVAssetDownloadedAssetEvictionPriority { unavailable in tvos, watchos } { available in macos 10.15, ios 11.0 }; cvar; external;
+  AVAssetDownloadedAssetEvictionPriorityDefault: AVAssetDownloadedAssetEvictionPriority { unavailable in tvos, watchos } { available in macos 10.15, ios 11.0 }; cvar; external;
 {$endif}
 
 {$ifdef CLASSES}

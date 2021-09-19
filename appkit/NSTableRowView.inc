@@ -18,8 +18,8 @@ type
     function isGroupRowStyle: objcbool; message 'isGroupRowStyle';
     procedure setSelected(newValue: objcbool); message 'setSelected:';
     function isSelected: objcbool; message 'isSelected';
-    procedure setPreviousRowSelected(newValue: objcbool); message 'setPreviousRowSelected:'; { available in macos  }
-    function isPreviousRowSelected: objcbool; message 'isPreviousRowSelected'; { available in macos  }
+    procedure setPreviousRowSelected(newValue: objcbool); message 'setPreviousRowSelected:'; { available in macos 10.10 }
+    function isPreviousRowSelected: objcbool; message 'isPreviousRowSelected'; { available in macos 10.10 }
     procedure setNextRowSelected(newValue: objcbool); message 'setNextRowSelected:';
     function isNextRowSelected: objcbool; message 'isNextRowSelected';
     procedure setFloating(newValue: objcbool); message 'setFloating:';

@@ -12,7 +12,7 @@ type
   public
     function shape: NSArray; message 'shape';
     function dataType: MLMultiArrayDataType; message 'dataType';
-    function shapeConstraint: MLMultiArrayShapeConstraint; message 'shapeConstraint'; { available in macos , ios , watchos , tvos  }
+    function shapeConstraint: MLMultiArrayShapeConstraint; message 'shapeConstraint'; { available in macos 10.14, ios 12.0, watchos 5.0, tvos 12.0 }
 
     { Adopted protocols }
     procedure encodeWithCoder (coder: NSCoder); message 'encodeWithCoder:';

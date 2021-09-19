@@ -41,10 +41,10 @@ type
     function creationSource: PHProjectCreationSource; message 'creationSource';
     function projectType: PHProjectType; message 'projectType';
     function sections: NSArray; message 'sections';
-    function brandingEnabled: objcbool; message 'brandingEnabled'; { available in macos  }
-    function pageNumbersEnabled: objcbool; message 'pageNumbersEnabled'; { available in macos  }
-    function productIdentifier: NSString; message 'productIdentifier'; { available in macos  }
-    function themeIdentifier: NSString; message 'themeIdentifier'; { available in macos  }
+    function brandingEnabled: objcbool; message 'brandingEnabled'; { available in macos 10.14 }
+    function pageNumbersEnabled: objcbool; message 'pageNumbersEnabled'; { available in macos 10.14 }
+    function productIdentifier: NSString; message 'productIdentifier'; { available in macos 10.14 }
+    function themeIdentifier: NSString; message 'themeIdentifier'; { available in macos 10.14 }
     function init: id; message 'init';
     class function new_: id; message 'new';
 
@@ -91,7 +91,7 @@ type
     function numberOfColumns: NSInteger; message 'numberOfColumns';
     function aspectRatio: double; message 'aspectRatio';
     function cloudAssetIdentifiers: NSArray; message 'cloudAssetIdentifiers';
-    function backgroundColor: NSColorPtr; message 'backgroundColor'; { available in macos  }
+    function backgroundColor: NSColorPtr; message 'backgroundColor'; { available in macos 10.14 }
     function init: id; message 'init';
     class function new_: id; message 'new';
 
@@ -129,7 +129,7 @@ type
   public
     function rect: CGRect; message 'rect';
     function weight: double; message 'weight';
-    function quality: double; message 'quality'; { available in macos  }
+    function quality: double; message 'quality'; { available in macos 10.14 }
     function identifier: PHProjectRegionOfInterestIdentifier; message 'identifier';
     function init: id; message 'init';
     class function new_: id; message 'new';
@@ -147,8 +147,8 @@ type
     function annotation: NSString; message 'annotation';
     function cropRect: CGRect; message 'cropRect';
     function regionsOfInterest: NSArray; message 'regionsOfInterest';
-    function horizontallyFlipped: objcbool; message 'horizontallyFlipped'; { available in macos  }
-    function verticallyFlipped: objcbool; message 'verticallyFlipped'; { available in macos  }
+    function horizontallyFlipped: objcbool; message 'horizontallyFlipped'; { available in macos 10.14 }
+    function verticallyFlipped: objcbool; message 'verticallyFlipped'; { available in macos 10.14 }
   end;
 {$endif}
 

@@ -32,8 +32,8 @@ type
     function title: NSString; message 'title';
     procedure setBackgroundColor(newValue: NSColor); message 'setBackgroundColor:';
     function backgroundColor: NSColor; message 'backgroundColor';
-    procedure setImage(newValue: NSImage); message 'setImage:'; { available in macos  }
-    function image: NSImage; message 'image'; { available in macos  }
+    procedure setImage(newValue: NSImage); message 'setImage:'; { available in macos 10.12 }
+    function image: NSImage; message 'image'; { available in macos 10.12 }
 
     { Adopted protocols }
     function copyWithZone (zone: NSZonePtr): id; message 'copyWithZone:';

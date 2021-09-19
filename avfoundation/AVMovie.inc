@@ -12,7 +12,7 @@ type
 {$if defined(__NULL_MACRO__)}
 {$ifdef EXTERNAL_SYMBOLS}
 var
-  AVMovieReferenceRestrictionsKey: NSString { unavailable in tvos }; cvar; external;
+  AVMovieReferenceRestrictionsKey: NSString { unavailable in tvos } { available in macos 10.10, ios 13.0, watchos 6.0 }; cvar; external;
 {$endif}
 
 {$ifdef CLASSES}
@@ -25,14 +25,14 @@ type
     class function movieTypes: NSArray; message 'movieTypes';
     class function movieWithURL_options (URL: NSURL; options: NSDictionary): id; message 'movieWithURL:options:';
     function initWithURL_options (URL: NSURL; options: NSDictionary): id; message 'initWithURL:options:'; { NS_DESIGNATED_INITIALIZER }
-    class function movieWithData_options (data: NSData; options: NSDictionary): id; message 'movieWithData:options:'; { unavailable in tvos }
-    function initWithData_options (data: NSData; options: NSDictionary): id; message 'initWithData:options:'; { unavailable in tvos }
+    class function movieWithData_options (data: NSData; options: NSDictionary): id; message 'movieWithData:options:'; { unavailable in tvos } { available in macos 10.11, ios 13.0, watchos 6.0 }
+    function initWithData_options (data: NSData; options: NSDictionary): id; message 'initWithData:options:'; { unavailable in tvos } { available in macos 10.11, ios 13.0, watchos 6.0 }
     function URL: NSURL; message 'URL';
-    function data: NSData; message 'data'; { unavailable in tvos }
-    function defaultMediaDataStorage: AVMediaDataStorage; message 'defaultMediaDataStorage'; { unavailable in tvos }
+    function data: NSData; message 'data'; { unavailable in tvos } { available in macos 10.11, ios 13.0, watchos 6.0 }
+    function defaultMediaDataStorage: AVMediaDataStorage; message 'defaultMediaDataStorage'; { unavailable in tvos } { available in macos 10.11, ios 13.0, watchos 6.0 }
     function tracks: NSArray; message 'tracks';
     function canContainMovieFragments: objcbool; message 'canContainMovieFragments';
-    function containsMovieFragments: objcbool; message 'containsMovieFragments'; { unavailable in tvos }
+    function containsMovieFragments: objcbool; message 'containsMovieFragments'; { unavailable in tvos } { available in macos 10.11, ios 13.0, watchos 6.0 }
 
     { Adopted protocols }
     function mutableCopyWithZone (zone: NSZonePtr): id; message 'mutableCopyWithZone:';
@@ -53,9 +53,9 @@ const
 
 type
   AVMovieMovieHeaderSupport = objccategory external (AVMovie)
-    function movieHeaderWithFileType_error (fileType: AVFileType; outError: NSErrorPtr): NSData; message 'movieHeaderWithFileType:error:'; { unavailable in tvos }
-    function writeMovieHeaderToURL_fileType_options_error (URL_: NSURL; fileType: AVFileType; options: AVMovieWritingOptions; outError: NSErrorPtr): objcbool; message 'writeMovieHeaderToURL:fileType:options:error:'; { unavailable in tvos }
-    function isCompatibleWithFileType (fileType: AVFileType): objcbool; message 'isCompatibleWithFileType:'; { unavailable in tvos }
+    function movieHeaderWithFileType_error (fileType: AVFileType; outError: NSErrorPtr): NSData; message 'movieHeaderWithFileType:error:'; { unavailable in tvos } { available in macos 10.11, ios 13.0, watchos 6.0 }
+    function writeMovieHeaderToURL_fileType_options_error (URL_: NSURL; fileType: AVFileType; options: AVMovieWritingOptions; outError: NSErrorPtr): objcbool; message 'writeMovieHeaderToURL:fileType:options:error:'; { unavailable in tvos } { available in macos 10.11, ios 13.0, watchos 6.0 }
+    function isCompatibleWithFileType (fileType: AVFileType): objcbool; message 'isCompatibleWithFileType:'; { unavailable in tvos } { available in macos 10.11, ios 13.0, watchos 6.0 }
   end;
 
 type
@@ -73,7 +73,7 @@ type
   public
     class function movieWithURL_options_error (URL_: NSURL; options: NSDictionary; outError: NSErrorPtr): id; message 'movieWithURL:options:error:';
     function initWithURL_options_error (URL_: NSURL; options: NSDictionary; outError: NSErrorPtr): id; message 'initWithURL:options:error:'; { NS_DESIGNATED_INITIALIZER }
-    class function movieWithData_options_error (data_: NSData; options: NSDictionary; outError: NSErrorPtr): id; message 'movieWithData:options:error:'; { unavailable in tvos }
+    class function movieWithData_options_error (data_: NSData; options: NSDictionary; outError: NSErrorPtr): id; message 'movieWithData:options:error:'; { unavailable in tvos } { available in macos 10.11, ios 13.0, watchos 6.0 }
     function initWithData_options_error (data_: NSData; options: NSDictionary; outError: NSErrorPtr): id; message 'initWithData:options:error:'; { NS_DESIGNATED_INITIALIZER }
     class function movieWithSettingsFromMovie_options_error (movie: AVMovie; options: NSDictionary; outError: NSErrorPtr): id; message 'movieWithSettingsFromMovie:options:error:';
     function initWithSettingsFromMovie_options_error (movie: AVMovie; options: NSDictionary; outError: NSErrorPtr): id; message 'initWithSettingsFromMovie:options:error:'; { NS_DESIGNATED_INITIALIZER }
@@ -137,9 +137,9 @@ type
 
 {$ifdef EXTERNAL_SYMBOLS}
 var
-  AVFragmentedMovieContainsMovieFragmentsDidChangeNotification: NSString { unavailable in tvos }; cvar; external;
-  AVFragmentedMovieDurationDidChangeNotification: NSString { unavailable in tvos }; cvar; external;
-  AVFragmentedMovieWasDefragmentedNotification: NSString { unavailable in tvos }; cvar; external;
+  AVFragmentedMovieContainsMovieFragmentsDidChangeNotification: NSString { unavailable in tvos } { available in macos 10.10, ios 13.0, watchos 6.0 }; cvar; external;
+  AVFragmentedMovieDurationDidChangeNotification: NSString { unavailable in tvos } { available in macos 10.10, ios 13.0, watchos 6.0 }; cvar; external;
+  AVFragmentedMovieWasDefragmentedNotification: NSString { unavailable in tvos } { available in macos 10.10, ios 13.0, watchos 6.0 }; cvar; external;
 {$endif}
 
 {$ifdef CLASSES}
@@ -151,7 +151,7 @@ type
     function tracks: NSArray; message 'tracks';
 
     { Adopted protocols }
-    function isAssociatedWithFragmentMinder: objcbool; message 'isAssociatedWithFragmentMinder'; { available in macos , ios , tvos , watchos  }
+    function isAssociatedWithFragmentMinder: objcbool; message 'isAssociatedWithFragmentMinder'; { available in macos 10.11, ios 12.0, tvos 12.0, watchos 6.0 }
   end;
 
 

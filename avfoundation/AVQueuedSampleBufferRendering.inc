@@ -33,7 +33,7 @@ type
     function isReadyForMoreMediaData: objcbool; message 'isReadyForMoreMediaData';
     procedure requestMediaDataWhenReadyOnQueue_usingBlock (queue: dispatch_queue_t; block: AVQueuedSampleBufferRenderingRequestMediaDataWhenReadyOnQueueCallback); message 'requestMediaDataWhenReadyOnQueue:usingBlock:';
     procedure stopRequestingMediaData; message 'stopRequestingMediaData';
-    function hasSufficientMediaDataForReliablePlaybackStart: objcbool; message 'hasSufficientMediaDataForReliablePlaybackStart'; { available in macos , ios , tvos , watchos  }
+    function hasSufficientMediaDataForReliablePlaybackStart: objcbool; message 'hasSufficientMediaDataForReliablePlaybackStart'; { available in macos 11.3, ios 14.5, tvos 14.5, watchos 7.4 }
   end;
 {$endif}
 

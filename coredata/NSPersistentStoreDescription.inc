@@ -41,8 +41,8 @@ type
 
 type
   NSPersistentCloudKitContainerAdditions = objccategory external (NSPersistentStoreDescription)
-    procedure setCloudKitContainerOptions(newValue: NSPersistentCloudKitContainerOptions); message 'setCloudKitContainerOptions:'; { available in macosx ,ios ,tvos ,watchos  }
-    function cloudKitContainerOptions: NSPersistentCloudKitContainerOptions; message 'cloudKitContainerOptions'; { available in macosx ,ios ,tvos ,watchos  }
+    procedure setCloudKitContainerOptions(newValue: NSPersistentCloudKitContainerOptions); message 'setCloudKitContainerOptions:'; { available in macosx 10.15,ios 13.0,tvos 13.0,watchos 6.0 }
+    function cloudKitContainerOptions: NSPersistentCloudKitContainerOptions; message 'cloudKitContainerOptions'; { available in macosx 10.15,ios 13.0,tvos 13.0,watchos 6.0 }
   end;
 {$endif}
 

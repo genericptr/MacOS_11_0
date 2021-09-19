@@ -47,8 +47,8 @@ type
   public
     class function stringFromByteCount_countStyle (byteCount: clonglong; countStyle: NSByteCountFormatterCountStyle): NSString; message 'stringFromByteCount:countStyle:';
     function stringFromByteCount (byteCount: clonglong): NSString; message 'stringFromByteCount:';
-    class function stringFromMeasurement_countStyle (measurement: NSMeasurement; countStyle: NSByteCountFormatterCountStyle): NSString; message 'stringFromMeasurement:countStyle:'; { available in macos , ios , tvos , watchos  }
-    function stringFromMeasurement (measurement: NSMeasurement): NSString; message 'stringFromMeasurement:'; { available in macos , ios , tvos , watchos  }
+    class function stringFromMeasurement_countStyle (measurement: NSMeasurement; countStyle: NSByteCountFormatterCountStyle): NSString; message 'stringFromMeasurement:countStyle:'; { available in macos 10.15, ios 13.0, tvos 13.0, watchos 6.0 }
+    function stringFromMeasurement (measurement: NSMeasurement): NSString; message 'stringFromMeasurement:'; { available in macos 10.15, ios 13.0, tvos 13.0, watchos 6.0 }
     function stringForObjectValue (obj: id): NSString; message 'stringForObjectValue:';
     procedure setAllowedUnits(newValue: NSByteCountFormatterUnits); message 'setAllowedUnits:';
     function allowedUnits: NSByteCountFormatterUnits; message 'allowedUnits';
@@ -66,8 +66,8 @@ type
     function isAdaptive: objcbool; message 'isAdaptive';
     procedure setZeroPadsFractionDigits(newValue: objcbool); message 'setZeroPadsFractionDigits:';
     function zeroPadsFractionDigits: objcbool; message 'zeroPadsFractionDigits';
-    procedure setFormattingContext(newValue: NSFormattingContext); message 'setFormattingContext:'; { available in macos , ios , watchos , tvos  }
-    function formattingContext: NSFormattingContext; message 'formattingContext'; { available in macos , ios , watchos , tvos  }
+    procedure setFormattingContext(newValue: NSFormattingContext); message 'setFormattingContext:'; { available in macos 10.10, ios 8.0, watchos 2.0, tvos 9.0 }
+    function formattingContext: NSFormattingContext; message 'formattingContext'; { available in macos 10.10, ios 8.0, watchos 2.0, tvos 9.0 }
   end;
 {$endif}
 

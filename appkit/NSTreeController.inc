@@ -49,12 +49,12 @@ type
     function selectionIndexPath: NSIndexPath; message 'selectionIndexPath';
     function addSelectionIndexPaths (indexPaths: NSArray): objcbool; message 'addSelectionIndexPaths:';
     function removeSelectionIndexPaths (indexPaths: NSArray): objcbool; message 'removeSelectionIndexPaths:';
-    function selectedNodes: NSArray; message 'selectedNodes'; { available in macos  }
-    procedure moveNode_toIndexPath (node: NSTreeNode; indexPath: NSIndexPath); message 'moveNode:toIndexPath:'; { available in macos  }
-    procedure moveNodes_toIndexPath (nodes: NSArray; startingIndexPath: NSIndexPath); message 'moveNodes:toIndexPath:'; { available in macos  }
-    function childrenKeyPathForNode (node: NSTreeNode): NSString; message 'childrenKeyPathForNode:'; { available in macos  }
-    function countKeyPathForNode (node: NSTreeNode): NSString; message 'countKeyPathForNode:'; { available in macos  }
-    function leafKeyPathForNode (node: NSTreeNode): NSString; message 'leafKeyPathForNode:'; { available in macos  }
+    function selectedNodes: NSArray; message 'selectedNodes'; { available in macos 10.5 }
+    procedure moveNode_toIndexPath (node: NSTreeNode; indexPath: NSIndexPath); message 'moveNode:toIndexPath:'; { available in macos 10.5 }
+    procedure moveNodes_toIndexPath (nodes: NSArray; startingIndexPath: NSIndexPath); message 'moveNodes:toIndexPath:'; { available in macos 10.5 }
+    function childrenKeyPathForNode (node: NSTreeNode): NSString; message 'childrenKeyPathForNode:'; { available in macos 10.5 }
+    function countKeyPathForNode (node: NSTreeNode): NSString; message 'countKeyPathForNode:'; { available in macos 10.5 }
+    function leafKeyPathForNode (node: NSTreeNode): NSString; message 'leafKeyPathForNode:'; { available in macos 10.5 }
   end;
 {$endif}
 

@@ -28,7 +28,7 @@ type
     function recordIDsForManagedObjectIDs (managedObjectIDs: NSArray): NSDictionary; message 'recordIDsForManagedObjectIDs:';
     function canUpdateRecordForManagedObjectWithID (objectID: NSManagedObjectID): objcbool; message 'canUpdateRecordForManagedObjectWithID:';
     function canDeleteRecordForManagedObjectWithID (objectID: NSManagedObjectID): objcbool; message 'canDeleteRecordForManagedObjectWithID:';
-    function canModifyManagedObjectsInStore (store: NSPersistentStore): objcbool; message 'canModifyManagedObjectsInStore:'; { available in macosx ,ios ,tvos ,watchos  }
+    function canModifyManagedObjectsInStore (store: NSPersistentStore): objcbool; message 'canModifyManagedObjectsInStore:'; { available in macosx 11.0,ios 14.0,tvos 14.0,watchos 7.0 }
   end;
 {$endif}
 

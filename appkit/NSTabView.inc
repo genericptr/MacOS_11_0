@@ -62,10 +62,10 @@ type
     function font: NSFont; message 'font';
     procedure setTabViewType(newValue: NSTabViewType); message 'setTabViewType:';
     function tabViewType: NSTabViewType; message 'tabViewType';
-    procedure setTabPosition(newValue: NSTabPosition); message 'setTabPosition:'; { available in macos  }
-    function tabPosition: NSTabPosition; message 'tabPosition'; { available in macos  }
-    procedure setTabViewBorderType(newValue: NSTabViewBorderType); message 'setTabViewBorderType:'; { available in macos  }
-    function tabViewBorderType: NSTabViewBorderType; message 'tabViewBorderType'; { available in macos  }
+    procedure setTabPosition(newValue: NSTabPosition); message 'setTabPosition:'; { available in macos 10.12 }
+    function tabPosition: NSTabPosition; message 'tabPosition'; { available in macos 10.12 }
+    procedure setTabViewBorderType(newValue: NSTabViewBorderType); message 'setTabViewBorderType:'; { available in macos 10.12 }
+    function tabViewBorderType: NSTabViewBorderType; message 'tabViewBorderType'; { available in macos 10.12 }
     procedure setTabViewItems(newValue: NSArray); message 'setTabViewItems:';
     function tabViewItems: NSArray; message 'tabViewItems';
     procedure setAllowsTruncatedLabels(newValue: objcbool); message 'setAllowsTruncatedLabels:';

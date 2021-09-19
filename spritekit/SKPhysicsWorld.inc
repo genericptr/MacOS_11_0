@@ -38,7 +38,7 @@ type
     procedure addJoint (joint: SKPhysicsJoint); message 'addJoint:';
     procedure removeJoint (joint: SKPhysicsJoint); message 'removeJoint:';
     procedure removeAllJoints; message 'removeAllJoints';
-    function sampleFieldsAt (position: vector_float3): vector_float3; message 'sampleFieldsAt:'; { available in ios , tvos , watchos , macos  }
+    function sampleFieldsAt (position: vector_float3): vector_float3; message 'sampleFieldsAt:'; { available in ios 8.0, tvos 9.0, watchos 1.0, macos 10.10 }
     function bodyAtPoint (point: CGPoint): SKPhysicsBody; message 'bodyAtPoint:';
     function bodyInRect (rect: CGRect): SKPhysicsBody; message 'bodyInRect:';
     function bodyAlongRayStart_end (start: CGPoint; end_: CGPoint): SKPhysicsBody; message 'bodyAlongRayStart:end:';

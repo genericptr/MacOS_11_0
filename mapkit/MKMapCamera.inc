@@ -13,8 +13,8 @@ type
   public
     procedure setCenterCoordinate(newValue: CLLocationCoordinate2D); message 'setCenterCoordinate:';
     function centerCoordinate: CLLocationCoordinate2D; message 'centerCoordinate';
-    procedure setCenterCoordinateDistance(newValue: CLLocationDistance); message 'setCenterCoordinateDistance:'; { unavailable in watchos }
-    function centerCoordinateDistance: CLLocationDistance; message 'centerCoordinateDistance'; { unavailable in watchos }
+    procedure setCenterCoordinateDistance(newValue: CLLocationDistance); message 'setCenterCoordinateDistance:'; { unavailable in watchos } { available in ios 13.0, macos 10.15, tvos 13.0 }
+    function centerCoordinateDistance: CLLocationDistance; message 'centerCoordinateDistance'; { unavailable in watchos } { available in ios 13.0, macos 10.15, tvos 13.0 }
     procedure setHeading(newValue: CLLocationDirection); message 'setHeading:';
     function heading: CLLocationDirection; message 'heading';
     procedure setPitch(newValue: CGFloat); message 'setPitch:';

@@ -30,7 +30,7 @@ type
 
 {$ifdef EXTERNAL_SYMBOLS}
 var
-  AVCaptureInputPortFormatDescriptionDidChangeNotification: NSString { unavailable in tvos }; cvar; external;
+  AVCaptureInputPortFormatDescriptionDidChangeNotification: NSString { unavailable in tvos } { available in macos 10.7, ios 4.0, macCatalyst 14.0 }; cvar; external;
 {$endif}
 
 {$ifdef CLASSES}
@@ -45,9 +45,9 @@ type
     function formatDescription: CMFormatDescriptionRef; message 'formatDescription';
     procedure setEnabled(newValue: objcbool); message 'setEnabled:';
     function isEnabled: objcbool; message 'isEnabled';
-    function clock: CMClockRef; message 'clock'; { unavailable in tvos }
-    function sourceDeviceType: AVCaptureDeviceType; message 'sourceDeviceType'; { unavailable in macos, tvos }
-    function sourceDevicePosition: AVCaptureDevicePosition; message 'sourceDevicePosition'; { unavailable in macos, tvos }
+    function clock: CMClockRef; message 'clock'; { unavailable in tvos } { available in macos 10.9, ios 7.0, macCatalyst 14.0 }
+    function sourceDeviceType: AVCaptureDeviceType; message 'sourceDeviceType'; { unavailable in macos, tvos } { unavailable in watchos }
+    function sourceDevicePosition: AVCaptureDevicePosition; message 'sourceDevicePosition'; { unavailable in macos, tvos } { unavailable in watchos }
   end;
 
 type
@@ -58,11 +58,11 @@ type
     class function deviceInputWithDevice_error (device: AVCaptureDevice; outError: NSErrorPtr): id; message 'deviceInputWithDevice:error:';
     function initWithDevice_error (device: AVCaptureDevice; outError: NSErrorPtr): id; message 'initWithDevice:error:';
     function device: AVCaptureDevice; message 'device';
-    procedure setUnifiedAutoExposureDefaultsEnabled(newValue: objcbool); message 'setUnifiedAutoExposureDefaultsEnabled:'; { unavailable in macos, tvos }
-    function unifiedAutoExposureDefaultsEnabled: objcbool; message 'unifiedAutoExposureDefaultsEnabled'; { unavailable in macos, tvos }
-    function portsWithMediaType_sourceDeviceType_sourceDevicePosition (mediaType: AVMediaType; sourceDeviceType: AVCaptureDeviceType; sourceDevicePosition: AVCaptureDevicePosition): NSArray; message 'portsWithMediaType:sourceDeviceType:sourceDevicePosition:'; { unavailable in macos, tvos }
-    procedure setVideoMinFrameDurationOverride(newValue: CMTime); message 'setVideoMinFrameDurationOverride:'; { unavailable in macos, tvos }
-    function videoMinFrameDurationOverride: CMTime; message 'videoMinFrameDurationOverride'; { unavailable in macos, tvos }
+    procedure setUnifiedAutoExposureDefaultsEnabled(newValue: objcbool); message 'setUnifiedAutoExposureDefaultsEnabled:'; { unavailable in macos, tvos } { unavailable in watchos }
+    function unifiedAutoExposureDefaultsEnabled: objcbool; message 'unifiedAutoExposureDefaultsEnabled'; { unavailable in macos, tvos } { unavailable in watchos }
+    function portsWithMediaType_sourceDeviceType_sourceDevicePosition (mediaType: AVMediaType; sourceDeviceType: AVCaptureDeviceType; sourceDevicePosition: AVCaptureDevicePosition): NSArray; message 'portsWithMediaType:sourceDeviceType:sourceDevicePosition:'; { unavailable in macos, tvos } { unavailable in watchos }
+    procedure setVideoMinFrameDurationOverride(newValue: CMTime); message 'setVideoMinFrameDurationOverride:'; { unavailable in macos, tvos } { unavailable in watchos }
+    function videoMinFrameDurationOverride: CMTime; message 'videoMinFrameDurationOverride'; { unavailable in macos, tvos } { unavailable in watchos }
   end;
 
 type
@@ -83,8 +83,8 @@ type
     function scaleFactor: CGFloat; message 'scaleFactor';
     procedure setCapturesMouseClicks(newValue: objcbool); message 'setCapturesMouseClicks:';
     function capturesMouseClicks: objcbool; message 'capturesMouseClicks';
-    procedure setCapturesCursor(newValue: objcbool); message 'setCapturesCursor:'; { available in macos  }
-    function capturesCursor: objcbool; message 'capturesCursor'; { available in macos  }
+    procedure setCapturesCursor(newValue: objcbool); message 'setCapturesCursor:'; { available in macos 10.8 }
+    function capturesCursor: objcbool; message 'capturesCursor'; { available in macos 10.8 }
     procedure setRemovesDuplicateFrames(newValue: objcbool); message 'setRemovesDuplicateFrames:'; deprecated 'No longer supported.';
     function removesDuplicateFrames: objcbool; message 'removesDuplicateFrames'; deprecated 'No longer supported.';
   end;

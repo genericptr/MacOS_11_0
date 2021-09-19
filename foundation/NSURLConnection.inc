@@ -24,13 +24,13 @@ type
     function initWithRequest_delegate_startImmediately (request: NSURLRequest; delegate: id; startImmediately: objcbool): id; message 'initWithRequest:delegate:startImmediately:'; { unavailable in watchos }
     function initWithRequest_delegate (request: NSURLRequest; delegate: id): id; message 'initWithRequest:delegate:'; { unavailable in watchos }
     class function connectionWithRequest_delegate (request: NSURLRequest; delegate: id): NSURLConnection; message 'connectionWithRequest:delegate:'; { unavailable in watchos }
-    function originalRequest: NSURLRequest; message 'originalRequest'; { available in macos , ios , watchos , tvos  }
-    function currentRequest: NSURLRequest; message 'currentRequest'; { available in macos , ios , watchos , tvos  }
-    procedure start; message 'start'; { available in macos , ios , watchos , tvos  }
+    function originalRequest: NSURLRequest; message 'originalRequest'; { available in macos 10.8, ios 5.0, watchos 2.0, tvos 9.0 }
+    function currentRequest: NSURLRequest; message 'currentRequest'; { available in macos 10.8, ios 5.0, watchos 2.0, tvos 9.0 }
+    procedure start; message 'start'; { available in macos 10.5, ios 2.0, watchos 2.0, tvos 9.0 }
     procedure cancel; message 'cancel';
-    procedure scheduleInRunLoop_forMode (aRunLoop: NSRunLoop; mode: NSRunLoopMode); message 'scheduleInRunLoop:forMode:'; { available in macos , ios , watchos , tvos  }
-    procedure unscheduleFromRunLoop_forMode (aRunLoop: NSRunLoop; mode: NSRunLoopMode); message 'unscheduleFromRunLoop:forMode:'; { available in macos , ios , watchos , tvos  }
-    procedure setDelegateQueue (queue: NSOperationQueue); message 'setDelegateQueue:'; { available in macos , ios , watchos , tvos  }
+    procedure scheduleInRunLoop_forMode (aRunLoop: NSRunLoop; mode: NSRunLoopMode); message 'scheduleInRunLoop:forMode:'; { available in macos 10.5, ios 2.0, watchos 2.0, tvos 9.0 }
+    procedure unscheduleFromRunLoop_forMode (aRunLoop: NSRunLoop; mode: NSRunLoopMode); message 'unscheduleFromRunLoop:forMode:'; { available in macos 10.5, ios 2.0, watchos 2.0, tvos 9.0 }
+    procedure setDelegateQueue (queue: NSOperationQueue); message 'setDelegateQueue:'; { available in macos 10.7, ios 5.0, watchos 2.0, tvos 9.0 }
     class function canHandleRequest (request: NSURLRequest): objcbool; message 'canHandleRequest:';
   end;
 {$endif}

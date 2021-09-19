@@ -35,8 +35,8 @@ type
     function duration: NSTimeInterval; message 'duration';
     procedure setTimingMode(newValue: SKActionTimingMode); message 'setTimingMode:';
     function timingMode: SKActionTimingMode; message 'timingMode';
-    procedure setTimingFunction(newValue: SKActionTimingFunction); message 'setTimingFunction:'; { available in ios , tvos , watchos , macos  }
-    function timingFunction: SKActionTimingFunction; message 'timingFunction'; { available in ios , tvos , watchos , macos  }
+    procedure setTimingFunction(newValue: SKActionTimingFunction); message 'setTimingFunction:'; { available in ios 8.0, tvos 9.0, watchos 1.0, macos 10.10 }
+    function timingFunction: SKActionTimingFunction; message 'timingFunction'; { available in ios 8.0, tvos 9.0, watchos 1.0, macos 10.10 }
     procedure setSpeed(newValue: CGFloat); message 'setSpeed:';
     function speed: CGFloat; message 'speed';
     function reversedAction: SKAction; message 'reversedAction';
@@ -69,7 +69,7 @@ type
     class function scaleXTo_y_duration (xScale: CGFloat; yScale: CGFloat; duration_: NSTimeInterval): SKAction; message 'scaleXTo:y:duration:';
     class function scaleXTo_duration (scale: CGFloat; duration_: NSTimeInterval): SKAction; message 'scaleXTo:duration:';
     class function scaleYTo_duration (scale: CGFloat; duration_: NSTimeInterval): SKAction; message 'scaleYTo:duration:';
-    class function scaleToSize_duration (size: CGSize; duration_: NSTimeInterval): SKAction; message 'scaleToSize:duration:'; { available in ios , tvos , watchos , macos  }
+    class function scaleToSize_duration (size: CGSize; duration_: NSTimeInterval): SKAction; message 'scaleToSize:duration:'; { available in ios 10.0, tvos 10.0, watchos 3.0, macos 10.12 }
     class function sequence (actions: NSArray): SKAction; message 'sequence:';
     class function group (actions: NSArray): SKAction; message 'group:';
     class function repeatAction_count (action: SKAction; count: NSUInteger): SKAction; message 'repeatAction:count:';
@@ -78,33 +78,33 @@ type
     class function fadeOutWithDuration (duration_: NSTimeInterval): SKAction; message 'fadeOutWithDuration:';
     class function fadeAlphaBy_duration (factor: CGFloat; duration_: NSTimeInterval): SKAction; message 'fadeAlphaBy:duration:';
     class function fadeAlphaTo_duration (alpha: CGFloat; duration_: NSTimeInterval): SKAction; message 'fadeAlphaTo:duration:';
-    class function hide: SKAction; message 'hide'; { available in ios , tvos , watchos , macos  }
-    class function unhide: SKAction; message 'unhide'; { available in ios , tvos , watchos , macos  }
-    class function setTexture (texture: SKTexture): SKAction; message 'setTexture:'; { available in ios , tvos , watchos , macos  }
-    class function setNormalTexture (texture: SKTexture): SKAction; message 'setNormalTexture:'; { available in ios , tvos , watchos , macos  }
-    class function setTexture_resize (texture: SKTexture; resize: objcbool): SKAction; message 'setTexture:resize:'; { available in ios , tvos , watchos , macos  }
-    class function setNormalTexture_resize (texture: SKTexture; resize: objcbool): SKAction; message 'setNormalTexture:resize:'; { available in ios , tvos , watchos , macos  }
+    class function hide: SKAction; message 'hide'; { available in ios 8.0, tvos 9.0, watchos 1.0, macos 10.10 }
+    class function unhide: SKAction; message 'unhide'; { available in ios 8.0, tvos 9.0, watchos 1.0, macos 10.10 }
+    class function setTexture (texture: SKTexture): SKAction; message 'setTexture:'; { available in ios 7.1, tvos 7.1, watchos 1.0, macos 10.10 }
+    class function setNormalTexture (texture: SKTexture): SKAction; message 'setNormalTexture:'; { available in ios 9.0, tvos 9.0, watchos 2.0, macos 10.11 }
+    class function setTexture_resize (texture: SKTexture; resize: objcbool): SKAction; message 'setTexture:resize:'; { available in ios 7.1, tvos 7.1, watchos 1.0, macos 10.10 }
+    class function setNormalTexture_resize (texture: SKTexture; resize: objcbool): SKAction; message 'setNormalTexture:resize:'; { available in ios 9.0, tvos 9.0, watchos 2.0, macos 10.11 }
     class function animateWithTextures_timePerFrame (textures: NSArray; sec: NSTimeInterval): SKAction; message 'animateWithTextures:timePerFrame:';
-    class function animateWithNormalTextures_timePerFrame (textures: NSArray; sec: NSTimeInterval): SKAction; message 'animateWithNormalTextures:timePerFrame:'; { available in ios , tvos , watchos , macos  }
+    class function animateWithNormalTextures_timePerFrame (textures: NSArray; sec: NSTimeInterval): SKAction; message 'animateWithNormalTextures:timePerFrame:'; { available in ios 9.0, tvos 9.0, watchos 2.0, macos 10.11 }
     class function animateWithTextures_timePerFrame_resize_restore (textures: NSArray; sec: NSTimeInterval; resize: objcbool; restore: objcbool): SKAction; message 'animateWithTextures:timePerFrame:resize:restore:';
-    class function animateWithNormalTextures_timePerFrame_resize_restore (textures: NSArray; sec: NSTimeInterval; resize: objcbool; restore: objcbool): SKAction; message 'animateWithNormalTextures:timePerFrame:resize:restore:'; { available in ios , tvos , watchos , macos  }
+    class function animateWithNormalTextures_timePerFrame_resize_restore (textures: NSArray; sec: NSTimeInterval; resize: objcbool; restore: objcbool): SKAction; message 'animateWithNormalTextures:timePerFrame:resize:restore:'; { available in ios 9.0, tvos 9.0, watchos 2.0, macos 10.11 }
     class function playSoundFileNamed_waitForCompletion (soundFile: NSString; wait: objcbool): SKAction; message 'playSoundFileNamed:waitForCompletion:';
     class function colorizeWithColor_colorBlendFactor_duration (color: SKColor; colorBlendFactor: CGFloat; duration_: NSTimeInterval): SKAction; message 'colorizeWithColor:colorBlendFactor:duration:';
     class function colorizeWithColorBlendFactor_duration (colorBlendFactor: CGFloat; sec: NSTimeInterval): SKAction; message 'colorizeWithColorBlendFactor:duration:';
-    class function falloffTo_duration (falloff: single; duration_: NSTimeInterval): SKAction; message 'falloffTo:duration:'; { available in ios , tvos , watchos , macos  }
-    class function falloffBy_duration (falloff: single; duration_: NSTimeInterval): SKAction; message 'falloffBy:duration:'; { available in ios , tvos , watchos , macos  }
+    class function falloffTo_duration (falloff: single; duration_: NSTimeInterval): SKAction; message 'falloffTo:duration:'; { available in ios 8.0, tvos 9.0, watchos 1.0, macos 10.10 }
+    class function falloffBy_duration (falloff: single; duration_: NSTimeInterval): SKAction; message 'falloffBy:duration:'; { available in ios 8.0, tvos 9.0, watchos 1.0, macos 10.10 }
     class function followPath_duration (path: CGPathRef; duration_: NSTimeInterval): SKAction; message 'followPath:duration:';
     class function followPath_asOffset_orientToPath_duration (path: CGPathRef; offset: objcbool; orient: objcbool; duration_: NSTimeInterval): SKAction; message 'followPath:asOffset:orientToPath:duration:';
     class function followPath_speed (path: CGPathRef; speed_: CGFloat): SKAction; message 'followPath:speed:';
     class function followPath_asOffset_orientToPath_speed (path: CGPathRef; offset: objcbool; orient: objcbool; speed_: CGFloat): SKAction; message 'followPath:asOffset:orientToPath:speed:';
     class function speedBy_duration (speed_: CGFloat; duration_: NSTimeInterval): SKAction; message 'speedBy:duration:';
     class function speedTo_duration (speed_: CGFloat; duration_: NSTimeInterval): SKAction; message 'speedTo:duration:';
-    class function reachTo_rootNode_duration (position: CGPoint; root: SKNode; duration_: NSTimeInterval): SKAction; message 'reachTo:rootNode:duration:'; { available in ios , tvos , watchos , macos  }
-    class function reachTo_rootNode_velocity (position: CGPoint; root: SKNode; velocity: CGFloat): SKAction; message 'reachTo:rootNode:velocity:'; { available in ios , tvos , watchos , macos  }
-    class function reachToNode_rootNode_duration (node: SKNode; root: SKNode; sec: NSTimeInterval): SKAction; message 'reachToNode:rootNode:duration:'; { available in ios , tvos , watchos , macos  }
-    class function reachToNode_rootNode_velocity (node: SKNode; root: SKNode; velocity: CGFloat): SKAction; message 'reachToNode:rootNode:velocity:'; { available in ios , tvos , watchos , macos  }
-    class function strengthTo_duration (strength: single; duration_: NSTimeInterval): SKAction; message 'strengthTo:duration:'; { available in ios , tvos , watchos , macos  }
-    class function strengthBy_duration (strength: single; duration_: NSTimeInterval): SKAction; message 'strengthBy:duration:'; { available in ios , tvos , watchos , macos  }
+    class function reachTo_rootNode_duration (position: CGPoint; root: SKNode; duration_: NSTimeInterval): SKAction; message 'reachTo:rootNode:duration:'; { available in ios 8.0, tvos 9.0, watchos 1.0, macos 10.10 }
+    class function reachTo_rootNode_velocity (position: CGPoint; root: SKNode; velocity: CGFloat): SKAction; message 'reachTo:rootNode:velocity:'; { available in ios 8.0, tvos 9.0, watchos 1.0, macos 10.10 }
+    class function reachToNode_rootNode_duration (node: SKNode; root: SKNode; sec: NSTimeInterval): SKAction; message 'reachToNode:rootNode:duration:'; { available in ios 8.0, tvos 9.0, watchos 1.0, macos 10.10 }
+    class function reachToNode_rootNode_velocity (node: SKNode; root: SKNode; velocity: CGFloat): SKAction; message 'reachToNode:rootNode:velocity:'; { available in ios 8.0, tvos 9.0, watchos 1.0, macos 10.10 }
+    class function strengthTo_duration (strength: single; duration_: NSTimeInterval): SKAction; message 'strengthTo:duration:'; { available in ios 8.0, tvos 9.0, watchos 1.0, macos 10.10 }
+    class function strengthBy_duration (strength: single; duration_: NSTimeInterval): SKAction; message 'strengthBy:duration:'; { available in ios 8.0, tvos 9.0, watchos 1.0, macos 10.10 }
     class function waitForDuration (duration_: NSTimeInterval): SKAction; message 'waitForDuration:';
     class function waitForDuration_withRange (duration_: NSTimeInterval; durationRange: NSTimeInterval): SKAction; message 'waitForDuration:withRange:';
     class function removeFromParent: SKAction; message 'removeFromParent';
@@ -113,39 +113,39 @@ type
     class function runBlock_queue (block: dispatch_block_t; queue: dispatch_queue_t): SKAction; message 'runBlock:queue:';
     class function runAction_onChildWithName (action: SKAction; name: NSString): SKAction; message 'runAction:onChildWithName:';
     class function customActionWithDuration_actionBlock (duration_: NSTimeInterval; block: SKActionCustomActionWithDurationCallback): SKAction; message 'customActionWithDuration:actionBlock:';
-    class function actionNamed (name: NSString): SKAction; message 'actionNamed:'; { available in ios , tvos , watchos , macos  }
-    class function actionNamed_duration (name: NSString; duration_: NSTimeInterval): SKAction; message 'actionNamed:duration:'; { available in ios , tvos , watchos , macos  }
-    class function actionNamed_fromURL (name: NSString; url: NSURL): SKAction; message 'actionNamed:fromURL:'; { available in ios , tvos , watchos , macos  }
-    class function actionNamed_fromURL_duration (name: NSString; url: NSURL; duration_: NSTimeInterval): SKAction; message 'actionNamed:fromURL:duration:'; { available in ios , tvos , watchos , macos  }
+    class function actionNamed (name: NSString): SKAction; message 'actionNamed:'; { available in ios 9.0, tvos 9.0, watchos 2.0, macos 10.11 }
+    class function actionNamed_duration (name: NSString; duration_: NSTimeInterval): SKAction; message 'actionNamed:duration:'; { available in ios 9.0, tvos 9.0, watchos 2.0, macos 10.11 }
+    class function actionNamed_fromURL (name: NSString; url: NSURL): SKAction; message 'actionNamed:fromURL:'; { available in ios 9.0, tvos 9.0, watchos 2.0, macos 10.11 }
+    class function actionNamed_fromURL_duration (name: NSString; url: NSURL; duration_: NSTimeInterval): SKAction; message 'actionNamed:fromURL:duration:'; { available in ios 9.0, tvos 9.0, watchos 2.0, macos 10.11 }
   end;
 
 type
   NodeWithPhysicsBody = objccategory external (SKAction)
-    class function changeChargeTo_duration (v: single; duration_: NSTimeInterval): SKAction; message 'changeChargeTo:duration:'; { available in ios , tvos , watchos , macos  }
-    class function changeChargeBy_duration (v: single; duration_: NSTimeInterval): SKAction; message 'changeChargeBy:duration:'; { available in ios , tvos , watchos , macos  }
-    class function changeMassTo_duration (v: single; duration_: NSTimeInterval): SKAction; message 'changeMassTo:duration:'; { available in ios , tvos , watchos , macos  }
-    class function changeMassBy_duration (v: single; duration_: NSTimeInterval): SKAction; message 'changeMassBy:duration:'; { available in ios , tvos , watchos , macos  }
-    class function applyForce_duration (force: CGVector; duration_: NSTimeInterval): SKAction; message 'applyForce:duration:'; { available in ios , tvos , watchos , macos  }
-    class function applyForce_atPoint_duration (force: CGVector; point: CGPoint; duration_: NSTimeInterval): SKAction; message 'applyForce:atPoint:duration:'; { available in ios , tvos , watchos , macos  }
-    class function applyTorque_duration (torque: CGFloat; duration_: NSTimeInterval): SKAction; message 'applyTorque:duration:'; { available in ios , tvos , watchos , macos  }
-    class function applyImpulse_duration (impulse: CGVector; duration_: NSTimeInterval): SKAction; message 'applyImpulse:duration:'; { available in ios , tvos , watchos , macos  }
-    class function applyImpulse_atPoint_duration (impulse: CGVector; point: CGPoint; duration_: NSTimeInterval): SKAction; message 'applyImpulse:atPoint:duration:'; { available in ios , tvos , watchos , macos  }
-    class function applyAngularImpulse_duration (impulse: CGFloat; duration_: NSTimeInterval): SKAction; message 'applyAngularImpulse:duration:'; { available in ios , tvos , watchos , macos  }
+    class function changeChargeTo_duration (v: single; duration_: NSTimeInterval): SKAction; message 'changeChargeTo:duration:'; { available in ios 9.0, tvos 9.0, watchos 2.0, macos 10.11 }
+    class function changeChargeBy_duration (v: single; duration_: NSTimeInterval): SKAction; message 'changeChargeBy:duration:'; { available in ios 9.0, tvos 9.0, watchos 2.0, macos 10.11 }
+    class function changeMassTo_duration (v: single; duration_: NSTimeInterval): SKAction; message 'changeMassTo:duration:'; { available in ios 9.0, tvos 9.0, watchos 2.0, macos 10.11 }
+    class function changeMassBy_duration (v: single; duration_: NSTimeInterval): SKAction; message 'changeMassBy:duration:'; { available in ios 9.0, tvos 9.0, watchos 2.0, macos 10.11 }
+    class function applyForce_duration (force: CGVector; duration_: NSTimeInterval): SKAction; message 'applyForce:duration:'; { available in ios 9.0, tvos 9.0, watchos 2.0, macos 10.11 }
+    class function applyForce_atPoint_duration (force: CGVector; point: CGPoint; duration_: NSTimeInterval): SKAction; message 'applyForce:atPoint:duration:'; { available in ios 9.0, tvos 9.0, watchos 2.0, macos 10.11 }
+    class function applyTorque_duration (torque: CGFloat; duration_: NSTimeInterval): SKAction; message 'applyTorque:duration:'; { available in ios 9.0, tvos 9.0, watchos 2.0, macos 10.11 }
+    class function applyImpulse_duration (impulse: CGVector; duration_: NSTimeInterval): SKAction; message 'applyImpulse:duration:'; { available in ios 9.0, tvos 9.0, watchos 2.0, macos 10.11 }
+    class function applyImpulse_atPoint_duration (impulse: CGVector; point: CGPoint; duration_: NSTimeInterval): SKAction; message 'applyImpulse:atPoint:duration:'; { available in ios 9.0, tvos 9.0, watchos 2.0, macos 10.11 }
+    class function applyAngularImpulse_duration (impulse: CGFloat; duration_: NSTimeInterval): SKAction; message 'applyAngularImpulse:duration:'; { available in ios 9.0, tvos 9.0, watchos 2.0, macos 10.11 }
   end;
 
 type
   PlaybackControl = objccategory external (SKAction)
-    class function play: SKAction; message 'play'; { available in ios , tvos , watchos , macos  }
-    class function pause: SKAction; message 'pause'; { available in ios , tvos , watchos , macos  }
-    class function stop: SKAction; message 'stop'; { available in ios , tvos , watchos , macos  }
-    class function changePlaybackRateTo_duration (v: single; duration_: NSTimeInterval): SKAction; message 'changePlaybackRateTo:duration:'; { available in ios , tvos , watchos , macos  }
-    class function changePlaybackRateBy_duration (v: single; duration_: NSTimeInterval): SKAction; message 'changePlaybackRateBy:duration:'; { available in ios , tvos , watchos , macos  }
+    class function play: SKAction; message 'play'; { available in ios 9.0, tvos 9.0, watchos 2.0, macos 10.11 }
+    class function pause: SKAction; message 'pause'; { available in ios 9.0, tvos 9.0, watchos 2.0, macos 10.11 }
+    class function stop: SKAction; message 'stop'; { available in ios 9.0, tvos 9.0, watchos 2.0, macos 10.11 }
+    class function changePlaybackRateTo_duration (v: single; duration_: NSTimeInterval): SKAction; message 'changePlaybackRateTo:duration:'; { available in ios 9.0, tvos 9.0, watchos 2.0, macos 10.11 }
+    class function changePlaybackRateBy_duration (v: single; duration_: NSTimeInterval): SKAction; message 'changePlaybackRateBy:duration:'; { available in ios 9.0, tvos 9.0, watchos 2.0, macos 10.11 }
   end;
 
 type
   MixerControl = objccategory external (SKAction)
-    class function changeVolumeTo_duration (v: single; duration_: NSTimeInterval): SKAction; message 'changeVolumeTo:duration:'; { available in ios , tvos , watchos , macos  }
-    class function changeVolumeBy_duration (v: single; duration_: NSTimeInterval): SKAction; message 'changeVolumeBy:duration:'; { available in ios , tvos , watchos , macos  }
+    class function changeVolumeTo_duration (v: single; duration_: NSTimeInterval): SKAction; message 'changeVolumeTo:duration:'; { available in ios 9.0, tvos 9.0, watchos 2.0, macos 10.11 }
+    class function changeVolumeBy_duration (v: single; duration_: NSTimeInterval): SKAction; message 'changeVolumeBy:duration:'; { available in ios 9.0, tvos 9.0, watchos 2.0, macos 10.11 }
   end;
 {$endif}
 

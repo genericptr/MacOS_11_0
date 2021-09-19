@@ -36,7 +36,7 @@ const
 
 {$ifdef EXTERNAL_SYMBOLS}
 var
-  NSGridViewSizeForContent: CGFloat { available in macos  }; cvar; external;
+  NSGridViewSizeForContent: CGFloat { available in macos 10.12 }; cvar; external;
 {$endif}
 
 {$ifdef CLASSES}

@@ -130,13 +130,13 @@ type
 
 {$ifdef EXTERNAL_SYMBOLS}
 var
-  kCAAnimationLinear: CAAnimationCalculationMode { available in macos , ios , watchos , tvos  }; cvar; external;
-  kCAAnimationDiscrete: CAAnimationCalculationMode { available in macos , ios , watchos , tvos  }; cvar; external;
-  kCAAnimationPaced: CAAnimationCalculationMode { available in macos , ios , watchos , tvos  }; cvar; external;
-  kCAAnimationCubic: CAAnimationCalculationMode { available in macos , ios , watchos , tvos  }; cvar; external;
-  kCAAnimationCubicPaced: CAAnimationCalculationMode { available in macos , ios , watchos , tvos  }; cvar; external;
-  kCAAnimationRotateAuto: CAAnimationRotationMode { available in macos , ios , watchos , tvos  }; cvar; external;
-  kCAAnimationRotateAutoReverse: CAAnimationRotationMode { available in macos , ios , watchos , tvos  }; cvar; external;
+  kCAAnimationLinear: CAAnimationCalculationMode { available in macos 10.5, ios 2.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  kCAAnimationDiscrete: CAAnimationCalculationMode { available in macos 10.5, ios 2.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  kCAAnimationPaced: CAAnimationCalculationMode { available in macos 10.5, ios 2.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  kCAAnimationCubic: CAAnimationCalculationMode { available in macos 10.7, ios 4.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  kCAAnimationCubicPaced: CAAnimationCalculationMode { available in macos 10.7, ios 4.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  kCAAnimationRotateAuto: CAAnimationRotationMode { available in macos 10.5, ios 2.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  kCAAnimationRotateAutoReverse: CAAnimationRotationMode { available in macos 10.5, ios 2.0, watchos 2.0, tvos 9.0 }; cvar; external;
 {$endif}
 
 {$ifdef CLASSES}
@@ -173,14 +173,14 @@ type
 
 {$ifdef EXTERNAL_SYMBOLS}
 var
-  kCATransitionFade: CATransitionType { available in macos , ios , watchos , tvos  }; cvar; external;
-  kCATransitionMoveIn: CATransitionType { available in macos , ios , watchos , tvos  }; cvar; external;
-  kCATransitionPush: CATransitionType { available in macos , ios , watchos , tvos  }; cvar; external;
-  kCATransitionReveal: CATransitionType { available in macos , ios , watchos , tvos  }; cvar; external;
-  kCATransitionFromRight: CATransitionSubtype { available in macos , ios , watchos , tvos  }; cvar; external;
-  kCATransitionFromLeft: CATransitionSubtype { available in macos , ios , watchos , tvos  }; cvar; external;
-  kCATransitionFromTop: CATransitionSubtype { available in macos , ios , watchos , tvos  }; cvar; external;
-  kCATransitionFromBottom: CATransitionSubtype { available in macos , ios , watchos , tvos  }; cvar; external;
+  kCATransitionFade: CATransitionType { available in macos 10.5, ios 2.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  kCATransitionMoveIn: CATransitionType { available in macos 10.5, ios 2.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  kCATransitionPush: CATransitionType { available in macos 10.5, ios 2.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  kCATransitionReveal: CATransitionType { available in macos 10.5, ios 2.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  kCATransitionFromRight: CATransitionSubtype { available in macos 10.5, ios 2.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  kCATransitionFromLeft: CATransitionSubtype { available in macos 10.5, ios 2.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  kCATransitionFromTop: CATransitionSubtype { available in macos 10.5, ios 2.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  kCATransitionFromBottom: CATransitionSubtype { available in macos 10.5, ios 2.0, watchos 2.0, tvos 9.0 }; cvar; external;
 {$endif}
 
 {$ifdef CLASSES}

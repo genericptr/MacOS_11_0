@@ -16,7 +16,7 @@ const
   NSDateComponentsFormatterUnitsStyleShort = 2;
   NSDateComponentsFormatterUnitsStyleFull = 3;
   NSDateComponentsFormatterUnitsStyleSpellOut = 4;
-  NSDateComponentsFormatterUnitsStyleBrief = 5 { available in macosx , ios , watchos , tvos  };
+  NSDateComponentsFormatterUnitsStyleBrief = 5 { available in macosx 10.12, ios 10.0, watchos 3.0, tvos 10.0 };
 
 type
   NSDateComponentsFormatterZeroFormattingBehavior = NSUInteger;
@@ -68,8 +68,8 @@ type
     function zeroFormattingBehavior: NSDateComponentsFormatterZeroFormattingBehavior; message 'zeroFormattingBehavior';
     procedure setCalendar(newValue: NSCalendar); message 'setCalendar:';
     function calendar: NSCalendar; message 'calendar';
-    procedure setReferenceDate(newValue: NSDate); message 'setReferenceDate:'; { available in macosx , ios , watchos , tvos  }
-    function referenceDate: NSDate; message 'referenceDate'; { available in macosx , ios , watchos , tvos  }
+    procedure setReferenceDate(newValue: NSDate); message 'setReferenceDate:'; { available in macosx 10.13, ios 11.0, watchos 4.0, tvos 11.0 }
+    function referenceDate: NSDate; message 'referenceDate'; { available in macosx 10.13, ios 11.0, watchos 4.0, tvos 11.0 }
     procedure setAllowsFractionalUnits(newValue: objcbool); message 'setAllowsFractionalUnits:';
     function allowsFractionalUnits: objcbool; message 'allowsFractionalUnits';
     procedure setMaximumUnitCount(newValue: NSInteger); message 'setMaximumUnitCount:';

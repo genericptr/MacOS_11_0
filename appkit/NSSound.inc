@@ -31,7 +31,7 @@ type
     function setName (string_: NSSoundName): objcbool; message 'setName:';
     function name: NSSoundName; message 'name';
     class function canInitWithPasteboard (pasteboard: NSPasteboard): objcbool; message 'canInitWithPasteboard:';
-    class function soundUnfilteredTypes: NSArray; message 'soundUnfilteredTypes'; { available in macos  }
+    class function soundUnfilteredTypes: NSArray; message 'soundUnfilteredTypes'; { available in macos 10.5 }
     function initWithPasteboard (pasteboard: NSPasteboard): id; message 'initWithPasteboard:';
     procedure writeToPasteboard (pasteboard: NSPasteboard); message 'writeToPasteboard:';
     function play: objcbool; message 'play';
@@ -41,15 +41,15 @@ type
     function isPlaying: objcbool; message 'isPlaying';
     procedure setDelegate(newValue: NSSoundDelegateProtocol); message 'setDelegate:';
     function delegate: NSSoundDelegateProtocol; message 'delegate';
-    function duration: NSTimeInterval; message 'duration'; { available in macos  }
-    procedure setVolume(newValue: single); message 'setVolume:'; { available in macos  }
-    function volume: single; message 'volume'; { available in macos  }
-    procedure setCurrentTime(newValue: NSTimeInterval); message 'setCurrentTime:'; { available in macos  }
-    function currentTime: NSTimeInterval; message 'currentTime'; { available in macos  }
-    procedure setLoops(newValue: objcbool); message 'setLoops:'; { available in macos  }
-    function loops: objcbool; message 'loops'; { available in macos  }
-    procedure setPlaybackDeviceIdentifier(newValue: NSSoundPlaybackDeviceIdentifier); message 'setPlaybackDeviceIdentifier:'; { available in macos  }
-    function playbackDeviceIdentifier: NSSoundPlaybackDeviceIdentifier; message 'playbackDeviceIdentifier'; { available in macos  }
+    function duration: NSTimeInterval; message 'duration'; { available in macos 10.5 }
+    procedure setVolume(newValue: single); message 'setVolume:'; { available in macos 10.5 }
+    function volume: single; message 'volume'; { available in macos 10.5 }
+    procedure setCurrentTime(newValue: NSTimeInterval); message 'setCurrentTime:'; { available in macos 10.5 }
+    function currentTime: NSTimeInterval; message 'currentTime'; { available in macos 10.5 }
+    procedure setLoops(newValue: objcbool); message 'setLoops:'; { available in macos 10.5 }
+    function loops: objcbool; message 'loops'; { available in macos 10.5 }
+    procedure setPlaybackDeviceIdentifier(newValue: NSSoundPlaybackDeviceIdentifier); message 'setPlaybackDeviceIdentifier:'; { available in macos 10.5 }
+    function playbackDeviceIdentifier: NSSoundPlaybackDeviceIdentifier; message 'playbackDeviceIdentifier'; { available in macos 10.5 }
     procedure setChannelMapping (channelMapping: NSArray); message 'setChannelMapping:'; deprecated;
     function channelMapping: NSArray; message 'channelMapping'; deprecated;
 

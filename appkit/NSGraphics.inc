@@ -19,21 +19,21 @@ const
   NSCompositingOperationPlusDarker = 11;
   NSCompositingOperationHighlight = 12 deprecated 'Use NSCompositingOperationSourceOver instead';
   NSCompositingOperationPlusLighter = 13;
-  NSCompositingOperationMultiply = 14 { available in macos  };
-  NSCompositingOperationScreen = 15 { available in macos  };
-  NSCompositingOperationOverlay = 16 { available in macos  };
-  NSCompositingOperationDarken = 17 { available in macos  };
-  NSCompositingOperationLighten = 18 { available in macos  };
-  NSCompositingOperationColorDodge = 19 { available in macos  };
-  NSCompositingOperationColorBurn = 20 { available in macos  };
-  NSCompositingOperationSoftLight = 21 { available in macos  };
-  NSCompositingOperationHardLight = 22 { available in macos  };
-  NSCompositingOperationDifference = 23 { available in macos  };
-  NSCompositingOperationExclusion = 24 { available in macos  };
-  NSCompositingOperationHue = 25 { available in macos  };
-  NSCompositingOperationSaturation = 26 { available in macos  };
-  NSCompositingOperationColor = 27 { available in macos  };
-  NSCompositingOperationLuminosity = 28 { available in macos  };
+  NSCompositingOperationMultiply = 14 { available in macos 10.10 };
+  NSCompositingOperationScreen = 15 { available in macos 10.10 };
+  NSCompositingOperationOverlay = 16 { available in macos 10.10 };
+  NSCompositingOperationDarken = 17 { available in macos 10.10 };
+  NSCompositingOperationLighten = 18 { available in macos 10.10 };
+  NSCompositingOperationColorDodge = 19 { available in macos 10.10 };
+  NSCompositingOperationColorBurn = 20 { available in macos 10.10 };
+  NSCompositingOperationSoftLight = 21 { available in macos 10.10 };
+  NSCompositingOperationHardLight = 22 { available in macos 10.10 };
+  NSCompositingOperationDifference = 23 { available in macos 10.10 };
+  NSCompositingOperationExclusion = 24 { available in macos 10.10 };
+  NSCompositingOperationHue = 25 { available in macos 10.10 };
+  NSCompositingOperationSaturation = 26 { available in macos 10.10 };
+  NSCompositingOperationColor = 27 { available in macos 10.10 };
+  NSCompositingOperationLuminosity = 28 { available in macos 10.10 };
 
 const
   NSCompositeClear = NSCompositingOperationClear deprecated 'replace with NSCompositingOperationClear';

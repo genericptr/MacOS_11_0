@@ -25,14 +25,14 @@ type
 type
   RPBroadcastExtension = objccategory external (NSExtensionContext)
     {$if defined(TARGET_OS_OSX)}
-    procedure loadBroadcastingApplicationInfoWithCompletion (handler: RPBroadcastExtensionLoadBroadcastingApplicationInfoWithCompletionCallback); message 'loadBroadcastingApplicationInfoWithCompletion:'; { unavailable in ios, tvos, macCatalyst }
+    procedure loadBroadcastingApplicationInfoWithCompletion (handler: RPBroadcastExtensionLoadBroadcastingApplicationInfoWithCompletionCallback); message 'loadBroadcastingApplicationInfoWithCompletion:'; { unavailable in ios, tvos, macCatalyst } { available in macos 11.0 }
     {$else}
     procedure loadBroadcastingApplicationInfoWithCompletion (handler: RPBroadcastExtensionLoadBroadcastingApplicationInfoWithCompletionCallback); message 'loadBroadcastingApplicationInfoWithCompletion:';
     {$endif}
     {$if  not defined(TARGET_OS_OSX)}
     procedure completeRequestWithBroadcastURL_broadcastConfiguration_setupInfo (broadcastURL: NSURL; broadcastConfiguration: RPBroadcastConfiguration; setupInfo: NSDictionary); message 'completeRequestWithBroadcastURL:broadcastConfiguration:setupInfo:'; { unavailable in macos }
     {$endif}
-    procedure completeRequestWithBroadcastURL_setupInfo (broadcastURL: NSURL; setupInfo: NSDictionary); message 'completeRequestWithBroadcastURL:setupInfo:'; { available in ios , tvos , macos  }
+    procedure completeRequestWithBroadcastURL_setupInfo (broadcastURL: NSURL; setupInfo: NSDictionary); message 'completeRequestWithBroadcastURL:setupInfo:'; { available in ios 11.0, tvos 11.0, macos 11.0 }
   end;
 
 
@@ -40,7 +40,7 @@ type
   RPBroadcastHandler = objcclass external (NSObject, NSExtensionRequestHandlingProtocol)
   public
     procedure updateServiceInfo (serviceInfo: NSDictionary); message 'updateServiceInfo:';
-    procedure updateBroadcastURL (broadcastURL: NSURL); message 'updateBroadcastURL:'; { available in ios , tvos , macos  }
+    procedure updateBroadcastURL (broadcastURL: NSURL); message 'updateBroadcastURL:'; { available in ios 11.0, tvos 11.0, macos 11.0 }
 
     { Adopted protocols }
     procedure beginRequestWithExtensionContext (context: NSExtensionContext); message 'beginRequestWithExtensionContext:';
@@ -85,7 +85,7 @@ type
     procedure broadcastPaused; message 'broadcastPaused';
     procedure broadcastResumed; message 'broadcastResumed';
     procedure broadcastFinished; message 'broadcastFinished';
-    procedure broadcastAnnotatedWithApplicationInfo (applicationInfo: NSDictionary); message 'broadcastAnnotatedWithApplicationInfo:'; { unavailable in tvos }
+    procedure broadcastAnnotatedWithApplicationInfo (applicationInfo: NSDictionary); message 'broadcastAnnotatedWithApplicationInfo:'; { unavailable in tvos } { available in ios 11.2 }
     procedure processSampleBuffer_withType (sampleBuffer: CMSampleBufferRef; sampleBufferType: RPSampleBufferType); message 'processSampleBuffer:withType:';
     procedure finishBroadcastWithError (error: NSError); message 'finishBroadcastWithError:';
   end;

@@ -27,7 +27,7 @@ type
 type
   RPBroadcastActivityController = objcclass external (NSObject)
   public
-    class procedure showBroadcastPickerAtPoint_fromWindow_preferredExtensionIdentifier_completionHandler (point: CGPoint; window: NSWindowPtr; preferredExtension: NSString; handler: RPBroadcastShowBroadcastPickerAtPointCallback); message 'showBroadcastPickerAtPoint:fromWindow:preferredExtensionIdentifier:completionHandler:'; { available in macos  }
+    class procedure showBroadcastPickerAtPoint_fromWindow_preferredExtensionIdentifier_completionHandler (point: CGPoint; window: NSWindowPtr; preferredExtension: NSString; handler: RPBroadcastShowBroadcastPickerAtPointCallback); message 'showBroadcastPickerAtPoint:fromWindow:preferredExtensionIdentifier:completionHandler:'; { available in macos 11.0 }
     procedure setDelegate(newValue: RPBroadcastActivityControllerDelegateProtocol); message 'setDelegate:';
     function delegate: RPBroadcastActivityControllerDelegateProtocol; message 'delegate';
   end;
@@ -37,7 +37,7 @@ type
 
 type
   RPBroadcastActivityControllerDelegateProtocol = objcprotocol external name 'RPBroadcastActivityControllerDelegate' (NSObjectProtocol)
-    procedure broadcastActivityController_didFinishWithBroadcastController_error (broadcastActivityController: RPBroadcastActivityController; broadcastController: RPBroadcastController; error: NSError); message 'broadcastActivityController:didFinishWithBroadcastController:error:'; { available in macos  }
+    procedure broadcastActivityController_didFinishWithBroadcastController_error (broadcastActivityController: RPBroadcastActivityController; broadcastController: RPBroadcastController; error: NSError); message 'broadcastActivityController:didFinishWithBroadcastController:error:'; { available in macos 11.0 }
   end;
 {$endif}
 
@@ -50,7 +50,7 @@ type
   RPBroadcastActivityViewController = objcclass external (NSViewController)
   public
     class procedure loadBroadcastActivityViewControllerWithHandler (handler: RPBroadcastLoadBroadcastActivityViewControllerWithHandlerCallback); message 'loadBroadcastActivityViewControllerWithHandler:';
-    class procedure loadBroadcastActivityViewControllerWithPreferredExtension_handler (preferredExtension: NSString; handler: RPBroadcastLoadBroadcastActivityViewControllerWithPreferredExtensionCallback); message 'loadBroadcastActivityViewControllerWithPreferredExtension:handler:'; { unavailable in tvos }
+    class procedure loadBroadcastActivityViewControllerWithPreferredExtension_handler (preferredExtension: NSString; handler: RPBroadcastLoadBroadcastActivityViewControllerWithPreferredExtensionCallback); message 'loadBroadcastActivityViewControllerWithPreferredExtension:handler:'; { unavailable in tvos } { available in ios 11.0 }
     procedure setDelegate(newValue: RPBroadcastActivityViewControllerDelegateProtocol); message 'setDelegate:';
     function delegate: RPBroadcastActivityViewControllerDelegateProtocol; message 'delegate';
   end;
@@ -60,7 +60,7 @@ type
 
 type
   RPBroadcastActivityViewControllerDelegateProtocol = objcprotocol external name 'RPBroadcastActivityViewControllerDelegate' (NSObjectProtocol)
-    procedure broadcastActivityViewController_didFinishWithBroadcastController_error (broadcastActivityViewController: RPBroadcastActivityViewController; broadcastController: RPBroadcastController; error: NSError); message 'broadcastActivityViewController:didFinishWithBroadcastController:error:'; { available in ios , tvos  }
+    procedure broadcastActivityViewController_didFinishWithBroadcastController_error (broadcastActivityViewController: RPBroadcastActivityViewController; broadcastController: RPBroadcastController; error: NSError); message 'broadcastActivityViewController:didFinishWithBroadcastController:error:'; { available in ios 10.0, tvos 10.0 }
   end;
 {$endif}
 
@@ -91,7 +91,7 @@ type
   optional
     procedure broadcastController_didFinishWithError (broadcastController: RPBroadcastController; error: NSError); message 'broadcastController:didFinishWithError:';
     procedure broadcastController_didUpdateServiceInfo (broadcastController: RPBroadcastController; serviceInfo: NSDictionary); message 'broadcastController:didUpdateServiceInfo:';
-    procedure broadcastController_didUpdateBroadcastURL (broadcastController: RPBroadcastController; broadcastURL: NSURL); message 'broadcastController:didUpdateBroadcastURL:'; { available in ios , tvos  }
+    procedure broadcastController_didUpdateBroadcastURL (broadcastController: RPBroadcastController; broadcastURL: NSURL); message 'broadcastController:didUpdateBroadcastURL:'; { available in ios 11.0, tvos 11.0 }
   end;
 {$endif}
 

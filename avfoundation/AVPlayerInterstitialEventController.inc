@@ -54,8 +54,8 @@ type
 
 {$ifdef EXTERNAL_SYMBOLS}
 var
-  AVPlayerInterstitialEventObserverEventsDidChangeNotification: NSNotificationName { available in macos , ios , tvos  }; cvar; external;
-  AVPlayerInterstitialEventObserverCurrentEventDidChangeNotification: NSNotificationName { available in macos , ios , tvos  }; cvar; external;
+  AVPlayerInterstitialEventObserverEventsDidChangeNotification: NSNotificationName { available in macos 11.3, ios 14.5, tvos 14.5 }; cvar; external;
+  AVPlayerInterstitialEventObserverCurrentEventDidChangeNotification: NSNotificationName { available in macos 11.3, ios 14.5, tvos 14.5 }; cvar; external;
 {$endif}
 
 {$ifdef CLASSES}
@@ -80,9 +80,9 @@ type
 
 type
   AVPlayerInterstitialSupport = objccategory external (AVPlayerItem)
-    procedure setAutomaticallyHandlesInterstitialEvents(newValue: objcbool); message 'setAutomaticallyHandlesInterstitialEvents:'; { available in macos , ios , tvos  }
-    function automaticallyHandlesInterstitialEvents: objcbool; message 'automaticallyHandlesInterstitialEvents'; { available in macos , ios , tvos  }
-    function templatePlayerItem: AVPlayerItem; message 'templatePlayerItem'; { available in macos , ios , tvos  }
+    procedure setAutomaticallyHandlesInterstitialEvents(newValue: objcbool); message 'setAutomaticallyHandlesInterstitialEvents:'; { available in macos 11.3, ios 14.5, tvos 14.5 }
+    function automaticallyHandlesInterstitialEvents: objcbool; message 'automaticallyHandlesInterstitialEvents'; { available in macos 11.3, ios 14.5, tvos 14.5 }
+    function templatePlayerItem: AVPlayerItem; message 'templatePlayerItem'; { available in macos 11.4, ios 14.5, tvos 14.5 }
   end;
 {$endif}
 

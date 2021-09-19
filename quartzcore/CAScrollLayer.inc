@@ -33,9 +33,9 @@ type
 
 {$ifdef EXTERNAL_SYMBOLS}
 var
-  kCAScrollNone: CAScrollLayerScrollMode { available in macos , ios , watchos , tvos  }; cvar; external;
-  kCAScrollVertically: CAScrollLayerScrollMode { available in macos , ios , watchos , tvos  }; cvar; external;
-  kCAScrollHorizontally: CAScrollLayerScrollMode { available in macos , ios , watchos , tvos  }; cvar; external;
-  kCAScrollBoth: CAScrollLayerScrollMode { available in macos , ios , watchos , tvos  }; cvar; external;
+  kCAScrollNone: CAScrollLayerScrollMode { available in macos 10.5, ios 2.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  kCAScrollVertically: CAScrollLayerScrollMode { available in macos 10.5, ios 2.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  kCAScrollHorizontally: CAScrollLayerScrollMode { available in macos 10.5, ios 2.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  kCAScrollBoth: CAScrollLayerScrollMode { available in macos 10.5, ios 2.0, watchos 2.0, tvos 9.0 }; cvar; external;
 {$endif}
 

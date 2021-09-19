@@ -111,14 +111,14 @@ type
     function targetNode: SKNode; message 'targetNode';
     procedure setShader(newValue: SKShader); message 'setShader:';
     function shader: SKShader; message 'shader';
-    procedure setAttributeValues(newValue: NSDictionary); message 'setAttributeValues:'; { available in ios , tvos , watchos , macos  }
-    function attributeValues: NSDictionary; message 'attributeValues'; { available in ios , tvos , watchos , macos  }
-    function valueForAttributeNamed (key: NSString): SKAttributeValue; message 'valueForAttributeNamed:'; { available in ios , tvos , watchos , macos  }
+    procedure setAttributeValues(newValue: NSDictionary); message 'setAttributeValues:'; { available in ios 10.0, tvos 10.0, watchos 3.0, macos 10.12 }
+    function attributeValues: NSDictionary; message 'attributeValues'; { available in ios 10.0, tvos 10.0, watchos 3.0, macos 10.12 }
+    function valueForAttributeNamed (key: NSString): SKAttributeValue; message 'valueForAttributeNamed:'; { available in ios 10.0, tvos 10.0, watchos 3.0, macos 10.12 }
     procedure setValue_forAttributeNamed (value: SKAttributeValue; key: NSString); message 'setValue:forAttributeNamed:';
     procedure setParticleZPosition(newValue: CGFloat); message 'setParticleZPosition:';
     function particleZPosition: CGFloat; message 'particleZPosition';
-    procedure setParticleRenderOrder(newValue: SKParticleRenderOrder); message 'setParticleRenderOrder:'; { available in ios , tvos , watchos , macos  }
-    function particleRenderOrder: SKParticleRenderOrder; message 'particleRenderOrder'; { available in ios , tvos , watchos , macos  }
+    procedure setParticleRenderOrder(newValue: SKParticleRenderOrder); message 'setParticleRenderOrder:'; { available in ios 9.0, tvos 9.0, watchos 2.0, macos 10.11 }
+    function particleRenderOrder: SKParticleRenderOrder; message 'particleRenderOrder'; { available in ios 9.0, tvos 9.0, watchos 2.0, macos 10.11 }
     procedure setParticleZPositionRange(newValue: CGFloat); message 'setParticleZPositionRange:'; deprecated 'in 10_8, 10_10, 7_0, 8_0';
     function particleZPositionRange: CGFloat; message 'particleZPositionRange'; deprecated 'in 10_8, 10_10, 7_0, 8_0';
     procedure setParticleZPositionSpeed(newValue: CGFloat); message 'setParticleZPositionSpeed:'; deprecated 'in 10_8, 10_10, 7_0, 8_0';

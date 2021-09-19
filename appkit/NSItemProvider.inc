@@ -3,9 +3,9 @@
 
 type
   NSItemSourceInfo = objccategory external (NSItemProvider)
-    function sourceFrame: NSRect; message 'sourceFrame'; { available in macos  }
-    function containerFrame: NSRect; message 'containerFrame'; { available in macos  }
-    function preferredPresentationSize: NSSize; message 'preferredPresentationSize'; { available in macos  }
+    function sourceFrame: NSRect; message 'sourceFrame'; { available in macos 10.10 }
+    function containerFrame: NSRect; message 'containerFrame'; { available in macos 10.10 }
+    function preferredPresentationSize: NSSize; message 'preferredPresentationSize'; { available in macos 10.10 }
   end;
 {$endif}
 

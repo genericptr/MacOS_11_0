@@ -54,18 +54,18 @@ type
     function operatingSystem: NSUInteger; message 'operatingSystem'; deprecated '-operatingSystem always returns NSMACHOperatingSystem, use -operatingSystemVersion or -isOperatingSystemAtLeastVersion: instead';
     function operatingSystemName: NSString; message 'operatingSystemName'; deprecated '-operatingSystemName always returns NSMACHOperatingSystem, use -operatingSystemVersionString instead';
     function operatingSystemVersionString: NSString; message 'operatingSystemVersionString';
-    function operatingSystemVersion: NSOperatingSystemVersion; message 'operatingSystemVersion'; { available in macos , ios , watchos , tvos  }
-    function processorCount: NSUInteger; message 'processorCount'; { available in macos , ios , watchos , tvos  }
-    function activeProcessorCount: NSUInteger; message 'activeProcessorCount'; { available in macos , ios , watchos , tvos  }
-    function physicalMemory: culonglong; message 'physicalMemory'; { available in macos , ios , watchos , tvos  }
-    function isOperatingSystemAtLeastVersion (version: NSOperatingSystemVersion): objcbool; message 'isOperatingSystemAtLeastVersion:'; { available in macos , ios , watchos , tvos  }
-    function systemUptime: NSTimeInterval; message 'systemUptime'; { available in macos , ios , watchos , tvos  }
-    procedure disableSuddenTermination; message 'disableSuddenTermination'; { unavailable in ios, watchos, tvos }
-    procedure enableSuddenTermination; message 'enableSuddenTermination'; { unavailable in ios, watchos, tvos }
-    procedure disableAutomaticTermination (reason: NSString); message 'disableAutomaticTermination:'; { unavailable in ios, watchos, tvos }
-    procedure enableAutomaticTermination (reason: NSString); message 'enableAutomaticTermination:'; { unavailable in ios, watchos, tvos }
-    procedure setAutomaticTerminationSupportEnabled(newValue: objcbool); message 'setAutomaticTerminationSupportEnabled:'; { unavailable in ios, watchos, tvos }
-    function automaticTerminationSupportEnabled: objcbool; message 'automaticTerminationSupportEnabled'; { unavailable in ios, watchos, tvos }
+    function operatingSystemVersion: NSOperatingSystemVersion; message 'operatingSystemVersion'; { available in macos 10.10, ios 8.0, watchos 2.0, tvos 9.0 }
+    function processorCount: NSUInteger; message 'processorCount'; { available in macos 10.5, ios 2.0, watchos 2.0, tvos 9.0 }
+    function activeProcessorCount: NSUInteger; message 'activeProcessorCount'; { available in macos 10.5, ios 2.0, watchos 2.0, tvos 9.0 }
+    function physicalMemory: culonglong; message 'physicalMemory'; { available in macos 10.5, ios 2.0, watchos 2.0, tvos 9.0 }
+    function isOperatingSystemAtLeastVersion (version: NSOperatingSystemVersion): objcbool; message 'isOperatingSystemAtLeastVersion:'; { available in macos 10.10, ios 8.0, watchos 2.0, tvos 9.0 }
+    function systemUptime: NSTimeInterval; message 'systemUptime'; { available in macos 10.6, ios 4.0, watchos 2.0, tvos 9.0 }
+    procedure disableSuddenTermination; message 'disableSuddenTermination'; { unavailable in ios, watchos, tvos } { available in macos 10.6 }
+    procedure enableSuddenTermination; message 'enableSuddenTermination'; { unavailable in ios, watchos, tvos } { available in macos 10.6 }
+    procedure disableAutomaticTermination (reason: NSString); message 'disableAutomaticTermination:'; { unavailable in ios, watchos, tvos } { available in macos 10.7 }
+    procedure enableAutomaticTermination (reason: NSString); message 'enableAutomaticTermination:'; { unavailable in ios, watchos, tvos } { available in macos 10.7 }
+    procedure setAutomaticTerminationSupportEnabled(newValue: objcbool); message 'setAutomaticTerminationSupportEnabled:'; { unavailable in ios, watchos, tvos } { available in macos 10.7 }
+    function automaticTerminationSupportEnabled: objcbool; message 'automaticTerminationSupportEnabled'; { unavailable in ios, watchos, tvos } { available in macos 10.7 }
   end;
 {$endif}
 
@@ -89,16 +89,16 @@ const
 
 type
   NSProcessInfoActivity = objccategory external (NSProcessInfo)
-    function beginActivityWithOptions_reason (options: NSActivityOptions; reason: NSString): id; message 'beginActivityWithOptions:reason:'; { available in macos , ios , watchos , tvos  }
-    procedure endActivity (activity: NSObjectProtocol); message 'endActivity:'; { available in macos , ios , watchos , tvos  }
-    procedure performActivityWithOptions_reason_usingBlock (options: NSActivityOptions; reason: NSString; block: NSProcessInfoPerformActivityWithOptionsCallback); message 'performActivityWithOptions:reason:usingBlock:'; { available in macos , ios , watchos , tvos  }
-    procedure performExpiringActivityWithReason_usingBlock (reason: NSString; block: NSProcessInfoPerformExpiringActivityWithReasonCallback); message 'performExpiringActivityWithReason:usingBlock:'; { unavailable in macos }
+    function beginActivityWithOptions_reason (options: NSActivityOptions; reason: NSString): id; message 'beginActivityWithOptions:reason:'; { available in macos 10.9, ios 7.0, watchos 2.0, tvos 9.0 }
+    procedure endActivity (activity: NSObjectProtocol); message 'endActivity:'; { available in macos 10.9, ios 7.0, watchos 2.0, tvos 9.0 }
+    procedure performActivityWithOptions_reason_usingBlock (options: NSActivityOptions; reason: NSString; block: NSProcessInfoPerformActivityWithOptionsCallback); message 'performActivityWithOptions:reason:usingBlock:'; { available in macos 10.9, ios 7.0, watchos 2.0, tvos 9.0 }
+    procedure performExpiringActivityWithReason_usingBlock (reason: NSString; block: NSProcessInfoPerformExpiringActivityWithReasonCallback); message 'performExpiringActivityWithReason:usingBlock:'; { unavailable in macos } { available in ios 8.2, watchos 2.0, tvos 9.0 }
   end;
 
 type
   NSUserInformation = objccategory external (NSProcessInfo)
-    function userName: NSString; message 'userName'; { unavailable in ios, watchos, tvos }
-    function fullUserName: NSString; message 'fullUserName'; { unavailable in ios, watchos, tvos }
+    function userName: NSString; message 'userName'; { unavailable in ios, watchos, tvos } { available in macosx 10.12 }
+    function fullUserName: NSString; message 'fullUserName'; { unavailable in ios, watchos, tvos } { available in macosx 10.12 }
   end;
 {$endif}
 
@@ -118,27 +118,27 @@ const
 
 type
   NSProcessInfo_NSProcessInfoThermalState = objccategory external name 'NSProcessInfoThermalState' (NSProcessInfo)
-    function thermalState: NSProcessInfoThermalState; message 'thermalState'; { available in macosx , ios , watchos , tvos  }
+    function thermalState: NSProcessInfoThermalState; message 'thermalState'; { available in macosx 10.10.3, ios 11.0, watchos 4.0, tvos 11.0 }
   end;
 
 type
   NSProcessInfoPowerState = objccategory external (NSProcessInfo)
-    function isLowPowerModeEnabled: objcbool; message 'isLowPowerModeEnabled'; { unavailable in macos }
+    function isLowPowerModeEnabled: objcbool; message 'isLowPowerModeEnabled'; { unavailable in macos } { available in ios 9.0, watchos 2.0, tvos 9.0 }
   end;
 {$endif}
 
 {$ifdef EXTERNAL_SYMBOLS}
 var
-  NSProcessInfoThermalStateDidChangeNotification: NSNotificationName { available in macosx , ios , watchos , tvos  }; cvar; external;
-  NSProcessInfoPowerStateDidChangeNotification: NSNotificationName { unavailable in macos }; cvar; external;
+  NSProcessInfoThermalStateDidChangeNotification: NSNotificationName { available in macosx 10.10.3, ios 11.0, watchos 4.0, tvos 11.0 }; cvar; external;
+  NSProcessInfoPowerStateDidChangeNotification: NSNotificationName { unavailable in macos } { available in ios 9.0, watchos 2.0, tvos 9.0 }; cvar; external;
 {$endif}
 
 {$ifdef CLASSES}
 
 type
   NSProcessInfoPlatform = objccategory external (NSProcessInfo)
-    function isMacCatalystApp: objcbool; message 'isMacCatalystApp'; { available in macos , ios , watchos , tvos  }
-    function isiOSAppOnMac: objcbool; message 'isiOSAppOnMac'; { available in macos , ios , watchos , tvos  }
+    function isMacCatalystApp: objcbool; message 'isMacCatalystApp'; { available in macos 10.15, ios 13.0, watchos 6.0, tvos 13.0 }
+    function isiOSAppOnMac: objcbool; message 'isiOSAppOnMac'; { available in macos 11.0, ios 14.0, watchos 7.0, tvos 14.0 }
   end;
 {$endif}
 

@@ -32,8 +32,8 @@ type
     function recordZoneWithIDChangedBlock: CKFetchDatabaseChangesOperationRecordZoneWithIDChangedBlockCallback; message 'recordZoneWithIDChangedBlock';
     procedure setRecordZoneWithIDWasDeletedBlock(newValue: CKFetchDatabaseChangesOperationRecordZoneWithIDWasDeletedBlockCallback); message 'setRecordZoneWithIDWasDeletedBlock:';
     function recordZoneWithIDWasDeletedBlock: CKFetchDatabaseChangesOperationRecordZoneWithIDWasDeletedBlockCallback; message 'recordZoneWithIDWasDeletedBlock';
-    procedure setRecordZoneWithIDWasPurgedBlock(newValue: CKFetchDatabaseChangesOperationRecordZoneWithIDWasPurgedBlockCallback); message 'setRecordZoneWithIDWasPurgedBlock:'; { available in macos , ios , tvos , watchos  }
-    function recordZoneWithIDWasPurgedBlock: CKFetchDatabaseChangesOperationRecordZoneWithIDWasPurgedBlockCallback; message 'recordZoneWithIDWasPurgedBlock'; { available in macos , ios , tvos , watchos  }
+    procedure setRecordZoneWithIDWasPurgedBlock(newValue: CKFetchDatabaseChangesOperationRecordZoneWithIDWasPurgedBlockCallback); message 'setRecordZoneWithIDWasPurgedBlock:'; { available in macos 10.13, ios 11.0, tvos 11.0, watchos 4.0 }
+    function recordZoneWithIDWasPurgedBlock: CKFetchDatabaseChangesOperationRecordZoneWithIDWasPurgedBlockCallback; message 'recordZoneWithIDWasPurgedBlock'; { available in macos 10.13, ios 11.0, tvos 11.0, watchos 4.0 }
     procedure setChangeTokenUpdatedBlock(newValue: CKFetchDatabaseChangesOperationChangeTokenUpdatedBlockCallback); message 'setChangeTokenUpdatedBlock:';
     function changeTokenUpdatedBlock: CKFetchDatabaseChangesOperationChangeTokenUpdatedBlockCallback; message 'changeTokenUpdatedBlock';
     procedure setFetchDatabaseChangesCompletionBlock(newValue: CKFetchDatabaseChangesOperationFetchDatabaseChangesCompletionBlockCallback); message 'setFetchDatabaseChangesCompletionBlock:';

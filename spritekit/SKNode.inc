@@ -53,7 +53,7 @@ type
     function initWithCoder (aDecoder: NSCoder): id; message 'initWithCoder:'; { NS_DESIGNATED_INITIALIZER }
     class function node: id; message 'node';
     class function nodeWithFileNamed (filename: NSString): id; message 'nodeWithFileNamed:';
-    class function nodeWithFileNamed_securelyWithClasses_andError (filename: NSString; classes: NSSet; error: NSErrorPtr): id; message 'nodeWithFileNamed:securelyWithClasses:andError:'; { available in macos , ios , tvos , watchos  }
+    class function nodeWithFileNamed_securelyWithClasses_andError (filename: NSString; classes: NSSet; error: NSErrorPtr): id; message 'nodeWithFileNamed:securelyWithClasses:andError:'; { available in macos 10.14, ios 12.0, tvos 12.0, watchos 5.0 }
     function frame: CGRect; message 'frame';
     function calculateAccumulatedFrame: CGRect; message 'calculateAccumulatedFrame';
     procedure setPosition(newValue: CGPoint); message 'setPosition:';
@@ -76,8 +76,8 @@ type
     function isHidden: objcbool; message 'isHidden';
     procedure setUserInteractionEnabled(newValue: objcbool); message 'setUserInteractionEnabled:';
     function isUserInteractionEnabled: objcbool; message 'isUserInteractionEnabled';
-    procedure setFocusBehavior(newValue: SKNodeFocusBehavior); message 'setFocusBehavior:'; { unavailable in macos, watchos }
-    function focusBehavior: SKNodeFocusBehavior; message 'focusBehavior'; { unavailable in macos, watchos }
+    procedure setFocusBehavior(newValue: SKNodeFocusBehavior); message 'setFocusBehavior:'; { unavailable in macos, watchos } { available in ios 11.0, tvos 11.0 }
+    function focusBehavior: SKNodeFocusBehavior; message 'focusBehavior'; { unavailable in macos, watchos } { available in ios 11.0, tvos 11.0 }
     function parent: SKNode; message 'parent';
     function children: NSArray; message 'children';
     procedure setName(newValue: NSString); message 'setName:';
@@ -101,10 +101,10 @@ type
     procedure removeChildrenInArray (nodes: NSArray); message 'removeChildrenInArray:';
     procedure removeAllChildren; message 'removeAllChildren';
     procedure removeFromParent; message 'removeFromParent';
-    procedure moveToParent (parent_: SKNode); message 'moveToParent:'; { available in ios , tvos , watchos , macos  }
+    procedure moveToParent (parent_: SKNode); message 'moveToParent:'; { available in ios 9.0, tvos 9.0, watchos 2.0, macos 10.11 }
     function childNodeWithName (name_: NSString): SKNode; message 'childNodeWithName:';
     procedure enumerateChildNodesWithName_usingBlock (name_: NSString; block: SKNodeEnumerateChildNodesWithNameCallback); message 'enumerateChildNodesWithName:usingBlock:';
-    function objectForKeyedSubscript (name_: NSString): NSArray; message 'objectForKeyedSubscript:'; { available in ios , tvos , watchos , macos  }
+    function objectForKeyedSubscript (name_: NSString): NSArray; message 'objectForKeyedSubscript:'; { available in ios 8.0, tvos 9.0, watchos 1.0, macos 10.10 }
     function inParentHierarchy (parent_: SKNode): objcbool; message 'inParentHierarchy:';
     procedure runAction (action: SKAction); message 'runAction:';
     procedure runAction_completion (action: SKAction; block: SKNodeRunActionCallback); message 'runAction:completion:';

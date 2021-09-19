@@ -33,8 +33,8 @@ var
   NSAccessibilityTitleAttribute: NSAccessibilityAttributeName; cvar; external;
   NSAccessibilityDescriptionAttribute: NSAccessibilityAttributeName; cvar; external;
   NSAccessibilityShownMenuAttribute: NSAccessibilityAttributeName; cvar; external;
-  NSAccessibilityValueDescriptionAttribute: NSAccessibilityAttributeName { available in macos  }; cvar; external;
-  NSAccessibilitySharedFocusElementsAttribute: NSAccessibilityAttributeName { available in macos  }; cvar; external;
+  NSAccessibilityValueDescriptionAttribute: NSAccessibilityAttributeName { available in macos 10.5 }; cvar; external;
+  NSAccessibilitySharedFocusElementsAttribute: NSAccessibilityAttributeName { available in macos 10.10 }; cvar; external;
   NSAccessibilityPreviousContentsAttribute: NSAccessibilityAttributeName; cvar; external;
   NSAccessibilityNextContentsAttribute: NSAccessibilityAttributeName; cvar; external;
   NSAccessibilityHeaderAttribute: NSAccessibilityAttributeName; cvar; external;
@@ -53,15 +53,15 @@ var
   NSAccessibilityActivationPointAttribute: NSAccessibilityAttributeName; cvar; external;
   NSAccessibilityURLAttribute: NSAccessibilityAttributeName; cvar; external;
   NSAccessibilityIndexAttribute: NSAccessibilityAttributeName; cvar; external;
-  NSAccessibilityRowCountAttribute: NSAccessibilityAttributeName { available in macos  }; cvar; external;
-  NSAccessibilityColumnCountAttribute: NSAccessibilityAttributeName { available in macos  }; cvar; external;
-  NSAccessibilityOrderedByRowAttribute: NSAccessibilityAttributeName { available in macos  }; cvar; external;
-  NSAccessibilityWarningValueAttribute: NSAccessibilityAttributeName { available in macos  }; cvar; external;
-  NSAccessibilityCriticalValueAttribute: NSAccessibilityAttributeName { available in macos  }; cvar; external;
-  NSAccessibilityPlaceholderValueAttribute: NSAccessibilityAttributeName { available in macos  }; cvar; external;
-  NSAccessibilityContainsProtectedContentAttribute: NSAccessibilityAttributeName { available in macos  }; cvar; external;
-  NSAccessibilityAlternateUIVisibleAttribute: NSAccessibilityAttributeName { available in macos  }; cvar; external;
-  NSAccessibilityRequiredAttribute: NSAccessibilityAttributeName { available in macos  }; cvar; external;
+  NSAccessibilityRowCountAttribute: NSAccessibilityAttributeName { available in macos 10.5 }; cvar; external;
+  NSAccessibilityColumnCountAttribute: NSAccessibilityAttributeName { available in macos 10.5 }; cvar; external;
+  NSAccessibilityOrderedByRowAttribute: NSAccessibilityAttributeName { available in macos 10.5 }; cvar; external;
+  NSAccessibilityWarningValueAttribute: NSAccessibilityAttributeName { available in macos 10.6 }; cvar; external;
+  NSAccessibilityCriticalValueAttribute: NSAccessibilityAttributeName { available in macos 10.6 }; cvar; external;
+  NSAccessibilityPlaceholderValueAttribute: NSAccessibilityAttributeName { available in macos 10.6 }; cvar; external;
+  NSAccessibilityContainsProtectedContentAttribute: NSAccessibilityAttributeName { available in macos 10.9 }; cvar; external;
+  NSAccessibilityAlternateUIVisibleAttribute: NSAccessibilityAttributeName { available in macos 10.10 }; cvar; external;
+  NSAccessibilityRequiredAttribute: NSAccessibilityAttributeName { available in macos 10.12 }; cvar; external;
   NSAccessibilityTitleUIElementAttribute: NSAccessibilityAttributeName; cvar; external;
   NSAccessibilityServesAsTitleForUIElementsAttribute: NSAccessibilityAttributeName; cvar; external;
   NSAccessibilityLinkedUIElementsAttribute: NSAccessibilityAttributeName; cvar; external;
@@ -72,7 +72,7 @@ var
   NSAccessibilitySharedTextUIElementsAttribute: NSAccessibilityAttributeName; cvar; external;
   NSAccessibilitySharedCharacterRangeAttribute: NSAccessibilityAttributeName; cvar; external;
   NSAccessibilityInsertionPointLineNumberAttribute: NSAccessibilityAttributeName; cvar; external;
-  NSAccessibilitySelectedTextRangesAttribute: NSAccessibilityAttributeName { available in macos  }; cvar; external;
+  NSAccessibilitySelectedTextRangesAttribute: NSAccessibilityAttributeName { available in macos 10.5 }; cvar; external;
 {$endif}
 
 {$ifdef TYPES}
@@ -103,16 +103,16 @@ var
   NSAccessibilityShadowTextAttribute: NSAttributedStringKey; cvar; external;
   NSAccessibilityAttachmentTextAttribute: NSAttributedStringKey; cvar; external;
   NSAccessibilityLinkTextAttribute: NSAttributedStringKey; cvar; external;
-  NSAccessibilityAutocorrectedTextAttribute: NSAttributedStringKey { available in macos  }; cvar; external;
-  NSAccessibilityTextAlignmentAttribute: NSAttributedStringKey { available in macos  }; cvar; external;
-  NSAccessibilityListItemPrefixTextAttribute: NSAttributedStringKey { available in macos  }; cvar; external;
-  NSAccessibilityListItemIndexTextAttribute: NSAttributedStringKey { available in macos  }; cvar; external;
-  NSAccessibilityListItemLevelTextAttribute: NSAttributedStringKey { available in macos  }; cvar; external;
+  NSAccessibilityAutocorrectedTextAttribute: NSAttributedStringKey { available in macos 10.7 }; cvar; external;
+  NSAccessibilityTextAlignmentAttribute: NSAttributedStringKey { available in macos 10.12 }; cvar; external;
+  NSAccessibilityListItemPrefixTextAttribute: NSAttributedStringKey { available in macos 10.11 }; cvar; external;
+  NSAccessibilityListItemIndexTextAttribute: NSAttributedStringKey { available in macos 10.11 }; cvar; external;
+  NSAccessibilityListItemLevelTextAttribute: NSAttributedStringKey { available in macos 10.11 }; cvar; external;
   NSAccessibilityMisspelledTextAttribute: NSAttributedStringKey; cvar; external;
-  NSAccessibilityMarkedMisspelledTextAttribute: NSAttributedStringKey { available in macos  }; cvar; external;
-  NSAccessibilityLanguageTextAttribute: NSAttributedStringKey { available in macos  }; cvar; external;
-  NSAccessibilityCustomTextAttribute: NSAttributedStringKey { available in macos  }; cvar; external;
-  NSAccessibilityAnnotationTextAttribute: NSAttributedStringKey { available in macos  }; cvar; external;
+  NSAccessibilityMarkedMisspelledTextAttribute: NSAttributedStringKey { available in macos 10.4 }; cvar; external;
+  NSAccessibilityLanguageTextAttribute: NSAttributedStringKey { available in macos 10.13 }; cvar; external;
+  NSAccessibilityCustomTextAttribute: NSAttributedStringKey { available in macos 10.13 }; cvar; external;
+  NSAccessibilityAnnotationTextAttribute: NSAttributedStringKey { available in macos 10.13 }; cvar; external;
 {$endif}
 
 {$ifdef TYPES}
@@ -123,9 +123,9 @@ type
 
 {$ifdef EXTERNAL_SYMBOLS}
 var
-  NSAccessibilityAnnotationLabel: NSAccessibilityAnnotationAttributeKey { available in macos  }; cvar; external;
-  NSAccessibilityAnnotationElement: NSAccessibilityAnnotationAttributeKey { available in macos  }; cvar; external;
-  NSAccessibilityAnnotationLocation: NSAccessibilityAnnotationAttributeKey { available in macos  }; cvar; external;
+  NSAccessibilityAnnotationLabel: NSAccessibilityAnnotationAttributeKey { available in macos 10.13 }; cvar; external;
+  NSAccessibilityAnnotationElement: NSAccessibilityAnnotationAttributeKey { available in macos 10.13 }; cvar; external;
+  NSAccessibilityAnnotationLocation: NSAccessibilityAnnotationAttributeKey { available in macos 10.13 }; cvar; external;
 {$endif}
 
 {$ifdef TYPES}
@@ -160,7 +160,7 @@ var
   NSAccessibilityModalAttribute: NSAccessibilityAttributeName; cvar; external;
   NSAccessibilityDefaultButtonAttribute: NSAccessibilityAttributeName; cvar; external;
   NSAccessibilityCancelButtonAttribute: NSAccessibilityAttributeName; cvar; external;
-  NSAccessibilityFullScreenButtonAttribute: NSAccessibilityAttributeName { available in macos  }; cvar; external;
+  NSAccessibilityFullScreenButtonAttribute: NSAccessibilityAttributeName { available in macos 10.7 }; cvar; external;
   NSAccessibilityMenuBarAttribute: NSAccessibilityAttributeName; cvar; external;
   NSAccessibilityWindowsAttribute: NSAccessibilityAttributeName; cvar; external;
   NSAccessibilityFrontmostAttribute: NSAccessibilityAttributeName; cvar; external;
@@ -168,7 +168,7 @@ var
   NSAccessibilityMainWindowAttribute: NSAccessibilityAttributeName; cvar; external;
   NSAccessibilityFocusedWindowAttribute: NSAccessibilityAttributeName; cvar; external;
   NSAccessibilityFocusedUIElementAttribute: NSAccessibilityAttributeName; cvar; external;
-  NSAccessibilityExtrasMenuBarAttribute: NSAccessibilityAttributeName { available in macos  }; cvar; external;
+  NSAccessibilityExtrasMenuBarAttribute: NSAccessibilityAttributeName { available in macos 10.8 }; cvar; external;
 {$endif}
 
 {$ifdef TYPES}
@@ -209,22 +209,22 @@ var
   NSAccessibilityVisibleColumnsAttribute: NSAccessibilityAttributeName; cvar; external;
   NSAccessibilitySelectedColumnsAttribute: NSAccessibilityAttributeName; cvar; external;
   NSAccessibilitySortDirectionAttribute: NSAccessibilityAttributeName; cvar; external;
-  NSAccessibilitySelectedCellsAttribute: NSAccessibilityAttributeName { available in macos  }; cvar; external;
-  NSAccessibilityVisibleCellsAttribute: NSAccessibilityAttributeName { available in macos  }; cvar; external;
-  NSAccessibilityRowHeaderUIElementsAttribute: NSAccessibilityAttributeName { available in macos  }; cvar; external;
-  NSAccessibilityColumnHeaderUIElementsAttribute: NSAccessibilityAttributeName { available in macos  }; cvar; external;
-  NSAccessibilityCellForColumnAndRowParameterizedAttribute: NSAccessibilityParameterizedAttributeName { available in macos  }; cvar; external;
-  NSAccessibilityRowIndexRangeAttribute: NSAccessibilityAttributeName { available in macos  }; cvar; external;
-  NSAccessibilityColumnIndexRangeAttribute: NSAccessibilityAttributeName { available in macos  }; cvar; external;
-  NSAccessibilityHorizontalUnitsAttribute: NSAccessibilityAttributeName { available in macos  }; cvar; external;
-  NSAccessibilityVerticalUnitsAttribute: NSAccessibilityAttributeName { available in macos  }; cvar; external;
-  NSAccessibilityHorizontalUnitDescriptionAttribute: NSAccessibilityAttributeName { available in macos  }; cvar; external;
-  NSAccessibilityVerticalUnitDescriptionAttribute: NSAccessibilityAttributeName { available in macos  }; cvar; external;
-  NSAccessibilityLayoutPointForScreenPointParameterizedAttribute: NSAccessibilityParameterizedAttributeName { available in macos  }; cvar; external;
-  NSAccessibilityLayoutSizeForScreenSizeParameterizedAttribute: NSAccessibilityParameterizedAttributeName { available in macos  }; cvar; external;
-  NSAccessibilityScreenPointForLayoutPointParameterizedAttribute: NSAccessibilityParameterizedAttributeName { available in macos  }; cvar; external;
-  NSAccessibilityScreenSizeForLayoutSizeParameterizedAttribute: NSAccessibilityParameterizedAttributeName { available in macos  }; cvar; external;
-  NSAccessibilityHandlesAttribute: NSAccessibilityAttributeName { available in macos  }; cvar; external;
+  NSAccessibilitySelectedCellsAttribute: NSAccessibilityAttributeName { available in macos 10.6 }; cvar; external;
+  NSAccessibilityVisibleCellsAttribute: NSAccessibilityAttributeName { available in macos 10.6 }; cvar; external;
+  NSAccessibilityRowHeaderUIElementsAttribute: NSAccessibilityAttributeName { available in macos 10.6 }; cvar; external;
+  NSAccessibilityColumnHeaderUIElementsAttribute: NSAccessibilityAttributeName { available in macos 10.6 }; cvar; external;
+  NSAccessibilityCellForColumnAndRowParameterizedAttribute: NSAccessibilityParameterizedAttributeName { available in macos 10.6 }; cvar; external;
+  NSAccessibilityRowIndexRangeAttribute: NSAccessibilityAttributeName { available in macos 10.6 }; cvar; external;
+  NSAccessibilityColumnIndexRangeAttribute: NSAccessibilityAttributeName { available in macos 10.6 }; cvar; external;
+  NSAccessibilityHorizontalUnitsAttribute: NSAccessibilityAttributeName { available in macos 10.6 }; cvar; external;
+  NSAccessibilityVerticalUnitsAttribute: NSAccessibilityAttributeName { available in macos 10.6 }; cvar; external;
+  NSAccessibilityHorizontalUnitDescriptionAttribute: NSAccessibilityAttributeName { available in macos 10.6 }; cvar; external;
+  NSAccessibilityVerticalUnitDescriptionAttribute: NSAccessibilityAttributeName { available in macos 10.6 }; cvar; external;
+  NSAccessibilityLayoutPointForScreenPointParameterizedAttribute: NSAccessibilityParameterizedAttributeName { available in macos 10.6 }; cvar; external;
+  NSAccessibilityLayoutSizeForScreenSizeParameterizedAttribute: NSAccessibilityParameterizedAttributeName { available in macos 10.6 }; cvar; external;
+  NSAccessibilityScreenPointForLayoutPointParameterizedAttribute: NSAccessibilityParameterizedAttributeName { available in macos 10.6 }; cvar; external;
+  NSAccessibilityScreenSizeForLayoutSizeParameterizedAttribute: NSAccessibilityParameterizedAttributeName { available in macos 10.6 }; cvar; external;
+  NSAccessibilityHandlesAttribute: NSAccessibilityAttributeName { available in macos 10.6 }; cvar; external;
 {$endif}
 
 {$ifdef TYPES}
@@ -269,7 +269,7 @@ var
   NSAccessibilityUnitDescriptionAttribute: NSAccessibilityAttributeName; cvar; external;
   NSAccessibilityMarkerTypeAttribute: NSAccessibilityAttributeName; cvar; external;
   NSAccessibilityMarkerTypeDescriptionAttribute: NSAccessibilityAttributeName; cvar; external;
-  NSAccessibilityIdentifierAttribute: NSAccessibilityAttributeName { available in macos  }; cvar; external;
+  NSAccessibilityIdentifierAttribute: NSAccessibilityAttributeName { available in macos 10.7 }; cvar; external;
 {$endif}
 
 {$ifdef TYPES}
@@ -347,8 +347,8 @@ var
   NSAccessibilityRaiseAction: NSAccessibilityActionName; cvar; external;
   NSAccessibilityShowMenuAction: NSAccessibilityActionName; cvar; external;
   NSAccessibilityDeleteAction: NSAccessibilityActionName; cvar; external;
-  NSAccessibilityShowAlternateUIAction: NSAccessibilityActionName { available in macos  }; cvar; external;
-  NSAccessibilityShowDefaultUIAction: NSAccessibilityActionName { available in macos  }; cvar; external;
+  NSAccessibilityShowAlternateUIAction: NSAccessibilityActionName { available in macos 10.9 }; cvar; external;
+  NSAccessibilityShowDefaultUIAction: NSAccessibilityActionName { available in macos 10.9 }; cvar; external;
 {$endif}
 
 {$ifdef TYPES}
@@ -379,19 +379,19 @@ var
   NSAccessibilityResizedNotification: NSAccessibilityNotificationName; cvar; external;
   NSAccessibilityMovedNotification: NSAccessibilityNotificationName; cvar; external;
   NSAccessibilityCreatedNotification: NSAccessibilityNotificationName; cvar; external;
-  NSAccessibilityLayoutChangedNotification: NSAccessibilityNotificationName { available in macos  }; cvar; external;
+  NSAccessibilityLayoutChangedNotification: NSAccessibilityNotificationName { available in macos 10.9 }; cvar; external;
   NSAccessibilityHelpTagCreatedNotification: NSAccessibilityNotificationName; cvar; external;
   NSAccessibilitySelectedTextChangedNotification: NSAccessibilityNotificationName; cvar; external;
   NSAccessibilityRowCountChangedNotification: NSAccessibilityNotificationName; cvar; external;
   NSAccessibilitySelectedChildrenChangedNotification: NSAccessibilityNotificationName; cvar; external;
   NSAccessibilitySelectedRowsChangedNotification: NSAccessibilityNotificationName; cvar; external;
   NSAccessibilitySelectedColumnsChangedNotification: NSAccessibilityNotificationName; cvar; external;
-  NSAccessibilityRowExpandedNotification: NSAccessibilityNotificationName { available in macos  }; cvar; external;
-  NSAccessibilityRowCollapsedNotification: NSAccessibilityNotificationName { available in macos  }; cvar; external;
-  NSAccessibilitySelectedCellsChangedNotification: NSAccessibilityNotificationName { available in macos  }; cvar; external;
-  NSAccessibilityUnitsChangedNotification: NSAccessibilityNotificationName { available in macos  }; cvar; external;
-  NSAccessibilitySelectedChildrenMovedNotification: NSAccessibilityNotificationName { available in macos  }; cvar; external;
-  NSAccessibilityAnnouncementRequestedNotification: NSAccessibilityNotificationName { available in macos  }; cvar; external;
+  NSAccessibilityRowExpandedNotification: NSAccessibilityNotificationName { available in macos 10.6 }; cvar; external;
+  NSAccessibilityRowCollapsedNotification: NSAccessibilityNotificationName { available in macos 10.6 }; cvar; external;
+  NSAccessibilitySelectedCellsChangedNotification: NSAccessibilityNotificationName { available in macos 10.6 }; cvar; external;
+  NSAccessibilityUnitsChangedNotification: NSAccessibilityNotificationName { available in macos 10.6 }; cvar; external;
+  NSAccessibilitySelectedChildrenMovedNotification: NSAccessibilityNotificationName { available in macos 10.6 }; cvar; external;
+  NSAccessibilityAnnouncementRequestedNotification: NSAccessibilityNotificationName { available in macos 10.7 }; cvar; external;
 {$endif}
 
 {$ifdef TYPES}
@@ -423,7 +423,7 @@ var
   NSAccessibilityValueIndicatorRole: NSAccessibilityRole; cvar; external;
   NSAccessibilityImageRole: NSAccessibilityRole; cvar; external;
   NSAccessibilityMenuBarRole: NSAccessibilityRole; cvar; external;
-  NSAccessibilityMenuBarItemRole: NSAccessibilityRole { available in macos  }; cvar; external;
+  NSAccessibilityMenuBarItemRole: NSAccessibilityRole { available in macos 10.12 }; cvar; external;
   NSAccessibilityMenuRole: NSAccessibilityRole; cvar; external;
   NSAccessibilityMenuItemRole: NSAccessibilityRole; cvar; external;
   NSAccessibilityColumnRole: NSAccessibilityRole; cvar; external;
@@ -448,16 +448,16 @@ var
   NSAccessibilityRulerRole: NSAccessibilityRole; cvar; external;
   NSAccessibilityRulerMarkerRole: NSAccessibilityRole; cvar; external;
   NSAccessibilityLinkRole: NSAccessibilityRole; cvar; external;
-  NSAccessibilityDisclosureTriangleRole: NSAccessibilityRole { available in macos  }; cvar; external;
-  NSAccessibilityGridRole: NSAccessibilityRole { available in macos  }; cvar; external;
+  NSAccessibilityDisclosureTriangleRole: NSAccessibilityRole { available in macos 10.5 }; cvar; external;
+  NSAccessibilityGridRole: NSAccessibilityRole { available in macos 10.5 }; cvar; external;
   NSAccessibilityRelevanceIndicatorRole: NSAccessibilityRole; cvar; external;
-  NSAccessibilityLevelIndicatorRole: NSAccessibilityRole { available in macos  }; cvar; external;
-  NSAccessibilityCellRole: NSAccessibilityRole { available in macos  }; cvar; external;
-  NSAccessibilityPopoverRole: NSAccessibilityRole { available in macos  }; cvar; external;
-  NSAccessibilityPageRole: NSAccessibilityRole { available in macos  }; cvar; external;
-  NSAccessibilityLayoutAreaRole: NSAccessibilityRole { available in macos  }; cvar; external;
-  NSAccessibilityLayoutItemRole: NSAccessibilityRole { available in macos  }; cvar; external;
-  NSAccessibilityHandleRole: NSAccessibilityRole { available in macos  }; cvar; external;
+  NSAccessibilityLevelIndicatorRole: NSAccessibilityRole { available in macos 10.6 }; cvar; external;
+  NSAccessibilityCellRole: NSAccessibilityRole { available in macos 10.6 }; cvar; external;
+  NSAccessibilityPopoverRole: NSAccessibilityRole { available in macos 10.7 }; cvar; external;
+  NSAccessibilityPageRole: NSAccessibilityRole { available in macos 10.13 }; cvar; external;
+  NSAccessibilityLayoutAreaRole: NSAccessibilityRole { available in macos 10.6 }; cvar; external;
+  NSAccessibilityLayoutItemRole: NSAccessibilityRole { available in macos 10.6 }; cvar; external;
+  NSAccessibilityHandleRole: NSAccessibilityRole { available in macos 10.6 }; cvar; external;
 {$endif}
 
 {$ifdef TYPES}
@@ -488,18 +488,18 @@ var
   NSAccessibilitySearchFieldSubrole: NSAccessibilitySubrole; cvar; external;
   NSAccessibilityTextAttachmentSubrole: NSAccessibilitySubrole; cvar; external;
   NSAccessibilityTextLinkSubrole: NSAccessibilitySubrole; cvar; external;
-  NSAccessibilityTimelineSubrole: NSAccessibilitySubrole { available in macos  }; cvar; external;
-  NSAccessibilitySortButtonSubrole: NSAccessibilitySubrole { available in macos  }; cvar; external;
-  NSAccessibilityRatingIndicatorSubrole: NSAccessibilitySubrole { available in macos  }; cvar; external;
-  NSAccessibilityContentListSubrole: NSAccessibilitySubrole { available in macos  }; cvar; external;
-  NSAccessibilityDefinitionListSubrole: NSAccessibilitySubrole { available in macos  }; cvar; external;
-  NSAccessibilityFullScreenButtonSubrole: NSAccessibilitySubrole { available in macos  }; cvar; external;
-  NSAccessibilityToggleSubrole: NSAccessibilitySubrole { available in macos  }; cvar; external;
-  NSAccessibilitySwitchSubrole: NSAccessibilitySubrole { available in macos  }; cvar; external;
-  NSAccessibilityDescriptionListSubrole: NSAccessibilitySubrole { available in macos  }; cvar; external;
-  NSAccessibilityTabButtonSubrole: NSAccessibilitySubrole { available in macos  }; cvar; external;
-  NSAccessibilityCollectionListSubrole: NSAccessibilitySubrole { available in macos  }; cvar; external;
-  NSAccessibilitySectionListSubrole: NSAccessibilitySubrole { available in macos  }; cvar; external;
+  NSAccessibilityTimelineSubrole: NSAccessibilitySubrole { available in macos 10.5 }; cvar; external;
+  NSAccessibilitySortButtonSubrole: NSAccessibilitySubrole { available in macos 10.6 }; cvar; external;
+  NSAccessibilityRatingIndicatorSubrole: NSAccessibilitySubrole { available in macos 10.6 }; cvar; external;
+  NSAccessibilityContentListSubrole: NSAccessibilitySubrole { available in macos 10.6 }; cvar; external;
+  NSAccessibilityDefinitionListSubrole: NSAccessibilitySubrole { available in macos 10.6 }; cvar; external;
+  NSAccessibilityFullScreenButtonSubrole: NSAccessibilitySubrole { available in macos 10.7 }; cvar; external;
+  NSAccessibilityToggleSubrole: NSAccessibilitySubrole { available in macos 10.9 }; cvar; external;
+  NSAccessibilitySwitchSubrole: NSAccessibilitySubrole { available in macos 10.9 }; cvar; external;
+  NSAccessibilityDescriptionListSubrole: NSAccessibilitySubrole { available in macos 10.9 }; cvar; external;
+  NSAccessibilityTabButtonSubrole: NSAccessibilitySubrole { available in macos 10.13 }; cvar; external;
+  NSAccessibilityCollectionListSubrole: NSAccessibilitySubrole { available in macos 10.13 }; cvar; external;
+  NSAccessibilitySectionListSubrole: NSAccessibilitySubrole { available in macos 10.13 }; cvar; external;
 {$endif}
 
 {$ifdef TYPES}
@@ -510,13 +510,13 @@ type
 
 {$ifdef EXTERNAL_SYMBOLS}
 var
-  NSAccessibilityUIElementsKey: NSAccessibilityNotificationUserInfoKey { available in macos  }; cvar; external;
-  NSAccessibilityPriorityKey: NSAccessibilityNotificationUserInfoKey { available in macos  }; cvar; external;
-  NSAccessibilityAnnouncementKey: NSAccessibilityNotificationUserInfoKey { available in macos  }; cvar; external;
+  NSAccessibilityUIElementsKey: NSAccessibilityNotificationUserInfoKey { available in macos 10.9 }; cvar; external;
+  NSAccessibilityPriorityKey: NSAccessibilityNotificationUserInfoKey { available in macos 10.9 }; cvar; external;
+  NSAccessibilityAnnouncementKey: NSAccessibilityNotificationUserInfoKey { available in macos 10.7 }; cvar; external;
 {$endif}
 
 {$ifdef FUNCTIONS}
-function NSAccessibilityPostNotificationWithUserInfo(element: id; notification: NSAccessibilityNotificationName; userInfo: NSDictionary): pointer; cdecl; external; { available in macos  }
+function NSAccessibilityPostNotificationWithUserInfo(element: id; notification: NSAccessibilityNotificationName; userInfo: NSDictionary): pointer; cdecl; external; { available in macos 10.7 }
 {$endif}
 
 {$ifdef TYPES}

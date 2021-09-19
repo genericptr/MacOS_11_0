@@ -53,8 +53,8 @@ type
     function init: id; message 'init'; { unavailable in macos, ios }
     function newCaptureScopeWithDevice (device: id): id; message 'newCaptureScopeWithDevice:';
     function newCaptureScopeWithCommandQueue (commandQueue: id): id; message 'newCaptureScopeWithCommandQueue:';
-    function supportsDestination (destination: MTLCaptureDestination): objcbool; message 'supportsDestination:'; { available in macos , ios  }
-    function startCaptureWithDescriptor_error (descriptor: MTLCaptureDescriptor; error: NSErrorPtr): objcbool; message 'startCaptureWithDescriptor:error:'; { available in macos , ios  }
+    function supportsDestination (destination: MTLCaptureDestination): objcbool; message 'supportsDestination:'; { available in macos 10.15, ios 13.0 }
+    function startCaptureWithDescriptor_error (descriptor: MTLCaptureDescriptor; error: NSErrorPtr): objcbool; message 'startCaptureWithDescriptor:error:'; { available in macos 10.15, ios 13.0 }
     procedure startCaptureWithDevice (device: id); message 'startCaptureWithDevice:'; deprecated 'Use startCaptureWithDescriptor:error: instead';
     procedure startCaptureWithCommandQueue (commandQueue: id); message 'startCaptureWithCommandQueue:'; deprecated 'Use startCaptureWithDescriptor:error: instead';
     procedure startCaptureWithScope (captureScope: id); message 'startCaptureWithScope:'; deprecated 'Use startCaptureWithDescriptor:error: instead';

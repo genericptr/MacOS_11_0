@@ -29,7 +29,7 @@ type
     function colorWithKey (key: NSColorName): NSColor; message 'colorWithKey:';
     function allKeys: NSArray; message 'allKeys';
     function isEditable: objcbool; message 'isEditable';
-    function writeToURL_error (url: NSURL; errPtr: NSErrorPtr): objcbool; message 'writeToURL:error:'; { available in macos  }
+    function writeToURL_error (url: NSURL; errPtr: NSErrorPtr): objcbool; message 'writeToURL:error:'; { available in macos 10.11 }
     function writeToFile (path: NSString): objcbool; message 'writeToFile:'; deprecated 'Use -writeToURL:error: instead';
     procedure removeFile; message 'removeFile';
 

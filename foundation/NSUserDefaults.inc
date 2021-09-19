@@ -25,7 +25,7 @@ type
     class function standardUserDefaults: NSUserDefaults; message 'standardUserDefaults';
     class procedure resetStandardUserDefaults; message 'resetStandardUserDefaults';
     function init: id; message 'init';
-    function initWithSuiteName (suitename: NSString): id; message 'initWithSuiteName:'; { available in macos , ios , watchos , tvos  }
+    function initWithSuiteName (suitename: NSString): id; message 'initWithSuiteName:'; { available in macos 10.9, ios 7.0, watchos 2.0, tvos 9.0 }
     function initWithUser (username: NSString): id; message 'initWithUser:'; deprecated 'Use -init instead';
     function objectForKey (defaultName: NSString): id; message 'objectForKey:';
     procedure setObject_forKey (value: id; defaultName: NSString); message 'setObject:forKey:';
@@ -39,12 +39,12 @@ type
     function floatForKey (defaultName: NSString): single; message 'floatForKey:';
     function doubleForKey (defaultName: NSString): double; message 'doubleForKey:';
     function boolForKey (defaultName: NSString): objcbool; message 'boolForKey:';
-    function URLForKey (defaultName: NSString): NSURL; message 'URLForKey:'; { available in macos , ios , watchos , tvos  }
+    function URLForKey (defaultName: NSString): NSURL; message 'URLForKey:'; { available in macos 10.6, ios 4.0, watchos 2.0, tvos 9.0 }
     procedure setInteger_forKey (value: NSInteger; defaultName: NSString); message 'setInteger:forKey:';
     procedure setFloat_forKey (value: single; defaultName: NSString); message 'setFloat:forKey:';
     procedure setDouble_forKey (value: double; defaultName: NSString); message 'setDouble:forKey:';
     procedure setBool_forKey (value: objcbool; defaultName: NSString); message 'setBool:forKey:';
-    procedure setURL_forKey (url: NSURL; defaultName: NSString); message 'setURL:forKey:'; { available in macos , ios , watchos , tvos  }
+    procedure setURL_forKey (url: NSURL; defaultName: NSString); message 'setURL:forKey:'; { available in macos 10.6, ios 4.0, watchos 2.0, tvos 9.0 }
     procedure registerDefaults (registrationDictionary: NSDictionary); message 'registerDefaults:';
     procedure addSuiteNamed (suiteName: NSString); message 'addSuiteNamed:';
     procedure removeSuiteNamed (suiteName: NSString); message 'removeSuiteNamed:';
@@ -65,10 +65,10 @@ type
 
 {$ifdef EXTERNAL_SYMBOLS}
 var
-  NSUserDefaultsSizeLimitExceededNotification: NSNotificationName { unavailable in macos }; cvar; external;
-  NSUbiquitousUserDefaultsNoCloudAccountNotification: NSNotificationName { unavailable in macos }; cvar; external;
-  NSUbiquitousUserDefaultsDidChangeAccountsNotification: NSNotificationName { unavailable in macos }; cvar; external;
-  NSUbiquitousUserDefaultsCompletedInitialSyncNotification: NSNotificationName { unavailable in macos }; cvar; external;
+  NSUserDefaultsSizeLimitExceededNotification: NSNotificationName { unavailable in macos } { available in ios 9.3, watchos 2.0, tvos 9.0 }; cvar; external;
+  NSUbiquitousUserDefaultsNoCloudAccountNotification: NSNotificationName { unavailable in macos } { available in ios 9.3, watchos 2.0, tvos 9.0 }; cvar; external;
+  NSUbiquitousUserDefaultsDidChangeAccountsNotification: NSNotificationName { unavailable in macos } { available in ios 9.3, watchos 2.0, tvos 9.0 }; cvar; external;
+  NSUbiquitousUserDefaultsCompletedInitialSyncNotification: NSNotificationName { unavailable in macos } { available in ios 9.3, watchos 2.0, tvos 9.0 }; cvar; external;
   NSUserDefaultsDidChangeNotification: NSNotificationName; cvar; external;
 {$endif}
 

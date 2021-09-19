@@ -31,7 +31,7 @@ type
   AVAudioSessionDelegateProtocol = objcprotocol external name 'AVAudioSessionDelegate' (NSObjectProtocol)
   optional
     procedure beginInterruption; message 'beginInterruption';
-    procedure endInterruptionWithFlags (flags: NSUInteger); message 'endInterruptionWithFlags:'; { available in ios , watchos , tvos  }
+    procedure endInterruptionWithFlags (flags: NSUInteger); message 'endInterruptionWithFlags:'; { available in ios 4.0, watchos 2.0, tvos 9.0 }
     procedure endInterruption; message 'endInterruption';
     procedure inputIsAvailableChanged (isInputAvailable: objcbool); message 'inputIsAvailableChanged:';
   end;

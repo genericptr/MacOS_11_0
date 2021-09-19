@@ -34,9 +34,9 @@ type
     procedure setDeleteRule(newValue: NSDeleteRule); message 'setDeleteRule:';
     function deleteRule: NSDeleteRule; message 'deleteRule';
     function isToMany: objcbool; message 'isToMany';
-    function versionHash: NSData; message 'versionHash'; { available in macosx ,ios  }
-    procedure setOrdered(newValue: objcbool); message 'setOrdered:'; { available in macosx ,ios  }
-    function isOrdered: objcbool; message 'isOrdered'; { available in macosx ,ios  }
+    function versionHash: NSData; message 'versionHash'; { available in macosx 10.5,ios 3.0 }
+    procedure setOrdered(newValue: objcbool); message 'setOrdered:'; { available in macosx 10.7,ios 5.0 }
+    function isOrdered: objcbool; message 'isOrdered'; { available in macosx 10.7,ios 5.0 }
   end;
 {$endif}
 

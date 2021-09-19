@@ -15,15 +15,15 @@ type
   private
     _movieTrackInternal: AVMovieTrackInternal;
   public
-    function mediaPresentationTimeRange: CMTimeRange; message 'mediaPresentationTimeRange'; { unavailable in tvos }
-    function mediaDecodeTimeRange: CMTimeRange; message 'mediaDecodeTimeRange'; { unavailable in tvos }
-    function alternateGroupID: NSInteger; message 'alternateGroupID'; { unavailable in tvos }
+    function mediaPresentationTimeRange: CMTimeRange; message 'mediaPresentationTimeRange'; { unavailable in tvos } { available in macos 10.11, ios 13.0, watchos 6.0 }
+    function mediaDecodeTimeRange: CMTimeRange; message 'mediaDecodeTimeRange'; { unavailable in tvos } { available in macos 10.11, ios 13.0, watchos 6.0 }
+    function alternateGroupID: NSInteger; message 'alternateGroupID'; { unavailable in tvos } { available in macos 10.11, ios 13.0, watchos 6.0 }
   end;
 
 
 type
   AVMovieTrackMediaDataStorage = objccategory external (AVMovieTrack)
-    function mediaDataStorage: AVMediaDataStorage; message 'mediaDataStorage'; { unavailable in tvos }
+    function mediaDataStorage: AVMediaDataStorage; message 'mediaDataStorage'; { unavailable in tvos } { available in macos 10.11, ios 13.0, watchos 6.0 }
   end;
 
 
@@ -110,20 +110,20 @@ type
 
 type
   AVMutableMovieTrackFormatDescriptions = objccategory external (AVMutableMovieTrack)
-    procedure replaceFormatDescription_withFormatDescription (formatDescription: CMFormatDescriptionRef; newFormatDescription: CMFormatDescriptionRef); message 'replaceFormatDescription:withFormatDescription:'; { unavailable in tvos }
+    procedure replaceFormatDescription_withFormatDescription (formatDescription: CMFormatDescriptionRef; newFormatDescription: CMFormatDescriptionRef); message 'replaceFormatDescription:withFormatDescription:'; { unavailable in tvos } { available in macos 10.13, ios 13.0, watchos 6.0 }
   end;
 
 type
   AVMutableMovieTrackSampleLevelEditing = objccategory external (AVMutableMovieTrack)
-    function appendSampleBuffer_decodeTime_presentationTime_error (sampleBuffer: CMSampleBufferRef; outDecodeTime: CMTimePtr; outPresentationTime: CMTimePtr; outError: NSErrorPtr): objcbool; message 'appendSampleBuffer:decodeTime:presentationTime:error:'; { unavailable in tvos }
-    function insertMediaTimeRange_intoTimeRange (mediaTimeRange: CMTimeRange; trackTimeRange: CMTimeRange): objcbool; message 'insertMediaTimeRange:intoTimeRange:'; { unavailable in tvos }
+    function appendSampleBuffer_decodeTime_presentationTime_error (sampleBuffer: CMSampleBufferRef; outDecodeTime: CMTimePtr; outPresentationTime: CMTimePtr; outError: NSErrorPtr): objcbool; message 'appendSampleBuffer:decodeTime:presentationTime:error:'; { unavailable in tvos } { available in macos 10.12, ios 13.0, watchos 6.0 }
+    function insertMediaTimeRange_intoTimeRange (mediaTimeRange: CMTimeRange; trackTimeRange: CMTimeRange): objcbool; message 'insertMediaTimeRange:intoTimeRange:'; { unavailable in tvos } { available in macos 10.12, ios 13.0, watchos 6.0 }
   end;
 {$endif}
 
 {$ifdef EXTERNAL_SYMBOLS}
 var
-  AVFragmentedMovieTrackTimeRangeDidChangeNotification: NSString { unavailable in tvos }; cvar; external;
-  AVFragmentedMovieTrackSegmentsDidChangeNotification: NSString { unavailable in tvos }; cvar; external;
+  AVFragmentedMovieTrackTimeRangeDidChangeNotification: NSString { unavailable in tvos } { available in macos 10.10, ios 13.0, watchos 6.0 }; cvar; external;
+  AVFragmentedMovieTrackSegmentsDidChangeNotification: NSString { unavailable in tvos } { available in macos 10.10, ios 13.0, watchos 6.0 }; cvar; external;
   AVFragmentedMovieTrackTotalSampleDataLengthDidChangeNotification: NSString { unavailable in ios, tvos, watchos }; cvar; external;
 {$endif}
 

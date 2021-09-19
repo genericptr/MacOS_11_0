@@ -51,13 +51,13 @@ const
 type
   NSScroller = objcclass external (NSControl)
   public
-    class function isCompatibleWithOverlayScrollers: objcbool; message 'isCompatibleWithOverlayScrollers'; { available in macos  }
-    class function scrollerWidthForControlSize_scrollerStyle (controlSize_: NSControlSize; scrollerStyle: NSScrollerStyle): CGFloat; message 'scrollerWidthForControlSize:scrollerStyle:'; { available in macos  }
-    class function preferredScrollerStyle: NSScrollerStyle; message 'preferredScrollerStyle'; { available in macos  }
-    procedure setScrollerStyle(newValue: NSScrollerStyle); message 'setScrollerStyle:'; { available in macos  }
-    function scrollerStyle: NSScrollerStyle; message 'scrollerStyle'; { available in macos  }
-    procedure setKnobStyle(newValue: NSScrollerKnobStyle); message 'setKnobStyle:'; { available in macos  }
-    function knobStyle: NSScrollerKnobStyle; message 'knobStyle'; { available in macos  }
+    class function isCompatibleWithOverlayScrollers: objcbool; message 'isCompatibleWithOverlayScrollers'; { available in macos 10.7 }
+    class function scrollerWidthForControlSize_scrollerStyle (controlSize_: NSControlSize; scrollerStyle: NSScrollerStyle): CGFloat; message 'scrollerWidthForControlSize:scrollerStyle:'; { available in macos 10.7 }
+    class function preferredScrollerStyle: NSScrollerStyle; message 'preferredScrollerStyle'; { available in macos 10.7 }
+    procedure setScrollerStyle(newValue: NSScrollerStyle); message 'setScrollerStyle:'; { available in macos 10.7 }
+    function scrollerStyle: NSScrollerStyle; message 'scrollerStyle'; { available in macos 10.7 }
+    procedure setKnobStyle(newValue: NSScrollerKnobStyle); message 'setKnobStyle:'; { available in macos 10.7 }
+    function knobStyle: NSScrollerKnobStyle; message 'knobStyle'; { available in macos 10.7 }
     function rectForPart (partCode: NSScrollerPart): NSRect; message 'rectForPart:';
     procedure checkSpaceForParts; message 'checkSpaceForParts';
     function usableParts: NSUsableScrollerParts; message 'usableParts';

@@ -50,14 +50,14 @@ type
     { Adopted protocols }
     function numberOfRowsInTableView (tableView: NSTableView): NSInteger; message 'numberOfRowsInTableView:';
     function tableView_acceptDrop_row_dropOperation (tableView: NSTableView; info: NSDraggingInfoProtocol; row: NSInteger; dropOperation: NSTableViewDropOperation): objcbool; message 'tableView:acceptDrop:row:dropOperation:';
-    procedure tableView_draggingSession_endedAtPoint_operation (tableView: NSTableView; session: NSDraggingSession; screenPoint: NSPoint; operation: NSDragOperation); message 'tableView:draggingSession:endedAtPoint:operation:'; { available in macos  }
-    procedure tableView_draggingSession_willBeginAtPoint_forRowIndexes (tableView: NSTableView; session: NSDraggingSession; screenPoint: NSPoint; rowIndexes: NSIndexSet); message 'tableView:draggingSession:willBeginAtPoint:forRowIndexes:'; { available in macos  }
+    procedure tableView_draggingSession_endedAtPoint_operation (tableView: NSTableView; session: NSDraggingSession; screenPoint: NSPoint; operation: NSDragOperation); message 'tableView:draggingSession:endedAtPoint:operation:'; { available in macos 10.7 }
+    procedure tableView_draggingSession_willBeginAtPoint_forRowIndexes (tableView: NSTableView; session: NSDraggingSession; screenPoint: NSPoint; rowIndexes: NSIndexSet); message 'tableView:draggingSession:willBeginAtPoint:forRowIndexes:'; { available in macos 10.7 }
     function tableView_namesOfPromisedFilesDroppedAtDestination_forDraggedRowsWithIndexes (tableView: NSTableView; dropDestination: NSURL; indexSet: NSIndexSet): NSArray; message 'tableView:namesOfPromisedFilesDroppedAtDestination:forDraggedRowsWithIndexes:'; deprecated 'Use NSFilePromiseReceiver objects instead';
     function tableView_objectValueForTableColumn_row (tableView: NSTableView; tableColumn: NSTableColumn; row: NSInteger): id; message 'tableView:objectValueForTableColumn:row:';
-    function tableView_pasteboardWriterForRow (tableView: NSTableView; row: NSInteger): id; message 'tableView:pasteboardWriterForRow:'; { available in macos  }
+    function tableView_pasteboardWriterForRow (tableView: NSTableView; row: NSInteger): id; message 'tableView:pasteboardWriterForRow:'; { available in macos 10.7 }
     procedure tableView_setObjectValue_forTableColumn_row (tableView: NSTableView; object_: id; tableColumn: NSTableColumn; row: NSInteger); message 'tableView:setObjectValue:forTableColumn:row:';
     procedure tableView_sortDescriptorsDidChange (tableView: NSTableView; oldDescriptors: NSArray); message 'tableView:sortDescriptorsDidChange:';
-    procedure tableView_updateDraggingItemsForDrag (tableView: NSTableView; draggingInfo: NSDraggingInfoProtocol); message 'tableView:updateDraggingItemsForDrag:'; { available in macos  }
+    procedure tableView_updateDraggingItemsForDrag (tableView: NSTableView; draggingInfo: NSDraggingInfoProtocol); message 'tableView:updateDraggingItemsForDrag:'; { available in macos 10.7 }
     function tableView_validateDrop_proposedRow_proposedDropOperation (tableView: NSTableView; info: NSDraggingInfoProtocol; row: NSInteger; dropOperation: NSTableViewDropOperation): NSDragOperation; message 'tableView:validateDrop:proposedRow:proposedDropOperation:';
     function tableView_writeRowsWithIndexes_toPasteboard (tableView: NSTableView; rowIndexes: NSIndexSet; pboard: NSPasteboard): objcbool; message 'tableView:writeRowsWithIndexes:toPasteboard:'; deprecated 'Use -tableView:pasteboardWriterForRow: instead';
   end;

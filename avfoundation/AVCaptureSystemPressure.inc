@@ -8,17 +8,17 @@ type
 {$if defined(__NULL_MACRO__)}
 {$ifdef TYPES}
 type
-  AVCaptureSystemPressureLevel = NSString { unavailable in macos, tvos };
-  AVCaptureSystemPressureLevelPtr = ^AVCaptureSystemPressureLevel { unavailable in macos, tvos };
+  AVCaptureSystemPressureLevel = NSString { unavailable in macos, tvos } { unavailable in watchos };
+  AVCaptureSystemPressureLevelPtr = ^AVCaptureSystemPressureLevel { unavailable in macos, tvos } { unavailable in watchos };
 {$endif}
 
 {$ifdef EXTERNAL_SYMBOLS}
 var
-  AVCaptureSystemPressureLevelNominal: AVCaptureSystemPressureLevel { unavailable in macos, tvos }; cvar; external;
-  AVCaptureSystemPressureLevelFair: AVCaptureSystemPressureLevel { unavailable in macos, tvos }; cvar; external;
-  AVCaptureSystemPressureLevelSerious: AVCaptureSystemPressureLevel { unavailable in macos, tvos }; cvar; external;
-  AVCaptureSystemPressureLevelCritical: AVCaptureSystemPressureLevel { unavailable in macos, tvos }; cvar; external;
-  AVCaptureSystemPressureLevelShutdown: AVCaptureSystemPressureLevel { unavailable in macos, tvos }; cvar; external;
+  AVCaptureSystemPressureLevelNominal: AVCaptureSystemPressureLevel { unavailable in macos, tvos } { unavailable in watchos }; cvar; external;
+  AVCaptureSystemPressureLevelFair: AVCaptureSystemPressureLevel { unavailable in macos, tvos } { unavailable in watchos }; cvar; external;
+  AVCaptureSystemPressureLevelSerious: AVCaptureSystemPressureLevel { unavailable in macos, tvos } { unavailable in watchos }; cvar; external;
+  AVCaptureSystemPressureLevelCritical: AVCaptureSystemPressureLevel { unavailable in macos, tvos } { unavailable in watchos }; cvar; external;
+  AVCaptureSystemPressureLevelShutdown: AVCaptureSystemPressureLevel { unavailable in macos, tvos } { unavailable in watchos }; cvar; external;
 {$endif}
 
 {$ifdef TYPES}

@@ -22,7 +22,7 @@ type
 const
   MTLBarrierScopeBuffers = 1 shl 0;
   MTLBarrierScopeTextures = 1 shl 1;
-  MTLBarrierScopeRenderTargets = 1 shl 2 { unavailable in ios };
+  MTLBarrierScopeRenderTargets = 1 shl 2 { unavailable in ios } { available in macos 10.14, macCatalyst 13.0 };
 {$endif}
 
 {$ifdef PROTOCOLS}

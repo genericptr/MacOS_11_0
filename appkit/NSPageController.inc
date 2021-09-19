@@ -40,11 +40,11 @@ type
     procedure takeSelectedIndexFrom (sender: id); message 'takeSelectedIndexFrom:';
 
     { Adopted protocols }
-    function animationForKey (key: NSAnimatablePropertyKey): id; message 'animationForKey:'; { available in macos  }
-    function animations: NSDictionary; message 'animations'; { available in macos  }
-    function animator: id; message 'animator'; { available in macos  }
-    class function defaultAnimationForKey (key: NSAnimatablePropertyKey): id; message 'defaultAnimationForKey:'; { available in macos  }
-    procedure setAnimations (newValue: NSDictionary); message 'setAnimations:'; { available in macos  }
+    function animationForKey (key: NSAnimatablePropertyKey): id; message 'animationForKey:'; { available in macos 10.5 }
+    function animations: NSDictionary; message 'animations'; { available in macos 10.5 }
+    function animator: id; message 'animator'; { available in macos 10.5 }
+    class function defaultAnimationForKey (key: NSAnimatablePropertyKey): id; message 'defaultAnimationForKey:'; { available in macos 10.5 }
+    procedure setAnimations (newValue: NSDictionary); message 'setAnimations:'; { available in macos 10.5 }
   end;
 {$endif}
 

@@ -35,11 +35,11 @@ type
     procedure openDocument (sender: id); message 'openDocument:';
     function URLsFromRunningOpenPanel: NSArray; message 'URLsFromRunningOpenPanel';
     function runModalOpenPanel_forTypes (openPanel: NSOpenPanel; types: NSArray): NSInteger; message 'runModalOpenPanel:forTypes:';
-    procedure beginOpenPanelWithCompletionHandler (completionHandler: NSDocumentControllerBeginOpenPanelWithCompletionHandlerCallback); message 'beginOpenPanelWithCompletionHandler:'; { available in macos  }
-    procedure beginOpenPanel_forTypes_completionHandler (openPanel: NSOpenPanel; inTypes: NSArray; completionHandler: NSDocumentControllerBeginOpenPanelCallback); message 'beginOpenPanel:forTypes:completionHandler:'; { available in macos  }
-    procedure openDocumentWithContentsOfURL_display_completionHandler (url: NSURL; displayDocument: objcbool; completionHandler: NSDocumentControllerOpenDocumentWithContentsOfURLCallback); message 'openDocumentWithContentsOfURL:display:completionHandler:'; { available in macos  }
+    procedure beginOpenPanelWithCompletionHandler (completionHandler: NSDocumentControllerBeginOpenPanelWithCompletionHandlerCallback); message 'beginOpenPanelWithCompletionHandler:'; { available in macos 10.8 }
+    procedure beginOpenPanel_forTypes_completionHandler (openPanel: NSOpenPanel; inTypes: NSArray; completionHandler: NSDocumentControllerBeginOpenPanelCallback); message 'beginOpenPanel:forTypes:completionHandler:'; { available in macos 10.8 }
+    procedure openDocumentWithContentsOfURL_display_completionHandler (url: NSURL; displayDocument: objcbool; completionHandler: NSDocumentControllerOpenDocumentWithContentsOfURLCallback); message 'openDocumentWithContentsOfURL:display:completionHandler:'; { available in macos 10.7 }
     function makeDocumentWithContentsOfURL_ofType_error (url: NSURL; typeName: NSString; outError: NSErrorPtr): NSDocument; message 'makeDocumentWithContentsOfURL:ofType:error:';
-    procedure reopenDocumentForURL_withContentsOfURL_display_completionHandler (urlOrNil: NSURL; contentsURL: NSURL; displayDocument: objcbool; completionHandler: NSDocumentControllerReopenDocumentForURLCallback); message 'reopenDocumentForURL:withContentsOfURL:display:completionHandler:'; { available in macos  }
+    procedure reopenDocumentForURL_withContentsOfURL_display_completionHandler (urlOrNil: NSURL; contentsURL: NSURL; displayDocument: objcbool; completionHandler: NSDocumentControllerReopenDocumentForURLCallback); message 'reopenDocumentForURL:withContentsOfURL:display:completionHandler:'; { available in macos 10.7 }
     function makeDocumentForURL_withContentsOfURL_ofType_error (urlOrNil: NSURL; contentsURL: NSURL; typeName: NSString; outError: NSErrorPtr): NSDocument; message 'makeDocumentForURL:withContentsOfURL:ofType:error:';
     procedure setAutosavingDelay(newValue: NSTimeInterval); message 'setAutosavingDelay:';
     function autosavingDelay: NSTimeInterval; message 'autosavingDelay';
@@ -47,9 +47,9 @@ type
     function hasEditedDocuments: objcbool; message 'hasEditedDocuments';
     procedure reviewUnsavedDocumentsWithAlertTitle_cancellable_delegate_didReviewAllSelector_contextInfo (title: NSString; cancellable: objcbool; delegate: id; didReviewAllSelector: SEL; contextInfo: pointer); message 'reviewUnsavedDocumentsWithAlertTitle:cancellable:delegate:didReviewAllSelector:contextInfo:';
     procedure closeAllDocumentsWithDelegate_didCloseAllSelector_contextInfo (delegate: id; didCloseAllSelector: SEL; contextInfo: pointer); message 'closeAllDocumentsWithDelegate:didCloseAllSelector:contextInfo:';
-    function duplicateDocumentWithContentsOfURL_copying_displayName_error (url: NSURL; duplicateByCopying: objcbool; displayNameOrNil: NSString; outError: NSErrorPtr): NSDocument; message 'duplicateDocumentWithContentsOfURL:copying:displayName:error:'; { available in macos  }
-    function allowsAutomaticShareMenu: objcbool; message 'allowsAutomaticShareMenu'; { available in macos  }
-    function standardShareMenuItem: NSMenuItem; message 'standardShareMenuItem'; { available in macos  }
+    function duplicateDocumentWithContentsOfURL_copying_displayName_error (url: NSURL; duplicateByCopying: objcbool; displayNameOrNil: NSString; outError: NSErrorPtr): NSDocument; message 'duplicateDocumentWithContentsOfURL:copying:displayName:error:'; { available in macos 10.7 }
+    function allowsAutomaticShareMenu: objcbool; message 'allowsAutomaticShareMenu'; { available in macos 10.13 }
+    function standardShareMenuItem: NSMenuItem; message 'standardShareMenuItem'; { available in macos 10.13 }
     procedure presentError_modalForWindow_delegate_didPresentSelector_contextInfo (error: NSError; window: NSWindow; delegate: id; didPresentSelector: SEL; contextInfo: pointer); message 'presentError:modalForWindow:delegate:didPresentSelector:contextInfo:';
     function presentError (error: NSError): objcbool; message 'presentError:';
     function willPresentError (error: NSError): NSError; message 'willPresentError:';

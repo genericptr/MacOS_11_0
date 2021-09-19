@@ -13,10 +13,10 @@ type
 
 {$ifdef EXTERNAL_SYMBOLS}
 var
-  CHHapticEventTypeHapticTransient: CHHapticEventType { unavailable in watchos }; cvar; external;
-  CHHapticEventTypeHapticContinuous: CHHapticEventType { unavailable in watchos }; cvar; external;
-  CHHapticEventTypeAudioContinuous: CHHapticEventType { unavailable in watchos }; cvar; external;
-  CHHapticEventTypeAudioCustom: CHHapticEventType { unavailable in watchos }; cvar; external;
+  CHHapticEventTypeHapticTransient: CHHapticEventType { unavailable in watchos } { available in ios 13.0, macos 10.15, tvos 14.0, macCatalyst 13.0 }; cvar; external;
+  CHHapticEventTypeHapticContinuous: CHHapticEventType { unavailable in watchos } { available in ios 13.0, macos 10.15, tvos 14.0, macCatalyst 13.0 }; cvar; external;
+  CHHapticEventTypeAudioContinuous: CHHapticEventType { unavailable in watchos } { available in ios 13.0, macos 10.15, tvos 14.0, macCatalyst 13.0 }; cvar; external;
+  CHHapticEventTypeAudioCustom: CHHapticEventType { unavailable in watchos } { available in ios 13.0, macos 10.15, tvos 14.0, macCatalyst 13.0 }; cvar; external;
 {$endif}
 
 {$ifdef TYPES}

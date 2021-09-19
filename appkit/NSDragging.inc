@@ -83,15 +83,15 @@ type
     function draggingSequenceNumber: NSInteger; message 'draggingSequenceNumber';
     procedure slideDraggedImageTo (screenPoint: NSPoint); message 'slideDraggedImageTo:';
     function namesOfPromisedFilesDroppedAtDestination (dropDestination: NSURL): NSArray; message 'namesOfPromisedFilesDroppedAtDestination:'; deprecated 'Use NSFilePromiseReceiver objects instead';
-    procedure setDraggingFormation(newValue: NSDraggingFormation); message 'setDraggingFormation:'; { available in macos  }
-    function draggingFormation: NSDraggingFormation; message 'draggingFormation'; { available in macos  }
-    procedure setAnimatesToDestination(newValue: objcbool); message 'setAnimatesToDestination:'; { available in macos  }
-    function animatesToDestination: objcbool; message 'animatesToDestination'; { available in macos  }
-    procedure setNumberOfValidItemsForDrop(newValue: NSInteger); message 'setNumberOfValidItemsForDrop:'; { available in macos  }
-    function numberOfValidItemsForDrop: NSInteger; message 'numberOfValidItemsForDrop'; { available in macos  }
-    procedure enumerateDraggingItemsWithOptions_forView_classes_searchOptions_usingBlock (enumOpts: NSDraggingItemEnumerationOptions; view: NSView; classArray: NSArray; searchOptions: NSDictionary; block: NSDraggingEnumerateDraggingItemsWithOptionsCallback); message 'enumerateDraggingItemsWithOptions:forView:classes:searchOptions:usingBlock:'; { available in macos  }
-    function springLoadingHighlight: NSSpringLoadingHighlight; message 'springLoadingHighlight'; { available in macos  }
-    procedure resetSpringLoading; message 'resetSpringLoading'; { available in macos  }
+    procedure setDraggingFormation(newValue: NSDraggingFormation); message 'setDraggingFormation:'; { available in macos 10.7 }
+    function draggingFormation: NSDraggingFormation; message 'draggingFormation'; { available in macos 10.7 }
+    procedure setAnimatesToDestination(newValue: objcbool); message 'setAnimatesToDestination:'; { available in macos 10.7 }
+    function animatesToDestination: objcbool; message 'animatesToDestination'; { available in macos 10.7 }
+    procedure setNumberOfValidItemsForDrop(newValue: NSInteger); message 'setNumberOfValidItemsForDrop:'; { available in macos 10.7 }
+    function numberOfValidItemsForDrop: NSInteger; message 'numberOfValidItemsForDrop'; { available in macos 10.7 }
+    procedure enumerateDraggingItemsWithOptions_forView_classes_searchOptions_usingBlock (enumOpts: NSDraggingItemEnumerationOptions; view: NSView; classArray: NSArray; searchOptions: NSDictionary; block: NSDraggingEnumerateDraggingItemsWithOptionsCallback); message 'enumerateDraggingItemsWithOptions:forView:classes:searchOptions:usingBlock:'; { available in macos 10.7 }
+    function springLoadingHighlight: NSSpringLoadingHighlight; message 'springLoadingHighlight'; { available in macos 10.11 }
+    procedure resetSpringLoading; message 'resetSpringLoading'; { available in macos 10.11 }
   end;
 
 type
@@ -105,7 +105,7 @@ type
     procedure concludeDragOperation (sender: NSDraggingInfoProtocol); message 'concludeDragOperation:';
     procedure draggingEnded (sender: NSDraggingInfoProtocol); message 'draggingEnded:';
     function wantsPeriodicDraggingUpdates: objcbool; message 'wantsPeriodicDraggingUpdates';
-    procedure updateDraggingItemsForDrag (sender: NSDraggingInfoProtocol); message 'updateDraggingItemsForDrag:'; { available in macos  }
+    procedure updateDraggingItemsForDrag (sender: NSDraggingInfoProtocol); message 'updateDraggingItemsForDrag:'; { available in macos 10.7 }
   end;
 
 type
@@ -137,13 +137,13 @@ const
 type
   NSSpringLoadingDestinationProtocol = objcprotocol external name 'NSSpringLoadingDestination' (NSObjectProtocol)
   required
-    procedure springLoadingActivated_draggingInfo (activated: objcbool; draggingInfo: NSDraggingInfoProtocol); message 'springLoadingActivated:draggingInfo:'; { available in macos  }
-    procedure springLoadingHighlightChanged (draggingInfo: NSDraggingInfoProtocol); message 'springLoadingHighlightChanged:'; { available in macos  }
+    procedure springLoadingActivated_draggingInfo (activated: objcbool; draggingInfo: NSDraggingInfoProtocol); message 'springLoadingActivated:draggingInfo:'; { available in macos 10.11 }
+    procedure springLoadingHighlightChanged (draggingInfo: NSDraggingInfoProtocol); message 'springLoadingHighlightChanged:'; { available in macos 10.11 }
   optional
-    function springLoadingEntered (draggingInfo: NSDraggingInfoProtocol): NSSpringLoadingOptions; message 'springLoadingEntered:'; { available in macos  }
-    function springLoadingUpdated (draggingInfo: NSDraggingInfoProtocol): NSSpringLoadingOptions; message 'springLoadingUpdated:'; { available in macos  }
-    procedure springLoadingExited (draggingInfo: NSDraggingInfoProtocol); message 'springLoadingExited:'; { available in macos  }
-    procedure draggingEnded (draggingInfo: NSDraggingInfoProtocol); message 'draggingEnded:'; { available in macos  }
+    function springLoadingEntered (draggingInfo: NSDraggingInfoProtocol): NSSpringLoadingOptions; message 'springLoadingEntered:'; { available in macos 10.11 }
+    function springLoadingUpdated (draggingInfo: NSDraggingInfoProtocol): NSSpringLoadingOptions; message 'springLoadingUpdated:'; { available in macos 10.11 }
+    procedure springLoadingExited (draggingInfo: NSDraggingInfoProtocol); message 'springLoadingExited:'; { available in macos 10.11 }
+    procedure draggingEnded (draggingInfo: NSDraggingInfoProtocol); message 'draggingEnded:'; { available in macos 10.11 }
   end;
 {$endif}
 

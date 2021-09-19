@@ -25,9 +25,9 @@ type
     {$if defined(TARGET_OS_IPHONE) or defined(TARGET_OS_MACCATALYST)}
     procedure setProjectPreviewImage (previewImage: UIImage); message 'setProjectPreviewImage:';
     {$else}
-    procedure setProjectPreviewImage (previewImage: NSImage); message 'setProjectPreviewImage:'; { available in macos  }
+    procedure setProjectPreviewImage (previewImage: NSImage); message 'setProjectPreviewImage:'; { available in macos 10.14 }
     {$endif}
-    procedure removeAssets (assets: NSFastEnumerationProtocol); message 'removeAssets:'; { available in macos  }
+    procedure removeAssets (assets: NSFastEnumerationProtocol); message 'removeAssets:'; { available in macos 10.14 }
   end;
 {$endif}
 

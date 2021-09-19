@@ -18,8 +18,8 @@ type
 
 type
   NSView_NSPressureConfiguration = objccategory external name 'NSPressureConfiguration' (NSView)
-    procedure setPressureConfiguration(newValue: NSPressureConfiguration); message 'setPressureConfiguration:'; { available in macos  }
-    function pressureConfiguration: NSPressureConfiguration; message 'pressureConfiguration'; { available in macos  }
+    procedure setPressureConfiguration(newValue: NSPressureConfiguration); message 'setPressureConfiguration:'; { available in macos 10.11 }
+    function pressureConfiguration: NSPressureConfiguration; message 'pressureConfiguration'; { available in macos 10.11 }
   end;
 {$endif}
 

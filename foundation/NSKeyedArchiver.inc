@@ -12,7 +12,7 @@ type
 var
   NSInvalidArchiveOperationException: NSExceptionName; cvar; external;
   NSInvalidUnarchiveOperationException: NSExceptionName; cvar; external;
-  NSKeyedArchiveRootObjectKey: NSString { available in macos , ios , watchos , tvos  }; cvar; external;
+  NSKeyedArchiveRootObjectKey: NSString { available in macos 10.9, ios 7.0, watchos 2.0, tvos 9.0 }; cvar; external;
 {$endif}
 
 {$ifdef CLASSES}
@@ -20,8 +20,8 @@ var
 type
   NSKeyedArchiver = objcclass external (NSCoder)
   public
-    function initRequiringSecureCoding (requiresSecureCoding: objcbool): id; message 'initRequiringSecureCoding:'; { available in macos , ios , watchos , tvos  }
-    class function archivedDataWithRootObject_requiringSecureCoding_error (object_: id; requiresSecureCoding: objcbool; error: NSErrorPtr): NSData; message 'archivedDataWithRootObject:requiringSecureCoding:error:'; { available in macos , ios , watchos , tvos  }
+    function initRequiringSecureCoding (requiresSecureCoding: objcbool): id; message 'initRequiringSecureCoding:'; { available in macos 10.13, ios 11.0, watchos 4.0, tvos 11.0 }
+    class function archivedDataWithRootObject_requiringSecureCoding_error (object_: id; requiresSecureCoding: objcbool; error: NSErrorPtr): NSData; message 'archivedDataWithRootObject:requiringSecureCoding:error:'; { available in macos 10.13, ios 11.0, watchos 4.0, tvos 11.0 }
     function init: id; message 'init'; deprecated 'Use -initRequiringSecureCoding: instead';
     function initForWritingWithMutableData (data: NSMutableData): id; message 'initForWritingWithMutableData:'; deprecated 'Use -initRequiringSecureCoding: instead';
     class function archivedDataWithRootObject (rootObject: id): NSData; message 'archivedDataWithRootObject:'; deprecated 'Use +archivedDataWithRootObject:requiringSecureCoding:error: instead';
@@ -30,7 +30,7 @@ type
     function delegate: NSKeyedArchiverDelegateProtocol; message 'delegate';
     procedure setOutputFormat(newValue: NSPropertyListFormat); message 'setOutputFormat:';
     function outputFormat: NSPropertyListFormat; message 'outputFormat';
-    function encodedData: NSData; message 'encodedData'; { available in macosx , ios , watchos , tvos  }
+    function encodedData: NSData; message 'encodedData'; { available in macosx 10.12, ios 10.0, watchos 3.0, tvos 10.0 }
     procedure finishEncoding; message 'finishEncoding';
     class procedure classSetClassName_forClass (codedName: NSString; cls: pobjc_class); message 'setClassName:forClass:';
     procedure setClassName_forClass (codedName: NSString; cls: pobjc_class); message 'setClassName:forClass:';
@@ -45,20 +45,20 @@ type
     procedure encodeFloat_forKey (value: single; key: NSString); message 'encodeFloat:forKey:';
     procedure encodeDouble_forKey (value: double; key: NSString); message 'encodeDouble:forKey:';
     procedure encodeBytes_length_forKey (bytes: pbyte; length: NSUInteger; key: NSString); message 'encodeBytes:length:forKey:';
-    procedure setRequiresSecureCoding(newValue: objcbool); message 'setRequiresSecureCoding:'; { available in macos , ios , watchos , tvos  }
-    function requiresSecureCoding: objcbool; message 'requiresSecureCoding'; { available in macos , ios , watchos , tvos  }
+    procedure setRequiresSecureCoding(newValue: objcbool); message 'setRequiresSecureCoding:'; { available in macos 10.8, ios 6.0, watchos 2.0, tvos 9.0 }
+    function requiresSecureCoding: objcbool; message 'requiresSecureCoding'; { available in macos 10.8, ios 6.0, watchos 2.0, tvos 9.0 }
   end;
 
 type
   NSKeyedUnarchiver = objcclass external (NSCoder)
   public
-    function initForReadingFromData_error (data: NSData; error: NSErrorPtr): id; message 'initForReadingFromData:error:'; { available in macos , ios , watchos , tvos  }
-    class function unarchivedObjectOfClass_fromData_error (cls: pobjc_class; data: NSData; error: NSErrorPtr): id; message 'unarchivedObjectOfClass:fromData:error:'; { available in macos , ios , watchos , tvos  }
-    class function unarchivedArrayOfObjectsOfClass_fromData_error (cls: pobjc_class; data: NSData; error: NSErrorPtr): NSArray; message 'unarchivedArrayOfObjectsOfClass:fromData:error:'; { available in macos , ios , watchos , tvos  }
-    class function unarchivedDictionaryWithKeysOfClass_objectsOfClass_fromData_error (keyCls: pobjc_class; valueCls: pobjc_class; data: NSData; error: NSErrorPtr): NSDictionary; message 'unarchivedDictionaryWithKeysOfClass:objectsOfClass:fromData:error:'; { available in macos , ios , watchos , tvos  }
-    class function unarchivedObjectOfClasses_fromData_error (classes: NSSet; data: NSData; error: NSErrorPtr): id; message 'unarchivedObjectOfClasses:fromData:error:'; { available in macos , ios , watchos , tvos  }
-    class function unarchivedArrayOfObjectsOfClasses_fromData_error (classes: NSSet; data: NSData; error: NSErrorPtr): NSArray; message 'unarchivedArrayOfObjectsOfClasses:fromData:error:'; { available in macos , ios , watchos , tvos  }
-    class function unarchivedDictionaryWithKeysOfClasses_objectsOfClasses_fromData_error (keyClasses: NSSet; valueClasses: NSSet; data: NSData; error: NSErrorPtr): NSDictionary; message 'unarchivedDictionaryWithKeysOfClasses:objectsOfClasses:fromData:error:'; { available in macos , ios , watchos , tvos  }
+    function initForReadingFromData_error (data: NSData; error: NSErrorPtr): id; message 'initForReadingFromData:error:'; { available in macos 10.13, ios 11.0, watchos 4.0, tvos 11.0 }
+    class function unarchivedObjectOfClass_fromData_error (cls: pobjc_class; data: NSData; error: NSErrorPtr): id; message 'unarchivedObjectOfClass:fromData:error:'; { available in macos 10.13, ios 11.0, watchos 4.0, tvos 11.0 }
+    class function unarchivedArrayOfObjectsOfClass_fromData_error (cls: pobjc_class; data: NSData; error: NSErrorPtr): NSArray; message 'unarchivedArrayOfObjectsOfClass:fromData:error:'; { available in macos 11.0, ios 14.0, watchos 7.0, tvos 14.0 }
+    class function unarchivedDictionaryWithKeysOfClass_objectsOfClass_fromData_error (keyCls: pobjc_class; valueCls: pobjc_class; data: NSData; error: NSErrorPtr): NSDictionary; message 'unarchivedDictionaryWithKeysOfClass:objectsOfClass:fromData:error:'; { available in macos 11.0, ios 14.0, watchos 7.0, tvos 14.0 }
+    class function unarchivedObjectOfClasses_fromData_error (classes: NSSet; data: NSData; error: NSErrorPtr): id; message 'unarchivedObjectOfClasses:fromData:error:'; { available in macos 10.13, ios 11.0, watchos 4.0, tvos 11.0 }
+    class function unarchivedArrayOfObjectsOfClasses_fromData_error (classes: NSSet; data: NSData; error: NSErrorPtr): NSArray; message 'unarchivedArrayOfObjectsOfClasses:fromData:error:'; { available in macos 11.0, ios 14.0, watchos 7.0, tvos 14.0 }
+    class function unarchivedDictionaryWithKeysOfClasses_objectsOfClasses_fromData_error (keyClasses: NSSet; valueClasses: NSSet; data: NSData; error: NSErrorPtr): NSDictionary; message 'unarchivedDictionaryWithKeysOfClasses:objectsOfClasses:fromData:error:'; { available in macos 11.0, ios 14.0, watchos 7.0, tvos 14.0 }
     function init: id; message 'init'; deprecated 'Use -initForReadingFromData:error: instead';
     function initForReadingWithData (data: NSData): id; message 'initForReadingWithData:'; deprecated 'Use -initForReadingFromData:error: instead';
     class function unarchiveObjectWithData (data: NSData): id; message 'unarchiveObjectWithData:'; deprecated 'Use +unarchivedObjectOfClass:fromData:error: instead';
@@ -80,10 +80,10 @@ type
     function decodeFloatForKey (key: NSString): single; message 'decodeFloatForKey:';
     function decodeDoubleForKey (key: NSString): double; message 'decodeDoubleForKey:';
     function decodeBytesForKey_returnedLength (key: NSString; lengthp: NSUIntegerPtr): pbyte; message 'decodeBytesForKey:returnedLength:';
-    procedure setRequiresSecureCoding(newValue: objcbool); message 'setRequiresSecureCoding:'; { available in macos , ios , watchos , tvos  }
-    function requiresSecureCoding: objcbool; message 'requiresSecureCoding'; { available in macos , ios , watchos , tvos  }
-    procedure setDecodingFailurePolicy(newValue: NSDecodingFailurePolicy); message 'setDecodingFailurePolicy:'; { available in macos , ios , watchos , tvos  }
-    function decodingFailurePolicy: NSDecodingFailurePolicy; message 'decodingFailurePolicy'; { available in macos , ios , watchos , tvos  }
+    procedure setRequiresSecureCoding(newValue: objcbool); message 'setRequiresSecureCoding:'; { available in macos 10.8, ios 6.0, watchos 2.0, tvos 9.0 }
+    function requiresSecureCoding: objcbool; message 'requiresSecureCoding'; { available in macos 10.8, ios 6.0, watchos 2.0, tvos 9.0 }
+    procedure setDecodingFailurePolicy(newValue: NSDecodingFailurePolicy); message 'setDecodingFailurePolicy:'; { available in macos 10.11, ios 9.0, watchos 2.0, tvos 9.0 }
+    function decodingFailurePolicy: NSDecodingFailurePolicy; message 'decodingFailurePolicy'; { available in macos 10.11, ios 9.0, watchos 2.0, tvos 9.0 }
   end;
 {$endif}
 

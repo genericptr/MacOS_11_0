@@ -27,10 +27,10 @@ type
     function constraintEqualToAnchor_constant (anchor: NSLayoutAnchor; c: CGFloat): NSLayoutConstraint; message 'constraintEqualToAnchor:constant:';
     function constraintGreaterThanOrEqualToAnchor_constant (anchor: NSLayoutAnchor; c: CGFloat): NSLayoutConstraint; message 'constraintGreaterThanOrEqualToAnchor:constant:';
     function constraintLessThanOrEqualToAnchor_constant (anchor: NSLayoutAnchor; c: CGFloat): NSLayoutConstraint; message 'constraintLessThanOrEqualToAnchor:constant:';
-    function name: NSString; message 'name'; { unavailable in ios, watchos, tvos }
-    function item: id; message 'item'; { unavailable in ios, watchos, tvos }
-    function hasAmbiguousLayout: objcbool; message 'hasAmbiguousLayout'; { unavailable in ios, watchos, tvos }
-    function constraintsAffectingLayout: NSArray; message 'constraintsAffectingLayout'; { unavailable in ios, watchos, tvos }
+    function name: NSString; message 'name'; { unavailable in ios, watchos, tvos } { available in macos 10.12 }
+    function item: id; message 'item'; { unavailable in ios, watchos, tvos } { available in macos 10.12 }
+    function hasAmbiguousLayout: objcbool; message 'hasAmbiguousLayout'; { unavailable in ios, watchos, tvos } { available in macos 10.12 }
+    function constraintsAffectingLayout: NSArray; message 'constraintsAffectingLayout'; { unavailable in ios, watchos, tvos } { available in macos 10.12 }
 
     { Adopted protocols }
     function copyWithZone (zone: NSZonePtr): id; message 'copyWithZone:';
@@ -41,19 +41,19 @@ type
 type
   NSLayoutXAxisAnchor = objcclass external (NSLayoutAnchor)
   public
-    function anchorWithOffsetToAnchor (otherAnchor: NSLayoutXAxisAnchor): NSLayoutDimension; message 'anchorWithOffsetToAnchor:'; { available in macos , ios , tvos  }
-    function constraintEqualToSystemSpacingAfterAnchor_multiplier (anchor: NSLayoutXAxisAnchor; multiplier: CGFloat): NSLayoutConstraint; message 'constraintEqualToSystemSpacingAfterAnchor:multiplier:'; { available in macos , ios , tvos  }
-    function constraintGreaterThanOrEqualToSystemSpacingAfterAnchor_multiplier (anchor: NSLayoutXAxisAnchor; multiplier: CGFloat): NSLayoutConstraint; message 'constraintGreaterThanOrEqualToSystemSpacingAfterAnchor:multiplier:'; { available in macos , ios , tvos  }
-    function constraintLessThanOrEqualToSystemSpacingAfterAnchor_multiplier (anchor: NSLayoutXAxisAnchor; multiplier: CGFloat): NSLayoutConstraint; message 'constraintLessThanOrEqualToSystemSpacingAfterAnchor:multiplier:'; { available in macos , ios , tvos  }
+    function anchorWithOffsetToAnchor (otherAnchor: NSLayoutXAxisAnchor): NSLayoutDimension; message 'anchorWithOffsetToAnchor:'; { available in macos 10.12, ios 10.0, tvos 10.0 }
+    function constraintEqualToSystemSpacingAfterAnchor_multiplier (anchor: NSLayoutXAxisAnchor; multiplier: CGFloat): NSLayoutConstraint; message 'constraintEqualToSystemSpacingAfterAnchor:multiplier:'; { available in macos 11.0, ios 11.0, tvos 11.0 }
+    function constraintGreaterThanOrEqualToSystemSpacingAfterAnchor_multiplier (anchor: NSLayoutXAxisAnchor; multiplier: CGFloat): NSLayoutConstraint; message 'constraintGreaterThanOrEqualToSystemSpacingAfterAnchor:multiplier:'; { available in macos 11.0, ios 11.0, tvos 11.0 }
+    function constraintLessThanOrEqualToSystemSpacingAfterAnchor_multiplier (anchor: NSLayoutXAxisAnchor; multiplier: CGFloat): NSLayoutConstraint; message 'constraintLessThanOrEqualToSystemSpacingAfterAnchor:multiplier:'; { available in macos 11.0, ios 11.0, tvos 11.0 }
   end;
 
 type
   NSLayoutYAxisAnchor = objcclass external (NSLayoutAnchor)
   public
-    function anchorWithOffsetToAnchor (otherAnchor: NSLayoutYAxisAnchor): NSLayoutDimension; message 'anchorWithOffsetToAnchor:'; { available in macos , ios , tvos  }
-    function constraintEqualToSystemSpacingBelowAnchor_multiplier (anchor: NSLayoutYAxisAnchor; multiplier: CGFloat): NSLayoutConstraint; message 'constraintEqualToSystemSpacingBelowAnchor:multiplier:'; { available in macos , ios , tvos  }
-    function constraintGreaterThanOrEqualToSystemSpacingBelowAnchor_multiplier (anchor: NSLayoutYAxisAnchor; multiplier: CGFloat): NSLayoutConstraint; message 'constraintGreaterThanOrEqualToSystemSpacingBelowAnchor:multiplier:'; { available in macos , ios , tvos  }
-    function constraintLessThanOrEqualToSystemSpacingBelowAnchor_multiplier (anchor: NSLayoutYAxisAnchor; multiplier: CGFloat): NSLayoutConstraint; message 'constraintLessThanOrEqualToSystemSpacingBelowAnchor:multiplier:'; { available in macos , ios , tvos  }
+    function anchorWithOffsetToAnchor (otherAnchor: NSLayoutYAxisAnchor): NSLayoutDimension; message 'anchorWithOffsetToAnchor:'; { available in macos 10.12, ios 10.0, tvos 10.0 }
+    function constraintEqualToSystemSpacingBelowAnchor_multiplier (anchor: NSLayoutYAxisAnchor; multiplier: CGFloat): NSLayoutConstraint; message 'constraintEqualToSystemSpacingBelowAnchor:multiplier:'; { available in macos 11.0, ios 11.0, tvos 11.0 }
+    function constraintGreaterThanOrEqualToSystemSpacingBelowAnchor_multiplier (anchor: NSLayoutYAxisAnchor; multiplier: CGFloat): NSLayoutConstraint; message 'constraintGreaterThanOrEqualToSystemSpacingBelowAnchor:multiplier:'; { available in macos 11.0, ios 11.0, tvos 11.0 }
+    function constraintLessThanOrEqualToSystemSpacingBelowAnchor_multiplier (anchor: NSLayoutYAxisAnchor; multiplier: CGFloat): NSLayoutConstraint; message 'constraintLessThanOrEqualToSystemSpacingBelowAnchor:multiplier:'; { available in macos 11.0, ios 11.0, tvos 11.0 }
   end;
 
 type

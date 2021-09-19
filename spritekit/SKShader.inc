@@ -23,8 +23,8 @@ type
     procedure addUniform (uniform: SKUniform); message 'addUniform:';
     function uniformNamed (name: NSString): SKUniform; message 'uniformNamed:';
     procedure removeUniformNamed (name: NSString); message 'removeUniformNamed:';
-    procedure setAttributes(newValue: NSArray); message 'setAttributes:'; { available in ios , tvos , watchos , macos  }
-    function attributes: NSArray; message 'attributes'; { available in ios , tvos , watchos , macos  }
+    procedure setAttributes(newValue: NSArray); message 'setAttributes:'; { available in ios 9.0, tvos 9.0, watchos 2.0, macos 10.11 }
+    function attributes: NSArray; message 'attributes'; { available in ios 9.0, tvos 9.0, watchos 2.0, macos 10.11 }
 
     { Adopted protocols }
     function copyWithZone (zone: NSZonePtr): id; message 'copyWithZone:';

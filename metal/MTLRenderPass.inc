@@ -34,8 +34,8 @@ const
   MTLStoreActionStore = 1;
   MTLStoreActionMultisampleResolve = 2;
   MTLStoreActionStoreAndMultisampleResolve = 3 { available in macos , ios  };
-  MTLStoreActionUnknown = 4 { available in macos , ios  };
-  MTLStoreActionCustomSampleDepthStore = 5 { available in macos , ios  };
+  MTLStoreActionUnknown = 4 { available in macos 10.12, ios 10.0 };
+  MTLStoreActionCustomSampleDepthStore = 5 { available in macos 10.12, ios 10.0 };
 
 type
   MTLStoreActionOptions = NSUInteger;
@@ -82,7 +82,7 @@ type
     procedure setStoreAction(newValue: MTLStoreAction); message 'setStoreAction:';
     function storeAction: MTLStoreAction; message 'storeAction';
     procedure setStoreActionOptions(newValue: MTLStoreActionOptions); message 'setStoreActionOptions:'; { available in macos , ios  }
-    function storeActionOptions: MTLStoreActionOptions; message 'storeActionOptions'; { available in macos , ios  }
+    function storeActionOptions: MTLStoreActionOptions; message 'storeActionOptions'; { available in macos 10.13, ios 11.0 }
 
     { Adopted protocols }
     function copyWithZone (zone: NSZonePtr): id; message 'copyWithZone:';
@@ -115,7 +115,7 @@ type
     procedure setClearDepth(newValue: double); message 'setClearDepth:';
     function clearDepth: double; message 'clearDepth';
     procedure setDepthResolveFilter(newValue: MTLMultisampleDepthResolveFilter); message 'setDepthResolveFilter:'; { available in macos , ios  }
-    function depthResolveFilter: MTLMultisampleDepthResolveFilter; message 'depthResolveFilter'; { available in macos , ios  }
+    function depthResolveFilter: MTLMultisampleDepthResolveFilter; message 'depthResolveFilter'; { available in macos 10.14, ios 9.0 }
   end;
 {$endif}
 
@@ -137,7 +137,7 @@ type
     procedure setClearStencil(newValue: cuint32); message 'setClearStencil:';
     function clearStencil: cuint32; message 'clearStencil';
     procedure setStencilResolveFilter(newValue: MTLMultisampleStencilResolveFilter); message 'setStencilResolveFilter:'; { unavailable in tvos }
-    function stencilResolveFilter: MTLMultisampleStencilResolveFilter; message 'stencilResolveFilter'; { unavailable in tvos }
+    function stencilResolveFilter: MTLMultisampleStencilResolveFilter; message 'stencilResolveFilter'; { unavailable in tvos } { available in macos 10.14, ios 12.0 }
   end;
 
 type
@@ -151,15 +151,15 @@ type
   MTLRenderPassSampleBufferAttachmentDescriptor = objcclass external (NSObject, NSCopyingProtocol)
   public
     procedure setSampleBuffer(newValue: id); message 'setSampleBuffer:'; { available in macos , ios  }
-    function sampleBuffer: id; message 'sampleBuffer'; { available in macos , ios  }
-    procedure setStartOfVertexSampleIndex(newValue: NSUInteger); message 'setStartOfVertexSampleIndex:'; { available in macos , ios  }
-    function startOfVertexSampleIndex: NSUInteger; message 'startOfVertexSampleIndex'; { available in macos , ios  }
-    procedure setEndOfVertexSampleIndex(newValue: NSUInteger); message 'setEndOfVertexSampleIndex:'; { available in macos , ios  }
-    function endOfVertexSampleIndex: NSUInteger; message 'endOfVertexSampleIndex'; { available in macos , ios  }
-    procedure setStartOfFragmentSampleIndex(newValue: NSUInteger); message 'setStartOfFragmentSampleIndex:'; { available in macos , ios  }
-    function startOfFragmentSampleIndex: NSUInteger; message 'startOfFragmentSampleIndex'; { available in macos , ios  }
-    procedure setEndOfFragmentSampleIndex(newValue: NSUInteger); message 'setEndOfFragmentSampleIndex:'; { available in macos , ios  }
-    function endOfFragmentSampleIndex: NSUInteger; message 'endOfFragmentSampleIndex'; { available in macos , ios  }
+    function sampleBuffer: id; message 'sampleBuffer'; { available in macos 11.0, ios 14.0 }
+    procedure setStartOfVertexSampleIndex(newValue: NSUInteger); message 'setStartOfVertexSampleIndex:'; { available in macos 11.0, ios 14.0 }
+    function startOfVertexSampleIndex: NSUInteger; message 'startOfVertexSampleIndex'; { available in macos 11.0, ios 14.0 }
+    procedure setEndOfVertexSampleIndex(newValue: NSUInteger); message 'setEndOfVertexSampleIndex:'; { available in macos 11.0, ios 14.0 }
+    function endOfVertexSampleIndex: NSUInteger; message 'endOfVertexSampleIndex'; { available in macos 11.0, ios 14.0 }
+    procedure setStartOfFragmentSampleIndex(newValue: NSUInteger); message 'setStartOfFragmentSampleIndex:'; { available in macos 11.0, ios 14.0 }
+    function startOfFragmentSampleIndex: NSUInteger; message 'startOfFragmentSampleIndex'; { available in macos 11.0, ios 14.0 }
+    procedure setEndOfFragmentSampleIndex(newValue: NSUInteger); message 'setEndOfFragmentSampleIndex:'; { available in macos 11.0, ios 14.0 }
+    function endOfFragmentSampleIndex: NSUInteger; message 'endOfFragmentSampleIndex'; { available in macos 11.0, ios 14.0 }
 
     { Adopted protocols }
     function copyWithZone (zone: NSZonePtr): id; message 'copyWithZone:';
@@ -184,26 +184,26 @@ type
     procedure setVisibilityResultBuffer(newValue: id); message 'setVisibilityResultBuffer:';
     function visibilityResultBuffer: id; message 'visibilityResultBuffer';
     procedure setRenderTargetArrayLength(newValue: NSUInteger); message 'setRenderTargetArrayLength:'; { unavailable in tvos }
-    function renderTargetArrayLength: NSUInteger; message 'renderTargetArrayLength'; { unavailable in tvos }
-    procedure setImageblockSampleLength(newValue: NSUInteger); message 'setImageblockSampleLength:'; { unavailable in tvos }
-    function imageblockSampleLength: NSUInteger; message 'imageblockSampleLength'; { unavailable in tvos }
-    procedure setThreadgroupMemoryLength(newValue: NSUInteger); message 'setThreadgroupMemoryLength:'; { unavailable in tvos }
-    function threadgroupMemoryLength: NSUInteger; message 'threadgroupMemoryLength'; { unavailable in tvos }
-    procedure setTileWidth(newValue: NSUInteger); message 'setTileWidth:'; { unavailable in tvos }
-    function tileWidth: NSUInteger; message 'tileWidth'; { unavailable in tvos }
-    procedure setTileHeight(newValue: NSUInteger); message 'setTileHeight:'; { unavailable in tvos }
-    function tileHeight: NSUInteger; message 'tileHeight'; { unavailable in tvos }
-    procedure setDefaultRasterSampleCount(newValue: NSUInteger); message 'setDefaultRasterSampleCount:'; { unavailable in tvos }
-    function defaultRasterSampleCount: NSUInteger; message 'defaultRasterSampleCount'; { unavailable in tvos }
-    procedure setRenderTargetWidth(newValue: NSUInteger); message 'setRenderTargetWidth:'; { unavailable in tvos }
-    function renderTargetWidth: NSUInteger; message 'renderTargetWidth'; { unavailable in tvos }
-    procedure setRenderTargetHeight(newValue: NSUInteger); message 'setRenderTargetHeight:'; { unavailable in tvos }
-    function renderTargetHeight: NSUInteger; message 'renderTargetHeight'; { unavailable in tvos }
-    procedure setSamplePositions_count (positions: MTLSamplePositionPtr; count: NSUInteger); message 'setSamplePositions:count:'; { available in macos , ios  }
-    function getSamplePositions_count (positions: MTLSamplePositionPtr; count: NSUInteger): NSUInteger; message 'getSamplePositions:count:'; { available in macos , ios  }
-    procedure setRasterizationRateMap(newValue: id); message 'setRasterizationRateMap:'; { available in macos , ios , macCatalyst  }
-    function rasterizationRateMap: id; message 'rasterizationRateMap'; { available in macos , ios , macCatalyst  }
-    function sampleBufferAttachments: MTLRenderPassSampleBufferAttachmentDescriptorArray; message 'sampleBufferAttachments'; { available in macos , ios  }
+    function renderTargetArrayLength: NSUInteger; message 'renderTargetArrayLength'; { unavailable in tvos } { available in macos 10.11, ios 12.0 }
+    procedure setImageblockSampleLength(newValue: NSUInteger); message 'setImageblockSampleLength:'; { unavailable in tvos } { available in macos 10.11, ios 12.0 }
+    function imageblockSampleLength: NSUInteger; message 'imageblockSampleLength'; { unavailable in tvos } { available in macos 11.0, macCatalyst 14.0, ios 11.0 }
+    procedure setThreadgroupMemoryLength(newValue: NSUInteger); message 'setThreadgroupMemoryLength:'; { unavailable in tvos } { available in macos 11.0, macCatalyst 14.0, ios 11.0 }
+    function threadgroupMemoryLength: NSUInteger; message 'threadgroupMemoryLength'; { unavailable in tvos } { available in macos 11.0, macCatalyst 14.0, ios 11.0 }
+    procedure setTileWidth(newValue: NSUInteger); message 'setTileWidth:'; { unavailable in tvos } { available in macos 11.0, macCatalyst 14.0, ios 11.0 }
+    function tileWidth: NSUInteger; message 'tileWidth'; { unavailable in tvos } { available in macos 11.0, macCatalyst 14.0, ios 11.0 }
+    procedure setTileHeight(newValue: NSUInteger); message 'setTileHeight:'; { unavailable in tvos } { available in macos 11.0, macCatalyst 14.0, ios 11.0 }
+    function tileHeight: NSUInteger; message 'tileHeight'; { unavailable in tvos } { available in macos 11.0, macCatalyst 14.0, ios 11.0 }
+    procedure setDefaultRasterSampleCount(newValue: NSUInteger); message 'setDefaultRasterSampleCount:'; { unavailable in tvos } { available in macos 11.0, macCatalyst 14.0, ios 11.0 }
+    function defaultRasterSampleCount: NSUInteger; message 'defaultRasterSampleCount'; { unavailable in tvos } { available in ios 11.0, macos 10.15, macCatalyst 13.0 }
+    procedure setRenderTargetWidth(newValue: NSUInteger); message 'setRenderTargetWidth:'; { unavailable in tvos } { available in ios 11.0, macos 10.15, macCatalyst 13.0 }
+    function renderTargetWidth: NSUInteger; message 'renderTargetWidth'; { unavailable in tvos } { available in ios 11.0, macos 10.15, macCatalyst 13.0 }
+    procedure setRenderTargetHeight(newValue: NSUInteger); message 'setRenderTargetHeight:'; { unavailable in tvos } { available in ios 11.0, macos 10.15, macCatalyst 13.0 }
+    function renderTargetHeight: NSUInteger; message 'renderTargetHeight'; { unavailable in tvos } { available in ios 11.0, macos 10.15, macCatalyst 13.0 }
+    procedure setSamplePositions_count (positions: MTLSamplePositionPtr; count: NSUInteger); message 'setSamplePositions:count:'; { available in ios 11.0, macos 10.15, macCatalyst 13.0 }
+    function getSamplePositions_count (positions: MTLSamplePositionPtr; count: NSUInteger): NSUInteger; message 'getSamplePositions:count:'; { available in macos 10.13, ios 11.0 }
+    procedure setRasterizationRateMap(newValue: id); message 'setRasterizationRateMap:'; { available in macos 10.13, ios 11.0 }
+    function rasterizationRateMap: id; message 'rasterizationRateMap'; { available in macos 10.15.4, ios 13.0, macCatalyst 13.4 }
+    function sampleBufferAttachments: MTLRenderPassSampleBufferAttachmentDescriptorArray; message 'sampleBufferAttachments'; { available in macos 10.15.4, ios 13.0, macCatalyst 13.4 }
 
     { Adopted protocols }
     function copyWithZone (zone: NSZonePtr): id; message 'copyWithZone:';

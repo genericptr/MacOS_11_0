@@ -52,9 +52,9 @@ type
     _inputParameters: AVAudioMixInputParametersInternal;
   public
     function trackID: CMPersistentTrackID; message 'trackID';
-    function audioTimePitchAlgorithm: AVAudioTimePitchAlgorithm; message 'audioTimePitchAlgorithm'; { available in macos , ios , tvos , watchos  }
+    function audioTimePitchAlgorithm: AVAudioTimePitchAlgorithm; message 'audioTimePitchAlgorithm'; { available in macos 10.10, ios 7.0, tvos 9.0, watchos 1.0 }
     {$if defined(AVF_AUDIO_PROCESSING_TAP_AVAILABLE)}
-    function audioTapProcessor: MTAudioProcessingTapRef; message 'audioTapProcessor'; { unavailable in watchos }
+    function audioTapProcessor: MTAudioProcessingTapRef; message 'audioTapProcessor'; { unavailable in watchos } { available in macos 10.9, ios 6.0, tvos 9.0 }
     {$endif}
     function getVolumeRampForTime_startVolume_endVolume_timeRange (time: CMTime; startVolume: psingle; endVolume: psingle; timeRange: CMTimeRangePtr): objcbool; message 'getVolumeRampForTime:startVolume:endVolume:timeRange:';
 
@@ -72,11 +72,11 @@ type
     class function audioMixInputParameters: id; message 'audioMixInputParameters';
     procedure setTrackID(newValue: CMPersistentTrackID); message 'setTrackID:';
     function trackID: CMPersistentTrackID; message 'trackID';
-    procedure setAudioTimePitchAlgorithm(newValue: AVAudioTimePitchAlgorithm); message 'setAudioTimePitchAlgorithm:'; { available in macos , ios , tvos , watchos  }
-    function audioTimePitchAlgorithm: AVAudioTimePitchAlgorithm; message 'audioTimePitchAlgorithm'; { available in macos , ios , tvos , watchos  }
+    procedure setAudioTimePitchAlgorithm(newValue: AVAudioTimePitchAlgorithm); message 'setAudioTimePitchAlgorithm:'; { available in macos 10.10, ios 7.0, tvos 9.0, watchos 1.0 }
+    function audioTimePitchAlgorithm: AVAudioTimePitchAlgorithm; message 'audioTimePitchAlgorithm'; { available in macos 10.10, ios 7.0, tvos 9.0, watchos 1.0 }
     {$if defined(AVF_AUDIO_PROCESSING_TAP_AVAILABLE)}
-    procedure setAudioTapProcessor(newValue: MTAudioProcessingTapRef); message 'setAudioTapProcessor:'; { unavailable in watchos }
-    function audioTapProcessor: MTAudioProcessingTapRef; message 'audioTapProcessor'; { unavailable in watchos }
+    procedure setAudioTapProcessor(newValue: MTAudioProcessingTapRef); message 'setAudioTapProcessor:'; { unavailable in watchos } { available in macos 10.9, ios 6.0, tvos 9.0 }
+    function audioTapProcessor: MTAudioProcessingTapRef; message 'audioTapProcessor'; { unavailable in watchos } { available in macos 10.9, ios 6.0, tvos 9.0 }
     {$endif}
     procedure setVolumeRampFromStartVolume_toEndVolume_timeRange (startVolume: single; endVolume: single; timeRange: CMTimeRange); message 'setVolumeRampFromStartVolume:toEndVolume:timeRange:';
     procedure setVolume_atTime (volume: single; time: CMTime); message 'setVolume:atTime:';

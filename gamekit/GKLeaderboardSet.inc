@@ -30,7 +30,7 @@ type
     procedure setIdentifier(newValue: NSString); message 'setIdentifier:';
     function identifier: NSString; message 'identifier';
     class procedure loadLeaderboardSetsWithCompletionHandler (completionHandler: GKLeaderboardSetLoadLeaderboardSetsWithCompletionHandlerCallback); message 'loadLeaderboardSetsWithCompletionHandler:'; { available in 10_10, 7_0 }
-    procedure loadLeaderboardsWithHandler (handler: GKLeaderboardSetLoadLeaderboardsWithHandlerCallback); message 'loadLeaderboardsWithHandler:'; { available in ios , macos , tvos , watchos  }
+    procedure loadLeaderboardsWithHandler (handler: GKLeaderboardSetLoadLeaderboardsWithHandlerCallback); message 'loadLeaderboardsWithHandler:'; { available in ios 14.0, macos 11.0, tvos 14.0, watchos 7.0 }
 
     { Adopted protocols }
     procedure encodeWithCoder (coder: NSCoder); message 'encodeWithCoder:';

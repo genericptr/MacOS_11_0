@@ -11,26 +11,26 @@ type
 
 {$ifdef EXTERNAL_SYMBOLS}
 var
-  AVAudioSessionPortLineIn: AVAudioSessionPort { unavailable in macos }; cvar; external;
-  AVAudioSessionPortBuiltInMic: AVAudioSessionPort { unavailable in macos }; cvar; external;
-  AVAudioSessionPortHeadsetMic: AVAudioSessionPort { unavailable in macos }; cvar; external;
-  AVAudioSessionPortLineOut: AVAudioSessionPort { unavailable in macos }; cvar; external;
-  AVAudioSessionPortHeadphones: AVAudioSessionPort { unavailable in macos }; cvar; external;
-  AVAudioSessionPortBluetoothA2DP: AVAudioSessionPort { unavailable in macos }; cvar; external;
-  AVAudioSessionPortBuiltInReceiver: AVAudioSessionPort { unavailable in macos }; cvar; external;
-  AVAudioSessionPortBuiltInSpeaker: AVAudioSessionPort { unavailable in macos }; cvar; external;
-  AVAudioSessionPortHDMI: AVAudioSessionPort { unavailable in macos }; cvar; external;
-  AVAudioSessionPortAirPlay: AVAudioSessionPort { unavailable in macos }; cvar; external;
-  AVAudioSessionPortBluetoothLE: AVAudioSessionPort { unavailable in macos }; cvar; external;
-  AVAudioSessionPortBluetoothHFP: AVAudioSessionPort { unavailable in macos }; cvar; external;
-  AVAudioSessionPortUSBAudio: AVAudioSessionPort { unavailable in macos }; cvar; external;
-  AVAudioSessionPortCarAudio: AVAudioSessionPort { unavailable in macos }; cvar; external;
-  AVAudioSessionPortVirtual: AVAudioSessionPort { unavailable in macos }; cvar; external;
-  AVAudioSessionPortPCI: AVAudioSessionPort { unavailable in macos }; cvar; external;
-  AVAudioSessionPortFireWire: AVAudioSessionPort { unavailable in macos }; cvar; external;
-  AVAudioSessionPortDisplayPort: AVAudioSessionPort { unavailable in macos }; cvar; external;
-  AVAudioSessionPortAVB: AVAudioSessionPort { unavailable in macos }; cvar; external;
-  AVAudioSessionPortThunderbolt: AVAudioSessionPort { unavailable in macos }; cvar; external;
+  AVAudioSessionPortLineIn: AVAudioSessionPort { unavailable in macos } { available in ios 6.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  AVAudioSessionPortBuiltInMic: AVAudioSessionPort { unavailable in macos } { available in ios 6.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  AVAudioSessionPortHeadsetMic: AVAudioSessionPort { unavailable in macos } { available in ios 6.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  AVAudioSessionPortLineOut: AVAudioSessionPort { unavailable in macos } { available in ios 6.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  AVAudioSessionPortHeadphones: AVAudioSessionPort { unavailable in macos } { available in ios 6.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  AVAudioSessionPortBluetoothA2DP: AVAudioSessionPort { unavailable in macos } { available in ios 6.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  AVAudioSessionPortBuiltInReceiver: AVAudioSessionPort { unavailable in macos } { available in ios 6.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  AVAudioSessionPortBuiltInSpeaker: AVAudioSessionPort { unavailable in macos } { available in ios 6.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  AVAudioSessionPortHDMI: AVAudioSessionPort { unavailable in macos } { available in ios 6.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  AVAudioSessionPortAirPlay: AVAudioSessionPort { unavailable in macos } { available in ios 6.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  AVAudioSessionPortBluetoothLE: AVAudioSessionPort { unavailable in macos } { available in ios 7.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  AVAudioSessionPortBluetoothHFP: AVAudioSessionPort { unavailable in macos } { available in ios 6.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  AVAudioSessionPortUSBAudio: AVAudioSessionPort { unavailable in macos } { available in ios 6.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  AVAudioSessionPortCarAudio: AVAudioSessionPort { unavailable in macos } { available in ios 7.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  AVAudioSessionPortVirtual: AVAudioSessionPort { unavailable in macos } { available in ios 14.0, watchos 7.0, tvos 14.0 }; cvar; external;
+  AVAudioSessionPortPCI: AVAudioSessionPort { unavailable in macos } { available in ios 14.0, watchos 7.0, tvos 14.0 }; cvar; external;
+  AVAudioSessionPortFireWire: AVAudioSessionPort { unavailable in macos } { available in ios 14.0, watchos 7.0, tvos 14.0 }; cvar; external;
+  AVAudioSessionPortDisplayPort: AVAudioSessionPort { unavailable in macos } { available in ios 14.0, watchos 7.0, tvos 14.0 }; cvar; external;
+  AVAudioSessionPortAVB: AVAudioSessionPort { unavailable in macos } { available in ios 14.0, watchos 7.0, tvos 14.0 }; cvar; external;
+  AVAudioSessionPortThunderbolt: AVAudioSessionPort { unavailable in macos } { available in ios 14.0, watchos 7.0, tvos 14.0 }; cvar; external;
 {$endif}
 
 {$ifdef TYPES}
@@ -41,13 +41,13 @@ type
 
 {$ifdef EXTERNAL_SYMBOLS}
 var
-  AVAudioSessionCategoryAmbient: AVAudioSessionCategory { unavailable in macos }; cvar; external;
-  AVAudioSessionCategorySoloAmbient: AVAudioSessionCategory { unavailable in macos }; cvar; external;
-  AVAudioSessionCategoryPlayback: AVAudioSessionCategory { unavailable in macos }; cvar; external;
-  AVAudioSessionCategoryRecord: AVAudioSessionCategory { unavailable in macos }; cvar; external;
-  AVAudioSessionCategoryPlayAndRecord: AVAudioSessionCategory { unavailable in macos }; cvar; external;
-  AVAudioSessionCategoryAudioProcessing: AVAudioSessionCategory { unavailable in watchos, tvos }; cvar; external;
-  AVAudioSessionCategoryMultiRoute: AVAudioSessionCategory { unavailable in macos }; cvar; external;
+  AVAudioSessionCategoryAmbient: AVAudioSessionCategory { unavailable in macos } { available in ios 3.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  AVAudioSessionCategorySoloAmbient: AVAudioSessionCategory { unavailable in macos } { available in ios 3.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  AVAudioSessionCategoryPlayback: AVAudioSessionCategory { unavailable in macos } { available in ios 3.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  AVAudioSessionCategoryRecord: AVAudioSessionCategory { unavailable in macos } { available in ios 3.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  AVAudioSessionCategoryPlayAndRecord: AVAudioSessionCategory { unavailable in macos } { available in ios 3.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  AVAudioSessionCategoryAudioProcessing: AVAudioSessionCategory { unavailable in watchos, tvos } { unavailable in macos }; cvar; external;
+  AVAudioSessionCategoryMultiRoute: AVAudioSessionCategory { unavailable in macos } { available in ios 6.0, watchos 2.0, tvos 9.0 }; cvar; external;
 {$endif}
 
 {$ifdef TYPES}
@@ -58,15 +58,15 @@ type
 
 {$ifdef EXTERNAL_SYMBOLS}
 var
-  AVAudioSessionModeDefault: AVAudioSessionMode { unavailable in macos }; cvar; external;
-  AVAudioSessionModeVoiceChat: AVAudioSessionMode { unavailable in macos }; cvar; external;
-  AVAudioSessionModeGameChat: AVAudioSessionMode { unavailable in macos }; cvar; external;
-  AVAudioSessionModeVideoRecording: AVAudioSessionMode { unavailable in macos }; cvar; external;
-  AVAudioSessionModeMeasurement: AVAudioSessionMode { unavailable in macos }; cvar; external;
-  AVAudioSessionModeMoviePlayback: AVAudioSessionMode { unavailable in macos }; cvar; external;
-  AVAudioSessionModeVideoChat: AVAudioSessionMode { unavailable in macos }; cvar; external;
-  AVAudioSessionModeSpokenAudio: AVAudioSessionMode { unavailable in macos }; cvar; external;
-  AVAudioSessionModeVoicePrompt: AVAudioSessionMode { unavailable in macos }; cvar; external;
+  AVAudioSessionModeDefault: AVAudioSessionMode { unavailable in macos } { available in ios 5.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  AVAudioSessionModeVoiceChat: AVAudioSessionMode { unavailable in macos } { available in ios 5.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  AVAudioSessionModeGameChat: AVAudioSessionMode { unavailable in macos } { available in ios 5.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  AVAudioSessionModeVideoRecording: AVAudioSessionMode { unavailable in macos } { available in ios 5.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  AVAudioSessionModeMeasurement: AVAudioSessionMode { unavailable in macos } { available in ios 5.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  AVAudioSessionModeMoviePlayback: AVAudioSessionMode { unavailable in macos } { available in ios 6.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  AVAudioSessionModeVideoChat: AVAudioSessionMode { unavailable in macos } { available in ios 7.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  AVAudioSessionModeSpokenAudio: AVAudioSessionMode { unavailable in macos } { available in ios 9.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  AVAudioSessionModeVoicePrompt: AVAudioSessionMode { unavailable in macos } { available in ios 12.0, watchos 5.0, tvos 12.0 }; cvar; external;
 {$endif}
 
 {$ifdef TYPES}
@@ -108,10 +108,10 @@ const
   AVAudioSessionCategoryOptionDuckOthers = $2;
   AVAudioSessionCategoryOptionAllowBluetooth = $4 { unavailable in tvos, watchos, macos };
   AVAudioSessionCategoryOptionDefaultToSpeaker = $8 { unavailable in tvos, watchos, macos };
-  AVAudioSessionCategoryOptionInterruptSpokenAudioAndMixWithOthers = $11 { unavailable in macos };
-  AVAudioSessionCategoryOptionAllowBluetoothA2DP = $20 { unavailable in macos };
-  AVAudioSessionCategoryOptionAllowAirPlay = $40 { unavailable in watchos, macos };
-  AVAudioSessionCategoryOptionOverrideMutedMicrophoneInterruption = $80 { unavailable in tvos, macos };
+  AVAudioSessionCategoryOptionInterruptSpokenAudioAndMixWithOthers = $11 { unavailable in macos } { available in ios 9.0, watchos 2.0, tvos 9.0 };
+  AVAudioSessionCategoryOptionAllowBluetoothA2DP = $20 { unavailable in macos } { available in ios 10.0, watchos 3.0, tvos 10.0 };
+  AVAudioSessionCategoryOptionAllowAirPlay = $40 { unavailable in watchos, macos } { available in ios 10.0, tvos 10.0 };
+  AVAudioSessionCategoryOptionOverrideMutedMicrophoneInterruption = $80 { unavailable in tvos, macos } { available in ios 14.5, watchos 7.3 };
 
 type
   AVAudioSessionInterruptionType = NSUInteger;
@@ -169,7 +169,7 @@ const
   AVAudioSessionRouteSharingPolicyLongFormAudio = 1;
   AVAudioSessionRouteSharingPolicyLongForm = AVAudioSessionRouteSharingPolicyLongFormAudio { unavailable in macos };
   AVAudioSessionRouteSharingPolicyIndependent = 2;
-  AVAudioSessionRouteSharingPolicyLongFormVideo = 3 { unavailable in watchos, tvos, macos };
+  AVAudioSessionRouteSharingPolicyLongFormVideo = 3 { unavailable in watchos, tvos, macos } { available in ios 13.0 };
 
 type
   AVAudioSessionPromptStyle = NSUInteger;
