@@ -2,11 +2,14 @@
 
 { Types from AVContentKeySession }
 {$ifdef TYPES}
-
 type
   AVContentKeySessionServerPlaybackContextOption = NSString;
-type
   AVContentKeySessionServerPlaybackContextOptionPtr = ^AVContentKeySessionServerPlaybackContextOption;
+
+var
+  AVContentKeySessionServerPlaybackContextOptionProtocolVersions: AVContentKeySessionServerPlaybackContextOption { unavailable in tvos } { available in macos 10.15, ios 12.2, watchos 7.0 }; cvar; external;
+  AVContentKeySessionServerPlaybackContextOptionServerChallenge: AVContentKeySessionServerPlaybackContextOption { unavailable in tvos } { available in macos 10.15, ios 12.2, watchos 7.0 }; cvar; external;
+  AVContentKeyRequestRequiresValidationDataInSecureTokenKey: NSString { available in macos 10.15, ios 13.0, tvos 13.0, watchos 6.0 }; cvar; external;
 {$endif}
 
 

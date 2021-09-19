@@ -5,6 +5,11 @@ type
   NSUndoManagerRegisterUndoWithTargetCallback = reference to procedure (target: id); cblock; cdecl;
 {$endif}
 
+{ Types from NSUndoManager }
+{$ifdef TYPES}
+var
+  NSUndoManagerGroupIsDiscardableKey: NSString { available in macos 10.7, ios 5.0, watchos 2.0, tvos 9.0 }; cvar; external;
+{$endif}
 
 {$ifdef TYPES}
 type

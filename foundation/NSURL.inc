@@ -1,5 +1,11 @@
 { Parsed from Foundation.framework NSURL.h }
 
+{$ifdef TYPES}
+type
+  NSURLResourceKey = NSString;
+  NSURLResourceKeyPtr = ^NSURLResourceKey;
+{$endif}
+
 { Types from NSURL }
 {$ifdef TYPES}
 
@@ -59,6 +65,150 @@ type
   NSURLBookmarkFileCreationOptions = NSUInteger;
 type
   NSURLBookmarkFileCreationOptionsPtr = ^NSURLBookmarkFileCreationOptions;
+
+var
+  NSURLFileScheme: NSString; cvar; external;
+  NSURLKeysOfUnsetValuesKey: NSURLResourceKey { available in macos 10.7, ios 5.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  NSURLNameKey: NSURLResourceKey { available in macos 10.6, ios 4.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  NSURLLocalizedNameKey: NSURLResourceKey { available in macos 10.6, ios 4.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  NSURLIsRegularFileKey: NSURLResourceKey { available in macos 10.6, ios 4.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  NSURLIsDirectoryKey: NSURLResourceKey { available in macos 10.6, ios 4.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  NSURLIsSymbolicLinkKey: NSURLResourceKey { available in macos 10.6, ios 4.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  NSURLIsVolumeKey: NSURLResourceKey { available in macos 10.6, ios 4.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  NSURLIsPackageKey: NSURLResourceKey { available in macos 10.6, ios 4.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  NSURLIsApplicationKey: NSURLResourceKey { available in macos 10.11, ios 9.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  NSURLApplicationIsScriptableKey: NSURLResourceKey { unavailable in ios, watchos, tvos } { available in macos 10.11 }; cvar; external;
+  NSURLIsSystemImmutableKey: NSURLResourceKey { available in macos 10.6, ios 4.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  NSURLIsUserImmutableKey: NSURLResourceKey { available in macos 10.6, ios 4.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  NSURLIsHiddenKey: NSURLResourceKey { available in macos 10.6, ios 4.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  NSURLHasHiddenExtensionKey: NSURLResourceKey { available in macos 10.6, ios 4.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  NSURLCreationDateKey: NSURLResourceKey { available in macos 10.6, ios 4.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  NSURLContentAccessDateKey: NSURLResourceKey { available in macos 10.6, ios 4.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  NSURLContentModificationDateKey: NSURLResourceKey { available in macos 10.6, ios 4.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  NSURLAttributeModificationDateKey: NSURLResourceKey { available in macos 10.6, ios 4.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  NSURLLinkCountKey: NSURLResourceKey { available in macos 10.6, ios 4.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  NSURLParentDirectoryURLKey: NSURLResourceKey { available in macos 10.6, ios 4.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  NSURLVolumeURLKey: NSURLResourceKey { available in macos 10.6, ios 4.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  NSURLTypeIdentifierKey: NSURLResourceKey deprecated 'Use NSURLContentTypeKey instead'; cvar; external;
+  NSURLContentTypeKey: NSURLResourceKey { available in macos 11.0, ios 14.0, watchos 7.0, tvos 14.0 }; cvar; external;
+  NSURLLocalizedTypeDescriptionKey: NSURLResourceKey { available in macos 10.6, ios 4.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  NSURLLabelNumberKey: NSURLResourceKey { available in macos 10.6, ios 4.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  NSURLLabelColorKey: NSURLResourceKey { available in macos 10.6, ios 4.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  NSURLLocalizedLabelKey: NSURLResourceKey { available in macos 10.6, ios 4.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  NSURLEffectiveIconKey: NSURLResourceKey { available in macos 10.6, ios 4.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  NSURLCustomIconKey: NSURLResourceKey { available in macos 10.6, ios 4.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  NSURLFileResourceIdentifierKey: NSURLResourceKey { available in macos 10.7, ios 5.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  NSURLVolumeIdentifierKey: NSURLResourceKey { available in macos 10.7, ios 5.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  NSURLPreferredIOBlockSizeKey: NSURLResourceKey { available in macos 10.7, ios 5.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  NSURLIsReadableKey: NSURLResourceKey { available in macos 10.7, ios 5.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  NSURLIsWritableKey: NSURLResourceKey { available in macos 10.7, ios 5.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  NSURLIsExecutableKey: NSURLResourceKey { available in macos 10.7, ios 5.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  NSURLFileSecurityKey: NSURLResourceKey { available in macos 10.7, ios 5.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  NSURLIsExcludedFromBackupKey: NSURLResourceKey { available in macos 10.8, ios 5.1, watchos 2.0, tvos 9.0 }; cvar; external;
+  NSURLTagNamesKey: NSURLResourceKey { unavailable in ios, watchos, tvos } { available in macos 10.9 }; cvar; external;
+  NSURLPathKey: NSURLResourceKey { available in macos 10.8, ios 6.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  NSURLCanonicalPathKey: NSURLResourceKey { available in macosx 10.12, ios 10.0, watchos 3.0, tvos 10.0 }; cvar; external;
+  NSURLIsMountTriggerKey: NSURLResourceKey { available in macos 10.7, ios 5.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  NSURLGenerationIdentifierKey: NSURLResourceKey { available in macos 10.10, ios 8.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  NSURLDocumentIdentifierKey: NSURLResourceKey { available in macos 10.10, ios 8.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  NSURLAddedToDirectoryDateKey: NSURLResourceKey { available in macos 10.10, ios 8.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  NSURLQuarantinePropertiesKey: NSURLResourceKey { unavailable in ios, watchos, tvos } { available in macos 10.10 }; cvar; external;
+  NSURLFileResourceTypeKey: NSURLResourceKey { available in macos 10.7, ios 5.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  NSURLFileContentIdentifierKey: NSURLResourceKey { available in macos 11.0, ios 14.0, watchos 7.0, tvos 14.0 }; cvar; external;
+  NSURLMayShareFileContentKey: NSURLResourceKey { available in macos 11.0, ios 14.0, watchos 7.0, tvos 14.0 }; cvar; external;
+  NSURLMayHaveExtendedAttributesKey: NSURLResourceKey { available in macos 11.0, ios 14.0, watchos 7.0, tvos 14.0 }; cvar; external;
+  NSURLIsPurgeableKey: NSURLResourceKey { available in macos 11.0, ios 14.0, watchos 7.0, tvos 14.0 }; cvar; external;
+  NSURLIsSparseKey: NSURLResourceKey { available in macos 11.0, ios 14.0, watchos 7.0, tvos 14.0 }; cvar; external;
+  NSURLFileResourceTypeNamedPipe: NSURLFileResourceType { available in macos 10.7, ios 5.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  NSURLFileResourceTypeCharacterSpecial: NSURLFileResourceType { available in macos 10.7, ios 5.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  NSURLFileResourceTypeDirectory: NSURLFileResourceType { available in macos 10.7, ios 5.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  NSURLFileResourceTypeBlockSpecial: NSURLFileResourceType { available in macos 10.7, ios 5.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  NSURLFileResourceTypeRegular: NSURLFileResourceType { available in macos 10.7, ios 5.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  NSURLFileResourceTypeSymbolicLink: NSURLFileResourceType { available in macos 10.7, ios 5.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  NSURLFileResourceTypeSocket: NSURLFileResourceType { available in macos 10.7, ios 5.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  NSURLFileResourceTypeUnknown: NSURLFileResourceType { available in macos 10.7, ios 5.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  NSURLThumbnailDictionaryKey: NSURLResourceKey deprecated 'Use the QuickLookThumbnailing framework and extension point instead'; cvar; external;
+  NSURLThumbnailKey: NSURLResourceKey { unavailable in ios, watchos, tvos } deprecated 'Use the QuickLookThumbnailing framework and extension point instead'; cvar; external;
+  NSThumbnail1024x1024SizeKey: NSURLThumbnailDictionaryItem deprecated 'Use the QuickLookThumbnailing framework and extension point instead'; cvar; external;
+  NSURLFileSizeKey: NSURLResourceKey { available in macos 10.6, ios 4.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  NSURLFileAllocatedSizeKey: NSURLResourceKey { available in macos 10.6, ios 4.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  NSURLTotalFileSizeKey: NSURLResourceKey { available in macos 10.7, ios 5.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  NSURLTotalFileAllocatedSizeKey: NSURLResourceKey { available in macos 10.7, ios 5.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  NSURLIsAliasFileKey: NSURLResourceKey { available in macos 10.6, ios 4.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  NSURLFileProtectionKey: NSURLResourceKey { available in macos 10.11, ios 9.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  NSURLFileProtectionNone: NSURLFileProtectionType { available in macos 11.0, ios 9.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  NSURLFileProtectionComplete: NSURLFileProtectionType { available in macos 11.0, ios 9.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  NSURLFileProtectionCompleteUnlessOpen: NSURLFileProtectionType { available in macos 11.0, ios 9.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  NSURLFileProtectionCompleteUntilFirstUserAuthentication: NSURLFileProtectionType { available in macos 11.0, ios 9.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  NSURLVolumeLocalizedFormatDescriptionKey: NSURLResourceKey { available in macos 10.6, ios 4.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  NSURLVolumeTotalCapacityKey: NSURLResourceKey { available in macos 10.6, ios 4.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  NSURLVolumeAvailableCapacityKey: NSURLResourceKey { available in macos 10.6, ios 4.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  NSURLVolumeResourceCountKey: NSURLResourceKey { available in macos 10.6, ios 4.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  NSURLVolumeSupportsPersistentIDsKey: NSURLResourceKey { available in macos 10.6, ios 4.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  NSURLVolumeSupportsSymbolicLinksKey: NSURLResourceKey { available in macos 10.6, ios 4.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  NSURLVolumeSupportsHardLinksKey: NSURLResourceKey { available in macos 10.6, ios 4.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  NSURLVolumeSupportsJournalingKey: NSURLResourceKey { available in macos 10.6, ios 4.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  NSURLVolumeIsJournalingKey: NSURLResourceKey { available in macos 10.6, ios 4.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  NSURLVolumeSupportsSparseFilesKey: NSURLResourceKey { available in macos 10.6, ios 4.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  NSURLVolumeSupportsZeroRunsKey: NSURLResourceKey { available in macos 10.6, ios 4.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  NSURLVolumeSupportsCaseSensitiveNamesKey: NSURLResourceKey { available in macos 10.6, ios 4.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  NSURLVolumeSupportsCasePreservedNamesKey: NSURLResourceKey { available in macos 10.6, ios 4.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  NSURLVolumeSupportsRootDirectoryDatesKey: NSURLResourceKey { available in macos 10.7, ios 5.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  NSURLVolumeSupportsVolumeSizesKey: NSURLResourceKey { available in macos 10.7, ios 5.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  NSURLVolumeSupportsRenamingKey: NSURLResourceKey { available in macos 10.7, ios 5.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  NSURLVolumeSupportsAdvisoryFileLockingKey: NSURLResourceKey { available in macos 10.7, ios 5.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  NSURLVolumeSupportsExtendedSecurityKey: NSURLResourceKey { available in macos 10.7, ios 5.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  NSURLVolumeIsBrowsableKey: NSURLResourceKey { available in macos 10.7, ios 5.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  NSURLVolumeMaximumFileSizeKey: NSURLResourceKey { available in macos 10.7, ios 5.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  NSURLVolumeIsEjectableKey: NSURLResourceKey { available in macos 10.7, ios 5.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  NSURLVolumeIsRemovableKey: NSURLResourceKey { available in macos 10.7, ios 5.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  NSURLVolumeIsInternalKey: NSURLResourceKey { available in macos 10.7, ios 5.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  NSURLVolumeIsAutomountedKey: NSURLResourceKey { available in macos 10.7, ios 5.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  NSURLVolumeIsLocalKey: NSURLResourceKey { available in macos 10.7, ios 5.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  NSURLVolumeIsReadOnlyKey: NSURLResourceKey { available in macos 10.7, ios 5.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  NSURLVolumeCreationDateKey: NSURLResourceKey { available in macos 10.7, ios 5.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  NSURLVolumeURLForRemountingKey: NSURLResourceKey { available in macos 10.7, ios 5.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  NSURLVolumeUUIDStringKey: NSURLResourceKey { available in macos 10.7, ios 5.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  NSURLVolumeNameKey: NSURLResourceKey { available in macos 10.7, ios 5.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  NSURLVolumeLocalizedNameKey: NSURLResourceKey { available in macos 10.7, ios 5.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  NSURLVolumeIsEncryptedKey: NSURLResourceKey { available in macosx 10.12, ios 10.0, watchos 3.0, tvos 10.0 }; cvar; external;
+  NSURLVolumeIsRootFileSystemKey: NSURLResourceKey { available in macosx 10.12, ios 10.0, watchos 3.0, tvos 10.0 }; cvar; external;
+  NSURLVolumeSupportsCompressionKey: NSURLResourceKey { available in macosx 10.12, ios 10.0, watchos 3.0, tvos 10.0 }; cvar; external;
+  NSURLVolumeSupportsFileCloningKey: NSURLResourceKey { available in macosx 10.12, ios 10.0, watchos 3.0, tvos 10.0 }; cvar; external;
+  NSURLVolumeSupportsSwapRenamingKey: NSURLResourceKey { available in macosx 10.12, ios 10.0, watchos 3.0, tvos 10.0 }; cvar; external;
+  NSURLVolumeSupportsExclusiveRenamingKey: NSURLResourceKey { available in macosx 10.12, ios 10.0, watchos 3.0, tvos 10.0 }; cvar; external;
+  NSURLVolumeSupportsImmutableFilesKey: NSURLResourceKey { available in macosx 10.13, ios 11.0, watchos 4.0, tvos 11.0 }; cvar; external;
+  NSURLVolumeSupportsAccessPermissionsKey: NSURLResourceKey { available in macosx 10.13, ios 11.0, watchos 4.0, tvos 11.0 }; cvar; external;
+  NSURLVolumeSupportsFileProtectionKey: NSURLResourceKey { available in macos 11.0, ios 14.0, watchos 7.0, tvos 14.0 }; cvar; external;
+  NSURLVolumeAvailableCapacityForImportantUsageKey: NSURLResourceKey { unavailable in watchos, tvos } { available in macos 10.13, ios 11.0 }; cvar; external;
+  NSURLVolumeAvailableCapacityForOpportunisticUsageKey: NSURLResourceKey { unavailable in watchos, tvos } { available in macos 10.13, ios 11.0 }; cvar; external;
+  NSURLIsUbiquitousItemKey: NSURLResourceKey { available in macos 10.7, ios 5.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  NSURLUbiquitousItemHasUnresolvedConflictsKey: NSURLResourceKey { available in macos 10.7, ios 5.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  NSURLUbiquitousItemIsDownloadedKey: NSURLResourceKey deprecated 'Use NSURLUbiquitousItemDownloadingStatusKey instead'; cvar; external;
+  NSURLUbiquitousItemIsDownloadingKey: NSURLResourceKey { available in macos 10.7, ios 5.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  NSURLUbiquitousItemIsUploadedKey: NSURLResourceKey { available in macos 10.7, ios 5.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  NSURLUbiquitousItemIsUploadingKey: NSURLResourceKey { available in macos 10.7, ios 5.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  NSURLUbiquitousItemPercentDownloadedKey: NSURLResourceKey deprecated 'Use NSMetadataUbiquitousItemPercentDownloadedKey instead'; cvar; external;
+  NSURLUbiquitousItemPercentUploadedKey: NSURLResourceKey deprecated 'Use NSMetadataUbiquitousItemPercentUploadedKey instead'; cvar; external;
+  NSURLUbiquitousItemDownloadingStatusKey: NSURLResourceKey { available in macos 10.9, ios 7.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  NSURLUbiquitousItemDownloadingErrorKey: NSURLResourceKey { available in macos 10.9, ios 7.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  NSURLUbiquitousItemUploadingErrorKey: NSURLResourceKey { available in macos 10.9, ios 7.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  NSURLUbiquitousItemDownloadRequestedKey: NSURLResourceKey { available in macos 10.10, ios 8.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  NSURLUbiquitousItemContainerDisplayNameKey: NSURLResourceKey { available in macos 10.10, ios 8.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  NSURLUbiquitousItemIsExcludedFromSyncKey: NSURLResourceKey { available in macos 11.3, ios 14.5, watchos 7.4, tvos 14.5 }; cvar; external;
+  NSURLUbiquitousItemIsSharedKey: NSURLResourceKey { unavailable in watchos, tvos } { available in macosx 10.12, ios 10.0 }; cvar; external;
+  NSURLUbiquitousSharedItemCurrentUserRoleKey: NSURLResourceKey { unavailable in watchos, tvos } { available in macosx 10.12, ios 10.0 }; cvar; external;
+  NSURLUbiquitousSharedItemCurrentUserPermissionsKey: NSURLResourceKey { unavailable in watchos, tvos } { available in macosx 10.12, ios 10.0 }; cvar; external;
+  NSURLUbiquitousSharedItemOwnerNameComponentsKey: NSURLResourceKey { unavailable in watchos, tvos } { available in macosx 10.12, ios 10.0 }; cvar; external;
+  NSURLUbiquitousSharedItemMostRecentEditorNameComponentsKey: NSURLResourceKey { unavailable in watchos, tvos } { available in macosx 10.12, ios 10.0 }; cvar; external;
+  NSURLUbiquitousItemDownloadingStatusNotDownloaded: NSURLUbiquitousItemDownloadingStatus { available in macos 10.9, ios 7.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  NSURLUbiquitousItemDownloadingStatusDownloaded: NSURLUbiquitousItemDownloadingStatus { available in macos 10.9, ios 7.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  NSURLUbiquitousItemDownloadingStatusCurrent: NSURLUbiquitousItemDownloadingStatus { available in macos 10.9, ios 7.0, watchos 2.0, tvos 9.0 }; cvar; external;
+  NSURLUbiquitousSharedItemRoleOwner: NSURLUbiquitousSharedItemRole { unavailable in watchos, tvos } { available in macosx 10.12, ios 10.0 }; cvar; external;
+  NSURLUbiquitousSharedItemRoleParticipant: NSURLUbiquitousSharedItemRole { unavailable in watchos, tvos } { available in macosx 10.12, ios 10.0 }; cvar; external;
+  NSURLUbiquitousSharedItemPermissionsReadOnly: NSURLUbiquitousSharedItemPermissions { unavailable in watchos, tvos } { available in macosx 10.12, ios 10.0 }; cvar; external;
+  NSURLUbiquitousSharedItemPermissionsReadWrite: NSURLUbiquitousSharedItemPermissions { unavailable in watchos, tvos } { available in macosx 10.12, ios 10.0 }; cvar; external;
+
 {$endif}
 
 
@@ -68,12 +218,6 @@ type
   NSURLQueryItemPtr = ^NSURLQueryItem;
   NSURLComponentsPtr = ^NSURLComponents;
   NSFileSecurityPtr = ^NSFileSecurity;
-{$endif}
-
-{$ifdef TYPES}
-type
-  NSURLResourceKey = NSString;
-  NSURLResourceKeyPtr = ^NSURLResourceKey;
 {$endif}
 
 {$ifdef CLASSES}

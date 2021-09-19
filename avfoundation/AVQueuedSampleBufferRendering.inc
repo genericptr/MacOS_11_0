@@ -5,6 +5,12 @@ type
   AVQueuedSampleBufferRenderingRequestMediaDataWhenReadyOnQueueCallback = reference to procedure; cblock; cdecl;
 {$endif}
 
+{ Types from AVSampleBufferRenderSynchronizer }
+{$ifdef TYPES}
+var
+  AVSampleBufferRenderSynchronizerRateDidChangeNotification: NSNotificationName { available in macos 10.14, ios 12.0, tvos 12.0, watchos 5.0 }; cvar; external;
+{$endif}
+
 
 {$ifdef TYPES}
 type

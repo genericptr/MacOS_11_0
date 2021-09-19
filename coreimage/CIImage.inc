@@ -5,14 +5,55 @@
 
 type
   CIFormat = cint;
-type
   CIFormatPtr = ^CIFormat;
 
 type
   CIImageOption = NSString;
-type
   CIImageOptionPtr = ^CIImageOption;
 
+var
+  kCIFormatARGB8: CIFormat { available in 10_4, 6_0 }; cvar; external;
+  kCIFormatBGRA8: CIFormat; cvar; external;
+  kCIFormatRGBA8: CIFormat; cvar; external;
+  kCIFormatABGR8: CIFormat { available in 10_11, 9_0 }; cvar; external;
+  kCIFormatRGBAh: CIFormat { available in 10_4, 6_0 }; cvar; external;
+  kCIFormatRGBA16: CIFormat { available in 10_4, 10_0 }; cvar; external;
+  kCIFormatRGBAf: CIFormat { available in 10_4, 7_0 }; cvar; external;
+  kCIFormatA8: CIFormat { available in 10_11, 9_0 }; cvar; external;
+  kCIFormatA16: CIFormat { available in 10_11, 9_0 }; cvar; external;
+  kCIFormatAh: CIFormat { available in 10_11, 9_0 }; cvar; external;
+  kCIFormatAf: CIFormat { available in 10_11, 9_0 }; cvar; external;
+  kCIFormatR8: CIFormat { available in 10_11, 9_0 }; cvar; external;
+  kCIFormatR16: CIFormat { available in 10_11, 9_0 }; cvar; external;
+  kCIFormatRh: CIFormat { available in 10_11, 9_0 }; cvar; external;
+  kCIFormatRf: CIFormat { available in 10_11, 9_0 }; cvar; external;
+  kCIFormatRG8: CIFormat { available in 10_11, 9_0 }; cvar; external;
+  kCIFormatRG16: CIFormat { available in 10_11, 9_0 }; cvar; external;
+  kCIFormatRGh: CIFormat { available in 10_11, 9_0 }; cvar; external;
+  kCIFormatRGf: CIFormat { available in 10_11, 9_0 }; cvar; external;
+  kCIFormatL8: CIFormat { available in 10_12, 10_0 }; cvar; external;
+  kCIFormatL16: CIFormat { available in 10_12, 10_0 }; cvar; external;
+  kCIFormatLh: CIFormat { available in 10_12, 10_0 }; cvar; external;
+  kCIFormatLf: CIFormat { available in 10_12, 10_0 }; cvar; external;
+  kCIFormatLA8: CIFormat { available in 10_12, 10_0 }; cvar; external;
+  kCIFormatLA16: CIFormat { available in 10_12, 10_0 }; cvar; external;
+  kCIFormatLAh: CIFormat { available in 10_12, 10_0 }; cvar; external;
+  kCIFormatLAf: CIFormat { available in 10_12, 10_0 }; cvar; external;
+  kCIImageColorSpace: CIImageOption; cvar; external;
+  kCIImageToneMapHDRtoSDR: CIImageOption { available in 11_0, 14_1 }; cvar; external;
+  kCIImageNearestSampling: CIImageOption { available in 10_13, 11_0 }; cvar; external;
+  kCIImageProperties: CIImageOption { available in 10_8, 5_0 }; cvar; external;
+  kCIImageApplyOrientationProperty: CIImageOption { available in 10_13, 11_0 }; cvar; external;
+  kCIImageTextureTarget: CIImageOption deprecated 'in 10_9,10_14'; cvar; external;
+  kCIImageTextureFormat: CIImageOption deprecated 'in 10_9,10_14'; cvar; external;
+  kCIImageAuxiliaryDepth: CIImageOption { available in 10_13, 11_0 }; cvar; external;
+  kCIImageAuxiliaryDisparity: CIImageOption { available in 10_13, 11_0 }; cvar; external;
+  kCIImageAuxiliaryPortraitEffectsMatte: CIImageOption { available in 10_14, 12_0 }; cvar; external;
+  kCIImageAuxiliarySemanticSegmentationSkinMatte: CIImageOption { available in 10_15, 13_0 }; cvar; external;
+  kCIImageAuxiliarySemanticSegmentationHairMatte: CIImageOption { available in 10_15, 13_0 }; cvar; external;
+  kCIImageAuxiliarySemanticSegmentationTeethMatte: CIImageOption { available in 10_15, 13_0 }; cvar; external;
+  kCIImageAuxiliarySemanticSegmentationGlassesMatte: CIImageOption { available in 11_0, 14_1 }; cvar; external;
+  kCIImageAuxiliarySemanticSegmentationSkyMatte: CIImageOption { available in 11_1, 14_3 }; cvar; external;
 
 
 {$endif}

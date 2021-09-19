@@ -5,12 +5,19 @@
 
 type
   CIContextOption = NSString;
-type
   CIContextOptionPtr = ^CIContextOption;
 
-
-
-
+var
+  kCIContextOutputColorSpace: CIContextOption; cvar; external;
+  kCIContextWorkingColorSpace: CIContextOption; cvar; external;
+  kCIContextWorkingFormat: CIContextOption { available in 10_4,8_0 }; cvar; external;
+  kCIContextHighQualityDownsample: CIContextOption { available in 10_11,9_0 }; cvar; external;
+  kCIContextOutputPremultiplied: CIContextOption { available in 10_4,7_0 }; cvar; external;
+  kCIContextCacheIntermediates: CIContextOption { available in 10_12,10_0 }; cvar; external;
+  kCIContextUseSoftwareRenderer: CIContextOption; cvar; external;
+  kCIContextPriorityRequestLow: CIContextOption { available in 10_12, 8_0 }; cvar; external;
+  kCIContextAllowLowPower: CIContextOption { available in 10_12, 13_0 }; cvar; external;
+  kCIContextName: CIContextOption { available in 10_14,12_0 }; cvar; external;
 {$endif}
 
 

@@ -2,6 +2,8 @@
 
 { Types from NSApplication }
 {$ifdef TYPES}
+var
+  NSApp: NSApplication; cvar; external;
 
 type
   NSRequestUserAttentionType = NSUInteger;

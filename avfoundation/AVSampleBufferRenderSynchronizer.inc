@@ -7,7 +7,6 @@ type
   AVSampleBufferRenderSynchronizerAddBoundaryTimeObserverForTimesCallback = reference to procedure; cblock; cdecl;
 {$endif}
 
-
 {$ifdef TYPES}
 type
   AVSampleBufferRenderSynchronizerPtr = ^AVSampleBufferRenderSynchronizer;
