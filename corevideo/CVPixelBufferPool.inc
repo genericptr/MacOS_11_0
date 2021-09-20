@@ -14,25 +14,25 @@ type
 
 {$ifdef EXTERNAL_SYMBOLS}
 var
-  kCVPixelBufferPoolMinimumBufferCountKey: CFStringRef { available starting in __MAC_10_4,__IPHONE_4_0 }; cvar; external;
-  kCVPixelBufferPoolMaximumBufferAgeKey: CFStringRef { available starting in __MAC_10_4,__IPHONE_4_0 }; cvar; external;
+  kCVPixelBufferPoolMinimumBufferCountKey: CFStringRef { available starting in macos 10.4, ios 4.0 }; cvar; external;
+  kCVPixelBufferPoolMaximumBufferAgeKey: CFStringRef { available starting in macos 10.4, ios 4.0 }; cvar; external;
 {$endif}
 
 {$ifdef FUNCTIONS}
-function CVPixelBufferPoolGetTypeID: CFTypeID; cdecl; external; { available starting in __MAC_10_4,__IPHONE_4_0 }
-function CVPixelBufferPoolRetain(pixelBufferPool: CVPixelBufferPoolRef): CVPixelBufferPoolRef; cdecl; external; { available starting in __MAC_10_4,__IPHONE_4_0 }
-function CVPixelBufferPoolRelease(pixelBufferPool: CVPixelBufferPoolRef): pointer; cdecl; external; { available starting in __MAC_10_4,__IPHONE_4_0 }
-function CVPixelBufferPoolCreate(allocator: CFAllocatorRef; poolAttributes: CFDictionaryRef; pixelBufferAttributes: CFDictionaryRef; var poolOut: CVPixelBufferPoolRef): CVReturn; cdecl; external; { available starting in __MAC_10_4,__IPHONE_4_0 }
-function CVPixelBufferPoolGetAttributes(pool: CVPixelBufferPoolRef): CFDictionaryRef; cdecl; external; { available starting in __MAC_10_4,__IPHONE_4_0 }
-function CVPixelBufferPoolGetPixelBufferAttributes(pool: CVPixelBufferPoolRef): CFDictionaryRef; cdecl; external; { available starting in __MAC_10_4,__IPHONE_4_0 }
-function CVPixelBufferPoolCreatePixelBuffer(allocator: CFAllocatorRef; pixelBufferPool: CVPixelBufferPoolRef; var pixelBufferOut: CVPixelBufferRef): CVReturn; cdecl; external; { available starting in __MAC_10_4,__IPHONE_4_0 }
-function CVPixelBufferPoolCreatePixelBufferWithAuxAttributes(allocator: CFAllocatorRef; pixelBufferPool: CVPixelBufferPoolRef; auxAttributes: CFDictionaryRef; pixelBufferOut: CVPixelBufferRefPtr): CVReturn; cdecl; external; { available starting in __MAC_10_7,__IPHONE_4_0 }
+function CVPixelBufferPoolGetTypeID: CFTypeID; cdecl; external; { available starting in macos 10.4, ios 4.0 }
+function CVPixelBufferPoolRetain(pixelBufferPool: CVPixelBufferPoolRef): CVPixelBufferPoolRef; cdecl; external; { available starting in macos 10.4, ios 4.0 }
+function CVPixelBufferPoolRelease(pixelBufferPool: CVPixelBufferPoolRef): pointer; cdecl; external; { available starting in macos 10.4, ios 4.0 }
+function CVPixelBufferPoolCreate(allocator: CFAllocatorRef; poolAttributes: CFDictionaryRef; pixelBufferAttributes: CFDictionaryRef; var poolOut: CVPixelBufferPoolRef): CVReturn; cdecl; external; { available starting in macos 10.4, ios 4.0 }
+function CVPixelBufferPoolGetAttributes(pool: CVPixelBufferPoolRef): CFDictionaryRef; cdecl; external; { available starting in macos 10.4, ios 4.0 }
+function CVPixelBufferPoolGetPixelBufferAttributes(pool: CVPixelBufferPoolRef): CFDictionaryRef; cdecl; external; { available starting in macos 10.4, ios 4.0 }
+function CVPixelBufferPoolCreatePixelBuffer(allocator: CFAllocatorRef; pixelBufferPool: CVPixelBufferPoolRef; var pixelBufferOut: CVPixelBufferRef): CVReturn; cdecl; external; { available starting in macos 10.4, ios 4.0 }
+function CVPixelBufferPoolCreatePixelBufferWithAuxAttributes(allocator: CFAllocatorRef; pixelBufferPool: CVPixelBufferPoolRef; auxAttributes: CFDictionaryRef; pixelBufferOut: CVPixelBufferRefPtr): CVReturn; cdecl; external; { available starting in macos 10.7, ios 4.0 }
 {$endif}
 
 {$ifdef EXTERNAL_SYMBOLS}
 var
-  kCVPixelBufferPoolAllocationThresholdKey: CFStringRef { available starting in __MAC_10_7,__IPHONE_4_0 }; cvar; external;
-  kCVPixelBufferPoolFreeBufferNotification: CFStringRef { available starting in __MAC_10_7,__IPHONE_4_0 }; cvar; external;
+  kCVPixelBufferPoolAllocationThresholdKey: CFStringRef { available starting in macos 10.7, ios 4.0 }; cvar; external;
+  kCVPixelBufferPoolFreeBufferNotification: CFStringRef { available starting in macos 10.7, ios 4.0 }; cvar; external;
 {$endif}
 
 {$ifdef TYPES}

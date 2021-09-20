@@ -95,11 +95,11 @@ type
 {$endif}
 
 {$ifdef FUNCTIONS}
-function CVPixelBufferGetTypeID: CFTypeID; cdecl; external; { available starting in __MAC_10_4,__IPHONE_4_0 }
-function CVPixelBufferRetain(texture: CVPixelBufferRef): CVPixelBufferRef; cdecl; external; { available starting in __MAC_10_4,__IPHONE_4_0 }
-function CVPixelBufferRelease(texture: CVPixelBufferRef): pointer; cdecl; external; { available starting in __MAC_10_4,__IPHONE_4_0 }
-function CVPixelBufferCreateResolvedAttributesDictionary(allocator: CFAllocatorRef; attributes: CFArrayRef; var resolvedDictionaryOut: CFDictionaryRef): CVReturn; cdecl; external; { available starting in __MAC_10_4,__IPHONE_4_0 }
-function CVPixelBufferCreate(allocator: CFAllocatorRef; width: size_t; height: size_t; pixelFormatType: OSType; pixelBufferAttributes: CFDictionaryRef; var pixelBufferOut: CVPixelBufferRef): CVReturn; cdecl; external; { available starting in __MAC_10_4,__IPHONE_4_0 }
+function CVPixelBufferGetTypeID: CFTypeID; cdecl; external; { available starting in macos 10.4, ios 4.0 }
+function CVPixelBufferRetain(texture: CVPixelBufferRef): CVPixelBufferRef; cdecl; external; { available starting in macos 10.4, ios 4.0 }
+function CVPixelBufferRelease(texture: CVPixelBufferRef): pointer; cdecl; external; { available starting in macos 10.4, ios 4.0 }
+function CVPixelBufferCreateResolvedAttributesDictionary(allocator: CFAllocatorRef; attributes: CFArrayRef; var resolvedDictionaryOut: CFDictionaryRef): CVReturn; cdecl; external; { available starting in macos 10.4, ios 4.0 }
+function CVPixelBufferCreate(allocator: CFAllocatorRef; width: size_t; height: size_t; pixelFormatType: OSType; pixelBufferAttributes: CFDictionaryRef; var pixelBufferOut: CVPixelBufferRef): CVReturn; cdecl; external; { available starting in macos 10.4, ios 4.0 }
 {$endif}
 
 {$ifdef TYPES}
@@ -108,7 +108,7 @@ type
 {$endif}
 
 {$ifdef FUNCTIONS}
-function CVPixelBufferCreateWithBytes(allocator: CFAllocatorRef; width: size_t; height: size_t; pixelFormatType: OSType; baseAddress: pointer; bytesPerRow: size_t; releaseCallback: CVPixelBufferReleaseBytesCallback; releaseRefCon: pointer; pixelBufferAttributes: CFDictionaryRef; var pixelBufferOut: CVPixelBufferRef): CVReturn; cdecl; external; { available starting in __MAC_10_4,__IPHONE_4_0 }
+function CVPixelBufferCreateWithBytes(allocator: CFAllocatorRef; width: size_t; height: size_t; pixelFormatType: OSType; baseAddress: pointer; bytesPerRow: size_t; releaseCallback: CVPixelBufferReleaseBytesCallback; releaseRefCon: pointer; pixelBufferAttributes: CFDictionaryRef; var pixelBufferOut: CVPixelBufferRef): CVReturn; cdecl; external; { available starting in macos 10.4, ios 4.0 }
 {$endif}
 
 {$ifdef TYPES}
@@ -117,23 +117,23 @@ type
 {$endif}
 
 {$ifdef FUNCTIONS}
-function CVPixelBufferCreateWithPlanarBytes(allocator: CFAllocatorRef; width: size_t; height: size_t; pixelFormatType: OSType; dataPtr: pointer; dataSize: size_t; numberOfPlanes: size_t; planeBaseAddress: pointer { variable size array of pointer }; var planeWidth: size_tPtr { variable size array of size_t }; planeHeight: size_tPtr { variable size array of size_t }; planeBytesPerRow: size_tPtr { variable size array of size_t }; releaseCallback: CVPixelBufferReleasePlanarBytesCallback; releaseRefCon: pointer; pixelBufferAttributes: CFDictionaryRef; pixelBufferOut: CVPixelBufferRefPtr): CVReturn; cdecl; external; { available starting in __MAC_10_4,__IPHONE_4_0 }
-function CVPixelBufferLockBaseAddress(pixelBuffer: CVPixelBufferRef; lockFlags: CVPixelBufferLockFlags): CVReturn; cdecl; external; { available starting in __MAC_10_4,__IPHONE_4_0 }
-function CVPixelBufferUnlockBaseAddress(pixelBuffer: CVPixelBufferRef; unlockFlags: CVPixelBufferLockFlags): CVReturn; cdecl; external; { available starting in __MAC_10_4,__IPHONE_4_0 }
-function CVPixelBufferGetWidth(pixelBuffer: CVPixelBufferRef): size_t; cdecl; external; { available starting in __MAC_10_4,__IPHONE_4_0 }
-function CVPixelBufferGetHeight(pixelBuffer: CVPixelBufferRef): size_t; cdecl; external; { available starting in __MAC_10_4,__IPHONE_4_0 }
-function CVPixelBufferGetPixelFormatType(pixelBuffer: CVPixelBufferRef): OSType; cdecl; external; { available starting in __MAC_10_4,__IPHONE_4_0 }
-function CVPixelBufferGetBaseAddress(pixelBuffer: CVPixelBufferRef): pointer; cdecl; external; { available starting in __MAC_10_4,__IPHONE_4_0 }
-function CVPixelBufferGetBytesPerRow(pixelBuffer: CVPixelBufferRef): size_t; cdecl; external; { available starting in __MAC_10_4,__IPHONE_4_0 }
-function CVPixelBufferGetDataSize(pixelBuffer: CVPixelBufferRef): size_t; cdecl; external; { available starting in __MAC_10_4,__IPHONE_4_0 }
-function CVPixelBufferIsPlanar(pixelBuffer: CVPixelBufferRef): Boolean; cdecl; external; { available starting in __MAC_10_4,__IPHONE_4_0 }
-function CVPixelBufferGetPlaneCount(pixelBuffer: CVPixelBufferRef): size_t; cdecl; external; { available starting in __MAC_10_4,__IPHONE_4_0 }
-function CVPixelBufferGetWidthOfPlane(pixelBuffer: CVPixelBufferRef; planeIndex: size_t): size_t; cdecl; external; { available starting in __MAC_10_4,__IPHONE_4_0 }
-function CVPixelBufferGetHeightOfPlane(pixelBuffer: CVPixelBufferRef; planeIndex: size_t): size_t; cdecl; external; { available starting in __MAC_10_4,__IPHONE_4_0 }
-function CVPixelBufferGetBaseAddressOfPlane(pixelBuffer: CVPixelBufferRef; planeIndex: size_t): pointer; cdecl; external; { available starting in __MAC_10_4,__IPHONE_4_0 }
-function CVPixelBufferGetBytesPerRowOfPlane(pixelBuffer: CVPixelBufferRef; planeIndex: size_t): size_t; cdecl; external; { available starting in __MAC_10_4,__IPHONE_4_0 }
-function CVPixelBufferGetExtendedPixels(pixelBuffer: CVPixelBufferRef; var extraColumnsOnLeft: size_t; var extraColumnsOnRight: size_t; var extraRowsOnTop: size_t; var extraRowsOnBottom: size_t): pointer; cdecl; external; { available starting in __MAC_10_4,__IPHONE_4_0 }
-function CVPixelBufferFillExtendedPixels(pixelBuffer: CVPixelBufferRef): CVReturn; cdecl; external; { available starting in __MAC_10_4,__IPHONE_4_0 }
+function CVPixelBufferCreateWithPlanarBytes(allocator: CFAllocatorRef; width: size_t; height: size_t; pixelFormatType: OSType; dataPtr: pointer; dataSize: size_t; numberOfPlanes: size_t; planeBaseAddress: pointer { variable size array of pointer }; var planeWidth: size_tPtr { variable size array of size_t }; planeHeight: size_tPtr { variable size array of size_t }; planeBytesPerRow: size_tPtr { variable size array of size_t }; releaseCallback: CVPixelBufferReleasePlanarBytesCallback; releaseRefCon: pointer; pixelBufferAttributes: CFDictionaryRef; pixelBufferOut: CVPixelBufferRefPtr): CVReturn; cdecl; external; { available starting in macos 10.4, ios 4.0 }
+function CVPixelBufferLockBaseAddress(pixelBuffer: CVPixelBufferRef; lockFlags: CVPixelBufferLockFlags): CVReturn; cdecl; external; { available starting in macos 10.4, ios 4.0 }
+function CVPixelBufferUnlockBaseAddress(pixelBuffer: CVPixelBufferRef; unlockFlags: CVPixelBufferLockFlags): CVReturn; cdecl; external; { available starting in macos 10.4, ios 4.0 }
+function CVPixelBufferGetWidth(pixelBuffer: CVPixelBufferRef): size_t; cdecl; external; { available starting in macos 10.4, ios 4.0 }
+function CVPixelBufferGetHeight(pixelBuffer: CVPixelBufferRef): size_t; cdecl; external; { available starting in macos 10.4, ios 4.0 }
+function CVPixelBufferGetPixelFormatType(pixelBuffer: CVPixelBufferRef): OSType; cdecl; external; { available starting in macos 10.4, ios 4.0 }
+function CVPixelBufferGetBaseAddress(pixelBuffer: CVPixelBufferRef): pointer; cdecl; external; { available starting in macos 10.4, ios 4.0 }
+function CVPixelBufferGetBytesPerRow(pixelBuffer: CVPixelBufferRef): size_t; cdecl; external; { available starting in macos 10.4, ios 4.0 }
+function CVPixelBufferGetDataSize(pixelBuffer: CVPixelBufferRef): size_t; cdecl; external; { available starting in macos 10.4, ios 4.0 }
+function CVPixelBufferIsPlanar(pixelBuffer: CVPixelBufferRef): Boolean; cdecl; external; { available starting in macos 10.4, ios 4.0 }
+function CVPixelBufferGetPlaneCount(pixelBuffer: CVPixelBufferRef): size_t; cdecl; external; { available starting in macos 10.4, ios 4.0 }
+function CVPixelBufferGetWidthOfPlane(pixelBuffer: CVPixelBufferRef; planeIndex: size_t): size_t; cdecl; external; { available starting in macos 10.4, ios 4.0 }
+function CVPixelBufferGetHeightOfPlane(pixelBuffer: CVPixelBufferRef; planeIndex: size_t): size_t; cdecl; external; { available starting in macos 10.4, ios 4.0 }
+function CVPixelBufferGetBaseAddressOfPlane(pixelBuffer: CVPixelBufferRef; planeIndex: size_t): pointer; cdecl; external; { available starting in macos 10.4, ios 4.0 }
+function CVPixelBufferGetBytesPerRowOfPlane(pixelBuffer: CVPixelBufferRef; planeIndex: size_t): size_t; cdecl; external; { available starting in macos 10.4, ios 4.0 }
+function CVPixelBufferGetExtendedPixels(pixelBuffer: CVPixelBufferRef; var extraColumnsOnLeft: size_t; var extraColumnsOnRight: size_t; var extraRowsOnTop: size_t; var extraRowsOnBottom: size_t): pointer; cdecl; external; { available starting in macos 10.4, ios 4.0 }
+function CVPixelBufferFillExtendedPixels(pixelBuffer: CVPixelBufferRef): CVReturn; cdecl; external; { available starting in macos 10.4, ios 4.0 }
 {$endif}
 
 {$endif}

@@ -7,9 +7,9 @@ const
 {$endif}
 
 {$ifdef FUNCTIONS}
-function CVGetCurrentHostTime: cuint64; cdecl; external; { available starting in __MAC_10_4,__IPHONE_4_0 }
-function CVGetHostClockFrequency: double; cdecl; external; { available starting in __MAC_10_4,__IPHONE_4_0 }
-function CVGetHostClockMinimumTimeDelta: cuint32; cdecl; external; { available starting in __MAC_10_4,__IPHONE_4_0 }
+function CVGetCurrentHostTime: cuint64; cdecl; external; { available starting in macos 10.4, ios 4.0 }
+function CVGetHostClockFrequency: double; cdecl; external; { available starting in macos 10.4, ios 4.0 }
+function CVGetHostClockMinimumTimeDelta: cuint32; cdecl; external; { available starting in macos 10.4, ios 4.0 }
 {$endif}
 
 {$endif}
