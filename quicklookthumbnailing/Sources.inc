@@ -1,0 +1,10 @@
+{$define FRAMEWORK_LOADED_QUICKLOOKTHUMBNAILING}
+{$include QuickLookThumbnailing.inc}
+{$include QLThumbnailingBase.inc}
+{$include QLThumbnailRepresentation.inc}
+{$include QLThumbnailProvider.inc}
+{$include QLThumbnailReply.inc}
+{$include QLThumbnailRequest.inc}
+{$include QLThumbnailGenerationRequest.inc}
+{$include QLThumbnailErrors.inc}
+{$include QLThumbnailGenerator.inc}

@@ -7,6 +7,7 @@ all:
 	
 	${FPC} CocoaAll.pas -dCOCOAALL ${OPTS}
 
+	${FPC} QuickLookThumbnailing.pas ${OPTS}
 	${FPC} AddressBook.pas ${OPTS}
 	${FPC} UserNotifications.pas ${OPTS}
 	${FPC} UserNotificationsUI.pas ${OPTS}

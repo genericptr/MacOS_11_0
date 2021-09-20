@@ -10,6 +10,10 @@ type
   objcboolPtr = ^objcbool;
   size_tPtr = ^size_t;
 
+{ CoreServices }
+type
+  UTType = NSString;
+
 { Dispatch }
 type
   dispatch_queue_t = OpaquePointer;

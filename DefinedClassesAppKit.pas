@@ -482,7 +482,6 @@ type
   QTMovie = objcclass external;
   UIColor = objcclass external;
   UIImage = objcclass external;
-  UTType = objcclass external;
   NSAccessibilityCustomRotorItemLoadDelegateProtocol = objcprotocol external name 'NSAccessibilityCustomRotorItemLoadDelegate';
   NSExtensionRequestHandlingProtocol = objcprotocol external name 'NSExtensionRequestHandling';
   NSMenuItemProtocol = objcprotocol external name 'NSMenuItem';
