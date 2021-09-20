@@ -44,16 +44,16 @@ const
 
 {$ifdef EXTERNAL_SYMBOLS}
 var
-  PDFDocumentDidUnlockNotification: NSNotificationName { available in 10_4, 11_0 }; cvar; external;
-  PDFDocumentDidBeginFindNotification: NSNotificationName { available in 10_4, 11_0 }; cvar; external;
-  PDFDocumentDidEndFindNotification: NSNotificationName { available in 10_4, 11_0 }; cvar; external;
-  PDFDocumentDidBeginPageFindNotification: NSNotificationName { available in 10_4, 11_0 }; cvar; external;
-  PDFDocumentDidEndPageFindNotification: NSNotificationName { available in 10_4, 11_0 }; cvar; external;
-  PDFDocumentDidFindMatchNotification: NSNotificationName { available in 10_4, 11_0 }; cvar; external;
-  PDFDocumentDidBeginWriteNotification: NSNotificationName { available in 10_4, 11_0 }; cvar; external;
-  PDFDocumentDidEndWriteNotification: NSNotificationName { available in 10_4, 11_0 }; cvar; external;
-  PDFDocumentDidBeginPageWriteNotification: NSNotificationName { available in 10_4, 11_0 }; cvar; external;
-  PDFDocumentDidEndPageWriteNotification: NSNotificationName { available in 10_4, 11_0 }; cvar; external;
+  PDFDocumentDidUnlockNotification: NSNotificationName { available in macos 10.4, ios 11.0 }; cvar; external;
+  PDFDocumentDidBeginFindNotification: NSNotificationName { available in macos 10.4, ios 11.0 }; cvar; external;
+  PDFDocumentDidEndFindNotification: NSNotificationName { available in macos 10.4, ios 11.0 }; cvar; external;
+  PDFDocumentDidBeginPageFindNotification: NSNotificationName { available in macos 10.4, ios 11.0 }; cvar; external;
+  PDFDocumentDidEndPageFindNotification: NSNotificationName { available in macos 10.4, ios 11.0 }; cvar; external;
+  PDFDocumentDidFindMatchNotification: NSNotificationName { available in macos 10.4, ios 11.0 }; cvar; external;
+  PDFDocumentDidBeginWriteNotification: NSNotificationName { available in macos 10.4, ios 11.0 }; cvar; external;
+  PDFDocumentDidEndWriteNotification: NSNotificationName { available in macos 10.4, ios 11.0 }; cvar; external;
+  PDFDocumentDidBeginPageWriteNotification: NSNotificationName { available in macos 10.4, ios 11.0 }; cvar; external;
+  PDFDocumentDidEndPageWriteNotification: NSNotificationName { available in macos 10.4, ios 11.0 }; cvar; external;
 {$endif}
 
 {$ifdef TYPES}
@@ -64,14 +64,14 @@ type
 
 {$ifdef EXTERNAL_SYMBOLS}
 var
-  PDFDocumentTitleAttribute: PDFDocumentAttribute { available in 10_4, 11_0 }; cvar; external;
-  PDFDocumentAuthorAttribute: PDFDocumentAttribute { available in 10_4, 11_0 }; cvar; external;
-  PDFDocumentSubjectAttribute: PDFDocumentAttribute { available in 10_4, 11_0 }; cvar; external;
-  PDFDocumentCreatorAttribute: PDFDocumentAttribute { available in 10_4, 11_0 }; cvar; external;
-  PDFDocumentProducerAttribute: PDFDocumentAttribute { available in 10_4, 11_0 }; cvar; external;
-  PDFDocumentCreationDateAttribute: PDFDocumentAttribute { available in 10_4, 11_0 }; cvar; external;
-  PDFDocumentModificationDateAttribute: PDFDocumentAttribute { available in 10_4, 11_0 }; cvar; external;
-  PDFDocumentKeywordsAttribute: PDFDocumentAttribute { available in 10_4, 11_0 }; cvar; external;
+  PDFDocumentTitleAttribute: PDFDocumentAttribute { available in macos 10.4, ios 11.0 }; cvar; external;
+  PDFDocumentAuthorAttribute: PDFDocumentAttribute { available in macos 10.4, ios 11.0 }; cvar; external;
+  PDFDocumentSubjectAttribute: PDFDocumentAttribute { available in macos 10.4, ios 11.0 }; cvar; external;
+  PDFDocumentCreatorAttribute: PDFDocumentAttribute { available in macos 10.4, ios 11.0 }; cvar; external;
+  PDFDocumentProducerAttribute: PDFDocumentAttribute { available in macos 10.4, ios 11.0 }; cvar; external;
+  PDFDocumentCreationDateAttribute: PDFDocumentAttribute { available in macos 10.4, ios 11.0 }; cvar; external;
+  PDFDocumentModificationDateAttribute: PDFDocumentAttribute { available in macos 10.4, ios 11.0 }; cvar; external;
+  PDFDocumentKeywordsAttribute: PDFDocumentAttribute { available in macos 10.4, ios 11.0 }; cvar; external;
 {$endif}
 
 {$ifdef TYPES}
@@ -82,8 +82,8 @@ type
 
 {$ifdef EXTERNAL_SYMBOLS}
 var
-  PDFDocumentOwnerPasswordOption: PDFDocumentWriteOption { available in 10_4, 11_0 }; cvar; external;
-  PDFDocumentUserPasswordOption: PDFDocumentWriteOption { available in 10_4, 11_0 }; cvar; external;
+  PDFDocumentOwnerPasswordOption: PDFDocumentWriteOption { available in macos 10.4, ios 11.0 }; cvar; external;
+  PDFDocumentUserPasswordOption: PDFDocumentWriteOption { available in macos 10.4, ios 11.0 }; cvar; external;
 {$endif}
 
 {$ifdef CLASSES}
@@ -105,25 +105,25 @@ type
     function isEncrypted: objcbool; message 'isEncrypted';
     function isLocked: objcbool; message 'isLocked';
     function unlockWithPassword (password: NSString): objcbool; message 'unlockWithPassword:';
-    function allowsPrinting: objcbool; message 'allowsPrinting'; { available in 10_4, 11_0 }
-    function allowsCopying: objcbool; message 'allowsCopying'; { available in 10_4, 11_0 }
-    function allowsDocumentChanges: objcbool; message 'allowsDocumentChanges'; { available in 10_13, 11_0 }
-    function allowsDocumentAssembly: objcbool; message 'allowsDocumentAssembly'; { available in 10_13, 11_0 }
-    function allowsContentAccessibility: objcbool; message 'allowsContentAccessibility'; { available in 10_13, 11_0 }
-    function allowsCommenting: objcbool; message 'allowsCommenting'; { available in 10_13, 11_0 }
-    function allowsFormFieldEntry: objcbool; message 'allowsFormFieldEntry'; { available in 10_13, 11_0 }
-    function permissionsStatus: PDFDocumentPermissions; message 'permissionsStatus'; { available in 10_6, 11_0 }
+    function allowsPrinting: objcbool; message 'allowsPrinting'; { available in macos 10.4, ios 11.0 }
+    function allowsCopying: objcbool; message 'allowsCopying'; { available in macos 10.4, ios 11.0 }
+    function allowsDocumentChanges: objcbool; message 'allowsDocumentChanges'; { available in macos 10.13, ios 11.0 }
+    function allowsDocumentAssembly: objcbool; message 'allowsDocumentAssembly'; { available in macos 10.13, ios 11.0 }
+    function allowsContentAccessibility: objcbool; message 'allowsContentAccessibility'; { available in macos 10.13, ios 11.0 }
+    function allowsCommenting: objcbool; message 'allowsCommenting'; { available in macos 10.13, ios 11.0 }
+    function allowsFormFieldEntry: objcbool; message 'allowsFormFieldEntry'; { available in macos 10.13, ios 11.0 }
+    function permissionsStatus: PDFDocumentPermissions; message 'permissionsStatus'; { available in macos 10.6, ios 11.0 }
     function string_: NSString; message 'string';
     procedure setDelegate(newValue: PDFDocumentDelegateProtocol); message 'setDelegate:';
     function delegate: PDFDocumentDelegateProtocol; message 'delegate';
     function dataRepresentation: NSData; message 'dataRepresentation';
-    function dataRepresentationWithOptions (options: NSDictionary): NSData; message 'dataRepresentationWithOptions:'; { available in 10_6, 11_0 }
+    function dataRepresentationWithOptions (options: NSDictionary): NSData; message 'dataRepresentationWithOptions:'; { available in macos 10.6, ios 11.0 }
     function writeToFile (path: NSString): objcbool; message 'writeToFile:';
     function writeToFile_withOptions (path: NSString; options: NSDictionary): objcbool; message 'writeToFile:withOptions:';
     function writeToURL (url: NSURL): objcbool; message 'writeToURL:';
     function writeToURL_withOptions (url: NSURL; options: NSDictionary): objcbool; message 'writeToURL:withOptions:';
-    procedure setOutlineRoot(newValue: PDFOutline); message 'setOutlineRoot:'; { available in 10_6, 11_0 }
-    function outlineRoot: PDFOutline; message 'outlineRoot'; { available in 10_6, 11_0 }
+    procedure setOutlineRoot(newValue: PDFOutline); message 'setOutlineRoot:'; { available in macos 10.6, ios 11.0 }
+    function outlineRoot: PDFOutline; message 'outlineRoot'; { available in macos 10.6, ios 11.0 }
     function outlineItemForSelection (selection: PDFSelection): PDFOutline; message 'outlineItemForSelection:';
     function pageCount: NSUInteger; message 'pageCount';
     function pageAtIndex (index: NSUInteger): PDFPage; message 'pageAtIndex:';
@@ -134,7 +134,7 @@ type
     function pageClass: pobjc_class; message 'pageClass';
     function findString_withOptions (string_: NSString; options: NSStringCompareOptions): NSArray; message 'findString:withOptions:';
     procedure beginFindString_withOptions (string_: NSString; options: NSStringCompareOptions); message 'beginFindString:withOptions:';
-    procedure beginFindStrings_withOptions (strings: NSArray; options: NSStringCompareOptions); message 'beginFindStrings:withOptions:'; { available in 10_5, 11_0 }
+    procedure beginFindStrings_withOptions (strings: NSArray; options: NSStringCompareOptions); message 'beginFindStrings:withOptions:'; { available in macos 10.5, ios 11.0 }
     function findString_fromSelection_withOptions (string_: NSString; selection: PDFSelection; options: NSStringCompareOptions): PDFSelection; message 'findString:fromSelection:withOptions:';
     function isFinding: objcbool; message 'isFinding';
     procedure cancelFindString; message 'cancelFindString';
@@ -162,8 +162,8 @@ type
     procedure documentDidEndPageFind (notification: NSNotification); message 'documentDidEndPageFind:';
     procedure documentDidFindMatch (notification: NSNotification); message 'documentDidFindMatch:';
     procedure didMatchString (instance: PDFSelection); message 'didMatchString:';
-    function classForPage: pobjc_class; message 'classForPage'; { available in 10_6, 11_0 }
-    function classForAnnotationType (annotationType: NSString): pobjc_class; message 'classForAnnotationType:'; { available in 10_13, 11_0 }
+    function classForPage: pobjc_class; message 'classForPage'; { available in macos 10.6, ios 11.0 }
+    function classForAnnotationType (annotationType: NSString): pobjc_class; message 'classForAnnotationType:'; { available in macos 10.13, ios 11.0 }
     {$if (defined(PDFKIT_PLATFORM_OSX))}
     function classForAnnotationClass (annotationClass: pobjc_class): pobjc_class; message 'classForAnnotationClass:'; deprecated 'in 10_6, 10_12, NA, NA';
     {$endif}

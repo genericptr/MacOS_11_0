@@ -50,7 +50,7 @@ type
     class function authorizationStatus: CBPeripheralManagerAuthorizationStatus; message 'authorizationStatus'; deprecated 'in 10_9, 10_15, 7_0, 13_0, "Use CBManagerAuthorization instead"';
     function init: id; message 'init';
     function initWithDelegate_queue (delegate_: CBPeripheralManagerDelegateProtocol; queue: dispatch_queue_t): id; message 'initWithDelegate:queue:';
-    function initWithDelegate_queue_options (delegate_: CBPeripheralManagerDelegateProtocol; queue: dispatch_queue_t; options: NSDictionary): id; message 'initWithDelegate:queue:options:'; { available in 10_9, 7_0 }
+    function initWithDelegate_queue_options (delegate_: CBPeripheralManagerDelegateProtocol; queue: dispatch_queue_t; options: NSDictionary): id; message 'initWithDelegate:queue:options:'; { available in macos 10.9, ios 7.0 }
     procedure startAdvertising (advertisementData: NSDictionary); message 'startAdvertising:';
     procedure stopAdvertising; message 'stopAdvertising';
     procedure setDesiredConnectionLatency_forCentral (latency: CBPeripheralManagerConnectionLatency; central: CBCentral); message 'setDesiredConnectionLatency:forCentral:';
@@ -59,8 +59,8 @@ type
     procedure removeAllServices; message 'removeAllServices';
     procedure respondToRequest_withResult (request: CBATTRequest; result_: CBATTError); message 'respondToRequest:withResult:';
     function updateValue_forCharacteristic_onSubscribedCentrals (value: NSData; characteristic: CBMutableCharacteristic; centrals: NSArray): objcbool; message 'updateValue:forCharacteristic:onSubscribedCentrals:';
-    procedure publishL2CAPChannelWithEncryption (encryptionRequired: objcbool); message 'publishL2CAPChannelWithEncryption:'; { available in 10_14, 11_0 }
-    procedure unpublishL2CAPChannel (PSM: CBL2CAPPSM); message 'unpublishL2CAPChannel:'; { available in 10_14, 11_0 }
+    procedure publishL2CAPChannelWithEncryption (encryptionRequired: objcbool); message 'publishL2CAPChannelWithEncryption:'; { available in macos 10.14, ios 11.0 }
+    procedure unpublishL2CAPChannel (PSM: CBL2CAPPSM); message 'unpublishL2CAPChannel:'; { available in macos 10.14, ios 11.0 }
   end;
 {$endif}
 

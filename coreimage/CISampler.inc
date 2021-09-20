@@ -28,13 +28,13 @@ type
 
 {$ifdef EXTERNAL_SYMBOLS}
 var
-  kCISamplerAffineMatrix: NSString { available in 10_4, 9_0 }; cvar; external;
-  kCISamplerWrapMode: NSString { available in 10_4, 9_0 }; cvar; external;
-  kCISamplerFilterMode: NSString { available in 10_4, 9_0 }; cvar; external;
-  kCISamplerWrapBlack: NSString { available in 10_4, 9_0 }; cvar; external;
-  kCISamplerWrapClamp: NSString { available in 10_4, 9_0 }; cvar; external;
-  kCISamplerFilterNearest: NSString { available in 10_4, 9_0 }; cvar; external;
-  kCISamplerFilterLinear: NSString { available in 10_4, 9_0 }; cvar; external;
-  kCISamplerColorSpace: NSString { available in 10_4, 9_0 }; cvar; external;
+  kCISamplerAffineMatrix: NSString { available in macos 10.4, ios 9.0 }; cvar; external;
+  kCISamplerWrapMode: NSString { available in macos 10.4, ios 9.0 }; cvar; external;
+  kCISamplerFilterMode: NSString { available in macos 10.4, ios 9.0 }; cvar; external;
+  kCISamplerWrapBlack: NSString { available in macos 10.4, ios 9.0 }; cvar; external;
+  kCISamplerWrapClamp: NSString { available in macos 10.4, ios 9.0 }; cvar; external;
+  kCISamplerFilterNearest: NSString { available in macos 10.4, ios 9.0 }; cvar; external;
+  kCISamplerFilterLinear: NSString { available in macos 10.4, ios 9.0 }; cvar; external;
+  kCISamplerColorSpace: NSString { available in macos 10.4, ios 9.0 }; cvar; external;
 {$endif}
 

@@ -3,8 +3,8 @@
 
 type
   CIImage_CIImageProvider = objccategory external name 'CIImageProvider' (CIImage)
-    class function imageWithImageProvider_size_format_colorSpace_options (p: id; width: size_t; f: CIFormat; cs: CGColorSpaceRef; options: NSDictionary): CIImage; message 'imageWithImageProvider:size:format:colorSpace:options:'; { available in 10_4, 9_0 }
-    function initWithImageProvider_size_format_colorSpace_options (p: id; width: size_t; f: CIFormat; cs: CGColorSpaceRef; options: NSDictionary): id; message 'initWithImageProvider:size:format:colorSpace:options:'; { available in 10_4, 9_0 }
+    class function imageWithImageProvider_size_format_colorSpace_options (p: id; width: size_t; f: CIFormat; cs: CGColorSpaceRef; options: NSDictionary): CIImage; message 'imageWithImageProvider:size:format:colorSpace:options:'; { available in macos 10.4, ios 9.0 }
+    function initWithImageProvider_size_format_colorSpace_options (p: id; width: size_t; f: CIFormat; cs: CGColorSpaceRef; options: NSDictionary): id; message 'initWithImageProvider:size:format:colorSpace:options:'; { available in macos 10.4, ios 9.0 }
   end;
 
 type
@@ -15,7 +15,7 @@ type
 
 {$ifdef EXTERNAL_SYMBOLS}
 var
-  kCIImageProviderTileSize: CIImageOption { available in 10_4, 9_0 }; cvar; external;
-  kCIImageProviderUserInfo: CIImageOption { available in 10_4, 9_0 }; cvar; external;
+  kCIImageProviderTileSize: CIImageOption { available in macos 10.4, ios 9.0 }; cvar; external;
+  kCIImageProviderUserInfo: CIImageOption { available in macos 10.4, ios 9.0 }; cvar; external;
 {$endif}
 

@@ -26,13 +26,13 @@ type
   public
     class procedure loadAchievementDescriptionsWithCompletionHandler (completionHandler: GKAchievementDescriptionLoadAchievementDescriptionsWithCompletionHandlerCallback); message 'loadAchievementDescriptionsWithCompletionHandler:';
     function identifier: NSString; message 'identifier';
-    function groupIdentifier: NSString; message 'groupIdentifier'; { available in 10_8, 6_0 }
+    function groupIdentifier: NSString; message 'groupIdentifier'; { available in macos 10.8, ios 6.0 }
     function title: NSString; message 'title';
     function achievedDescription: NSString; message 'achievedDescription';
     function unachievedDescription: NSString; message 'unachievedDescription';
     function maximumPoints: NSInteger; message 'maximumPoints';
     function isHidden: objcbool; message 'isHidden';
-    function isReplayable: objcbool; message 'isReplayable'; { available in 10_8, 6_0 }
+    function isReplayable: objcbool; message 'isReplayable'; { available in macos 10.8, ios 6.0 }
 
     { Adopted protocols }
     procedure encodeWithCoder (coder: NSCoder); message 'encodeWithCoder:';

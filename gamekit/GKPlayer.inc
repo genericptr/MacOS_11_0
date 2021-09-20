@@ -40,10 +40,10 @@ type
     function scopedIDsArePersistent: objcbool; message 'scopedIDsArePersistent'; { unavailable in watchos } { available in ios 13.0, macos 10.15, tvos 13.0 }
     function gamePlayerID: NSString; message 'gamePlayerID'; { unavailable in watchos } { available in ios 12.4, macos 10.14.6, tvos 12.4 }
     function teamPlayerID: NSString; message 'teamPlayerID'; { unavailable in watchos } { available in ios 12.4, macos 10.14.6, tvos 12.4 }
-    function displayName: NSString; message 'displayName'; { available in 10_8, 6_0 } { available in 3_0 }
+    function displayName: NSString; message 'displayName'; { available in macos 10.8, ios 6.0 } { available in 3_0 }
     function alias: NSString; message 'alias';
-    class function anonymousGuestPlayerWithIdentifier (guestIdentifier: NSString): id; message 'anonymousGuestPlayerWithIdentifier:'; { available in 10_11, 9_0 }
-    function guestIdentifier: NSString; message 'guestIdentifier'; { available in 10_11, 9_0 }
+    class function anonymousGuestPlayerWithIdentifier (guestIdentifier: NSString): id; message 'anonymousGuestPlayerWithIdentifier:'; { available in macos 10.11, ios 9.0 }
+    function guestIdentifier: NSString; message 'guestIdentifier'; { available in macos 10.11, ios 9.0 }
     function isInvitable: objcbool; message 'isInvitable'; { available in ios 14.0, macos 11.0, tvos 14.0 }
   end;
 
@@ -51,9 +51,9 @@ type
 type
   GKPlayer_UI = objccategory external name 'UI' (GKPlayer)
     {$if defined(TARGET_OS_IPHONE)}
-    procedure loadPhotoForSize_withCompletionHandler (size: GKPhotoSize; completionHandler: GKPlayerLoadPhotoForSizeCallback); message 'loadPhotoForSize:withCompletionHandler:'; { available in 10_8, 5_0 }
+    procedure loadPhotoForSize_withCompletionHandler (size: GKPhotoSize; completionHandler: GKPlayerLoadPhotoForSizeCallback); message 'loadPhotoForSize:withCompletionHandler:'; { available in macos 10.8, ios 5.0 }
     {$else}
-    procedure loadPhotoForSize_withCompletionHandler (size: GKPhotoSize; completionHandler: GKPlayerLoadPhotoForSizeCallback); message 'loadPhotoForSize:withCompletionHandler:'; { available in 10_8, 5_0 }
+    procedure loadPhotoForSize_withCompletionHandler (size: GKPhotoSize; completionHandler: GKPlayerLoadPhotoForSizeCallback); message 'loadPhotoForSize:withCompletionHandler:'; { available in macos 10.8, ios 5.0 }
     {$endif}
   end;
 {$endif}

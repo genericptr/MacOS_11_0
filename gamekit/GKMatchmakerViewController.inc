@@ -43,8 +43,8 @@ type
     function matchmakingMode: GKMatchmakingMode; message 'matchmakingMode';
     function initWithMatchRequest (request: GKMatchRequest): id; message 'initWithMatchRequest:';
     function initWithInvite (invite: GKInvite): id; message 'initWithInvite:';
-    procedure addPlayersToMatch (match: GKMatch); message 'addPlayersToMatch:'; { available in 10_8, 5_0 }
-    procedure setHostedPlayer_didConnect (player: GKPlayer; connected: objcbool); message 'setHostedPlayer:didConnect:'; { available in 10_10, 8_0 }
+    procedure addPlayersToMatch (match: GKMatch); message 'addPlayersToMatch:'; { available in macos 10.8, ios 5.0 }
+    procedure setHostedPlayer_didConnect (player: GKPlayer; connected: objcbool); message 'setHostedPlayer:didConnect:'; { available in macos 10.10, ios 8.0 }
     procedure setDefaultInvitationMessage(newValue: NSString); message 'setDefaultInvitationMessage:'; deprecated 'in 10_8, 10_10, 5_0, 7_0';
     function defaultInvitationMessage: NSString; message 'defaultInvitationMessage'; deprecated 'in 10_8, 10_10, 5_0, 7_0';
   end;
@@ -64,12 +64,12 @@ type
 type
   GKMatchmakerViewControllerDelegateProtocol = objcprotocol external name 'GKMatchmakerViewControllerDelegate' (NSObjectProtocol)
   required
-    procedure matchmakerViewControllerWasCancelled (viewController: GKMatchmakerViewController); message 'matchmakerViewControllerWasCancelled:'; { available in 10_8, 4_1 }
-    procedure matchmakerViewController_didFailWithError (viewController: GKMatchmakerViewController; error: NSError); message 'matchmakerViewController:didFailWithError:'; { available in 10_8, 4_1 }
+    procedure matchmakerViewControllerWasCancelled (viewController: GKMatchmakerViewController); message 'matchmakerViewControllerWasCancelled:'; { available in macos 10.8, ios 4.1 }
+    procedure matchmakerViewController_didFailWithError (viewController: GKMatchmakerViewController; error: NSError); message 'matchmakerViewController:didFailWithError:'; { available in macos 10.8, ios 4.1 }
   optional
-    procedure matchmakerViewController_didFindMatch (viewController: GKMatchmakerViewController; match: GKMatch); message 'matchmakerViewController:didFindMatch:'; { available in 10_8, 4_1 }
-    procedure matchmakerViewController_didFindHostedPlayers (viewController: GKMatchmakerViewController; players: NSArray); message 'matchmakerViewController:didFindHostedPlayers:'; { available in 10_10, 8_0 }
-    procedure matchmakerViewController_hostedPlayerDidAccept (viewController: GKMatchmakerViewController; player: GKPlayer); message 'matchmakerViewController:hostedPlayerDidAccept:'; { available in 10_10, 8_0 }
+    procedure matchmakerViewController_didFindMatch (viewController: GKMatchmakerViewController; match: GKMatch); message 'matchmakerViewController:didFindMatch:'; { available in macos 10.8, ios 4.1 }
+    procedure matchmakerViewController_didFindHostedPlayers (viewController: GKMatchmakerViewController; players: NSArray); message 'matchmakerViewController:didFindHostedPlayers:'; { available in macos 10.10, ios 8.0 }
+    procedure matchmakerViewController_hostedPlayerDidAccept (viewController: GKMatchmakerViewController; player: GKPlayer); message 'matchmakerViewController:hostedPlayerDidAccept:'; { available in macos 10.10, ios 8.0 }
     procedure matchmakerViewController_didFindPlayers (viewController: GKMatchmakerViewController; playerIDs: NSArray); message 'matchmakerViewController:didFindPlayers:'; deprecated 'in 10_8, 10_10, 4_1, 8_0, "This is never invoked and its implementation does nothing, use matchmakerViewController:didFindHostedPlayers:"';
     procedure matchmakerViewController_didReceiveAcceptFromHostedPlayer (viewController: GKMatchmakerViewController; playerID: NSString); message 'matchmakerViewController:didReceiveAcceptFromHostedPlayer:'; deprecated 'in 10_8, 10_10, 5_0, 8_0, "This is never invoked and its implementation does nothing, use matchmakerViewController:hostedPlayerDidAccept:"';
   end;

@@ -40,8 +40,8 @@ type
 type
   GKTurnBasedMatchmakerViewControllerDelegateProtocol = objcprotocol external name 'GKTurnBasedMatchmakerViewControllerDelegate' (NSObjectProtocol)
   required
-    procedure turnBasedMatchmakerViewControllerWasCancelled (viewController: GKTurnBasedMatchmakerViewController); message 'turnBasedMatchmakerViewControllerWasCancelled:'; { available in 10_8, 5_0 }
-    procedure turnBasedMatchmakerViewController_didFailWithError (viewController: GKTurnBasedMatchmakerViewController; error: NSError); message 'turnBasedMatchmakerViewController:didFailWithError:'; { available in 10_8, 5_0 }
+    procedure turnBasedMatchmakerViewControllerWasCancelled (viewController: GKTurnBasedMatchmakerViewController); message 'turnBasedMatchmakerViewControllerWasCancelled:'; { available in macos 10.8, ios 5.0 }
+    procedure turnBasedMatchmakerViewController_didFailWithError (viewController: GKTurnBasedMatchmakerViewController; error: NSError); message 'turnBasedMatchmakerViewController:didFailWithError:'; { available in macos 10.8, ios 5.0 }
   optional
     procedure turnBasedMatchmakerViewController_didFindMatch (viewController: GKTurnBasedMatchmakerViewController; match: GKTurnBasedMatch); message 'turnBasedMatchmakerViewController:didFindMatch:'; deprecated 'in 10_8, 10_11, 5_0, 9_0, "use GKTurnBasedEventListener player:receivedTurnEventForMatch:didBecomeActive:"';
     procedure turnBasedMatchmakerViewController_playerQuitForMatch (viewController: GKTurnBasedMatchmakerViewController; match: GKTurnBasedMatch); message 'turnBasedMatchmakerViewController:playerQuitForMatch:'; deprecated 'in 10_8, 10_11, 5_0, 9_0, "use GKTurnBasedEventListener player:wantsToQuitMatch:"';

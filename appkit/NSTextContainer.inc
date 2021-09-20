@@ -35,7 +35,7 @@ type
     procedure setMaximumNumberOfLines(newValue: NSUInteger); message 'setMaximumNumberOfLines:'; { available in macos 10.11, ios 7.0, tvos 9.0 }
     function maximumNumberOfLines: NSUInteger; message 'maximumNumberOfLines'; { available in macos 10.11, ios 7.0, tvos 9.0 }
     function lineFragmentRectForProposedRect_atIndex_writingDirection_remainingRect (proposedRect: NSRect; characterIndex: NSUInteger; baseWritingDirection: NSWritingDirection; remainingRect: NSRectPtr): NSRect; message 'lineFragmentRectForProposedRect:atIndex:writingDirection:remainingRect:'; { available in macos 10.11, ios 7.0, tvos 9.0 }
-    function isSimpleRectangularTextContainer: objcbool; message 'isSimpleRectangularTextContainer'; { available in 10_0, 9_0 }
+    function isSimpleRectangularTextContainer: objcbool; message 'isSimpleRectangularTextContainer'; { available in macos 10.0, ios 9.0 }
     procedure setWidthTracksTextView(newValue: objcbool); message 'setWidthTracksTextView:';
     function widthTracksTextView: objcbool; message 'widthTracksTextView';
     procedure setHeightTracksTextView(newValue: objcbool); message 'setHeightTracksTextView:';

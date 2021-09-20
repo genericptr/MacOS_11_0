@@ -99,7 +99,7 @@ type
     function bottomLeft_: CGPoint; message 'bottomLeft';
     function bottomRight_: CGPoint; message 'bottomRight';
     function messageString: NSString; message 'messageString';
-    function symbolDescriptor_: CIQRCodeDescriptor; message 'symbolDescriptor'; { available in 10_13, 11_0 }
+    function symbolDescriptor_: CIQRCodeDescriptor; message 'symbolDescriptor'; { available in macos 10.13, ios 11.0 }
 
     { Adopted protocols }
     function copyWithZone (zone: NSZonePtr): id; message 'copyWithZone:';

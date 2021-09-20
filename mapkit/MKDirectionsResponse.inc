@@ -28,10 +28,10 @@ type
     function source_: MKMapItem; message 'source';
     function destination_: MKMapItem; message 'destination';
     function expectedTravelTime_: NSTimeInterval; message 'expectedTravelTime';
-    function distance__: CLLocationDistance; message 'distance'; { available in 10_11, 9_0 }
-    function expectedArrivalDate: NSDate; message 'expectedArrivalDate'; { available in 10_11, 9_0 }
-    function expectedDepartureDate: NSDate; message 'expectedDepartureDate'; { available in 10_11, 9_0 }
-    function transportType__: MKDirectionsTransportType; message 'transportType'; { available in 10_11, 9_0 }
+    function distance__: CLLocationDistance; message 'distance'; { available in macos 10.11, ios 9.0 }
+    function expectedArrivalDate: NSDate; message 'expectedArrivalDate'; { available in macos 10.11, ios 9.0 }
+    function expectedDepartureDate: NSDate; message 'expectedDepartureDate'; { available in macos 10.11, ios 9.0 }
+    function transportType__: MKDirectionsTransportType; message 'transportType'; { available in macos 10.11, ios 9.0 }
   end;
 {$endif}
 

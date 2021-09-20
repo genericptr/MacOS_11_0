@@ -32,15 +32,15 @@ type
   public
     procedure start; message 'start';
     procedure stop; message 'stop';
-    procedure setPlayer_muted (player: GKPlayer; isMuted: objcbool); message 'setPlayer:muted:'; { available in 10_10, 8_0 }
-    procedure setPlayerVoiceChatStateDidChangeHandler(newValue: GKVoiceChatPlayerVoiceChatStateDidChangeHandlerCallback); message 'setPlayerVoiceChatStateDidChangeHandler:'; { available in 10_10, 8_0 }
-    function playerVoiceChatStateDidChangeHandler: GKVoiceChatPlayerVoiceChatStateDidChangeHandlerCallback; message 'playerVoiceChatStateDidChangeHandler'; { available in 10_10, 8_0 }
+    procedure setPlayer_muted (player: GKPlayer; isMuted: objcbool); message 'setPlayer:muted:'; { available in macos 10.10, ios 8.0 }
+    procedure setPlayerVoiceChatStateDidChangeHandler(newValue: GKVoiceChatPlayerVoiceChatStateDidChangeHandlerCallback); message 'setPlayerVoiceChatStateDidChangeHandler:'; { available in macos 10.10, ios 8.0 }
+    function playerVoiceChatStateDidChangeHandler: GKVoiceChatPlayerVoiceChatStateDidChangeHandlerCallback; message 'playerVoiceChatStateDidChangeHandler'; { available in macos 10.10, ios 8.0 }
     function name: NSString; message 'name';
     procedure setActive(newValue: objcbool); message 'setActive:';
     function isActive: objcbool; message 'isActive';
     procedure setVolume(newValue: single); message 'setVolume:';
     function volume: single; message 'volume';
-    function players: NSArray; message 'players'; { available in 10_10, 8_0 }
+    function players: NSArray; message 'players'; { available in macos 10.10, ios 8.0 }
     class function isVoIPAllowed: objcbool; message 'isVoIPAllowed';
   end;
 

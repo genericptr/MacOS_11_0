@@ -21,48 +21,48 @@ type
 
 {$ifdef EXTERNAL_SYMBOLS}
 var
-  PDFAnnotationKeyAppearanceDictionary: PDFAnnotationKey { available in 10_13, 11_0 }; cvar; external;
-  PDFAnnotationKeyAppearanceState: PDFAnnotationKey { available in 10_13, 11_0 }; cvar; external;
-  PDFAnnotationKeyBorder: PDFAnnotationKey { available in 10_13, 11_0 }; cvar; external;
-  PDFAnnotationKeyColor: PDFAnnotationKey { available in 10_13, 11_0 }; cvar; external;
-  PDFAnnotationKeyContents: PDFAnnotationKey { available in 10_13, 11_0 }; cvar; external;
-  PDFAnnotationKeyFlags: PDFAnnotationKey { available in 10_13, 11_0 }; cvar; external;
-  PDFAnnotationKeyDate: PDFAnnotationKey { available in 10_13, 11_0 }; cvar; external;
-  PDFAnnotationKeyName: PDFAnnotationKey { available in 10_13, 11_0 }; cvar; external;
-  PDFAnnotationKeyPage: PDFAnnotationKey { available in 10_13, 11_0 }; cvar; external;
-  PDFAnnotationKeyRect: PDFAnnotationKey { available in 10_13, 11_0 }; cvar; external;
-  PDFAnnotationKeySubtype: PDFAnnotationKey { available in 10_13, 11_0 }; cvar; external;
-  PDFAnnotationKeyAction: PDFAnnotationKey { available in 10_13, 11_0 }; cvar; external;
-  PDFAnnotationKeyAdditionalActions: PDFAnnotationKey { available in 10_13, 11_0 }; cvar; external;
-  PDFAnnotationKeyBorderStyle: PDFAnnotationKey { available in 10_13, 11_0 }; cvar; external;
-  PDFAnnotationKeyDefaultAppearance: PDFAnnotationKey { available in 10_13, 11_0 }; cvar; external;
-  PDFAnnotationKeyDestination: PDFAnnotationKey { available in 10_13, 11_0 }; cvar; external;
-  PDFAnnotationKeyHighlightingMode: PDFAnnotationKey { available in 10_13, 11_0 }; cvar; external;
-  PDFAnnotationKeyInklist: PDFAnnotationKey { available in 10_13, 11_0 }; cvar; external;
-  PDFAnnotationKeyInteriorColor: PDFAnnotationKey { available in 10_13, 11_0 }; cvar; external;
-  PDFAnnotationKeyLinePoints: PDFAnnotationKey { available in 10_13, 11_0 }; cvar; external;
-  PDFAnnotationKeyLineEndingStyles: PDFAnnotationKey { available in 10_13, 11_0 }; cvar; external;
-  PDFAnnotationKeyIconName: PDFAnnotationKey { available in 10_13, 11_0 }; cvar; external;
-  PDFAnnotationKeyOpen: PDFAnnotationKey { available in 10_13, 11_0 }; cvar; external;
-  PDFAnnotationKeyParent: PDFAnnotationKey { available in 10_13, 11_0 }; cvar; external;
-  PDFAnnotationKeyPopup: PDFAnnotationKey { available in 10_13, 11_0 }; cvar; external;
-  PDFAnnotationKeyQuadding: PDFAnnotationKey { available in 10_13, 11_0 }; cvar; external;
-  PDFAnnotationKeyQuadPoints: PDFAnnotationKey { available in 10_13, 11_0 }; cvar; external;
-  PDFAnnotationKeyTextLabel: PDFAnnotationKey { available in 10_13, 11_0 }; cvar; external;
-  PDFAnnotationKeyWidgetDownCaption: PDFAnnotationKey { available in 10_13, 11_0 }; cvar; external;
-  PDFAnnotationKeyWidgetBorderColor: PDFAnnotationKey { available in 10_13, 11_0 }; cvar; external;
-  PDFAnnotationKeyWidgetBackgroundColor: PDFAnnotationKey { available in 10_13, 11_0 }; cvar; external;
-  PDFAnnotationKeyWidgetCaption: PDFAnnotationKey { available in 10_13, 11_0 }; cvar; external;
-  PDFAnnotationKeyWidgetDefaultValue: PDFAnnotationKey { available in 10_13, 11_0 }; cvar; external;
-  PDFAnnotationKeyWidgetFieldFlags: PDFAnnotationKey { available in 10_13, 11_0 }; cvar; external;
-  PDFAnnotationKeyWidgetFieldType: PDFAnnotationKey { available in 10_13, 11_0 }; cvar; external;
-  PDFAnnotationKeyWidgetAppearanceDictionary: PDFAnnotationKey { available in 10_13, 11_0 }; cvar; external;
-  PDFAnnotationKeyWidgetMaxLen: PDFAnnotationKey { available in 10_13, 11_0 }; cvar; external;
-  PDFAnnotationKeyWidgetOptions: PDFAnnotationKey { available in 10_13, 11_0 }; cvar; external;
-  PDFAnnotationKeyWidgetRotation: PDFAnnotationKey { available in 10_13, 11_0 }; cvar; external;
-  PDFAnnotationKeyWidgetRolloverCaption: PDFAnnotationKey { available in 10_13, 11_0 }; cvar; external;
-  PDFAnnotationKeyWidgetTextLabelUI: PDFAnnotationKey { available in 10_13, 11_0 }; cvar; external;
-  PDFAnnotationKeyWidgetValue: PDFAnnotationKey { available in 10_13, 11_0 }; cvar; external;
+  PDFAnnotationKeyAppearanceDictionary: PDFAnnotationKey { available in macos 10.13, ios 11.0 }; cvar; external;
+  PDFAnnotationKeyAppearanceState: PDFAnnotationKey { available in macos 10.13, ios 11.0 }; cvar; external;
+  PDFAnnotationKeyBorder: PDFAnnotationKey { available in macos 10.13, ios 11.0 }; cvar; external;
+  PDFAnnotationKeyColor: PDFAnnotationKey { available in macos 10.13, ios 11.0 }; cvar; external;
+  PDFAnnotationKeyContents: PDFAnnotationKey { available in macos 10.13, ios 11.0 }; cvar; external;
+  PDFAnnotationKeyFlags: PDFAnnotationKey { available in macos 10.13, ios 11.0 }; cvar; external;
+  PDFAnnotationKeyDate: PDFAnnotationKey { available in macos 10.13, ios 11.0 }; cvar; external;
+  PDFAnnotationKeyName: PDFAnnotationKey { available in macos 10.13, ios 11.0 }; cvar; external;
+  PDFAnnotationKeyPage: PDFAnnotationKey { available in macos 10.13, ios 11.0 }; cvar; external;
+  PDFAnnotationKeyRect: PDFAnnotationKey { available in macos 10.13, ios 11.0 }; cvar; external;
+  PDFAnnotationKeySubtype: PDFAnnotationKey { available in macos 10.13, ios 11.0 }; cvar; external;
+  PDFAnnotationKeyAction: PDFAnnotationKey { available in macos 10.13, ios 11.0 }; cvar; external;
+  PDFAnnotationKeyAdditionalActions: PDFAnnotationKey { available in macos 10.13, ios 11.0 }; cvar; external;
+  PDFAnnotationKeyBorderStyle: PDFAnnotationKey { available in macos 10.13, ios 11.0 }; cvar; external;
+  PDFAnnotationKeyDefaultAppearance: PDFAnnotationKey { available in macos 10.13, ios 11.0 }; cvar; external;
+  PDFAnnotationKeyDestination: PDFAnnotationKey { available in macos 10.13, ios 11.0 }; cvar; external;
+  PDFAnnotationKeyHighlightingMode: PDFAnnotationKey { available in macos 10.13, ios 11.0 }; cvar; external;
+  PDFAnnotationKeyInklist: PDFAnnotationKey { available in macos 10.13, ios 11.0 }; cvar; external;
+  PDFAnnotationKeyInteriorColor: PDFAnnotationKey { available in macos 10.13, ios 11.0 }; cvar; external;
+  PDFAnnotationKeyLinePoints: PDFAnnotationKey { available in macos 10.13, ios 11.0 }; cvar; external;
+  PDFAnnotationKeyLineEndingStyles: PDFAnnotationKey { available in macos 10.13, ios 11.0 }; cvar; external;
+  PDFAnnotationKeyIconName: PDFAnnotationKey { available in macos 10.13, ios 11.0 }; cvar; external;
+  PDFAnnotationKeyOpen: PDFAnnotationKey { available in macos 10.13, ios 11.0 }; cvar; external;
+  PDFAnnotationKeyParent: PDFAnnotationKey { available in macos 10.13, ios 11.0 }; cvar; external;
+  PDFAnnotationKeyPopup: PDFAnnotationKey { available in macos 10.13, ios 11.0 }; cvar; external;
+  PDFAnnotationKeyQuadding: PDFAnnotationKey { available in macos 10.13, ios 11.0 }; cvar; external;
+  PDFAnnotationKeyQuadPoints: PDFAnnotationKey { available in macos 10.13, ios 11.0 }; cvar; external;
+  PDFAnnotationKeyTextLabel: PDFAnnotationKey { available in macos 10.13, ios 11.0 }; cvar; external;
+  PDFAnnotationKeyWidgetDownCaption: PDFAnnotationKey { available in macos 10.13, ios 11.0 }; cvar; external;
+  PDFAnnotationKeyWidgetBorderColor: PDFAnnotationKey { available in macos 10.13, ios 11.0 }; cvar; external;
+  PDFAnnotationKeyWidgetBackgroundColor: PDFAnnotationKey { available in macos 10.13, ios 11.0 }; cvar; external;
+  PDFAnnotationKeyWidgetCaption: PDFAnnotationKey { available in macos 10.13, ios 11.0 }; cvar; external;
+  PDFAnnotationKeyWidgetDefaultValue: PDFAnnotationKey { available in macos 10.13, ios 11.0 }; cvar; external;
+  PDFAnnotationKeyWidgetFieldFlags: PDFAnnotationKey { available in macos 10.13, ios 11.0 }; cvar; external;
+  PDFAnnotationKeyWidgetFieldType: PDFAnnotationKey { available in macos 10.13, ios 11.0 }; cvar; external;
+  PDFAnnotationKeyWidgetAppearanceDictionary: PDFAnnotationKey { available in macos 10.13, ios 11.0 }; cvar; external;
+  PDFAnnotationKeyWidgetMaxLen: PDFAnnotationKey { available in macos 10.13, ios 11.0 }; cvar; external;
+  PDFAnnotationKeyWidgetOptions: PDFAnnotationKey { available in macos 10.13, ios 11.0 }; cvar; external;
+  PDFAnnotationKeyWidgetRotation: PDFAnnotationKey { available in macos 10.13, ios 11.0 }; cvar; external;
+  PDFAnnotationKeyWidgetRolloverCaption: PDFAnnotationKey { available in macos 10.13, ios 11.0 }; cvar; external;
+  PDFAnnotationKeyWidgetTextLabelUI: PDFAnnotationKey { available in macos 10.13, ios 11.0 }; cvar; external;
+  PDFAnnotationKeyWidgetValue: PDFAnnotationKey { available in macos 10.13, ios 11.0 }; cvar; external;
 {$endif}
 
 {$ifdef CLASSES}
@@ -72,7 +72,7 @@ type
   private
     _private: PDFAnnotationPrivateVars;
   public
-    function initWithBounds_forType_withProperties (bounds: PDFRect; annotationType: PDFAnnotationSubtype; properties: NSDictionary): id; message 'initWithBounds:forType:withProperties:'; { available in 10_13, 11_0 }
+    function initWithBounds_forType_withProperties (bounds: PDFRect; annotationType: PDFAnnotationSubtype; properties: NSDictionary): id; message 'initWithBounds:forType:withProperties:'; { available in macos 10.13, ios 11.0 }
     procedure setPage(newValue: PDFPage); message 'setPage:';
     function page: PDFPage; message 'page';
     procedure setType(newValue: NSString); message 'setType:';
@@ -83,35 +83,35 @@ type
     function shouldDisplay: objcbool; message 'shouldDisplay';
     procedure setShouldPrint(newValue: objcbool); message 'setShouldPrint:';
     function shouldPrint: objcbool; message 'shouldPrint';
-    procedure setModificationDate(newValue: NSDate); message 'setModificationDate:'; { available in 10_5, 11_0 }
-    function modificationDate: NSDate; message 'modificationDate'; { available in 10_5, 11_0 }
-    procedure setUserName(newValue: NSString); message 'setUserName:'; { available in 10_5, 11_0 }
-    function userName: NSString; message 'userName'; { available in 10_5, 11_0 }
+    procedure setModificationDate(newValue: NSDate); message 'setModificationDate:'; { available in macos 10.5, ios 11.0 }
+    function modificationDate: NSDate; message 'modificationDate'; { available in macos 10.5, ios 11.0 }
+    procedure setUserName(newValue: NSString); message 'setUserName:'; { available in macos 10.5, ios 11.0 }
+    function userName: NSString; message 'userName'; { available in macos 10.5, ios 11.0 }
     {$if (defined(PDFKIT_PLATFORM_OSX))}
-    procedure setPopup(newValue: PDFAnnotationPopup); message 'setPopup:'; { available in 10_5, 11_0 }
-    function popup: PDFAnnotationPopup; message 'popup'; { available in 10_5, 11_0 }
+    procedure setPopup(newValue: PDFAnnotationPopup); message 'setPopup:'; { available in macos 10.5, ios 11.0 }
+    function popup: PDFAnnotationPopup; message 'popup'; { available in macos 10.5, ios 11.0 }
     {$else}
-    procedure setPopup_(newValue: PDFAnnotation); message 'setPopup:'; { available in 10_5, 11_0 }
-    function popup_: PDFAnnotation; message 'popup'; { available in 10_5, 11_0 }
+    procedure setPopup_(newValue: PDFAnnotation); message 'setPopup:'; { available in macos 10.5, ios 11.0 }
+    function popup_: PDFAnnotation; message 'popup'; { available in macos 10.5, ios 11.0 }
     {$endif}
-    procedure setBorder(newValue: PDFBorder); message 'setBorder:'; { available in 10_4, 11_0 }
-    function border: PDFBorder; message 'border'; { available in 10_4, 11_0 }
-    procedure setColor(newValue: PDFKitPlatformColorPtr); message 'setColor:'; { available in 10_4, 11_0 }
-    function color: PDFKitPlatformColorPtr; message 'color'; { available in 10_4, 11_0 }
-    procedure setContents(newValue: NSString); message 'setContents:'; { available in 10_5, 11_0 }
-    function contents: NSString; message 'contents'; { available in 10_5, 11_0 }
-    procedure setAction(newValue: PDFAction); message 'setAction:'; { available in 10_5, 11_0 }
-    function action: PDFAction; message 'action'; { available in 10_5, 11_0 }
+    procedure setBorder(newValue: PDFBorder); message 'setBorder:'; { available in macos 10.4, ios 11.0 }
+    function border: PDFBorder; message 'border'; { available in macos 10.4, ios 11.0 }
+    procedure setColor(newValue: PDFKitPlatformColorPtr); message 'setColor:'; { available in macos 10.4, ios 11.0 }
+    function color: PDFKitPlatformColorPtr; message 'color'; { available in macos 10.4, ios 11.0 }
+    procedure setContents(newValue: NSString); message 'setContents:'; { available in macos 10.5, ios 11.0 }
+    function contents: NSString; message 'contents'; { available in macos 10.5, ios 11.0 }
+    procedure setAction(newValue: PDFAction); message 'setAction:'; { available in macos 10.5, ios 11.0 }
+    function action: PDFAction; message 'action'; { available in macos 10.5, ios 11.0 }
     function hasAppearanceStream: objcbool; message 'hasAppearanceStream';
-    procedure setHighlighted(newValue: objcbool); message 'setHighlighted:'; { available in 10_13, 11_0 }
-    function isHighlighted: objcbool; message 'isHighlighted'; { available in 10_13, 11_0 }
-    procedure drawWithBox_inContext (box: PDFDisplayBox; context: CGContextRef); message 'drawWithBox:inContext:'; { available in 10_12, 11_0 }
-    function setValue_forAnnotationKey (value: id; key: PDFAnnotationKey): objcbool; message 'setValue:forAnnotationKey:'; { available in 10_12, 11_0 }
-    function setBoolean_forAnnotationKey (value: objcbool; key: PDFAnnotationKey): objcbool; message 'setBoolean:forAnnotationKey:'; { available in 10_12, 11_0 }
-    function setRect_forAnnotationKey (value: PDFRect; key: PDFAnnotationKey): objcbool; message 'setRect:forAnnotationKey:'; { available in 10_12, 11_0 }
-    function annotationKeyValues: NSDictionary; message 'annotationKeyValues'; { available in 10_13, 11_0 }
-    function valueForAnnotationKey (key: PDFAnnotationKey): id; message 'valueForAnnotationKey:'; { available in 10_12, 11_0 }
-    procedure removeValueForAnnotationKey (key: PDFAnnotationKey); message 'removeValueForAnnotationKey:'; { available in 10_12, 11_0 }
+    procedure setHighlighted(newValue: objcbool); message 'setHighlighted:'; { available in macos 10.13, ios 11.0 }
+    function isHighlighted: objcbool; message 'isHighlighted'; { available in macos 10.13, ios 11.0 }
+    procedure drawWithBox_inContext (box: PDFDisplayBox; context: CGContextRef); message 'drawWithBox:inContext:'; { available in macos 10.12, ios 11.0 }
+    function setValue_forAnnotationKey (value: id; key: PDFAnnotationKey): objcbool; message 'setValue:forAnnotationKey:'; { available in macos 10.12, ios 11.0 }
+    function setBoolean_forAnnotationKey (value: objcbool; key: PDFAnnotationKey): objcbool; message 'setBoolean:forAnnotationKey:'; { available in macos 10.12, ios 11.0 }
+    function setRect_forAnnotationKey (value: PDFRect; key: PDFAnnotationKey): objcbool; message 'setRect:forAnnotationKey:'; { available in macos 10.12, ios 11.0 }
+    function annotationKeyValues: NSDictionary; message 'annotationKeyValues'; { available in macos 10.13, ios 11.0 }
+    function valueForAnnotationKey (key: PDFAnnotationKey): id; message 'valueForAnnotationKey:'; { available in macos 10.12, ios 11.0 }
+    procedure removeValueForAnnotationKey (key: PDFAnnotationKey); message 'removeValueForAnnotationKey:'; { available in macos 10.12, ios 11.0 }
 
     { Adopted protocols }
     function copyWithZone (zone: NSZonePtr): id; message 'copyWithZone:';

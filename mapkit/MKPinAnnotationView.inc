@@ -30,20 +30,20 @@ type
   MKPinAnnotationView = objcclass external (MKAnnotationView)
   public
     {$if defined(TARGET_OS_IPHONE)}
-    class function redPinColor: UIColorPtr; message 'redPinColor'; { available in 10_11, 9_0 }
-    class function greenPinColor: UIColorPtr; message 'greenPinColor'; { available in 10_11, 9_0 }
-    class function purplePinColor: UIColorPtr; message 'purplePinColor'; { available in 10_11, 9_0 }
+    class function redPinColor: UIColorPtr; message 'redPinColor'; { available in macos 10.11, ios 9.0 }
+    class function greenPinColor: UIColorPtr; message 'greenPinColor'; { available in macos 10.11, ios 9.0 }
+    class function purplePinColor: UIColorPtr; message 'purplePinColor'; { available in macos 10.11, ios 9.0 }
     {$else}
-    class function redPinColor: NSColorPtr; message 'redPinColor'; { available in 10_11, 9_0 }
-    class function greenPinColor: NSColorPtr; message 'greenPinColor'; { available in 10_11, 9_0 }
-    class function purplePinColor: NSColorPtr; message 'purplePinColor'; { available in 10_11, 9_0 }
+    class function redPinColor: NSColorPtr; message 'redPinColor'; { available in macos 10.11, ios 9.0 }
+    class function greenPinColor: NSColorPtr; message 'greenPinColor'; { available in macos 10.11, ios 9.0 }
+    class function purplePinColor: NSColorPtr; message 'purplePinColor'; { available in macos 10.11, ios 9.0 }
     {$endif}
     {$if defined(TARGET_OS_IPHONE)}
-    procedure setUI_APPEARANCE_SELECTOR(newValue: UIColor *pinTintColor); message 'setUI_APPEARANCE_SELECTOR:'; { available in 10_11, 9_0 }
-    function UI_APPEARANCE_SELECTOR: UIColor *pinTintColor; message 'UI_APPEARANCE_SELECTOR'; { available in 10_11, 9_0 }
+    procedure setUI_APPEARANCE_SELECTOR(newValue: UIColor *pinTintColor); message 'setUI_APPEARANCE_SELECTOR:'; { available in macos 10.11, ios 9.0 }
+    function UI_APPEARANCE_SELECTOR: UIColor *pinTintColor; message 'UI_APPEARANCE_SELECTOR'; { available in macos 10.11, ios 9.0 }
     {$else}
-    procedure setPinTintColor(newValue: NSColorPtr); message 'setPinTintColor:'; { available in 10_11, 9_0 }
-    function pinTintColor: NSColorPtr; message 'pinTintColor'; { available in 10_11, 9_0 }
+    procedure setPinTintColor(newValue: NSColorPtr); message 'setPinTintColor:'; { available in macos 10.11, ios 9.0 }
+    function pinTintColor: NSColorPtr; message 'pinTintColor'; { available in macos 10.11, ios 9.0 }
     {$endif}
     procedure setAnimatesDrop(newValue: objcbool); message 'setAnimatesDrop:';
     function animatesDrop: objcbool; message 'animatesDrop';

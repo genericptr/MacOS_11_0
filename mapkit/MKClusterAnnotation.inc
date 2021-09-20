@@ -20,7 +20,7 @@ type
 
     { Adopted protocols }
     function coordinate: CLLocationCoordinate2D; message 'coordinate';
-    procedure setCoordinate (newCoordinate: CLLocationCoordinate2D); message 'setCoordinate:'; { available in 10_9, 4_0 }
+    procedure setCoordinate (newCoordinate: CLLocationCoordinate2D); message 'setCoordinate:'; { available in macos 10.9, ios 4.0 }
     function subtitle_: NSString; message 'subtitle';
     function title_: NSString; message 'title';
   end;

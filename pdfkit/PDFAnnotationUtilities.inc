@@ -57,19 +57,19 @@ const
 
 {$ifdef EXTERNAL_SYMBOLS}
 var
-  PDFAnnotationSubtypeText: PDFAnnotationSubtype { available in 10_13, 11_0 }; cvar; external;
-  PDFAnnotationSubtypeLink: PDFAnnotationSubtype { available in 10_13, 11_0 }; cvar; external;
-  PDFAnnotationSubtypeFreeText: PDFAnnotationSubtype { available in 10_13, 11_0 }; cvar; external;
-  PDFAnnotationSubtypeLine: PDFAnnotationSubtype { available in 10_13, 11_0 }; cvar; external;
-  PDFAnnotationSubtypeSquare: PDFAnnotationSubtype { available in 10_13, 11_0 }; cvar; external;
-  PDFAnnotationSubtypeCircle: PDFAnnotationSubtype { available in 10_13, 11_0 }; cvar; external;
-  PDFAnnotationSubtypeHighlight: PDFAnnotationSubtype { available in 10_13, 11_0 }; cvar; external;
-  PDFAnnotationSubtypeUnderline: PDFAnnotationSubtype { available in 10_13, 11_0 }; cvar; external;
-  PDFAnnotationSubtypeStrikeOut: PDFAnnotationSubtype { available in 10_13, 11_0 }; cvar; external;
-  PDFAnnotationSubtypeInk: PDFAnnotationSubtype { available in 10_13, 11_0 }; cvar; external;
-  PDFAnnotationSubtypeStamp: PDFAnnotationSubtype { available in 10_13, 11_0 }; cvar; external;
-  PDFAnnotationSubtypePopup: PDFAnnotationSubtype { available in 10_13, 11_0 }; cvar; external;
-  PDFAnnotationSubtypeWidget: PDFAnnotationSubtype { available in 10_13, 11_0 }; cvar; external;
+  PDFAnnotationSubtypeText: PDFAnnotationSubtype { available in macos 10.13, ios 11.0 }; cvar; external;
+  PDFAnnotationSubtypeLink: PDFAnnotationSubtype { available in macos 10.13, ios 11.0 }; cvar; external;
+  PDFAnnotationSubtypeFreeText: PDFAnnotationSubtype { available in macos 10.13, ios 11.0 }; cvar; external;
+  PDFAnnotationSubtypeLine: PDFAnnotationSubtype { available in macos 10.13, ios 11.0 }; cvar; external;
+  PDFAnnotationSubtypeSquare: PDFAnnotationSubtype { available in macos 10.13, ios 11.0 }; cvar; external;
+  PDFAnnotationSubtypeCircle: PDFAnnotationSubtype { available in macos 10.13, ios 11.0 }; cvar; external;
+  PDFAnnotationSubtypeHighlight: PDFAnnotationSubtype { available in macos 10.13, ios 11.0 }; cvar; external;
+  PDFAnnotationSubtypeUnderline: PDFAnnotationSubtype { available in macos 10.13, ios 11.0 }; cvar; external;
+  PDFAnnotationSubtypeStrikeOut: PDFAnnotationSubtype { available in macos 10.13, ios 11.0 }; cvar; external;
+  PDFAnnotationSubtypeInk: PDFAnnotationSubtype { available in macos 10.13, ios 11.0 }; cvar; external;
+  PDFAnnotationSubtypeStamp: PDFAnnotationSubtype { available in macos 10.13, ios 11.0 }; cvar; external;
+  PDFAnnotationSubtypePopup: PDFAnnotationSubtype { available in macos 10.13, ios 11.0 }; cvar; external;
+  PDFAnnotationSubtypeWidget: PDFAnnotationSubtype { available in macos 10.13, ios 11.0 }; cvar; external;
 {$endif}
 
 {$ifdef TYPES}
@@ -80,10 +80,10 @@ type
 
 {$ifdef EXTERNAL_SYMBOLS}
 var
-  PDFAnnotationWidgetSubtypeButton: PDFAnnotationWidgetSubtype { available in 10_13, 11_0 }; cvar; external;
-  PDFAnnotationWidgetSubtypeChoice: PDFAnnotationWidgetSubtype { available in 10_13, 11_0 }; cvar; external;
-  PDFAnnotationWidgetSubtypeSignature: PDFAnnotationWidgetSubtype { available in 10_13, 11_0 }; cvar; external;
-  PDFAnnotationWidgetSubtypeText: PDFAnnotationWidgetSubtype { available in 10_13, 11_0 }; cvar; external;
+  PDFAnnotationWidgetSubtypeButton: PDFAnnotationWidgetSubtype { available in macos 10.13, ios 11.0 }; cvar; external;
+  PDFAnnotationWidgetSubtypeChoice: PDFAnnotationWidgetSubtype { available in macos 10.13, ios 11.0 }; cvar; external;
+  PDFAnnotationWidgetSubtypeSignature: PDFAnnotationWidgetSubtype { available in macos 10.13, ios 11.0 }; cvar; external;
+  PDFAnnotationWidgetSubtypeText: PDFAnnotationWidgetSubtype { available in macos 10.13, ios 11.0 }; cvar; external;
 {$endif}
 
 {$ifdef TYPES}
@@ -94,12 +94,12 @@ type
 
 {$ifdef EXTERNAL_SYMBOLS}
 var
-  PDFAnnotationLineEndingStyleNone: PDFAnnotationLineEndingStyle { available in 10_13, 11_0 }; cvar; external;
-  PDFAnnotationLineEndingStyleSquare: PDFAnnotationLineEndingStyle { available in 10_13, 11_0 }; cvar; external;
-  PDFAnnotationLineEndingStyleCircle: PDFAnnotationLineEndingStyle { available in 10_13, 11_0 }; cvar; external;
-  PDFAnnotationLineEndingStyleDiamond: PDFAnnotationLineEndingStyle { available in 10_13, 11_0 }; cvar; external;
-  PDFAnnotationLineEndingStyleOpenArrow: PDFAnnotationLineEndingStyle { available in 10_13, 11_0 }; cvar; external;
-  PDFAnnotationLineEndingStyleClosedArrow: PDFAnnotationLineEndingStyle { available in 10_13, 11_0 }; cvar; external;
+  PDFAnnotationLineEndingStyleNone: PDFAnnotationLineEndingStyle { available in macos 10.13, ios 11.0 }; cvar; external;
+  PDFAnnotationLineEndingStyleSquare: PDFAnnotationLineEndingStyle { available in macos 10.13, ios 11.0 }; cvar; external;
+  PDFAnnotationLineEndingStyleCircle: PDFAnnotationLineEndingStyle { available in macos 10.13, ios 11.0 }; cvar; external;
+  PDFAnnotationLineEndingStyleDiamond: PDFAnnotationLineEndingStyle { available in macos 10.13, ios 11.0 }; cvar; external;
+  PDFAnnotationLineEndingStyleOpenArrow: PDFAnnotationLineEndingStyle { available in macos 10.13, ios 11.0 }; cvar; external;
+  PDFAnnotationLineEndingStyleClosedArrow: PDFAnnotationLineEndingStyle { available in macos 10.13, ios 11.0 }; cvar; external;
 {$endif}
 
 {$ifdef TYPES}
@@ -110,13 +110,13 @@ type
 
 {$ifdef EXTERNAL_SYMBOLS}
 var
-  PDFAnnotationTextIconTypeComment: PDFAnnotationTextIconType { available in 10_13, 11_0 }; cvar; external;
-  PDFAnnotationTextIconTypeKey: PDFAnnotationTextIconType { available in 10_13, 11_0 }; cvar; external;
-  PDFAnnotationTextIconTypeNote: PDFAnnotationTextIconType { available in 10_13, 11_0 }; cvar; external;
-  PDFAnnotationTextIconTypeHelp: PDFAnnotationTextIconType { available in 10_13, 11_0 }; cvar; external;
-  PDFAnnotationTextIconTypeNewParagraph: PDFAnnotationTextIconType { available in 10_13, 11_0 }; cvar; external;
-  PDFAnnotationTextIconTypeParagraph: PDFAnnotationTextIconType { available in 10_13, 11_0 }; cvar; external;
-  PDFAnnotationTextIconTypeInsert: PDFAnnotationTextIconType { available in 10_13, 11_0 }; cvar; external;
+  PDFAnnotationTextIconTypeComment: PDFAnnotationTextIconType { available in macos 10.13, ios 11.0 }; cvar; external;
+  PDFAnnotationTextIconTypeKey: PDFAnnotationTextIconType { available in macos 10.13, ios 11.0 }; cvar; external;
+  PDFAnnotationTextIconTypeNote: PDFAnnotationTextIconType { available in macos 10.13, ios 11.0 }; cvar; external;
+  PDFAnnotationTextIconTypeHelp: PDFAnnotationTextIconType { available in macos 10.13, ios 11.0 }; cvar; external;
+  PDFAnnotationTextIconTypeNewParagraph: PDFAnnotationTextIconType { available in macos 10.13, ios 11.0 }; cvar; external;
+  PDFAnnotationTextIconTypeParagraph: PDFAnnotationTextIconType { available in macos 10.13, ios 11.0 }; cvar; external;
+  PDFAnnotationTextIconTypeInsert: PDFAnnotationTextIconType { available in macos 10.13, ios 11.0 }; cvar; external;
 {$endif}
 
 {$ifdef TYPES}
@@ -127,10 +127,10 @@ type
 
 {$ifdef EXTERNAL_SYMBOLS}
 var
-  PDFAnnotationHighlightingModeNone: PDFAnnotationHighlightingMode { available in 10_13, 11_0 }; cvar; external;
-  PDFAnnotationHighlightingModeInvert: PDFAnnotationHighlightingMode { available in 10_13, 11_0 }; cvar; external;
-  PDFAnnotationHighlightingModeOutline: PDFAnnotationHighlightingMode { available in 10_13, 11_0 }; cvar; external;
-  PDFAnnotationHighlightingModePush: PDFAnnotationHighlightingMode { available in 10_13, 11_0 }; cvar; external;
+  PDFAnnotationHighlightingModeNone: PDFAnnotationHighlightingMode { available in macos 10.13, ios 11.0 }; cvar; external;
+  PDFAnnotationHighlightingModeInvert: PDFAnnotationHighlightingMode { available in macos 10.13, ios 11.0 }; cvar; external;
+  PDFAnnotationHighlightingModeOutline: PDFAnnotationHighlightingMode { available in macos 10.13, ios 11.0 }; cvar; external;
+  PDFAnnotationHighlightingModePush: PDFAnnotationHighlightingMode { available in macos 10.13, ios 11.0 }; cvar; external;
 {$endif}
 
 {$ifdef CLASSES}

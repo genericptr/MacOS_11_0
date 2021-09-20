@@ -31,8 +31,8 @@ type
     function phoneNumber: NSString; message 'phoneNumber';
     procedure setUrl(newValue: NSURL); message 'setUrl:';
     function url: NSURL; message 'url';
-    procedure setTimeZone(newValue: NSTimeZone); message 'setTimeZone:'; { available in 10_11, 9_0 }
-    function timeZone: NSTimeZone; message 'timeZone'; { available in 10_11, 9_0 }
+    procedure setTimeZone(newValue: NSTimeZone); message 'setTimeZone:'; { available in macos 10.11, ios 9.0 }
+    function timeZone: NSTimeZone; message 'timeZone'; { available in macos 10.11, ios 9.0 }
     procedure setPointOfInterestCategory(newValue: MKPointOfInterestCategory); message 'setPointOfInterestCategory:'; { unavailable in watchos } { available in ios 13.0, macos 10.15, tvos 13.0 }
     function pointOfInterestCategory: MKPointOfInterestCategory; message 'pointOfInterestCategory'; { unavailable in watchos } { available in ios 13.0, macos 10.15, tvos 13.0 }
     class function mapItemForCurrentLocation: MKMapItem; message 'mapItemForCurrentLocation';
@@ -48,16 +48,16 @@ type
 
 {$ifdef EXTERNAL_SYMBOLS}
 var
-  MKLaunchOptionsDirectionsModeKey: NSString { unavailable in tvos } { available in 10_9, 6_0 }; cvar; external;
-  MKLaunchOptionsMapTypeKey: NSString { unavailable in tvos, watchos } { available in 10_9, 6_0 }; cvar; external;
-  MKLaunchOptionsShowsTrafficKey: NSString { unavailable in tvos, watchos } { available in 10_9, 6_0 }; cvar; external;
-  MKLaunchOptionsDirectionsModeDefault: NSString { unavailable in tvos } { available in 10_12, 10_0 }; cvar; external;
-  MKLaunchOptionsDirectionsModeDriving: NSString { unavailable in tvos } { available in 10_9, 6_0 }; cvar; external;
-  MKLaunchOptionsDirectionsModeWalking: NSString { unavailable in tvos } { available in 10_9, 6_0 }; cvar; external;
-  MKLaunchOptionsDirectionsModeTransit: NSString { unavailable in tvos } { available in 10_11, 9_0 }; cvar; external;
-  MKLaunchOptionsMapCenterKey: NSString { unavailable in tvos } { available in 10_9, 6_0 }; cvar; external;
-  MKLaunchOptionsMapSpanKey: NSString { unavailable in tvos } { available in 10_9, 6_0 }; cvar; external;
-  MKLaunchOptionsCameraKey: NSString { unavailable in tvos } { available in 10_10, 7_1 }; cvar; external;
+  MKLaunchOptionsDirectionsModeKey: NSString { unavailable in tvos } { available in macos 10.9, ios 6.0 }; cvar; external;
+  MKLaunchOptionsMapTypeKey: NSString { unavailable in tvos, watchos } { available in macos 10.9, ios 6.0 }; cvar; external;
+  MKLaunchOptionsShowsTrafficKey: NSString { unavailable in tvos, watchos } { available in macos 10.9, ios 6.0 }; cvar; external;
+  MKLaunchOptionsDirectionsModeDefault: NSString { unavailable in tvos } { available in macos 10.12, ios 10.0 }; cvar; external;
+  MKLaunchOptionsDirectionsModeDriving: NSString { unavailable in tvos } { available in macos 10.9, ios 6.0 }; cvar; external;
+  MKLaunchOptionsDirectionsModeWalking: NSString { unavailable in tvos } { available in macos 10.9, ios 6.0 }; cvar; external;
+  MKLaunchOptionsDirectionsModeTransit: NSString { unavailable in tvos } { available in macos 10.11, ios 9.0 }; cvar; external;
+  MKLaunchOptionsMapCenterKey: NSString { unavailable in tvos } { available in macos 10.9, ios 6.0 }; cvar; external;
+  MKLaunchOptionsMapSpanKey: NSString { unavailable in tvos } { available in macos 10.9, ios 6.0 }; cvar; external;
+  MKLaunchOptionsCameraKey: NSString { unavailable in tvos } { available in macos 10.10, ios 7.1 }; cvar; external;
 {$endif}
 
 {$ifdef CLASSES}
@@ -69,7 +69,7 @@ type
 
 {$ifdef EXTERNAL_SYMBOLS}
 var
-  MKMapItemTypeIdentifier: NSString { available in 10_13, 11_0 }; cvar; external;
+  MKMapItemTypeIdentifier: NSString { available in macos 10.13, ios 11.0 }; cvar; external;
 {$endif}
 
 {$if defined(TARGET_OS_IOS)}

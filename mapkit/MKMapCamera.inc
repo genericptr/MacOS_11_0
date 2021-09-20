@@ -23,7 +23,7 @@ type
     function altitude: CLLocationDistance; message 'altitude'; { unavailable in watchos }
     class function camera: id; message 'camera';
     class function cameraLookingAtCenterCoordinate_fromEyeCoordinate_eyeAltitude (centerCoordinate_: CLLocationCoordinate2D; eyeCoordinate: CLLocationCoordinate2D; eyeAltitude: CLLocationDistance): id; message 'cameraLookingAtCenterCoordinate:fromEyeCoordinate:eyeAltitude:';
-    class function cameraLookingAtCenterCoordinate_fromDistance_pitch_heading (centerCoordinate_: CLLocationCoordinate2D; distance: CLLocationDistance; pitch_: CGFloat; heading_: CLLocationDirection): id; message 'cameraLookingAtCenterCoordinate:fromDistance:pitch:heading:'; { available in 10_11, 9_0 }
+    class function cameraLookingAtCenterCoordinate_fromDistance_pitch_heading (centerCoordinate_: CLLocationCoordinate2D; distance: CLLocationDistance; pitch_: CGFloat; heading_: CLLocationDirection): id; message 'cameraLookingAtCenterCoordinate:fromDistance:pitch:heading:'; { available in macos 10.11, ios 9.0 }
 
     { Adopted protocols }
     function copyWithZone (zone: NSZonePtr): id; message 'copyWithZone:';

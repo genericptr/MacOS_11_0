@@ -14,7 +14,7 @@ type
     function boundingMapRect: MKMapRect; message 'boundingMapRect';
   optional
     function intersectsMapRect (mapRect: MKMapRect): objcbool; message 'intersectsMapRect:';
-    function canReplaceMapContent: objcbool; message 'canReplaceMapContent'; { available in 10_9, 7_0 }
+    function canReplaceMapContent: objcbool; message 'canReplaceMapContent'; { available in macos 10.9, ios 7.0 }
   end;
 {$endif}
 

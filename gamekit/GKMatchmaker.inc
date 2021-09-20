@@ -77,19 +77,19 @@ type
     function playerGroup: NSUInteger; message 'playerGroup';
     procedure setPlayerAttributes(newValue: cuint32); message 'setPlayerAttributes:';
     function playerAttributes: cuint32; message 'playerAttributes';
-    procedure setRecipients(newValue: NSArray); message 'setRecipients:'; { available in 10_10, 8_0 }
-    function recipients: NSArray; message 'recipients'; { available in 10_10, 8_0 }
-    procedure setInviteMessage(newValue: NSString); message 'setInviteMessage:'; { available in 10_8, 6_0 }
-    function inviteMessage: NSString; message 'inviteMessage'; { available in 10_8, 6_0 }
-    procedure setDefaultNumberOfPlayers(newValue: NSUInteger); message 'setDefaultNumberOfPlayers:'; { available in 10_8, 6_0 }
-    function defaultNumberOfPlayers: NSUInteger; message 'defaultNumberOfPlayers'; { available in 10_8, 6_0 }
+    procedure setRecipients(newValue: NSArray); message 'setRecipients:'; { available in macos 10.10, ios 8.0 }
+    function recipients: NSArray; message 'recipients'; { available in macos 10.10, ios 8.0 }
+    procedure setInviteMessage(newValue: NSString); message 'setInviteMessage:'; { available in macos 10.8, ios 6.0 }
+    function inviteMessage: NSString; message 'inviteMessage'; { available in macos 10.8, ios 6.0 }
+    procedure setDefaultNumberOfPlayers(newValue: NSUInteger); message 'setDefaultNumberOfPlayers:'; { available in macos 10.8, ios 6.0 }
+    function defaultNumberOfPlayers: NSUInteger; message 'defaultNumberOfPlayers'; { available in macos 10.8, ios 6.0 }
     procedure setRestrictToAutomatch(newValue: objcbool); message 'setRestrictToAutomatch:'; deprecated 'Set the matchmakingMode of GKMatchmakerViewController instead.';
     function restrictToAutomatch: objcbool; message 'restrictToAutomatch'; deprecated 'Set the matchmakingMode of GKMatchmakerViewController instead.';
-    procedure setRecipientResponseHandler(newValue: GKMatchmakerRecipientResponseHandlerCallback); message 'setRecipientResponseHandler:'; { available in 10_10, 8_0 }
-    function recipientResponseHandler: GKMatchmakerRecipientResponseHandlerCallback; message 'recipientResponseHandler'; { available in 10_10, 8_0 }
+    procedure setRecipientResponseHandler(newValue: GKMatchmakerRecipientResponseHandlerCallback); message 'setRecipientResponseHandler:'; { available in macos 10.10, ios 8.0 }
+    function recipientResponseHandler: GKMatchmakerRecipientResponseHandlerCallback; message 'recipientResponseHandler'; { available in macos 10.10, ios 8.0 }
     procedure setInviteeResponseHandler(newValue: GKMatchmakerInviteeResponseHandlerCallback); message 'setInviteeResponseHandler:'; deprecated 'in 10_9, 10_10, 6_0, 8_0, "use recipientResponseHandler"';
     function inviteeResponseHandler: GKMatchmakerInviteeResponseHandlerCallback; message 'inviteeResponseHandler'; deprecated 'in 10_9, 10_10, 6_0, 8_0, "use recipientResponseHandler"';
-    class function maxPlayersAllowedForMatchOfType (matchType: GKMatchType): NSUInteger; message 'maxPlayersAllowedForMatchOfType:'; { available in 10_9, 6_0 }
+    class function maxPlayersAllowedForMatchOfType (matchType: GKMatchType): NSUInteger; message 'maxPlayersAllowedForMatchOfType:'; { available in macos 10.9, ios 6.0 }
     procedure setPlayersToInvite(newValue: NSArray); message 'setPlayersToInvite:'; deprecated 'in 10_8, 10_10, 4_1, 8_0, "This property is obsolete, use recipients instead"';
     function playersToInvite: NSArray; message 'playersToInvite'; deprecated 'in 10_8, 10_10, 4_1, 8_0, "This property is obsolete, use recipients instead"';
   end;
@@ -97,10 +97,10 @@ type
 type
   GKInvite = objcclass external (NSObject)
   public
-    function sender: GKPlayer; message 'sender'; { available in 10_10, 8_0 }
+    function sender: GKPlayer; message 'sender'; { available in macos 10.10, ios 8.0 }
     function isHosted: objcbool; message 'isHosted';
-    function playerGroup: NSUInteger; message 'playerGroup'; { available in 10_9, 6_0 }
-    function playerAttributes: cuint32; message 'playerAttributes'; { available in 10_9, 6_0 }
+    function playerGroup: NSUInteger; message 'playerGroup'; { available in macos 10.9, ios 6.0 }
+    function playerAttributes: cuint32; message 'playerAttributes'; { available in macos 10.9, ios 6.0 }
     function inviter: NSString; message 'inviter'; deprecated 'in 10_8, 10_10, 4_1, 8_0, "This property is obsolete, use sender instead"';
   end;
 {$endif}
@@ -110,8 +110,8 @@ type
 type
   GKInviteEventListenerProtocol = objcprotocol external name 'GKInviteEventListener'
   optional
-    procedure player_didAcceptInvite (player: GKPlayer; invite: GKInvite); message 'player:didAcceptInvite:'; { available in 10_10, 7_0 }
-    procedure player_didRequestMatchWithRecipients (player: GKPlayer; recipientPlayers: NSArray); message 'player:didRequestMatchWithRecipients:'; { available in 10_10, 8_0 }
+    procedure player_didAcceptInvite (player: GKPlayer; invite: GKInvite); message 'player:didAcceptInvite:'; { available in macos 10.10, ios 7.0 }
+    procedure player_didRequestMatchWithRecipients (player: GKPlayer; recipientPlayers: NSArray); message 'player:didRequestMatchWithRecipients:'; { available in macos 10.10, ios 8.0 }
     procedure player_didRequestMatchWithPlayers (player: GKPlayer; playerIDsToInvite: NSArray); message 'player:didRequestMatchWithPlayers:'; deprecated 'in 7_0, 8_0, "This method is obsolete.  It will never be invoked its implementation does nothing, use player:didRequestMatchWithRecipients:"';
   end;
 {$endif}
@@ -122,17 +122,17 @@ type
   GKMatchmaker = objcclass external (NSObject)
   public
     class function sharedMatchmaker: GKMatchmaker; message 'sharedMatchmaker';
-    procedure matchForInvite_completionHandler (invite: GKInvite; completionHandler: GKMatchmakerMatchForInviteCallback); message 'matchForInvite:completionHandler:'; { available in 10_9, 6_0 }
+    procedure matchForInvite_completionHandler (invite: GKInvite; completionHandler: GKMatchmakerMatchForInviteCallback); message 'matchForInvite:completionHandler:'; { available in macos 10.9, ios 6.0 }
     procedure findMatchForRequest_withCompletionHandler (request: GKMatchRequest; completionHandler: GKMatchmakerFindMatchForRequestCallback); message 'findMatchForRequest:withCompletionHandler:';
-    procedure findPlayersForHostedRequest_withCompletionHandler (request: GKMatchRequest; completionHandler: GKMatchmakerFindPlayersForHostedRequestCallback); message 'findPlayersForHostedRequest:withCompletionHandler:'; { available in 10_10, 8_0 }
+    procedure findPlayersForHostedRequest_withCompletionHandler (request: GKMatchRequest; completionHandler: GKMatchmakerFindPlayersForHostedRequestCallback); message 'findPlayersForHostedRequest:withCompletionHandler:'; { available in macos 10.10, ios 8.0 }
     procedure addPlayersToMatch_matchRequest_completionHandler (match: GKMatch; matchRequest: GKMatchRequest; completionHandler: GKMatchmakerAddPlayersToMatchCallback); message 'addPlayersToMatch:matchRequest:completionHandler:';
     procedure cancel; message 'cancel';
-    procedure cancelPendingInviteToPlayer (player: GKPlayer); message 'cancelPendingInviteToPlayer:'; { available in 10_10, 8_0 }
-    procedure finishMatchmakingForMatch (match: GKMatch); message 'finishMatchmakingForMatch:'; { available in 10_9, 6_0 }
+    procedure cancelPendingInviteToPlayer (player: GKPlayer); message 'cancelPendingInviteToPlayer:'; { available in macos 10.10, ios 8.0 }
+    procedure finishMatchmakingForMatch (match: GKMatch); message 'finishMatchmakingForMatch:'; { available in macos 10.9, ios 6.0 }
     procedure queryPlayerGroupActivity_withCompletionHandler (playerGroup: NSUInteger; completionHandler: GKMatchmakerQueryPlayerGroupActivityCallback); message 'queryPlayerGroupActivity:withCompletionHandler:';
     procedure queryActivityWithCompletionHandler (completionHandler: GKMatchmakerQueryActivityWithCompletionHandlerCallback); message 'queryActivityWithCompletionHandler:';
-    procedure startBrowsingForNearbyPlayersWithHandler (reachableHandler: GKMatchmakerStartBrowsingForNearbyPlayersWithHandlerCallback); message 'startBrowsingForNearbyPlayersWithHandler:'; { available in 10_10, 8_0 }
-    procedure stopBrowsingForNearbyPlayers; message 'stopBrowsingForNearbyPlayers'; { available in 10_9, 6_0 }
+    procedure startBrowsingForNearbyPlayersWithHandler (reachableHandler: GKMatchmakerStartBrowsingForNearbyPlayersWithHandlerCallback); message 'startBrowsingForNearbyPlayersWithHandler:'; { available in macos 10.10, ios 8.0 }
+    procedure stopBrowsingForNearbyPlayers; message 'stopBrowsingForNearbyPlayers'; { available in macos 10.9, ios 6.0 }
   end;
 
 

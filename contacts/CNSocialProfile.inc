@@ -28,18 +28,18 @@ type
 
 {$ifdef EXTERNAL_SYMBOLS}
 var
-  CNSocialProfileURLStringKey: NSString { available in 10_11, 9_0 }; cvar; external;
-  CNSocialProfileUsernameKey: NSString { available in 10_11, 9_0 }; cvar; external;
-  CNSocialProfileUserIdentifierKey: NSString { available in 10_11, 9_0 }; cvar; external;
-  CNSocialProfileServiceKey: NSString { available in 10_11, 9_0 }; cvar; external;
-  CNSocialProfileServiceFacebook: NSString { available in 10_11, 9_0 }; cvar; external;
-  CNSocialProfileServiceFlickr: NSString { available in 10_11, 9_0 }; cvar; external;
-  CNSocialProfileServiceLinkedIn: NSString { available in 10_11, 9_0 }; cvar; external;
-  CNSocialProfileServiceMySpace: NSString { available in 10_11, 9_0 }; cvar; external;
-  CNSocialProfileServiceSinaWeibo: NSString { available in 10_11, 9_0 }; cvar; external;
-  CNSocialProfileServiceTencentWeibo: NSString { available in 10_11, 9_0 }; cvar; external;
-  CNSocialProfileServiceTwitter: NSString { available in 10_11, 9_0 }; cvar; external;
-  CNSocialProfileServiceYelp: NSString { available in 10_11, 9_0 }; cvar; external;
-  CNSocialProfileServiceGameCenter: NSString { available in 10_11, 9_0 }; cvar; external;
+  CNSocialProfileURLStringKey: NSString { available in macos 10.11, ios 9.0 }; cvar; external;
+  CNSocialProfileUsernameKey: NSString { available in macos 10.11, ios 9.0 }; cvar; external;
+  CNSocialProfileUserIdentifierKey: NSString { available in macos 10.11, ios 9.0 }; cvar; external;
+  CNSocialProfileServiceKey: NSString { available in macos 10.11, ios 9.0 }; cvar; external;
+  CNSocialProfileServiceFacebook: NSString { available in macos 10.11, ios 9.0 }; cvar; external;
+  CNSocialProfileServiceFlickr: NSString { available in macos 10.11, ios 9.0 }; cvar; external;
+  CNSocialProfileServiceLinkedIn: NSString { available in macos 10.11, ios 9.0 }; cvar; external;
+  CNSocialProfileServiceMySpace: NSString { available in macos 10.11, ios 9.0 }; cvar; external;
+  CNSocialProfileServiceSinaWeibo: NSString { available in macos 10.11, ios 9.0 }; cvar; external;
+  CNSocialProfileServiceTencentWeibo: NSString { available in macos 10.11, ios 9.0 }; cvar; external;
+  CNSocialProfileServiceTwitter: NSString { available in macos 10.11, ios 9.0 }; cvar; external;
+  CNSocialProfileServiceYelp: NSString { available in macos 10.11, ios 9.0 }; cvar; external;
+  CNSocialProfileServiceGameCenter: NSString { available in macos 10.11, ios 9.0 }; cvar; external;
 {$endif}
 

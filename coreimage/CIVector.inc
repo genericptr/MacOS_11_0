@@ -22,18 +22,18 @@ type
     class function vectorWithX_Y (x: CGFloat; y: CGFloat): id; message 'vectorWithX:Y:';
     class function vectorWithX_Y_Z (x: CGFloat; y: CGFloat; z: CGFloat): id; message 'vectorWithX:Y:Z:';
     class function vectorWithX_Y_Z_W (x: CGFloat; y: CGFloat; z: CGFloat; w: CGFloat): id; message 'vectorWithX:Y:Z:W:';
-    class function vectorWithCGPoint (p: CGPoint): id; message 'vectorWithCGPoint:'; { available in 10_9, 5_0 }
-    class function vectorWithCGRect (r: CGRect): id; message 'vectorWithCGRect:'; { available in 10_9, 5_0 }
-    class function vectorWithCGAffineTransform (t: CGAffineTransform): id; message 'vectorWithCGAffineTransform:'; { available in 10_9, 5_0 }
+    class function vectorWithCGPoint (p: CGPoint): id; message 'vectorWithCGPoint:'; { available in macos 10.9, ios 5.0 }
+    class function vectorWithCGRect (r: CGRect): id; message 'vectorWithCGRect:'; { available in macos 10.9, ios 5.0 }
+    class function vectorWithCGAffineTransform (t: CGAffineTransform): id; message 'vectorWithCGAffineTransform:'; { available in macos 10.9, ios 5.0 }
     class function vectorWithString (representation: NSString): id; message 'vectorWithString:';
     function initWithValues_count (values: CGFloatPtr; count: size_t): id; message 'initWithValues:count:'; { NS_DESIGNATED_INITIALIZER }
     function initWithX (x: CGFloat): id; message 'initWithX:';
     function initWithX_Y (x: CGFloat; y: CGFloat): id; message 'initWithX:Y:';
     function initWithX_Y_Z (x: CGFloat; y: CGFloat; z: CGFloat): id; message 'initWithX:Y:Z:';
     function initWithX_Y_Z_W (x: CGFloat; y: CGFloat; z: CGFloat; w: CGFloat): id; message 'initWithX:Y:Z:W:';
-    function initWithCGPoint (p: CGPoint): id; message 'initWithCGPoint:'; { available in 10_9, 5_0 }
-    function initWithCGRect (r: CGRect): id; message 'initWithCGRect:'; { available in 10_9, 5_0 }
-    function initWithCGAffineTransform (r: CGAffineTransform): id; message 'initWithCGAffineTransform:'; { available in 10_9, 5_0 }
+    function initWithCGPoint (p: CGPoint): id; message 'initWithCGPoint:'; { available in macos 10.9, ios 5.0 }
+    function initWithCGRect (r: CGRect): id; message 'initWithCGRect:'; { available in macos 10.9, ios 5.0 }
+    function initWithCGAffineTransform (r: CGAffineTransform): id; message 'initWithCGAffineTransform:'; { available in macos 10.9, ios 5.0 }
     function initWithString (representation: NSString): id; message 'initWithString:';
     function valueAtIndex (index: size_t): CGFloat; message 'valueAtIndex:';
     function count: size_t; message 'count';
@@ -41,9 +41,9 @@ type
     function Y: CGFloat; message 'Y';
     function Z: CGFloat; message 'Z';
     function W: CGFloat; message 'W';
-    function CGPointValue: CGPoint; message 'CGPointValue'; { available in 10_9, 5_0 }
-    function CGRectValue: CGRect; message 'CGRectValue'; { available in 10_9, 5_0 }
-    function CGAffineTransformValue: CGAffineTransform; message 'CGAffineTransformValue'; { available in 10_9, 5_0 }
+    function CGPointValue: CGPoint; message 'CGPointValue'; { available in macos 10.9, ios 5.0 }
+    function CGRectValue: CGRect; message 'CGRectValue'; { available in macos 10.9, ios 5.0 }
+    function CGAffineTransformValue: CGAffineTransform; message 'CGAffineTransformValue'; { available in macos 10.9, ios 5.0 }
     function stringRepresentation: NSString; message 'stringRepresentation';
 
     { Adopted protocols }

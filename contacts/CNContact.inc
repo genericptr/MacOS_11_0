@@ -58,11 +58,11 @@ type
     function phoneticGivenName: NSString; message 'phoneticGivenName';
     function phoneticMiddleName: NSString; message 'phoneticMiddleName';
     function phoneticFamilyName: NSString; message 'phoneticFamilyName';
-    function phoneticOrganizationName: NSString; message 'phoneticOrganizationName'; { available in 10_12, 10_0 }
+    function phoneticOrganizationName: NSString; message 'phoneticOrganizationName'; { available in macos 10.12, ios 10.0 }
     function note: NSString; message 'note';
     function imageData: NSData; message 'imageData';
     function thumbnailImageData: NSData; message 'thumbnailImageData';
-    function imageDataAvailable: objcbool; message 'imageDataAvailable'; { available in 10_12, 9_0 }
+    function imageDataAvailable: objcbool; message 'imageDataAvailable'; { available in macos 10.12, ios 9.0 }
     function phoneNumbers: NSArray; message 'phoneNumbers';
     function emailAddresses: NSArray; message 'emailAddresses';
     function postalAddresses: NSArray; message 'postalAddresses';
@@ -92,35 +92,35 @@ type
 {$ifdef EXTERNAL_SYMBOLS}
 var
   CNContactPropertyNotFetchedExceptionName: NSString; cvar; external;
-  CNContactIdentifierKey: NSString { available in 10_11, 9_0 }; cvar; external;
-  CNContactNamePrefixKey: NSString { available in 10_11, 9_0 }; cvar; external;
-  CNContactGivenNameKey: NSString { available in 10_11, 9_0 }; cvar; external;
-  CNContactMiddleNameKey: NSString { available in 10_11, 9_0 }; cvar; external;
-  CNContactFamilyNameKey: NSString { available in 10_11, 9_0 }; cvar; external;
-  CNContactPreviousFamilyNameKey: NSString { available in 10_11, 9_0 }; cvar; external;
-  CNContactNameSuffixKey: NSString { available in 10_11, 9_0 }; cvar; external;
-  CNContactNicknameKey: NSString { available in 10_11, 9_0 }; cvar; external;
-  CNContactOrganizationNameKey: NSString { available in 10_11, 9_0 }; cvar; external;
-  CNContactDepartmentNameKey: NSString { available in 10_11, 9_0 }; cvar; external;
-  CNContactJobTitleKey: NSString { available in 10_11, 9_0 }; cvar; external;
-  CNContactPhoneticGivenNameKey: NSString { available in 10_11, 9_0 }; cvar; external;
-  CNContactPhoneticMiddleNameKey: NSString { available in 10_11, 9_0 }; cvar; external;
-  CNContactPhoneticFamilyNameKey: NSString { available in 10_11, 9_0 }; cvar; external;
-  CNContactPhoneticOrganizationNameKey: NSString { available in 10_12, 10_0 }; cvar; external;
-  CNContactBirthdayKey: NSString { available in 10_11, 9_0 }; cvar; external;
-  CNContactNonGregorianBirthdayKey: NSString { available in 10_11, 9_0 }; cvar; external;
-  CNContactNoteKey: NSString { available in 10_11, 9_0 }; cvar; external;
-  CNContactImageDataKey: NSString { available in 10_11, 9_0 }; cvar; external;
-  CNContactThumbnailImageDataKey: NSString { available in 10_11, 9_0 }; cvar; external;
-  CNContactImageDataAvailableKey: NSString { available in 10_12, 9_0 }; cvar; external;
-  CNContactTypeKey: NSString { available in 10_11, 9_0 }; cvar; external;
-  CNContactPhoneNumbersKey: NSString { available in 10_11, 9_0 }; cvar; external;
-  CNContactEmailAddressesKey: NSString { available in 10_11, 9_0 }; cvar; external;
-  CNContactPostalAddressesKey: NSString { available in 10_11, 9_0 }; cvar; external;
-  CNContactDatesKey: NSString { available in 10_11, 9_0 }; cvar; external;
-  CNContactUrlAddressesKey: NSString { available in 10_11, 9_0 }; cvar; external;
-  CNContactRelationsKey: NSString { available in 10_11, 9_0 }; cvar; external;
-  CNContactSocialProfilesKey: NSString { available in 10_11, 9_0 }; cvar; external;
-  CNContactInstantMessageAddressesKey: NSString { available in 10_11, 9_0 }; cvar; external;
+  CNContactIdentifierKey: NSString { available in macos 10.11, ios 9.0 }; cvar; external;
+  CNContactNamePrefixKey: NSString { available in macos 10.11, ios 9.0 }; cvar; external;
+  CNContactGivenNameKey: NSString { available in macos 10.11, ios 9.0 }; cvar; external;
+  CNContactMiddleNameKey: NSString { available in macos 10.11, ios 9.0 }; cvar; external;
+  CNContactFamilyNameKey: NSString { available in macos 10.11, ios 9.0 }; cvar; external;
+  CNContactPreviousFamilyNameKey: NSString { available in macos 10.11, ios 9.0 }; cvar; external;
+  CNContactNameSuffixKey: NSString { available in macos 10.11, ios 9.0 }; cvar; external;
+  CNContactNicknameKey: NSString { available in macos 10.11, ios 9.0 }; cvar; external;
+  CNContactOrganizationNameKey: NSString { available in macos 10.11, ios 9.0 }; cvar; external;
+  CNContactDepartmentNameKey: NSString { available in macos 10.11, ios 9.0 }; cvar; external;
+  CNContactJobTitleKey: NSString { available in macos 10.11, ios 9.0 }; cvar; external;
+  CNContactPhoneticGivenNameKey: NSString { available in macos 10.11, ios 9.0 }; cvar; external;
+  CNContactPhoneticMiddleNameKey: NSString { available in macos 10.11, ios 9.0 }; cvar; external;
+  CNContactPhoneticFamilyNameKey: NSString { available in macos 10.11, ios 9.0 }; cvar; external;
+  CNContactPhoneticOrganizationNameKey: NSString { available in macos 10.12, ios 10.0 }; cvar; external;
+  CNContactBirthdayKey: NSString { available in macos 10.11, ios 9.0 }; cvar; external;
+  CNContactNonGregorianBirthdayKey: NSString { available in macos 10.11, ios 9.0 }; cvar; external;
+  CNContactNoteKey: NSString { available in macos 10.11, ios 9.0 }; cvar; external;
+  CNContactImageDataKey: NSString { available in macos 10.11, ios 9.0 }; cvar; external;
+  CNContactThumbnailImageDataKey: NSString { available in macos 10.11, ios 9.0 }; cvar; external;
+  CNContactImageDataAvailableKey: NSString { available in macos 10.12, ios 9.0 }; cvar; external;
+  CNContactTypeKey: NSString { available in macos 10.11, ios 9.0 }; cvar; external;
+  CNContactPhoneNumbersKey: NSString { available in macos 10.11, ios 9.0 }; cvar; external;
+  CNContactEmailAddressesKey: NSString { available in macos 10.11, ios 9.0 }; cvar; external;
+  CNContactPostalAddressesKey: NSString { available in macos 10.11, ios 9.0 }; cvar; external;
+  CNContactDatesKey: NSString { available in macos 10.11, ios 9.0 }; cvar; external;
+  CNContactUrlAddressesKey: NSString { available in macos 10.11, ios 9.0 }; cvar; external;
+  CNContactRelationsKey: NSString { available in macos 10.11, ios 9.0 }; cvar; external;
+  CNContactSocialProfilesKey: NSString { available in macos 10.11, ios 9.0 }; cvar; external;
+  CNContactInstantMessageAddressesKey: NSString { available in macos 10.11, ios 9.0 }; cvar; external;
 {$endif}
 

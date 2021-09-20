@@ -11,9 +11,9 @@ type
 
 {$ifdef EXTERNAL_SYMBOLS}
 var
-  NSTypeIdentifierDateText: NSString { available in 10_10, 8_0 }; cvar; external;
-  NSTypeIdentifierAddressText: NSString { available in 10_10, 8_0 }; cvar; external;
-  NSTypeIdentifierPhoneNumberText: NSString { available in 10_10, 8_0 }; cvar; external;
-  NSTypeIdentifierTransitInformationText: NSString { available in 10_10, 8_0 }; cvar; external;
+  NSTypeIdentifierDateText: NSString { available in macos 10.10, ios 8.0 }; cvar; external;
+  NSTypeIdentifierAddressText: NSString { available in macos 10.10, ios 8.0 }; cvar; external;
+  NSTypeIdentifierPhoneNumberText: NSString { available in macos 10.10, ios 8.0 }; cvar; external;
+  NSTypeIdentifierTransitInformationText: NSString { available in macos 10.10, ios 8.0 }; cvar; external;
 {$endif}
 

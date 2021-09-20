@@ -20,8 +20,8 @@ const
   CBCharacteristicPropertyIndicate = $20;
   CBCharacteristicPropertyAuthenticatedSignedWrites = $40;
   CBCharacteristicPropertyExtendedProperties = $80;
-  CBCharacteristicPropertyNotifyEncryptionRequired = $100 { available in 10_9, 6_0 };
-  CBCharacteristicPropertyIndicateEncryptionRequired = $200 { available in 10_9, 6_0 };
+  CBCharacteristicPropertyNotifyEncryptionRequired = $100 { available in macos 10.9, ios 6.0 };
+  CBCharacteristicPropertyIndicateEncryptionRequired = $200 { available in macos 10.9, ios 6.0 };
 {$endif}
 
 {$ifdef CLASSES}
@@ -57,7 +57,7 @@ type
   public
     procedure setPermissions(newValue: CBAttributePermissions); message 'setPermissions:';
     function permissions: CBAttributePermissions; message 'permissions';
-    function subscribedCentrals: NSArray; message 'subscribedCentrals'; { available in 10_9, 7_0 }
+    function subscribedCentrals: NSArray; message 'subscribedCentrals'; { available in macos 10.9, ios 7.0 }
     procedure setProperties(newValue: CBCharacteristicProperties); message 'setProperties:';
     function properties: CBCharacteristicProperties; message 'properties';
     procedure setValue(newValue: NSData); message 'setValue:';

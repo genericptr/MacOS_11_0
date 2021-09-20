@@ -36,8 +36,8 @@ type
 
 {$ifdef EXTERNAL_SYMBOLS}
 var
-  CNContainerIdentifierKey: NSString { available in 10_11, 9_0 }; cvar; external;
-  CNContainerNameKey: NSString { available in 10_11, 9_0 }; cvar; external;
-  CNContainerTypeKey: NSString { available in 10_11, 9_0 }; cvar; external;
+  CNContainerIdentifierKey: NSString { available in macos 10.11, ios 9.0 }; cvar; external;
+  CNContainerNameKey: NSString { available in macos 10.11, ios 9.0 }; cvar; external;
+  CNContainerTypeKey: NSString { available in macos 10.11, ios 9.0 }; cvar; external;
 {$endif}
 

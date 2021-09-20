@@ -41,9 +41,9 @@ type
     class function outputFormat: CIFormat; message 'outputFormat';
     {$endif}
     {$if defined(__has_feature)}
-    class function outputIsOpaque: cbool; message 'outputIsOpaque'; { available in 10_13, 11_0 }
+    class function outputIsOpaque: cbool; message 'outputIsOpaque'; { available in macos 10.13, ios 11.0 }
     {$else}
-    class function outputIsOpaque: cbool; message 'outputIsOpaque'; { available in 10_13, 11_0 }
+    class function outputIsOpaque: cbool; message 'outputIsOpaque'; { available in macos 10.13, ios 11.0 }
     {$endif}
     {$if defined(__has_feature)}
     class function synchronizeInputs: cbool; message 'synchronizeInputs';

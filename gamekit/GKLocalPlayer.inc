@@ -55,9 +55,9 @@ type
     {$endif}
     procedure loadRecentPlayersWithCompletionHandler (completionHandler: GKLocalPlayerLoadRecentPlayersWithCompletionHandlerCallback); message 'loadRecentPlayersWithCompletionHandler:'; { available in 3_0 }
     procedure loadChallengableFriendsWithCompletionHandler (completionHandler: GKLocalPlayerLoadChallengableFriendsWithCompletionHandlerCallback); message 'loadChallengableFriendsWithCompletionHandler:';
-    procedure setDefaultLeaderboardIdentifier_completionHandler (leaderboardIdentifier: NSString; completionHandler: GKLocalPlayerSetDefaultLeaderboardIdentifierCallback); message 'setDefaultLeaderboardIdentifier:completionHandler:'; { available in 10_11, 10_0 } { available in 3_0 }
-    procedure loadDefaultLeaderboardIdentifierWithCompletionHandler (completionHandler: GKLocalPlayerLoadDefaultLeaderboardIdentifierWithCompletionHandlerCallback); message 'loadDefaultLeaderboardIdentifierWithCompletionHandler:'; { available in 10_10, 7_0 }
-    procedure fetchItemsForIdentityVerificationSignature (completionHandler: GKLocalPlayerFetchItemsForIdentityVerificationSignatureCallback); message 'fetchItemsForIdentityVerificationSignature:'; { available in 10_10, 7_0 } { available in 3_0 }
+    procedure setDefaultLeaderboardIdentifier_completionHandler (leaderboardIdentifier: NSString; completionHandler: GKLocalPlayerSetDefaultLeaderboardIdentifierCallback); message 'setDefaultLeaderboardIdentifier:completionHandler:'; { available in macos 10.11, ios 10.0 } { available in 3_0 }
+    procedure loadDefaultLeaderboardIdentifierWithCompletionHandler (completionHandler: GKLocalPlayerLoadDefaultLeaderboardIdentifierWithCompletionHandlerCallback); message 'loadDefaultLeaderboardIdentifierWithCompletionHandler:'; { available in macos 10.10, ios 7.0 }
+    procedure fetchItemsForIdentityVerificationSignature (completionHandler: GKLocalPlayerFetchItemsForIdentityVerificationSignatureCallback); message 'fetchItemsForIdentityVerificationSignature:'; { available in macos 10.10, ios 7.0 } { available in 3_0 }
   end;
 {$endif}
 
@@ -90,15 +90,15 @@ type
 
 type
   GKLocalPlayerEvents = objccategory external (GKLocalPlayer)
-    procedure registerListener (listener: id); message 'registerListener:'; { available in 10_10, 7_0 }
-    procedure unregisterListener (listener: id); message 'unregisterListener:'; { available in 10_10, 7_0 }
-    procedure unregisterAllListeners; message 'unregisterAllListeners'; { available in 10_10, 7_0 } { available in 3_0 }
+    procedure registerListener (listener: id); message 'registerListener:'; { available in macos 10.10, ios 7.0 }
+    procedure unregisterListener (listener: id); message 'unregisterListener:'; { available in macos 10.10, ios 7.0 }
+    procedure unregisterAllListeners; message 'unregisterAllListeners'; { available in macos 10.10, ios 7.0 } { available in 3_0 }
   end;
 {$endif}
 
 {$ifdef EXTERNAL_SYMBOLS}
 var
-  GKPlayerAuthenticationDidChangeNotificationName: NSNotificationName { available in 10_8, 4_1 }; cvar; external;
+  GKPlayerAuthenticationDidChangeNotificationName: NSNotificationName { available in macos 10.8, ios 4.1 }; cvar; external;
 {$endif}
 
 {$ifdef CLASSES}

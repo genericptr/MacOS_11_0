@@ -29,7 +29,7 @@ type
   GKFriendRequestComposeViewControllerCategory = objccategory external (GKFriendRequestComposeViewController)
     class function maxNumberOfRecipients: NSUInteger; message 'maxNumberOfRecipients';
     procedure setMessage (message_: NSString); message 'setMessage:';
-    procedure addRecipientPlayers (players: NSArray); message 'addRecipientPlayers:'; { available in 10_10, 8_0 }
+    procedure addRecipientPlayers (players: NSArray); message 'addRecipientPlayers:'; { available in macos 10.10, ios 8.0 }
     procedure addRecipientsWithPlayerIDs (playerIDs: NSArray); message 'addRecipientsWithPlayerIDs:'; deprecated 'in 10_8, 10_10, 4_2, 8_0, "use addRecipientPlayers:"';
     procedure addRecipientsWithEmailAddresses (emailAddresses: NSArray); message 'addRecipientsWithEmailAddresses:';
     procedure setComposeViewDelegate(newValue: id); message 'setComposeViewDelegate:'; deprecated 'in 10_8, 10_12, 4_2, 10_0';

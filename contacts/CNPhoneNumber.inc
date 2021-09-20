@@ -26,13 +26,13 @@ type
 
 {$ifdef EXTERNAL_SYMBOLS}
 var
-  CNLabelPhoneNumberiPhone: NSString { available in 10_11, 9_0 }; cvar; external;
+  CNLabelPhoneNumberiPhone: NSString { available in macos 10.11, ios 9.0 }; cvar; external;
   CNLabelPhoneNumberAppleWatch: NSString { available in macos 11.1, ios 14.3, watchos 7.2 }; cvar; external;
-  CNLabelPhoneNumberMobile: NSString { available in 10_11, 9_0 }; cvar; external;
-  CNLabelPhoneNumberMain: NSString { available in 10_11, 9_0 }; cvar; external;
-  CNLabelPhoneNumberHomeFax: NSString { available in 10_11, 9_0 }; cvar; external;
-  CNLabelPhoneNumberWorkFax: NSString { available in 10_11, 9_0 }; cvar; external;
-  CNLabelPhoneNumberOtherFax: NSString { available in 10_11, 9_0 }; cvar; external;
-  CNLabelPhoneNumberPager: NSString { available in 10_11, 9_0 }; cvar; external;
+  CNLabelPhoneNumberMobile: NSString { available in macos 10.11, ios 9.0 }; cvar; external;
+  CNLabelPhoneNumberMain: NSString { available in macos 10.11, ios 9.0 }; cvar; external;
+  CNLabelPhoneNumberHomeFax: NSString { available in macos 10.11, ios 9.0 }; cvar; external;
+  CNLabelPhoneNumberWorkFax: NSString { available in macos 10.11, ios 9.0 }; cvar; external;
+  CNLabelPhoneNumberOtherFax: NSString { available in macos 10.11, ios 9.0 }; cvar; external;
+  CNLabelPhoneNumberPager: NSString { available in macos 10.11, ios 9.0 }; cvar; external;
 {$endif}
 

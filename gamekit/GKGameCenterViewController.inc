@@ -60,7 +60,7 @@ type
 
 type
   GKGameCenterControllerDelegateProtocol = objcprotocol external name 'GKGameCenterControllerDelegate' (NSObjectProtocol)
-    procedure gameCenterViewControllerDidFinish (gameCenterViewController: GKGameCenterViewController); message 'gameCenterViewControllerDidFinish:'; { available in 10_9, 6_0 }
+    procedure gameCenterViewControllerDidFinish (gameCenterViewController: GKGameCenterViewController); message 'gameCenterViewControllerDidFinish:'; { available in macos 10.9, ios 6.0 }
   end;
 {$endif}
 

@@ -13,9 +13,9 @@ type
     _state: pointer;
   public
     class function imageAccumulatorWithExtent_format (extent: CGRect; format: CIFormat): id; message 'imageAccumulatorWithExtent:format:';
-    class function imageAccumulatorWithExtent_format_colorSpace (extent: CGRect; format: CIFormat; colorSpace: CGColorSpaceRef): id; message 'imageAccumulatorWithExtent:format:colorSpace:'; { available in 10_7, 9_0 }
+    class function imageAccumulatorWithExtent_format_colorSpace (extent: CGRect; format: CIFormat; colorSpace: CGColorSpaceRef): id; message 'imageAccumulatorWithExtent:format:colorSpace:'; { available in macos 10.7, ios 9.0 }
     function initWithExtent_format (extent: CGRect; format: CIFormat): id; message 'initWithExtent:format:';
-    function initWithExtent_format_colorSpace (extent: CGRect; format: CIFormat; colorSpace: CGColorSpaceRef): id; message 'initWithExtent:format:colorSpace:'; { available in 10_7, 9_0 }
+    function initWithExtent_format_colorSpace (extent: CGRect; format: CIFormat; colorSpace: CGColorSpaceRef): id; message 'initWithExtent:format:colorSpace:'; { available in macos 10.7, ios 9.0 }
     function extent: CGRect; message 'extent';
     function format: CIFormat; message 'format';
     function image: CIImage; message 'image';

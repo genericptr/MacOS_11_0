@@ -28,6 +28,6 @@ const
 
 {$ifdef EXTERNAL_SYMBOLS}
 var
-  kCLErrorUserInfoAlternateRegionKey: NSString { unavailable in watchos, tvos } { available in 10_7, 5_0 }; cvar; external;
+  kCLErrorUserInfoAlternateRegionKey: NSString { unavailable in watchos, tvos } { available in macos 10.7, ios 5.0 }; cvar; external;
 {$endif}
 

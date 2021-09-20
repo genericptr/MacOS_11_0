@@ -22,17 +22,17 @@ type
     class procedure loadAchievementsWithCompletionHandler (completionHandler: GKAchievementLoadAchievementsWithCompletionHandlerCallback); message 'loadAchievementsWithCompletionHandler:';
     class procedure resetAchievementsWithCompletionHandler (completionHandler: GKAchievementResetAchievementsWithCompletionHandlerCallback); message 'resetAchievementsWithCompletionHandler:';
     function initWithIdentifier (identifier: NSString): id; message 'initWithIdentifier:';
-    function initWithIdentifier_player (identifier: NSString; player: GKPlayer): id; message 'initWithIdentifier:player:'; { available in 10_10, 8_0 }
-    class procedure reportAchievements_withCompletionHandler (achievements: NSArray; completionHandler: GKAchievementReportAchievementsCallback); message 'reportAchievements:withCompletionHandler:'; { available in 10_8, 6_0 }
+    function initWithIdentifier_player (identifier: NSString; player: GKPlayer): id; message 'initWithIdentifier:player:'; { available in macos 10.10, ios 8.0 }
+    class procedure reportAchievements_withCompletionHandler (achievements: NSArray; completionHandler: GKAchievementReportAchievementsCallback); message 'reportAchievements:withCompletionHandler:'; { available in macos 10.8, ios 6.0 }
     procedure setIdentifier(newValue: NSString); message 'setIdentifier:';
     function identifier: NSString; message 'identifier';
     procedure setPercentComplete(newValue: double); message 'setPercentComplete:';
     function percentComplete: double; message 'percentComplete';
     function isCompleted: objcbool; message 'isCompleted';
     function lastReportedDate: NSDate; message 'lastReportedDate';
-    procedure setShowsCompletionBanner(newValue: objcbool); message 'setShowsCompletionBanner:'; { available in 10_8, 5_0 }
-    function showsCompletionBanner: objcbool; message 'showsCompletionBanner'; { available in 10_8, 5_0 }
-    function player: GKPlayer; message 'player'; { available in 10_10, 8_0 }
+    procedure setShowsCompletionBanner(newValue: objcbool); message 'setShowsCompletionBanner:'; { available in macos 10.8, ios 5.0 }
+    function showsCompletionBanner: objcbool; message 'showsCompletionBanner'; { available in macos 10.8, ios 5.0 }
+    function player: GKPlayer; message 'player'; { available in macos 10.10, ios 8.0 }
 
     { Adopted protocols }
     procedure encodeWithCoder (coder: NSCoder); message 'encodeWithCoder:';

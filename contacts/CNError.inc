@@ -1,7 +1,7 @@
 { Parsed from Contacts.framework CNError.h }
 {$ifdef EXTERNAL_SYMBOLS}
 var
-  CNErrorDomain: NSString { available in 10_11, 9_0 }; cvar; external;
+  CNErrorDomain: NSString { available in macos 10.11, ios 9.0 }; cvar; external;
 {$endif}
 
 {$ifdef TYPES}
@@ -34,15 +34,15 @@ const
   CNErrorCodeClientIdentifierCollision = 602;
   CNErrorCodeChangeHistoryExpired = 603;
   CNErrorCodeChangeHistoryInvalidAnchor = 604;
-  CNErrorCodeVCardMalformed = 700 { available in 10_13, 11_0 };
-  CNErrorCodeVCardSummarizationError = 701 { available in 10_14, 12_0 };
+  CNErrorCodeVCardMalformed = 700 { available in macos 10.13, ios 11.0 };
+  CNErrorCodeVCardSummarizationError = 701 { available in macos 10.14, ios 12.0 };
 {$endif}
 
 {$ifdef EXTERNAL_SYMBOLS}
 var
-  CNErrorUserInfoAffectedRecordsKey: NSString { available in 10_11, 9_0 }; cvar; external;
-  CNErrorUserInfoAffectedRecordIdentifiersKey: NSString { available in 10_11, 9_0 }; cvar; external;
-  CNErrorUserInfoValidationErrorsKey: NSString { available in 10_11, 9_0 }; cvar; external;
-  CNErrorUserInfoKeyPathsKey: NSString { available in 10_11, 9_0 }; cvar; external;
+  CNErrorUserInfoAffectedRecordsKey: NSString { available in macos 10.11, ios 9.0 }; cvar; external;
+  CNErrorUserInfoAffectedRecordIdentifiersKey: NSString { available in macos 10.11, ios 9.0 }; cvar; external;
+  CNErrorUserInfoValidationErrorsKey: NSString { available in macos 10.11, ios 9.0 }; cvar; external;
+  CNErrorUserInfoKeyPathsKey: NSString { available in macos 10.11, ios 9.0 }; cvar; external;
 {$endif}
 

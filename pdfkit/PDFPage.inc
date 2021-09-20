@@ -26,7 +26,7 @@ type
     _private: PDFPagePrivate;
   public
     function init: id; message 'init'; { NS_DESIGNATED_INITIALIZER }
-    function initWithImage (image: PDFKitPlatformImagePtr): id; message 'initWithImage:'; { available in 10_5, 11_0 }
+    function initWithImage (image: PDFKitPlatformImagePtr): id; message 'initWithImage:'; { available in macos 10.5, ios 11.0 }
     function document: PDFDocument; message 'document';
     function pageRef: CGPDFPageRef; message 'pageRef';
     function label_: NSString; message 'label';
@@ -40,10 +40,10 @@ type
     procedure addAnnotation (annotation: PDFAnnotation); message 'addAnnotation:';
     procedure removeAnnotation (annotation: PDFAnnotation); message 'removeAnnotation:';
     function annotationAtPoint (point: PDFPoint): PDFAnnotation; message 'annotationAtPoint:';
-    function transformForBox (box: PDFDisplayBox): CGAffineTransform; message 'transformForBox:'; { available in 10_12, 11_0 }
-    procedure drawWithBox_toContext (box: PDFDisplayBox; context: CGContextRef); message 'drawWithBox:toContext:'; { available in 10_12, 11_0 }
-    procedure transformContext_forBox (context: CGContextRef; box: PDFDisplayBox); message 'transformContext:forBox:'; { available in 10_12, 11_0 }
-    function thumbnailOfSize_forBox (size: PDFSize; box: PDFDisplayBox): PDFKitPlatformImagePtr; message 'thumbnailOfSize:forBox:'; { available in 10_13, 11_0 }
+    function transformForBox (box: PDFDisplayBox): CGAffineTransform; message 'transformForBox:'; { available in macos 10.12, ios 11.0 }
+    procedure drawWithBox_toContext (box: PDFDisplayBox; context: CGContextRef); message 'drawWithBox:toContext:'; { available in macos 10.12, ios 11.0 }
+    procedure transformContext_forBox (context: CGContextRef; box: PDFDisplayBox); message 'transformContext:forBox:'; { available in macos 10.12, ios 11.0 }
+    function thumbnailOfSize_forBox (size: PDFSize; box: PDFDisplayBox): PDFKitPlatformImagePtr; message 'thumbnailOfSize:forBox:'; { available in macos 10.13, ios 11.0 }
     function numberOfCharacters: NSUInteger; message 'numberOfCharacters';
     function string_: NSString; message 'string';
     function attributedString: NSAttributedString; message 'attributedString';

@@ -13,12 +13,12 @@ type
 
 {$ifdef EXTERNAL_SYMBOLS}
 var
-  PDFAppearanceCharacteristicsKeyBackgroundColor: PDFAppearanceCharacteristicsKey { available in 10_13, 11_0 }; cvar; external;
-  PDFAppearanceCharacteristicsKeyBorderColor: PDFAppearanceCharacteristicsKey { available in 10_13, 11_0 }; cvar; external;
-  PDFAppearanceCharacteristicsKeyRotation: PDFAppearanceCharacteristicsKey { available in 10_13, 11_0 }; cvar; external;
-  PDFAppearanceCharacteristicsKeyCaption: PDFAppearanceCharacteristicsKey { available in 10_13, 11_0 }; cvar; external;
-  PDFAppearanceCharacteristicsKeyRolloverCaption: PDFAppearanceCharacteristicsKey { available in 10_13, 11_0 }; cvar; external;
-  PDFAppearanceCharacteristicsKeyDownCaption: PDFAppearanceCharacteristicsKey { available in 10_13, 11_0 }; cvar; external;
+  PDFAppearanceCharacteristicsKeyBackgroundColor: PDFAppearanceCharacteristicsKey { available in macos 10.13, ios 11.0 }; cvar; external;
+  PDFAppearanceCharacteristicsKeyBorderColor: PDFAppearanceCharacteristicsKey { available in macos 10.13, ios 11.0 }; cvar; external;
+  PDFAppearanceCharacteristicsKeyRotation: PDFAppearanceCharacteristicsKey { available in macos 10.13, ios 11.0 }; cvar; external;
+  PDFAppearanceCharacteristicsKeyCaption: PDFAppearanceCharacteristicsKey { available in macos 10.13, ios 11.0 }; cvar; external;
+  PDFAppearanceCharacteristicsKeyRolloverCaption: PDFAppearanceCharacteristicsKey { available in macos 10.13, ios 11.0 }; cvar; external;
+  PDFAppearanceCharacteristicsKeyDownCaption: PDFAppearanceCharacteristicsKey { available in macos 10.13, ios 11.0 }; cvar; external;
 {$endif}
 
 {$ifdef CLASSES}

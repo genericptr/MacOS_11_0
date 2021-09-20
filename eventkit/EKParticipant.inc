@@ -35,8 +35,8 @@ type
     function participantStatus: EKParticipantStatus; message 'participantStatus';
     function participantRole: EKParticipantRole; message 'participantRole';
     function participantType: EKParticipantType; message 'participantType';
-    function isCurrentUser: objcbool; message 'isCurrentUser'; { available in 10_9, 6_0 }
-    function contactPredicate: NSPredicate; message 'contactPredicate'; { available in 10_11, 9_0 }
+    function isCurrentUser: objcbool; message 'isCurrentUser'; { available in macos 10.9, ios 6.0 }
+    function contactPredicate: NSPredicate; message 'contactPredicate'; { available in macos 10.11, ios 9.0 }
     {$if defined(TARGET_OS_IPHONE)}
     {$if  not defined(TARGET_OS_WATCH)}
     function ABRecordWithAddressBook (addressBook: ABAddressBookRef): ABRecordRef; message 'ABRecordWithAddressBook:'; { available in ios 4.0, macCatalyst 14.0 }

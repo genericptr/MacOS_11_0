@@ -67,8 +67,8 @@ type
   public
     class procedure loadReceivedChallengesWithCompletionHandler (completionHandler: GKChallengeLoadReceivedChallengesWithCompletionHandlerCallback); message 'loadReceivedChallengesWithCompletionHandler:';
     procedure decline; message 'decline';
-    function issuingPlayer: GKPlayer; message 'issuingPlayer'; { available in 10_10, 8_0 }
-    function receivingPlayer: GKPlayer; message 'receivingPlayer'; { available in 10_10, 8_0 }
+    function issuingPlayer: GKPlayer; message 'issuingPlayer'; { available in macos 10.10, ios 8.0 }
+    function receivingPlayer: GKPlayer; message 'receivingPlayer'; { available in macos 10.10, ios 8.0 }
     function state: GKChallengeState; message 'state';
     function issueDate: NSDate; message 'issueDate';
     function completionDate: NSDate; message 'completionDate';
@@ -107,13 +107,13 @@ type
 type
   GKScore_GKChallenge = objccategory external name 'GKChallenge' (GKScore)
     class procedure reportScores_withEligibleChallenges_withCompletionHandler (scores: NSArray; challenges: NSArray; completionHandler: GKChallengeReportScoresCallback); message 'reportScores:withEligibleChallenges:withCompletionHandler:'; deprecated 'in 10_10, 11_0, 6_0, 14_0, "pass GKLeaderboardScore to reportLeaderboardScores:withEligibleChallenges:withCompletionHandler instead"';
-    class procedure reportLeaderboardScores_withEligibleChallenges_withCompletionHandler (scores: NSArray; challenges: NSArray; completionHandler: GKChallengeReportLeaderboardScoresCallback); message 'reportLeaderboardScores:withEligibleChallenges:withCompletionHandler:'; { available in 11_0, 14_0 }
+    class procedure reportLeaderboardScores_withEligibleChallenges_withCompletionHandler (scores: NSArray; challenges: NSArray; completionHandler: GKChallengeReportLeaderboardScoresCallback); message 'reportLeaderboardScores:withEligibleChallenges:withCompletionHandler:'; { available in macos 11.0, ios 14.0 }
   end;
 
 type
   GKAchievement_GKChallenge = objccategory external name 'GKChallenge' (GKAchievement)
-    procedure selectChallengeablePlayers_withCompletionHandler (players: NSArray; completionHandler: GKChallengeSelectChallengeablePlayersCallback); message 'selectChallengeablePlayers:withCompletionHandler:'; { available in 10_10, 8_0 }
-    class procedure reportAchievements_withEligibleChallenges_withCompletionHandler (achievements: NSArray; challenges: NSArray; completionHandler: GKChallengeReportAchievementsCallback); message 'reportAchievements:withEligibleChallenges:withCompletionHandler:'; { available in 10_10, 7_0 }
+    procedure selectChallengeablePlayers_withCompletionHandler (players: NSArray; completionHandler: GKChallengeSelectChallengeablePlayersCallback); message 'selectChallengeablePlayers:withCompletionHandler:'; { available in macos 10.10, ios 8.0 }
+    class procedure reportAchievements_withEligibleChallenges_withCompletionHandler (achievements: NSArray; challenges: NSArray; completionHandler: GKChallengeReportAchievementsCallback); message 'reportAchievements:withEligibleChallenges:withCompletionHandler:'; { available in macos 10.10, ios 7.0 }
   end;
 
 type

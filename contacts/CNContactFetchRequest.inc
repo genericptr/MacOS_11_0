@@ -17,8 +17,8 @@ type
     function predicate: NSPredicate; message 'predicate';
     procedure setKeysToFetch(newValue: NSArray); message 'setKeysToFetch:';
     function keysToFetch: NSArray; message 'keysToFetch';
-    procedure setMutableObjects(newValue: objcbool); message 'setMutableObjects:'; { available in 10_12, 10_0 }
-    function mutableObjects: objcbool; message 'mutableObjects'; { available in 10_12, 10_0 }
+    procedure setMutableObjects(newValue: objcbool); message 'setMutableObjects:'; { available in macos 10.12, ios 10.0 }
+    function mutableObjects: objcbool; message 'mutableObjects'; { available in macos 10.12, ios 10.0 }
     procedure setUnifyResults(newValue: objcbool); message 'setUnifyResults:';
     function unifyResults: objcbool; message 'unifyResults';
     procedure setSortOrder(newValue: CNContactSortOrder); message 'setSortOrder:';

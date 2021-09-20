@@ -59,7 +59,7 @@ type
   GKLeaderboard = objcclass external (NSObject)
   public
     function title: NSString; message 'title';
-    function groupIdentifier: NSString; message 'groupIdentifier'; { available in 10_9, 6_0 }
+    function groupIdentifier: NSString; message 'groupIdentifier'; { available in macos 10.9, ios 6.0 }
     function baseLeaderboardID: NSString; message 'baseLeaderboardID'; { available in ios 14.0, macos 11.0, tvos 14.0, watchos 7.0 }
     function type_: GKLeaderboardType; message 'type'; { available in ios 14.0, macos 11.0, tvos 14.0, watchos 7.0 }
     function startDate: NSDate; message 'startDate'; { available in ios 14.0, macos 11.0, tvos 14.0, watchos 7.0 }
@@ -102,9 +102,9 @@ type
 type
   GKLeaderboard_UI = objccategory external name 'UI' (GKLeaderboard)
     {$if defined(TARGET_OS_IPHONE)}
-    procedure loadImageWithCompletionHandler (completionHandler: GKLeaderboardLoadImageWithCompletionHandlerCallback); message 'loadImageWithCompletionHandler:'; { available in 10_8, 7_0 }
+    procedure loadImageWithCompletionHandler (completionHandler: GKLeaderboardLoadImageWithCompletionHandlerCallback); message 'loadImageWithCompletionHandler:'; { available in macos 10.8, ios 7.0 }
     {$else}
-    procedure loadImageWithCompletionHandler (completionHandler: GKLeaderboardLoadImageWithCompletionHandlerCallback); message 'loadImageWithCompletionHandler:'; { available in 10_8, 7_0 }
+    procedure loadImageWithCompletionHandler (completionHandler: GKLeaderboardLoadImageWithCompletionHandlerCallback); message 'loadImageWithCompletionHandler:'; { available in macos 10.8, ios 7.0 }
     {$endif}
   end;
 {$endif}

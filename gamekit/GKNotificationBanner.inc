@@ -16,8 +16,8 @@ type
 type
   GKNotificationBanner = objcclass external (NSObject)
   public
-    class procedure showBannerWithTitle_message_completionHandler (title: NSString; message_: NSString; completionHandler: GKNotificationBannerShowBannerWithTitleCallback); message 'showBannerWithTitle:message:completionHandler:'; { available in 10_8, 5_0 }
-    class procedure showBannerWithTitle_message_duration_completionHandler (title: NSString; message_: NSString; duration: NSTimeInterval; completionHandler: GKNotificationBannerShowBannerWithTitleCallback); message 'showBannerWithTitle:message:duration:completionHandler:'; { available in 10_8, 6_0 }
+    class procedure showBannerWithTitle_message_completionHandler (title: NSString; message_: NSString; completionHandler: GKNotificationBannerShowBannerWithTitleCallback); message 'showBannerWithTitle:message:completionHandler:'; { available in macos 10.8, ios 5.0 }
+    class procedure showBannerWithTitle_message_duration_completionHandler (title: NSString; message_: NSString; duration: NSTimeInterval; completionHandler: GKNotificationBannerShowBannerWithTitleCallback); message 'showBannerWithTitle:message:duration:completionHandler:'; { available in macos 10.8, ios 6.0 }
   end;
 {$endif}
 

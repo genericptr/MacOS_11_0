@@ -28,6 +28,6 @@ type
 {$endif}
 
 {$ifdef FUNCTIONS}
-function MKRoadWidthAtZoomScale(zoomScale: MKZoomScale): CGFloat; cdecl; external; { unavailable in watchos } { available in 10_9, 4_0 }
+function MKRoadWidthAtZoomScale(zoomScale: MKZoomScale): CGFloat; cdecl; external; { unavailable in watchos } { available in macos 10.9, ios 4.0 }
 {$endif}
 

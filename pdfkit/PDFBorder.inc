@@ -24,9 +24,9 @@ type
 
 {$ifdef EXTERNAL_SYMBOLS}
 var
-  PDFBorderKeyLineWidth: PDFBorderKey { available in 10_13, 11_0 }; cvar; external;
-  PDFBorderKeyStyle: PDFBorderKey { available in 10_13, 11_0 }; cvar; external;
-  PDFBorderKeyDashPattern: PDFBorderKey { available in 10_13, 11_0 }; cvar; external;
+  PDFBorderKeyLineWidth: PDFBorderKey { available in macos 10.13, ios 11.0 }; cvar; external;
+  PDFBorderKeyStyle: PDFBorderKey { available in macos 10.13, ios 11.0 }; cvar; external;
+  PDFBorderKeyDashPattern: PDFBorderKey { available in macos 10.13, ios 11.0 }; cvar; external;
 {$endif}
 
 {$ifdef CLASSES}

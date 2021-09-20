@@ -1,7 +1,7 @@
 { Parsed from EventKit.framework EKError.h }
 {$ifdef EXTERNAL_SYMBOLS}
 var
-  EKErrorDomain: NSString { available in 10_8, 4_0 }; cvar; external;
+  EKErrorDomain: NSString { available in macos 10.8, ios 4.0 }; cvar; external;
 {$endif}
 
 {$if (__IPHONE_4_0 <= __IPHONE_OS_VERSION_MAX_ALLOWED) or not defined(TARGET_OS_IPHONE)}

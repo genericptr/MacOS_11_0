@@ -16,8 +16,8 @@ type
 
 {$ifdef EXTERNAL_SYMBOLS}
 var
-  MTKModelErrorDomain: MTKModelError { available in 10_11, 9_0 }; cvar; external;
-  MTKModelErrorKey: MTKModelError { available in 10_11, 9_0 }; cvar; external;
+  MTKModelErrorDomain: MTKModelError { available in macos 10.11, ios 9.0 }; cvar; external;
+  MTKModelErrorKey: MTKModelError { available in macos 10.11, ios 9.0 }; cvar; external;
 {$endif}
 
 {$ifdef CLASSES}
@@ -86,11 +86,11 @@ type
 {$endif}
 
 {$ifdef FUNCTIONS}
-function MTKModelIOVertexDescriptorFromMetal(metalDescriptor: MTLVertexDescriptor): MDLVertexDescriptor; cdecl; external; { available in 10_11, 9_0 }
-function MTKModelIOVertexDescriptorFromMetalWithError(metalDescriptor: MTLVertexDescriptor; error: NSErrorPtr): MDLVertexDescriptor; cdecl; external; { available in 10_12, 10_0 }
-function MTKMetalVertexDescriptorFromModelIO(modelIODescriptor: MDLVertexDescriptor): MTLVertexDescriptor; cdecl; external; { available in 10_11, 9_0 }
-function MTKMetalVertexDescriptorFromModelIOWithError(modelIODescriptor: MDLVertexDescriptor; error: NSErrorPtr): MTLVertexDescriptor; cdecl; external; { available in 10_12, 10_0 }
-function MTKModelIOVertexFormatFromMetal(vertexFormat: MTLVertexFormat): MDLVertexFormat; cdecl; external; { available in 10_11, 9_0 }
-function MTKMetalVertexFormatFromModelIO(vertexFormat: MDLVertexFormat): MTLVertexFormat; cdecl; external; { available in 10_11, 9_0 }
+function MTKModelIOVertexDescriptorFromMetal(metalDescriptor: MTLVertexDescriptor): MDLVertexDescriptor; cdecl; external; { available in macos 10.11, ios 9.0 }
+function MTKModelIOVertexDescriptorFromMetalWithError(metalDescriptor: MTLVertexDescriptor; error: NSErrorPtr): MDLVertexDescriptor; cdecl; external; { available in macos 10.12, ios 10.0 }
+function MTKMetalVertexDescriptorFromModelIO(modelIODescriptor: MDLVertexDescriptor): MTLVertexDescriptor; cdecl; external; { available in macos 10.11, ios 9.0 }
+function MTKMetalVertexDescriptorFromModelIOWithError(modelIODescriptor: MDLVertexDescriptor; error: NSErrorPtr): MTLVertexDescriptor; cdecl; external; { available in macos 10.12, ios 10.0 }
+function MTKModelIOVertexFormatFromMetal(vertexFormat: MTLVertexFormat): MDLVertexFormat; cdecl; external; { available in macos 10.11, ios 9.0 }
+function MTKMetalVertexFormatFromModelIO(vertexFormat: MDLVertexFormat): MTLVertexFormat; cdecl; external; { available in macos 10.11, ios 9.0 }
 {$endif}
 

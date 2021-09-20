@@ -33,7 +33,7 @@ type
     function boundingMapRect: MKMapRect; message 'boundingMapRect';
     function coordinate: CLLocationCoordinate2D; message 'coordinate';
     function intersectsMapRect (mapRect: MKMapRect): objcbool; message 'intersectsMapRect:';
-    procedure setCoordinate (newCoordinate: CLLocationCoordinate2D); message 'setCoordinate:'; { available in 10_9, 4_0 }
+    procedure setCoordinate (newCoordinate: CLLocationCoordinate2D); message 'setCoordinate:'; { available in macos 10.9, ios 4.0 }
     function subtitle: NSString; message 'subtitle';
     function title: NSString; message 'title';
   end;

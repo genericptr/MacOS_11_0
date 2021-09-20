@@ -6,8 +6,8 @@ type
     class function obstaclesFromSpriteTextures_accuracy (sprites: NSArray; accuracy: single): NSArray; message 'obstaclesFromSpriteTextures:accuracy:';
     class function obstaclesFromNodeBounds (nodes: NSArray): NSArray; message 'obstaclesFromNodeBounds:';
     class function obstaclesFromNodePhysicsBodies (nodes: NSArray): NSArray; message 'obstaclesFromNodePhysicsBodies:';
-    procedure setEntity(newValue: GKEntity); message 'setEntity:'; { available in 10_12, 10_0 }
-    function entity: GKEntity; message 'entity'; { available in 10_12, 10_0 }
+    procedure setEntity(newValue: GKEntity); message 'setEntity:'; { available in macos 10.12, ios 10.0 }
+    function entity: GKEntity; message 'entity'; { available in macos 10.12, ios 10.0 }
   end;
 
 type
@@ -21,7 +21,7 @@ type
 
 type
   SKTexture_GameplayKit = objccategory external name 'GameplayKit' (SKTexture)
-    class function textureWithNoiseMap (noiseMap: GKNoiseMap): id; message 'textureWithNoiseMap:'; { available in 10_12, 10_0 }
+    class function textureWithNoiseMap (noiseMap: GKNoiseMap): id; message 'textureWithNoiseMap:'; { available in macos 10.12, ios 10.0 }
   end;
 {$endif}
 

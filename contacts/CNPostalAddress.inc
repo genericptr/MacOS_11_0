@@ -31,13 +31,13 @@ type
 
 {$ifdef EXTERNAL_SYMBOLS}
 var
-  CNPostalAddressStreetKey: NSString { available in 10_11, 9_0 }; cvar; external;
+  CNPostalAddressStreetKey: NSString { available in macos 10.11, ios 9.0 }; cvar; external;
   CNPostalAddressSubLocalityKey: NSString { available in 10_12_4, 10_3 }; cvar; external;
-  CNPostalAddressCityKey: NSString { available in 10_11, 9_0 }; cvar; external;
+  CNPostalAddressCityKey: NSString { available in macos 10.11, ios 9.0 }; cvar; external;
   CNPostalAddressSubAdministrativeAreaKey: NSString { available in 10_12_4, 10_3 }; cvar; external;
-  CNPostalAddressStateKey: NSString { available in 10_11, 9_0 }; cvar; external;
-  CNPostalAddressPostalCodeKey: NSString { available in 10_11, 9_0 }; cvar; external;
-  CNPostalAddressCountryKey: NSString { available in 10_11, 9_0 }; cvar; external;
-  CNPostalAddressISOCountryCodeKey: NSString { available in 10_11, 9_0 }; cvar; external;
+  CNPostalAddressStateKey: NSString { available in macos 10.11, ios 9.0 }; cvar; external;
+  CNPostalAddressPostalCodeKey: NSString { available in macos 10.11, ios 9.0 }; cvar; external;
+  CNPostalAddressCountryKey: NSString { available in macos 10.11, ios 9.0 }; cvar; external;
+  CNPostalAddressISOCountryCodeKey: NSString { available in macos 10.11, ios 9.0 }; cvar; external;
 {$endif}
 

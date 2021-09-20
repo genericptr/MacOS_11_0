@@ -39,8 +39,8 @@ const
 
 {$ifdef EXTERNAL_SYMBOLS}
 var
-  MKMapViewDefaultAnnotationViewReuseIdentifier: NSString { available in 10_13, 11_0 } { available in 11_0 }; cvar; external;
-  MKMapViewDefaultClusterAnnotationViewReuseIdentifier: NSString { available in 10_13, 11_0 } { available in 11_0 }; cvar; external;
+  MKMapViewDefaultAnnotationViewReuseIdentifier: NSString { available in macos 10.13, ios 11.0 } { available in 11_0 }; cvar; external;
+  MKMapViewDefaultClusterAnnotationViewReuseIdentifier: NSString { available in macos 10.13, ios 11.0 } { available in 11_0 }; cvar; external;
 {$endif}
 
 {$ifdef CLASSES}
@@ -70,9 +70,9 @@ type
     procedure setVisibleMapRect_edgePadding_animated (mapRect: MKMapRect; insets: NSEdgeInsets; animate: objcbool); message 'setVisibleMapRect:edgePadding:animated:';
     function mapRectThatFits_edgePadding (mapRect: MKMapRect; insets: NSEdgeInsets): MKMapRect; message 'mapRectThatFits:edgePadding:';
     {$endif}
-    procedure setCamera(newValue: MKMapCamera); message 'setCamera:'; { available in 10_9, 7_0 }
-    function camera: MKMapCamera; message 'camera'; { available in 10_9, 7_0 }
-    procedure setCamera_animated (camera_: MKMapCamera; animated: objcbool); message 'setCamera:animated:'; { available in 10_9, 7_0 }
+    procedure setCamera(newValue: MKMapCamera); message 'setCamera:'; { available in macos 10.9, ios 7.0 }
+    function camera: MKMapCamera; message 'camera'; { available in macos 10.9, ios 7.0 }
+    procedure setCamera_animated (camera_: MKMapCamera; animated: objcbool); message 'setCamera:animated:'; { available in macos 10.9, ios 7.0 }
     procedure setCameraZoomRange(newValue: MKMapCameraZoomRange); message 'setCameraZoomRange:'; { unavailable in watchos }
     function cameraZoomRange: MKMapCameraZoomRange; message 'cameraZoomRange'; { unavailable in watchos }
     procedure setCameraZoomRange_animated (cameraZoomRange_: MKMapCameraZoomRange; animated: objcbool); message 'setCameraZoomRange:animated:'; { unavailable in watchos }
@@ -97,23 +97,23 @@ type
     procedure setRotateEnabled(newValue: objcbool); message 'setRotateEnabled:'; { unavailable in tvos }
     function isRotateEnabled: objcbool; message 'isRotateEnabled'; { unavailable in tvos }
     procedure setPitchEnabled(newValue: objcbool); message 'setPitchEnabled:'; { unavailable in tvos }
-    function isPitchEnabled: objcbool; message 'isPitchEnabled'; { unavailable in tvos } { available in 10_9, 7_0 }
-    procedure setShowsPitchControl(newValue: objcbool); message 'setShowsPitchControl:'; { unavailable in tvos } { available in 10_9, 7_0 }
-    function showsPitchControl: objcbool; message 'showsPitchControl'; { unavailable in tvos } { available in 10_9, 7_0 }
-    procedure setShowsZoomControls(newValue: objcbool); message 'setShowsZoomControls:'; { unavailable in tvos } { available in 10_9, 7_0 }
+    function isPitchEnabled: objcbool; message 'isPitchEnabled'; { unavailable in tvos } { available in macos 10.9, ios 7.0 }
+    procedure setShowsPitchControl(newValue: objcbool); message 'setShowsPitchControl:'; { unavailable in tvos } { available in macos 10.9, ios 7.0 }
+    function showsPitchControl: objcbool; message 'showsPitchControl'; { unavailable in tvos } { available in macos 10.9, ios 7.0 }
+    procedure setShowsZoomControls(newValue: objcbool); message 'setShowsZoomControls:'; { unavailable in tvos } { available in macos 10.9, ios 7.0 }
     function showsZoomControls: objcbool; message 'showsZoomControls'; { unavailable in ios, watchos, tvos } { available in macos 11.0, macCatalyst 14.0 }
     procedure setShowsCompass(newValue: objcbool); message 'setShowsCompass:'; { unavailable in ios, watchos, tvos } { available in macos 11.0, macCatalyst 14.0 }
     function showsCompass: objcbool; message 'showsCompass'; { unavailable in ios, watchos, tvos } { available in macos 10.9, macCatalyst 13.0 }
     procedure setShowsScale(newValue: objcbool); message 'setShowsScale:'; { available in macos 10.9, macCatalyst 13.0 }
-    function showsScale: objcbool; message 'showsScale'; { available in 10_9, 9_0 }
-    procedure setPointOfInterestFilter(newValue: MKPointOfInterestFilter); message 'setPointOfInterestFilter:'; { unavailable in tvos } { available in 10_9, 9_0 }
+    function showsScale: objcbool; message 'showsScale'; { available in macos 10.9, ios 9.0 }
+    procedure setPointOfInterestFilter(newValue: MKPointOfInterestFilter); message 'setPointOfInterestFilter:'; { unavailable in tvos } { available in macos 10.9, ios 9.0 }
     function pointOfInterestFilter: MKPointOfInterestFilter; message 'pointOfInterestFilter'; { unavailable in watchos }
     procedure setShowsPointsOfInterest(newValue: objcbool); message 'setShowsPointsOfInterest:'; { unavailable in watchos }
     function showsPointsOfInterest: objcbool; message 'showsPointsOfInterest'; { unavailable in watchos } { available in ios 13.0, macos 10.15, tvos 13.0 }
     procedure setShowsBuildings(newValue: objcbool); message 'setShowsBuildings:'; { available in ios 13.0, macos 10.15, tvos 13.0 }
-    function showsBuildings: objcbool; message 'showsBuildings'; { available in 10_9, 7_0 }
-    procedure setShowsTraffic(newValue: objcbool); message 'setShowsTraffic:'; { available in 10_11, 9_0 }
-    function showsTraffic: objcbool; message 'showsTraffic'; { available in 10_9, 7_0 }
+    function showsBuildings: objcbool; message 'showsBuildings'; { available in macos 10.9, ios 7.0 }
+    procedure setShowsTraffic(newValue: objcbool); message 'setShowsTraffic:'; { available in macos 10.11, ios 9.0 }
+    function showsTraffic: objcbool; message 'showsTraffic'; { available in macos 10.9, ios 7.0 }
     procedure setShowsUserLocation(newValue: objcbool); message 'setShowsUserLocation:';
     function showsUserLocation: objcbool; message 'showsUserLocation';
     function userLocation: MKUserLocation; message 'userLocation';
@@ -126,17 +126,17 @@ type
     procedure removeAnnotation (annotation: id); message 'removeAnnotation:';
     procedure removeAnnotations (annotations: NSArray); message 'removeAnnotations:';
     function annotations: NSArray; message 'annotations';
-    function annotationsInMapRect (mapRect: MKMapRect): NSSet; message 'annotationsInMapRect:'; { available in 10_9, 4_2 }
+    function annotationsInMapRect (mapRect: MKMapRect): NSSet; message 'annotationsInMapRect:'; { available in macos 10.9, ios 4.2 }
     function viewForAnnotation (annotation: id): MKAnnotationView; message 'viewForAnnotation:';
     function dequeueReusableAnnotationViewWithIdentifier (identifier: NSString): MKAnnotationView; message 'dequeueReusableAnnotationViewWithIdentifier:';
-    function dequeueReusableAnnotationViewWithIdentifier_forAnnotation (identifier: NSString; annotation: id): MKAnnotationView; message 'dequeueReusableAnnotationViewWithIdentifier:forAnnotation:'; { available in 10_9, 4_2 }
-    procedure registerClass_forAnnotationViewWithReuseIdentifier (viewClass: pobjc_class; identifier: NSString); message 'registerClass:forAnnotationViewWithReuseIdentifier:'; { available in 10_13, 11_0 }
+    function dequeueReusableAnnotationViewWithIdentifier_forAnnotation (identifier: NSString; annotation: id): MKAnnotationView; message 'dequeueReusableAnnotationViewWithIdentifier:forAnnotation:'; { available in macos 10.9, ios 4.2 }
+    procedure registerClass_forAnnotationViewWithReuseIdentifier (viewClass: pobjc_class; identifier: NSString); message 'registerClass:forAnnotationViewWithReuseIdentifier:'; { available in macos 10.13, ios 11.0 }
     procedure selectAnnotation_animated (annotation: id; animated: objcbool); message 'selectAnnotation:animated:';
     procedure deselectAnnotation_animated (annotation: MKAnnotationProtocol; animated: objcbool); message 'deselectAnnotation:animated:';
     procedure setSelectedAnnotations(newValue: NSArray); message 'setSelectedAnnotations:';
     function selectedAnnotations: NSArray; message 'selectedAnnotations';
     function annotationVisibleRect: CGRect; message 'annotationVisibleRect';
-    procedure showAnnotations_animated (annotations_: NSArray; animated: objcbool); message 'showAnnotations:animated:'; { available in 10_9, 7_0 }
+    procedure showAnnotations_animated (annotations_: NSArray; animated: objcbool); message 'showAnnotations:animated:'; { available in macos 10.9, ios 7.0 }
 
     { Adopted protocols }
     procedure encodeWithCoder (coder: NSCoder); message 'encodeWithCoder:';
@@ -158,24 +158,24 @@ const
 
 type
   OverlaysAPI = objccategory external (MKMapView)
-    procedure addOverlay_level (overlay: id; level: MKOverlayLevel); message 'addOverlay:level:'; { available in 10_9, 7_0 }
-    procedure addOverlays_level (overlays: NSArray; level: MKOverlayLevel); message 'addOverlays:level:'; { available in 10_9, 7_0 }
-    procedure removeOverlay (overlay: MKOverlayProtocol); message 'removeOverlay:'; { available in 10_9, 7_0 }
-    procedure removeOverlays (overlays: NSArray); message 'removeOverlays:'; { available in 10_9, 7_0 }
-    procedure insertOverlay_atIndex_level (overlay: MKOverlayProtocol; index: NSUInteger; level: MKOverlayLevel); message 'insertOverlay:atIndex:level:'; { available in 10_9, 4_0 }
-    procedure insertOverlay_aboveOverlay (overlay: MKOverlayProtocol; sibling: MKOverlayProtocol); message 'insertOverlay:aboveOverlay:'; { available in 10_9, 4_0 }
-    procedure insertOverlay_belowOverlay (overlay: MKOverlayProtocol; sibling: id); message 'insertOverlay:belowOverlay:'; { available in 10_9, 7_0 }
-    procedure exchangeOverlay_withOverlay (overlay1: id; overlay2: id); message 'exchangeOverlay:withOverlay:'; { available in 10_9, 4_0 }
-    function overlays: NSArray; message 'overlays'; { available in 10_9, 4_0 }
-    function overlaysInLevel (level: MKOverlayLevel): NSArray; message 'overlaysInLevel:'; { available in 10_9, 7_0 }
-    function rendererForOverlay (overlay: id): MKOverlayRenderer; message 'rendererForOverlay:'; { available in 10_9, 4_0 }
+    procedure addOverlay_level (overlay: id; level: MKOverlayLevel); message 'addOverlay:level:'; { available in macos 10.9, ios 7.0 }
+    procedure addOverlays_level (overlays: NSArray; level: MKOverlayLevel); message 'addOverlays:level:'; { available in macos 10.9, ios 7.0 }
+    procedure removeOverlay (overlay: MKOverlayProtocol); message 'removeOverlay:'; { available in macos 10.9, ios 7.0 }
+    procedure removeOverlays (overlays: NSArray); message 'removeOverlays:'; { available in macos 10.9, ios 7.0 }
+    procedure insertOverlay_atIndex_level (overlay: MKOverlayProtocol; index: NSUInteger; level: MKOverlayLevel); message 'insertOverlay:atIndex:level:'; { available in macos 10.9, ios 4.0 }
+    procedure insertOverlay_aboveOverlay (overlay: MKOverlayProtocol; sibling: MKOverlayProtocol); message 'insertOverlay:aboveOverlay:'; { available in macos 10.9, ios 4.0 }
+    procedure insertOverlay_belowOverlay (overlay: MKOverlayProtocol; sibling: id); message 'insertOverlay:belowOverlay:'; { available in macos 10.9, ios 7.0 }
+    procedure exchangeOverlay_withOverlay (overlay1: id; overlay2: id); message 'exchangeOverlay:withOverlay:'; { available in macos 10.9, ios 4.0 }
+    function overlays: NSArray; message 'overlays'; { available in macos 10.9, ios 4.0 }
+    function overlaysInLevel (level: MKOverlayLevel): NSArray; message 'overlaysInLevel:'; { available in macos 10.9, ios 7.0 }
+    function rendererForOverlay (overlay: id): MKOverlayRenderer; message 'rendererForOverlay:'; { available in macos 10.9, ios 4.0 }
     {$if defined(TARGET_OS_IPHONE)}
     function viewForOverlay (overlay: MKOverlayProtocol): MKOverlayViewPtr; message 'viewForOverlay:'; { unavailable in macos, tvos, watchos }
     {$endif}
-    procedure addOverlay (overlay: MKOverlayProtocol); message 'addOverlay:'; { available in 10_9, 4_0 }
-    procedure addOverlays (overlays_: NSArray); message 'addOverlays:'; { available in 10_9, 4_0 }
-    procedure insertOverlay_atIndex (overlay: MKOverlayProtocol; index: NSUInteger); message 'insertOverlay:atIndex:'; { available in 10_9, 4_0 }
-    procedure exchangeOverlayAtIndex_withOverlayAtIndex (index1: NSUInteger; index2: NSUInteger); message 'exchangeOverlayAtIndex:withOverlayAtIndex:'; { available in 10_9, 4_0 }
+    procedure addOverlay (overlay: MKOverlayProtocol); message 'addOverlay:'; { available in macos 10.9, ios 4.0 }
+    procedure addOverlays (overlays_: NSArray); message 'addOverlays:'; { available in macos 10.9, ios 4.0 }
+    procedure insertOverlay_atIndex (overlay: MKOverlayProtocol; index: NSUInteger); message 'insertOverlay:atIndex:'; { available in macos 10.9, ios 4.0 }
+    procedure exchangeOverlayAtIndex_withOverlayAtIndex (index1: NSUInteger; index2: NSUInteger); message 'exchangeOverlayAtIndex:withOverlayAtIndex:'; { available in macos 10.9, ios 4.0 }
   end;
 {$endif}
 
@@ -190,22 +190,22 @@ type
     procedure mapViewWillStartLoadingMap (mapView: MKMapView); message 'mapViewWillStartLoadingMap:';
     procedure mapViewDidFinishLoadingMap (mapView: MKMapView); message 'mapViewDidFinishLoadingMap:';
     procedure mapViewDidFailLoadingMap_withError (mapView: MKMapView; error: NSError); message 'mapViewDidFailLoadingMap:withError:';
-    procedure mapViewWillStartRenderingMap (mapView: MKMapView); message 'mapViewWillStartRenderingMap:'; { available in 10_9, 7_0 }
-    procedure mapViewDidFinishRenderingMap_fullyRendered (mapView: MKMapView; fullyRendered: objcbool); message 'mapViewDidFinishRenderingMap:fullyRendered:'; { available in 10_9, 7_0 }
+    procedure mapViewWillStartRenderingMap (mapView: MKMapView); message 'mapViewWillStartRenderingMap:'; { available in macos 10.9, ios 7.0 }
+    procedure mapViewDidFinishRenderingMap_fullyRendered (mapView: MKMapView; fullyRendered: objcbool); message 'mapViewDidFinishRenderingMap:fullyRendered:'; { available in macos 10.9, ios 7.0 }
     function mapView_viewForAnnotation (mapView: MKMapView; annotation: id): MKAnnotationView; message 'mapView:viewForAnnotation:';
     procedure mapView_didAddAnnotationViews (mapView: MKMapView; views: NSArray); message 'mapView:didAddAnnotationViews:';
     {$if defined(TARGET_OS_IPHONE)}
     procedure mapView_annotationView_calloutAccessoryControlTapped (mapView: MKMapView; view: MKAnnotationView; control: UIControlPtr); message 'mapView:annotationView:calloutAccessoryControlTapped:'; { unavailable in tvos }
     {$endif}
-    procedure mapView_didSelectAnnotationView (mapView: MKMapView; view: MKAnnotationView); message 'mapView:didSelectAnnotationView:'; { available in 10_9, 4_0 }
-    procedure mapView_didDeselectAnnotationView (mapView: MKMapView; view: MKAnnotationView); message 'mapView:didDeselectAnnotationView:'; { available in 10_9, 4_0 }
-    procedure mapViewWillStartLocatingUser (mapView: MKMapView); message 'mapViewWillStartLocatingUser:'; { available in 10_9, 4_0 }
-    procedure mapViewDidStopLocatingUser (mapView: MKMapView); message 'mapViewDidStopLocatingUser:'; { available in 10_9, 4_0 }
-    procedure mapView_didUpdateUserLocation (mapView: MKMapView; userLocation: MKUserLocation); message 'mapView:didUpdateUserLocation:'; { available in 10_9, 4_0 }
-    procedure mapView_didFailToLocateUserWithError (mapView: MKMapView; error: NSError); message 'mapView:didFailToLocateUserWithError:'; { available in 10_9, 4_0 }
+    procedure mapView_didSelectAnnotationView (mapView: MKMapView; view: MKAnnotationView); message 'mapView:didSelectAnnotationView:'; { available in macos 10.9, ios 4.0 }
+    procedure mapView_didDeselectAnnotationView (mapView: MKMapView; view: MKAnnotationView); message 'mapView:didDeselectAnnotationView:'; { available in macos 10.9, ios 4.0 }
+    procedure mapViewWillStartLocatingUser (mapView: MKMapView); message 'mapViewWillStartLocatingUser:'; { available in macos 10.9, ios 4.0 }
+    procedure mapViewDidStopLocatingUser (mapView: MKMapView); message 'mapViewDidStopLocatingUser:'; { available in macos 10.9, ios 4.0 }
+    procedure mapView_didUpdateUserLocation (mapView: MKMapView; userLocation: MKUserLocation); message 'mapView:didUpdateUserLocation:'; { available in macos 10.9, ios 4.0 }
+    procedure mapView_didFailToLocateUserWithError (mapView: MKMapView; error: NSError); message 'mapView:didFailToLocateUserWithError:'; { available in macos 10.9, ios 4.0 }
     procedure mapView_annotationView_didChangeDragState_fromOldState (mapView: MKMapView; view: MKAnnotationView; newState: MKAnnotationViewDragState; oldState: MKAnnotationViewDragState); message 'mapView:annotationView:didChangeDragState:fromOldState:'; { unavailable in tvos }
     procedure mapView_didChangeUserTrackingMode_animated (mapView: MKMapView; mode: MKUserTrackingMode; animated: objcbool); message 'mapView:didChangeUserTrackingMode:animated:'; { unavailable in watchos }
-    function mapView_rendererForOverlay (mapView: MKMapView; overlay: id): MKOverlayRenderer; message 'mapView:rendererForOverlay:'; { available in 10_9, 4_0 }
+    function mapView_rendererForOverlay (mapView: MKMapView; overlay: id): MKOverlayRenderer; message 'mapView:rendererForOverlay:'; { available in macos 10.9, ios 4.0 }
     procedure mapView_didAddOverlayRenderers (mapView: MKMapView; renderers: NSArray); message 'mapView:didAddOverlayRenderers:'; { available in ios 5.0, tvos 9.2, macos 11.0 }
     {$if defined(TARGET_OS_IPHONE)}
     function mapView_viewForOverlay (mapView: MKMapView; overlay: id): MKOverlayViewPtr; message 'mapView:viewForOverlay:'; { unavailable in macos, tvos, watchos }

@@ -83,10 +83,10 @@ type
 
 type
   CIContext_CIRenderDestination = objccategory external name 'CIRenderDestination' (CIContext)
-    function startTaskToRender_fromRect_toDestination_atPoint_error (image: CIImage; fromRect: CGRect; destination: CIRenderDestination; atPoint: CGPoint; error: NSErrorPtr): CIRenderTask; message 'startTaskToRender:fromRect:toDestination:atPoint:error:'; { available in 10_13, 11_0 }
-    function startTaskToRender_toDestination_error (image: CIImage; destination: CIRenderDestination; error: NSErrorPtr): CIRenderTask; message 'startTaskToRender:toDestination:error:'; { available in 10_13, 11_0 }
-    function prepareRender_fromRect_toDestination_atPoint_error (image: CIImage; fromRect: CGRect; destination: CIRenderDestination; atPoint: CGPoint; error: NSErrorPtr): objcbool; message 'prepareRender:fromRect:toDestination:atPoint:error:'; { available in 10_13, 11_0 }
-    function startTaskToClear_error (destination: CIRenderDestination; error: NSErrorPtr): CIRenderTask; message 'startTaskToClear:error:'; { available in 10_13, 11_0 }
+    function startTaskToRender_fromRect_toDestination_atPoint_error (image: CIImage; fromRect: CGRect; destination: CIRenderDestination; atPoint: CGPoint; error: NSErrorPtr): CIRenderTask; message 'startTaskToRender:fromRect:toDestination:atPoint:error:'; { available in macos 10.13, ios 11.0 }
+    function startTaskToRender_toDestination_error (image: CIImage; destination: CIRenderDestination; error: NSErrorPtr): CIRenderTask; message 'startTaskToRender:toDestination:error:'; { available in macos 10.13, ios 11.0 }
+    function prepareRender_fromRect_toDestination_atPoint_error (image: CIImage; fromRect: CGRect; destination: CIRenderDestination; atPoint: CGPoint; error: NSErrorPtr): objcbool; message 'prepareRender:fromRect:toDestination:atPoint:error:'; { available in macos 10.13, ios 11.0 }
+    function startTaskToClear_error (destination: CIRenderDestination; error: NSErrorPtr): CIRenderTask; message 'startTaskToClear:error:'; { available in macos 10.13, ios 11.0 }
   end;
 {$endif}
 

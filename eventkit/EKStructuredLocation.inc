@@ -11,7 +11,7 @@ type
   EKStructuredLocation = objcclass external (EKObject, NSCopyingProtocol)
   public
     class function locationWithTitle (title: NSString): id; message 'locationWithTitle:';
-    class function locationWithMapItem (mapItem: MKMapItem): id; message 'locationWithMapItem:'; { available in 10_11, 9_0 }
+    class function locationWithMapItem (mapItem: MKMapItem): id; message 'locationWithMapItem:'; { available in macos 10.11, ios 9.0 }
     procedure setTitle(newValue: NSString); message 'setTitle:';
     function title: NSString; message 'title';
     procedure setGeoLocation(newValue: CLLocationPtr); message 'setGeoLocation:';

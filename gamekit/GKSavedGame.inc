@@ -20,10 +20,10 @@ type
 type
   GKSavedGame = objcclass external (NSObject, NSCopyingProtocol)
   public
-    function name: NSString; message 'name'; { available in 10_10, 8_0 }
-    function deviceName: NSString; message 'deviceName'; { available in 10_10, 8_0 }
-    function modificationDate: NSDate; message 'modificationDate'; { available in 10_10, 8_0 }
-    procedure loadDataWithCompletionHandler (handler: GKSavedGameLoadDataWithCompletionHandlerCallback); message 'loadDataWithCompletionHandler:'; { available in 10_10, 8_0 }
+    function name: NSString; message 'name'; { available in macos 10.10, ios 8.0 }
+    function deviceName: NSString; message 'deviceName'; { available in macos 10.10, ios 8.0 }
+    function modificationDate: NSDate; message 'modificationDate'; { available in macos 10.10, ios 8.0 }
+    procedure loadDataWithCompletionHandler (handler: GKSavedGameLoadDataWithCompletionHandlerCallback); message 'loadDataWithCompletionHandler:'; { available in macos 10.10, ios 8.0 }
 
     { Adopted protocols }
     function copyWithZone (zone: NSZonePtr): id; message 'copyWithZone:';
@@ -35,10 +35,10 @@ type
 
 type
   GKLocalPlayer_GKSavedGame = objccategory external name 'GKSavedGame' (GKLocalPlayer)
-    procedure fetchSavedGamesWithCompletionHandler (handler: GKSavedGameFetchSavedGamesWithCompletionHandlerCallback); message 'fetchSavedGamesWithCompletionHandler:'; { available in 10_10, 8_0 }
-    procedure saveGameData_withName_completionHandler (data: NSData; name: NSString; handler: GKSavedGameSaveGameDataCallback); message 'saveGameData:withName:completionHandler:'; { available in 10_10, 8_0 }
-    procedure deleteSavedGamesWithName_completionHandler (name: NSString; handler: GKSavedGameDeleteSavedGamesWithNameCallback); message 'deleteSavedGamesWithName:completionHandler:'; { available in 10_10, 8_0 }
-    procedure resolveConflictingSavedGames_withData_completionHandler (conflictingSavedGames: NSArray; data: NSData; handler: GKSavedGameResolveConflictingSavedGamesCallback); message 'resolveConflictingSavedGames:withData:completionHandler:'; { available in 10_10, 8_0 }
+    procedure fetchSavedGamesWithCompletionHandler (handler: GKSavedGameFetchSavedGamesWithCompletionHandlerCallback); message 'fetchSavedGamesWithCompletionHandler:'; { available in macos 10.10, ios 8.0 }
+    procedure saveGameData_withName_completionHandler (data: NSData; name: NSString; handler: GKSavedGameSaveGameDataCallback); message 'saveGameData:withName:completionHandler:'; { available in macos 10.10, ios 8.0 }
+    procedure deleteSavedGamesWithName_completionHandler (name: NSString; handler: GKSavedGameDeleteSavedGamesWithNameCallback); message 'deleteSavedGamesWithName:completionHandler:'; { available in macos 10.10, ios 8.0 }
+    procedure resolveConflictingSavedGames_withData_completionHandler (conflictingSavedGames: NSArray; data: NSData; handler: GKSavedGameResolveConflictingSavedGamesCallback); message 'resolveConflictingSavedGames:withData:completionHandler:'; { available in macos 10.10, ios 8.0 }
   end;
 {$endif}
 

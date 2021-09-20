@@ -26,17 +26,17 @@ type
 
 {$ifdef EXTERNAL_SYMBOLS}
 var
-  CNInstantMessageAddressUsernameKey: NSString { available in 10_11, 9_0 }; cvar; external;
-  CNInstantMessageAddressServiceKey: NSString { available in 10_11, 9_0 }; cvar; external;
-  CNInstantMessageServiceAIM: NSString { available in 10_11, 9_0 }; cvar; external;
-  CNInstantMessageServiceFacebook: NSString { available in 10_11, 9_0 }; cvar; external;
-  CNInstantMessageServiceGaduGadu: NSString { available in 10_11, 9_0 }; cvar; external;
-  CNInstantMessageServiceGoogleTalk: NSString { available in 10_11, 9_0 }; cvar; external;
-  CNInstantMessageServiceICQ: NSString { available in 10_11, 9_0 }; cvar; external;
-  CNInstantMessageServiceJabber: NSString { available in 10_11, 9_0 }; cvar; external;
-  CNInstantMessageServiceMSN: NSString { available in 10_11, 9_0 }; cvar; external;
-  CNInstantMessageServiceQQ: NSString { available in 10_11, 9_0 }; cvar; external;
-  CNInstantMessageServiceSkype: NSString { available in 10_11, 9_0 }; cvar; external;
-  CNInstantMessageServiceYahoo: NSString { available in 10_11, 9_0 }; cvar; external;
+  CNInstantMessageAddressUsernameKey: NSString { available in macos 10.11, ios 9.0 }; cvar; external;
+  CNInstantMessageAddressServiceKey: NSString { available in macos 10.11, ios 9.0 }; cvar; external;
+  CNInstantMessageServiceAIM: NSString { available in macos 10.11, ios 9.0 }; cvar; external;
+  CNInstantMessageServiceFacebook: NSString { available in macos 10.11, ios 9.0 }; cvar; external;
+  CNInstantMessageServiceGaduGadu: NSString { available in macos 10.11, ios 9.0 }; cvar; external;
+  CNInstantMessageServiceGoogleTalk: NSString { available in macos 10.11, ios 9.0 }; cvar; external;
+  CNInstantMessageServiceICQ: NSString { available in macos 10.11, ios 9.0 }; cvar; external;
+  CNInstantMessageServiceJabber: NSString { available in macos 10.11, ios 9.0 }; cvar; external;
+  CNInstantMessageServiceMSN: NSString { available in macos 10.11, ios 9.0 }; cvar; external;
+  CNInstantMessageServiceQQ: NSString { available in macos 10.11, ios 9.0 }; cvar; external;
+  CNInstantMessageServiceSkype: NSString { available in macos 10.11, ios 9.0 }; cvar; external;
+  CNInstantMessageServiceYahoo: NSString { available in macos 10.11, ios 9.0 }; cvar; external;
 {$endif}
 

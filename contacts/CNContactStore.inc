@@ -54,6 +54,6 @@ type
 
 {$ifdef EXTERNAL_SYMBOLS}
 var
-  CNContactStoreDidChangeNotification: NSString { available in 10_11, 9_0 }; cvar; external;
+  CNContactStoreDidChangeNotification: NSString { available in macos 10.11, ios 9.0 }; cvar; external;
 {$endif}
 

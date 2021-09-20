@@ -8,9 +8,9 @@ const
   MKMapTypeStandard = 0;
   MKMapTypeSatellite = 1;
   MKMapTypeHybrid = 2;
-  MKMapTypeSatelliteFlyover = 3 { available in 10_11, 9_0 };
-  MKMapTypeHybridFlyover = 4 { available in 10_11, 9_0 };
-  MKMapTypeMutedStandard = 5 { available in 10_13, 11_0 } { available in 11_0 };
+  MKMapTypeSatelliteFlyover = 3 { available in macos 10.11, ios 9.0 };
+  MKMapTypeHybridFlyover = 4 { available in macos 10.11, ios 9.0 };
+  MKMapTypeMutedStandard = 5 { available in macos 10.13, ios 11.0 } { available in 11_0 };
 {$endif}
 
 {$ifdef EXTERNAL_SYMBOLS}
@@ -28,7 +28,7 @@ const
   MKErrorServerFailure = 2;
   MKErrorLoadingThrottled = 3;
   MKErrorPlacemarkNotFound = 4;
-  MKErrorDirectionsNotFound = 5 { available in 10_9, 7_0 };
+  MKErrorDirectionsNotFound = 5 { available in macos 10.9, ios 7.0 };
   MKErrorDecodingFailed = 6 { unavailable in watchos } { available in ios 13.0, tvos 13.0, macos 10.15 };
 
 type

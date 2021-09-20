@@ -18,20 +18,20 @@ type
   GKScore = objcclass external (NSObject, NSCodingProtocol, NSSecureCodingProtocol)
   public
     function initWithLeaderboardIdentifier (identifier: NSString): id; message 'initWithLeaderboardIdentifier:';
-    function initWithLeaderboardIdentifier_player (identifier: NSString; player: GKPlayer): id; message 'initWithLeaderboardIdentifier:player:'; { available in 10_10, 8_0 } { available in 3_0 }
+    function initWithLeaderboardIdentifier_player (identifier: NSString; player: GKPlayer): id; message 'initWithLeaderboardIdentifier:player:'; { available in macos 10.10, ios 8.0 } { available in 3_0 }
     procedure setValue(newValue: cint64); message 'setValue:';
     function value: cint64; message 'value';
     function formattedValue: NSString; message 'formattedValue';
-    procedure setLeaderboardIdentifier(newValue: NSString); message 'setLeaderboardIdentifier:'; { available in 10_10, 7_0 } { available in 3_0 }
-    function leaderboardIdentifier: NSString; message 'leaderboardIdentifier'; { available in 10_10, 7_0 } { available in 3_0 }
-    procedure setContext(newValue: cuint64); message 'setContext:'; { available in 10_8, 5_0 } { available in 3_0 }
-    function context: cuint64; message 'context'; { available in 10_8, 5_0 } { available in 3_0 }
+    procedure setLeaderboardIdentifier(newValue: NSString); message 'setLeaderboardIdentifier:'; { available in macos 10.10, ios 7.0 } { available in 3_0 }
+    function leaderboardIdentifier: NSString; message 'leaderboardIdentifier'; { available in macos 10.10, ios 7.0 } { available in 3_0 }
+    procedure setContext(newValue: cuint64); message 'setContext:'; { available in macos 10.8, ios 5.0 } { available in 3_0 }
+    function context: cuint64; message 'context'; { available in macos 10.8, ios 5.0 } { available in 3_0 }
     function date: NSDate; message 'date';
-    function player: GKPlayer; message 'player'; { available in 10_10, 8_0 } { available in 3_0 }
+    function player: GKPlayer; message 'player'; { available in macos 10.10, ios 8.0 } { available in 3_0 }
     function rank: NSInteger; message 'rank';
-    procedure setShouldSetDefaultLeaderboard(newValue: objcbool); message 'setShouldSetDefaultLeaderboard:'; { available in 10_8, 5_0 } { available in 3_0 }
-    function shouldSetDefaultLeaderboard: objcbool; message 'shouldSetDefaultLeaderboard'; { available in 10_8, 5_0 } { available in 3_0 }
-    class procedure reportScores_withCompletionHandler (scores: NSArray; completionHandler: GKScoreReportScoresCallback); message 'reportScores:withCompletionHandler:'; { available in 10_8, 6_0 } { available in 3_0 }
+    procedure setShouldSetDefaultLeaderboard(newValue: objcbool); message 'setShouldSetDefaultLeaderboard:'; { available in macos 10.8, ios 5.0 } { available in 3_0 }
+    function shouldSetDefaultLeaderboard: objcbool; message 'shouldSetDefaultLeaderboard'; { available in macos 10.8, ios 5.0 } { available in 3_0 }
+    class procedure reportScores_withCompletionHandler (scores: NSArray; completionHandler: GKScoreReportScoresCallback); message 'reportScores:withCompletionHandler:'; { available in macos 10.8, ios 6.0 } { available in 3_0 }
 
     { Adopted protocols }
     procedure encodeWithCoder (coder: NSCoder); message 'encodeWithCoder:';

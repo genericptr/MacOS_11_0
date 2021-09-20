@@ -15,8 +15,8 @@ var
   kCIContextOutputPremultiplied: CIContextOption { available in 10_4,7_0 }; cvar; external;
   kCIContextCacheIntermediates: CIContextOption { available in 10_12,10_0 }; cvar; external;
   kCIContextUseSoftwareRenderer: CIContextOption; cvar; external;
-  kCIContextPriorityRequestLow: CIContextOption { available in 10_12, 8_0 }; cvar; external;
-  kCIContextAllowLowPower: CIContextOption { available in 10_12, 13_0 }; cvar; external;
+  kCIContextPriorityRequestLow: CIContextOption { available in macos 10.12, ios 8.0 }; cvar; external;
+  kCIContextAllowLowPower: CIContextOption { available in macos 10.12, ios 13.0 }; cvar; external;
   kCIContextName: CIContextOption { available in 10_14,12_0 }; cvar; external;
 {$endif}
 

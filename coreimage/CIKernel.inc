@@ -22,12 +22,12 @@ type
   public
     class function kernelsWithString (string_: NSString): NSArray; message 'kernelsWithString:'; deprecated 'in 10_4,10_14, 8_0,12_0';
     class function kernelWithString (string_: NSString): id; message 'kernelWithString:'; deprecated 'in 10_10,10_14, 8_0,12_0';
-    class function kernelWithFunctionName_fromMetalLibraryData_error (name: NSString; data: NSData; error: NSErrorPtr): id; message 'kernelWithFunctionName:fromMetalLibraryData:error:'; { available in 10_13, 11_0 }
-    class function kernelWithFunctionName_fromMetalLibraryData_outputPixelFormat_error (name: NSString; data: NSData; format: CIFormat; error: NSErrorPtr): id; message 'kernelWithFunctionName:fromMetalLibraryData:outputPixelFormat:error:'; { available in 10_13, 11_0 }
+    class function kernelWithFunctionName_fromMetalLibraryData_error (name: NSString; data: NSData; error: NSErrorPtr): id; message 'kernelWithFunctionName:fromMetalLibraryData:error:'; { available in macos 10.13, ios 11.0 }
+    class function kernelWithFunctionName_fromMetalLibraryData_outputPixelFormat_error (name: NSString; data: NSData; format: CIFormat; error: NSErrorPtr): id; message 'kernelWithFunctionName:fromMetalLibraryData:outputPixelFormat:error:'; { available in macos 10.13, ios 11.0 }
     class function kernelNamesFromMetalLibraryData (data: NSData): NSArray; message 'kernelNamesFromMetalLibraryData:'; { available in 11_0,14_0 }
-    function name: NSString; message 'name'; { available in 10_4, 8_0 }
-    procedure setROISelector (method: SEL); message 'setROISelector:'; { available in 10_4, 9_0 }
-    function applyWithExtent_roiCallback_arguments (extent: CGRect; callback: CIKernelROICallback; args: NSArray): CIImage; message 'applyWithExtent:roiCallback:arguments:'; { available in 10_11, 8_0 }
+    function name: NSString; message 'name'; { available in macos 10.4, ios 8.0 }
+    procedure setROISelector (method: SEL); message 'setROISelector:'; { available in macos 10.4, ios 9.0 }
+    function applyWithExtent_roiCallback_arguments (extent: CGRect; callback: CIKernelROICallback; args: NSArray): CIImage; message 'applyWithExtent:roiCallback:arguments:'; { available in macos 10.11, ios 8.0 }
   end;
 
 type
@@ -52,7 +52,7 @@ type
   public
     class function kernelWithString (string_: NSString): id; message 'kernelWithString:'; deprecated 'in 10_10,10_14, 8_0,12_0';
     function applyWithForeground_background (foreground: CIImage; background: CIImage): CIImage; message 'applyWithForeground:background:';
-    function applyWithForeground_background_colorSpace (foreground: CIImage; background: CIImage; colorSpace: CGColorSpaceRef): CIImage; message 'applyWithForeground:background:colorSpace:'; { available in 10_15, 13_0 }
+    function applyWithForeground_background_colorSpace (foreground: CIImage; background: CIImage; colorSpace: CGColorSpaceRef): CIImage; message 'applyWithForeground:background:colorSpace:'; { available in macos 10.15, ios 13.0 }
   end;
 
 

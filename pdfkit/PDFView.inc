@@ -68,18 +68,18 @@ const
 
 {$ifdef EXTERNAL_SYMBOLS}
 var
-  PDFViewDocumentChangedNotification: NSNotificationName { available in 10_4, 11_0 }; cvar; external;
-  PDFViewChangedHistoryNotification: NSNotificationName { available in 10_4, 11_0 }; cvar; external;
-  PDFViewPageChangedNotification: NSNotificationName { available in 10_4, 11_0 }; cvar; external;
-  PDFViewScaleChangedNotification: NSNotificationName { available in 10_4, 11_0 }; cvar; external;
-  PDFViewAnnotationHitNotification: NSNotificationName { available in 10_4, 11_0 }; cvar; external;
-  PDFViewCopyPermissionNotification: NSNotificationName { available in 10_4, 11_0 }; cvar; external;
-  PDFViewPrintPermissionNotification: NSNotificationName { available in 10_4, 11_0 }; cvar; external;
-  PDFViewAnnotationWillHitNotification: NSNotificationName { available in 10_4, 11_0 }; cvar; external;
-  PDFViewSelectionChangedNotification: NSNotificationName { available in 10_4, 11_0 }; cvar; external;
-  PDFViewDisplayModeChangedNotification: NSNotificationName { available in 10_4, 11_0 }; cvar; external;
-  PDFViewDisplayBoxChangedNotification: NSNotificationName { available in 10_4, 11_0 }; cvar; external;
-  PDFViewVisiblePagesChangedNotification: NSNotificationName { available in 10_4, 11_0 }; cvar; external;
+  PDFViewDocumentChangedNotification: NSNotificationName { available in macos 10.4, ios 11.0 }; cvar; external;
+  PDFViewChangedHistoryNotification: NSNotificationName { available in macos 10.4, ios 11.0 }; cvar; external;
+  PDFViewPageChangedNotification: NSNotificationName { available in macos 10.4, ios 11.0 }; cvar; external;
+  PDFViewScaleChangedNotification: NSNotificationName { available in macos 10.4, ios 11.0 }; cvar; external;
+  PDFViewAnnotationHitNotification: NSNotificationName { available in macos 10.4, ios 11.0 }; cvar; external;
+  PDFViewCopyPermissionNotification: NSNotificationName { available in macos 10.4, ios 11.0 }; cvar; external;
+  PDFViewPrintPermissionNotification: NSNotificationName { available in macos 10.4, ios 11.0 }; cvar; external;
+  PDFViewAnnotationWillHitNotification: NSNotificationName { available in macos 10.4, ios 11.0 }; cvar; external;
+  PDFViewSelectionChangedNotification: NSNotificationName { available in macos 10.4, ios 11.0 }; cvar; external;
+  PDFViewDisplayModeChangedNotification: NSNotificationName { available in macos 10.4, ios 11.0 }; cvar; external;
+  PDFViewDisplayBoxChangedNotification: NSNotificationName { available in macos 10.4, ios 11.0 }; cvar; external;
+  PDFViewVisiblePagesChangedNotification: NSNotificationName { available in macos 10.4, ios 11.0 }; cvar; external;
 {$endif}
 
 {$ifdef CLASSES}
@@ -111,24 +111,24 @@ type
     procedure goToRect_onPage (rect: PDFRect; page: PDFPage); message 'goToRect:onPage:';
     procedure setDisplayMode(newValue: PDFDisplayMode); message 'setDisplayMode:';
     function displayMode: PDFDisplayMode; message 'displayMode';
-    procedure setDisplayDirection(newValue: PDFDisplayDirection); message 'setDisplayDirection:'; { available in 10_13, 11_0 }
-    function displayDirection: PDFDisplayDirection; message 'displayDirection'; { available in 10_13, 11_0 }
+    procedure setDisplayDirection(newValue: PDFDisplayDirection); message 'setDisplayDirection:'; { available in macos 10.13, ios 11.0 }
+    function displayDirection: PDFDisplayDirection; message 'displayDirection'; { available in macos 10.13, ios 11.0 }
     procedure setDisplaysPageBreaks(newValue: objcbool); message 'setDisplaysPageBreaks:';
     function displaysPageBreaks: objcbool; message 'displaysPageBreaks';
-    procedure setPageBreakMargins(newValue: PDFEdgeInsets); message 'setPageBreakMargins:'; { available in 10_13, 11_0 }
-    function pageBreakMargins: PDFEdgeInsets; message 'pageBreakMargins'; { available in 10_13, 11_0 }
+    procedure setPageBreakMargins(newValue: PDFEdgeInsets); message 'setPageBreakMargins:'; { available in macos 10.13, ios 11.0 }
+    function pageBreakMargins: PDFEdgeInsets; message 'pageBreakMargins'; { available in macos 10.13, ios 11.0 }
     procedure setDisplayBox(newValue: PDFDisplayBox); message 'setDisplayBox:';
     function displayBox: PDFDisplayBox; message 'displayBox';
     procedure setDisplaysAsBook(newValue: objcbool); message 'setDisplaysAsBook:';
     function displaysAsBook: objcbool; message 'displaysAsBook';
-    procedure setDisplaysRTL(newValue: objcbool); message 'setDisplaysRTL:'; { available in 10_13, 11_0 }
-    function displaysRTL: objcbool; message 'displaysRTL'; { available in 10_13, 11_0 }
+    procedure setDisplaysRTL(newValue: objcbool); message 'setDisplaysRTL:'; { available in macos 10.13, ios 11.0 }
+    function displaysRTL: objcbool; message 'displaysRTL'; { available in macos 10.13, ios 11.0 }
     procedure setBackgroundColor(newValue: PDFKitPlatformColorPtr); message 'setBackgroundColor:';
     function backgroundColor: PDFKitPlatformColorPtr; message 'backgroundColor';
-    procedure setInterpolationQuality(newValue: PDFInterpolationQuality); message 'setInterpolationQuality:'; { available in 10_7, 11_0 }
-    function interpolationQuality: PDFInterpolationQuality; message 'interpolationQuality'; { available in 10_7, 11_0 }
-    procedure enablePageShadows(newValue: objcbool); message 'enablePageShadows:'; { available in 10_14, 12_0 }
-    function pageShadowsEnabled: objcbool; message 'pageShadowsEnabled'; { available in 10_14, 12_0 }
+    procedure setInterpolationQuality(newValue: PDFInterpolationQuality); message 'setInterpolationQuality:'; { available in macos 10.7, ios 11.0 }
+    function interpolationQuality: PDFInterpolationQuality; message 'interpolationQuality'; { available in macos 10.7, ios 11.0 }
+    procedure enablePageShadows(newValue: objcbool); message 'enablePageShadows:'; { available in macos 10.14, ios 12.0 }
+    function pageShadowsEnabled: objcbool; message 'pageShadowsEnabled'; { available in macos 10.14, ios 12.0 }
     {$if (defined(PDFKIT_PLATFORM_IOS))}
     procedure usePageViewController_withViewOptions (enable: objcbool; viewOptions: NSDictionary); message 'usePageViewController:withViewOptions:'; { available in NA, 11_0 }
     function isUsingPageViewController: objcbool; message 'isUsingPageViewController'; { available in NA, 11_0 }
@@ -137,13 +137,13 @@ type
     function delegate: PDFViewDelegateProtocol; message 'delegate';
     procedure setScaleFactor(newValue: CGFloat); message 'setScaleFactor:';
     function scaleFactor: CGFloat; message 'scaleFactor';
-    procedure setMinScaleFactor(newValue: CGFloat); message 'setMinScaleFactor:'; { available in 10_13, 11_0 }
-    function minScaleFactor: CGFloat; message 'minScaleFactor'; { available in 10_13, 11_0 }
-    procedure setMaxScaleFactor(newValue: CGFloat); message 'setMaxScaleFactor:'; { available in 10_13, 11_0 }
-    function maxScaleFactor: CGFloat; message 'maxScaleFactor'; { available in 10_13, 11_0 }
+    procedure setMinScaleFactor(newValue: CGFloat); message 'setMinScaleFactor:'; { available in macos 10.13, ios 11.0 }
+    function minScaleFactor: CGFloat; message 'minScaleFactor'; { available in macos 10.13, ios 11.0 }
+    procedure setMaxScaleFactor(newValue: CGFloat); message 'setMaxScaleFactor:'; { available in macos 10.13, ios 11.0 }
+    function maxScaleFactor: CGFloat; message 'maxScaleFactor'; { available in macos 10.13, ios 11.0 }
     procedure setAutoScales(newValue: objcbool); message 'setAutoScales:';
     function autoScales: objcbool; message 'autoScales';
-    function scaleFactorForSizeToFit: CGFloat; message 'scaleFactorForSizeToFit'; { available in 10_13, 11_0 }
+    function scaleFactorForSizeToFit: CGFloat; message 'scaleFactorForSizeToFit'; { available in macos 10.13, ios 11.0 }
     procedure zoomIn (sender: id); message 'zoomIn:';
     function canZoomIn: objcbool; message 'canZoomIn';
     procedure zoomOut (sender: id); message 'zoomOut:';
@@ -153,21 +153,21 @@ type
     {$if (defined(PDFKIT_PLATFORM_OSX))}
     procedure setCursorForAreaOfInterest (area: PDFAreaOfInterest); message 'setCursorForAreaOfInterest:';
     {$endif}
-    procedure performAction (action: PDFAction); message 'performAction:'; { available in 10_5, 11_0 }
+    procedure performAction (action: PDFAction); message 'performAction:'; { available in macos 10.5, ios 11.0 }
     procedure setCurrentSelection(newValue: PDFSelection); message 'setCurrentSelection:';
     function currentSelection: PDFSelection; message 'currentSelection';
-    procedure setCurrentSelection_animate (selection: PDFSelection; animate: objcbool); message 'setCurrentSelection:animate:'; { available in 10_5, 11_0 }
+    procedure setCurrentSelection_animate (selection: PDFSelection; animate: objcbool); message 'setCurrentSelection:animate:'; { available in macos 10.5, ios 11.0 }
     procedure clearSelection; message 'clearSelection';
     procedure selectAll (sender: id); message 'selectAll:';
     procedure scrollSelectionToVisible (sender: id); message 'scrollSelectionToVisible:';
-    procedure setHighlightedSelections(newValue: NSArray); message 'setHighlightedSelections:'; { available in 10_5, 11_0 }
-    function highlightedSelections: NSArray; message 'highlightedSelections'; { available in 10_5, 11_0 }
-    procedure drawPage_toContext (page: PDFPage; context: CGContextRef); message 'drawPage:toContext:'; { available in 10_12, 11_0 }
-    procedure drawPagePost_toContext (page: PDFPage; context: CGContextRef); message 'drawPagePost:toContext:'; { available in 10_12, 11_0 }
+    procedure setHighlightedSelections(newValue: NSArray); message 'setHighlightedSelections:'; { available in macos 10.5, ios 11.0 }
+    function highlightedSelections: NSArray; message 'highlightedSelections'; { available in macos 10.5, ios 11.0 }
+    procedure drawPage_toContext (page: PDFPage; context: CGContextRef); message 'drawPage:toContext:'; { available in macos 10.12, ios 11.0 }
+    procedure drawPagePost_toContext (page: PDFPage; context: CGContextRef); message 'drawPagePost:toContext:'; { available in macos 10.12, ios 11.0 }
     procedure copy (sender: id); message 'copy:';
     {$if (defined(PDFKIT_PLATFORM_OSX))}
     procedure printWithInfo_autoRotate (printInfo: NSPrintInfoPtr; doRotate: objcbool); message 'printWithInfo:autoRotate:';
-    procedure printWithInfo_autoRotate_pageScaling (printInfo: NSPrintInfoPtr; doRotate: objcbool; scale: PDFPrintScalingMode); message 'printWithInfo:autoRotate:pageScaling:'; { available in 10_5, 11_0 }
+    procedure printWithInfo_autoRotate_pageScaling (printInfo: NSPrintInfoPtr; doRotate: objcbool; scale: PDFPrintScalingMode); message 'printWithInfo:autoRotate:pageScaling:'; { available in macos 10.5, ios 11.0 }
     {$endif}
     function pageForPoint_nearest (point: PDFPoint; nearest: objcbool): PDFPage; message 'pageForPoint:nearest:';
     function convertPoint_toPage (point: PDFPoint; page: PDFPage): PDFPoint; message 'convertPoint:toPage:';
@@ -176,15 +176,15 @@ type
     function convertRect_fromPage (rect: PDFRect; page: PDFPage): PDFRect; message 'convertRect:fromPage:';
     function documentView: PDFKitPlatformViewPtr; message 'documentView';
     procedure layoutDocumentView; message 'layoutDocumentView';
-    procedure annotationsChangedOnPage (page: PDFPage); message 'annotationsChangedOnPage:'; { available in 10_5, 11_0 }
+    procedure annotationsChangedOnPage (page: PDFPage); message 'annotationsChangedOnPage:'; { available in macos 10.5, ios 11.0 }
     function rowSizeForPage (page: PDFPage): PDFSize; message 'rowSizeForPage:';
     {$if (defined(PDFKIT_PLATFORM_OSX))}
     procedure setAcceptsDraggedFiles(newValue: objcbool); message 'setAcceptsDraggedFiles:'; { available in 10_13, NA }
     function acceptsDraggedFiles: objcbool; message 'acceptsDraggedFiles'; { available in 10_13, NA }
     {$endif}
-    function visiblePages: NSArray; message 'visiblePages'; { available in 10_5, 11_0 }
-    procedure setEnableDataDetectors(newValue: objcbool); message 'setEnableDataDetectors:'; { available in 10_6, 11_0 }
-    function enableDataDetectors: objcbool; message 'enableDataDetectors'; { available in 10_6, 11_0 }
+    function visiblePages: NSArray; message 'visiblePages'; { available in macos 10.5, ios 11.0 }
+    procedure setEnableDataDetectors(newValue: objcbool); message 'setEnableDataDetectors:'; { available in macos 10.6, ios 11.0 }
+    function enableDataDetectors: objcbool; message 'enableDataDetectors'; { available in macos 10.6, ios 11.0 }
   end;
 {$endif}
 
@@ -193,17 +193,17 @@ type
 type
   PDFViewDelegateProtocol = objcprotocol external name 'PDFViewDelegate' (NSObjectProtocol)
   optional
-    procedure PDFViewWillClickOnLink_withURL (sender: PDFView; url: NSURL); message 'PDFViewWillClickOnLink:withURL:'; { available in 10_5, 11_0 }
+    procedure PDFViewWillClickOnLink_withURL (sender: PDFView; url: NSURL); message 'PDFViewWillClickOnLink:withURL:'; { available in macos 10.5, ios 11.0 }
     {$if (defined(PDFKIT_PLATFORM_OSX))}
     function PDFViewWillChangeScaleFactor_toScale (sender: PDFView; scaler: CGFloat): CGFloat; message 'PDFViewWillChangeScaleFactor:toScale:'; { available in macos 10.5 }
     function PDFViewPrintJobTitle (sender: PDFView): NSString; message 'PDFViewPrintJobTitle:'; { available in 10_5, NA }
     procedure PDFViewPerformPrint (sender: PDFView); message 'PDFViewPerformPrint:'; { available in 10_5, NA }
     {$elseif (defined(PDFKIT_PLATFORM_IOS))}
-    function PDFViewParentViewController: PDFKitPlatformViewControllerPtr; message 'PDFViewParentViewController'; { available in 10_15, 13_0 }
+    function PDFViewParentViewController: PDFKitPlatformViewControllerPtr; message 'PDFViewParentViewController'; { available in macos 10.15, ios 13.0 }
     {$endif}
-    procedure PDFViewPerformFind (sender: PDFView); message 'PDFViewPerformFind:'; { available in 10_5, 11_0 }
-    procedure PDFViewPerformGoToPage (sender: PDFView); message 'PDFViewPerformGoToPage:'; { available in 10_5, 11_0 }
-    procedure PDFViewOpenPDF_forRemoteGoToAction (sender: PDFView; action: PDFActionRemoteGoTo); message 'PDFViewOpenPDF:forRemoteGoToAction:'; { available in 10_5, 11_0 }
+    procedure PDFViewPerformFind (sender: PDFView); message 'PDFViewPerformFind:'; { available in macos 10.5, ios 11.0 }
+    procedure PDFViewPerformGoToPage (sender: PDFView); message 'PDFViewPerformGoToPage:'; { available in macos 10.5, ios 11.0 }
+    procedure PDFViewOpenPDF_forRemoteGoToAction (sender: PDFView; action: PDFActionRemoteGoTo); message 'PDFViewOpenPDF:forRemoteGoToAction:'; { available in macos 10.5, ios 11.0 }
   end;
 {$endif}
 

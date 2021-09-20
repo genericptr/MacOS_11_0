@@ -32,13 +32,13 @@ const
   MKAnnotationViewDragStateEnding = 4;
 
 type
-  MKFeatureDisplayPriority = single { unavailable in watchos } { available in 10_13, 11_0 };
-  MKFeatureDisplayPriorityPtr = ^MKFeatureDisplayPriority { unavailable in watchos } { available in 10_13, 11_0 };
+  MKFeatureDisplayPriority = single { unavailable in watchos } { available in macos 10.13, ios 11.0 };
+  MKFeatureDisplayPriorityPtr = ^MKFeatureDisplayPriority { unavailable in watchos } { available in macos 10.13, ios 11.0 };
 
 const
-  MKFeatureDisplayPriorityRequired = 1000 { unavailable in watchos } { available in 10_13, 11_0 };
-  MKFeatureDisplayPriorityDefaultHigh = 750 { unavailable in watchos } { available in 10_13, 11_0 };
-  MKFeatureDisplayPriorityDefaultLow = 250 { unavailable in watchos } { available in 10_13, 11_0 };
+  MKFeatureDisplayPriorityRequired = 1000 { unavailable in watchos } { available in macos 10.13, ios 11.0 };
+  MKFeatureDisplayPriorityDefaultHigh = 750 { unavailable in watchos } { available in macos 10.13, ios 11.0 };
+  MKFeatureDisplayPriorityDefaultLow = 250 { unavailable in watchos } { available in macos 10.13, ios 11.0 };
 
 type
   MKAnnotationViewZPriority = single { unavailable in watchos } { available in ios 14.0, macos 11.0, tvos 14.0 };
@@ -72,7 +72,7 @@ type
     function initWithCoder (aDecoder: NSCoder): id; message 'initWithCoder:'; { NS_DESIGNATED_INITIALIZER }
     function reuseIdentifier: NSString; message 'reuseIdentifier';
     procedure prepareForReuse; message 'prepareForReuse';
-    procedure prepareForDisplay; message 'prepareForDisplay'; { available in 10_13, 11_0 } { available in 11_0 }
+    procedure prepareForDisplay; message 'prepareForDisplay'; { available in macos 10.13, ios 11.0 } { available in 11_0 }
     procedure setAnnotation(newValue: MKAnnotationProtocol); message 'setAnnotation:';
     function annotation: MKAnnotationProtocol; message 'annotation';
     {$if defined(TARGET_OS_IPHONE)}
@@ -114,28 +114,28 @@ type
     function rightCalloutAccessoryView_: NSView; message 'rightCalloutAccessoryView';
     {$endif}
     {$if defined(TARGET_OS_IPHONE)}
-    procedure setDetailCalloutAccessoryView(newValue: UIViewPtr); message 'setDetailCalloutAccessoryView:'; { available in 10_11, 9_0 }
-    function detailCalloutAccessoryView: UIViewPtr; message 'detailCalloutAccessoryView'; { available in 10_11, 9_0 }
+    procedure setDetailCalloutAccessoryView(newValue: UIViewPtr); message 'setDetailCalloutAccessoryView:'; { available in macos 10.11, ios 9.0 }
+    function detailCalloutAccessoryView: UIViewPtr; message 'detailCalloutAccessoryView'; { available in macos 10.11, ios 9.0 }
     {$else}
-    procedure setDetailCalloutAccessoryView_(newValue: NSView); message 'setDetailCalloutAccessoryView:'; { available in 10_11, 9_0 }
-    function detailCalloutAccessoryView_: NSView; message 'detailCalloutAccessoryView'; { available in 10_11, 9_0 }
+    procedure setDetailCalloutAccessoryView_(newValue: NSView); message 'setDetailCalloutAccessoryView:'; { available in macos 10.11, ios 9.0 }
+    function detailCalloutAccessoryView_: NSView; message 'detailCalloutAccessoryView'; { available in macos 10.11, ios 9.0 }
     {$endif}
-    procedure setDraggable(newValue: objcbool); message 'setDraggable:'; { unavailable in tvos } { available in 10_9, 4_0 }
-    function isDraggable: objcbool; message 'isDraggable'; { unavailable in tvos } { available in 10_9, 4_0 }
-    procedure setDragState(newValue: MKAnnotationViewDragState); message 'setDragState:'; { unavailable in tvos } { available in 10_9, 4_0 }
-    function dragState: MKAnnotationViewDragState; message 'dragState'; { unavailable in tvos } { available in 10_9, 4_0 }
-    procedure setDragState_animated (newDragState: MKAnnotationViewDragState; animated: objcbool); message 'setDragState:animated:'; { unavailable in tvos } { available in 10_9, 4_2 }
-    procedure setClusteringIdentifier(newValue: NSString); message 'setClusteringIdentifier:'; { available in 10_13, 11_0 } { available in 11_0 }
-    function clusteringIdentifier: NSString; message 'clusteringIdentifier'; { available in 10_13, 11_0 } { available in 11_0 }
-    function clusterAnnotationView: MKAnnotationView; message 'clusterAnnotationView'; { available in 10_13, 11_0 } { available in 11_0 }
-    procedure setDisplayPriority(newValue: MKFeatureDisplayPriority); message 'setDisplayPriority:'; { available in 10_13, 11_0 } { available in 11_0 }
-    function displayPriority: MKFeatureDisplayPriority; message 'displayPriority'; { available in 10_13, 11_0 } { available in 11_0 }
+    procedure setDraggable(newValue: objcbool); message 'setDraggable:'; { unavailable in tvos } { available in macos 10.9, ios 4.0 }
+    function isDraggable: objcbool; message 'isDraggable'; { unavailable in tvos } { available in macos 10.9, ios 4.0 }
+    procedure setDragState(newValue: MKAnnotationViewDragState); message 'setDragState:'; { unavailable in tvos } { available in macos 10.9, ios 4.0 }
+    function dragState: MKAnnotationViewDragState; message 'dragState'; { unavailable in tvos } { available in macos 10.9, ios 4.0 }
+    procedure setDragState_animated (newDragState: MKAnnotationViewDragState; animated: objcbool); message 'setDragState:animated:'; { unavailable in tvos } { available in macos 10.9, ios 4.2 }
+    procedure setClusteringIdentifier(newValue: NSString); message 'setClusteringIdentifier:'; { available in macos 10.13, ios 11.0 } { available in 11_0 }
+    function clusteringIdentifier: NSString; message 'clusteringIdentifier'; { available in macos 10.13, ios 11.0 } { available in 11_0 }
+    function clusterAnnotationView: MKAnnotationView; message 'clusterAnnotationView'; { available in macos 10.13, ios 11.0 } { available in 11_0 }
+    procedure setDisplayPriority(newValue: MKFeatureDisplayPriority); message 'setDisplayPriority:'; { available in macos 10.13, ios 11.0 } { available in 11_0 }
+    function displayPriority: MKFeatureDisplayPriority; message 'displayPriority'; { available in macos 10.13, ios 11.0 } { available in 11_0 }
     procedure setZPriority(newValue: MKAnnotationViewZPriority); message 'setZPriority:'; { unavailable in watchos } { available in ios 14.0, macos 11.0, tvos 14.0 }
     function zPriority: MKAnnotationViewZPriority; message 'zPriority'; { unavailable in watchos } { available in ios 14.0, macos 11.0, tvos 14.0 }
     procedure setSelectedZPriority(newValue: MKAnnotationViewZPriority); message 'setSelectedZPriority:'; { unavailable in watchos } { available in ios 14.0, macos 11.0, tvos 14.0 }
     function selectedZPriority: MKAnnotationViewZPriority; message 'selectedZPriority'; { unavailable in watchos } { available in ios 14.0, macos 11.0, tvos 14.0 }
-    procedure setCollisionMode(newValue: MKAnnotationViewCollisionMode); message 'setCollisionMode:'; { available in 10_13, 11_0 } { available in 11_0 }
-    function collisionMode: MKAnnotationViewCollisionMode; message 'collisionMode'; { available in 10_13, 11_0 } { available in 11_0 }
+    procedure setCollisionMode(newValue: MKAnnotationViewCollisionMode); message 'setCollisionMode:'; { available in macos 10.13, ios 11.0 } { available in 11_0 }
+    function collisionMode: MKAnnotationViewCollisionMode; message 'collisionMode'; { available in macos 10.13, ios 11.0 } { available in 11_0 }
   end;
 {$endif}
 

@@ -25,7 +25,7 @@ const
 {$endif}
 {$ifdef EXTERNAL_SYMBOLS}
 var
-  PDFThumbnailViewDocumentEditedNotification: NSString { available in 10_4, 11_0 }; cvar; external;
+  PDFThumbnailViewDocumentEditedNotification: NSString { available in macos 10.4, ios 11.0 }; cvar; external;
 {$endif}
 
 {$ifdef CLASSES}

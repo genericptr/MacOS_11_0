@@ -12,23 +12,23 @@ type
 
 const
   CBErrorUnknown = 0;
-  CBErrorInvalidParameters = 1 { available in 10_9, 6_0 };
-  CBErrorInvalidHandle = 2 { available in 10_9, 6_0 };
-  CBErrorNotConnected = 3 { available in 10_9, 6_0 };
-  CBErrorOutOfSpace = 4 { available in 10_9, 6_0 };
-  CBErrorOperationCancelled = 5 { available in 10_9, 6_0 };
-  CBErrorConnectionTimeout = 6 { available in 10_9, 6_0 };
-  CBErrorPeripheralDisconnected = 7 { available in 10_9, 6_0 };
-  CBErrorUUIDNotAllowed = 8 { available in 10_9, 6_0 };
-  CBErrorAlreadyAdvertising = 9 { available in 10_9, 6_0 };
-  CBErrorConnectionFailed = 10 { available in 10_13, 7_1 };
-  CBErrorConnectionLimitReached = 11 { available in 10_13, 9_0 };
+  CBErrorInvalidParameters = 1 { available in macos 10.9, ios 6.0 };
+  CBErrorInvalidHandle = 2 { available in macos 10.9, ios 6.0 };
+  CBErrorNotConnected = 3 { available in macos 10.9, ios 6.0 };
+  CBErrorOutOfSpace = 4 { available in macos 10.9, ios 6.0 };
+  CBErrorOperationCancelled = 5 { available in macos 10.9, ios 6.0 };
+  CBErrorConnectionTimeout = 6 { available in macos 10.9, ios 6.0 };
+  CBErrorPeripheralDisconnected = 7 { available in macos 10.9, ios 6.0 };
+  CBErrorUUIDNotAllowed = 8 { available in macos 10.9, ios 6.0 };
+  CBErrorAlreadyAdvertising = 9 { available in macos 10.9, ios 6.0 };
+  CBErrorConnectionFailed = 10 { available in macos 10.13, ios 7.1 };
+  CBErrorConnectionLimitReached = 11 { available in macos 10.13, ios 9.0 };
   CBErrorUnkownDevice = 12 deprecated 'in 10_13, 10_15, 9_0, 13_0, "Use CBErrorUnknownDevice instead"';
-  CBErrorUnknownDevice = 12 { available in 10_14, 12_0 };
-  CBErrorOperationNotSupported = 13 { available in 10_14, 12_0 };
-  CBErrorPeerRemovedPairingInformation = 14 { available in 10_15, 13_4 };
-  CBErrorEncryptionTimedOut = 15 { available in 10_15, 13_3 };
-  CBErrorTooManyLEPairedDevices = 16 { available in 11_0, 14_0 };
+  CBErrorUnknownDevice = 12 { available in macos 10.14, ios 12.0 };
+  CBErrorOperationNotSupported = 13 { available in macos 10.14, ios 12.0 };
+  CBErrorPeerRemovedPairingInformation = 14 { available in macos 10.15, ios 13.4 };
+  CBErrorEncryptionTimedOut = 15 { available in macos 10.15, ios 13.3 };
+  CBErrorTooManyLEPairedDevices = 16 { available in macos 11.0, ios 14.0 };
 {$endif}
 
 {$ifdef EXTERNAL_SYMBOLS}
@@ -42,7 +42,7 @@ type
   CBATTErrorPtr = ^CBATTError;
 
 const
-  CBATTErrorSuccess = $00 { available in 10_9, 6_0 };
+  CBATTErrorSuccess = $00 { available in macos 10.9, ios 6.0 };
   CBATTErrorInvalidHandle = $01;
   CBATTErrorReadNotPermitted = $02;
   CBATTErrorWriteNotPermitted = $03;

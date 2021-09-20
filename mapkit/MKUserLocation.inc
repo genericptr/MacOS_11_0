@@ -12,7 +12,7 @@ type
   public
     function isUpdating: objcbool; message 'isUpdating';
     function location: CLLocation; message 'location';
-    function heading: CLHeadingPtr; message 'heading'; { unavailable in tvos } { available in 10_9, 5_0 }
+    function heading: CLHeadingPtr; message 'heading'; { unavailable in tvos } { available in macos 10.9, ios 5.0 }
     procedure setTitle(newValue: NSString); message 'setTitle:';
     function title: NSString; message 'title';
     procedure setSubtitle(newValue: NSString); message 'setSubtitle:';
@@ -20,7 +20,7 @@ type
 
     { Adopted protocols }
     function coordinate: CLLocationCoordinate2D; message 'coordinate';
-    procedure setCoordinate (newCoordinate: CLLocationCoordinate2D); message 'setCoordinate:'; { available in 10_9, 4_0 }
+    procedure setCoordinate (newCoordinate: CLLocationCoordinate2D); message 'setCoordinate:'; { available in macos 10.9, ios 4.0 }
     function subtitle_: NSString; message 'subtitle';
     function title_: NSString; message 'title';
   end;
