@@ -1,32 +1,11 @@
 { Parsed from AVFAudio.framework AVAudioEngine.h }
 
-{ Types from AVAudioEngine }
-{$ifdef TYPES}
-
-
-{$endif}
-
-
 {$ifdef TYPES}
 type
   AVAudioEnginePtr = ^AVAudioEngine;
 {$endif}
 
-{$if defined(__NULL_MACRO__)}
-{$ifdef TYPES}
-const
-  AVAUDIOENGINE_HAVE_MUSICPLAYER = 1;
-{$endif}
 
-{$endif}
-
-{$if defined(__NULL_MACRO__)}
-{$ifdef TYPES}
-const
-  AVAUDIOENGINE_HAVE_AUAUDIOUNIT = 1;
-{$endif}
-
-{$endif}
 {$ifdef TYPES}
 type
   AVAudioEngineManualRenderingError = OSStatus;
