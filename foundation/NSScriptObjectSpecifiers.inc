@@ -13,9 +13,7 @@ type
   NSRelativeSpecifierPtr = ^NSRelativeSpecifier;
   NSUniqueIDSpecifierPtr = ^NSUniqueIDSpecifier;
   NSWhoseSpecifierPtr = ^NSWhoseSpecifier;
-{$endif}
 
-{$ifdef TYPES}
 type
   NSInsertionPosition = NSUInteger;
   NSInsertionPositionPtr = ^NSInsertionPosition;
@@ -45,6 +43,15 @@ const
   NSMiddleSubelement = 2;
   NSRandomSubelement = 3;
   NSNoSubelement = 4;
+
+const
+  NSNoSpecifierError = 0;
+  NSNoTopLevelContainersSpecifierError = 1;
+  NSContainerSpecifierError = 2;
+  NSUnknownKeySpecifierError = 3;
+  NSInvalidIndexSpecifierError = 4;
+  NSInternalSpecifierError = 5;
+  NSOperationNotSupportedForKeySpecifierError = 6;
 {$endif}
 
 {$ifdef CLASSES}

@@ -70,5 +70,11 @@ const
   NSURLErrorBackgroundSessionRequiresSharedContainer = -995 { available in macos 10.10, ios 8.0, watchos 2.0, tvos 9.0 };
   NSURLErrorBackgroundSessionInUseByAnotherProcess = -996 { available in macos 10.10, ios 8.0, watchos 2.0, tvos 9.0 };
   NSURLErrorBackgroundSessionWasDisconnected = -997 { available in macos 10.10, ios 8.0, watchos 2.0, tvos 9.0 };
+
+const
+  NSURLErrorCancelledReasonUserForceQuitApplication = 0;
+  NSURLErrorCancelledReasonBackgroundUpdatesDisabled = 1;
+  NSURLErrorCancelledReasonInsufficientSystemResources = 2 { available in macos 10.10, ios 8.0, watchos 2.0, tvos 9.0 };
+
 {$endif}
 

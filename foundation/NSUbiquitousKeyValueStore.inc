@@ -3,6 +3,12 @@
 {$ifdef TYPES}
 type
   NSUbiquitousKeyValueStorePtr = ^NSUbiquitousKeyValueStore;
+
+const
+  NSUbiquitousKeyValueStoreServerChange = 0 { available in macos 10.7, ios 5.0, watchos 2.0, tvos 9.0 };
+  NSUbiquitousKeyValueStoreInitialSyncChange = 1 { available in macos 10.7, ios 5.0, watchos 2.0, tvos 9.0 };
+  NSUbiquitousKeyValueStoreQuotaViolationChange = 2 { available in macos 10.7, ios 5.0, watchos 2.0, tvos 9.0 };
+  NSUbiquitousKeyValueStoreAccountChange = 3 { available in macos 10.8, ios 6.0, watchos 2.0, tvos 9.0 };
 {$endif}
 
 {$ifdef CLASSES}

@@ -30,6 +30,12 @@ type
   NSTextCheckingTypesPtr = ^NSTextCheckingTypes;
   NSTextCheckingKey = NSString;
   NSTextCheckingKeyPtr = ^NSTextCheckingKey;
+
+const
+  NSTextCheckingAllSystemTypes = $ffffffff;
+  NSTextCheckingAllCustomTypes = $ffffffff shl 32;
+  NSTextCheckingAllTypes = NSTextCheckingAllSystemTypes + NSTextCheckingAllCustomTypes;
+
 {$endif}
 
 {$ifdef CLASSES}

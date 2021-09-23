@@ -3,6 +3,11 @@
 //type
 //  NSZone = OpaqueType;
 //  NSZonePtr = ^NSZone;
+
+const
+  NSScannedOption = 1 shl 0;
+  NSCollectorDisabledOption = 1 shl 1;
+
 {$endif}
 
 {$ifdef FUNCTIONS}

@@ -10,12 +10,14 @@ type
 type
   NSCalendarPtr = ^NSCalendar;
   NSDateComponentsPtr = ^NSDateComponents;
-{$endif}
 
-{$ifdef TYPES}
 type
   NSCalendarIdentifier = NSString;
   NSCalendarIdentifierPtr = ^NSCalendarIdentifier;
+
+const
+  NSDateComponentUndefined = NSIntegerMax;
+  NSUndefinedDateComponent = NSDateComponentUndefined deprecated 'replace with NSDateComponentUndefined';
 {$endif}
 
 {$ifdef EXTERNAL_SYMBOLS}

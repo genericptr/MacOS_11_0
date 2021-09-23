@@ -26,7 +26,6 @@ type
   NSStringTransformPtr = ^NSStringTransform;
 {$endif}
 
-
 {$ifdef CALLBACKS}
 type
   NSStringEnumerateSubstringsInRangeCallback = reference to procedure (substring: NSString; substringRange: NSRange; enclosingRange: NSRange; stop: objcboolPtr); cblock; cdecl;
@@ -71,6 +70,35 @@ type
 const
   NSStringEncodingConversionAllowLossy = 1;
   NSStringEncodingConversionExternalRepresentation = 2;
+
+const
+  NSASCIIStringEncoding = 1;
+  NSNEXTSTEPStringEncoding = 2;
+  NSJapaneseEUCStringEncoding = 3;
+  NSUTF8StringEncoding = 4;
+  NSISOLatin1StringEncoding = 5;
+  NSSymbolStringEncoding = 6;
+  NSNonLossyASCIIStringEncoding = 7;
+  NSShiftJISStringEncoding = 8;
+  NSISOLatin2StringEncoding = 9;
+  NSUnicodeStringEncoding = 10;
+  NSWindowsCP1251StringEncoding = 11;
+  NSWindowsCP1252StringEncoding = 12;
+  NSWindowsCP1253StringEncoding = 13;
+  NSWindowsCP1254StringEncoding = 14;
+  NSWindowsCP1250StringEncoding = 15;
+  NSISO2022JPStringEncoding = 21;
+  NSMacOSRomanStringEncoding = 30;
+  NSUTF16StringEncoding = NSUnicodeStringEncoding;
+  NSUTF16BigEndianStringEncoding = $90000100;
+  NSUTF16LittleEndianStringEncoding = $94000100;
+  NSUTF32StringEncoding = $8c000100;
+  NSUTF32BigEndianStringEncoding = $98000100;
+  NSUTF32LittleEndianStringEncoding = $9c000100;
+
+const
+  NSProprietaryStringEncoding = 65536;
+
 {$endif}
 
 {$ifdef CLASSES}

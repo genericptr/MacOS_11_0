@@ -3,6 +3,19 @@
 {$ifdef TYPES}
 type
   NSScriptCommandPtr = ^NSScriptCommand;
+
+const
+  NSNoScriptError = 0;
+  NSReceiverEvaluationScriptError = 1;
+  NSKeySpecifierEvaluationScriptError = 2;
+  NSArgumentEvaluationScriptError = 3;
+  NSReceiversCantHandleCommandScriptError = 4;
+  NSRequiredArgumentsMissingScriptError = 5;
+  NSArgumentsWrongScriptError = 6;
+  NSUnknownKeyScriptError = 7;
+  NSInternalScriptError = 8;
+  NSOperationNotSupportedForKeyScriptError = 9;
+  NSCannotCreateScriptCommandError = 10;
 {$endif}
 
 {$ifdef CLASSES}
